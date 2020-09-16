@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name LatchingFaultBoard-rescue)(type Legacy)(uri ${KIPRJMOD}/LatchingFaultBoard-rescue.lib)(options "")(descr ""))
+)
