@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
@@ -800,14 +801,14 @@ Wire Wire Line
 Wire Wire Line
 	1450 850  1450 2900
 Wire Notes Line
-	8800 1950 10950 1950
+	9250 9600 11400 9600
 Wire Notes Line
-	10950 1950 10950 1000
+	11400 9600 11400 8650
 Wire Notes Line
-	10950 1000 8800 1000
+	11400 8650 9250 8650
 Wire Notes Line
-	8800 1000 8800 1950
-Text Notes 8800 1000 0    50   ~ 0
+	9250 8650 9250 9600
+Text Notes 9250 8650 0    50   ~ 0
 RTDS & LATCHING START
 $Comp
 L NER:TSAL U?
@@ -912,7 +913,7 @@ Wire Bus Line
 Wire Bus Line
 	5600 4850 6000 4850
 $Sheet
-S 13300 2850 1700 1550
+S 10350 8750 1700 1550
 U 5F647A32
 F0 "Driver IO Enclosure" 50
 F1 "Driver IO Enclosure.sch" 50

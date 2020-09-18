@@ -415,24 +415,6 @@ X MPI3 IO9 -700 -900 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# NER_OrionCurrentSens
-#
-DEF NER_OrionCurrentSens U 0 40 Y Y 1 F N
-F0 "U" 0 0 50 H V C CNN
-F1 "NER_OrionCurrentSens" 0 0 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-S -300 -50 300 -550 0 1 0 N
-X +5_Pow 1(A) -200 -650 100 U 50 50 1 1 P
-X C_High 2(B) -50 -650 100 U 50 50 1 1 P
-X GND 3(C) 100 -650 100 U 50 50 1 1 P
-X C_Low 4(D) 250 -650 100 U 50 50 1 1 P
-X Load+ L1 -400 -150 100 R 50 50 1 1 B
-X Load- L2 400 -150 100 L 50 50 1 1 B
-ENDDRAW
-ENDDEF
-#
 # NER_OrionThermExp
 #
 DEF NER_OrionThermExp U 0 40 Y Y 1 F N
