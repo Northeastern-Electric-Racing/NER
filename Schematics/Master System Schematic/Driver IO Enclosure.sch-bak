@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 17
+Sheet 5 21
 Title ""
 Date "2020-10-12"
 Rev ""
@@ -160,7 +160,6 @@ NoConn ~ 4850 4600
 NoConn ~ 4850 4700
 NoConn ~ 4850 4800
 NoConn ~ 4850 4900
-NoConn ~ 6050 4300
 NoConn ~ 6050 4400
 NoConn ~ 6050 4700
 NoConn ~ 6050 4800
@@ -173,7 +172,7 @@ Wire Wire Line
 Text HLabel 7200 4600 2    50   Input ~ 0
 LED(+)
 Wire Wire Line
-	3500 4150 4750 4150
+	3500 4150 4650 4150
 Text HLabel 3500 4150 0    50   Input ~ 0
 Button_GND
 Text HLabel 7200 4500 2    50   Input ~ 0
@@ -190,4 +189,49 @@ Text HLabel 4750 1750 1    50   Input ~ 0
 Speaker-
 Wire Wire Line
 	5650 2300 5750 2300
+Text HLabel 7200 4300 2    50   Input ~ 0
+StartEnable
+$Comp
+L Device:R R7
+U 1 1 5F8BB898
+P 6950 4300
+F 0 "R7" V 6743 4300 50  0000 C CNN
+F 1 "10MΩ" V 6834 4300 50  0000 C CNN
+F 2 "" V 6880 4300 50  0001 C CNN
+F 3 "~" H 6950 4300 50  0001 C CNN
+	1    6950 4300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7200 4300 7100 4300
+Connection ~ 7100 4300
+Wire Wire Line
+	7100 4300 7050 4300
+Wire Wire Line
+	6050 4300 6550 4300
+$Comp
+L Device:R R6
+U 1 1 5F8C0C28
+P 5300 5900
+F 0 "R6" V 5507 5900 50  0000 C CNN
+F 1 "6.8MΩ" V 5416 5900 50  0000 C CNN
+F 2 "" V 5230 5900 50  0001 C CNN
+F 3 "~" H 5300 5900 50  0001 C CNN
+	1    5300 5900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6550 4300 6550 5900
+Wire Wire Line
+	6550 5900 5450 5900
+Connection ~ 6550 4300
+Wire Wire Line
+	6550 4300 6800 4300
+Wire Wire Line
+	4650 5900 4650 4150
+Wire Wire Line
+	4650 5900 5150 5900
+Connection ~ 4650 4150
+Wire Wire Line
+	4650 4150 4750 4150
 $EndSCHEMATC
