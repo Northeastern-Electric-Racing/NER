@@ -108,7 +108,7 @@ Wire Bus Line
 	8950 3650 9000 3650
 Entry Bus Bus
 	8850 3750 8950 3650
-Text HLabel 1950 4750 0    50   Input ~ 0
+Text HLabel 1900 4750 0    50   Input ~ 0
 BMS_Fault
 Text HLabel 6800 2600 0    50   Input ~ 0
 Segment4_Thermistors
@@ -316,8 +316,6 @@ F 3 "" H 7900 1800 50  0001 C CNN
 	1    7900 1900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1950 4750 2350 4750
 NoConn ~ 2350 2250
 NoConn ~ 2350 2450
 NoConn ~ 2350 2550
@@ -431,6 +429,8 @@ Text HLabel 1100 2750 0    50   Output ~ 0
 ChargerSafety
 Wire Wire Line
 	1100 2750 2350 2750
+Wire Wire Line
+	1900 4750 2350 4750
 Wire Bus Line
 	4500 4000 4500 4300
 Wire Bus Line

@@ -1,10 +1,11 @@
 EESchema Schematic File Version 4
+LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 4 17
-Title "BMS Container Schematic"
+Title "BMS Container"
 Date "2020-10-16"
 Rev "1"
 Comp "Northeaster Electric Racing"
