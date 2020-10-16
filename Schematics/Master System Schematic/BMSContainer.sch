@@ -4,152 +4,102 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 4 21
-Title ""
-Date "2020-10-12"
-Rev ""
-Comp ""
-Comment1 ""
+Sheet 4 17
+Title "BMS Container"
+Date "2020-10-16"
+Rev "1"
+Comp "Northeaster Electric Racing"
+Comment1 "Dylan Gardner, Zack Perry"
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L NER:OrionThermExp U2
-U 1 1 60D555EB
-P 4500 4150
-F 0 "U2" H 4500 4275 50  0000 C CNN
-F 1 "OrionThermExp" H 4500 4184 50  0000 C CNN
-F 2 "" H 4500 4150 50  0001 C CNN
-F 3 "" H 4500 4150 50  0001 C CNN
-	1    4500 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L NER:OrionBMS2 U1
-U 1 1 60D58399
-P 4500 950
-F 0 "U1" H 4530 1075 50  0000 C CNN
-F 1 "OrionBMS2" H 4530 984 50  0000 C CNN
-F 2 "" H 4500 950 50  0001 C CNN
-F 3 "" H 4500 950 50  0001 C CNN
-	1    4500 950 
-	1    0    0    -1  
-$EndComp
-Text HLabel 3150 4750 0    50   Input ~ 0
-Segment4_Thermistors
-Text HLabel 3150 6150 0    50   Input ~ 0
+Text HLabel 6800 3650 0    50   Input ~ 0
 Segment3_Thermistors
-Wire Wire Line
-	3800 5550 3750 5550
-Wire Wire Line
-	3800 5600 3750 5600
-Wire Wire Line
-	3800 5700 3750 5700
-Wire Wire Line
-	3800 5750 3750 5750
-Wire Wire Line
-	3800 5850 3750 5850
-Wire Wire Line
-	3800 5900 3750 5900
-Wire Wire Line
-	3800 6000 3750 6000
-Wire Wire Line
-	3800 6050 3750 6050
-Entry Wire Line
-	3750 6050 3650 6150
-Entry Wire Line
-	3750 6000 3650 6100
-Entry Wire Line
-	3750 5900 3650 6000
-Entry Wire Line
-	3750 5850 3650 5950
-Entry Wire Line
-	3750 5750 3650 5850
-Entry Wire Line
-	3750 5700 3650 5800
-Entry Wire Line
-	3750 5600 3650 5700
-Entry Wire Line
-	3750 5550 3650 5650
-Wire Wire Line
-	3800 5350 3750 5350
-Wire Wire Line
-	3800 5300 3750 5300
-Wire Wire Line
-	3800 5200 3750 5200
-Wire Wire Line
-	3800 5150 3750 5150
-Wire Wire Line
-	3800 5050 3750 5050
-Wire Wire Line
-	3800 5000 3750 5000
-Wire Wire Line
-	3800 4900 3750 4900
-Wire Wire Line
-	3800 4850 3750 4850
-Entry Wire Line
-	3750 4850 3650 4750
-Entry Wire Line
-	3750 4900 3650 4800
-Entry Wire Line
-	3750 5000 3650 4900
-Entry Wire Line
-	3750 5050 3650 4950
-Entry Wire Line
-	3750 5150 3650 5050
-Entry Wire Line
-	3750 5200 3650 5100
-Entry Wire Line
-	3750 5300 3650 5200
-Entry Wire Line
-	3750 5350 3650 5250
-Entry Wire Line
-	5250 5350 5350 5250
-Entry Wire Line
-	5250 5300 5350 5200
-Entry Wire Line
-	5250 5200 5350 5100
-Entry Wire Line
-	5250 5150 5350 5050
-Entry Wire Line
-	5250 5050 5350 4950
-Entry Wire Line
-	5250 5000 5350 4900
-Entry Wire Line
-	5250 4900 5350 4800
-Entry Wire Line
-	5250 4850 5350 4750
-Wire Wire Line
-	5200 4850 5250 4850
-Wire Wire Line
-	5200 4900 5250 4900
-Wire Wire Line
-	5200 5000 5250 5000
-Wire Wire Line
-	5200 5050 5250 5050
-Wire Wire Line
-	5200 5150 5250 5150
-Wire Wire Line
-	5200 5200 5250 5200
-Wire Wire Line
-	5200 5300 5250 5300
-Wire Wire Line
-	5200 5350 5250 5350
-Text HLabel 5850 4750 2    50   Input ~ 0
+Text HLabel 1100 1150 0    50   BiDi ~ 0
+CAN_H
+Text HLabel 1100 1050 0    50   BiDi ~ 0
+CAN_L
+Text HLabel 1100 800  0    50   Input ~ 0
+GLV+
+Text HLabel 1100 700  0    50   BiDi ~ 0
+GLV_GND
+Text HLabel 1950 5000 0    50   Input ~ 0
+Segment4_VoltageTaps
+Text HLabel 9000 2600 2    50   Input ~ 0
 Segment1_Thermistors
 Entry Wire Line
-	5250 5550 5350 5650
+	8750 3500 8850 3400
 Entry Wire Line
-	5250 5600 5350 5700
+	8750 3400 8850 3300
 Entry Wire Line
-	5250 5700 5350 5800
+	8750 3300 8850 3200
 Entry Wire Line
-	5250 5750 5350 5850
+	8750 3200 8850 3100
 Entry Wire Line
-	5250 5850 5350 5950
+	8750 3100 8850 3000
 Entry Wire Line
-	5250 5900 5350 6000
+	8750 3000 8850 2900
+Entry Wire Line
+	8750 2900 8850 2800
+Entry Wire Line
+	8750 2800 8850 2700
+Entry Bus Bus
+	8850 2700 8950 2600
+Wire Bus Line
+	8950 2600 9000 2600
+Entry Wire Line
+	7050 3400 6950 3300
+Entry Wire Line
+	7050 3300 6950 3200
+Entry Wire Line
+	7050 3200 6950 3100
+Entry Wire Line
+	7050 3100 6950 3000
+Entry Wire Line
+	7050 3000 6950 2900
+Entry Wire Line
+	7050 2900 6950 2800
+Entry Wire Line
+	7050 2800 6950 2700
+Entry Bus Bus
+	6950 2700 6850 2600
+Wire Bus Line
+	6850 2600 6800 2600
+Entry Wire Line
+	7050 4550 6950 4450
+Entry Wire Line
+	7050 4450 6950 4350
+Entry Wire Line
+	7050 4350 6950 4250
+Entry Wire Line
+	7050 4250 6950 4150
+Entry Wire Line
+	7050 4150 6950 4050
+Entry Wire Line
+	7050 4050 6950 3950
+Entry Wire Line
+	7050 3950 6950 3850
+Entry Wire Line
+	7050 3850 6950 3750
+Entry Bus Bus
+	6950 3750 6850 3650
+Wire Bus Line
+	6850 3650 6800 3650
+Entry Wire Line
+	8750 3850 8850 3750
+Entry Wire Line
+	8750 3950 8850 3850
+Entry Wire Line
+	8750 4050 8850 3950
+Entry Wire Line
+	8750 4150 8850 4050
+Entry Wire Line
+	8750 4250 8850 4150
+Entry Wire Line
+	8750 4350 8850 4250
+Entry Wire Line
+	8750 4450 8850 4350
 Entry Wire Line
 	8750 4550 8850 4450
 Text HLabel 9000 3650 2    50   Input ~ 0
@@ -163,260 +113,193 @@ BMS_Fault
 Text HLabel 6800 2600 0    50   Input ~ 0
 Segment4_Thermistors
 Entry Wire Line
-	5250 6050 5350 6150
+	7050 3500 6950 3400
 Wire Wire Line
-	5200 6050 5250 6050
+	7050 2800 7100 2800
 Wire Wire Line
-	5200 6000 5250 6000
+	7050 2900 7200 2900
 Wire Wire Line
-	5200 5900 5250 5900
+	7050 3000 7100 3000
 Wire Wire Line
-	5200 5850 5250 5850
+	7050 3100 7200 3100
 Wire Wire Line
-	5200 5750 5250 5750
+	7100 3200 7050 3200
 Wire Wire Line
-	5200 5700 5250 5700
+	7050 3300 7200 3300
 Wire Wire Line
-	5200 5600 5250 5600
+	7050 3400 7100 3400
 Wire Wire Line
-	5200 5550 5250 5550
-Text HLabel 5850 6150 2    50   Input ~ 0
-Segment2_Thermistors
-NoConn ~ 5200 4450
-NoConn ~ 5200 4550
-Text HLabel 2350 2650 0    50   BiDi ~ 0
-CAN_H
-Text HLabel 2350 2750 0    50   BiDi ~ 0
-CAN_L
-Entry Wire Line
-	3650 2650 3750 2750
-Entry Wire Line
-	3650 2750 3750 2850
-Entry Wire Line
-	3650 4550 3750 4650
-Entry Wire Line
-	5250 4650 5350 4550
+	7050 3500 7200 3500
 Wire Wire Line
-	3800 2750 3750 2750
+	7100 3850 7050 3850
 Wire Wire Line
-	3800 2850 3750 2850
-Wire Bus Line
-	2350 2750 3000 2750
-Wire Bus Line
-	2900 4550 3650 4550
+	7050 3950 7200 3950
 Wire Wire Line
-	3750 4650 3800 4650
+	7050 4050 7100 4050
 Wire Wire Line
-	5200 4650 5250 4650
-Wire Bus Line
-	5350 4550 5750 4550
-Wire Bus Line
-	5750 3750 3000 3750
-Wire Bus Line
-	3000 3750 3000 2750
-Connection ~ 3000 2750
-Wire Bus Line
-	3000 2750 3650 2750
-Wire Bus Line
-	2350 2650 2900 2650
-Wire Bus Line
-	2900 2650 2900 4550
-Connection ~ 2900 2650
-Wire Bus Line
-	2900 2650 3650 2650
-Wire Bus Line
-	5750 3750 5750 4550
-Text HLabel 2300 2050 0    50   Input ~ 0
-GLV
-Text HLabel 2300 2150 0    50   BiDi ~ 0
-GLV_GND
+	7050 4150 7200 4150
 Wire Wire Line
-	3300 2050 3300 1150
+	7050 4250 7100 4250
 Wire Wire Line
-	3300 1150 3800 1150
+	7050 4350 7200 4350
 Wire Wire Line
-	2300 2050 3300 2050
+	7050 4450 7100 4450
 Wire Wire Line
-	5200 4250 5600 4250
-Connection ~ 3300 2050
+	7050 4550 7200 4550
 Wire Wire Line
-	2300 2150 3200 2150
+	8750 3850 8700 3850
 Wire Wire Line
-	3300 3850 5600 3850
+	8750 3950 8600 3950
 Wire Wire Line
-	5600 3850 5600 4250
+	8750 4050 8700 4050
 Wire Wire Line
-	3300 2050 3300 3850
+	8600 4150 8750 4150
 Wire Wire Line
-	3200 2150 3200 3950
+	8700 4250 8750 4250
 Wire Wire Line
-	3200 3950 5500 3950
+	8600 4350 8750 4350
 Wire Wire Line
-	5500 3950 5500 4350
+	8750 4450 8700 4450
 Wire Wire Line
-	5200 4350 5500 4350
-Connection ~ 3200 2150
+	8600 4550 8750 4550
 Wire Wire Line
-	3200 2150 3800 2150
-Entry Wire Line
-	5250 1550 5350 1450
+	8600 3500 8750 3500
 Wire Wire Line
-	5200 1550 5250 1550
-Wire Bus Line
-	5350 1450 6800 1450
-Entry Wire Line
-	5250 2450 5350 2350
+	8750 3400 8700 3400
 Wire Wire Line
-	5200 2450 5250 2450
-Entry Bus Bus
-	6700 2350 6800 2450
-Wire Bus Line
-	6700 2350 5350 2350
-Entry Wire Line
-	5750 6150 5850 6050
-Entry Wire Line
-	5700 6150 5800 6050
-Entry Wire Line
-	6700 5850 6800 5750
-Entry Wire Line
-	6700 5800 6800 5700
+	8750 3300 8600 3300
 Wire Wire Line
-	5800 5800 6700 5800
+	8750 3200 8700 3200
 Wire Wire Line
-	5850 5850 6700 5850
+	8750 3100 8600 3100
 Wire Wire Line
-	5850 6050 5850 5850
+	8750 3000 8700 3000
 Wire Wire Line
-	5800 5800 5800 6050
-Entry Wire Line
-	5750 4750 5850 4650
-Entry Wire Line
-	5700 4750 5800 4650
-Entry Wire Line
-	6700 4450 6800 4350
-Entry Wire Line
-	6700 4400 6800 4300
+	8750 2900 8600 2900
 Wire Wire Line
-	5800 4400 6700 4400
-Wire Wire Line
-	5850 4450 6700 4450
-Wire Wire Line
-	5850 4650 5850 4450
-Wire Wire Line
-	5800 4400 5800 4650
-Entry Wire Line
-	3200 4750 3100 4850
-Entry Wire Line
-	3250 4750 3150 4850
-Entry Wire Line
-	2250 5050 2150 5150
-Entry Wire Line
-	2250 5100 2150 5200
-Wire Wire Line
-	3150 5100 2250 5100
-Wire Wire Line
-	3100 5050 2250 5050
-Wire Wire Line
-	3100 4850 3100 5050
-Wire Wire Line
-	3150 5100 3150 4850
-Wire Wire Line
-	3300 6250 3300 6350
-Wire Wire Line
-	3350 6250 3350 6350
-Entry Wire Line
-	3200 6150 3300 6250
-Entry Wire Line
-	3250 6150 3350 6250
-Entry Wire Line
-	3300 6350 3400 6450
-Entry Wire Line
-	3350 6350 3450 6450
-Text HLabel 3700 3550 0    50   Output ~ 0
-BMS_Fault
-Wire Wire Line
-	3800 3550 3700 3550
-Entry Wire Line
-	5250 3550 5350 3450
-Entry Wire Line
-	5250 3450 5350 3350
-Entry Wire Line
-	5250 3250 5350 3150
-Entry Wire Line
-	5250 3150 5350 3050
-Entry Wire Line
-	5250 3050 5350 2950
-Entry Wire Line
-	5250 2950 5350 2850
-Wire Wire Line
-	5250 3550 5200 3550
-Wire Wire Line
-	5200 3450 5250 3450
-Wire Wire Line
-	5250 3250 5200 3250
-Wire Wire Line
-	5200 3150 5250 3150
-Wire Wire Line
-	5250 3050 5200 3050
-Wire Wire Line
-	5200 2950 5250 2950
-Wire Bus Line
-	5350 3150 5600 3150
-Wire Bus Line
-	5350 3450 5350 3350
-Wire Bus Line
-	5350 3350 5600 3350
-Text HLabel 5600 3150 2    50   Input ~ 0
-Segment1_VoltageTaps
-Text HLabel 5600 3350 2    50   Input ~ 0
-Segment2_VoltageTaps
-Text HLabel 5600 3450 2    50   Input ~ 0
-Segment3_VoltageTaps
-Text HLabel 5600 3550 2    50   Input ~ 0
-Segment4_VoltageTaps
-Wire Bus Line
-	5600 3550 5600 3350
-Wire Wire Line
-	5200 2750 5250 2750
-Wire Wire Line
-	5200 2650 5250 2650
-Wire Wire Line
-	5200 1850 5250 1850
-Wire Wire Line
-	5200 1750 5250 1750
-Entry Wire Line
-	5250 1750 5350 1650
-Entry Wire Line
-	5250 1850 5350 1750
-Entry Wire Line
-	5250 2650 5350 2550
-Entry Wire Line
-	5250 2750 5350 2650
-Wire Bus Line
-	5350 2650 5350 2550
-Wire Bus Line
-	5350 1650 5350 1750
-Entry Bus Bus
-	5350 1650 5450 1550
-Entry Bus Bus
-	5350 2550 5450 2450
-Wire Bus Line
-	5450 1550 5600 1550
-Wire Bus Line
-	5600 1550 5600 2450
-Wire Bus Line
-	5450 2450 5600 2450
-Wire Bus Line
-	5600 1550 5900 1550
-Connection ~ 5600 1550
-Text HLabel 5900 1550 2    50   Input ~ 0
+	8700 2800 8750 2800
+Text HLabel 4900 2750 2    50   Input ~ 0
 Current_Sensor
-Wire Wire Line
-	3800 1550 2300 1550
-Text HLabel 2300 1550 0    50   Output ~ 0
-ChargeSafety
+Text HLabel 4650 5200 2    50   Input ~ 0
+Segment3_VoltageTaps
+Text HLabel 4650 4300 2    50   Input ~ 0
+Segment2_VoltageTaps
+Text HLabel 4650 3900 2    50   Input ~ 0
+Segment1_VoltageTaps
+Entry Wire Line
+	4400 4100 4500 4000
+Entry Wire Line
+	4400 4200 4500 4100
+Entry Wire Line
+	4400 4300 4500 4200
+Entry Wire Line
+	4400 4400 4500 4300
+Entry Wire Line
+	4400 4500 4500 4400
+Entry Wire Line
+	4400 4600 4500 4500
+Entry Wire Line
+	4400 5200 4500 5100
+Entry Wire Line
+	4400 5300 4500 5200
+Entry Wire Line
+	4400 5400 4500 5300
+Entry Wire Line
+	4400 5500 4500 5400
+Entry Wire Line
+	4400 5600 4500 5500
+Entry Wire Line
+	4400 5700 4500 5600
+Entry Bus Bus
+	4500 4000 4600 3900
 Wire Bus Line
-	2150 5150 2150 6450
+	4600 3900 4650 3900
+Wire Wire Line
+	4350 4100 4400 4100
+Wire Wire Line
+	4250 4200 4400 4200
+Wire Wire Line
+	4350 4300 4400 4300
+Wire Wire Line
+	4250 4400 4400 4400
+Wire Wire Line
+	4350 4500 4400 4500
+Wire Wire Line
+	4400 4600 4250 4600
+Wire Wire Line
+	4400 5200 4350 5200
+Wire Wire Line
+	4400 5300 4250 5300
+Entry Bus Bus
+	4500 4400 4600 4300
+Wire Bus Line
+	4600 4300 4650 4300
+Entry Bus Bus
+	4500 5300 4600 5200
+Wire Bus Line
+	4600 5200 4650 5200
+Wire Wire Line
+	4350 5400 4400 5400
+Wire Wire Line
+	4250 5500 4400 5500
+Wire Wire Line
+	4400 5600 4350 5600
+Wire Wire Line
+	4250 5700 4400 5700
+Wire Wire Line
+	2250 5400 2200 5400
+Wire Wire Line
+	2350 5300 2200 5300
+Wire Wire Line
+	2250 5200 2200 5200
+Wire Wire Line
+	2350 5500 2200 5500
+Entry Wire Line
+	2100 5100 2200 5200
+Entry Wire Line
+	2100 5200 2200 5300
+Entry Wire Line
+	2100 5300 2200 5400
+Entry Wire Line
+	2100 5400 2200 5500
+Entry Bus Bus
+	2000 5000 2100 5100
+Wire Bus Line
+	2000 5000 1950 5000
+Wire Wire Line
+	4650 3450 4250 3450
+Entry Wire Line
+	4400 3350 4500 3250
+Entry Wire Line
+	4400 2650 4500 2550
+Wire Wire Line
+	4350 2650 4400 2650
+Wire Wire Line
+	4350 3350 4400 3350
+Entry Bus Bus
+	4500 2550 4600 2450
+Wire Bus Line
+	4650 2450 4600 2450
+Text HLabel 4650 2450 2    50   Input ~ 0
+Segment1_Thermistors
+Text HLabel 4650 2350 2    50   Input ~ 0
+Segment2_Thermistors
+Text HLabel 4650 2250 2    50   Input ~ 0
+Segment3_Thermistors
+Text HLabel 4650 2150 2    50   Input ~ 0
+Segment4_Thermistors
+Wire Bus Line
+	4600 2450 4600 2350
+Wire Bus Line
+	4600 2150 4650 2150
+Wire Bus Line
+	4600 2250 4650 2250
+Connection ~ 4600 2250
+Wire Bus Line
+	4600 2250 4600 2150
+Wire Bus Line
+	4600 2350 4650 2350
+Connection ~ 4600 2350
 Wire Bus Line
 	4600 2350 4600 2250
 NoConn ~ 8600 2300
@@ -549,21 +432,21 @@ Wire Wire Line
 Wire Wire Line
 	1900 4750 2350 4750
 Wire Bus Line
-	3150 4750 3650 4750
+	4500 4000 4500 4300
 Wire Bus Line
-	3150 6150 3650 6150
+	4500 4400 4500 5200
 Wire Bus Line
-	2150 6450 6800 6450
+	4500 5300 4500 5600
 Wire Bus Line
-	5350 2850 5350 3150
+	2100 5100 2100 5400
 Wire Bus Line
-	3650 5650 3650 6150
+	4750 2850 4750 3450
 Wire Bus Line
-	3650 4750 3650 5250
+	8850 2700 8850 3400
 Wire Bus Line
-	5350 4750 5350 5250
+	6950 2700 6950 3400
 Wire Bus Line
-	5350 5650 5350 6150
+	6950 3750 6950 4450
 Wire Bus Line
-	6800 1450 6800 6450
+	8850 3750 8850 4450
 $EndSCHEMATC
