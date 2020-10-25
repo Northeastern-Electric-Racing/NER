@@ -5,8 +5,13 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 13
 Title "NER FH 2020-2021 Master Electrical Schematic"
+<<<<<<< Updated upstream
 Date "2020-09-17"
 Rev "2"
+=======
+Date "2020-10-20"
+Rev "5"
+>>>>>>> Stashed changes
 Comp "Northeastern Electric Racing"
 Comment1 "Dylan Gardner, Matthew McCauley"
 Comment2 ""

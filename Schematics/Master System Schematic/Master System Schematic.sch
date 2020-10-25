@@ -538,6 +538,16 @@ F8 "Button_Input" I L 9450 4900 50
 F9 "Button_+5V" I L 9450 4100 50 
 F10 "Speaker+" I R 11150 4900 50 
 F11 "Speaker-" I R 11150 5000 50 
+<<<<<<< Updated upstream
+=======
+F12 "StartEnable" I L 9450 5000 50 
+F13 "IMD_Indicator(+)" I R 11150 4150 50 
+F14 "IMD_Indicator(-)" I R 11150 4300 50 
+F15 "BMS_Indicator(+)" I R 11150 3800 50 
+F16 "BMS_Indicator(-)" I R 11150 3950 50 
+F17 "Toggle(+)" I R 11150 4450 50 
+F18 "Toggle(-)" I R 11150 4650 50 
+>>>>>>> Stashed changes
 $EndSheet
 Text GLabel 15200 7250 1    50   UnSpc ~ 0
 CHASSIS_GND
@@ -1119,7 +1129,127 @@ Wire Wire Line
 Wire Bus Line
 	14550 2550 14550 3150
 Wire Bus Line
+<<<<<<< Updated upstream
 	11150 1650 11150 2000
+=======
+	11300 1650 11950 1650
+Wire Wire Line
+	12700 3150 12700 700 
+Wire Wire Line
+	8750 700  12700 700 
+Text GLabel 12750 3250 0    50   UnSpc ~ 0
+CHASSIS_GND
+Wire Wire Line
+	12750 3250 12950 3250
+Wire Wire Line
+	5950 5000 9450 5000
+Wire Wire Line
+	10100 7150 9500 7150
+Wire Wire Line
+	9500 7150 9500 7850
+Wire Wire Line
+	9500 7850 4250 7850
+$Comp
+L Connector:Conn_01x01_Female J12
+U 1 1 5F968F75
+P 4250 9350
+F 0 "J12" V 4150 9200 50  0000 L CNN
+F 1 "BMS 12V" V 4050 9150 50  0000 C CNN
+F 2 "" H 4250 9350 50  0001 C CNN
+F 3 "~" H 4250 9350 50  0001 C CNN
+	1    4250 9350
+	0    -1   1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J13
+U 1 1 5F97C76F
+P 4250 9750
+F 0 "J13" H 4250 9700 50  0000 L CNN
+F 1 "Charger BMS 12V" H 4250 9600 50  0000 L CNN
+F 2 "" H 4250 9750 50  0001 C CNN
+F 3 "~" H 4250 9750 50  0001 C CNN
+	1    4250 9750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4250 9950 4250 10300
+Connection ~ 4250 10300
+Wire Wire Line
+	4250 10300 8550 10300
+NoConn ~ 650  3800
+Wire Wire Line
+	4250 7850 4250 9150
+Wire Wire Line
+	750  5750 1250 5750
+$Comp
+L Switch:SW_SPST SW14
+U 1 1 5F970FC9
+P 11400 4450
+F 0 "SW14" H 11400 4225 50  0000 C CNN
+F 1 "TOGGLE_SWITCH" H 11400 4316 50  0000 C CNN
+F 2 "" H 11400 4450 50  0001 C CNN
+F 3 "~" H 11400 4450 50  0001 C CNN
+	1    11400 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D30
+U 1 1 5F97765A
+P 11350 4150
+F 0 "D30" H 11343 4366 50  0000 C CNN
+F 1 "IMD Indicator" H 11350 4250 50  0000 C CNN
+F 2 "" H 11350 4150 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/26/apem_03162018_Q14_Series_HMI_2017-1730666.pdf" H 11350 4150 50  0001 C CNN
+	1    11350 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D29
+U 1 1 5F979C34
+P 11350 3800
+F 0 "D29" H 11343 4016 50  0000 C CNN
+F 1 "BMS Indicator" H 11350 3900 50  0000 C CNN
+F 2 "" H 11350 3800 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/26/apem_03162018_Q14_Series_HMI_2017-1730666.pdf" H 11350 3800 50  0001 C CNN
+	1    11350 3800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	11150 3800 11200 3800
+Wire Wire Line
+	11500 3800 11600 3800
+Wire Wire Line
+	11600 3800 11600 3950
+Wire Wire Line
+	11600 3950 11150 3950
+Wire Wire Line
+	11150 4150 11200 4150
+Wire Wire Line
+	11500 4150 11600 4150
+Wire Wire Line
+	11600 4150 11600 4300
+Wire Wire Line
+	11600 4300 11150 4300
+$Comp
+L Switch:SW_Push_Open SW?
+U 1 1 5F9FEECF
+P 10100 5250
+AR Path="/5F45AFB3/5F9FEECF" Ref="SW?"  Part="1" 
+AR Path="/5F9FEECF" Ref="SW15"  Part="1" 
+F 0 "SW15" H 10150 5450 50  0000 R CNN
+F 1 "BRB" H 10150 5350 50  0000 R CNN
+F 2 "" H 10100 5450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/307/a165e_ds_e_11_2_csm1264-1291086.pdf" H 10100 5450 50  0001 C CNN
+	1    10100 5250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	11150 4450 11200 4450
+Wire Wire Line
+	11150 4650 11600 4650
+Wire Wire Line
+	11600 4650 11600 4450
+>>>>>>> Stashed changes
 Wire Bus Line
 	11300 3250 11300 3600
 Wire Bus Line
