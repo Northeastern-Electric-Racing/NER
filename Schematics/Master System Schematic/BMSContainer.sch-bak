@@ -328,6 +328,7 @@ Wire Wire Line
 Wire Wire Line
 	5200 2650 5300 2650
 Wire Wire Line
+<<<<<<< Updated upstream
 	5200 2750 5300 2750
 Text HLabel 5300 2650 2    50   Input ~ 0
 C_GND
@@ -339,6 +340,32 @@ Text HLabel 5300 1850 2    50   Input ~ 0
 C_Low
 Text HLabel 3700 3550 0    50   Output ~ 0
 BMS_Fault
+=======
+	1100 2450 2350 2450
+$Comp
+L NER:OrionBMS2 U6
+U 1 1 5F91103C
+P 3300 3100
+F 0 "U6" H 3300 4465 50  0000 C CNN
+F 1 "OrionBMS2" H 3300 4374 50  0000 C CNN
+F 2 "" H 3300 4400 50  0001 C CNN
+F 3 "" H 3300 4400 50  0001 C CNN
+	1    3300 3100
+	1    0    0    -1  
+$EndComp
+Wire Bus Line
+	4600 4050 4650 4050
+Entry Bus Bus
+	4500 4150 4600 4050
+Text HLabel 4650 4050 2    50   Input ~ 0
+Segment1_VoltageTaps
+Wire Wire Line
+	4250 4350 4400 4350
+Wire Wire Line
+	4250 4550 4400 4550
+Wire Wire Line
+	4350 4450 4400 4450
+>>>>>>> Stashed changes
 Wire Wire Line
 	3800 3550 3700 3550
 Entry Wire Line

@@ -3,12 +3,21 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
+<<<<<<< Updated upstream
 Sheet 4 13
 Title ""
 Date "2020-10-12"
 Rev ""
 Comp ""
 Comment1 ""
+=======
+Sheet 1 21
+Title "BMS Container"
+Date "2020-10-22"
+Rev "1.1"
+Comp "Northeaster Electric Racing"
+Comment1 "Dylan Gardner, Zack Perry"
+>>>>>>> Stashed changes
 Comment2 ""
 Comment3 ""
 Comment4 ""

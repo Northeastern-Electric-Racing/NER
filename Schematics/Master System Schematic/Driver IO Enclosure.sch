@@ -75,7 +75,7 @@ Wire Wire Line
 Wire Wire Line
 	5100 2100 4700 2100
 Wire Wire Line
-	4700 2100 4700 4050
+	4700 2100 4700 3900
 Wire Wire Line
 	4700 4050 4850 4050
 Wire Wire Line
@@ -83,6 +83,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 1750 4750 4150
 Wire Wire Line
+<<<<<<< Updated upstream
 	6700 3250 6400 3250
 Wire Wire Line
 	6400 3250 6400 3750
@@ -116,6 +117,9 @@ Wire Wire Line
 	6700 5400 4550 5400
 Wire Wire Line
 	4550 5400 4550 3950
+=======
+	4550 5400 4550 4400
+>>>>>>> Stashed changes
 Wire Wire Line
 	4550 3950 4850 3950
 Wire Wire Line
@@ -159,11 +163,14 @@ NoConn ~ 4850 4600
 NoConn ~ 4850 4700
 NoConn ~ 4850 4800
 NoConn ~ 4850 4900
+<<<<<<< Updated upstream
 NoConn ~ 6050 4300
 NoConn ~ 6050 4400
 NoConn ~ 6050 4700
 NoConn ~ 6050 4800
 NoConn ~ 6050 4900
+=======
+>>>>>>> Stashed changes
 NoConn ~ 6050 3150
 NoConn ~ 6050 3250
 NoConn ~ 6050 3350
@@ -189,4 +196,180 @@ Text HLabel 4750 1750 1    50   Input ~ 0
 Speaker-
 Wire Wire Line
 	5650 2300 5750 2300
+<<<<<<< Updated upstream
+=======
+$Comp
+L Device:R R6
+U 1 1 5F8C0C28
+P 5300 5900
+F 0 "R6" V 5507 5900 50  0000 C CNN
+F 1 "6.8MΩ" V 5416 5900 50  0000 C CNN
+F 2 "" V 5230 5900 50  0001 C CNN
+F 3 "~" H 5300 5900 50  0001 C CNN
+	1    5300 5900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4650 5900 4650 4150
+Wire Wire Line
+	4650 5900 4900 5900
+Connection ~ 4650 4150
+Wire Wire Line
+	4650 4150 4750 4150
+NoConn ~ 7800 3450
+Wire Wire Line
+	9200 3600 8950 3600
+Text HLabel 9200 3600 2    50   Input ~ 0
+CAN_H
+Wire Wire Line
+	9200 3850 8950 3850
+Text HLabel 9200 3850 2    50   Input ~ 0
+CAN_L
+$Comp
+L NER:CAN_Bus_Module U11
+U 1 1 5F847676
+P 8350 3300
+F 0 "U11" H 8375 3415 50  0000 C CNN
+F 1 "CAN_Bus_Module" H 8375 3324 50  0000 C CNN
+F 2 "" H 8350 3300 50  0001 C CNN
+F 3 "" H 8350 3300 50  0001 C CNN
+	1    8350 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5F8BB898
+P 6950 4400
+F 0 "R7" V 6743 4400 50  0000 C CNN
+F 1 "10MΩ" V 6834 4400 50  0000 C CNN
+F 2 "" V 6880 4400 50  0001 C CNN
+F 3 "~" H 6950 4400 50  0001 C CNN
+	1    6950 4400
+	0    1    1    0   
+$EndComp
+Text HLabel 7250 4400 2    50   Input ~ 0
+StartEnable
+Wire Wire Line
+	6050 4400 6500 4400
+Wire Wire Line
+	6500 4400 6500 5900
+Wire Wire Line
+	6500 5900 5450 5900
+Connection ~ 6500 4400
+Wire Wire Line
+	6500 4400 6800 4400
+Wire Wire Line
+	6200 1750 6200 2150
+Wire Wire Line
+	3500 2950 4850 2950
+Wire Wire Line
+	6050 3850 7800 3850
+Wire Wire Line
+	7800 3650 6850 3650
+Wire Wire Line
+	6850 3650 6850 3750
+Wire Wire Line
+	6850 3750 6050 3750
+Wire Wire Line
+	7800 3550 6050 3550
+Wire Wire Line
+	7800 3750 7000 3750
+Wire Wire Line
+	7000 3700 7000 3750
+Wire Wire Line
+	6700 3700 6700 3650
+Wire Wire Line
+	6700 3650 6050 3650
+Wire Wire Line
+	6700 3700 7000 3700
+Wire Wire Line
+	7350 3450 7350 3950
+Wire Wire Line
+	6050 3450 7350 3450
+Wire Wire Line
+	7800 4050 7800 5400
+Wire Wire Line
+	4550 5400 7800 5400
+$Comp
+L Device:R R8
+U 1 1 5F8E0B40
+P 6700 4600
+F 0 "R8" V 6493 4600 50  0000 C CNN
+F 1 "10kΩ" V 6584 4600 50  0000 C CNN
+F 2 "" V 6630 4600 50  0001 C CNN
+F 3 "~" H 6700 4600 50  0001 C CNN
+	1    6700 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5F8E3DF1
+P 7000 5100
+F 0 "R9" H 6930 5054 50  0000 R CNN
+F 1 "15kΩ" H 6930 5145 50  0000 R CNN
+F 2 "" V 6930 5100 50  0001 C CNN
+F 3 "~" H 7000 5100 50  0001 C CNN
+	1    7000 5100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7100 4400 7250 4400
+Wire Wire Line
+	6050 4500 7250 4500
+Wire Wire Line
+	7350 3950 7800 3950
+Wire Wire Line
+	6050 4300 7250 4300
+Wire Wire Line
+	6850 4600 7000 4600
+Wire Wire Line
+	6050 4600 6550 4600
+Wire Wire Line
+	7000 4600 7000 4950
+Connection ~ 7000 4600
+Wire Wire Line
+	7000 4600 7250 4600
+Wire Wire Line
+	7000 5250 7000 6050
+Wire Wire Line
+	7000 6050 4900 6050
+Wire Wire Line
+	4900 6050 4900 5900
+Connection ~ 4900 5900
+Wire Wire Line
+	4900 5900 5150 5900
+Text HLabel 6600 4050 2    50   Input ~ 0
+IMD_Indicator(+)
+Text HLabel 3500 4000 0    50   Input ~ 0
+IMD_Indicator(-)
+Text HLabel 7900 4700 2    50   Input ~ 0
+BMS_Indicator(+)
+Text HLabel 3500 3900 0    50   Input ~ 0
+BMS_Indicator(-)
+Wire Wire Line
+	6600 4050 6050 4050
+Wire Wire Line
+	7900 4700 6050 4700
+Wire Wire Line
+	4700 3900 3500 3900
+Connection ~ 4700 3900
+Wire Wire Line
+	4700 3900 4700 4000
+Wire Wire Line
+	4700 4000 3500 4000
+Connection ~ 4700 4000
+Wire Wire Line
+	4700 4000 4700 4050
+Text HLabel 7300 4800 2    50   Input ~ 0
+Toggle(+)
+Text HLabel 3450 4400 0    50   Input ~ 0
+Toggle(-)
+Wire Wire Line
+	7300 4800 6050 4800
+Wire Wire Line
+	3450 4400 4550 4400
+Connection ~ 4550 4400
+Wire Wire Line
+	4550 4400 4550 3950
+>>>>>>> Stashed changes
 $EndSCHEMATC
