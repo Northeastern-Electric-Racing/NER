@@ -5,8 +5,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 21
 Title "NER FH 2020-2021 Master Electrical Schematic"
-Date "2020-10-25"
-Rev "6"
+Date "2020-10-27"
+Rev "7"
 Comp "Northeastern Electric Racing"
 Comment1 "Dylan Gardner, Matthew McCauley"
 Comment2 ""
@@ -19,8 +19,8 @@ U 1 1 5F633A5B
 P 1250 7650
 AR Path="/5F45AFB3/5F633A5B" Ref="BT?"  Part="1" 
 AR Path="/5F633A5B" Ref="BT1"  Part="1" 
-F 0 "BT1" H 850 7750 50  0000 L CNN
-F 1 "12V GLV Battery" H 550 7650 50  0000 L CNN
+F 0 "BT1" H 1650 7750 50  0000 L CNN
+F 1 "12V GLV Battery" H 1400 7650 50  0000 L CNN
 F 2 "" V 1250 7710 50  0001 C CNN
 F 3 "~" V 1250 7710 50  0001 C CNN
 	1    1250 7650
@@ -45,8 +45,8 @@ U 1 1 5F633A74
 P 1250 6100
 AR Path="/5F45AFB3/5F633A74" Ref="SW?"  Part="1" 
 AR Path="/5F633A74" Ref="SW3"  Part="1" 
-F 0 "SW3" V 1250 6300 50  0000 L CNN
-F 1 "GLVMS" V 1350 6250 50  0000 L CNN
+F 0 "SW3" V 1250 5650 50  0000 L CNN
+F 1 "GLVMS" V 1350 5600 50  0000 L CNN
 F 2 "" H 1250 6100 50  0001 C CNN
 F 3 "https://www.pegasusautoracing.com/pdfs/4430WiringInstructions.pdf" H 1250 6100 50  0001 C CNN
 	1    1250 6100
@@ -220,17 +220,17 @@ TSMP and Shutdown Reset Container
 Text GLabel 5750 5400 0    50   UnSpc ~ 0
 CHASSIS_GND
 $Sheet
-S 8700 8900 1000 500 
+S 8200 9250 700  600 
 U 61ECC7CF
 F0 "Charger" 50
 F1 "Charger.sch" 50
-F2 "+12V" O L 8700 9200 50 
-F3 "TS+" O L 8700 8950 50 
-F4 "TS-" O L 8700 9050 50 
-F5 "Charger_Safety" O R 9700 9300 50 
-F6 "CAN_L" B R 9700 8950 50 
-F7 "CAN_H" B R 9700 9050 50 
-F8 "GND" O L 8700 9300 50 
+F2 "+12V" O R 8900 9500 50 
+F3 "TS+" O L 8200 9400 50 
+F4 "TS-" O L 8200 9300 50 
+F5 "Charger_Safety" O R 8900 9700 50 
+F6 "CAN_L" B R 8900 9300 50 
+F7 "CAN_H" B R 8900 9400 50 
+F8 "GND" O R 8900 9600 50 
 $EndSheet
 Text GLabel 8650 5850 2    50   UnSpc ~ 0
 CHASSIS_GND
@@ -269,8 +269,8 @@ $Comp
 L Device:CircuitBreaker_1P CB1
 U 1 1 5F6B20F0
 P 1250 6950
-F 0 "CB1" H 900 7000 50  0000 L CNN
-F 1 "GLV Main Breaker [30A]" H 250 6850 50  0000 L CNN
+F 0 "CB1" H 1650 7050 50  0000 L CNN
+F 1 "GLV Main Breaker [30A]" H 1250 6950 50  0000 L CNN
 F 2 "" H 1250 6950 50  0001 C CNN
 F 3 "~" H 1250 6950 50  0001 C CNN
 	1    1250 6950
@@ -290,9 +290,7 @@ Wire Wire Line
 Wire Wire Line
 	11700 6100 11700 1500
 Wire Wire Line
-	11800 1100 11800 6350
-Wire Wire Line
-	11600 7300 11500 7300
+	11500 8000 11600 8000
 Wire Wire Line
 	8600 1600 8600 3500
 Wire Wire Line
@@ -302,8 +300,6 @@ Wire Wire Line
 	8600 3500 8600 3950
 Wire Wire Line
 	8600 3950 8300 3950
-Wire Wire Line
-	11500 6350 11800 6350
 $Comp
 L Device:LED D5
 U 1 1 5FA58D8C
@@ -401,7 +397,7 @@ Wire Wire Line
 	15200 7700 15300 7700
 Wire Wire Line
 	15200 7900 15350 7900
-Text GLabel 11600 7300 2    50   UnSpc ~ 0
+Text GLabel 11500 8000 0    50   UnSpc ~ 0
 CHASSIS_GND
 Wire Wire Line
 	15750 8050 15750 8000
@@ -430,8 +426,6 @@ Wire Wire Line
 	15200 8250 15750 8250
 Wire Wire Line
 	8550 8250 13400 8250
-Wire Wire Line
-	8550 8250 8550 9050
 Wire Wire Line
 	13250 6200 13400 6200
 Wire Wire Line
@@ -712,18 +706,10 @@ F 3 "~" H 11490 4850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8650 8150 13400 8150
-Connection ~ 8650 8150
-Wire Wire Line
-	8650 8150 8650 8950
-Connection ~ 8550 8250
 Wire Wire Line
 	8450 7300 8650 7300
 Wire Wire Line
 	8450 7400 8550 7400
-Wire Wire Line
-	8650 7300 8650 8150
-Wire Wire Line
-	8550 7400 8550 8250
 $Sheet
 S 6700 5250 1750 2200
 U 5F45B05E
@@ -760,13 +746,11 @@ F29 "SMD_1+" I L 6700 6700 50
 F30 "Current_Sensor" O R 8450 7000 50 
 $EndSheet
 Entry Wire Line
-	11550 6450 11650 6550
+	11550 6500 11650 6600
 Entry Wire Line
-	11550 6550 11650 6650
+	11550 6600 11650 6700
 Wire Wire Line
-	11500 6450 11550 6450
-Wire Wire Line
-	11500 6550 11550 6550
+	11500 6600 11550 6600
 Wire Wire Line
 	13400 6800 13350 6800
 Wire Wire Line
@@ -778,17 +762,17 @@ Entry Wire Line
 Wire Bus Line
 	13250 6800 13250 6700
 Entry Bus Bus
-	11650 6750 11750 6850
+	11650 6800 11750 6900
 Entry Bus Bus
 	13150 6600 13250 6700
 Entry Bus Bus
 	12050 6500 12150 6600
 Wire Bus Line
-	11750 6850 12050 6850
+	11750 6900 12050 6900
 Wire Bus Line
 	12150 6600 13150 6600
 Wire Bus Line
-	12050 800  11850 800 
+	12250 800  12050 800 
 Wire Wire Line
 	14400 3150 14450 3150
 Wire Wire Line
@@ -815,22 +799,6 @@ Entry Bus Bus
 	11950 3250 12050 3150
 Wire Bus Line
 	11950 3250 11300 3250
-Entry Wire Line
-	9850 8950 9750 9050
-Entry Wire Line
-	9850 8850 9750 8950
-Wire Bus Line
-	9850 8950 9850 8850
-Entry Bus Bus
-	9950 8750 9850 8850
-Wire Wire Line
-	9750 8950 9700 8950
-Wire Wire Line
-	9700 9050 9750 9050
-Wire Bus Line
-	12250 8750 12250 6700
-Entry Bus Bus
-	12150 6600 12250 6700
 Text GLabel 9350 2300 0    50   UnSpc ~ 0
 CHASSIS_GND
 Text GLabel 9300 3650 0    50   UnSpc ~ 0
@@ -862,70 +830,23 @@ Wire Wire Line
 	8900 2950 8900 2800
 Wire Wire Line
 	8900 2800 9000 2800
-$Comp
-L Connector:Conn_01x01_Male J4
-U 1 1 5F89DD3D
-P 3950 9750
-F 0 "J4" H 3950 9700 50  0000 L CNN
-F 1 "Charger GND" H 3950 9600 50  0000 L CNN
-F 2 "" H 3950 9750 50  0001 C CNN
-F 3 "~" H 3950 9750 50  0001 C CNN
-	1    3950 9750
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J2
-U 1 1 5F8D4529
-P 3350 9750
-F 0 "J2" H 3350 9700 50  0000 L CNN
-F 1 "Charger +12V" H 3350 9600 50  0000 L CNN
-F 2 "" H 3350 9750 50  0001 C CNN
-F 3 "~" H 3350 9750 50  0001 C CNN
-	1    3350 9750
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J1
-U 1 1 5F93092A
-P 3350 9350
-F 0 "J1" V 3250 9200 50  0000 L CNN
-F 1 "+12V" V 3150 9150 50  0000 L CNN
-F 2 "" H 3350 9350 50  0001 C CNN
-F 3 "~" H 3350 9350 50  0001 C CNN
-	1    3350 9350
-	0    -1   1    0   
-$EndComp
 Wire Wire Line
 	5550 7300 6700 7300
-Connection ~ 1250 5750
-Wire Wire Line
-	1250 5750 1250 5900
-$Comp
-L Relay:DIPxx-1Axx-11x K1
-U 1 1 5F9B5A7A
-P 3750 5550
-F 0 "K1" V 3183 5550 50  0000 C CNN
-F 1 "Cooling Pump Relay" V 3274 5550 50  0000 C CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 4100 5500 50  0001 L CNN
-F 3 "" H 3750 5550 50  0001 C CNN
-	1    3750 5550
-	0    1    1    0   
-$EndComp
 $Comp
 L Motor:Motor_DC M1
 U 1 1 5FA2966E
-P 4250 6150
-F 0 "M1" H 4650 6150 50  0000 L CNN
-F 1 "Cooling Pump" H 4450 6050 50  0000 L CNN
-F 2 "" H 4250 6060 50  0001 C CNN
-F 3 "~" H 4250 6060 50  0001 C CNN
-	1    4250 6150
+P 11850 9100
+F 0 "M1" H 12250 9100 50  0000 L CNN
+F 1 "Cooling Pump" H 12050 9000 50  0000 L CNN
+F 2 "" H 11850 9010 50  0001 C CNN
+F 3 "~" H 11850 9010 50  0001 C CNN
+	1    11850 9100
 	-1   0    0    -1  
 $EndComp
-Text GLabel 4000 6650 0    50   UnSpc ~ 0
+Text GLabel 11600 9600 0    50   UnSpc ~ 0
 CHASSIS_GND
 Wire Wire Line
-	4250 6650 4250 6450
+	11850 9600 11850 9400
 Wire Wire Line
 	650  3350 650  2200
 Wire Wire Line
@@ -969,20 +890,10 @@ Wire Wire Line
 	5850 7400 5850 9150
 Wire Wire Line
 	5550 7300 5550 9150
-Wire Wire Line
-	3350 9950 3350 10300
-Wire Wire Line
-	8550 10300 8550 9200
-Wire Wire Line
-	3950 9950 3950 10250
-Wire Wire Line
-	3950 10250 8500 10250
-Wire Wire Line
-	8500 10250 8500 9300
 Wire Notes Line
 	6150 9700 6150 8650
 Wire Notes Line
-	3100 8650 3100 9700
+	3700 8650 3700 9700
 Wire Wire Line
 	4850 2600 4850 9050
 Wire Wire Line
@@ -991,7 +902,7 @@ Wire Wire Line
 	5000 2400 5000 9100
 Wire Wire Line
 	5050 2300 5050 9050
-Text GLabel 11850 800  0    50   Input ~ 0
+Text GLabel 12250 800  2    50   Input ~ 0
 PC_Link
 Wire Wire Line
 	600  750  9050 750 
@@ -1009,18 +920,6 @@ Text Label 900  2200 0    50   ~ 0
 AccumulatorFans
 Text Label 15450 5650 0    50   ~ 0
 MotorControllerAIRControl
-Wire Wire Line
-	8500 9300 8700 9300
-Wire Wire Line
-	8550 9050 8700 9050
-Wire Wire Line
-	8550 9200 8700 9200
-Wire Wire Line
-	8650 8950 8700 8950
-Wire Bus Line
-	9950 8750 12250 8750
-Wire Wire Line
-	9700 9300 9800 9300
 Wire Wire Line
 	11150 5000 11300 5000
 Wire Wire Line
@@ -1068,75 +967,39 @@ Wire Wire Line
 	12750 3250 12950 3250
 Wire Wire Line
 	5950 5000 9450 5000
-NoConn ~ 650  3800
 Wire Wire Line
-	11500 6650 11550 6650
-Wire Wire Line
-	9500 7150 9500 7850
-Wire Wire Line
-	9800 9300 9800 7300
+	11500 6700 11550 6700
 $Sheet
-S 9950 6050 1550 1350
+S 9900 6050 1600 1800
 U 60D53BFB
 F0 "BMS Container" 50
 F1 "BMSContainer.sch" 50
-F2 "Segment4_Thermistors" I L 9950 6400 50 
-F3 "Segment3_Thermistors" I L 9950 6300 50 
-F4 "Segment1_Thermistors" I L 9950 6100 50 
-F5 "Segment2_Thermistors" I L 9950 6200 50 
+F2 "Segment4_Thermistors" I L 9900 6400 50 
+F3 "Segment3_Thermistors" I L 9900 6300 50 
+F4 "Segment1_Thermistors" I L 9900 6100 50 
+F5 "Segment2_Thermistors" I L 9900 6200 50 
 F6 "GLV+" I R 11500 6350 50 
-F7 "GLV_GND" B R 11500 7300 50 
+F7 "GLV_GND" B R 11500 7350 50 
 F8 "BMS_Fault" O R 11500 6100 50 
-F9 "Segment1_VoltageTaps" I L 9950 6550 50 
-F10 "Segment2_VoltageTaps" I L 9950 6650 50 
-F11 "Segment3_VoltageTaps" I L 9950 6750 50 
-F12 "Segment4_VoltageTaps" I L 9950 6850 50 
-F13 "Current_Sensor" I L 9950 7000 50 
-F14 "CAN_H" B R 11500 6450 50 
-F15 "CAN_L" B R 11500 6550 50 
-F16 "ChargerSafety" O L 9950 7300 50 
-F17 "ChargerPWR" O L 9950 7150 50 
-F18 "CAN_SHIELD" B R 11500 6650 50 
+F9 "Segment1_VoltageTaps" I L 9900 6550 50 
+F10 "Segment2_VoltageTaps" I L 9900 6650 50 
+F11 "Segment3_VoltageTaps" I L 9900 6750 50 
+F12 "Segment4_VoltageTaps" I L 9900 6850 50 
+F13 "Current_Sensor" I L 9900 7000 50 
+F14 "CAN_H" B R 11500 6500 50 
+F15 "CAN_L" B R 11500 6600 50 
+F16 "ChargerSafety" O L 9900 7750 50 
+F17 "ChargerPWR" O L 9900 7550 50 
+F18 "CAN_SHIELD" B R 11500 6700 50 
+F19 "CoolingPumpPower_IN" I R 11500 7150 50 
+F20 "CoolingPumpPower_OUT" I R 11500 7250 50 
+F21 "CoolingPumpControl" I R 11500 7000 50 
+F22 "CANH(Charger)" I L 9900 7400 50 
+F23 "CANL(Charger)" I L 9900 7300 50 
+F24 "GND(Charger)" I L 9900 7650 50 
 $EndSheet
-Wire Wire Line
-	9800 7300 9950 7300
-Wire Wire Line
-	9500 7150 9950 7150
 Entry Wire Line
-	11550 6650 11650 6750
-Wire Bus Line
-	8450 6100 9950 6100
-Wire Bus Line
-	8450 6200 9950 6200
-Wire Bus Line
-	8450 6300 9950 6300
-Wire Bus Line
-	8450 6400 9950 6400
-Wire Bus Line
-	8450 6550 9950 6550
-Wire Bus Line
-	8450 6650 9950 6650
-Wire Bus Line
-	8450 6750 9950 6750
-Wire Bus Line
-	8450 6850 9950 6850
-Wire Bus Line
-	8450 7000 9950 7000
-$Comp
-L Simulation_SPICE:DIODE D31
-U 1 1 5F9870D2
-P 2200 6900
-F 0 "D31" V 2246 6820 50  0000 R CNN
-F 1 "DIODE" V 2155 6820 50  0000 R CNN
-F 2 "" H 2200 6900 50  0001 C CNN
-F 3 "~" H 2200 6900 50  0001 C CNN
-F 4 "Y" H 2200 6900 50  0001 L CNN "Spice_Netlist_Enabled"
-F 5 "D" H 2200 6900 50  0001 L CNN "Spice_Primitive"
-	1    2200 6900
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2200 6750 2200 5750
+	11550 6700 11650 6800
 $Comp
 L Device:LED D29
 U 1 1 5F986518
@@ -1197,48 +1060,9 @@ Wire Wire Line
 Wire Wire Line
 	1250 4700 1250 4800
 Wire Wire Line
-	1250 5200 1250 5750
-Wire Wire Line
-	3350 7850 3350 9150
-Wire Wire Line
 	3950 8550 4050 8550
 Wire Wire Line
 	3950 8550 3950 9150
-Wire Wire Line
-	3350 7850 9500 7850
-Text GLabel 4200 5350 2    50   UnSpc ~ 0
-CHASSIS_GND
-Wire Wire Line
-	550  3950 550  5350
-$Comp
-L Relay:MSxx-1Bxx-75 K?
-U 1 1 60017B77
-P 3000 5150
-AR Path="/5F45B05E/60017B77" Ref="K?"  Part="1" 
-AR Path="/60017B77" Ref="K54"  Part="1" 
-F 0 "K54" V 2433 5150 50  0000 C CNN
-F 1 "Cooling Pump Shutoff Relay" V 2524 5150 50  0000 C CNN
-F 2 "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB" H 3350 5100 50  0001 L CNN
-F 3 "https://standexelectronics.com/de/produkte/ms-reed-relais/" H 3000 5150 50  0001 C CNN
-	1    3000 5150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3300 5350 3450 5350
-Wire Wire Line
-	4050 5350 4200 5350
-Wire Wire Line
-	4050 5750 4250 5750
-Wire Wire Line
-	3300 4950 4200 4950
-Text GLabel 4200 4950 2    50   UnSpc ~ 0
-CHASSIS_GND
-Wire Wire Line
-	2700 4950 2600 4950
-Wire Wire Line
-	650  3950 550  3950
-Wire Wire Line
-	550  5350 2700 5350
 $Comp
 L Switch:SW_Push_Open SW?
 U 1 1 5F633A68
@@ -1253,29 +1077,70 @@ F 3 "https://www.mouser.com/datasheet/2/307/a165e_ds_e_11_2_csm1264-1291086.pdf"
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2600 4950 2600 7850
-Connection ~ 2600 7850
+	11600 9600 11850 9600
 Wire Wire Line
-	2600 7850 3350 7850
-Connection ~ 2200 5750
+	650  3800 500  3800
 Wire Wire Line
-	2200 5750 1250 5750
+	500  3800 500  650 
 Wire Wire Line
-	2200 5750 3450 5750
+	500  650  11850 650 
 Wire Wire Line
-	2200 7850 2600 7850
+	11500 6500 11550 6500
 Wire Wire Line
-	4000 6650 4250 6650
+	11500 6350 11800 6350
 Wire Wire Line
-	4250 5750 4250 5950
+	11800 1100 11800 6350
 Wire Wire Line
-	2200 7050 2200 7850
+	11850 650  11850 7000
+Wire Bus Line
+	8450 6100 9900 6100
+Wire Bus Line
+	8450 6200 9900 6200
+Wire Bus Line
+	8450 6300 9900 6300
+Wire Bus Line
+	8450 6400 9900 6400
+Wire Bus Line
+	8450 6550 9900 6550
+Wire Bus Line
+	8450 6650 9900 6650
+Wire Bus Line
+	8450 6750 9900 6750
+Wire Bus Line
+	8450 6850 9900 6850
+Wire Bus Line
+	8450 7000 9900 7000
 Wire Wire Line
-	3350 10300 8550 10300
-Wire Notes Line
-	3100 9700 6150 9700
-Wire Notes Line
-	6150 8650 3100 8650
+	11500 7000 11850 7000
+Wire Wire Line
+	11500 7150 12100 7150
+Wire Wire Line
+	12100 7150 12100 10250
+Wire Wire Line
+	11500 7250 11850 7250
+Wire Wire Line
+	11850 7250 11850 8900
+Wire Wire Line
+	11500 7350 11600 7350
+Wire Wire Line
+	8650 7300 8650 8150
+Wire Wire Line
+	8550 7400 8550 8250
+Wire Wire Line
+	11600 7350 11600 8000
+Wire Wire Line
+	850  5550 850  10250
+Wire Wire Line
+	1250 5200 1250 5550
+Wire Wire Line
+	850  5550 1250 5550
+Connection ~ 1250 5550
+Wire Wire Line
+	1250 5550 1250 5900
+Wire Wire Line
+	850  10250 12100 10250
+Text Label 1250 5550 0    50   ~ 0
+CoolingPumpPower
 Wire Wire Line
 	9450 3550 8750 3550
 Wire Wire Line
@@ -1361,10 +1226,108 @@ Wire Wire Line
 	11150 3750 11450 3750
 Wire Wire Line
 	11450 3350 11450 3750
+Wire Notes Line
+	6150 8650 3700 8650
+Wire Notes Line
+	3700 9700 6150 9700
+Wire Wire Line
+	9900 7750 9850 7750
+Wire Wire Line
+	9900 7650 9800 7650
+Wire Wire Line
+	9900 7550 9750 7550
+Wire Wire Line
+	9900 7400 9700 7400
+Wire Wire Line
+	9900 7300 9650 7300
+$Comp
+L NER:5-Pos_Generic J?
+U 1 1 5FAEC04A
+P 9300 9200
+F 0 "J?" H 9250 8550 50  0000 L CNN
+F 1 "ChargerLVConn" H 9050 8450 50  0000 L CNN
+F 2 "" H 9300 9200 50  0001 C CNN
+F 3 "" H 9300 9200 50  0001 C CNN
+	1    9300 9200
+	1    0    0    -1  
+$EndComp
+$Comp
+L NER:2-Pos_Generic J?
+U 1 1 5FB3F5F1
+P 7650 9200
+F 0 "J?" H 7650 9325 50  0000 C CNN
+F 1 "ChargerHVConn" H 7650 9234 50  0000 C CNN
+F 2 "" H 7650 9200 50  0001 C CNN
+F 3 "" H 7650 9200 50  0001 C CNN
+	1    7650 9200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 9700 9050 9700
+Wire Wire Line
+	9050 9600 8900 9600
+Wire Wire Line
+	8900 9500 9050 9500
+Wire Wire Line
+	8900 9400 9050 9400
+Wire Wire Line
+	8900 9300 9050 9300
+Wire Wire Line
+	7200 8150 8650 8150
+Connection ~ 8650 8150
+Wire Wire Line
+	7300 8250 8550 8250
+Connection ~ 8550 8250
+Wire Wire Line
+	7300 9300 7300 8250
+Wire Wire Line
+	7200 8150 7200 9400
+Wire Wire Line
+	9650 9300 9550 9300
+Wire Wire Line
+	9650 7300 9650 9300
+Wire Wire Line
+	9550 9400 9700 9400
+Wire Wire Line
+	9700 7400 9700 9400
+Wire Wire Line
+	9550 9500 9750 9500
+Wire Wire Line
+	9750 7550 9750 9500
+Wire Wire Line
+	9550 9600 9800 9600
+Wire Wire Line
+	9800 7650 9800 9600
+Wire Wire Line
+	9550 9700 9850 9700
+Wire Wire Line
+	9850 7750 9850 9700
+Wire Notes Line
+	8000 9050 9050 9050
+Wire Notes Line
+	9050 9050 9050 10000
+Wire Notes Line
+	9050 10000 8000 10000
+Wire Notes Line
+	8000 9050 8000 10000
+Text Notes 8250 9000 0    50   ~ 0
+Charging Cart
+Wire Wire Line
+	7300 9300 7400 9300
+Wire Wire Line
+	7400 9400 7200 9400
+Wire Wire Line
+	7900 9300 8200 9300
+Wire Wire Line
+	7900 9400 8200 9400
+Wire Bus Line
+	11300 1650 11300 2150
+Wire Bus Line
+	11300 3250 11300 3600
 Wire Bus Line
 	14550 2550 14550 3150
 Wire Bus Line
-	11650 6550 11650 6750
+	11650 6600 11650 6800
 Wire Bus Line
 	11300 3250 11300 3650
 Wire Bus Line
