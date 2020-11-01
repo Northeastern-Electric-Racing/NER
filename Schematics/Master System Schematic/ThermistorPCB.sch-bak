@@ -8,7 +8,7 @@ Sheet 17 21
 Title "Sgment Thermistor PCB"
 Date "2020-10-16"
 Rev "0"
-Comp ""
+Comp "Northeastern Electric Racing"
 Comment1 ""
 Comment2 ""
 Comment3 ""
