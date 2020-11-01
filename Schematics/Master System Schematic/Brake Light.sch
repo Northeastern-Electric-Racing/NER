@@ -8,7 +8,7 @@ Sheet 18 21
 Title ""
 Date "2020-10-12"
 Rev ""
-Comp ""
+Comp "Northeastern Electric Racing"
 Comment1 ""
 Comment2 ""
 Comment3 ""
