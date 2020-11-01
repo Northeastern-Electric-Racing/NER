@@ -60,15 +60,7 @@ Text HLabel 3500 2950 0    50   Input ~ 0
 GLV_GND
 NoConn ~ 5650 2000
 Wire Wire Line
-	4250 2000 4250 5650
-Wire Wire Line
-	4250 5650 6300 5650
-Wire Wire Line
 	4250 2000 5100 2000
-Wire Wire Line
-	6300 4200 6050 4200
-Wire Wire Line
-	6300 4200 6300 5650
 NoConn ~ 4850 3100
 NoConn ~ 4850 3200
 NoConn ~ 4850 3300
@@ -248,7 +240,7 @@ Toggle(+)
 Text HLabel 3500 4350 0    50   Input ~ 0
 Toggle(-)
 Wire Wire Line
-	4550 3950 4550 4350
+	4550 3950 4550 4100
 Wire Wire Line
 	3500 3900 3550 3900
 Wire Wire Line
@@ -308,4 +300,14 @@ Wire Wire Line
 	5100 750  6050 750 
 Wire Wire Line
 	5100 850  6050 850 
+NoConn ~ 6050 4200
+Wire Wire Line
+	4250 2000 4250 4100
+Wire Wire Line
+	4250 4100 4550 4100
+Connection ~ 4550 4100
+Wire Wire Line
+	4550 4100 4550 4350
+NoConn ~ 6050 4700
+NoConn ~ 6050 4800
 $EndSCHEMATC
