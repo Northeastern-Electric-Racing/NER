@@ -1,12 +1,13 @@
 EESchema Schematic File Version 4
+LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 1 21
 Title "NER FH 2020-2021 Master Electrical Schematic"
-Date "2020-10-27"
-Rev "7"
+Date "2020-10-29"
+Rev "8"
 Comp "Northeastern Electric Racing"
 Comment1 "Dylan Gardner, Matthew McCauley"
 Comment2 ""
@@ -1189,7 +1190,6 @@ F17 "Toggle(+)" I R 11150 4500 50
 F18 "Toggle(-)" I R 11150 4700 50 
 F19 "BMS_Fault" I L 9450 3800 50 
 F20 "IMD_Fault" I L 9450 3900 50 
-F21 "CAN_SHIELD" I R 11150 3750 50 
 $EndSheet
 Wire Wire Line
 	2700 1500 2700 1300
@@ -1210,22 +1210,18 @@ Wire Wire Line
 Wire Wire Line
 	2600 1900 2950 1900
 Entry Wire Line
-	11200 3750 11300 3650
+	11200 3350 11300 3250
 Entry Wire Line
 	11300 2250 11200 2350
 Wire Wire Line
 	11200 2350 11150 2350
 Wire Wire Line
 	9350 3650 9350 3350
-Wire Wire Line
-	9350 3350 11450 3350
 Connection ~ 9350 3650
 Wire Wire Line
 	9350 3650 9450 3650
 Wire Wire Line
-	11150 3750 11450 3750
-Wire Wire Line
-	11450 3350 11450 3750
+	11200 3350 9350 3350
 Wire Notes Line
 	6150 8650 3700 8650
 Wire Notes Line
@@ -1241,10 +1237,10 @@ Wire Wire Line
 Wire Wire Line
 	9900 7300 9650 7300
 $Comp
-L NER:5-Pos_Generic J?
+L NER:5-Pos_Generic J2
 U 1 1 5FAEC04A
 P 9300 9200
-F 0 "J?" H 9250 8550 50  0000 L CNN
+F 0 "J2" H 9250 8550 50  0000 L CNN
 F 1 "ChargerLVConn" H 9050 8450 50  0000 L CNN
 F 2 "" H 9300 9200 50  0001 C CNN
 F 3 "" H 9300 9200 50  0001 C CNN
@@ -1252,10 +1248,10 @@ F 3 "" H 9300 9200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L NER:2-Pos_Generic J?
+L NER:2-Pos_Generic J1
 U 1 1 5FB3F5F1
 P 7650 9200
-F 0 "J?" H 7650 9325 50  0000 C CNN
+F 0 "J1" H 7650 9325 50  0000 C CNN
 F 1 "ChargerHVConn" H 7650 9234 50  0000 C CNN
 F 2 "" H 7650 9200 50  0001 C CNN
 F 3 "" H 7650 9200 50  0001 C CNN
@@ -1321,17 +1317,15 @@ Wire Wire Line
 Wire Wire Line
 	7900 9400 8200 9400
 Wire Bus Line
-	11300 1650 11300 2150
-Wire Bus Line
-	11300 3250 11300 3600
-Wire Bus Line
 	14550 2550 14550 3150
 Wire Bus Line
 	11650 6600 11650 6800
 Wire Bus Line
-	11300 3250 11300 3650
-Wire Bus Line
 	11300 1650 11300 2250
 Wire Bus Line
+	11300 3250 11300 3600
+Wire Bus Line
 	12050 800  12050 6850
+Text Label 10700 3350 0    50   ~ 0
+CAN_Shield
 $EndSCHEMATC

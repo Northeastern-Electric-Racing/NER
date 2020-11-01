@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
@@ -1315,16 +1316,14 @@ Wire Wire Line
 	7900 9300 8200 9300
 Wire Wire Line
 	7900 9400 8200 9400
-Wire Bus Line
-	11300 1650 11300 2150
-Wire Bus Line
-	11300 3250 11300 3600
+Text Label 10700 3350 0    50   ~ 0
+CAN_Shield
 Wire Bus Line
 	14550 2550 14550 3150
 Wire Bus Line
 	11650 6600 11650 6800
 Wire Bus Line
-	11300 3250 11300 3550
+	11300 3250 11300 3600
 Wire Bus Line
 	11300 1650 11300 2250
 Wire Bus Line
