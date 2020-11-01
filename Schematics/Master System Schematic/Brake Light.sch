@@ -47,7 +47,7 @@ Text HLabel 6000 2350 2    50   Input ~ 0
 Brake_Light_1+
 Text HLabel 6000 2150 2    50   Input ~ 0
 Brake_Light_2+
-Text HLabel 3300 4050 0    50   Input ~ 0
+Text HLabel 3350 3050 0    50   Input ~ 0
 Brake_Light_GND
 Wire Wire Line
 	4400 1850 3800 1850
@@ -158,18 +158,29 @@ Wire Wire Line
 Wire Wire Line
 	5500 3850 5300 3850
 NoConn ~ 5300 4400
-Wire Wire Line
-	3350 2850 4100 2850
-Wire Wire Line
-	3300 4050 4100 4050
-Wire Wire Line
-	4000 1950 4000 3950
-Wire Wire Line
-	4000 3950 4100 3950
 NoConn ~ 5300 4100
 Wire Wire Line
 	3800 1850 3800 3850
 Connection ~ 3800 3850
 Wire Wire Line
 	3800 3850 4100 3850
+Wire Wire Line
+	3350 3050 3450 3050
+Wire Wire Line
+	4000 1950 4000 2850
+Connection ~ 4000 2850
+Wire Wire Line
+	4000 2850 4100 2850
+Wire Wire Line
+	3350 2850 3450 2850
+Wire Wire Line
+	3450 3050 3450 2850
+Connection ~ 3450 2850
+Wire Wire Line
+	3450 2850 4000 2850
+NoConn ~ 4100 4050
+Wire Wire Line
+	4100 3950 3350 3950
+Text HLabel 3350 3950 0    50   Input ~ 0
+CAN_SHIELD
 $EndSCHEMATC
