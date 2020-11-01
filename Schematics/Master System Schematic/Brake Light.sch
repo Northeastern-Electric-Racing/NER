@@ -1,13 +1,14 @@
 EESchema Schematic File Version 4
+LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr A 11000 8500
 encoding utf-8
-Sheet 20 21
-Title ""
-Date "2020-10-12"
-Rev ""
-Comp ""
+Sheet 18 21
+Title "Brake Light CAN Box"
+Date "2020-11-01"
+Rev "2"
+Comp "Northeastern Electric Racing"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -43,26 +44,16 @@ Wire Wire Line
 	4400 1750 3600 1750
 Wire Wire Line
 	3600 1750 3600 5150
-Wire Wire Line
-	3600 5150 5550 5150
 Text HLabel 6000 2350 2    50   Input ~ 0
 Brake_Light_1+
 Text HLabel 6000 2150 2    50   Input ~ 0
 Brake_Light_2+
-Text HLabel 3300 4050 0    50   Input ~ 0
+Text HLabel 3350 3050 0    50   Input ~ 0
 Brake_Light_GND
 Wire Wire Line
 	4400 1850 3800 1850
 Wire Wire Line
-	3800 1850 3800 5450
-Wire Wire Line
-	3800 5450 5700 5450
-Wire Wire Line
-	5700 5450 5700 4100
-Wire Wire Line
 	4400 1950 4000 1950
-Wire Wire Line
-	4000 1950 4000 3950
 Wire Wire Line
 	5550 2850 5650 2850
 Wire Wire Line
@@ -75,8 +66,6 @@ Connection ~ 5650 2850
 Wire Wire Line
 	5650 2850 5800 2850
 NoConn ~ 4950 1850
-Wire Wire Line
-	5550 5150 5550 4400
 Wire Wire Line
 	5700 3850 5700 3350
 Wire Wire Line
@@ -103,21 +92,11 @@ NoConn ~ 4100 3000
 NoConn ~ 4100 3650
 Wire Wire Line
 	5550 2850 5300 2850
-Wire Wire Line
-	3350 2850 4100 2850
 NoConn ~ 4100 3450
 NoConn ~ 4100 3550
 Wire Wire Line
 	5700 3350 5300 3350
-Wire Wire Line
-	4000 3950 4100 3950
-Wire Wire Line
-	4100 4050 3300 4050
 NoConn ~ 5300 3950
-Wire Wire Line
-	5700 4100 5300 4100
-Wire Wire Line
-	5550 4400 5300 4400
 NoConn ~ 5300 4600
 NoConn ~ 5300 3050
 NoConn ~ 5300 3150
@@ -133,7 +112,7 @@ NoConn ~ 4100 4500
 NoConn ~ 4100 4400
 NoConn ~ 4100 4300
 Wire Wire Line
-	3450 3850 4100 3850
+	3450 3850 3800 3850
 NoConn ~ 4100 3750
 $Comp
 L NER:CAN_Bus_Module U13
@@ -173,4 +152,36 @@ Wire Wire Line
 	5750 3650 5300 3650
 Wire Wire Line
 	5750 3550 6100 3550
+Wire Wire Line
+	3600 5150 5500 5150
+Wire Wire Line
+	5500 5150 5500 3850
+Wire Wire Line
+	5500 3850 5300 3850
+NoConn ~ 5300 4400
+NoConn ~ 5300 4100
+Wire Wire Line
+	3800 1850 3800 3850
+Connection ~ 3800 3850
+Wire Wire Line
+	3800 3850 4100 3850
+Wire Wire Line
+	3350 3050 3450 3050
+Wire Wire Line
+	4000 1950 4000 2850
+Connection ~ 4000 2850
+Wire Wire Line
+	4000 2850 4100 2850
+Wire Wire Line
+	3350 2850 3450 2850
+Wire Wire Line
+	3450 3050 3450 2850
+Connection ~ 3450 2850
+Wire Wire Line
+	3450 2850 4000 2850
+NoConn ~ 4100 4050
+Wire Wire Line
+	4100 3950 3350 3950
+Text HLabel 3350 3950 0    50   Input ~ 0
+CAN_SHIELD
 $EndSCHEMATC

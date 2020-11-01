@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -7,7 +8,7 @@ Sheet 9 21
 Title ""
 Date "2020-10-12"
 Rev ""
-Comp ""
+Comp "Northeastern Electric Racing"
 Comment1 ""
 Comment2 ""
 Comment3 ""
