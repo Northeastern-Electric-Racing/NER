@@ -64,7 +64,7 @@ F6 "CAN_L" B R 29300 15800 50
 F7 "CAN_H" B R 29300 15900 50 
 F8 "GND" O R 29300 15700 50 
 $EndSheet
-Text GLabel 10850 15400 2    50   UnSpc ~ 0
+Text GLabel 10750 15400 1    50   UnSpc ~ 0
 CHASSIS_GND
 $Comp
 L Device:LED D5
@@ -366,8 +366,6 @@ Wire Wire Line
 	30400 8750 30450 8750
 Entry Wire Line
 	30450 8750 30550 8650
-Wire Wire Line
-	10750 15400 10850 15400
 Wire Wire Line
 	10750 15400 10750 16000
 Wire Wire Line
