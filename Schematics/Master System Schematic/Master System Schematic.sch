@@ -6,11 +6,11 @@ $Descr D 34000 22000
 encoding utf-8
 Sheet 1 22
 Title "NER FH 2020-2021 Master Electrical Schematic"
-Date "2020-10-29"
-Rev "8"
+Date "2020-11-03"
+Rev "9"
 Comp "Northeastern Electric Racing"
-Comment1 "Dylan Gardner, Matthew McCauley"
-Comment2 ""
+Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
+Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 ""
 Comment4 ""
 $EndDescr

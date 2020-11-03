@@ -6,11 +6,11 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 21 22
 Title "BMS & MC Container"
-Date "2020-11-02"
-Rev "4"
+Date "2020-11-03"
+Rev "5"
 Comp "Northeastern Electric Racing"
-Comment1 "Dylan Gardner, Zack Perry"
-Comment2 ""
+Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
+Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 ""
 Comment4 ""
 $EndDescr

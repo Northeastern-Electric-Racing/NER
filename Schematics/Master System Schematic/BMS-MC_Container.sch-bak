@@ -260,10 +260,10 @@ NoConn ~ 9450 3300
 NoConn ~ 9450 3400
 NoConn ~ 8050 3100
 $Comp
-L NER:OrionThermExp U7
+L NER:OrionThermExp U?
 U 1 1 5F8ADC5C
 P 8750 2900
-F 0 "U7" H 8750 3065 50  0000 C CNN
+F 0 "U?" H 8750 3065 50  0000 C CNN
 F 1 "OrionThermExp" H 8750 2974 50  0000 C CNN
 F 2 "" H 8750 2800 50  0001 C CNN
 F 3 "" H 8750 2800 50  0001 C CNN
@@ -327,10 +327,10 @@ Wire Wire Line
 Text HLabel 1400 1650 0    50   Output ~ 0
 ChargerPWR
 $Comp
-L NER:OrionBMS2 U6
+L NER:OrionBMS2 U?
 U 1 1 5F91103C
 P 4250 4100
-F 0 "U6" H 4250 5465 50  0000 C CNN
+F 0 "U?" H 4250 5465 50  0000 C CNN
 F 1 "OrionBMS2" H 4250 5374 50  0000 C CNN
 F 2 "" H 4250 5400 50  0001 C CNN
 F 3 "" H 4250 5400 50  0001 C CNN
@@ -404,10 +404,10 @@ Wire Wire Line
 Wire Wire Line
 	1400 1650 1950 1650
 $Comp
-L Relay:DIPxx-1Axx-11x K53
+L Relay:DIPxx-1Axx-11x K?
 U 1 1 5FD72BB2
 P 2750 3250
-F 0 "K53" V 3200 3300 50  0000 R CNN
+F 0 "K?" V 3200 3300 50  0000 R CNN
 F 1 "BMS_PWR_Relay" V 3100 3550 50  0000 R CNN
 F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 3100 3200 50  0001 L CNN
 F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 2750 3250 50  0001 C CNN
@@ -415,10 +415,10 @@ F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.
 	0    1    1    0   
 $EndComp
 $Comp
-L Simulation_SPICE:DIODE D32
+L Simulation_SPICE:DIODE D?
 U 1 1 5FF47374
 P 2750 2650
-F 0 "D32" H 2750 2867 50  0000 C CNN
+F 0 "D?" H 2750 2867 50  0000 C CNN
 F 1 "DIODE" H 2750 2776 50  0000 C CNN
 F 2 "" H 2750 2650 50  0001 C CNN
 F 3 "~" H 2750 2650 50  0001 C CNN
@@ -556,10 +556,10 @@ Connection ~ 7800 1300
 Text HLabel 15250 850  2    50   Input ~ 0
 GND(Charger)
 $Comp
-L Simulation_SPICE:DIODE D31
+L Simulation_SPICE:DIODE D?
 U 1 1 6026F91C
 P 4600 1850
-F 0 "D31" V 4650 2050 50  0000 C CNN
+F 0 "D?" V 4650 2050 50  0000 C CNN
 F 1 "DIODE" V 4550 2050 50  0000 C CNN
 F 2 "" H 4600 1850 50  0001 C CNN
 F 3 "~" H 4600 1850 50  0001 C CNN
@@ -663,6 +663,8 @@ Wire Wire Line
 	15250 850  14950 850 
 Wire Wire Line
 	14950 850  9900 850 
+Connection ~ 14950 850 
+Connection ~ 9900 850 
 Wire Bus Line
 	5450 7050 5450 7350
 Wire Bus Line
@@ -681,6 +683,4 @@ Wire Bus Line
 	7800 4750 7800 5450
 Wire Bus Line
 	9700 4750 9700 5450
-Connection ~ 14950 850 
-Connection ~ 9900 850 
 $EndSCHEMATC
