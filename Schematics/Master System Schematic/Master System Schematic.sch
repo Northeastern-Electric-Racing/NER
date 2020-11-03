@@ -505,10 +505,10 @@ F 3 "~" H 5400 8950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Switch:SW_Push_Open SW3
+L Switch:SW_Push_Open SW1
 U 1 1 5FBE9A6D
 P 6150 8750
-F 0 "SW3" H 6150 8965 50  0000 C CNN
+F 0 "SW1" H 6150 8965 50  0000 C CNN
 F 1 "Side BRB" H 6150 8874 50  0000 C CNN
 F 2 "" H 6150 8950 50  0001 C CNN
 F 3 "~" H 6150 8950 50  0001 C CNN
@@ -555,10 +555,10 @@ F 3 "~" H 8900 10350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor:Fan_4pin M?
+L Motor:Fan_4pin M8
 U 1 1 5FE9397E
 P 21950 13600
-F 0 "M?" H 22107 13604 50  0000 L CNN
+F 0 "M8" H 22107 13604 50  0000 L CNN
 F 1 "Fan_4pin" H 22107 13695 50  0000 L CNN
 F 2 "" H 21950 13610 50  0001 C CNN
 F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 21950 13610 50  0001 C CNN
@@ -566,10 +566,10 @@ F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 21950 1
 	-1   0    0    1   
 $EndComp
 $Comp
-L Motor:Fan_4pin M?
+L Motor:Fan_4pin M6
 U 1 1 5FE98640
 P 20900 13600
-F 0 "M?" H 21057 13604 50  0000 L CNN
+F 0 "M6" H 21057 13604 50  0000 L CNN
 F 1 "Fan_4pin" H 21057 13695 50  0000 L CNN
 F 2 "" H 20900 13610 50  0001 C CNN
 F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 20900 13610 50  0001 C CNN
@@ -577,10 +577,10 @@ F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 20900 1
 	-1   0    0    1   
 $EndComp
 $Comp
-L Motor:Fan_4pin M?
+L Motor:Fan_4pin M4
 U 1 1 5FEA35FD
 P 19850 13600
-F 0 "M?" H 20007 13604 50  0000 L CNN
+F 0 "M4" H 20007 13604 50  0000 L CNN
 F 1 "Fan_4pin" H 20007 13695 50  0000 L CNN
 F 2 "" H 19850 13610 50  0001 C CNN
 F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 19850 13610 50  0001 C CNN
@@ -588,10 +588,10 @@ F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 19850 1
 	-1   0    0    1   
 $EndComp
 $Comp
-L Motor:Fan_4pin M?
+L Motor:Fan_4pin M2
 U 1 1 5FEA3603
 P 18800 13600
-F 0 "M?" H 18957 13604 50  0000 L CNN
+F 0 "M2" H 18957 13604 50  0000 L CNN
 F 1 "Fan_4pin" H 18957 13695 50  0000 L CNN
 F 2 "" H 18800 13610 50  0001 C CNN
 F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 18800 13610 50  0001 C CNN
@@ -599,10 +599,10 @@ F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 18800 1
 	-1   0    0    1   
 $EndComp
 $Comp
-L Motor:Fan_4pin M?
+L Motor:Fan_4pin M9
 U 1 1 5FEBD08B
 P 21950 14600
-F 0 "M?" H 22108 14696 50  0000 L CNN
+F 0 "M9" H 22108 14696 50  0000 L CNN
 F 1 "Fan_4pin" H 22108 14605 50  0000 L CNN
 F 2 "" H 21950 14610 50  0001 C CNN
 F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 21950 14610 50  0001 C CNN
@@ -610,10 +610,10 @@ F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 21950 1
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor:Fan_4pin M?
+L Motor:Fan_4pin M7
 U 1 1 5FEC48FA
 P 20900 14600
-F 0 "M?" H 21058 14696 50  0000 L CNN
+F 0 "M7" H 21058 14696 50  0000 L CNN
 F 1 "Fan_4pin" H 21058 14605 50  0000 L CNN
 F 2 "" H 20900 14610 50  0001 C CNN
 F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 20900 14610 50  0001 C CNN
@@ -621,10 +621,10 @@ F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 20900 1
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor:Fan_4pin M?
+L Motor:Fan_4pin M5
 U 1 1 5FEDEE98
 P 19850 14600
-F 0 "M?" H 20008 14696 50  0000 L CNN
+F 0 "M5" H 20008 14696 50  0000 L CNN
 F 1 "Fan_4pin" H 20008 14605 50  0000 L CNN
 F 2 "" H 19850 14610 50  0001 C CNN
 F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 19850 14610 50  0001 C CNN
@@ -632,10 +632,10 @@ F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 19850 1
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor:Fan_4pin M?
+L Motor:Fan_4pin M3
 U 1 1 5FEF92A4
 P 18800 14600
-F 0 "M?" H 18958 14696 50  0000 L CNN
+F 0 "M3" H 18958 14696 50  0000 L CNN
 F 1 "Fan_4pin" H 18958 14605 50  0000 L CNN
 F 2 "" H 18800 14610 50  0001 C CNN
 F 3 "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf" H 18800 14610 50  0001 C CNN
@@ -764,10 +764,10 @@ Connection ~ 19850 13200
 Wire Wire Line
 	19850 13200 20900 13200
 $Comp
-L NER:2-Pos_Generic J?
+L NER:2-Pos_Generic J12
 U 1 1 608930F9
 P 17650 14400
-F 0 "J?" H 17650 14525 50  0000 C CNN
+F 0 "J12" H 17650 14525 50  0000 C CNN
 F 1 "Bank 2 Power" H 17650 14434 50  0000 C CNN
 F 2 "" H 17650 14400 50  0001 C CNN
 F 3 "" H 17650 14400 50  0001 C CNN
@@ -775,10 +775,10 @@ F 3 "" H 17650 14400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L NER:2-Pos_Generic J?
+L NER:2-Pos_Generic J4
 U 1 1 608979A2
 P 17650 13400
-F 0 "J?" H 17650 13525 50  0000 C CNN
+F 0 "J4" H 17650 13525 50  0000 C CNN
 F 1 "Bank 1 Power" H 17650 13434 50  0000 C CNN
 F 2 "" H 17650 13400 50  0001 C CNN
 F 3 "" H 17650 13400 50  0001 C CNN
@@ -786,10 +786,10 @@ F 3 "" H 17650 13400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L NER:2-Pos_Generic J?
+L NER:2-Pos_Generic J13
 U 1 1 60898923
 P 22850 13950
-F 0 "J?" H 22850 14075 50  0000 C CNN
+F 0 "J13" H 22850 14075 50  0000 C CNN
 F 1 "PWM" H 22850 13984 50  0000 C CNN
 F 2 "" H 22850 13950 50  0001 C CNN
 F 3 "" H 22850 13950 50  0001 C CNN
