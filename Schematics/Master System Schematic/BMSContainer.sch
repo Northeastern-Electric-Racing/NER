@@ -660,6 +660,8 @@ Wire Wire Line
 	14950 5350 14700 5350
 Wire Wire Line
 	14700 5450 14950 5450
+Text HLabel 15600 4550 2    50   Output ~ 0
+MainRLY
 Wire Bus Line
 	5450 7050 5450 7350
 Wire Bus Line
