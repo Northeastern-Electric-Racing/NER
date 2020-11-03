@@ -77,4 +77,9 @@ GND
 Wire Wire Line
 	3700 3850 3600 3850
 Connection ~ 3700 3850
+Wire Wire Line
+	6200 3300 6350 3300
+Connection ~ 6200 3300
+Text HLabel 6350 3300 2    50   Output ~ 0
+IMD_Fault
 $EndSCHEMATC

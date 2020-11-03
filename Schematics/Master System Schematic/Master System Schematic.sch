@@ -461,7 +461,7 @@ Wire Wire Line
 	29300 15600 29450 15600
 Wire Wire Line
 	29300 15500 29450 15500
-Text Notes 28650 14950 0    50   ~ 0
+Text Notes 28400 15000 0    79   ~ 0
 Charging System
 Wire Wire Line
 	28300 15800 28600 15800
@@ -1434,6 +1434,16 @@ Wire Wire Line
 	9500 11750 14450 11750
 Wire Wire Line
 	7450 9350 7450 11850
+Wire Notes Line
+	17350 15200 17350 9800
+Wire Notes Line
+	17350 9800 23150 9800
+Wire Notes Line
+	23150 9800 23150 15200
+Wire Notes Line
+	23150 15200 17350 15200
+Text Notes 20300 9950 2    79   ~ 0
+Accumulator
 Wire Wire Line
 	30400 12250 31200 12250
 Wire Wire Line
