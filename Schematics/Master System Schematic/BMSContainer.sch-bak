@@ -21,9 +21,9 @@ CAN_H(BMS)
 Text HLabel 1450 1200 0    50   BiDi ~ 0
 CAN_L(BMS)
 Text HLabel 1450 950  0    50   Input ~ 0
-GLV+
-Text HLabel 1450 850  0    50   BiDi ~ 0
-GLV_GND
+GLV(BMS+Charging)
+Text HLabel 1450 850  0    50   Output ~ 0
+GND
 Text HLabel 2900 6000 0    50   Input ~ 0
 Segment4_VoltageTaps
 Text HLabel 9850 3600 2    50   Input ~ 0
@@ -553,11 +553,8 @@ Connection ~ 9700 1200
 Wire Wire Line
 	10150 1300 7800 1300
 Connection ~ 7800 1300
-Text HLabel 10150 850  2    50   Input ~ 0
+Text HLabel 15250 850  2    50   Input ~ 0
 GND(Charger)
-Wire Wire Line
-	10150 850  9900 850 
-Connection ~ 9900 850 
 $Comp
 L Simulation_SPICE:DIODE D31
 U 1 1 6026F91C
@@ -642,12 +639,10 @@ Text HLabel 12550 4100 0    50   BiDi ~ 0
 CAN_H(MC)
 Text HLabel 12550 4200 0    50   BiDi ~ 0
 CAN_SHIELD(MC)
-Text HLabel 14950 4700 2    50   UnSpc ~ 0
-GND
 Text HLabel 14950 4900 2    50   Output ~ 0
 PrechargeRLY
 Text HLabel 14950 5100 2    50   Input ~ 0
-GLV
+GLV(MC)
 Text HLabel 14950 5250 2    50   Output ~ 0
 AC3
 Text HLabel 14950 5350 2    50   Output ~ 0
@@ -662,6 +657,12 @@ Wire Wire Line
 	14700 5450 14950 5450
 Text HLabel 15600 4550 2    50   Output ~ 0
 MainRLY
+Wire Wire Line
+	14950 4700 14950 850 
+Wire Wire Line
+	15250 850  14950 850 
+Wire Wire Line
+	14950 850  9900 850 
 Wire Bus Line
 	5450 7050 5450 7350
 Wire Bus Line
@@ -680,4 +681,6 @@ Wire Bus Line
 	7800 4750 7800 5450
 Wire Bus Line
 	9700 4750 9700 5450
+Connection ~ 14950 850 
+Connection ~ 9900 850 
 $EndSCHEMATC
