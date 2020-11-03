@@ -1,24 +1,17 @@
 // Author: Joshua Cheng
-// Date: October 12, 2020
+// Date: November 3, 2020
 
 #include <mcp_can.h> // uses seeed-studio's CAN_BUS_Shield library
 #include <mcp_can_dfs.h>
 #include <SPI.h>
 
-const int myCAN = 0xC0; // my CAN ID
-const int spiCSPin = 10; // base CAN pin
-unsigned char stmp[8] = {0, 0, 0, 0, 0, 0, 0, 0};
-unsigned long canId;
-
-const unsigned char DISABLE_INVERTER[8] = {0, 0, 0, 0, 0, 0, 0, 0};
-const unsigned char FORWARD[8] = {0, 0, 0, 0, 1, 1, 0, 0};
-const unsigned char REVERSE[8] = {0, 0, 0, 0, 0, 1, 0, 0};
-
+const int spiCSPin = 10; // Base CAN pin
 MCP_CAN CAN(spiCSPin); // Set CS pin
 
-unsigned char len = 0;
-unsigned char buf[8];
-
+const unsigned char ON = 1; // Message for turning inverter on
+const unsigned char OFF = 0; // Message for turning inverter off
+const unsigned char FORWARD = 1; // Message for setting inverter to forward
+const unsigned char REVERSE = 0; // Message for setting inverter to reverse
 
 const int SHUTDOWN_DETECTION_PIN = 2; // Pin for detecting shutdown system voltage.
 const int BUTTON_PIN = 3; // Pin for on/off button.
@@ -37,7 +30,7 @@ long buttonCooldown = 0;
 bool state = false;
 
 /**
-    Sets relavent pins to output or input, initializes serial for debugging.
+    Sets relavent pins to output or input, initializes serial for debugging, initializes CAN.
 */
 void setup() {
   Serial.begin(115200);
@@ -49,7 +42,6 @@ void setup() {
   pinMode(BMS_INDICATOR_PIN, OUTPUT);
   pinMode(SPEAKER_PIN, OUTPUT);
   pinMode(BUTTON_LED_PIN, OUTPUT);
-
 
   while (CAN_OK != CAN.begin(CAN_500KBPS, MCP_8MHz)) { //specify 8MHz crystal
     Serial.println("CAN BUS init Failed");
@@ -110,46 +102,22 @@ void loop() {
     }
   }
 
-  //  if (state) {
-  //    stmp[0] = 1;
-  //
-  //    CAN.sendMsgBuf(canId, 0, 8, stmp); // send (my can id, 0, length of data, data)
-  //
-  //    if (CAN_MSGAVAIL == CAN.checkReceive()) { //if a new message has been recieved.
-  //      CAN.readMsgBuf(&len, buf); //enters message into program
-  //      canId = CAN.getCanId(); //gets canID
-  //
-  //      //if from 0x02
-  //      if (canId == 0x02) {
-  //      }
-  //      //if from 0x03
-  //      if (canId == 0x03) {
-  //      }
-  //    }
-  //  }
-
   if (state) {
-    CAN.sendMsgBuf(canId, 0, 8, DISABLE_INVERTER); // release inverter from lockout?
-    CAN.sendMsgBuf(canId, 0, 8, FORWARD); // set inverter to forward
+    CAN.sendMsgBuf(0x01, 0, 8, ON); // tell pedal box to turn inverter on
   } else {
-    CAN.sendMsgBuf(canId, 0, 8, DISABLE_INVERTER); // disable inverter
+    CAN.sendMsgBuf(0x01, 0, 8, OFF); // tell pedal box to turn inverter off
   }
 
   if (digitalRead(GEAR_SELECTOR_PIN)) {
-    CAN.sendMsgBuf(canId, 0, 8, DISABLE_INVERTER); // disable inverter
-    CAN.sendMsgBuf(canId, 0, 8, FORWARD); // set inverter to forward
+    CAN.sendMsgBuf(0x02, 0, 8, FORWARD); // tell pedal box to set inverter to forward
   } else {
-    CAN.sendMsgBuf(canId, 0, 8, DISABLE_INVERTER); // disable inverter
-    CAN.sendMsgBuf(canId, 0, 8, REVERSE); // set inverter to reverse
+    CAN.sendMsgBuf(0x02, 0, 8, REVERSE); // tell pedal box to set inverter to reverse
   }
-
-
-
 
   // - - - - - - - - - - - - - - - Below is debug stuff - - - - - - - - - - - - - - - - - - - -
-  String s = "off";
-  if (state) {
-    s = "on";
-  }
-  Serial.println("STATE: " + s + "  |  Shutdown Circuit Detection: " + String(shutdownVoltage));
+//  String s = "off";
+//  if (state) {
+//    s = "on";
+//  }
+//  Serial.println("STATE: " + s + "  |  Shutdown Circuit Detection: " + String(shutdownVoltage));
 }
