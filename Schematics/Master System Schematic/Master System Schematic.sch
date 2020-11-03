@@ -918,7 +918,7 @@ $Sheet
 S 27550 8300 2850 4250
 U 60D53BFB
 F0 "BMS & MC Container" 50
-F1 "BMSContainer.sch" 50
+F1 "BMS-MC_Container.sch" 50
 F2 "Segment4_Thermistors" I L 27550 11550 50 
 F3 "Segment3_Thermistors" I L 27550 11450 50 
 F4 "Segment1_Thermistors" I L 27550 11250 50 
