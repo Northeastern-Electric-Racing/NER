@@ -4,13 +4,13 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 17 21
+Sheet 17 22
 Title "Sgment Thermistor PCB"
 Date "2020-10-16"
 Rev "0"
 Comp "Northeastern Electric Racing"
-Comment1 ""
-Comment2 ""
+Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
+Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 ""
 Comment4 ""
 $EndDescr

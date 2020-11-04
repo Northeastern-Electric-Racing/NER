@@ -4,13 +4,13 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 6 21
+Sheet 6 22
 Title "Pedal Box"
 Date "2020-10-15"
 Rev "2"
 Comp "Northeastern Electric Racing"
-Comment1 "Peter Rydzynski"
-Comment2 ""
+Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
+Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 ""
 Comment4 ""
 $EndDescr

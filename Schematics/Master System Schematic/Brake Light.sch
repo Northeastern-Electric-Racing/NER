@@ -4,13 +4,13 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 18 21
+Sheet 18 22
 Title "Brake Light CAN Box"
 Date "2020-11-01"
 Rev "2"
 Comp "Northeastern Electric Racing"
-Comment1 ""
-Comment2 ""
+Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
+Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -79,8 +79,6 @@ Wire Wire Line
 	7650 3500 7250 3500
 Wire Wire Line
 	6100 5300 6100 3950
-NoConn ~ 5300 4200
-NoConn ~ 5300 4300
 NoConn ~ 5300 4500
 Wire Wire Line
 	6100 3750 5300 3750
@@ -184,4 +182,12 @@ Wire Wire Line
 	4100 3950 3350 3950
 Text HLabel 3350 3950 0    50   Input ~ 0
 CAN_SHIELD
+Wire Wire Line
+	5300 4200 7650 4200
+Wire Wire Line
+	5300 4300 7650 4300
+Text HLabel 7650 4200 2    50   Output ~ 0
+BattFanPWM1
+Text HLabel 7650 4300 2    50   Output ~ 0
+BattFanPWM2
 $EndSCHEMATC

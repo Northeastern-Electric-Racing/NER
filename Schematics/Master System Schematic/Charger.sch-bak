@@ -4,13 +4,13 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 3 21
+Sheet 3 22
 Title "Charging System"
 Date "2020-10-20"
 Rev "4"
 Comp "Northeastern Electric Racing"
-Comment1 ""
-Comment2 ""
+Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
+Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -130,10 +130,10 @@ Connection ~ 6100 2950
 Wire Wire Line
 	6100 2950 6050 2950
 $Comp
-L Device:Fuse F2
+L Device:Fuse F86
 U 1 1 6016ADF1
 P 6100 2200
-F 0 "F2" H 6160 2246 50  0000 L CNN
+F 0 "F86" H 6160 2246 50  0000 L CNN
 F 1 "Fuse" H 6160 2155 50  0000 L CNN
 F 2 "" V 6030 2200 50  0001 C CNN
 F 3 "~" H 6100 2200 50  0001 C CNN
@@ -185,10 +185,10 @@ Wire Wire Line
 Wire Wire Line
 	6800 5450 6800 4050
 $Comp
-L Device:Fuse F86
+L Device:Fuse F2
 U 1 1 5FA10442
 P 4650 2200
-F 0 "F86" V 4847 2200 50  0000 C CNN
+F 0 "F2" V 4847 2200 50  0000 C CNN
 F 1 "Fuse" V 4756 2200 50  0000 C CNN
 F 2 "" V 4580 2200 50  0001 C CNN
 F 3 "~" H 4650 2200 50  0001 C CNN
