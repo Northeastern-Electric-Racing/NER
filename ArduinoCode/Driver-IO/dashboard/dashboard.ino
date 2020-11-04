@@ -8,10 +8,10 @@
 const int spiCSPin = 10; // Base CAN pin
 MCP_CAN CAN(spiCSPin); // Set CS pin
 
-const unsigned char ON = 1; // Message for turning inverter on
-const unsigned char OFF = 0; // Message for turning inverter off
-const unsigned char FORWARD = 1; // Message for setting inverter to forward
-const unsigned char REVERSE = 0; // Message for setting inverter to reverse
+const unsigned char ON[1] = {1}; // Message for turning inverter on
+const unsigned char OFF[1] = {0}; // Message for turning inverter off
+const unsigned char FORWARD[1] = {1}; // Message for setting inverter to forward
+const unsigned char REVERSE[1] = {0}; // Message for setting inverter to reverse
 
 const int SHUTDOWN_DETECTION_PIN = 2; // Pin for detecting shutdown system voltage.
 const int BUTTON_PIN = 3; // Pin for on/off button.
@@ -103,15 +103,15 @@ void loop() {
   }
 
   if (state) {
-    CAN.sendMsgBuf(0x01, 0, 8, ON); // tell pedal box to turn inverter on
+    CAN.sendMsgBuf(0x01, 0, 1, ON); // tell pedal box to turn inverter on
   } else {
-    CAN.sendMsgBuf(0x01, 0, 8, OFF); // tell pedal box to turn inverter off
+    CAN.sendMsgBuf(0x01, 0, 1, OFF); // tell pedal box to turn inverter off
   }
 
   if (digitalRead(GEAR_SELECTOR_PIN)) {
-    CAN.sendMsgBuf(0x02, 0, 8, FORWARD); // tell pedal box to set inverter to forward
+    CAN.sendMsgBuf(0x02, 0, 1, FORWARD); // tell pedal box to set inverter to forward
   } else {
-    CAN.sendMsgBuf(0x02, 0, 8, REVERSE); // tell pedal box to set inverter to reverse
+    CAN.sendMsgBuf(0x02, 0, 1, REVERSE); // tell pedal box to set inverter to reverse
   }
 
   // - - - - - - - - - - - - - - - Below is debug stuff - - - - - - - - - - - - - - - - - - - -
