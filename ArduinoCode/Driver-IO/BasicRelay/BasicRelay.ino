@@ -17,7 +17,7 @@ MCP_CAN CAN(SPI_CS_PIN); // setup can device
  * Start CAN and intialize digital pin
  */
 void setup() {
-  Serial.begin(115200); // baud rate for CAN
+  Serial.begin(115200); // initialize serial communication
   
   while (CAN_OK != CAN.begin(CAN_500KBPS, MCP_8MHz)) { // specify 8MHz crystal
     Serial.println("CAN BUS init Failed"); // failure message
