@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
@@ -544,20 +543,11 @@ Wire Wire Line
 Wire Wire Line
 	13100 5850 12750 5850
 Wire Wire Line
-	13100 4500 12750 4500
+	13100 5150 12750 5150
 Wire Wire Line
-	13100 4400 12750 4400
+	13100 5050 12750 5050
 Wire Wire Line
-	13100 4600 12750 4600
-Wire Wire Line
-	14900 5200 15000 5200
-Wire Wire Line
-	14900 5100 15000 5100
-Wire Wire Line
-	15000 5100 15000 5200
-Wire Wire Line
-	15000 5100 15150 5100
-Connection ~ 15000 5100
+	13100 5250 12750 5250
 Wire Wire Line
 	14900 5300 15150 5300
 Wire Wire Line
@@ -569,11 +559,11 @@ Wire Wire Line
 Connection ~ 15000 5500
 Wire Wire Line
 	15000 5500 15150 5500
-Text HLabel 12750 4400 0    50   BiDi ~ 0
+Text HLabel 12750 5050 0    50   BiDi ~ 0
 CAN_L(MC)
-Text HLabel 12750 4500 0    50   BiDi ~ 0
+Text HLabel 12750 5150 0    50   BiDi ~ 0
 CAN_H(MC)
-Text HLabel 12750 4600 0    50   BiDi ~ 0
+Text HLabel 12750 5250 0    50   BiDi ~ 0
 CAN_SHIELD(MC)
 Text HLabel 15150 5300 2    50   Output ~ 0
 PrechargeRLY
@@ -591,13 +581,8 @@ Wire Wire Line
 	15150 5750 14900 5750
 Wire Wire Line
 	14900 5850 15150 5850
-Text HLabel 15800 4950 2    50   Output ~ 0
+Text HLabel 15150 5200 2    50   Output ~ 0
 MainRLY
-Wire Wire Line
-	15150 5100 15150 1250
-Wire Wire Line
-	15450 1250 15150 1250
-Connection ~ 15150 1250
 Wire Wire Line
 	8450 1700 8450 5000
 Connection ~ 8450 1700
@@ -611,8 +596,6 @@ Wire Wire Line
 Wire Wire Line
 	10450 1350 10450 4600
 Connection ~ 10550 1250
-Wire Wire Line
-	10550 1250 15150 1250
 Wire Wire Line
 	10550 1250 10550 4700
 Wire Wire Line
@@ -665,6 +648,22 @@ Connection ~ 3350 1350
 Wire Wire Line
 	3350 1350 10450 1350
 Connection ~ 3350 3800
+Wire Wire Line
+	10550 1250 15000 1250
+Wire Wire Line
+	14900 5100 15000 5100
+Wire Wire Line
+	15000 5100 15000 5000
+Connection ~ 15000 1250
+Wire Wire Line
+	15000 1250 15450 1250
+Wire Wire Line
+	14900 5000 15000 5000
+Connection ~ 15000 5000
+Wire Wire Line
+	15000 5000 15000 1250
+Wire Wire Line
+	14900 5200 15150 5200
 Wire Bus Line
 	5650 8200 5650 8500
 Wire Bus Line
