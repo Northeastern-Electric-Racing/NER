@@ -27,8 +27,8 @@ bool invertorOn = false;
 bool isForward = true;
 
 // readPotentiometers() variables
-unsigned char forward[8] = {0,0,0,0,1,1,0,0}
-unsigned char reverse[8] = {0,0,0,0,0,1,0,0}
+unsigned char forward[8] = {0,0,0,0,1,1,0,0};
+unsigned char reverse[8] = {0,0,0,0,0,1,0,0};
 
 const int SPI_CS_PIN = 10; // base CAN pin
 
@@ -57,6 +57,7 @@ void setup() {
 void loop() {
   readPotentiometers();
   readSwitches();
+  readDashboard();
 }
 
 /**
@@ -107,9 +108,9 @@ void readDashboard() {
       CAN.readMsgBuf(&len, buf); //enters message into program
       canId = CAN.getCanId(); //gets sender ID
      if (canID == 0x01) {  //determine whether Dashboard is on or off
+      MotorOff();
       if (buf[0] == 0) {  // motor is off
        invertorOn = false;
-       MotorOff();
       }
       else if (buf[0] == 1) {  //motor is on
        invertorOn = true;
@@ -127,14 +128,10 @@ void readDashboard() {
     }
 }
 
-void MsgMotorController(int torque, int direction, int inverter) {  //torque must be 0-255, direction 0 is reverse, 1 is forward, inverter 0 is off, 1 is on
- unsigned char valueMessage[8] = {torque, 0, 0, direction, inverter, 0, 0, 0};
- CAN.sendMsgBuf(CAN_MOTOR, 0, 8, valueMessage);
-}
 
 void MotorOff() {
   unsigned char valueMessage[8] = {0,0,0,0,0,0,0,0};
-  CAN.sendMsgBuf(CAN_MOTOR, 0, 8 valueMessage);
+  CAN.sendMsgBuf(CAN_MOTOR, 0, 8, valueMessage);
 }
 
  
