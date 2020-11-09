@@ -57,7 +57,6 @@ void setup() {
 void loop() {
   readPotentiometers();
   readSwitches();
-  readDashboard();
 }
 
 /**
