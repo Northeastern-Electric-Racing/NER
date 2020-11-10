@@ -31,8 +31,8 @@ bool state = false;
 bool prevDirection = false;
 
 /**
-    Sets relavent pins to output or input, initializes serial for debugging, initializes CAN.
-*/
+ * Sets relavent pins to output or input, initializes serial for debugging, initializes CAN.
+ */
 void setup() {
   Serial.begin(115200);
 
@@ -59,7 +59,7 @@ bool forwardReverse();
 
 void onOff();
 
-void changeDireciton();
+void changeDirection();
 
 void loop() {
   imdDetection();
@@ -91,10 +91,10 @@ void bmsDetection() {
 }
 
 /**
-   Use the shutdown circuit detection, on/off button, and gear selection pin to determine the car's state (on or off)
-   and direction. Car will only be ready to drive if shutdown circuit is detected. Speaker is turned on for 3 seconds
-   or until car is turned off (whichever comes first).
-*/
+ * Use the shutdown circuit detection, on/off button, and gear selection pin to determine the car's state (on or off)
+ * and direction. Car will only be ready to drive if shutdown circuit is detected. Speaker is turned on for 3 seconds
+ * or until car is turned off (whichever comes first).
+ */
 void onOff() {
   shutdownVoltage = digitalRead(SHUTDOWN_DETECTION_PIN); // Detects if shutdown circuit is active (5v divided from 12v).
 
@@ -113,9 +113,9 @@ void onOff() {
   }
 
   /* If the shutdown circuit is active, button cooldown has passed, and button is pressed,
-     toggle state, reset button cooldown. If state is true, turn on speaker and tell pedal box
-     to turn on and the drive direction of the vehicle. If car was turned off, tell that to the pedal box.
-  */
+   * toggle state, reset button cooldown. If state is true, turn on speaker and tell pedal box
+   * to turn on and the drive direction of the vehicle. If car was turned off, tell that to the pedal box.
+   */
   if (shutdownVoltage && buttonCooldown < millis() && digitalRead(BUTTON_PIN) == LOW) {
     state = !state;
     buttonCooldown = millis() + 500; // Set cooldown to 500ms (prevents triggering button multiple times with one press).
@@ -135,8 +135,8 @@ void onOff() {
 }
 
 /**
-   Tells pedal box the forward/reverse direciton. Only sends message when there is a change.
-*/
+ * Tells pedal box the forward/reverse direction. Only sends message when there is a change.
+ */
 void changeDirection() {
   if (prevDirection != digitalRead(GEAR_SELECTOR_PIN)) {
     if (digitalRead(GEAR_SELECTOR_PIN)) {
