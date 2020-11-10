@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 21 22
+Sheet 22 22
 Title "BMS & MC Container"
 Date "2020-11-03"
 Rev "5"
@@ -285,7 +284,6 @@ NoConn ~ 3500 6300
 NoConn ~ 3500 6400
 NoConn ~ 3500 6500
 NoConn ~ 3500 6600
-NoConn ~ 3500 6700
 Wire Wire Line
 	10100 5000 10350 5000
 NoConn ~ 5400 4400
@@ -618,8 +616,6 @@ Wire Wire Line
 Wire Wire Line
 	1650 1600 1850 1600
 Wire Wire Line
-	1650 1250 2350 1250
-Wire Wire Line
 	1650 1700 1950 1700
 Wire Wire Line
 	6650 2500 6650 1250
@@ -652,7 +648,7 @@ Connection ~ 2350 1250
 Wire Wire Line
 	2350 1250 2550 1250
 Wire Wire Line
-	1650 1350 3350 1350
+	1650 1350 2000 1350
 Wire Wire Line
 	2550 1250 2550 3800
 Connection ~ 2550 1250
@@ -665,6 +661,27 @@ Connection ~ 3350 1350
 Wire Wire Line
 	3350 1350 10450 1350
 Connection ~ 3350 3800
+Wire Wire Line
+	3500 6700 1650 6700
+Text HLabel 1650 6700 0    50   Output ~ 0
+BMSFanControl
+Wire Wire Line
+	1650 1250 2050 1250
+Text HLabel 1650 800  0    50   Output ~ 0
+FanPos
+Text HLabel 1650 700  0    50   Output ~ 0
+FanGND
+Wire Wire Line
+	1650 800  2000 800 
+Wire Wire Line
+	2000 800  2000 1350
+Connection ~ 2000 1350
+Wire Wire Line
+	2000 1350 3350 1350
+Wire Wire Line
+	1650 700  2050 700 
+Wire Wire Line
+	2050 700  2050 1250
 Wire Bus Line
 	5650 8200 5650 8500
 Wire Bus Line
@@ -683,4 +700,7 @@ Wire Bus Line
 	8450 6250 8450 6950
 Wire Bus Line
 	10350 6250 10350 6950
+Connection ~ 2050 1250
+Wire Wire Line
+	2050 1250 2350 1250
 $EndSCHEMATC
