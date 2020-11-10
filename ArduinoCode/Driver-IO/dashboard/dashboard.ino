@@ -16,11 +16,7 @@ const unsigned char REVERSE[] = {0}; // Message for setting inverter to reverse
 const int SHUTDOWN_DETECTION_PIN = 2; // Pin for detecting shutdown system voltage.
 const int BUTTON_PIN = 3; // Pin for on/off button.
 const int GEAR_SELECTOR_PIN = 4; // Pin for forward/reverse selector
-const int IMD_INPUT_PIN = 5; // Pin for detecting IMD status
-const int BMS_INPUT_PIN = 6; // Pin for detecting BMS status
 
-const int IMD_INDICATOR_PIN = 8; // Pin for IMD indicator
-const int BMS_INDICATOR_PIN = 9; // Pin for BMS indicator
 const int BUTTON_LED_PIN = 11; // Pin for integrated LED on the button.
 const int SPEAKER_PIN = 10; // Pin for speaker or relay for speaker (must be pwm pin).
 
@@ -39,8 +35,6 @@ void setup() {
   pinMode(BUTTON_PIN, INPUT_PULLUP); // Uses built-in pullup resistor.
   pinMode(GEAR_SELECTOR_PIN, INPUT_PULLUP); // Uses built-in pullup resistor.
 
-  pinMode(IMD_INDICATOR_PIN, OUTPUT);
-  pinMode(BMS_INDICATOR_PIN, OUTPUT);
   pinMode(SPEAKER_PIN, OUTPUT);
   pinMode(BUTTON_LED_PIN, OUTPUT);
 
@@ -51,42 +45,14 @@ void setup() {
   Serial.println("CAN BUS Shield Init OK!");
 }
 
-void imdDetection();
-
-void bmsDetection();
-
-bool forwardReverse();
-
 void onOff();
 
 void changeDirection();
 
 void loop() {
-  imdDetection();
-  bmsDetection();
   onOff();
-  changeDirection();
-}
-
-/**
-   Turns IMD indicator on or off depending on if IMD_INPUT_PIN detects a voltage.
-*/
-void imdDetection() {
-  if (digitalRead(IMD_INPUT_PIN)) {
-    digitalWrite(IMD_INDICATOR_PIN, HIGH);
-  } else {
-    digitalWrite(IMD_INDICATOR_PIN, LOW);
-  }
-}
-
-/**
-   Turns BMS indicator on or off depending on if BMS_INPUT_PIN detects a voltage.
-*/
-void bmsDetection() {
-  if (digitalRead(BMS_INPUT_PIN)) {
-    digitalWrite(BMS_INDICATOR_PIN, HIGH);
-  } else {
-    digitalWrite(BMS_INDICATOR_PIN, LOW);
+  if (state) { // Only update pedal box if car is on.
+    changeDirection(false);
   }
 }
 
@@ -123,11 +89,7 @@ void onOff() {
       analogWrite(SPEAKER_PIN, 128);
       speakerCooldown = millis() + 3000;
       CAN.sendMsgBuf(0x01, 0, 1, ON); // Tell pedal box to turn inverter on
-      if (digitalRead(GEAR_SELECTOR_PIN)) { // Send direction to pedal box when car is turned on.
-        CAN.sendMsgBuf(0x02, 0, 1, FORWARD);
-      } else {
-        CAN.sendMsgBuf(0x02, 0, 1, REVERSE);
-      }
+      changeDirection(true);
     } else { // Car is turned off.
       CAN.sendMsgBuf(0x01, 0, 1, OFF); // tell pedal box to turn inverter off
     }
@@ -135,14 +97,18 @@ void onOff() {
 }
 
 /**
- * Tells pedal box the forward/reverse direction. Only sends message when there is a change.
+ * Tells pedal box the forward/reverse direction. Only sends message when there is a change or when car is just turned on.
  */
-void changeDirection() {
-  if (prevDirection != digitalRead(GEAR_SELECTOR_PIN)) {
-    if (digitalRead(GEAR_SELECTOR_PIN)) {
-      CAN.sendMsgBuf(0x02, 0, 1, FORWARD); // tell pedal box to set inverter to forward
-    } else {
-      CAN.sendMsgBuf(0x02, 0, 1, REVERSE); // tell pedal box to set inverter to reverse
-    }
+void changeDirection(bool justOn) {
+  if (!justOn && prevDirection == digitalRead(GEAR_SELECTOR_PIN)) {
+    return;
   }
+  if (digitalRead(GEAR_SELECTOR_PIN)) {
+    CAN.sendMsgBuf(0x02, 0, 1, FORWARD); // tell pedal box to set inverter to forward
+    prevDirection = true;
+  } else {
+    CAN.sendMsgBuf(0x02, 0, 1, REVERSE); // tell pedal box to set inverter to reverse
+    prevDirection = false;
+  }
+  
 }
