@@ -103,6 +103,12 @@ void readSwitches() {
   }
 }
 
+/*
+ * readDashboard() receives two can ID's for motor on/off, and forward/reverse in order to be used in other functions.
+ * 0x01 holds the message whether the motor is on/off and stores the value in a global boolean variable - invertorOn.
+ * 0x02 holds the message whether in forward/reverse and stores the value in a global boolean variable - isForward.
+ */
+
 void readDashboard() {
     if(CAN_MSGAVAIL == CAN.checkReceive()) {   //if a new message has been recieved. 
       CAN.readMsgBuf(&len, buf); //enters message into program
@@ -128,6 +134,9 @@ void readDashboard() {
     }
 }
 
+/*
+ * MotorOff() sends 8 byte array message to the motor (0xC0) of all zeros turning off the motor
+ */
 
 void MotorOff() {
   unsigned char valueMessage[8] = {0,0,0,0,0,0,0,0};
