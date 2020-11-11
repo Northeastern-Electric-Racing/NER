@@ -1454,6 +1454,76 @@ Wire Wire Line
 	16250 13600 16250 14500
 Wire Wire Line
 	7150 9350 7150 17500
+Text HLabel 27550 5500 0    50   Input ~ 0
+TS+
+Text HLabel 27550 5600 0    50   Output ~ 0
+TS-
+Wire Wire Line
+	27550 5500 27900 5500
+Wire Wire Line
+	27900 5600 27550 5600
+Wire Wire Line
+	27900 3450 27550 3450
+Wire Wire Line
+	27900 3350 27550 3350
+Wire Wire Line
+	27900 3550 27550 3550
+Text HLabel 27550 3350 0    50   BiDi ~ 0
+CAN_L(MC)
+Text HLabel 27550 3450 0    50   BiDi ~ 0
+CAN_H(MC)
+Text HLabel 27550 3550 0    50   BiDi ~ 0
+CAN_SHIELD(MC)
+Text HLabel 30200 3650 2    50   Output ~ 0
+PrechargeRLY
+Text HLabel 30200 5400 2    50   Output ~ 0
+Phase_C
+Text HLabel 30200 5500 2    50   Output ~ 0
+Phase_B
+Text HLabel 30200 5600 2    50   Output ~ 0
+Phase_A
+Text HLabel 30200 3550 2    50   Output ~ 0
+MainRLY
+Wire Wire Line
+	29950 5600 30200 5600
+Text HLabel 30200 3850 2    50   Input ~ 0
+GLV(MC)
+Wire Wire Line
+	30200 5500 29950 5500
+Wire Wire Line
+	29950 5400 30200 5400
+Wire Wire Line
+	29950 3650 30200 3650
+Wire Wire Line
+	29950 3550 30200 3550
+$Comp
+L NER:RinehartPM100DX_MotorController U?
+U 1 1 5FAF2B99
+P 28950 5700
+AR Path="/5FAF2B99" Ref="U?"  Part="1" 
+AR Path="/60D53BFB/5FAF2B99" Ref="U?"  Part="1" 
+F 0 "U?" H 28950 5865 50  0000 C CNN
+F 1 "RinehartPM100DX_MotorController" H 28950 5774 50  0000 C CNN
+F 2 "" H 28950 5700 50  0001 C CNN
+F 3 "" H 28950 5700 50  0001 C CNN
+	1    28950 5700
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	29950 3850 30050 3850
+Wire Wire Line
+	29950 3750 30050 3750
+Wire Wire Line
+	30050 3750 30050 3850
+Connection ~ 30050 3850
+Wire Wire Line
+	30050 3850 30200 3850
+Wire Wire Line
+	29950 3250 30050 3250
+Wire Wire Line
+	30050 3250 30050 3150
+Wire Wire Line
+	29950 3150 30050 3150
 Wire Wire Line
 	30400 12250 31200 12250
 Wire Wire Line

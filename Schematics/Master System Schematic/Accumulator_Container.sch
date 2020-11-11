@@ -1620,6 +1620,188 @@ Wire Wire Line
 	9850 700  9850 1050
 Wire Wire Line
 	9950 600  9950 1050
+Text HLabel 12900 1900 0    50   Input ~ 0
+Segment3_Thermistors
+Text HLabel 15100 850  2    50   Input ~ 0
+Segment1_Thermistors
+Entry Wire Line
+	14850 1750 14950 1650
+Entry Wire Line
+	14850 1650 14950 1550
+Entry Wire Line
+	14850 1550 14950 1450
+Entry Wire Line
+	14850 1450 14950 1350
+Entry Wire Line
+	14850 1350 14950 1250
+Entry Wire Line
+	14850 1250 14950 1150
+Entry Wire Line
+	14850 1150 14950 1050
+Entry Wire Line
+	14850 1050 14950 950 
+Entry Bus Bus
+	14950 950  15050 850 
+Wire Bus Line
+	15050 850  15100 850 
+Entry Wire Line
+	13150 1650 13050 1550
+Entry Wire Line
+	13150 1550 13050 1450
+Entry Wire Line
+	13150 1450 13050 1350
+Entry Wire Line
+	13150 1350 13050 1250
+Entry Wire Line
+	13150 1250 13050 1150
+Entry Wire Line
+	13150 1150 13050 1050
+Entry Wire Line
+	13150 1050 13050 950 
+Entry Bus Bus
+	13050 950  12950 850 
+Wire Bus Line
+	12950 850  12900 850 
+Entry Wire Line
+	13150 2800 13050 2700
+Entry Wire Line
+	13150 2700 13050 2600
+Entry Wire Line
+	13150 2600 13050 2500
+Entry Wire Line
+	13150 2500 13050 2400
+Entry Wire Line
+	13150 2400 13050 2300
+Entry Wire Line
+	13150 2300 13050 2200
+Entry Wire Line
+	13150 2200 13050 2100
+Entry Wire Line
+	13150 2100 13050 2000
+Entry Bus Bus
+	13050 2000 12950 1900
+Wire Bus Line
+	12950 1900 12900 1900
+Entry Wire Line
+	14850 2100 14950 2000
+Entry Wire Line
+	14850 2200 14950 2100
+Entry Wire Line
+	14850 2300 14950 2200
+Entry Wire Line
+	14850 2400 14950 2300
+Entry Wire Line
+	14850 2500 14950 2400
+Entry Wire Line
+	14850 2600 14950 2500
+Entry Wire Line
+	14850 2700 14950 2600
+Entry Wire Line
+	14850 2800 14950 2700
+Text HLabel 15100 1900 2    50   Input ~ 0
+Segment2_Thermistors
+Wire Bus Line
+	15050 1900 15100 1900
+Entry Bus Bus
+	14950 2000 15050 1900
+Text HLabel 12900 850  0    50   Input ~ 0
+Segment4_Thermistors
+Entry Wire Line
+	13150 1750 13050 1650
+Wire Wire Line
+	13150 1050 13200 1050
+Wire Wire Line
+	13150 1150 13300 1150
+Wire Wire Line
+	13150 1250 13200 1250
+Wire Wire Line
+	13150 1350 13300 1350
+Wire Wire Line
+	13200 1450 13150 1450
+Wire Wire Line
+	13150 1550 13300 1550
+Wire Wire Line
+	13150 1650 13200 1650
+Wire Wire Line
+	13150 1750 13300 1750
+Wire Wire Line
+	13200 2100 13150 2100
+Wire Wire Line
+	13150 2200 13300 2200
+Wire Wire Line
+	13150 2300 13200 2300
+Wire Wire Line
+	13150 2400 13300 2400
+Wire Wire Line
+	13150 2500 13200 2500
+Wire Wire Line
+	13150 2600 13300 2600
+Wire Wire Line
+	13150 2700 13200 2700
+Wire Wire Line
+	13150 2800 13300 2800
+Wire Wire Line
+	14850 2100 14800 2100
+Wire Wire Line
+	14850 2200 14700 2200
+Wire Wire Line
+	14850 2300 14800 2300
+Wire Wire Line
+	14700 2400 14850 2400
+Wire Wire Line
+	14800 2500 14850 2500
+Wire Wire Line
+	14700 2600 14850 2600
+Wire Wire Line
+	14850 2700 14800 2700
+Wire Wire Line
+	14700 2800 14850 2800
+Wire Wire Line
+	14700 1750 14850 1750
+Wire Wire Line
+	14850 1650 14800 1650
+Wire Wire Line
+	14850 1550 14700 1550
+Wire Wire Line
+	14850 1450 14800 1450
+Wire Wire Line
+	14850 1350 14700 1350
+Wire Wire Line
+	14850 1250 14800 1250
+Wire Wire Line
+	14850 1150 14700 1150
+Wire Wire Line
+	14800 1050 14850 1050
+NoConn ~ 14700 550 
+NoConn ~ 14700 650 
+NoConn ~ 13300 350 
+$Comp
+L NER:OrionThermExp U?
+U 1 1 5FB81724
+P 14000 150
+F 0 "U?" H 14000 315 50  0000 C CNN
+F 1 "OrionThermExp" H 14000 224 50  0000 C CNN
+F 2 "" H 14000 50  50  0001 C CNN
+F 3 "" H 14000 50  50  0001 C CNN
+	1    14000 150 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14700 750  14950 750 
+Wire Wire Line
+	13050 750  13300 750 
+Wire Wire Line
+	15150 450  14700 450 
+Wire Wire Line
+	14700 350  15050 350 
+Wire Wire Line
+	13050 -2550 13050 750 
+Wire Wire Line
+	14950 -2650 14950 750 
+Wire Wire Line
+	15050 -2900 15050 350 
+Wire Wire Line
+	15150 -3000 15150 450 
 Wire Bus Line
 	5950 9200 5950 9800
 Wire Bus Line
@@ -1630,4 +1812,12 @@ Wire Bus Line
 	6250 2600 6250 9500
 Wire Bus Line
 	13900 5350 15900 5350
+Wire Bus Line
+	14950 950  14950 1650
+Wire Bus Line
+	13050 950  13050 1650
+Wire Bus Line
+	13050 2000 13050 2700
+Wire Bus Line
+	14950 2000 14950 2700
 $EndSCHEMATC
