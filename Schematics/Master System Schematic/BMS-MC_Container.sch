@@ -19,7 +19,7 @@ Text HLabel 4850 1900 0    50   BiDi ~ 0
 CAN_L(BMS)
 Text HLabel 4850 1650 0    50   Input ~ 0
 GLV(BMS)
-Text HLabel 4850 1550 0    50   Output ~ 0
+Text HLabel 4850 1550 0    50   UnSpc ~ 0
 GND
 Text HLabel 6300 7450 0    50   Input ~ 0
 Segment4_VoltageTaps
@@ -149,7 +149,7 @@ Text HLabel 4850 5200 0    50   Output ~ 0
 ChargerSafety
 Wire Wire Line
 	6250 7200 6700 7200
-Text HLabel 4800 2800 0    50   Output ~ 0
+Text HLabel 4800 2800 0    50   Input ~ 0
 ChargerPWR
 $Comp
 L NER:OrionBMS2 U6
@@ -304,18 +304,16 @@ Wire Wire Line
 	9700 3600 9900 3600
 Wire Wire Line
 	8950 2800 9850 2800
-Text HLabel 7850 3600 0    50   Input ~ 0
+Text HLabel 4800 3600 0    50   Input ~ 0
 CoolingPumpPower_IN
-Text HLabel 9900 3600 2    50   Input ~ 0
+Text HLabel 9900 3600 2    50   Output ~ 0
 CoolingPumpPower_OUT
 Wire Wire Line
 	5850 4900 5350 4900
 Wire Wire Line
 	9850 3200 9850 2800
-Text HLabel 7850 3200 0    50   Input ~ 0
+Text HLabel 4800 3200 0    50   Input ~ 0
 CoolingPumpControl
-Wire Wire Line
-	7850 3200 8350 3200
 Text HLabel 14100 2000 2    50   Input ~ 0
 CAN_H(Charger)
 Text HLabel 14100 1900 2    50   Input ~ 0
@@ -335,8 +333,6 @@ F 5 "D" H 8000 3000 50  0001 L CNN "Spice_Primitive"
 	1    8000 3000
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	7850 3600 8000 3600
 Wire Wire Line
 	8000 2850 8000 2800
 Connection ~ 8000 2800
@@ -394,6 +390,10 @@ Wire Wire Line
 	5050 1900 14100 1900
 Wire Wire Line
 	9850 1550 14100 1550
+Wire Wire Line
+	4800 3200 8350 3200
+Wire Wire Line
+	4800 3600 8000 3600
 Wire Bus Line
 	8850 8500 8850 8800
 Wire Bus Line
