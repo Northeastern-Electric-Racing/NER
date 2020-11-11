@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
@@ -522,82 +521,36 @@ Wire Wire Line
 Connection ~ 4800 3300
 Wire Wire Line
 	4800 3300 5900 3300
-$Comp
-L NER:RinehartPM100DX_MotorController U?
-U 1 1 62DE1334
-P 14000 5950
-AR Path="/62DE1334" Ref="U?"  Part="1" 
-AR Path="/60D53BFB/62DE1334" Ref="U3"  Part="1" 
-F 0 "U3" H 14000 6115 50  0000 C CNN
-F 1 "RinehartPM100DX_MotorController" H 14000 6024 50  0000 C CNN
-F 2 "" H 14000 5950 50  0001 C CNN
-F 3 "" H 14000 5950 50  0001 C CNN
-	1    14000 5950
-	1    0    0    1   
-$EndComp
-Text HLabel 12750 5750 0    50   Input ~ 0
+Text HLabel 12600 5750 0    50   Input ~ 0
 TS+
-Text HLabel 12750 5850 0    50   Output ~ 0
+Text HLabel 12600 5850 0    50   Output ~ 0
 TS-
 Wire Wire Line
-	12750 5750 13100 5750
+	12600 5750 12950 5750
 Wire Wire Line
-	13100 5850 12750 5850
+	12950 5850 12600 5850
 Wire Wire Line
-	13100 4500 12750 4500
+	12950 3700 12600 3700
 Wire Wire Line
-	13100 4400 12750 4400
+	12950 3600 12600 3600
 Wire Wire Line
-	13100 4600 12750 4600
-Wire Wire Line
-	14900 5200 15000 5200
-Wire Wire Line
-	14900 5100 15000 5100
-Wire Wire Line
-	15000 5100 15000 5200
-Wire Wire Line
-	15000 5100 15150 5100
-Connection ~ 15000 5100
-Wire Wire Line
-	14900 5300 15150 5300
-Wire Wire Line
-	14900 5500 15000 5500
-Wire Wire Line
-	14900 5400 15000 5400
-Wire Wire Line
-	15000 5400 15000 5500
-Connection ~ 15000 5500
-Wire Wire Line
-	15000 5500 15150 5500
-Text HLabel 12750 4400 0    50   BiDi ~ 0
+	12950 3800 12600 3800
+Text HLabel 12600 3600 0    50   BiDi ~ 0
 CAN_L(MC)
-Text HLabel 12750 4500 0    50   BiDi ~ 0
+Text HLabel 12600 3700 0    50   BiDi ~ 0
 CAN_H(MC)
-Text HLabel 12750 4600 0    50   BiDi ~ 0
+Text HLabel 12600 3800 0    50   BiDi ~ 0
 CAN_SHIELD(MC)
-Text HLabel 15150 5300 2    50   Output ~ 0
+Text HLabel 15250 3900 2    50   Output ~ 0
 PrechargeRLY
-Text HLabel 15150 5500 2    50   Input ~ 0
-GLV(MC)
-Text HLabel 15150 5650 2    50   Output ~ 0
-AC3
-Text HLabel 15150 5750 2    50   Output ~ 0
-AC2
-Text HLabel 15150 5850 2    50   Output ~ 0
-AC1
-Wire Wire Line
-	14900 5650 15150 5650
-Wire Wire Line
-	15150 5750 14900 5750
-Wire Wire Line
-	14900 5850 15150 5850
-Text HLabel 15800 4950 2    50   Output ~ 0
+Text HLabel 15250 5650 2    50   Output ~ 0
+Phase_C
+Text HLabel 15250 5750 2    50   Output ~ 0
+Phase_B
+Text HLabel 15250 5850 2    50   Output ~ 0
+Phase_A
+Text HLabel 15250 3800 2    50   Output ~ 0
 MainRLY
-Wire Wire Line
-	15150 5100 15150 1250
-Wire Wire Line
-	15450 1250 15150 1250
-Connection ~ 15150 1250
 Wire Wire Line
 	8450 1700 8450 5000
 Connection ~ 8450 1700
@@ -611,8 +564,6 @@ Wire Wire Line
 Wire Wire Line
 	10450 1350 10450 4600
 Connection ~ 10550 1250
-Wire Wire Line
-	10550 1250 15150 1250
 Wire Wire Line
 	10550 1250 10550 4700
 Wire Wire Line
@@ -665,6 +616,51 @@ Connection ~ 3350 1350
 Wire Wire Line
 	3350 1350 10450 1350
 Connection ~ 3350 3800
+Wire Wire Line
+	10550 1250 15100 1250
+Wire Wire Line
+	15000 5850 15250 5850
+Text HLabel 15250 4100 2    50   Input ~ 0
+GLV(MC)
+Wire Wire Line
+	15250 5750 15000 5750
+Wire Wire Line
+	15000 5650 15250 5650
+Wire Wire Line
+	15000 3900 15250 3900
+Wire Wire Line
+	15000 3800 15250 3800
+$Comp
+L NER:RinehartPM100DX_MotorController U?
+U 1 1 62DE1334
+P 14000 5950
+AR Path="/62DE1334" Ref="U?"  Part="1" 
+AR Path="/60D53BFB/62DE1334" Ref="U3"  Part="1" 
+F 0 "U3" H 14000 6115 50  0000 C CNN
+F 1 "RinehartPM100DX_MotorController" H 14000 6024 50  0000 C CNN
+F 2 "" H 14000 5950 50  0001 C CNN
+F 3 "" H 14000 5950 50  0001 C CNN
+	1    14000 5950
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	15000 4100 15100 4100
+Wire Wire Line
+	15000 4000 15100 4000
+Wire Wire Line
+	15100 4000 15100 4100
+Connection ~ 15100 4100
+Wire Wire Line
+	15100 4100 15250 4100
+Wire Wire Line
+	15000 3500 15100 3500
+Wire Wire Line
+	15100 3500 15100 3400
+Connection ~ 15100 1250
+Wire Wire Line
+	15100 1250 15450 1250
+Wire Wire Line
+	15000 3400 15100 3400
 Wire Bus Line
 	5650 8200 5650 8500
 Wire Bus Line
@@ -683,4 +679,7 @@ Wire Bus Line
 	8450 6250 8450 6950
 Wire Bus Line
 	10350 6250 10350 6950
+Connection ~ 15100 3400
+Wire Wire Line
+	15100 3400 15100 1250
 $EndSCHEMATC
