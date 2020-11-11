@@ -1,74 +1,691 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr A 11000 8500
 encoding utf-8
 Sheet 17 22
 Title "Sgment Thermistor PCB"
-Date "2020-10-16"
-Rev "0"
+Date "2020-11-11"
+Rev "1"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 8200 1600 0    50   Input ~ 0
-ThermistorA
-Text HLabel 8200 1700 0    50   Input ~ 0
-ThermistorB
-Text HLabel 8200 1800 0    50   Input ~ 0
-ThermistorC
-Text HLabel 8200 1900 0    50   Input ~ 0
-ThermistorD
-Text HLabel 8200 2000 0    50   Input ~ 0
+Text HLabel 5200 2850 0    50   Input ~ 0
 ThermistorE
-Text HLabel 8200 2100 0    50   Input ~ 0
+Text HLabel 5200 3100 0    50   Input ~ 0
 ThermistorA-E_GND
-Text HLabel 8200 2250 0    50   Input ~ 0
+Text HLabel 2300 4800 0    50   Input ~ 0
 ThermistorF
-Text HLabel 8200 2350 0    50   Input ~ 0
+Text HLabel 2300 5050 0    50   Input ~ 0
 ThermistorF_GND
-Text HLabel 8200 3150 0    50   Input ~ 0
+Text HLabel 7100 1850 2    50   Input ~ 0
 ThermistorL
-Text HLabel 8200 3250 0    50   Input ~ 0
+Text HLabel 7100 2100 2    50   Input ~ 0
 ThermistorM
-Text HLabel 8200 3350 0    50   Input ~ 0
+Text HLabel 7100 2350 2    50   Input ~ 0
 ThermistorN
-Text HLabel 8200 3450 0    50   Input ~ 0
+Text HLabel 7100 2600 2    50   Input ~ 0
 ThermistorO
-Text HLabel 8200 3550 0    50   Input ~ 0
+Text HLabel 7100 2850 2    50   Input ~ 0
 ThermistorP
-Text HLabel 8200 3650 0    50   Input ~ 0
+Text HLabel 7100 3100 2    50   Input ~ 0
 ThermistorL-P_GND
-Text HLabel 8200 3800 0    50   Input ~ 0
+Text HLabel 2300 5400 0    50   Input ~ 0
 ThermistorQ
-Text HLabel 8200 3900 0    50   Input ~ 0
-ThermistorQ_GND
-Text HLabel 8200 2500 0    50   Input ~ 0
+Text HLabel 5200 4050 0    50   Input ~ 0
 ThermistorG
-Text HLabel 8200 2600 0    50   Input ~ 0
+Text HLabel 5200 4300 0    50   Input ~ 0
 ThermistorH
-Text HLabel 8200 2700 0    50   Input ~ 0
+Text HLabel 5200 4550 0    50   Input ~ 0
 ThermistorI
-Text HLabel 8200 2800 0    50   Input ~ 0
+Text HLabel 5200 4800 0    50   Input ~ 0
 ThermistorJ
-Text HLabel 8200 2900 0    50   Input ~ 0
+Text HLabel 5200 5050 0    50   Input ~ 0
 ThermistorK
-Text HLabel 8200 3000 0    50   Input ~ 0
+Text HLabel 5200 5300 0    50   Input ~ 0
 ThermistorG-K_GND
-Text HLabel 8200 4050 0    50   Input ~ 0
-ThermistorR
-Text HLabel 8200 4150 0    50   Input ~ 0
-ThermistorS
-Text HLabel 8200 4250 0    50   Input ~ 0
-ThermistorT
-Text HLabel 8200 4350 0    50   Input ~ 0
-ThermistorU
-Text HLabel 8200 4450 0    50   Input ~ 0
-ThermistorV
-Text HLabel 8200 4550 0    50   Input ~ 0
+$Comp
+L Device:Fuse_Small F151
+U 1 1 5FDCE36A
+P 5500 2850
+AR Path="/5F45B05E/616C72F3/5FDCE36A" Ref="F151"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDCE36A" Ref="F179"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDCE36A" Ref="F95"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDCE36A" Ref="F123"  Part="1" 
+F 0 "F151" H 5500 3035 50  0000 C CNN
+F 1 "Fuse_Small" H 5500 2944 50  0000 C CNN
+F 2 "" H 5500 2850 50  0001 C CNN
+F 3 "~" H 5500 2850 50  0001 C CNN
+	1    5500 2850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F152
+U 1 1 5FDCE957
+P 5500 3100
+AR Path="/5F45B05E/616C72F3/5FDCE957" Ref="F152"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDCE957" Ref="F180"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDCE957" Ref="F96"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDCE957" Ref="F124"  Part="1" 
+F 0 "F152" H 5500 3285 50  0000 C CNN
+F 1 "Fuse_Small" H 5500 3194 50  0000 C CNN
+F 2 "" H 5500 3100 50  0001 C CNN
+F 3 "~" H 5500 3100 50  0001 C CNN
+	1    5500 3100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F153
+U 1 1 5FDCF9A7
+P 5500 4050
+AR Path="/5F45B05E/616C72F3/5FDCF9A7" Ref="F153"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDCF9A7" Ref="F181"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDCF9A7" Ref="F97"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDCF9A7" Ref="F125"  Part="1" 
+F 0 "F153" H 5500 4235 50  0000 C CNN
+F 1 "Fuse_Small" H 5500 4144 50  0000 C CNN
+F 2 "" H 5500 4050 50  0001 C CNN
+F 3 "~" H 5500 4050 50  0001 C CNN
+	1    5500 4050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F154
+U 1 1 5FDCF9AD
+P 5500 4300
+AR Path="/5F45B05E/616C72F3/5FDCF9AD" Ref="F154"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDCF9AD" Ref="F182"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDCF9AD" Ref="F98"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDCF9AD" Ref="F126"  Part="1" 
+F 0 "F154" H 5500 4485 50  0000 C CNN
+F 1 "Fuse_Small" H 5500 4394 50  0000 C CNN
+F 2 "" H 5500 4300 50  0001 C CNN
+F 3 "~" H 5500 4300 50  0001 C CNN
+	1    5500 4300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F155
+U 1 1 5FDCF9B3
+P 5500 4550
+AR Path="/5F45B05E/616C72F3/5FDCF9B3" Ref="F155"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDCF9B3" Ref="F183"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDCF9B3" Ref="F99"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDCF9B3" Ref="F127"  Part="1" 
+F 0 "F155" H 5500 4735 50  0000 C CNN
+F 1 "Fuse_Small" H 5500 4644 50  0000 C CNN
+F 2 "" H 5500 4550 50  0001 C CNN
+F 3 "~" H 5500 4550 50  0001 C CNN
+	1    5500 4550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F156
+U 1 1 5FDCF9B9
+P 5500 4800
+AR Path="/5F45B05E/616C72F3/5FDCF9B9" Ref="F156"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDCF9B9" Ref="F184"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDCF9B9" Ref="F100"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDCF9B9" Ref="F128"  Part="1" 
+F 0 "F156" H 5500 4985 50  0000 C CNN
+F 1 "Fuse_Small" H 5500 4894 50  0000 C CNN
+F 2 "" H 5500 4800 50  0001 C CNN
+F 3 "~" H 5500 4800 50  0001 C CNN
+	1    5500 4800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F157
+U 1 1 5FDCF9BF
+P 5500 5050
+AR Path="/5F45B05E/616C72F3/5FDCF9BF" Ref="F157"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDCF9BF" Ref="F185"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDCF9BF" Ref="F101"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDCF9BF" Ref="F129"  Part="1" 
+F 0 "F157" H 5500 5235 50  0000 C CNN
+F 1 "Fuse_Small" H 5500 5144 50  0000 C CNN
+F 2 "" H 5500 5050 50  0001 C CNN
+F 3 "~" H 5500 5050 50  0001 C CNN
+	1    5500 5050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F158
+U 1 1 5FDCF9C5
+P 5500 5300
+AR Path="/5F45B05E/616C72F3/5FDCF9C5" Ref="F158"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDCF9C5" Ref="F186"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDCF9C5" Ref="F102"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDCF9C5" Ref="F130"  Part="1" 
+F 0 "F158" H 5500 5485 50  0000 C CNN
+F 1 "Fuse_Small" H 5500 5394 50  0000 C CNN
+F 2 "" H 5500 5300 50  0001 C CNN
+F 3 "~" H 5500 5300 50  0001 C CNN
+	1    5500 5300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F159
+U 1 1 5FDD071B
+P 6800 1850
+AR Path="/5F45B05E/616C72F3/5FDD071B" Ref="F159"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD071B" Ref="F187"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD071B" Ref="F103"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD071B" Ref="F131"  Part="1" 
+F 0 "F159" H 6800 2035 50  0000 C CNN
+F 1 "Fuse_Small" H 6800 1944 50  0000 C CNN
+F 2 "" H 6800 1850 50  0001 C CNN
+F 3 "~" H 6800 1850 50  0001 C CNN
+	1    6800 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F160
+U 1 1 5FDD0721
+P 6800 2100
+AR Path="/5F45B05E/616C72F3/5FDD0721" Ref="F160"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD0721" Ref="F188"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD0721" Ref="F104"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD0721" Ref="F132"  Part="1" 
+F 0 "F160" H 6800 2285 50  0000 C CNN
+F 1 "Fuse_Small" H 6800 2194 50  0000 C CNN
+F 2 "" H 6800 2100 50  0001 C CNN
+F 3 "~" H 6800 2100 50  0001 C CNN
+	1    6800 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F161
+U 1 1 5FDD0727
+P 6800 2350
+AR Path="/5F45B05E/616C72F3/5FDD0727" Ref="F161"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD0727" Ref="F189"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD0727" Ref="F105"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD0727" Ref="F133"  Part="1" 
+F 0 "F161" H 6800 2535 50  0000 C CNN
+F 1 "Fuse_Small" H 6800 2444 50  0000 C CNN
+F 2 "" H 6800 2350 50  0001 C CNN
+F 3 "~" H 6800 2350 50  0001 C CNN
+	1    6800 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F162
+U 1 1 5FDD072D
+P 6800 2600
+AR Path="/5F45B05E/616C72F3/5FDD072D" Ref="F162"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD072D" Ref="F190"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD072D" Ref="F106"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD072D" Ref="F134"  Part="1" 
+F 0 "F162" H 6800 2785 50  0000 C CNN
+F 1 "Fuse_Small" H 6800 2694 50  0000 C CNN
+F 2 "" H 6800 2600 50  0001 C CNN
+F 3 "~" H 6800 2600 50  0001 C CNN
+	1    6800 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F163
+U 1 1 5FDD0733
+P 6800 2850
+AR Path="/5F45B05E/616C72F3/5FDD0733" Ref="F163"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD0733" Ref="F191"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD0733" Ref="F107"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD0733" Ref="F135"  Part="1" 
+F 0 "F163" H 6800 3035 50  0000 C CNN
+F 1 "Fuse_Small" H 6800 2944 50  0000 C CNN
+F 2 "" H 6800 2850 50  0001 C CNN
+F 3 "~" H 6800 2850 50  0001 C CNN
+	1    6800 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F164
+U 1 1 5FDD0739
+P 6800 3100
+AR Path="/5F45B05E/616C72F3/5FDD0739" Ref="F164"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD0739" Ref="F192"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD0739" Ref="F108"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD0739" Ref="F136"  Part="1" 
+F 0 "F164" H 6800 3285 50  0000 C CNN
+F 1 "Fuse_Small" H 6800 3194 50  0000 C CNN
+F 2 "" H 6800 3100 50  0001 C CNN
+F 3 "~" H 6800 3100 50  0001 C CNN
+	1    6800 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F143
+U 1 1 5FDD20B1
+P 2600 4800
+AR Path="/5F45B05E/616C72F3/5FDD20B1" Ref="F143"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD20B1" Ref="F171"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD20B1" Ref="F87"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD20B1" Ref="F115"  Part="1" 
+F 0 "F143" H 2600 4985 50  0000 C CNN
+F 1 "Fuse_Small" H 2600 4894 50  0000 C CNN
+F 2 "" H 2600 4800 50  0001 C CNN
+F 3 "~" H 2600 4800 50  0001 C CNN
+	1    2600 4800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F144
+U 1 1 5FDD20B7
+P 2600 5050
+AR Path="/5F45B05E/616C72F3/5FDD20B7" Ref="F144"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD20B7" Ref="F172"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD20B7" Ref="F88"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD20B7" Ref="F116"  Part="1" 
+F 0 "F144" H 2600 5235 50  0000 C CNN
+F 1 "Fuse_Small" H 2600 5144 50  0000 C CNN
+F 2 "" H 2600 5050 50  0001 C CNN
+F 3 "~" H 2600 5050 50  0001 C CNN
+	1    2600 5050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F145
+U 1 1 5FDD283F
+P 2600 5400
+AR Path="/5F45B05E/616C72F3/5FDD283F" Ref="F145"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD283F" Ref="F173"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD283F" Ref="F89"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD283F" Ref="F117"  Part="1" 
+F 0 "F145" H 2600 5585 50  0000 C CNN
+F 1 "Fuse_Small" H 2600 5494 50  0000 C CNN
+F 2 "" H 2600 5400 50  0001 C CNN
+F 3 "~" H 2600 5400 50  0001 C CNN
+	1    2600 5400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F146
+U 1 1 5FDD2845
+P 2600 5650
+AR Path="/5F45B05E/616C72F3/5FDD2845" Ref="F146"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD2845" Ref="F174"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD2845" Ref="F90"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD2845" Ref="F118"  Part="1" 
+F 0 "F146" H 2600 5835 50  0000 C CNN
+F 1 "Fuse_Small" H 2600 5744 50  0000 C CNN
+F 2 "" H 2600 5650 50  0001 C CNN
+F 3 "~" H 2600 5650 50  0001 C CNN
+	1    2600 5650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F170
+U 1 1 5FDD188F
+P 6800 5300
+AR Path="/5F45B05E/616C72F3/5FDD188F" Ref="F170"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD188F" Ref="F198"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD188F" Ref="F114"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD188F" Ref="F142"  Part="1" 
+F 0 "F170" H 6800 5485 50  0000 C CNN
+F 1 "Fuse_Small" H 6800 5394 50  0000 C CNN
+F 2 "" H 6800 5300 50  0001 C CNN
+F 3 "~" H 6800 5300 50  0001 C CNN
+	1    6800 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F169
+U 1 1 5FDD1889
+P 6800 5050
+AR Path="/5F45B05E/616C72F3/5FDD1889" Ref="F169"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD1889" Ref="F197"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD1889" Ref="F113"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD1889" Ref="F141"  Part="1" 
+F 0 "F169" H 6800 5235 50  0000 C CNN
+F 1 "Fuse_Small" H 6800 5144 50  0000 C CNN
+F 2 "" H 6800 5050 50  0001 C CNN
+F 3 "~" H 6800 5050 50  0001 C CNN
+	1    6800 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F168
+U 1 1 5FDD1883
+P 6800 4800
+AR Path="/5F45B05E/616C72F3/5FDD1883" Ref="F168"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD1883" Ref="F196"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD1883" Ref="F112"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD1883" Ref="F140"  Part="1" 
+F 0 "F168" H 6800 4985 50  0000 C CNN
+F 1 "Fuse_Small" H 6800 4894 50  0000 C CNN
+F 2 "" H 6800 4800 50  0001 C CNN
+F 3 "~" H 6800 4800 50  0001 C CNN
+	1    6800 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F167
+U 1 1 5FDD187D
+P 6800 4550
+AR Path="/5F45B05E/616C72F3/5FDD187D" Ref="F167"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD187D" Ref="F195"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD187D" Ref="F111"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD187D" Ref="F139"  Part="1" 
+F 0 "F167" H 6800 4735 50  0000 C CNN
+F 1 "Fuse_Small" H 6800 4644 50  0000 C CNN
+F 2 "" H 6800 4550 50  0001 C CNN
+F 3 "~" H 6800 4550 50  0001 C CNN
+	1    6800 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F166
+U 1 1 5FDD1877
+P 6800 4300
+AR Path="/5F45B05E/616C72F3/5FDD1877" Ref="F166"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD1877" Ref="F194"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD1877" Ref="F110"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD1877" Ref="F138"  Part="1" 
+F 0 "F166" H 6800 4485 50  0000 C CNN
+F 1 "Fuse_Small" H 6800 4394 50  0000 C CNN
+F 2 "" H 6800 4300 50  0001 C CNN
+F 3 "~" H 6800 4300 50  0001 C CNN
+	1    6800 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F165
+U 1 1 5FDD1871
+P 6800 4050
+AR Path="/5F45B05E/616C72F3/5FDD1871" Ref="F165"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDD1871" Ref="F193"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDD1871" Ref="F109"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDD1871" Ref="F137"  Part="1" 
+F 0 "F165" H 6800 4235 50  0000 C CNN
+F 1 "Fuse_Small" H 6800 4144 50  0000 C CNN
+F 2 "" H 6800 4050 50  0001 C CNN
+F 3 "~" H 6800 4050 50  0001 C CNN
+	1    6800 4050
+	1    0    0    -1  
+$EndComp
+Text HLabel 7100 5300 2    50   Input ~ 0
 ThermistorR-V_GND
-Text HLabel 3950 3450 0    50   Output ~ 0
-ThermistorsA-V
+Text HLabel 7100 5050 2    50   Input ~ 0
+ThermistorV
+Text HLabel 7100 4800 2    50   Input ~ 0
+ThermistorU
+Text HLabel 7100 4550 2    50   Input ~ 0
+ThermistorT
+Text HLabel 7100 4300 2    50   Input ~ 0
+ThermistorS
+Text HLabel 7100 4050 2    50   Input ~ 0
+ThermistorR
+Text HLabel 2300 5650 0    50   Input ~ 0
+ThermistorQ_GND
+Text HLabel 5200 1850 0    50   Input ~ 0
+ThermistorA
+Text HLabel 5200 2100 0    50   Input ~ 0
+ThermistorB
+Text HLabel 5200 2350 0    50   Input ~ 0
+ThermistorC
+Text HLabel 5200 2600 0    50   Input ~ 0
+ThermistorD
+$Comp
+L Device:Fuse_Small F147
+U 1 1 5FDCCCB1
+P 5500 1850
+AR Path="/5F45B05E/616C72F3/5FDCCCB1" Ref="F147"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDCCCB1" Ref="F175"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDCCCB1" Ref="F91"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDCCCB1" Ref="F119"  Part="1" 
+F 0 "F147" H 5500 2035 50  0000 C CNN
+F 1 "Fuse_Small" H 5500 1944 50  0000 C CNN
+F 2 "" H 5500 1850 50  0001 C CNN
+F 3 "~" H 5500 1850 50  0001 C CNN
+	1    5500 1850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F148
+U 1 1 5FDCD1AF
+P 5500 2100
+AR Path="/5F45B05E/616C72F3/5FDCD1AF" Ref="F148"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDCD1AF" Ref="F176"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDCD1AF" Ref="F92"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDCD1AF" Ref="F120"  Part="1" 
+F 0 "F148" H 5500 2285 50  0000 C CNN
+F 1 "Fuse_Small" H 5500 2194 50  0000 C CNN
+F 2 "" H 5500 2100 50  0001 C CNN
+F 3 "~" H 5500 2100 50  0001 C CNN
+	1    5500 2100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F149
+U 1 1 5FDCD7E4
+P 5500 2350
+AR Path="/5F45B05E/616C72F3/5FDCD7E4" Ref="F149"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDCD7E4" Ref="F177"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDCD7E4" Ref="F93"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDCD7E4" Ref="F121"  Part="1" 
+F 0 "F149" H 5500 2535 50  0000 C CNN
+F 1 "Fuse_Small" H 5500 2444 50  0000 C CNN
+F 2 "" H 5500 2350 50  0001 C CNN
+F 3 "~" H 5500 2350 50  0001 C CNN
+	1    5500 2350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse_Small F150
+U 1 1 5FDCDD70
+P 5500 2600
+AR Path="/5F45B05E/616C72F3/5FDCDD70" Ref="F150"  Part="1" 
+AR Path="/5F45B05E/616F2C65/5FDCDD70" Ref="F178"  Part="1" 
+AR Path="/5F45B05E/6015F1FE/5FDCDD70" Ref="F94"  Part="1" 
+AR Path="/5F45B05E/616A3BA9/5FDCDD70" Ref="F122"  Part="1" 
+F 0 "F150" H 5500 2785 50  0000 C CNN
+F 1 "Fuse_Small" H 5500 2694 50  0000 C CNN
+F 2 "" H 5500 2600 50  0001 C CNN
+F 3 "~" H 5500 2600 50  0001 C CNN
+	1    5500 2600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 1850 5400 1850
+Wire Wire Line
+	5200 2100 5400 2100
+Wire Wire Line
+	5200 2350 5400 2350
+Wire Wire Line
+	5200 2600 5400 2600
+Wire Wire Line
+	5200 2850 5400 2850
+Wire Wire Line
+	5200 3100 5400 3100
+Wire Wire Line
+	2300 4800 2500 4800
+Wire Wire Line
+	2300 5050 2500 5050
+Wire Wire Line
+	5200 5300 5400 5300
+Wire Wire Line
+	5200 5050 5400 5050
+Wire Wire Line
+	5200 4800 5400 4800
+Wire Wire Line
+	5200 4550 5400 4550
+Wire Wire Line
+	5200 4300 5400 4300
+Wire Wire Line
+	5200 4050 5400 4050
+Wire Wire Line
+	6900 1850 7100 1850
+Wire Wire Line
+	6900 2100 7100 2100
+Wire Wire Line
+	6900 2350 7100 2350
+Wire Wire Line
+	6900 2600 7100 2600
+Wire Wire Line
+	6900 2850 7100 2850
+Wire Wire Line
+	6900 3100 7100 3100
+Wire Wire Line
+	2500 5400 2300 5400
+Wire Wire Line
+	2500 5650 2300 5650
+Wire Wire Line
+	6900 5300 7100 5300
+Wire Wire Line
+	6900 5050 7100 5050
+Wire Wire Line
+	6900 4800 7100 4800
+Wire Wire Line
+	6900 4550 7100 4550
+Wire Wire Line
+	6900 4300 7100 4300
+Wire Wire Line
+	6900 4050 7100 4050
+Wire Wire Line
+	5600 1850 5800 1850
+Wire Wire Line
+	5600 2100 5800 2100
+Wire Wire Line
+	5600 2350 5800 2350
+Wire Wire Line
+	5600 2600 5800 2600
+Wire Wire Line
+	5600 2850 5800 2850
+Wire Wire Line
+	5600 3100 5800 3100
+Wire Wire Line
+	2700 4800 2900 4800
+Wire Wire Line
+	2700 5050 2900 5050
+Wire Wire Line
+	5600 5300 5800 5300
+Wire Wire Line
+	5600 5050 5800 5050
+Wire Wire Line
+	5600 4800 5800 4800
+Wire Wire Line
+	5600 4550 5800 4550
+Wire Wire Line
+	5600 4300 5800 4300
+Wire Wire Line
+	5600 4050 5800 4050
+Wire Wire Line
+	6500 1850 6700 1850
+Wire Wire Line
+	6500 2100 6700 2100
+Wire Wire Line
+	6500 2350 6700 2350
+Wire Wire Line
+	6500 2600 6700 2600
+Wire Wire Line
+	6500 2850 6700 2850
+Wire Wire Line
+	6500 3100 6700 3100
+Wire Wire Line
+	2900 5400 2700 5400
+Wire Wire Line
+	2900 5650 2700 5650
+Wire Wire Line
+	6500 4550 6700 4550
+Wire Wire Line
+	6500 4300 6700 4300
+Wire Wire Line
+	6500 4050 6700 4050
+Wire Wire Line
+	6500 5300 6700 5300
+Wire Wire Line
+	6500 5050 6700 5050
+Wire Wire Line
+	6500 4800 6700 4800
+Entry Wire Line
+	5800 1850 5900 1950
+Entry Wire Line
+	5800 2100 5900 2200
+Entry Wire Line
+	5800 2350 5900 2450
+Entry Wire Line
+	5800 2600 5900 2700
+Entry Wire Line
+	5800 2850 5900 2950
+Entry Wire Line
+	5800 3100 5900 3200
+Entry Wire Line
+	2900 4800 3000 4900
+Entry Wire Line
+	2900 5050 3000 5150
+Entry Wire Line
+	5800 4050 5900 4150
+Entry Wire Line
+	5800 4300 5900 4400
+Entry Wire Line
+	5800 4550 5900 4650
+Entry Wire Line
+	5800 4800 5900 4900
+Entry Wire Line
+	5800 5050 5900 5150
+Entry Wire Line
+	5800 5300 5900 5400
+Entry Wire Line
+	6500 1850 6400 1950
+Entry Wire Line
+	6500 2100 6400 2200
+Entry Wire Line
+	6500 2350 6400 2450
+Entry Wire Line
+	6500 2600 6400 2700
+Entry Wire Line
+	6500 2850 6400 2950
+Entry Wire Line
+	6500 3100 6400 3200
+Entry Wire Line
+	2900 5400 3000 5500
+Entry Wire Line
+	2900 5650 3000 5750
+Entry Wire Line
+	6500 4050 6400 4150
+Entry Wire Line
+	6500 4300 6400 4400
+Entry Wire Line
+	6500 4550 6400 4650
+Entry Wire Line
+	6500 4800 6400 4900
+Entry Wire Line
+	6500 5050 6400 5150
+Entry Wire Line
+	6500 5300 6400 5400
+Text Notes 1500 1450 0    50   ~ 0
+Thermistor wires will all be fused before entering the thermistor expansion module/exiting the battery box to enter the BMS. All lines will be routed to this PCB and then ran into two connectors.
+Text HLabel 6500 6000 2    50   Output ~ 0
+Thermistors_NonCritical
+Wire Bus Line
+	6400 6000 6400 5450
+Text HLabel 3100 6000 2    50   Output ~ 0
+Thermistors_Critical
+Wire Bus Line
+	3100 6000 3000 6000
+Connection ~ 6400 5450
+Wire Bus Line
+	5900 5450 6400 5450
+Wire Bus Line
+	6400 6000 6500 6000
+Wire Notes Line
+	1500 5850 1500 1500
+Wire Notes Line
+	1500 1500 8250 1500
+Wire Notes Line
+	8250 1500 8250 5850
+Wire Notes Line
+	1500 5850 8250 5850
+Wire Bus Line
+	3000 4900 3000 6000
+Wire Bus Line
+	5900 1950 5900 5450
+Wire Bus Line
+	6400 1950 6400 5450
+Text Notes 1550 1600 0    50   ~ 0
+THERMISTOR PCB
 $EndSCHEMATC

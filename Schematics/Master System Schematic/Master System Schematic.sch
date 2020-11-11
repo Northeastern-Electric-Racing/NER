@@ -1497,12 +1497,12 @@ Wire Wire Line
 Wire Wire Line
 	29950 3550 30200 3550
 $Comp
-L NER:RinehartPM100DX_MotorController U?
+L NER:RinehartPM100DX_MotorController U3
 U 1 1 5FAF2B99
 P 28950 5700
-AR Path="/5FAF2B99" Ref="U?"  Part="1" 
+AR Path="/5FAF2B99" Ref="U3"  Part="1" 
 AR Path="/60D53BFB/5FAF2B99" Ref="U?"  Part="1" 
-F 0 "U?" H 28950 5865 50  0000 C CNN
+F 0 "U3" H 28950 5865 50  0000 C CNN
 F 1 "RinehartPM100DX_MotorController" H 28950 5774 50  0000 C CNN
 F 2 "" H 28950 5700 50  0001 C CNN
 F 3 "" H 28950 5700 50  0001 C CNN

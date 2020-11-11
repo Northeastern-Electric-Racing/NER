@@ -13,170 +13,18 @@ Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 8300 6150 0    50   Input ~ 0
-Segment3_Thermistors
 Text HLabel 1650 1700 0    50   BiDi ~ 0
 CAN_H(BMS)
 Text HLabel 1650 1600 0    50   BiDi ~ 0
 CAN_L(BMS)
 Text HLabel 1650 1350 0    50   Input ~ 0
-GLV(BMS+Charging)
+GLV(BMS)
 Text HLabel 1650 1250 0    50   Output ~ 0
 GND
 Text HLabel 3100 7150 0    50   Input ~ 0
 Segment4_VoltageTaps
-Text HLabel 10500 5100 2    50   Input ~ 0
-Segment1_Thermistors
-Entry Wire Line
-	10250 6000 10350 5900
-Entry Wire Line
-	10250 5900 10350 5800
-Entry Wire Line
-	10250 5800 10350 5700
-Entry Wire Line
-	10250 5700 10350 5600
-Entry Wire Line
-	10250 5600 10350 5500
-Entry Wire Line
-	10250 5500 10350 5400
-Entry Wire Line
-	10250 5400 10350 5300
-Entry Wire Line
-	10250 5300 10350 5200
-Entry Bus Bus
-	10350 5200 10450 5100
-Wire Bus Line
-	10450 5100 10500 5100
-Entry Wire Line
-	8550 5900 8450 5800
-Entry Wire Line
-	8550 5800 8450 5700
-Entry Wire Line
-	8550 5700 8450 5600
-Entry Wire Line
-	8550 5600 8450 5500
-Entry Wire Line
-	8550 5500 8450 5400
-Entry Wire Line
-	8550 5400 8450 5300
-Entry Wire Line
-	8550 5300 8450 5200
-Entry Bus Bus
-	8450 5200 8350 5100
-Wire Bus Line
-	8350 5100 8300 5100
-Entry Wire Line
-	8550 7050 8450 6950
-Entry Wire Line
-	8550 6950 8450 6850
-Entry Wire Line
-	8550 6850 8450 6750
-Entry Wire Line
-	8550 6750 8450 6650
-Entry Wire Line
-	8550 6650 8450 6550
-Entry Wire Line
-	8550 6550 8450 6450
-Entry Wire Line
-	8550 6450 8450 6350
-Entry Wire Line
-	8550 6350 8450 6250
-Entry Bus Bus
-	8450 6250 8350 6150
-Wire Bus Line
-	8350 6150 8300 6150
-Entry Wire Line
-	10250 6350 10350 6250
-Entry Wire Line
-	10250 6450 10350 6350
-Entry Wire Line
-	10250 6550 10350 6450
-Entry Wire Line
-	10250 6650 10350 6550
-Entry Wire Line
-	10250 6750 10350 6650
-Entry Wire Line
-	10250 6850 10350 6750
-Entry Wire Line
-	10250 6950 10350 6850
-Entry Wire Line
-	10250 7050 10350 6950
-Text HLabel 10500 6150 2    50   Input ~ 0
-Segment2_Thermistors
-Wire Bus Line
-	10450 6150 10500 6150
-Entry Bus Bus
-	10350 6250 10450 6150
 Text HLabel 3050 6900 0    50   Input ~ 0
 BMS_Fault
-Text HLabel 8300 5100 0    50   Input ~ 0
-Segment4_Thermistors
-Entry Wire Line
-	8550 6000 8450 5900
-Wire Wire Line
-	8550 5300 8600 5300
-Wire Wire Line
-	8550 5400 8700 5400
-Wire Wire Line
-	8550 5500 8600 5500
-Wire Wire Line
-	8550 5600 8700 5600
-Wire Wire Line
-	8600 5700 8550 5700
-Wire Wire Line
-	8550 5800 8700 5800
-Wire Wire Line
-	8550 5900 8600 5900
-Wire Wire Line
-	8550 6000 8700 6000
-Wire Wire Line
-	8600 6350 8550 6350
-Wire Wire Line
-	8550 6450 8700 6450
-Wire Wire Line
-	8550 6550 8600 6550
-Wire Wire Line
-	8550 6650 8700 6650
-Wire Wire Line
-	8550 6750 8600 6750
-Wire Wire Line
-	8550 6850 8700 6850
-Wire Wire Line
-	8550 6950 8600 6950
-Wire Wire Line
-	8550 7050 8700 7050
-Wire Wire Line
-	10250 6350 10200 6350
-Wire Wire Line
-	10250 6450 10100 6450
-Wire Wire Line
-	10250 6550 10200 6550
-Wire Wire Line
-	10100 6650 10250 6650
-Wire Wire Line
-	10200 6750 10250 6750
-Wire Wire Line
-	10100 6850 10250 6850
-Wire Wire Line
-	10250 6950 10200 6950
-Wire Wire Line
-	10100 7050 10250 7050
-Wire Wire Line
-	10100 6000 10250 6000
-Wire Wire Line
-	10250 5900 10200 5900
-Wire Wire Line
-	10250 5800 10100 5800
-Wire Wire Line
-	10250 5700 10200 5700
-Wire Wire Line
-	10250 5600 10100 5600
-Wire Wire Line
-	10250 5500 10200 5500
-Wire Wire Line
-	10250 5400 10100 5400
-Wire Wire Line
-	10200 5300 10250 5300
 Text HLabel 6050 4900 2    50   Input ~ 0
 Current_Sensor
 Text HLabel 5800 8100 2    50   Input ~ 0
@@ -255,20 +103,6 @@ Wire Bus Line
 Connection ~ 5750 4500
 Wire Bus Line
 	5750 4500 5750 4400
-NoConn ~ 10100 4800
-NoConn ~ 10100 4900
-NoConn ~ 8700 4600
-$Comp
-L NER:OrionThermExp U7
-U 1 1 5F8ADC5C
-P 9400 4400
-F 0 "U7" H 9400 4565 50  0000 C CNN
-F 1 "OrionThermExp" H 9400 4474 50  0000 C CNN
-F 2 "" H 9400 4300 50  0001 C CNN
-F 3 "" H 9400 4300 50  0001 C CNN
-	1    9400 4400
-	1    0    0    -1  
-$EndComp
 NoConn ~ 3500 4400
 NoConn ~ 3500 4700
 NoConn ~ 3500 4800
@@ -285,8 +119,6 @@ NoConn ~ 3500 6400
 NoConn ~ 3500 6500
 NoConn ~ 3500 6600
 NoConn ~ 3500 6700
-Wire Wire Line
-	10100 5000 10350 5000
 NoConn ~ 5400 4400
 NoConn ~ 5400 4500
 NoConn ~ 5400 4600
@@ -313,12 +145,6 @@ Entry Wire Line
 	5800 5600 5900 5500
 Entry Wire Line
 	5800 5700 5900 5600
-Wire Wire Line
-	8450 5000 8700 5000
-Wire Wire Line
-	10550 4700 10100 4700
-Wire Wire Line
-	10100 4600 10450 4600
 Text HLabel 1650 4900 0    50   Output ~ 0
 ChargerSafety
 Wire Wire Line
@@ -494,7 +320,7 @@ Text HLabel 10900 1700 2    50   Input ~ 0
 CAN_H(Charger)
 Text HLabel 10900 1600 2    50   Input ~ 0
 CAN_L(Charger)
-Text HLabel 15450 1250 2    50   Input ~ 0
+Text HLabel 10900 1250 2    50   Input ~ 0
 GND(Charger)
 $Comp
 L Simulation_SPICE:DIODE D31
@@ -521,51 +347,6 @@ Wire Wire Line
 Connection ~ 4800 3300
 Wire Wire Line
 	4800 3300 5900 3300
-Text HLabel 12600 5750 0    50   Input ~ 0
-TS+
-Text HLabel 12600 5850 0    50   Output ~ 0
-TS-
-Wire Wire Line
-	12600 5750 12950 5750
-Wire Wire Line
-	12950 5850 12600 5850
-Wire Wire Line
-	12950 3700 12600 3700
-Wire Wire Line
-	12950 3600 12600 3600
-Wire Wire Line
-	12950 3800 12600 3800
-Text HLabel 12600 3600 0    50   BiDi ~ 0
-CAN_L(MC)
-Text HLabel 12600 3700 0    50   BiDi ~ 0
-CAN_H(MC)
-Text HLabel 12600 3800 0    50   BiDi ~ 0
-CAN_SHIELD(MC)
-Text HLabel 15250 3900 2    50   Output ~ 0
-PrechargeRLY
-Text HLabel 15250 5650 2    50   Output ~ 0
-Phase_C
-Text HLabel 15250 5750 2    50   Output ~ 0
-Phase_B
-Text HLabel 15250 5850 2    50   Output ~ 0
-Phase_A
-Text HLabel 15250 3800 2    50   Output ~ 0
-MainRLY
-Wire Wire Line
-	8450 1700 8450 5000
-Connection ~ 8450 1700
-Wire Wire Line
-	8450 1700 10900 1700
-Wire Wire Line
-	10350 1600 10350 5000
-Connection ~ 10350 1600
-Wire Wire Line
-	10350 1600 10900 1600
-Wire Wire Line
-	10450 1350 10450 4600
-Connection ~ 10550 1250
-Wire Wire Line
-	10550 1250 10550 4700
 Wire Wire Line
 	1650 1600 1850 1600
 Wire Wire Line
@@ -576,8 +357,6 @@ Wire Wire Line
 	6650 2500 6650 1250
 Connection ~ 6650 2500
 Connection ~ 6650 1250
-Wire Wire Line
-	6650 1250 10550 1250
 Wire Wire Line
 	1600 2500 2150 2500
 Wire Wire Line
@@ -591,12 +370,8 @@ Wire Wire Line
 	1950 1700 1950 6100
 Connection ~ 1950 1700
 Wire Wire Line
-	1950 1700 8450 1700
-Wire Wire Line
 	1850 1600 1850 6200
 Connection ~ 1850 1600
-Wire Wire Line
-	1850 1600 10350 1600
 Wire Wire Line
 	2350 1250 2350 5500
 Connection ~ 2350 1250
@@ -617,50 +392,11 @@ Wire Wire Line
 	3350 1350 10450 1350
 Connection ~ 3350 3800
 Wire Wire Line
-	10550 1250 15100 1250
+	1950 1700 10900 1700
 Wire Wire Line
-	15000 5850 15250 5850
-Text HLabel 15250 4100 2    50   Input ~ 0
-GLV(MC)
+	1850 1600 10900 1600
 Wire Wire Line
-	15250 5750 15000 5750
-Wire Wire Line
-	15000 5650 15250 5650
-Wire Wire Line
-	15000 3900 15250 3900
-Wire Wire Line
-	15000 3800 15250 3800
-$Comp
-L NER:RinehartPM100DX_MotorController U?
-U 1 1 62DE1334
-P 14000 5950
-AR Path="/62DE1334" Ref="U?"  Part="1" 
-AR Path="/60D53BFB/62DE1334" Ref="U3"  Part="1" 
-F 0 "U3" H 14000 6115 50  0000 C CNN
-F 1 "RinehartPM100DX_MotorController" H 14000 6024 50  0000 C CNN
-F 2 "" H 14000 5950 50  0001 C CNN
-F 3 "" H 14000 5950 50  0001 C CNN
-	1    14000 5950
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	15000 4100 15100 4100
-Wire Wire Line
-	15000 4000 15100 4000
-Wire Wire Line
-	15100 4000 15100 4100
-Connection ~ 15100 4100
-Wire Wire Line
-	15100 4100 15250 4100
-Wire Wire Line
-	15000 3500 15100 3500
-Wire Wire Line
-	15100 3500 15100 3400
-Connection ~ 15100 1250
-Wire Wire Line
-	15100 1250 15450 1250
-Wire Wire Line
-	15000 3400 15100 3400
+	6650 1250 10900 1250
 Wire Bus Line
 	5650 8200 5650 8500
 Wire Bus Line
@@ -671,15 +407,4 @@ Wire Bus Line
 	5650 6300 5650 6600
 Wire Bus Line
 	5650 7250 5650 7550
-Wire Bus Line
-	10350 5200 10350 5900
-Wire Bus Line
-	8450 5200 8450 5900
-Wire Bus Line
-	8450 6250 8450 6950
-Wire Bus Line
-	10350 6250 10350 6950
-Connection ~ 15100 3400
-Wire Wire Line
-	15100 3400 15100 1250
 $EndSCHEMATC
