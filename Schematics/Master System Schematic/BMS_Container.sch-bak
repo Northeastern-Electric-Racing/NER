@@ -427,10 +427,10 @@ Connection ~ 4950 4900
 Wire Wire Line
 	4950 4900 4950 1650
 $Comp
-L Relay:DIPxx-1Axx-11x K?
+L Relay:DIPxx-1Axx-11x K55
 U 1 1 5FB9D72C
 P 3400 5800
-F 0 "K?" V 3850 5850 50  0000 R CNN
+F 0 "K55" V 3850 5850 50  0000 R CNN
 F 1 "BMS_Fan_Relay" V 3750 6100 50  0000 R CNN
 F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 3750 5750 50  0001 L CNN
 F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 3400 5800 50  0001 C CNN

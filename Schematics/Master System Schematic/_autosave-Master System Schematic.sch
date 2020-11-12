@@ -219,32 +219,32 @@ F0 "Accumulator Container" 50
 F1 "Accumulator_Container.sch" 50
 F2 "Shutdown+" I L 18700 10850 50 
 F3 "Shutdown-" I R 20450 10850 50 
-F4 "TS+" O R 20450 12850 50 
-F5 "TS-" O R 20450 12950 50 
+F4 "TS+" O R 20450 12950 50 
+F5 "TS-" O R 20450 13050 50 
 F6 "TSAL+" O L 18700 11400 50 
 F7 "TSAL-" O L 18700 11300 50 
 F8 "IMD_HV_SENSE-" O L 18700 11100 50 
 F9 "IMD_HV_SENSE+" O L 18700 11000 50 
 F10 "TSMP-" O L 18700 12950 50 
 F11 "TSMP+" O L 18700 12850 50 
-F12 "Segment1_Thermistors" O R 20450 11750 50 
-F13 "Segment2_Thermistors" O R 20450 11850 50 
-F14 "Segment3_Thermistors" O R 20450 11950 50 
-F15 "Segment4_Thermistors" O R 20450 12050 50 
-F16 "Segment1_VoltageTaps" O R 20450 12200 50 
-F17 "Segment2_VoltageTaps" O R 20450 12300 50 
-F18 "Segment3_VoltageTaps" O R 20450 12400 50 
-F19 "Segment4_VoltageTaps" O R 20450 12500 50 
-F20 "MotorController_AIR_Control+" I R 20450 11400 50 
-F21 "MotorController_Precharge+" I R 20450 11300 50 
-F22 "HVD-" I L 18700 12200 50 
-F23 "HVD+" I L 18700 12100 50 
-F24 "SMD_2-" I L 18700 11800 50 
-F25 "SMD_2+" I L 18700 11700 50 
-F26 "SMD_1-" I L 18700 12600 50 
-F27 "SMD_1+" I L 18700 12500 50 
-F28 "Current_Sensor" O R 20450 12650 50 
-F29 "Segment1_CriticalThermistors" O R 20450 11650 50 
+F12 "Segment1_VoltageTaps" O R 20450 12200 50 
+F13 "Segment2_VoltageTaps" O R 20450 12300 50 
+F14 "Segment3_VoltageTaps" O R 20450 12400 50 
+F15 "Segment4_VoltageTaps" O R 20450 12500 50 
+F16 "MotorController_AIR_Control+" I R 20450 11400 50 
+F17 "MotorController_Precharge+" I R 20450 11300 50 
+F18 "HVD-" I L 18700 12200 50 
+F19 "HVD+" I L 18700 12100 50 
+F20 "SMD_2-" I L 18700 11800 50 
+F21 "SMD_2+" I L 18700 11700 50 
+F22 "SMD_1-" I L 18700 12600 50 
+F23 "SMD_1+" I L 18700 12500 50 
+F24 "Current_Sensor" O R 20450 12650 50 
+F25 "Segment1_CriticalThermistors" O R 20450 11750 50 
+F26 "Segment2_CriticalThermistors" O R 20450 11850 50 
+F27 "Segment3_CriticalThermistors" O R 20450 11950 50 
+F28 "Segment4_CriticalThermistors" O R 20450 12050 50 
+F29 "Thermistor_Expansion" O R 20450 12800 50 
 $EndSheet
 Entry Wire Line
 	29250 11450 29350 11350
@@ -905,7 +905,7 @@ Wire Wire Line
 Wire Wire Line
 	18600 12200 18700 12200
 Wire Wire Line
-	20450 12850 25450 12850
+	20450 12950 25450 12950
 Wire Wire Line
 	14200 3550 14050 3550
 Wire Wire Line
@@ -1372,9 +1372,7 @@ Wire Wire Line
 Wire Wire Line
 	26750 8500 27150 8500
 Wire Wire Line
-	20450 12950 25550 12950
-Wire Wire Line
-	25450 12850 25450 10450
+	20450 13050 25550 13050
 Connection ~ 29300 8200
 Wire Wire Line
 	20450 11400 25050 11400
@@ -1420,8 +1418,6 @@ Wire Wire Line
 	7300 8150 26200 8150
 Wire Wire Line
 	7150 8000 26200 8000
-Connection ~ 25450 12850
-Connection ~ 25550 12950
 Wire Wire Line
 	4600 9250 4600 18000
 Wire Wire Line
@@ -1490,11 +1486,7 @@ Wire Wire Line
 Wire Wire Line
 	26600 16450 25450 16450
 Wire Wire Line
-	25450 12850 25450 16450
-Wire Wire Line
 	25550 16350 26600 16350
-Wire Wire Line
-	25550 12950 25550 16350
 $Comp
 L Motor:Fan M10
 U 1 1 645643FC
@@ -1517,8 +1509,6 @@ CHASSIS_GND
 Wire Wire Line
 	26700 13600 27950 13600
 NoConn ~ 6700 9850
-Wire Wire Line
-	25550 10550 25550 12950
 Wire Bus Line
 	30950 7000 30950 11150
 Wire Bus Line
@@ -1529,6 +1519,16 @@ Wire Wire Line
 	25050 7250 25050 11400
 Wire Wire Line
 	24950 7150 24950 11300
+Connection ~ 25450 12950
+Wire Wire Line
+	25450 12950 25450 16450
+Connection ~ 25550 13050
+Wire Wire Line
+	25550 13050 25550 16350
+Wire Wire Line
+	25450 10450 25450 12950
+Wire Wire Line
+	25550 10550 25550 13050
 Wire Wire Line
 	29200 12450 30000 12450
 Wire Wire Line
