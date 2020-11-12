@@ -3,10 +3,10 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 22 22
+Sheet 21 22
 Title "BMS & MC Container"
-Date "2020-11-11"
-Rev "6"
+Date "2020-11-12"
+Rev "7"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -18,7 +18,7 @@ CAN_H(BMS)
 Text HLabel 4850 1900 0    50   BiDi ~ 0
 CAN_L(BMS)
 Text HLabel 4850 1650 0    50   Input ~ 0
-GLV(BMS)
+GLV
 Text HLabel 4850 1550 0    50   UnSpc ~ 0
 GND
 Text HLabel 6300 7450 0    50   Input ~ 0
