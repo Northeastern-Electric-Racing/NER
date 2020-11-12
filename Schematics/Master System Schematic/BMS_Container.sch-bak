@@ -265,7 +265,7 @@ Wire Wire Line
 Wire Wire Line
 	6000 4100 5750 4100
 Wire Wire Line
-	5750 4100 5750 4500
+	5750 4100 5750 4300
 Wire Wire Line
 	5750 4500 5850 4500
 $Comp
@@ -358,31 +358,15 @@ Wire Wire Line
 	5050 1900 5050 6500
 Connection ~ 5050 1900
 Wire Wire Line
-	5550 1550 5550 5800
+	5550 1550 5550 4300
 Connection ~ 5550 1550
 Wire Wire Line
-	5550 1550 5750 1550
-Wire Wire Line
 	4850 1650 4950 1650
-Wire Wire Line
-	5750 1550 5750 4100
-Connection ~ 5750 1550
-Connection ~ 5750 4100
-Wire Wire Line
-	5750 1550 9850 1550
 Connection ~ 6550 4100
-Wire Wire Line
-	5150 2000 14100 2000
-Wire Wire Line
-	5050 1900 14100 1900
-Wire Wire Line
-	9850 1550 14100 1550
 Wire Wire Line
 	4800 3600 8000 3600
 Wire Wire Line
 	8000 1650 8000 2800
-Wire Wire Line
-	8000 1650 14100 1650
 Wire Wire Line
 	6700 5600 4150 5600
 Text HLabel 2900 6000 0    50   Output ~ 0
@@ -394,8 +378,6 @@ Wire Wire Line
 Wire Wire Line
 	4950 6000 4950 4900
 Connection ~ 4950 1650
-Wire Wire Line
-	4950 1650 6550 1650
 $Comp
 L Device:R R10
 U 1 1 64558B5B
@@ -449,6 +431,61 @@ Wire Wire Line
 Connection ~ 9850 2800
 Wire Wire Line
 	9850 2800 9850 3200
+Text HLabel 4950 1150 0    50   BiDi ~ 0
+Thermistor_Expansion
+Entry Bus Bus
+	5300 1150 5400 1250
+Entry Bus Bus
+	5450 1150 5550 1250
+Entry Wire Line
+	5550 1350 5450 1250
+Entry Wire Line
+	5700 1350 5600 1250
+Wire Bus Line
+	5600 1250 5550 1250
+Wire Bus Line
+	5450 1250 5400 1250
+Entry Bus Bus
+	5600 1150 5700 1250
+Entry Bus Bus
+	5750 1150 5850 1250
+Entry Wire Line
+	5850 1350 5750 1250
+Entry Wire Line
+	6000 1350 5900 1250
+Wire Bus Line
+	5900 1250 5850 1250
+Wire Bus Line
+	5750 1250 5700 1250
+Wire Wire Line
+	9850 1550 14100 1550
+Wire Wire Line
+	8000 1650 14100 1650
+Wire Wire Line
+	4950 1650 5700 1650
+Wire Wire Line
+	5150 2000 6000 2000
+Wire Wire Line
+	5050 1900 5850 1900
+Wire Wire Line
+	5550 1350 5550 1550
+Wire Wire Line
+	5700 1350 5700 1650
+Wire Wire Line
+	5850 1350 5850 1900
+Wire Wire Line
+	6000 1350 6000 2000
+Connection ~ 5700 1650
+Connection ~ 5850 1900
+Connection ~ 6000 2000
+Wire Wire Line
+	5700 1650 6550 1650
+Wire Wire Line
+	5850 1900 14100 1900
+Wire Wire Line
+	6000 2000 14100 2000
+Wire Wire Line
+	5750 4300 5550 4300
 Wire Bus Line
 	8850 8500 8850 8800
 Wire Bus Line
@@ -459,4 +496,14 @@ Wire Bus Line
 	8850 6600 8850 6900
 Wire Bus Line
 	8850 7550 8850 7850
+Wire Bus Line
+	4950 1150 5750 1150
+Connection ~ 5750 4300
+Wire Wire Line
+	5750 4300 5750 4500
+Connection ~ 5550 4300
+Wire Wire Line
+	5550 4300 5550 5800
+Wire Wire Line
+	5550 1550 9850 1550
 $EndSCHEMATC
