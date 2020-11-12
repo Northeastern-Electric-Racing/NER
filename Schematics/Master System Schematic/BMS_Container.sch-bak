@@ -309,10 +309,6 @@ Text HLabel 9900 3600 2    50   Output ~ 0
 CoolingPumpPower_OUT
 Wire Wire Line
 	5850 4900 5350 4900
-Wire Wire Line
-	9850 3200 9850 2800
-Text HLabel 4800 3200 0    50   Input ~ 0
-CoolingPumpControl
 Text HLabel 14100 2000 2    50   Input ~ 0
 CAN_H(Charger)
 Text HLabel 14100 1900 2    50   Input ~ 0
@@ -348,9 +344,6 @@ Wire Wire Line
 	4850 1550 5550 1550
 Wire Wire Line
 	4850 2000 5150 2000
-Wire Wire Line
-	9850 2800 9850 1550
-Connection ~ 9850 2800
 Connection ~ 9850 1550
 Wire Wire Line
 	5350 2800 5350 4900
@@ -377,8 +370,6 @@ Connection ~ 5750 1550
 Connection ~ 5750 4100
 Wire Wire Line
 	5750 1550 9850 1550
-Wire Wire Line
-	6550 1650 6550 4100
 Connection ~ 6550 4100
 Wire Wire Line
 	5150 2000 14100 2000
@@ -387,8 +378,6 @@ Wire Wire Line
 Wire Wire Line
 	9850 1550 14100 1550
 Wire Wire Line
-	4800 3200 8350 3200
-Wire Wire Line
 	4800 3600 8000 3600
 Wire Wire Line
 	8000 1650 8000 2800
@@ -396,20 +385,6 @@ Wire Wire Line
 	8000 1650 14100 1650
 Wire Wire Line
 	6700 5600 4150 5600
-$Comp
-L Relay:MSxx-1Bxx-75 K?
-U 1 1 6454A212
-P 3400 5800
-AR Path="/5F45B05E/6454A212" Ref="K?"  Part="1" 
-AR Path="/6454A212" Ref="K?"  Part="1" 
-AR Path="/60D53BFB/6454A212" Ref="K?"  Part="1" 
-F 0 "K?" V 2833 5800 50  0000 C CNN
-F 1 "BMS_FanControl" V 2924 5800 50  0000 C CNN
-F 2 "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB" H 3750 5750 50  0001 L CNN
-F 3 "https://standexelectronics.com/de/produkte/ms-reed-relais/" H 3400 5800 50  0001 C CNN
-	1    3400 5800
-	0    1    1    0   
-$EndComp
 Text HLabel 2900 6000 0    50   Output ~ 0
 BMS_Fan
 Wire Wire Line
@@ -422,10 +397,10 @@ Connection ~ 4950 1650
 Wire Wire Line
 	4950 1650 6550 1650
 $Comp
-L Device:R R?
+L Device:R R10
 U 1 1 64558B5B
 P 4150 5800
-F 0 "R?" H 4220 5846 50  0000 L CNN
+F 0 "R10" H 4220 5846 50  0000 L CNN
 F 1 "2.2k" H 4220 5755 50  0000 L CNN
 F 2 "" V 4080 5800 50  0001 C CNN
 F 3 "~" H 4150 5800 50  0001 C CNN
@@ -448,6 +423,32 @@ Wire Wire Line
 	2900 5600 2900 4900
 Wire Wire Line
 	2900 4900 4950 4900
+Connection ~ 4950 4900
+Wire Wire Line
+	4950 4900 4950 1650
+$Comp
+L Relay:DIPxx-1Axx-11x K?
+U 1 1 5FB9D72C
+P 3400 5800
+F 0 "K?" V 3850 5850 50  0000 R CNN
+F 1 "BMS_Fan_Relay" V 3750 6100 50  0000 R CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 3750 5750 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 3400 5800 50  0001 C CNN
+	1    3400 5800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8350 3200 6550 3200
+Wire Wire Line
+	9850 1550 9850 2800
+Wire Wire Line
+	6550 1650 6550 3200
+Connection ~ 6550 3200
+Wire Wire Line
+	6550 3200 6550 4100
+Connection ~ 9850 2800
+Wire Wire Line
+	9850 2800 9850 3200
 Wire Bus Line
 	8850 8500 8850 8800
 Wire Bus Line
@@ -458,7 +459,4 @@ Wire Bus Line
 	8850 6600 8850 6900
 Wire Bus Line
 	8850 7550 8850 7850
-Connection ~ 4950 4900
-Wire Wire Line
-	4950 4900 4950 1650
 $EndSCHEMATC

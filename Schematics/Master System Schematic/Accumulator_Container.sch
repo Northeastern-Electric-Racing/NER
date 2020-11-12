@@ -242,61 +242,6 @@ F 3 "~" H 16700 7150 50  0001 C CNN
 	1    16700 7150
 	1    0    0    1   
 $EndComp
-$Sheet
-S 6300 9350 1100 1700
-U 5F7F6054
-F0 "Battery Segment 1" 50
-F1 "BatterySegment.sch" 50
-F2 "Segment+" O R 7400 9400 50 
-F3 "Segment-" O R 7400 9500 50 
-F4 "ThermistorA" O L 6300 9400 30 
-F5 "ThermistorB" O L 6300 9450 30 
-F6 "ThermistorC" O L 6300 9500 30 
-F7 "ThermistorD" O L 6300 9550 30 
-F8 "ThermistorE" O L 6300 9600 30 
-F9 "ThermistorF" O L 6300 9750 30 
-F10 "ThermistorG" O L 6300 9900 30 
-F11 "ThermistorH" O L 6300 9950 30 
-F12 "ThermistorI" O L 6300 10000 30 
-F13 "ThermistorJ" O L 6300 10050 30 
-F14 "ThermistorK" O L 6300 10100 30 
-F15 "ThermistorL" O L 6300 10250 30 
-F16 "ThermistorM" O L 6300 10300 30 
-F17 "ThermistorN" O L 6300 10350 30 
-F18 "ThermistorO" O L 6300 10400 30 
-F19 "ThermistorP" O L 6300 10450 30 
-F20 "ThermistorQ" O L 6300 10600 30 
-F21 "ThermistorR" O L 6300 10750 30 
-F22 "ThermistorS" O L 6300 10800 30 
-F23 "ThermistorU" O L 6300 10900 30 
-F24 "ThermistorV" O L 6300 10950 30 
-F25 "ThermistorT" O L 6300 10850 30 
-F26 "ThermistorF_GND" O L 6300 9800 30 
-F27 "ThermistorQ_GND" O L 6300 10650 30 
-F28 "ThermistorA-E_GND" O L 6300 9650 30 
-F29 "ThermistorG-K_GND" O L 6300 10150 30 
-F30 "ThermistorL-P_GND" O L 6300 10500 30 
-F31 "ThermistorR-V_GND" O L 6300 11000 30 
-F32 "ParallelCells_GND" I R 7400 9850 30 
-F33 "ParallelCells_Row1" I R 7400 9900 30 
-F34 "ParallelCells_Row2" I R 7400 9950 30 
-F35 "ParallelCells_Row3" I R 7400 10000 30 
-F36 "ParallelCells_Row4" I R 7400 10050 30 
-F37 "ParallelCells_Row5" I R 7400 10100 30 
-F38 "ParallelCells_Row6" I R 7400 10150 30 
-F39 "ParallelCells_Row7" I R 7400 10200 30 
-F40 "ParallelCells_Row8" I R 7400 10250 30 
-F41 "ParallelCells_Row9" I R 7400 10300 30 
-F42 "ParallelCells_Row10" I R 7400 10350 30 
-F43 "ParallelCells_Row11" I R 7400 10400 30 
-F44 "ParallelCells_Row12" I R 7400 10450 30 
-F45 "ParallelCells_Row13" I R 7400 10500 30 
-F46 "ParallelCells_Row14" I R 7400 10550 30 
-F47 "ParallelCells_Row15" I R 7400 10600 30 
-F48 "ParallelCells_Row16" I R 7400 10650 30 
-F49 "ParallelCells_Row17" I R 7400 10700 30 
-F50 "ParallelCells_Row18" I R 7400 10750 30 
-$EndSheet
 Wire Wire Line
 	15950 7550 16800 7550
 Connection ~ 16800 7550
@@ -619,171 +564,6 @@ Wire Wire Line
 	11350 6800 11350 6550
 Wire Wire Line
 	11350 6550 11800 6550
-$Sheet
-S 6300 7150 1100 1700
-U 602AD660
-F0 "Battery Segment 2" 50
-F1 "BatterySegment.sch" 50
-F2 "Segment+" O R 7400 7200 50 
-F3 "Segment-" O R 7400 7300 50 
-F4 "ThermistorA" O L 6300 7200 30 
-F5 "ThermistorB" O L 6300 7250 30 
-F6 "ThermistorC" O L 6300 7300 30 
-F7 "ThermistorD" O L 6300 7350 30 
-F8 "ThermistorE" O L 6300 7400 30 
-F9 "ThermistorF" O L 6300 7550 30 
-F10 "ThermistorG" O L 6300 7700 30 
-F11 "ThermistorH" O L 6300 7750 30 
-F12 "ThermistorI" O L 6300 7800 30 
-F13 "ThermistorJ" O L 6300 7850 30 
-F14 "ThermistorK" O L 6300 7900 30 
-F15 "ThermistorL" O L 6300 8050 30 
-F16 "ThermistorM" O L 6300 8100 30 
-F17 "ThermistorN" O L 6300 8150 30 
-F18 "ThermistorO" O L 6300 8200 30 
-F19 "ThermistorP" O L 6300 8250 30 
-F20 "ThermistorQ" O L 6300 8400 30 
-F21 "ThermistorR" O L 6300 8550 30 
-F22 "ThermistorS" O L 6300 8600 30 
-F23 "ThermistorU" O L 6300 8700 30 
-F24 "ThermistorV" O L 6300 8750 30 
-F25 "ThermistorT" O L 6300 8650 30 
-F26 "ThermistorF_GND" O L 6300 7600 30 
-F27 "ThermistorQ_GND" O L 6300 8450 30 
-F28 "ThermistorA-E_GND" O L 6300 7450 30 
-F29 "ThermistorG-K_GND" O L 6300 7950 30 
-F30 "ThermistorL-P_GND" O L 6300 8300 30 
-F31 "ThermistorR-V_GND" O L 6300 8800 30 
-F32 "ParallelCells_GND" I R 7400 7650 30 
-F33 "ParallelCells_Row1" I R 7400 7700 30 
-F34 "ParallelCells_Row2" I R 7400 7750 30 
-F35 "ParallelCells_Row3" I R 7400 7800 30 
-F36 "ParallelCells_Row4" I R 7400 7850 30 
-F37 "ParallelCells_Row5" I R 7400 7900 30 
-F38 "ParallelCells_Row6" I R 7400 7950 30 
-F39 "ParallelCells_Row7" I R 7400 8000 30 
-F40 "ParallelCells_Row8" I R 7400 8050 30 
-F41 "ParallelCells_Row9" I R 7400 8100 30 
-F42 "ParallelCells_Row10" I R 7400 8150 30 
-F43 "ParallelCells_Row11" I R 7400 8200 30 
-F44 "ParallelCells_Row12" I R 7400 8250 30 
-F45 "ParallelCells_Row13" I R 7400 8300 30 
-F46 "ParallelCells_Row14" I R 7400 8350 30 
-F47 "ParallelCells_Row15" I R 7400 8400 30 
-F48 "ParallelCells_Row16" I R 7400 8450 30 
-F49 "ParallelCells_Row17" I R 7400 8500 30 
-F50 "ParallelCells_Row18" I R 7400 8550 30 
-$EndSheet
-$Sheet
-S 6300 4950 1100 1700
-U 602C1510
-F0 "Battery Segment 3" 50
-F1 "BatterySegment.sch" 50
-F2 "Segment+" O R 7400 5000 50 
-F3 "Segment-" O R 7400 5100 50 
-F4 "ThermistorA" O L 6300 5000 30 
-F5 "ThermistorB" O L 6300 5050 30 
-F6 "ThermistorC" O L 6300 5100 30 
-F7 "ThermistorD" O L 6300 5150 30 
-F8 "ThermistorE" O L 6300 5200 30 
-F9 "ThermistorF" O L 6300 5350 30 
-F10 "ThermistorG" O L 6300 5500 30 
-F11 "ThermistorH" O L 6300 5550 30 
-F12 "ThermistorI" O L 6300 5600 30 
-F13 "ThermistorJ" O L 6300 5650 30 
-F14 "ThermistorK" O L 6300 5700 30 
-F15 "ThermistorL" O L 6300 5850 30 
-F16 "ThermistorM" O L 6300 5900 30 
-F17 "ThermistorN" O L 6300 5950 30 
-F18 "ThermistorO" O L 6300 6000 30 
-F19 "ThermistorP" O L 6300 6050 30 
-F20 "ThermistorQ" O L 6300 6200 30 
-F21 "ThermistorR" O L 6300 6350 30 
-F22 "ThermistorS" O L 6300 6400 30 
-F23 "ThermistorU" O L 6300 6500 30 
-F24 "ThermistorV" O L 6300 6550 30 
-F25 "ThermistorT" O L 6300 6450 30 
-F26 "ThermistorF_GND" O L 6300 5400 30 
-F27 "ThermistorQ_GND" O L 6300 6250 30 
-F28 "ThermistorA-E_GND" O L 6300 5250 30 
-F29 "ThermistorG-K_GND" O L 6300 5750 30 
-F30 "ThermistorL-P_GND" O L 6300 6100 30 
-F31 "ThermistorR-V_GND" O L 6300 6600 30 
-F32 "ParallelCells_GND" I R 7400 5450 30 
-F33 "ParallelCells_Row1" I R 7400 5500 30 
-F34 "ParallelCells_Row2" I R 7400 5550 30 
-F35 "ParallelCells_Row3" I R 7400 5600 30 
-F36 "ParallelCells_Row4" I R 7400 5650 30 
-F37 "ParallelCells_Row5" I R 7400 5700 30 
-F38 "ParallelCells_Row6" I R 7400 5750 30 
-F39 "ParallelCells_Row7" I R 7400 5800 30 
-F40 "ParallelCells_Row8" I R 7400 5850 30 
-F41 "ParallelCells_Row9" I R 7400 5900 30 
-F42 "ParallelCells_Row10" I R 7400 5950 30 
-F43 "ParallelCells_Row11" I R 7400 6000 30 
-F44 "ParallelCells_Row12" I R 7400 6050 30 
-F45 "ParallelCells_Row13" I R 7400 6100 30 
-F46 "ParallelCells_Row14" I R 7400 6150 30 
-F47 "ParallelCells_Row15" I R 7400 6200 30 
-F48 "ParallelCells_Row16" I R 7400 6250 30 
-F49 "ParallelCells_Row17" I R 7400 6300 30 
-F50 "ParallelCells_Row18" I R 7400 6350 30 
-$EndSheet
-$Sheet
-S 6300 2750 1100 1700
-U 602C155C
-F0 "Battery Segment 4" 50
-F1 "BatterySegment.sch" 50
-F2 "Segment+" O R 7400 2800 50 
-F3 "Segment-" O R 7400 2900 50 
-F4 "ThermistorA" O L 6300 2800 30 
-F5 "ThermistorB" O L 6300 2850 30 
-F6 "ThermistorC" O L 6300 2900 30 
-F7 "ThermistorD" O L 6300 2950 30 
-F8 "ThermistorE" O L 6300 3000 30 
-F9 "ThermistorF" O L 6300 3150 30 
-F10 "ThermistorG" O L 6300 3300 30 
-F11 "ThermistorH" O L 6300 3350 30 
-F12 "ThermistorI" O L 6300 3400 30 
-F13 "ThermistorJ" O L 6300 3450 30 
-F14 "ThermistorK" O L 6300 3500 30 
-F15 "ThermistorL" O L 6300 3650 30 
-F16 "ThermistorM" O L 6300 3700 30 
-F17 "ThermistorN" O L 6300 3750 30 
-F18 "ThermistorO" O L 6300 3800 30 
-F19 "ThermistorP" O L 6300 3850 30 
-F20 "ThermistorQ" O L 6300 4000 30 
-F21 "ThermistorR" O L 6300 4150 30 
-F22 "ThermistorS" O L 6300 4200 30 
-F23 "ThermistorU" O L 6300 4300 30 
-F24 "ThermistorV" O L 6300 4350 30 
-F25 "ThermistorT" O L 6300 4250 30 
-F26 "ThermistorF_GND" O L 6300 3200 30 
-F27 "ThermistorQ_GND" O L 6300 4050 30 
-F28 "ThermistorA-E_GND" O L 6300 3050 30 
-F29 "ThermistorG-K_GND" O L 6300 3550 30 
-F30 "ThermistorL-P_GND" O L 6300 3900 30 
-F31 "ThermistorR-V_GND" O L 6300 4400 30 
-F32 "ParallelCells_GND" I R 7400 3250 30 
-F33 "ParallelCells_Row1" I R 7400 3300 30 
-F34 "ParallelCells_Row2" I R 7400 3350 30 
-F35 "ParallelCells_Row3" I R 7400 3400 30 
-F36 "ParallelCells_Row4" I R 7400 3450 30 
-F37 "ParallelCells_Row5" I R 7400 3500 30 
-F38 "ParallelCells_Row6" I R 7400 3550 30 
-F39 "ParallelCells_Row7" I R 7400 3600 30 
-F40 "ParallelCells_Row8" I R 7400 3650 30 
-F41 "ParallelCells_Row9" I R 7400 3700 30 
-F42 "ParallelCells_Row10" I R 7400 3750 30 
-F43 "ParallelCells_Row11" I R 7400 3800 30 
-F44 "ParallelCells_Row12" I R 7400 3850 30 
-F45 "ParallelCells_Row13" I R 7400 3900 30 
-F46 "ParallelCells_Row14" I R 7400 3950 30 
-F47 "ParallelCells_Row15" I R 7400 4000 30 
-F48 "ParallelCells_Row16" I R 7400 4050 30 
-F49 "ParallelCells_Row17" I R 7400 4100 30 
-F50 "ParallelCells_Row18" I R 7400 4150 30 
-$EndSheet
 $Sheet
 S 7700 3200 1450 1050
 U 602C1575
@@ -1168,338 +948,6 @@ Wire Bus Line
 	9800 11250 10900 11250
 Wire Bus Line
 	9700 11350 10900 11350
-$Sheet
-S 4800 2750 1350 1700
-U 6015F1FE
-F0 "Thermistor PCB 4" 50
-F1 "ThermistorPCB.sch" 50
-F2 "ThermistorA" I R 6150 2800 30 
-F3 "ThermistorB" I R 6150 2850 30 
-F4 "ThermistorC" I R 6150 2900 30 
-F5 "ThermistorD" I R 6150 2950 30 
-F6 "ThermistorE" I R 6150 3000 30 
-F7 "ThermistorA-E_GND" I R 6150 3050 30 
-F8 "ThermistorF" I R 6150 3150 30 
-F9 "ThermistorF_GND" I R 6150 3200 30 
-F10 "ThermistorL" I R 6150 3650 30 
-F11 "ThermistorM" I R 6150 3700 30 
-F12 "ThermistorN" I R 6150 3750 30 
-F13 "ThermistorO" I R 6150 3800 30 
-F14 "ThermistorP" I R 6150 3850 30 
-F15 "ThermistorL-P_GND" I R 6150 3900 30 
-F16 "ThermistorQ" I R 6150 4000 30 
-F17 "ThermistorQ_GND" I R 6150 4050 30 
-F18 "ThermistorG" I R 6150 3300 30 
-F19 "ThermistorH" I R 6150 3350 30 
-F20 "ThermistorI" I R 6150 3400 30 
-F21 "ThermistorJ" I R 6150 3450 30 
-F22 "ThermistorK" I R 6150 3500 30 
-F23 "ThermistorG-K_GND" I R 6150 3550 30 
-F24 "ThermistorR" I R 6150 4150 30 
-F25 "ThermistorT" I R 6150 4250 30 
-F26 "ThermistorU" I R 6150 4300 30 
-F27 "ThermistorV" I R 6150 4350 30 
-F28 "ThermistorR-V_GND" I R 6150 4400 30 
-F29 "ThermistorS" I R 6150 4200 30 
-F30 "Thermistors_NonCritical" O L 4800 2800 50 
-F31 "Thermistors_Critical" O L 4800 2900 50 
-$EndSheet
-Wire Wire Line
-	6150 2800 6300 2800
-Wire Wire Line
-	6300 2850 6150 2850
-Wire Wire Line
-	6150 2900 6300 2900
-Wire Wire Line
-	6300 2950 6150 2950
-Wire Wire Line
-	6150 3000 6300 3000
-Wire Wire Line
-	6150 3050 6300 3050
-Wire Wire Line
-	6150 3150 6300 3150
-Wire Wire Line
-	6150 3200 6300 3200
-Wire Wire Line
-	6150 3300 6300 3300
-Wire Wire Line
-	6150 3350 6300 3350
-Wire Wire Line
-	6150 3400 6300 3400
-Wire Wire Line
-	6150 3450 6300 3450
-Wire Wire Line
-	6150 3500 6300 3500
-Wire Wire Line
-	6150 3550 6300 3550
-Wire Wire Line
-	6150 3650 6300 3650
-Wire Wire Line
-	6150 3700 6300 3700
-Wire Wire Line
-	6150 3750 6300 3750
-Wire Wire Line
-	6150 3800 6300 3800
-Wire Wire Line
-	6150 3850 6300 3850
-Wire Wire Line
-	6150 3900 6300 3900
-Wire Wire Line
-	6150 4000 6300 4000
-Wire Wire Line
-	6150 4050 6300 4050
-Wire Wire Line
-	6150 4150 6300 4150
-Wire Wire Line
-	6150 4200 6300 4200
-Wire Wire Line
-	6150 4250 6300 4250
-Wire Wire Line
-	6150 4300 6300 4300
-Wire Wire Line
-	6150 4350 6300 4350
-Wire Wire Line
-	6300 4400 6150 4400
-$Sheet
-S 4800 4950 1350 1700
-U 616A3BA9
-F0 "Thermistor PCB 3" 50
-F1 "ThermistorPCB.sch" 50
-F2 "ThermistorA" I R 6150 5000 30 
-F3 "ThermistorB" I R 6150 5050 30 
-F4 "ThermistorC" I R 6150 5100 30 
-F5 "ThermistorD" I R 6150 5150 30 
-F6 "ThermistorE" I R 6150 5200 30 
-F7 "ThermistorA-E_GND" I R 6150 5250 30 
-F8 "ThermistorF" I R 6150 5350 30 
-F9 "ThermistorF_GND" I R 6150 5400 30 
-F10 "ThermistorL" I R 6150 5850 30 
-F11 "ThermistorM" I R 6150 5900 30 
-F12 "ThermistorN" I R 6150 5950 30 
-F13 "ThermistorO" I R 6150 6000 30 
-F14 "ThermistorP" I R 6150 6050 30 
-F15 "ThermistorL-P_GND" I R 6150 6100 30 
-F16 "ThermistorQ" I R 6150 6200 30 
-F17 "ThermistorQ_GND" I R 6150 6250 30 
-F18 "ThermistorG" I R 6150 5500 30 
-F19 "ThermistorH" I R 6150 5550 30 
-F20 "ThermistorI" I R 6150 5600 30 
-F21 "ThermistorJ" I R 6150 5650 30 
-F22 "ThermistorK" I R 6150 5700 30 
-F23 "ThermistorG-K_GND" I R 6150 5750 30 
-F24 "ThermistorR" I R 6150 6350 30 
-F25 "ThermistorT" I R 6150 6450 30 
-F26 "ThermistorU" I R 6150 6500 30 
-F27 "ThermistorV" I R 6150 6550 30 
-F28 "ThermistorR-V_GND" I R 6150 6600 30 
-F29 "ThermistorS" I R 6150 6400 30 
-F30 "Thermistors_NonCritical" O L 4800 5000 50 
-F31 "Thermistors_Critical" O L 4800 5100 50 
-$EndSheet
-Wire Wire Line
-	6150 5000 6300 5000
-Wire Wire Line
-	6300 5050 6150 5050
-Wire Wire Line
-	6150 5100 6300 5100
-Wire Wire Line
-	6300 5150 6150 5150
-Wire Wire Line
-	6150 5200 6300 5200
-Wire Wire Line
-	6150 5250 6300 5250
-Wire Wire Line
-	6150 5350 6300 5350
-Wire Wire Line
-	6150 5400 6300 5400
-Wire Wire Line
-	6150 5500 6300 5500
-Wire Wire Line
-	6150 5550 6300 5550
-Wire Wire Line
-	6150 5600 6300 5600
-Wire Wire Line
-	6150 5650 6300 5650
-Wire Wire Line
-	6150 5700 6300 5700
-Wire Wire Line
-	6150 5750 6300 5750
-Wire Wire Line
-	6150 5850 6300 5850
-Wire Wire Line
-	6150 5900 6300 5900
-Wire Wire Line
-	6150 5950 6300 5950
-Wire Wire Line
-	6150 6000 6300 6000
-Wire Wire Line
-	6150 6050 6300 6050
-Wire Wire Line
-	6150 6100 6300 6100
-Wire Wire Line
-	6150 6200 6300 6200
-Wire Wire Line
-	6150 6250 6300 6250
-Wire Wire Line
-	6150 6350 6300 6350
-Wire Wire Line
-	6150 6400 6300 6400
-Wire Wire Line
-	6150 6450 6300 6450
-Wire Wire Line
-	6150 6500 6300 6500
-Wire Wire Line
-	6150 6550 6300 6550
-Wire Wire Line
-	6300 6600 6150 6600
-Wire Wire Line
-	6150 7200 6300 7200
-Wire Wire Line
-	6300 7250 6150 7250
-Wire Wire Line
-	6150 7300 6300 7300
-Wire Wire Line
-	6300 7350 6150 7350
-Wire Wire Line
-	6150 7400 6300 7400
-Wire Wire Line
-	6150 7450 6300 7450
-Wire Wire Line
-	6150 7550 6300 7550
-Wire Wire Line
-	6150 7600 6300 7600
-Wire Wire Line
-	6150 7700 6300 7700
-Wire Wire Line
-	6150 7750 6300 7750
-Wire Wire Line
-	6150 7800 6300 7800
-Wire Wire Line
-	6150 7850 6300 7850
-Wire Wire Line
-	6150 7900 6300 7900
-Wire Wire Line
-	6150 7950 6300 7950
-Wire Wire Line
-	6150 8050 6300 8050
-Wire Wire Line
-	6150 8100 6300 8100
-Wire Wire Line
-	6150 8150 6300 8150
-Wire Wire Line
-	6150 8200 6300 8200
-Wire Wire Line
-	6150 8250 6300 8250
-Wire Wire Line
-	6150 8300 6300 8300
-Wire Wire Line
-	6150 8400 6300 8400
-Wire Wire Line
-	6150 8450 6300 8450
-Wire Wire Line
-	6150 8550 6300 8550
-Wire Wire Line
-	6150 8600 6300 8600
-Wire Wire Line
-	6150 8650 6300 8650
-Wire Wire Line
-	6150 8700 6300 8700
-Wire Wire Line
-	6150 8750 6300 8750
-Wire Wire Line
-	6300 8800 6150 8800
-Wire Wire Line
-	6150 9400 6300 9400
-Wire Wire Line
-	6300 9450 6150 9450
-Wire Wire Line
-	6150 9500 6300 9500
-Wire Wire Line
-	6300 9550 6150 9550
-Wire Wire Line
-	6150 9600 6300 9600
-Wire Wire Line
-	6150 9650 6300 9650
-Wire Wire Line
-	6150 9750 6300 9750
-Wire Wire Line
-	6150 9800 6300 9800
-Wire Wire Line
-	6150 9900 6300 9900
-Wire Wire Line
-	6150 9950 6300 9950
-Wire Wire Line
-	6150 10000 6300 10000
-Wire Wire Line
-	6150 10050 6300 10050
-Wire Wire Line
-	6150 10100 6300 10100
-Wire Wire Line
-	6150 10150 6300 10150
-Wire Wire Line
-	6150 10250 6300 10250
-Wire Wire Line
-	6150 10300 6300 10300
-Wire Wire Line
-	6150 10350 6300 10350
-Wire Wire Line
-	6150 10400 6300 10400
-Wire Wire Line
-	6150 10450 6300 10450
-Wire Wire Line
-	6150 10500 6300 10500
-Wire Wire Line
-	6150 10600 6300 10600
-Wire Wire Line
-	6150 10650 6300 10650
-Wire Wire Line
-	6150 10750 6300 10750
-Wire Wire Line
-	6150 10800 6300 10800
-Wire Wire Line
-	6150 10850 6300 10850
-Wire Wire Line
-	6150 10900 6300 10900
-Wire Wire Line
-	6150 10950 6300 10950
-Wire Wire Line
-	6300 11000 6150 11000
-$Sheet
-S 4800 9350 1350 1700
-U 616F2C65
-F0 "Thermistor PCB 1" 50
-F1 "ThermistorPCB.sch" 50
-F2 "ThermistorA" I R 6150 9400 30 
-F3 "ThermistorB" I R 6150 9450 30 
-F4 "ThermistorC" I R 6150 9500 30 
-F5 "ThermistorD" I R 6150 9550 30 
-F6 "ThermistorE" I R 6150 9600 30 
-F7 "ThermistorA-E_GND" I R 6150 9650 30 
-F8 "ThermistorF" I R 6150 9750 30 
-F9 "ThermistorF_GND" I R 6150 9800 30 
-F10 "ThermistorL" I R 6150 10250 30 
-F11 "ThermistorM" I R 6150 10300 30 
-F12 "ThermistorN" I R 6150 10350 30 
-F13 "ThermistorO" I R 6150 10400 30 
-F14 "ThermistorP" I R 6150 10450 30 
-F15 "ThermistorL-P_GND" I R 6150 10500 30 
-F16 "ThermistorQ" I R 6150 10600 30 
-F17 "ThermistorQ_GND" I R 6150 10650 30 
-F18 "ThermistorG" I R 6150 9900 30 
-F19 "ThermistorH" I R 6150 9950 30 
-F20 "ThermistorI" I R 6150 10000 30 
-F21 "ThermistorJ" I R 6150 10050 30 
-F22 "ThermistorK" I R 6150 10100 30 
-F23 "ThermistorG-K_GND" I R 6150 10150 30 
-F24 "ThermistorR" I R 6150 10750 30 
-F25 "ThermistorT" I R 6150 10850 30 
-F26 "ThermistorU" I R 6150 10900 30 
-F27 "ThermistorV" I R 6150 10950 30 
-F28 "ThermistorR-V_GND" I R 6150 11000 30 
-F29 "ThermistorS" I R 6150 10800 30 
-F30 "Thermistors_NonCritical" O L 4800 9400 50 
-F31 "Thermistors_Critical" O L 4800 9500 50 
-$EndSheet
 Wire Wire Line
 	12350 3600 12350 6150
 Wire Wire Line
@@ -1549,86 +997,38 @@ Wire Wire Line
 Wire Wire Line
 	13700 2150 13700 2600
 Entry Wire Line
-	4100 14300 4000 14200
+	4400 14800 4300 14700
 Entry Wire Line
-	4100 14100 4000 14000
+	4400 14600 4300 14500
 Entry Wire Line
-	4100 14000 4000 13900
+	4400 14500 4300 14400
 Entry Wire Line
-	4100 13900 4000 13800
+	4400 14400 4300 14300
 Entry Wire Line
-	4100 13800 4000 13700
+	4400 14300 4300 14200
 Entry Wire Line
-	4100 13700 4000 13600
+	4400 14200 4300 14100
 Entry Wire Line
-	4100 13600 4000 13500
+	4400 14100 4300 14000
 Entry Wire Line
-	4050 14650 3950 14550
+	4350 15150 4250 15050
 Entry Wire Line
-	4050 14750 3950 14650
+	4350 15250 4250 15150
 Entry Wire Line
-	4050 14850 3950 14750
+	4350 15350 4250 15250
 Entry Wire Line
-	4050 14950 3950 14850
+	4350 15450 4250 15350
 Entry Wire Line
-	4050 15050 3950 14950
+	4350 15550 4250 15450
 Entry Wire Line
-	4050 15150 3950 15050
+	4350 15650 4250 15550
 Entry Wire Line
-	4050 15250 3950 15150
+	4350 15750 4250 15650
 Entry Wire Line
-	4050 15350 3950 15250
-NoConn ~ 4350 13100
-NoConn ~ 4350 13200
-NoConn ~ 5750 12900
-$Sheet
-S 4800 7150 1350 1700
-U 616C72F3
-F0 "Thermistor PCB 2" 50
-F1 "ThermistorPCB.sch" 50
-F2 "ThermistorA" I R 6150 7200 30 
-F3 "ThermistorB" I R 6150 7250 30 
-F4 "ThermistorC" I R 6150 7300 30 
-F5 "ThermistorD" I R 6150 7350 30 
-F6 "ThermistorE" I R 6150 7400 30 
-F7 "ThermistorA-E_GND" I R 6150 7450 30 
-F8 "ThermistorF" I R 6150 7550 30 
-F9 "ThermistorF_GND" I R 6150 7600 30 
-F10 "ThermistorL" I R 6150 8050 30 
-F11 "ThermistorM" I R 6150 8100 30 
-F12 "ThermistorN" I R 6150 8150 30 
-F13 "ThermistorO" I R 6150 8200 30 
-F14 "ThermistorP" I R 6150 8250 30 
-F15 "ThermistorL-P_GND" I R 6150 8300 30 
-F16 "ThermistorQ" I R 6150 8400 30 
-F17 "ThermistorQ_GND" I R 6150 8450 30 
-F18 "ThermistorG" I R 6150 7700 30 
-F19 "ThermistorH" I R 6150 7750 30 
-F20 "ThermistorI" I R 6150 7800 30 
-F21 "ThermistorJ" I R 6150 7850 30 
-F22 "ThermistorK" I R 6150 7900 30 
-F23 "ThermistorG-K_GND" I R 6150 7950 30 
-F24 "ThermistorR" I R 6150 8550 30 
-F25 "ThermistorT" I R 6150 8650 30 
-F26 "ThermistorU" I R 6150 8700 30 
-F27 "ThermistorV" I R 6150 8750 30 
-F28 "ThermistorR-V_GND" I R 6150 8800 30 
-F29 "ThermistorS" I R 6150 8600 30 
-F30 "Thermistors_NonCritical" O L 4800 7200 50 
-F31 "Thermistors_Critical" O L 4800 7300 50 
-$EndSheet
-Entry Bus Bus
-	4350 3000 4450 2900
-Entry Bus Bus
-	4450 5200 4550 5100
-Entry Bus Bus
-	4550 7400 4650 7300
-Wire Bus Line
-	4800 9500 4750 9500
-Entry Bus Bus
-	4650 9600 4750 9500
-Wire Bus Line
-	4650 9600 4650 11550
+	4350 15850 4250 15750
+NoConn ~ 4650 13600
+NoConn ~ 4650 13700
+NoConn ~ 6050 13400
 Text HLabel 10900 11550 2    50   Output ~ 0
 Segment1_CriticalThermistors
 Text HLabel 10900 11650 2    50   Output ~ 0
@@ -1637,177 +1037,145 @@ Text HLabel 10900 11750 2    50   Output ~ 0
 Segment3_CriticalThermistors
 Text HLabel 10900 11850 2    50   Output ~ 0
 Segment4_CriticalThermistors
-Wire Bus Line
-	10900 11550 4650 11550
-Wire Bus Line
-	4450 5200 4450 11750
-Wire Bus Line
-	4550 7400 4550 11650
-Wire Bus Line
-	4550 11650 10900 11650
-Wire Bus Line
-	4450 11750 10900 11750
-Wire Bus Line
-	4350 11850 10900 11850
-Wire Bus Line
-	4350 3000 4350 11850
-Wire Bus Line
-	4450 2900 4800 2900
-Wire Bus Line
-	4550 5100 4800 5100
-Wire Bus Line
-	4650 7300 4800 7300
 Wire Wire Line
-	4100 13600 4250 13600
+	4400 14100 4550 14100
 Wire Wire Line
-	4100 13700 4350 13700
+	4400 14200 4650 14200
 Wire Wire Line
-	4100 13800 4250 13800
+	4400 14300 4550 14300
 Wire Wire Line
-	4100 13900 4350 13900
+	4400 14400 4650 14400
 Wire Wire Line
-	4100 14000 4250 14000
+	4400 14500 4550 14500
 Wire Wire Line
-	4100 14100 4350 14100
+	4400 14600 4650 14600
 Wire Wire Line
-	4100 14200 4250 14200
+	4400 14700 4550 14700
 Wire Wire Line
-	4100 14300 4350 14300
-Wire Bus Line
-	4800 2800 3850 2800
-Wire Bus Line
-	4800 5000 3900 5000
-Wire Bus Line
-	4800 7200 3950 7200
-Wire Bus Line
-	4800 9400 4000 9400
+	4400 14800 4650 14800
 Entry Wire Line
-	4100 14200 4000 14100
+	4400 14700 4300 14600
 Wire Wire Line
-	4050 14650 4250 14650
+	4350 15150 4550 15150
 Wire Wire Line
-	4050 14750 4350 14750
+	4350 15250 4650 15250
 Wire Wire Line
-	4050 14850 4250 14850
+	4350 15350 4550 15350
 Wire Wire Line
-	4050 14950 4350 14950
+	4350 15450 4650 15450
 Wire Wire Line
-	4050 15050 4250 15050
+	4350 15550 4550 15550
 Wire Wire Line
-	4050 15150 4350 15150
+	4350 15650 4650 15650
 Wire Wire Line
-	4050 15250 4250 15250
+	4350 15750 4550 15750
 Wire Wire Line
-	4050 15350 4350 15350
+	4350 15850 4650 15850
 Entry Wire Line
-	6000 14300 6100 14400
+	6300 14800 6400 14900
 Entry Wire Line
-	6000 14200 6100 14300
+	6300 14700 6400 14800
 Entry Wire Line
-	6000 14100 6100 14200
+	6300 14600 6400 14700
 Entry Wire Line
-	6000 14000 6100 14100
+	6300 14500 6400 14600
 Entry Wire Line
-	6000 13900 6100 14000
+	6300 14400 6400 14500
 Entry Wire Line
-	6000 13800 6100 13900
+	6300 14300 6400 14400
 Entry Wire Line
-	6000 13700 6100 13800
+	6300 14200 6400 14300
 Entry Wire Line
-	6000 13600 6100 13700
+	6300 14100 6400 14200
 Wire Wire Line
-	5900 15350 5750 15350
+	6200 15850 6050 15850
 Wire Wire Line
-	5900 15250 5850 15250
+	6200 15750 6150 15750
 Wire Wire Line
-	5900 15150 5750 15150
+	6200 15650 6050 15650
 Wire Wire Line
-	5850 15050 5900 15050
+	6150 15550 6200 15550
 Wire Wire Line
-	5900 14950 5750 14950
+	6200 15450 6050 15450
 Wire Wire Line
-	5900 14850 5850 14850
+	6200 15350 6150 15350
 Wire Wire Line
-	5900 14750 5750 14750
+	6200 15250 6050 15250
 Wire Wire Line
-	5900 14650 5850 14650
+	6200 15150 6150 15150
 Entry Wire Line
-	5900 15350 6000 15450
+	6200 15850 6300 15950
 Entry Wire Line
-	5900 15250 6000 15350
+	6200 15750 6300 15850
 Entry Wire Line
-	5900 15150 6000 15250
+	6200 15650 6300 15750
 Entry Wire Line
-	5900 15050 6000 15150
+	6200 15550 6300 15650
 Entry Wire Line
-	5900 14950 6000 15050
+	6200 15450 6300 15550
 Entry Wire Line
-	5900 14850 6000 14950
+	6200 15350 6300 15450
 Entry Wire Line
-	5900 14750 6000 14850
+	6200 15250 6300 15350
 Entry Wire Line
-	5900 14650 6000 14750
+	6200 15150 6300 15250
 Wire Bus Line
-	3900 15550 6000 15550
+	4200 16050 6300 16050
 Wire Bus Line
-	3850 15600 6100 15600
+	4150 16100 6400 16100
 Wire Wire Line
-	5750 14300 6000 14300
+	6050 14800 6300 14800
 Wire Wire Line
-	5850 14200 6000 14200
+	6150 14700 6300 14700
 Wire Wire Line
-	5750 14100 6000 14100
+	6050 14600 6300 14600
 Wire Wire Line
-	5850 14000 6000 14000
+	6150 14500 6300 14500
 Wire Wire Line
-	5750 13900 6000 13900
+	6050 14400 6300 14400
 Wire Wire Line
-	5850 13800 6000 13800
+	6150 14300 6300 14300
 Wire Wire Line
-	5750 13700 6000 13700
+	6050 14200 6300 14200
 Wire Wire Line
-	5850 13600 6000 13600
-Wire Bus Line
-	3900 5000 3900 15550
-Wire Bus Line
-	3850 2800 3850 15600
+	6150 14100 6300 14100
 Wire Wire Line
-	4350 13000 4250 13000
+	4650 13500 4550 13500
 Text HLabel 10900 12150 2    50   Output ~ 0
 Thermistor_Expansion
 Entry Wire Line
-	4150 13200 4250 13300
+	4450 13700 4550 13800
 $Comp
 L NER:OrionThermExp U?
 U 1 1 5FB81724
-P 5050 12700
+P 5350 13200
 AR Path="/60D53BFB/5FB81724" Ref="U?"  Part="1" 
 AR Path="/5F45B05E/5FB81724" Ref="U7"  Part="1" 
-F 0 "U7" H 5050 12865 50  0000 C CNN
-F 1 "OrionThermExp" H 5050 12774 50  0000 C CNN
-F 2 "" H 5050 12600 50  0001 C CNN
-F 3 "" H 5050 12600 50  0001 C CNN
-	1    5050 12700
+F 0 "U7" H 5350 13365 50  0000 C CNN
+F 1 "OrionThermExp" H 5350 13274 50  0000 C CNN
+F 2 "" H 5350 13100 50  0001 C CNN
+F 3 "" H 5350 13100 50  0001 C CNN
+	1    5350 13200
 	-1   0    0    -1  
 $EndComp
 Entry Wire Line
-	4150 12900 4250 13000
+	4450 13400 4550 13500
 Wire Wire Line
-	4350 13300 4250 13300
+	4650 13800 4550 13800
 Entry Wire Line
-	4150 12800 4250 12900
+	4450 13300 4550 13400
 Wire Wire Line
-	4350 12900 4250 12900
+	4650 13400 4550 13400
 Wire Wire Line
-	5750 13300 5850 13300
+	6050 13800 6150 13800
 Entry Wire Line
-	5850 13300 5950 13200
+	6150 13800 6250 13700
 Wire Bus Line
-	5950 13200 5950 12250
+	6250 13700 6250 12750
 Entry Bus Bus
-	5950 12250 6050 12150
+	6250 12750 6350 12650
 Entry Bus Bus
-	4150 12250 4250 12150
+	4450 12750 4550 12650
 Wire Notes Line
 	10700 10600 10700 12300
 Wire Notes Line
@@ -1816,6 +1184,852 @@ Wire Notes Line
 	12350 12300 12350 10600
 Wire Notes Line
 	12350 10600 10700 10600
+Text Notes 10700 12400 0    50   ~ 0
+All leave the accumulator container via cord grips
+$Sheet
+S 5650 9350 1100 2250
+U 5F7F6054
+F0 "Battery Segment 1" 50
+F1 "BatterySegment.sch" 50
+F2 "Segment+" O R 6750 9400 50 
+F3 "Segment-" O R 6750 9500 50 
+F4 "ThermistorA" O L 5650 9400 30 
+F5 "ThermistorB" O L 5650 9500 30 
+F6 "ThermistorC" O L 5650 9600 30 
+F7 "ThermistorD" O L 5650 9700 30 
+F8 "ThermistorE" O L 5650 9800 30 
+F9 "ThermistorF" O L 5650 9900 30 
+F10 "ThermistorG" O L 5650 10000 30 
+F11 "ThermistorH" O L 5650 10100 30 
+F12 "ThermistorI" O L 5650 10200 30 
+F13 "ThermistorJ" O L 5650 10300 30 
+F14 "ThermistorK" O L 5650 10400 30 
+F15 "ThermistorL" O L 5650 10500 30 
+F16 "ThermistorM" O L 5650 10600 30 
+F17 "ThermistorN" O L 5650 10700 30 
+F18 "ThermistorO" O L 5650 10800 30 
+F19 "ThermistorP" O L 5650 10900 30 
+F20 "ThermistorQ" O L 5650 11000 30 
+F21 "ThermistorR" O L 5650 11100 30 
+F22 "ThermistorS" O L 5650 11200 30 
+F23 "ThermistorU" O L 5650 11400 30 
+F24 "ThermistorV" O L 5650 11500 30 
+F25 "ThermistorT" O L 5650 11300 30 
+F26 "ThermistorF_GND" O L 5650 9950 30 
+F27 "ThermistorQ_GND" O L 5650 11050 30 
+F28 "ParallelCells_GND" I R 6750 9850 30 
+F29 "ParallelCells_Row1" I R 6750 9900 30 
+F30 "ParallelCells_Row2" I R 6750 9950 30 
+F31 "ParallelCells_Row3" I R 6750 10000 30 
+F32 "ParallelCells_Row4" I R 6750 10050 30 
+F33 "ParallelCells_Row5" I R 6750 10100 30 
+F34 "ParallelCells_Row6" I R 6750 10150 30 
+F35 "ParallelCells_Row7" I R 6750 10200 30 
+F36 "ParallelCells_Row8" I R 6750 10250 30 
+F37 "ParallelCells_Row9" I R 6750 10300 30 
+F38 "ParallelCells_Row10" I R 6750 10350 30 
+F39 "ParallelCells_Row11" I R 6750 10400 30 
+F40 "ParallelCells_Row12" I R 6750 10450 30 
+F41 "ParallelCells_Row13" I R 6750 10500 30 
+F42 "ParallelCells_Row14" I R 6750 10550 30 
+F43 "ParallelCells_Row15" I R 6750 10600 30 
+F44 "ParallelCells_Row16" I R 6750 10650 30 
+F45 "ParallelCells_Row17" I R 6750 10700 30 
+F46 "ParallelCells_Row18" I R 6750 10750 30 
+F47 "ThermistorA_GND" O L 5650 9450 30 
+F48 "ThermistorG_GND" O L 5650 10050 30 
+F49 "ThermistorL_GND" O L 5650 10550 30 
+F50 "ThermistorR_GND" O L 5650 11150 30 
+F51 "ThermistorB_GND" O L 5650 9550 30 
+F52 "ThermistorC_GND" O L 5650 9650 30 
+F53 "ThermistorD_GND" O L 5650 9750 30 
+F54 "ThermistorE_GND" O L 5650 9850 30 
+F55 "ThermistorH_GND" O L 5650 10150 30 
+F56 "ThermistorI_GND" O L 5650 10250 30 
+F57 "ThermistorJ_GND" O L 5650 10350 30 
+F58 "ThermistorK_GND" O L 5650 10450 30 
+F59 "ThermistorM_GND" O L 5650 10650 30 
+F60 "ThermistorN_GND" O L 5650 10750 30 
+F61 "ThermistorO_GND" O L 5650 10850 30 
+F62 "ThermistorP_GND" O L 5650 10950 30 
+F63 "ThermistorS_GND" O L 5650 11250 30 
+F64 "ThermistorT_GND" O L 5650 11350 30 
+F65 "ThermistorU_GND" O L 5650 11450 30 
+F66 "ThermistorV_GND" O L 5650 11550 30 
+$EndSheet
+$Sheet
+S 4150 9350 1350 2250
+U 616F2C65
+F0 "Thermistor PCB 1" 50
+F1 "ThermistorPCB.sch" 50
+F2 "ThermistorA" I R 5500 9400 30 
+F3 "ThermistorB" I R 5500 9500 30 
+F4 "ThermistorC" I R 5500 9600 30 
+F5 "ThermistorD" I R 5500 9700 30 
+F6 "ThermistorE" I R 5500 9800 30 
+F7 "ThermistorF" I R 5500 9900 30 
+F8 "ThermistorF_GND" I R 5500 9950 30 
+F9 "ThermistorL" I R 5500 10500 30 
+F10 "ThermistorM" I R 5500 10600 30 
+F11 "ThermistorN" I R 5500 10700 30 
+F12 "ThermistorO" I R 5500 10800 30 
+F13 "ThermistorP" I R 5500 10900 30 
+F14 "ThermistorQ" I R 5500 11000 30 
+F15 "ThermistorQ_GND" I R 5500 11050 30 
+F16 "ThermistorG" I R 5500 10000 30 
+F17 "ThermistorH" I R 5500 10100 30 
+F18 "ThermistorI" I R 5500 10200 30 
+F19 "ThermistorJ" I R 5500 10300 30 
+F20 "ThermistorK" I R 5500 10400 30 
+F21 "ThermistorR" I R 5500 11100 30 
+F22 "ThermistorT" I R 5500 11300 30 
+F23 "ThermistorU" I R 5500 11400 30 
+F24 "ThermistorV" I R 5500 11500 30 
+F25 "ThermistorS" I R 5500 11200 30 
+F26 "Thermistors_NonCritical" O L 4150 9400 50 
+F27 "Thermistors_Critical" O L 4150 9500 50 
+F28 "ThermistorA_GND" I R 5500 9450 30 
+F29 "ThermistorB_GND" I R 5500 9550 30 
+F30 "ThermistorC_GND" I R 5500 9650 30 
+F31 "ThermistorD_GND" I R 5500 9750 30 
+F32 "ThermistorE_GND" I R 5500 9850 30 
+F33 "ThermistorG_GND" I R 5500 10050 30 
+F34 "ThermistorH_GND" I R 5500 10150 30 
+F35 "ThermistorI_GND" I R 5500 10250 30 
+F36 "ThermistorJ_GND" I R 5500 10350 30 
+F37 "ThermistorK_GND" I R 5500 10450 30 
+F38 "ThermistorL_GND" I R 5500 10550 30 
+F39 "ThermistorM_GND" I R 5500 10650 30 
+F40 "ThermistorN_GND" I R 5500 10750 30 
+F41 "ThermistorO_GND" I R 5500 10850 30 
+F42 "ThermistorP_GND" I R 5500 10950 30 
+F43 "ThermistorR_GND" I R 5500 11150 30 
+F44 "ThermistorS_GND" I R 5500 11250 30 
+F45 "ThermistorT_GND" I R 5500 11350 30 
+F46 "ThermistorU_GND" I R 5500 11450 30 
+F47 "ThermistorV_GND" I R 5500 11550 30 
+$EndSheet
+Wire Wire Line
+	5500 9400 5650 9400
+Wire Wire Line
+	5500 9450 5650 9450
+Wire Wire Line
+	5500 9500 5650 9500
+Wire Wire Line
+	5500 9550 5650 9550
+Wire Wire Line
+	5500 9600 5650 9600
+Wire Wire Line
+	5500 9650 5650 9650
+Wire Wire Line
+	5500 9700 5650 9700
+Wire Wire Line
+	5500 9750 5650 9750
+Wire Wire Line
+	5500 9800 5650 9800
+Wire Wire Line
+	5500 9850 5650 9850
+Wire Wire Line
+	5500 9900 5650 9900
+Wire Wire Line
+	5500 9950 5650 9950
+Wire Wire Line
+	5500 10000 5650 10000
+Wire Wire Line
+	5500 10050 5650 10050
+Wire Wire Line
+	5500 10100 5650 10100
+Wire Wire Line
+	5500 10150 5650 10150
+Wire Wire Line
+	5500 10200 5650 10200
+Wire Wire Line
+	5500 10250 5650 10250
+Wire Wire Line
+	5500 10300 5650 10300
+Wire Wire Line
+	5500 10350 5650 10350
+Wire Wire Line
+	5500 10400 5650 10400
+Wire Wire Line
+	5500 10450 5650 10450
+Wire Wire Line
+	5500 10500 5650 10500
+Wire Wire Line
+	5500 10550 5650 10550
+Wire Wire Line
+	5500 10600 5650 10600
+Wire Wire Line
+	5500 10650 5650 10650
+Wire Wire Line
+	5500 10700 5650 10700
+Wire Wire Line
+	5500 10750 5650 10750
+Wire Wire Line
+	5500 10800 5650 10800
+Wire Wire Line
+	5500 10850 5650 10850
+Wire Wire Line
+	5500 10900 5650 10900
+Wire Wire Line
+	5500 10950 5650 10950
+Wire Wire Line
+	5500 11000 5650 11000
+Wire Wire Line
+	5500 11050 5650 11050
+Wire Wire Line
+	5500 11100 5650 11100
+Wire Wire Line
+	5500 11150 5650 11150
+Wire Wire Line
+	5500 11200 5650 11200
+Wire Wire Line
+	5500 11250 5650 11250
+Wire Wire Line
+	5500 11300 5650 11300
+Wire Wire Line
+	5500 11350 5650 11350
+Wire Wire Line
+	5500 11400 5650 11400
+Wire Wire Line
+	5500 11450 5650 11450
+Wire Wire Line
+	5500 11500 5650 11500
+Wire Wire Line
+	5500 11550 5650 11550
+$Sheet
+S 5650 6550 1100 2250
+U 60298533
+F0 "sheet602984EF" 50
+F1 "BatterySegment.sch" 50
+F2 "Segment+" O R 6750 6600 50 
+F3 "Segment-" O R 6750 6700 50 
+F4 "ThermistorA" O L 5650 6600 30 
+F5 "ThermistorB" O L 5650 6700 30 
+F6 "ThermistorC" O L 5650 6800 30 
+F7 "ThermistorD" O L 5650 6900 30 
+F8 "ThermistorE" O L 5650 7000 30 
+F9 "ThermistorF" O L 5650 7100 30 
+F10 "ThermistorG" O L 5650 7200 30 
+F11 "ThermistorH" O L 5650 7300 30 
+F12 "ThermistorI" O L 5650 7400 30 
+F13 "ThermistorJ" O L 5650 7500 30 
+F14 "ThermistorK" O L 5650 7600 30 
+F15 "ThermistorL" O L 5650 7700 30 
+F16 "ThermistorM" O L 5650 7800 30 
+F17 "ThermistorN" O L 5650 7900 30 
+F18 "ThermistorO" O L 5650 8000 30 
+F19 "ThermistorP" O L 5650 8100 30 
+F20 "ThermistorQ" O L 5650 8200 30 
+F21 "ThermistorR" O L 5650 8300 30 
+F22 "ThermistorS" O L 5650 8400 30 
+F23 "ThermistorU" O L 5650 8600 30 
+F24 "ThermistorV" O L 5650 8700 30 
+F25 "ThermistorT" O L 5650 8500 30 
+F26 "ThermistorF_GND" O L 5650 7150 30 
+F27 "ThermistorQ_GND" O L 5650 8250 30 
+F28 "ParallelCells_GND" I R 6750 7050 30 
+F29 "ParallelCells_Row1" I R 6750 7100 30 
+F30 "ParallelCells_Row2" I R 6750 7150 30 
+F31 "ParallelCells_Row3" I R 6750 7200 30 
+F32 "ParallelCells_Row4" I R 6750 7250 30 
+F33 "ParallelCells_Row5" I R 6750 7300 30 
+F34 "ParallelCells_Row6" I R 6750 7350 30 
+F35 "ParallelCells_Row7" I R 6750 7400 30 
+F36 "ParallelCells_Row8" I R 6750 7450 30 
+F37 "ParallelCells_Row9" I R 6750 7500 30 
+F38 "ParallelCells_Row10" I R 6750 7550 30 
+F39 "ParallelCells_Row11" I R 6750 7600 30 
+F40 "ParallelCells_Row12" I R 6750 7650 30 
+F41 "ParallelCells_Row13" I R 6750 7700 30 
+F42 "ParallelCells_Row14" I R 6750 7750 30 
+F43 "ParallelCells_Row15" I R 6750 7800 30 
+F44 "ParallelCells_Row16" I R 6750 7850 30 
+F45 "ParallelCells_Row17" I R 6750 7900 30 
+F46 "ParallelCells_Row18" I R 6750 7950 30 
+F47 "ThermistorA_GND" O L 5650 6650 30 
+F48 "ThermistorG_GND" O L 5650 7250 30 
+F49 "ThermistorL_GND" O L 5650 7750 30 
+F50 "ThermistorR_GND" O L 5650 8350 30 
+F51 "ThermistorB_GND" O L 5650 6750 30 
+F52 "ThermistorC_GND" O L 5650 6850 30 
+F53 "ThermistorD_GND" O L 5650 6950 30 
+F54 "ThermistorE_GND" O L 5650 7050 30 
+F55 "ThermistorH_GND" O L 5650 7350 30 
+F56 "ThermistorI_GND" O L 5650 7450 30 
+F57 "ThermistorJ_GND" O L 5650 7550 30 
+F58 "ThermistorK_GND" O L 5650 7650 30 
+F59 "ThermistorM_GND" O L 5650 7850 30 
+F60 "ThermistorN_GND" O L 5650 7950 30 
+F61 "ThermistorO_GND" O L 5650 8050 30 
+F62 "ThermistorP_GND" O L 5650 8150 30 
+F63 "ThermistorS_GND" O L 5650 8450 30 
+F64 "ThermistorT_GND" O L 5650 8550 30 
+F65 "ThermistorU_GND" O L 5650 8650 30 
+F66 "ThermistorV_GND" O L 5650 8750 30 
+$EndSheet
+$Sheet
+S 4150 6550 1350 2250
+U 60298563
+F0 "sheet602984F0" 50
+F1 "ThermistorPCB.sch" 50
+F2 "ThermistorA" I R 5500 6600 30 
+F3 "ThermistorB" I R 5500 6700 30 
+F4 "ThermistorC" I R 5500 6800 30 
+F5 "ThermistorD" I R 5500 6900 30 
+F6 "ThermistorE" I R 5500 7000 30 
+F7 "ThermistorF" I R 5500 7100 30 
+F8 "ThermistorF_GND" I R 5500 7150 30 
+F9 "ThermistorL" I R 5500 7700 30 
+F10 "ThermistorM" I R 5500 7800 30 
+F11 "ThermistorN" I R 5500 7900 30 
+F12 "ThermistorO" I R 5500 8000 30 
+F13 "ThermistorP" I R 5500 8100 30 
+F14 "ThermistorQ" I R 5500 8200 30 
+F15 "ThermistorQ_GND" I R 5500 8250 30 
+F16 "ThermistorG" I R 5500 7200 30 
+F17 "ThermistorH" I R 5500 7300 30 
+F18 "ThermistorI" I R 5500 7400 30 
+F19 "ThermistorJ" I R 5500 7500 30 
+F20 "ThermistorK" I R 5500 7600 30 
+F21 "ThermistorR" I R 5500 8300 30 
+F22 "ThermistorT" I R 5500 8500 30 
+F23 "ThermistorU" I R 5500 8600 30 
+F24 "ThermistorV" I R 5500 8700 30 
+F25 "ThermistorS" I R 5500 8400 30 
+F26 "Thermistors_NonCritical" O L 4150 6600 50 
+F27 "Thermistors_Critical" O L 4150 6700 50 
+F28 "ThermistorA_GND" I R 5500 6650 30 
+F29 "ThermistorB_GND" I R 5500 6750 30 
+F30 "ThermistorC_GND" I R 5500 6850 30 
+F31 "ThermistorD_GND" I R 5500 6950 30 
+F32 "ThermistorE_GND" I R 5500 7050 30 
+F33 "ThermistorG_GND" I R 5500 7250 30 
+F34 "ThermistorH_GND" I R 5500 7350 30 
+F35 "ThermistorI_GND" I R 5500 7450 30 
+F36 "ThermistorJ_GND" I R 5500 7550 30 
+F37 "ThermistorK_GND" I R 5500 7650 30 
+F38 "ThermistorL_GND" I R 5500 7750 30 
+F39 "ThermistorM_GND" I R 5500 7850 30 
+F40 "ThermistorN_GND" I R 5500 7950 30 
+F41 "ThermistorO_GND" I R 5500 8050 30 
+F42 "ThermistorP_GND" I R 5500 8150 30 
+F43 "ThermistorR_GND" I R 5500 8350 30 
+F44 "ThermistorS_GND" I R 5500 8450 30 
+F45 "ThermistorT_GND" I R 5500 8550 30 
+F46 "ThermistorU_GND" I R 5500 8650 30 
+F47 "ThermistorV_GND" I R 5500 8750 30 
+$EndSheet
+Wire Wire Line
+	5500 6600 5650 6600
+Wire Wire Line
+	5500 6650 5650 6650
+Wire Wire Line
+	5500 6700 5650 6700
+Wire Wire Line
+	5500 6750 5650 6750
+Wire Wire Line
+	5500 6800 5650 6800
+Wire Wire Line
+	5500 6850 5650 6850
+Wire Wire Line
+	5500 6900 5650 6900
+Wire Wire Line
+	5500 6950 5650 6950
+Wire Wire Line
+	5500 7000 5650 7000
+Wire Wire Line
+	5500 7050 5650 7050
+Wire Wire Line
+	5500 7100 5650 7100
+Wire Wire Line
+	5500 7150 5650 7150
+Wire Wire Line
+	5500 7200 5650 7200
+Wire Wire Line
+	5500 7250 5650 7250
+Wire Wire Line
+	5500 7300 5650 7300
+Wire Wire Line
+	5500 7350 5650 7350
+Wire Wire Line
+	5500 7400 5650 7400
+Wire Wire Line
+	5500 7450 5650 7450
+Wire Wire Line
+	5500 7500 5650 7500
+Wire Wire Line
+	5500 7550 5650 7550
+Wire Wire Line
+	5500 7600 5650 7600
+Wire Wire Line
+	5500 7650 5650 7650
+Wire Wire Line
+	5500 7700 5650 7700
+Wire Wire Line
+	5500 7750 5650 7750
+Wire Wire Line
+	5500 7800 5650 7800
+Wire Wire Line
+	5500 7850 5650 7850
+Wire Wire Line
+	5500 7900 5650 7900
+Wire Wire Line
+	5500 7950 5650 7950
+Wire Wire Line
+	5500 8000 5650 8000
+Wire Wire Line
+	5500 8050 5650 8050
+Wire Wire Line
+	5500 8100 5650 8100
+Wire Wire Line
+	5500 8150 5650 8150
+Wire Wire Line
+	5600 8300 5750 8300
+Wire Wire Line
+	5600 8350 5750 8350
+Wire Wire Line
+	5600 8400 5750 8400
+Wire Wire Line
+	5600 8450 5750 8450
+Wire Wire Line
+	5600 8500 5750 8500
+Wire Wire Line
+	5600 8550 5750 8550
+Wire Wire Line
+	5600 8600 5750 8600
+Wire Wire Line
+	5600 8650 5750 8650
+Wire Wire Line
+	5600 8700 5750 8700
+Wire Wire Line
+	5600 8750 5750 8750
+Wire Wire Line
+	5600 8800 5750 8800
+Wire Wire Line
+	5600 8850 5750 8850
+$Sheet
+S 5650 3650 1100 2250
+U 602D10BE
+F0 "sheet602D107A" 50
+F1 "BatterySegment.sch" 50
+F2 "Segment+" O R 6750 3700 50 
+F3 "Segment-" O R 6750 3800 50 
+F4 "ThermistorA" O L 5650 3700 30 
+F5 "ThermistorB" O L 5650 3800 30 
+F6 "ThermistorC" O L 5650 3900 30 
+F7 "ThermistorD" O L 5650 4000 30 
+F8 "ThermistorE" O L 5650 4100 30 
+F9 "ThermistorF" O L 5650 4200 30 
+F10 "ThermistorG" O L 5650 4300 30 
+F11 "ThermistorH" O L 5650 4400 30 
+F12 "ThermistorI" O L 5650 4500 30 
+F13 "ThermistorJ" O L 5650 4600 30 
+F14 "ThermistorK" O L 5650 4700 30 
+F15 "ThermistorL" O L 5650 4800 30 
+F16 "ThermistorM" O L 5650 4900 30 
+F17 "ThermistorN" O L 5650 5000 30 
+F18 "ThermistorO" O L 5650 5100 30 
+F19 "ThermistorP" O L 5650 5200 30 
+F20 "ThermistorQ" O L 5650 5300 30 
+F21 "ThermistorR" O L 5650 5400 30 
+F22 "ThermistorS" O L 5650 5500 30 
+F23 "ThermistorU" O L 5650 5700 30 
+F24 "ThermistorV" O L 5650 5800 30 
+F25 "ThermistorT" O L 5650 5600 30 
+F26 "ThermistorF_GND" O L 5650 4250 30 
+F27 "ThermistorQ_GND" O L 5650 5350 30 
+F28 "ParallelCells_GND" I R 6750 4150 30 
+F29 "ParallelCells_Row1" I R 6750 4200 30 
+F30 "ParallelCells_Row2" I R 6750 4250 30 
+F31 "ParallelCells_Row3" I R 6750 4300 30 
+F32 "ParallelCells_Row4" I R 6750 4350 30 
+F33 "ParallelCells_Row5" I R 6750 4400 30 
+F34 "ParallelCells_Row6" I R 6750 4450 30 
+F35 "ParallelCells_Row7" I R 6750 4500 30 
+F36 "ParallelCells_Row8" I R 6750 4550 30 
+F37 "ParallelCells_Row9" I R 6750 4600 30 
+F38 "ParallelCells_Row10" I R 6750 4650 30 
+F39 "ParallelCells_Row11" I R 6750 4700 30 
+F40 "ParallelCells_Row12" I R 6750 4750 30 
+F41 "ParallelCells_Row13" I R 6750 4800 30 
+F42 "ParallelCells_Row14" I R 6750 4850 30 
+F43 "ParallelCells_Row15" I R 6750 4900 30 
+F44 "ParallelCells_Row16" I R 6750 4950 30 
+F45 "ParallelCells_Row17" I R 6750 5000 30 
+F46 "ParallelCells_Row18" I R 6750 5050 30 
+F47 "ThermistorA_GND" O L 5650 3750 30 
+F48 "ThermistorG_GND" O L 5650 4350 30 
+F49 "ThermistorL_GND" O L 5650 4850 30 
+F50 "ThermistorR_GND" O L 5650 5450 30 
+F51 "ThermistorB_GND" O L 5650 3850 30 
+F52 "ThermistorC_GND" O L 5650 3950 30 
+F53 "ThermistorD_GND" O L 5650 4050 30 
+F54 "ThermistorE_GND" O L 5650 4150 30 
+F55 "ThermistorH_GND" O L 5650 4450 30 
+F56 "ThermistorI_GND" O L 5650 4550 30 
+F57 "ThermistorJ_GND" O L 5650 4650 30 
+F58 "ThermistorK_GND" O L 5650 4750 30 
+F59 "ThermistorM_GND" O L 5650 4950 30 
+F60 "ThermistorN_GND" O L 5650 5050 30 
+F61 "ThermistorO_GND" O L 5650 5150 30 
+F62 "ThermistorP_GND" O L 5650 5250 30 
+F63 "ThermistorS_GND" O L 5650 5550 30 
+F64 "ThermistorT_GND" O L 5650 5650 30 
+F65 "ThermistorU_GND" O L 5650 5750 30 
+F66 "ThermistorV_GND" O L 5650 5850 30 
+$EndSheet
+$Sheet
+S 4150 3650 1350 2250
+U 602D10EE
+F0 "sheet602D107B" 50
+F1 "ThermistorPCB.sch" 50
+F2 "ThermistorA" I R 5500 3700 30 
+F3 "ThermistorB" I R 5500 3800 30 
+F4 "ThermistorC" I R 5500 3900 30 
+F5 "ThermistorD" I R 5500 4000 30 
+F6 "ThermistorE" I R 5500 4100 30 
+F7 "ThermistorF" I R 5500 4200 30 
+F8 "ThermistorF_GND" I R 5500 4250 30 
+F9 "ThermistorL" I R 5500 4800 30 
+F10 "ThermistorM" I R 5500 4900 30 
+F11 "ThermistorN" I R 5500 5000 30 
+F12 "ThermistorO" I R 5500 5100 30 
+F13 "ThermistorP" I R 5500 5200 30 
+F14 "ThermistorQ" I R 5500 5300 30 
+F15 "ThermistorQ_GND" I R 5500 5350 30 
+F16 "ThermistorG" I R 5500 4300 30 
+F17 "ThermistorH" I R 5500 4400 30 
+F18 "ThermistorI" I R 5500 4500 30 
+F19 "ThermistorJ" I R 5500 4600 30 
+F20 "ThermistorK" I R 5500 4700 30 
+F21 "ThermistorR" I R 5500 5400 30 
+F22 "ThermistorT" I R 5500 5600 30 
+F23 "ThermistorU" I R 5500 5700 30 
+F24 "ThermistorV" I R 5500 5800 30 
+F25 "ThermistorS" I R 5500 5500 30 
+F26 "Thermistors_NonCritical" O L 4150 3700 50 
+F27 "Thermistors_Critical" O L 4150 3800 50 
+F28 "ThermistorA_GND" I R 5500 3750 30 
+F29 "ThermistorB_GND" I R 5500 3850 30 
+F30 "ThermistorC_GND" I R 5500 3950 30 
+F31 "ThermistorD_GND" I R 5500 4050 30 
+F32 "ThermistorE_GND" I R 5500 4150 30 
+F33 "ThermistorG_GND" I R 5500 4350 30 
+F34 "ThermistorH_GND" I R 5500 4450 30 
+F35 "ThermistorI_GND" I R 5500 4550 30 
+F36 "ThermistorJ_GND" I R 5500 4650 30 
+F37 "ThermistorK_GND" I R 5500 4750 30 
+F38 "ThermistorL_GND" I R 5500 4850 30 
+F39 "ThermistorM_GND" I R 5500 4950 30 
+F40 "ThermistorN_GND" I R 5500 5050 30 
+F41 "ThermistorO_GND" I R 5500 5150 30 
+F42 "ThermistorP_GND" I R 5500 5250 30 
+F43 "ThermistorR_GND" I R 5500 5450 30 
+F44 "ThermistorS_GND" I R 5500 5550 30 
+F45 "ThermistorT_GND" I R 5500 5650 30 
+F46 "ThermistorU_GND" I R 5500 5750 30 
+F47 "ThermistorV_GND" I R 5500 5850 30 
+$EndSheet
+Wire Wire Line
+	5500 3700 5650 3700
+Wire Wire Line
+	5500 3750 5650 3750
+Wire Wire Line
+	5500 3800 5650 3800
+Wire Wire Line
+	5500 3850 5650 3850
+Wire Wire Line
+	5500 3900 5650 3900
+Wire Wire Line
+	5500 3950 5650 3950
+Wire Wire Line
+	5500 4000 5650 4000
+Wire Wire Line
+	5500 4050 5650 4050
+Wire Wire Line
+	5500 4100 5650 4100
+Wire Wire Line
+	5500 4150 5650 4150
+Wire Wire Line
+	5500 4200 5650 4200
+Wire Wire Line
+	5500 4250 5650 4250
+Wire Wire Line
+	5500 4300 5650 4300
+Wire Wire Line
+	5500 4350 5650 4350
+Wire Wire Line
+	5500 4400 5650 4400
+Wire Wire Line
+	5500 4450 5650 4450
+Wire Wire Line
+	5500 4500 5650 4500
+Wire Wire Line
+	5500 4550 5650 4550
+Wire Wire Line
+	5500 4600 5650 4600
+Wire Wire Line
+	5500 4650 5650 4650
+Wire Wire Line
+	5500 4700 5650 4700
+Wire Wire Line
+	5500 4750 5650 4750
+Wire Wire Line
+	5500 4800 5650 4800
+Wire Wire Line
+	5500 4850 5650 4850
+Wire Wire Line
+	5500 4900 5650 4900
+Wire Wire Line
+	5500 4950 5650 4950
+Wire Wire Line
+	5500 5000 5650 5000
+Wire Wire Line
+	5500 5050 5650 5050
+Wire Wire Line
+	5500 5100 5650 5100
+Wire Wire Line
+	5500 5150 5650 5150
+Wire Wire Line
+	5500 5200 5650 5200
+Wire Wire Line
+	5500 5250 5650 5250
+Wire Wire Line
+	5500 5300 5650 5300
+Wire Wire Line
+	5500 5350 5650 5350
+Wire Wire Line
+	5500 5400 5650 5400
+Wire Wire Line
+	5500 5450 5650 5450
+Wire Wire Line
+	5500 5500 5650 5500
+Wire Wire Line
+	5500 5550 5650 5550
+Wire Wire Line
+	5500 5600 5650 5600
+Wire Wire Line
+	5500 5650 5650 5650
+Wire Wire Line
+	5500 5700 5650 5700
+Wire Wire Line
+	5500 5750 5650 5750
+Wire Wire Line
+	5500 5800 5650 5800
+Wire Wire Line
+	5500 5850 5650 5850
+$Sheet
+S 5650 750  1100 2250
+U 6031BDC8
+F0 "sheet6031BD84" 50
+F1 "BatterySegment.sch" 50
+F2 "Segment+" O R 6750 800 50 
+F3 "Segment-" O R 6750 900 50 
+F4 "ThermistorA" O L 5650 800 30 
+F5 "ThermistorB" O L 5650 900 30 
+F6 "ThermistorC" O L 5650 1000 30 
+F7 "ThermistorD" O L 5650 1100 30 
+F8 "ThermistorE" O L 5650 1200 30 
+F9 "ThermistorF" O L 5650 1300 30 
+F10 "ThermistorG" O L 5650 1400 30 
+F11 "ThermistorH" O L 5650 1500 30 
+F12 "ThermistorI" O L 5650 1600 30 
+F13 "ThermistorJ" O L 5650 1700 30 
+F14 "ThermistorK" O L 5650 1800 30 
+F15 "ThermistorL" O L 5650 1900 30 
+F16 "ThermistorM" O L 5650 2000 30 
+F17 "ThermistorN" O L 5650 2100 30 
+F18 "ThermistorO" O L 5650 2200 30 
+F19 "ThermistorP" O L 5650 2300 30 
+F20 "ThermistorQ" O L 5650 2400 30 
+F21 "ThermistorR" O L 5650 2500 30 
+F22 "ThermistorS" O L 5650 2600 30 
+F23 "ThermistorU" O L 5650 2800 30 
+F24 "ThermistorV" O L 5650 2900 30 
+F25 "ThermistorT" O L 5650 2700 30 
+F26 "ThermistorF_GND" O L 5650 1350 30 
+F27 "ThermistorQ_GND" O L 5650 2450 30 
+F28 "ParallelCells_GND" I R 6750 1250 30 
+F29 "ParallelCells_Row1" I R 6750 1300 30 
+F30 "ParallelCells_Row2" I R 6750 1350 30 
+F31 "ParallelCells_Row3" I R 6750 1400 30 
+F32 "ParallelCells_Row4" I R 6750 1450 30 
+F33 "ParallelCells_Row5" I R 6750 1500 30 
+F34 "ParallelCells_Row6" I R 6750 1550 30 
+F35 "ParallelCells_Row7" I R 6750 1600 30 
+F36 "ParallelCells_Row8" I R 6750 1650 30 
+F37 "ParallelCells_Row9" I R 6750 1700 30 
+F38 "ParallelCells_Row10" I R 6750 1750 30 
+F39 "ParallelCells_Row11" I R 6750 1800 30 
+F40 "ParallelCells_Row12" I R 6750 1850 30 
+F41 "ParallelCells_Row13" I R 6750 1900 30 
+F42 "ParallelCells_Row14" I R 6750 1950 30 
+F43 "ParallelCells_Row15" I R 6750 2000 30 
+F44 "ParallelCells_Row16" I R 6750 2050 30 
+F45 "ParallelCells_Row17" I R 6750 2100 30 
+F46 "ParallelCells_Row18" I R 6750 2150 30 
+F47 "ThermistorA_GND" O L 5650 850 30 
+F48 "ThermistorG_GND" O L 5650 1450 30 
+F49 "ThermistorL_GND" O L 5650 1950 30 
+F50 "ThermistorR_GND" O L 5650 2550 30 
+F51 "ThermistorB_GND" O L 5650 950 30 
+F52 "ThermistorC_GND" O L 5650 1050 30 
+F53 "ThermistorD_GND" O L 5650 1150 30 
+F54 "ThermistorE_GND" O L 5650 1250 30 
+F55 "ThermistorH_GND" O L 5650 1550 30 
+F56 "ThermistorI_GND" O L 5650 1650 30 
+F57 "ThermistorJ_GND" O L 5650 1750 30 
+F58 "ThermistorK_GND" O L 5650 1850 30 
+F59 "ThermistorM_GND" O L 5650 2050 30 
+F60 "ThermistorN_GND" O L 5650 2150 30 
+F61 "ThermistorO_GND" O L 5650 2250 30 
+F62 "ThermistorP_GND" O L 5650 2350 30 
+F63 "ThermistorS_GND" O L 5650 2650 30 
+F64 "ThermistorT_GND" O L 5650 2750 30 
+F65 "ThermistorU_GND" O L 5650 2850 30 
+F66 "ThermistorV_GND" O L 5650 2950 30 
+$EndSheet
+$Sheet
+S 4150 750  1350 2250
+U 6031BDF8
+F0 "sheet6031BD85" 50
+F1 "ThermistorPCB.sch" 50
+F2 "ThermistorA" I R 5500 800 30 
+F3 "ThermistorB" I R 5500 900 30 
+F4 "ThermistorC" I R 5500 1000 30 
+F5 "ThermistorD" I R 5500 1100 30 
+F6 "ThermistorE" I R 5500 1200 30 
+F7 "ThermistorF" I R 5500 1300 30 
+F8 "ThermistorF_GND" I R 5500 1350 30 
+F9 "ThermistorL" I R 5500 1900 30 
+F10 "ThermistorM" I R 5500 2000 30 
+F11 "ThermistorN" I R 5500 2100 30 
+F12 "ThermistorO" I R 5500 2200 30 
+F13 "ThermistorP" I R 5500 2300 30 
+F14 "ThermistorQ" I R 5500 2400 30 
+F15 "ThermistorQ_GND" I R 5500 2450 30 
+F16 "ThermistorG" I R 5500 1400 30 
+F17 "ThermistorH" I R 5500 1500 30 
+F18 "ThermistorI" I R 5500 1600 30 
+F19 "ThermistorJ" I R 5500 1700 30 
+F20 "ThermistorK" I R 5500 1800 30 
+F21 "ThermistorR" I R 5500 2500 30 
+F22 "ThermistorT" I R 5500 2700 30 
+F23 "ThermistorU" I R 5500 2800 30 
+F24 "ThermistorV" I R 5500 2900 30 
+F25 "ThermistorS" I R 5500 2600 30 
+F26 "Thermistors_NonCritical" O L 4150 800 50 
+F27 "Thermistors_Critical" O L 4150 900 50 
+F28 "ThermistorA_GND" I R 5500 850 30 
+F29 "ThermistorB_GND" I R 5500 950 30 
+F30 "ThermistorC_GND" I R 5500 1050 30 
+F31 "ThermistorD_GND" I R 5500 1150 30 
+F32 "ThermistorE_GND" I R 5500 1250 30 
+F33 "ThermistorG_GND" I R 5500 1450 30 
+F34 "ThermistorH_GND" I R 5500 1550 30 
+F35 "ThermistorI_GND" I R 5500 1650 30 
+F36 "ThermistorJ_GND" I R 5500 1750 30 
+F37 "ThermistorK_GND" I R 5500 1850 30 
+F38 "ThermistorL_GND" I R 5500 1950 30 
+F39 "ThermistorM_GND" I R 5500 2050 30 
+F40 "ThermistorN_GND" I R 5500 2150 30 
+F41 "ThermistorO_GND" I R 5500 2250 30 
+F42 "ThermistorP_GND" I R 5500 2350 30 
+F43 "ThermistorR_GND" I R 5500 2550 30 
+F44 "ThermistorS_GND" I R 5500 2650 30 
+F45 "ThermistorT_GND" I R 5500 2750 30 
+F46 "ThermistorU_GND" I R 5500 2850 30 
+F47 "ThermistorV_GND" I R 5500 2950 30 
+$EndSheet
+Wire Wire Line
+	5500 800  5650 800 
+Wire Wire Line
+	5500 850  5650 850 
+Wire Wire Line
+	5500 900  5650 900 
+Wire Wire Line
+	5500 950  5650 950 
+Wire Wire Line
+	5500 1000 5650 1000
+Wire Wire Line
+	5500 1050 5650 1050
+Wire Wire Line
+	5500 1100 5650 1100
+Wire Wire Line
+	5500 1150 5650 1150
+Wire Wire Line
+	5500 1200 5650 1200
+Wire Wire Line
+	5500 1250 5650 1250
+Wire Wire Line
+	5500 1300 5650 1300
+Wire Wire Line
+	5500 1350 5650 1350
+Wire Wire Line
+	5500 1400 5650 1400
+Wire Wire Line
+	5500 1450 5650 1450
+Wire Wire Line
+	5500 1500 5650 1500
+Wire Wire Line
+	5500 1550 5650 1550
+Wire Wire Line
+	5500 1600 5650 1600
+Wire Wire Line
+	5500 1650 5650 1650
+Wire Wire Line
+	5500 1700 5650 1700
+Wire Wire Line
+	5500 1750 5650 1750
+Wire Wire Line
+	5500 1800 5650 1800
+Wire Wire Line
+	5500 1850 5650 1850
+Wire Wire Line
+	5500 1900 5650 1900
+Wire Wire Line
+	5500 1950 5650 1950
+Wire Wire Line
+	5500 2000 5650 2000
+Wire Wire Line
+	5500 2050 5650 2050
+Wire Wire Line
+	5500 2100 5650 2100
+Wire Wire Line
+	5500 2150 5650 2150
+Wire Wire Line
+	5500 2200 5650 2200
+Wire Wire Line
+	5500 2250 5650 2250
+Wire Wire Line
+	5500 2300 5650 2300
+Wire Wire Line
+	5500 2350 5650 2350
+Wire Wire Line
+	5500 2400 5650 2400
+Wire Wire Line
+	5500 2450 5650 2450
+Wire Wire Line
+	5500 2500 5650 2500
+Wire Wire Line
+	5500 2550 5650 2550
+Wire Wire Line
+	5500 2600 5650 2600
+Wire Wire Line
+	5500 2650 5650 2650
+Wire Wire Line
+	5500 2700 5650 2700
+Wire Wire Line
+	5500 2750 5650 2750
+Wire Wire Line
+	5500 2800 5650 2800
+Wire Wire Line
+	5500 2850 5650 2850
+Wire Wire Line
+	5500 2900 5650 2900
+Wire Wire Line
+	5500 2950 5650 2950
 Wire Bus Line
 	9700 10750 9700 11350
 Wire Bus Line
@@ -1825,19 +2039,11 @@ Wire Bus Line
 Wire Bus Line
 	10000 4150 10000 11050
 Wire Bus Line
-	4250 12150 10900 12150
-Wire Bus Line
-	4150 12250 4150 13200
+	4450 12750 4450 13700
 Wire Bus Line
 	17650 6900 19650 6900
 Wire Bus Line
-	4000 9400 4000 14200
+	6300 15250 6300 16050
 Wire Bus Line
-	6000 14750 6000 15550
-Wire Bus Line
-	6100 13700 6100 15600
-Wire Bus Line
-	3950 7200 3950 15250
-Text Notes 10700 12400 0    50   ~ 0
-All leave the accumulator container via cord grips
+	6400 14200 6400 16100
 $EndSCHEMATC
