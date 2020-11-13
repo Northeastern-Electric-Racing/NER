@@ -1,12 +1,12 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr B 17000 11000
+$Descr C 22000 17000
 encoding utf-8
 Sheet 4 22
 Title "Accumulator Container"
-Date "2020-11-03"
-Rev "4"
+Date "2020-11-12"
+Rev "6"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -16,1618 +16,2110 @@ $EndDescr
 $Comp
 L Relay:MSxx-1Bxx-75 K11
 U 1 1 5E637554
-P 10050 6800
-F 0 "K11" V 9483 6800 50  0000 C CNN
-F 1 "SPST-NC (Discharge)" V 9574 6800 50  0000 C CNN
-F 2 "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB" H 10400 6750 50  0001 L CNN
-F 3 "https://standexelectronics.com/de/produkte/ms-reed-relais/" H 10050 6800 50  0001 C CNN
-	1    10050 6800
+P 14500 10450
+F 0 "K11" V 13933 10450 50  0000 C CNN
+F 1 "SPST-NC (Discharge)" V 14024 10450 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB" H 14850 10400 50  0001 L CNN
+F 3 "https://standexelectronics.com/de/produkte/ms-reed-relais/" H 14500 10450 50  0001 C CNN
+	1    14500 10450
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:Fuse F5
 U 1 1 5E640862
-P 6650 1250
-F 0 "F5" V 6453 1250 50  0000 C CNN
-F 1 "Fuse" V 6544 1250 50  0000 C CNN
-F 2 "" V 6580 1250 50  0001 C CNN
-F 3 "~" H 6650 1250 50  0001 C CNN
-	1    6650 1250
-	0    1    1    0   
-$EndComp
-$Comp
-L Relay:DIPxx-1Axx-11x K9
-U 1 1 5EBDE2B9
-P 9200 7750
-F 0 "K9" V 8633 7750 50  0000 C CNN
-F 1 "SPST-NO (AIR)" V 8724 7750 50  0000 C CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 9550 7700 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 9200 7750 50  0001 C CNN
-	1    9200 7750
+P 9000 5050
+F 0 "F5" V 8803 5050 50  0000 C CNN
+F 1 "Fuse" V 8894 5050 50  0000 C CNN
+F 2 "" V 8930 5050 50  0001 C CNN
+F 3 "~" H 9000 5050 50  0001 C CNN
+	1    9000 5050
 	0    1    1    0   
 $EndComp
 $Comp
 L Relay:DIPxx-1Axx-11x K8
 U 1 1 5EBE5BCF
-P 9200 5800
-F 0 "K8" V 8633 5800 50  0000 C CNN
-F 1 "SPST-NO (AIR)" V 8724 5800 50  0000 C CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 9550 5750 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 9200 5800 50  0001 C CNN
-	1    9200 5800
+P 13450 7700
+F 0 "K8" V 12883 7700 50  0000 C CNN
+F 1 "SPST-NO (AIR)" V 12974 7700 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 13800 7650 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 13450 7700 50  0001 C CNN
+	1    13450 7700
 	0    1    1    0   
 $EndComp
 $Comp
 L Relay:DIPxx-1Axx-11x K7
 U 1 1 5EBEB71B
-P 9200 4800
-F 0 "K7" V 8633 4800 50  0000 C CNN
-F 1 "SPST-NO (Precharge)" V 8724 4800 50  0000 C CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 9550 4750 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 9200 4800 50  0001 C CNN
-	1    9200 4800
+P 13450 6700
+F 0 "K7" V 12883 6700 50  0000 C CNN
+F 1 "SPST-NO (Precharge)" V 12974 6700 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 13800 6650 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 13450 6700 50  0001 C CNN
+	1    13450 6700
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	9500 7950 9700 7950
-Connection ~ 9700 7950
+	12300 7900 13150 7900
 Wire Wire Line
-	8050 6000 8900 6000
+	13150 6500 12850 6500
 Wire Wire Line
-	8900 4600 8600 4600
+	12850 6500 12850 7500
 Wire Wire Line
-	8600 4600 8600 5600
+	13150 7500 12850 7500
+Connection ~ 12850 7500
 Wire Wire Line
-	8900 7550 8600 7550
+	14200 10250 12850 10250
 Wire Wire Line
-	8900 5600 8600 5600
-Connection ~ 8600 5600
-Wire Wire Line
-	8600 5600 8600 6600
-Wire Wire Line
-	9750 6600 8600 6600
-Connection ~ 8600 6600
-Wire Wire Line
-	8600 6600 8600 7550
-Wire Wire Line
-	9500 4600 9600 4600
-Wire Wire Line
-	9700 7000 9750 7000
+	13750 6500 13850 6500
 $Comp
 L Device:R R3
 U 1 1 5F158D54
-P 11700 6400
-F 0 "R3" H 11500 6450 50  0000 L CNN
-F 1 "3.3k" H 11450 6350 50  0000 L CNN
-F 2 "" V 11630 6400 50  0001 C CNN
-F 3 "~" H 11700 6400 50  0001 C CNN
-	1    11700 6400
+P 15950 9250
+F 0 "R3" H 15750 9300 50  0000 L CNN
+F 1 "3.3k" H 15700 9200 50  0000 L CNN
+F 2 "" V 15880 9250 50  0001 C CNN
+F 3 "~" H 15950 9250 50  0001 C CNN
+	1    15950 9250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R2
 U 1 1 5F159E72
-P 11700 5600
-F 0 "R2" H 11500 5650 50  0000 L CNN
-F 1 "600" H 11450 5550 50  0000 L CNN
-F 2 "" V 11630 5600 50  0001 C CNN
-F 3 "~" H 11700 5600 50  0001 C CNN
-	1    11700 5600
+P 15950 7500
+F 0 "R2" H 15750 7550 50  0000 L CNN
+F 1 "600" H 15700 7450 50  0000 L CNN
+F 2 "" V 15880 7500 50  0001 C CNN
+F 3 "~" H 15950 7500 50  0001 C CNN
+	1    15950 7500
 	1    0    0    -1  
 $EndComp
-Text Label 4050 7950 0    50   ~ 0
+Text Label 5650 13850 0    50   ~ 0
 1_2
-Text Label 4050 7850 0    50   ~ 0
+Text Label 5650 13750 0    50   ~ 0
 2_2
-Text Label 4050 7700 0    50   ~ 0
+Text Label 5650 13050 0    50   ~ 0
 3_2
-Text Label 4050 5650 0    50   ~ 0
+Text Label 5650 10850 0    50   ~ 0
 4_2
-Text Label 4050 5500 0    50   ~ 0
+Text Label 5650 10000 0    50   ~ 0
 5_2
-Text Label 4050 3300 0    50   ~ 0
+Text Label 5650 7100 0    50   ~ 0
 7_2
-Text Label 4050 1250 0    50   ~ 0
+Text Label 6450 5050 0    50   ~ 0
 8_2
-Text Label 6900 1250 0    50   ~ 0
+Text Label 9250 5050 0    50   ~ 0
 9_2
-Text Label 9950 6000 0    50   ~ 0
+Text Label 14200 7900 0    50   ~ 0
 10_2
-Text Label 10650 5000 0    50   ~ 0
+Text Label 14900 6900 0    50   ~ 0
 11_2
-Text Label 10250 7950 0    50   ~ 0
-12_2
-Text Label 8600 4050 0    50   ~ 0
+Text Label 12850 4350 0    50   ~ 0
 25_20
-Text Label 11200 4100 0    50   ~ 0
+Text Label 15450 4400 0    50   ~ 0
 26_20
-Text Label 10550 7000 0    50   ~ 0
+Text Label 15000 10650 0    50   ~ 0
 13_2
-Text Label 9600 3950 2    50   ~ 0
+Text Label 13850 4250 2    50   ~ 0
 27_20
-Text Label 10150 5400 0    50   ~ 0
+Text Label 14400 7300 0    50   ~ 0
 28_20
 $Comp
 L Device:R R4
 U 1 1 5F2AF3BD
-P 12200 5600
-F 0 "R4" H 12270 5646 50  0000 L CNN
-F 1 "10k" H 12270 5555 50  0000 L CNN
-F 2 "" V 12130 5600 50  0001 C CNN
-F 3 "~" H 12200 5600 50  0001 C CNN
-	1    12200 5600
+P 16450 7500
+F 0 "R4" H 16520 7546 50  0000 L CNN
+F 1 "10k" H 16520 7455 50  0000 L CNN
+F 2 "" V 16380 7500 50  0001 C CNN
+F 3 "~" H 16450 7500 50  0001 C CNN
+	1    16450 7500
 	-1   0    0    -1  
 $EndComp
-Connection ~ 8600 4600
 Wire Wire Line
-	10500 900  10150 900 
+	14750 1200 14400 1200
 Wire Wire Line
-	10150 900  10150 1050
+	14400 1200 14400 1350
 $Comp
 L Device:R R5
 U 1 1 5F39A796
-P 12300 5600
-F 0 "R5" H 12370 5646 50  0000 L CNN
-F 1 "10k" H 12370 5555 50  0000 L CNN
-F 2 "" V 12230 5600 50  0001 C CNN
-F 3 "~" H 12300 5600 50  0001 C CNN
-	1    12300 5600
+P 16550 7500
+F 0 "R5" H 16620 7546 50  0000 L CNN
+F 1 "10k" H 16620 7455 50  0000 L CNN
+F 2 "" V 16480 7500 50  0001 C CNN
+F 3 "~" H 16550 7500 50  0001 C CNN
+	1    16550 7500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Fuse F9
 U 1 1 5F14BDC4
-P 13050 5600
-F 0 "F9" H 12991 5554 50  0000 R CNN
-F 1 "Fuse" H 12991 5645 50  0000 R CNN
-F 2 "" V 12980 5600 50  0001 C CNN
-F 3 "~" H 13050 5600 50  0001 C CNN
-	1    13050 5600
+P 17300 7500
+F 0 "F9" H 17241 7454 50  0000 R CNN
+F 1 "Fuse" H 17241 7545 50  0000 R CNN
+F 2 "" V 17230 7500 50  0001 C CNN
+F 3 "~" H 17300 7500 50  0001 C CNN
+	1    17300 7500
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	13050 5750 13050 6000
-Text Label 12850 3300 0    50   ~ 0
+	17300 7650 17300 7900
+Text Label 17100 5200 0    50   ~ 0
 29_20
-Text Label 12950 3400 0    50   ~ 0
+Text Label 17200 5300 0    50   ~ 0
 30_20
-Text Label 13150 3600 0    50   ~ 0
+Text Label 17400 5500 0    50   ~ 0
 31_20
-Text Label 13300 3500 2    50   ~ 0
+Text Label 17550 5400 2    50   ~ 0
 32_20
-Text Label 4050 3450 0    50   ~ 0
+Text Label 5650 7950 0    50   ~ 0
 6_2
-Text HLabel 10500 900  2    50   Input ~ 0
+Text HLabel 14750 1200 2    50   Input ~ 0
 MotorController_AIR_Control+
-Text HLabel 9550 700  0    50   Input ~ 0
+Text HLabel 13800 1000 0    50   Input ~ 0
 Shutdown+
-Text HLabel 9550 600  0    50   Input ~ 0
+Text HLabel 13800 900  0    50   Input ~ 0
 Shutdown-
 Wire Wire Line
-	9950 600  9550 600 
-Text HLabel 15400 6000 2    50   Output ~ 0
+	14200 900  13800 900 
+Text HLabel 19650 7900 2    50   Output ~ 0
 TS+
-Text HLabel 15400 6100 2    50   Output ~ 0
+Text HLabel 19650 8000 2    50   Output ~ 0
 TS-
-Text HLabel 14200 3500 2    50   Output ~ 0
+Text HLabel 18450 5400 2    50   Output ~ 0
 IMD_HV_SENSE-
-Text HLabel 14200 3600 2    50   Output ~ 0
+Text HLabel 18450 5500 2    50   Output ~ 0
 IMD_HV_SENSE+
-Text HLabel 14200 3400 2    50   Output ~ 0
+Text HLabel 18450 5300 2    50   Output ~ 0
 TSMP-
-Text HLabel 14200 3300 2    50   Output ~ 0
+Text HLabel 18450 5200 2    50   Output ~ 0
 TSMP+
 Wire Wire Line
-	12200 6000 12200 5750
+	16450 7900 16450 7650
 Wire Wire Line
-	15400 6000 15050 6000
+	19650 7900 19300 7900
 Wire Wire Line
-	15050 6100 15400 6100
-Text HLabel 7150 10100 2    50   Output ~ 0
-Segment1_Thermistors
-Text HLabel 7150 10200 2    50   Output ~ 0
-Segment2_Thermistors
-Text HLabel 7150 10300 2    50   Output ~ 0
-Segment3_Thermistors
-Text HLabel 7150 10400 2    50   Output ~ 0
-Segment4_Thermistors
-Text HLabel 7150 9800 2    50   Output ~ 0
+	19300 8000 19650 8000
+Text HLabel 19650 14550 2    50   Output ~ 0
 Segment1_VoltageTaps
-Text HLabel 7150 9700 2    50   Output ~ 0
+Text HLabel 19650 14450 2    50   Output ~ 0
 Segment2_VoltageTaps
-Text HLabel 7150 9600 2    50   Output ~ 0
+Text HLabel 19650 14350 2    50   Output ~ 0
 Segment3_VoltageTaps
-Text HLabel 7150 9500 2    50   Output ~ 0
+Text HLabel 19650 14250 2    50   Output ~ 0
 Segment4_VoltageTaps
 $Comp
 L Device:Fuse F8
 U 1 1 5F6433FB
-P 12950 5600
-F 0 "F8" H 12891 5554 50  0000 R CNN
-F 1 "Fuse" H 12891 5645 50  0000 R CNN
-F 2 "" V 12880 5600 50  0001 C CNN
-F 3 "~" H 12950 5600 50  0001 C CNN
-	1    12950 5600
+P 17200 7500
+F 0 "F8" H 17141 7454 50  0000 R CNN
+F 1 "Fuse" H 17141 7545 50  0000 R CNN
+F 2 "" V 17130 7500 50  0001 C CNN
+F 3 "~" H 17200 7500 50  0001 C CNN
+	1    17200 7500
 	1    0    0    1   
 $EndComp
-$Sheet
-S 2550 7800 1100 1700
-U 5F7F6054
-F0 "Battery Segment 1" 50
-F1 "BatterySegment.sch" 50
-F2 "Segment+" O R 3650 7850 50 
-F3 "Segment-" O R 3650 7950 50 
-F4 "ThermistorA" O L 2550 7850 30 
-F5 "ThermistorB" O L 2550 7900 30 
-F6 "ThermistorC" O L 2550 7950 30 
-F7 "ThermistorD" O L 2550 8000 30 
-F8 "ThermistorE" O L 2550 8050 30 
-F9 "ThermistorF" O L 2550 8200 30 
-F10 "ThermistorG" O L 2550 8350 30 
-F11 "ThermistorH" O L 2550 8400 30 
-F12 "ThermistorI" O L 2550 8450 30 
-F13 "ThermistorJ" O L 2550 8500 30 
-F14 "ThermistorK" O L 2550 8550 30 
-F15 "ThermistorL" O L 2550 8700 30 
-F16 "ThermistorM" O L 2550 8750 30 
-F17 "ThermistorN" O L 2550 8800 30 
-F18 "ThermistorO" O L 2550 8850 30 
-F19 "ThermistorP" O L 2550 8900 30 
-F20 "ThermistorQ" O L 2550 9050 30 
-F21 "ThermistorR" O L 2550 9200 30 
-F22 "ThermistorS" O L 2550 9250 30 
-F23 "ThermistorU" O L 2550 9350 30 
-F24 "ThermistorV" O L 2550 9400 30 
-F25 "ThermistorT" O L 2550 9300 30 
-F26 "ThermistorF_GND" O L 2550 8250 30 
-F27 "ThermistorQ_GND" O L 2550 9100 30 
-F28 "ThermistorA-E_GND" O L 2550 8100 30 
-F29 "ThermistorG-K_GND" O L 2550 8600 30 
-F30 "ThermistorL-P_GND" O L 2550 8950 30 
-F31 "ThermistorR-V_GND" O L 2550 9450 30 
-F32 "ParallelCells_GND" I R 3650 8300 30 
-F33 "ParallelCells_Row1" I R 3650 8350 30 
-F34 "ParallelCells_Row2" I R 3650 8400 30 
-F35 "ParallelCells_Row3" I R 3650 8450 30 
-F36 "ParallelCells_Row4" I R 3650 8500 30 
-F37 "ParallelCells_Row5" I R 3650 8550 30 
-F38 "ParallelCells_Row6" I R 3650 8600 30 
-F39 "ParallelCells_Row7" I R 3650 8650 30 
-F40 "ParallelCells_Row8" I R 3650 8700 30 
-F41 "ParallelCells_Row9" I R 3650 8750 30 
-F42 "ParallelCells_Row10" I R 3650 8800 30 
-F43 "ParallelCells_Row11" I R 3650 8850 30 
-F44 "ParallelCells_Row12" I R 3650 8900 30 
-F45 "ParallelCells_Row13" I R 3650 8950 30 
-F46 "ParallelCells_Row14" I R 3650 9000 30 
-F47 "ParallelCells_Row15" I R 3650 9050 30 
-F48 "ParallelCells_Row16" I R 3650 9100 30 
-F49 "ParallelCells_Row17" I R 3650 9150 30 
-F50 "ParallelCells_Row18" I R 3650 9200 30 
-$EndSheet
 Wire Wire Line
-	12200 6000 13050 6000
-Connection ~ 13050 6000
+	16450 7900 17300 7900
+Connection ~ 17300 7900
 Wire Wire Line
-	13050 6000 13600 6000
+	16550 8350 17200 8350
+Connection ~ 17200 8350
 Wire Wire Line
-	12300 6450 12950 6450
-Connection ~ 12950 6450
+	17200 5400 17850 5400
 Wire Wire Line
-	12950 3500 13600 3500
+	17300 5500 17850 5500
 Wire Wire Line
-	13050 3600 13600 3600
+	16450 5200 17850 5200
 Wire Wire Line
-	12200 3300 13600 3300
-Wire Wire Line
-	12300 3400 13600 3400
+	16550 5300 17850 5300
 $Comp
 L Relay:DIPxx-1Axx-11x K10
 U 1 1 5F80B7CF
-P 9400 3050
-F 0 "K10" V 8833 3050 50  0000 C CNN
-F 1 "SPST-NO (Precharge Control)" V 8924 3050 50  0000 C CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 9750 3000 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 9400 3050 50  0001 C CNN
-	1    9400 3050
+P 13650 3350
+F 0 "K10" V 13083 3350 50  0000 C CNN
+F 1 "SPST-NO (Precharge Control)" V 13174 3350 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 14000 3300 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 13650 3350 50  0001 C CNN
+	1    13650 3350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	9600 3550 9000 3550
+	13850 3850 13250 3850
 Wire Wire Line
-	9000 3550 9000 3250
+	13250 3850 13250 3550
 Wire Wire Line
-	9000 3250 9100 3250
+	13250 3550 13350 3550
 Wire Wire Line
-	9700 3250 10000 3250
+	13950 3550 14250 3550
 Wire Wire Line
-	10150 3250 10250 3250
+	14400 3550 14500 3550
 Wire Wire Line
-	10000 3250 10000 3600
+	14250 3550 14250 3900
 Wire Wire Line
-	10150 2850 10250 2850
+	14400 3150 14500 3150
 Wire Wire Line
-	10850 2850 10950 2850
+	15100 3150 15200 3150
 Wire Wire Line
-	9500 7550 11200 7550
+	14800 10250 15450 10250
 Wire Wire Line
-	10350 6600 11200 6600
-Connection ~ 11200 6600
+	14250 3900 15200 3900
 Wire Wire Line
-	11200 6600 11200 7550
-Wire Wire Line
-	10000 3600 10950 3600
-Wire Wire Line
-	9600 4600 9600 3550
-Connection ~ 11200 3600
-Wire Wire Line
-	11200 3600 11200 6600
-Wire Wire Line
-	10150 5600 10150 3250
-Wire Wire Line
-	9500 5600 10150 5600
+	13750 7500 14400 7500
 Wire Notes Line
-	8750 2150 11050 2150
+	13000 2450 15300 2450
 Wire Notes Line
-	11050 3800 8750 3800
+	15300 4100 13000 4100
 Wire Wire Line
-	11200 2050 11200 3600
+	15450 2350 15450 3900
 Wire Wire Line
-	10850 3250 10950 3250
+	15100 3550 15200 3550
 Wire Wire Line
-	10950 3250 10950 3600
-Connection ~ 10950 3600
+	15200 3550 15200 3900
+Connection ~ 15200 3900
 Wire Wire Line
-	10950 3600 11200 3600
+	15200 3900 15450 3900
 Wire Notes Line
-	11050 3800 11050 2150
+	15300 4100 15300 2450
 Wire Notes Line
-	8750 2150 8750 3800
-Text Notes 8800 3750 0    50   ~ 0
+	13000 2450 13000 4100
+Text Notes 13050 4050 0    50   ~ 0
 MC Control Relay PCB
 $Comp
 L Relay:DIPxx-1Axx-11x K12
 U 1 1 5F814F76
-P 10550 3050
-F 0 "K12" V 9983 3050 50  0000 C CNN
-F 1 "SPST-NO (AIR Control)" V 10074 3050 50  0000 C CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 10900 3000 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 10550 3050 50  0001 C CNN
-	1    10550 3050
+P 14800 3350
+F 0 "K12" V 14233 3350 50  0000 C CNN
+F 1 "SPST-NO (AIR Control)" V 14324 3350 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 15150 3300 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 14800 3350 50  0001 C CNN
+	1    14800 3350
 	0    1    1    0   
 $EndComp
-Text HLabel 4500 5500 2    50   Input ~ 0
+Text HLabel 6100 10000 2    50   Input ~ 0
 HVD-
-Text HLabel 4500 5650 2    50   Input ~ 0
+Text HLabel 6100 10850 2    50   Input ~ 0
 HVD+
-Text HLabel 4500 3300 2    50   Input ~ 0
+Text HLabel 6100 7100 2    50   Input ~ 0
 SMD_2-
-Text HLabel 4500 3450 2    50   Input ~ 0
+Text HLabel 6100 7950 2    50   Input ~ 0
 SMD_2+
-Text HLabel 4500 7700 2    50   Input ~ 0
+Text HLabel 6100 13050 2    50   Input ~ 0
 SMD_1-
-Text HLabel 4500 7850 2    50   Input ~ 0
+Text HLabel 6100 13750 2    50   Input ~ 0
 SMD_1+
-Connection ~ 8050 5000
+Connection ~ 12300 6900
 Wire Wire Line
-	8050 5000 8900 5000
+	12300 6900 13150 6900
 Wire Wire Line
-	8050 5000 8050 6000
-Connection ~ 12200 6000
-Connection ~ 12300 6450
+	12300 6900 12300 7900
+Connection ~ 16450 7900
 Wire Wire Line
-	12300 6450 12300 7950
+	13800 1000 14100 1000
 Wire Wire Line
-	9550 700  9850 700 
+	13750 7900 15950 7900
 Wire Wire Line
-	9700 7950 12300 7950
+	15950 6900 15950 7350
 Wire Wire Line
-	9500 6000 11700 6000
+	15950 7650 15950 7900
+Connection ~ 15950 7900
 Wire Wire Line
-	11700 5000 11700 5450
+	15950 7900 16450 7900
 Wire Wire Line
-	9500 5000 11700 5000
+	15950 9100 15950 7900
 Wire Wire Line
-	11700 5750 11700 6000
-Connection ~ 11700 6000
-Wire Wire Line
-	11700 6000 12200 6000
-Wire Wire Line
-	11700 6250 11700 6000
-Wire Wire Line
-	11700 6550 11700 7000
-Wire Wire Line
-	10350 7000 11700 7000
+	14800 10650 15950 10650
 $Comp
 L NER:2-Pos_Generic J10
 U 1 1 5F84E6B9
-P 14800 5900
-F 0 "J10" H 14800 6025 50  0000 C CNN
-F 1 "Main TS Connector" H 14800 5934 50  0000 C CNN
-F 2 "" H 14800 5900 50  0001 C CNN
-F 3 "" H 14800 5900 50  0001 C CNN
-	1    14800 5900
+P 19050 7800
+F 0 "J10" H 19050 7925 50  0000 C CNN
+F 1 "Main TS Connector" H 19050 7834 50  0000 C CNN
+F 2 "" H 19050 7800 50  0001 C CNN
+F 3 "" H 19050 7800 50  0001 C CNN
+	1    19050 7800
 	1    0    0    -1  
 $EndComp
 $Comp
 L NER:4-Pos_Generic J9
 U 1 1 5F95323D
-P 13850 3200
-F 0 "J9" H 13850 3325 50  0000 C CNN
-F 1 "TSMP/IMD Connector" H 13850 3234 50  0000 C CNN
-F 2 "" H 13850 3200 50  0001 C CNN
-F 3 "" H 13850 3200 50  0001 C CNN
-	1    13850 3200
+P 18100 5100
+F 0 "J9" H 18100 5225 50  0000 C CNN
+F 1 "TSMP/IMD Connector" H 18100 5134 50  0000 C CNN
+F 2 "" H 18100 5100 50  0001 C CNN
+F 3 "" H 18100 5100 50  0001 C CNN
+	1    18100 5100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	14100 3300 14200 3300
+	18350 5200 18450 5200
 Wire Wire Line
-	14100 3400 14200 3400
+	18350 5300 18450 5300
 Wire Wire Line
-	14100 3500 14200 3500
+	18350 5400 18450 5400
 Wire Wire Line
-	14100 3600 14200 3600
+	18350 5500 18450 5500
 $Comp
 L NER:6-Pos_Generic J8
 U 1 1 5FAB592D
-P 10250 1300
-F 0 "J8" V 10204 1288 50  0000 L CNN
-F 1 "Shutdown/MC Control Connector" V 10295 1288 50  0000 L CNN
-F 2 "" H 10250 1300 50  0001 C CNN
-F 3 "" H 10250 1300 50  0001 C CNN
-	1    10250 1300
+P 14500 1600
+F 0 "J8" V 14454 1588 50  0000 L CNN
+F 1 "Shutdown/MC Control Connector" V 14545 1588 50  0000 L CNN
+F 2 "" H 14500 1600 50  0001 C CNN
+F 3 "" H 14500 1600 50  0001 C CNN
+	1    14500 1600
 	0    1    1    0   
 $EndComp
 $Comp
 L NER:OrionCurrentSens U14
 U 1 1 5F8DBC0B
-P 14000 6150
-F 0 "U14" H 14000 6173 50  0000 C CNN
-F 1 "OrionCurrentSens" H 14000 6264 50  0000 C CNN
-F 2 "" H 14000 6150 50  0001 C CNN
-F 3 "" H 14000 6150 50  0001 C CNN
-	1    14000 6150
+P 18250 8050
+F 0 "U14" H 18250 8073 50  0000 C CNN
+F 1 "OrionCurrentSens" H 18250 8164 50  0000 C CNN
+F 2 "" H 18250 8050 50  0001 C CNN
+F 3 "" H 18250 8050 50  0001 C CNN
+	1    18250 8050
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	12300 5750 12300 6450
+	16550 7650 16550 8350
 Wire Wire Line
-	12950 5750 12950 6450
+	17200 7650 17200 8350
 Wire Wire Line
-	14500 6450 14500 6100
+	18750 8350 18750 8000
 Wire Wire Line
-	14500 6100 14550 6100
+	18750 8000 18800 8000
 Wire Wire Line
-	12950 6450 14500 6450
+	18650 7900 18800 7900
 Wire Wire Line
-	14400 6000 14550 6000
+	18500 7400 18500 7350
 Wire Wire Line
-	14250 5500 14250 5450
+	18350 7400 18350 7350
 Wire Wire Line
-	14100 5500 14100 5450
+	18200 7400 18200 7350
 Wire Wire Line
-	13950 5500 13950 5450
-Wire Wire Line
-	13800 5500 13800 5450
+	18050 7400 18050 7350
 Entry Wire Line
-	13800 5450 13900 5350
+	18050 7350 18150 7250
 Entry Wire Line
-	13950 5450 14050 5350
+	18200 7350 18300 7250
 Entry Wire Line
-	14100 5450 14200 5350
+	18350 7350 18450 7250
 Entry Wire Line
-	14250 5450 14350 5350
-Wire Bus Line
-	15900 8950 6700 8950
-Wire Bus Line
-	15900 5350 15900 8950
-Text Notes 15150 8900 2    50   ~ 0
-Current sense line will be fed from the accumulator to the BMS via the thermistor connectors, and then split back out within the BMS container. May also be done via a separate connector. TBD
-Wire Bus Line
-	6700 8950 6700 9150
-Wire Bus Line
-	6700 9150 7150 9150
-Text HLabel 7150 9150 2    50   Output ~ 0
+	18500 7350 18600 7250
+Text HLabel 19650 14000 2    50   Output ~ 0
 Current_Sensor
 Wire Wire Line
-	15950 4250 16050 4250
+	20200 6150 20300 6150
 Wire Wire Line
-	15950 4150 16050 4150
+	20200 6050 20300 6050
 $Comp
 L NER:2-Pos_Generic J11
 U 1 1 5F95267C
-P 15700 4050
-F 0 "J11" H 15700 4175 50  0000 C CNN
-F 1 "TSAL Connector" H 15700 4084 50  0000 C CNN
-F 2 "" H 15700 4050 50  0001 C CNN
-F 3 "" H 15700 4050 50  0001 C CNN
-	1    15700 4050
+P 19950 5950
+F 0 "J11" H 19950 6075 50  0000 C CNN
+F 1 "TSAL Connector" H 19950 5984 50  0000 C CNN
+F 2 "" H 19950 5950 50  0001 C CNN
+F 3 "" H 19950 5950 50  0001 C CNN
+	1    19950 5950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	14500 4250 15450 4250
+	18750 6150 19700 6150
 Wire Wire Line
-	14500 4150 15450 4150
+	18750 6050 19700 6050
 $Sheet
-S 13800 4050 700  550 
+S 18050 5950 700  550 
 U 5FAAF22F
 F0 "TSAL_Circuit" 50
 F1 "TSAL_Circuit.sch" 50
-F2 "TS+" I L 13800 4150 50 
-F3 "TS-" I L 13800 4250 50 
-F4 "TSAL+" I R 14500 4150 50 
-F5 "TSAL-" I R 14500 4250 50 
-F6 "VBATT+" I L 13800 4450 50 
-F7 "VBATT-" I L 13800 4550 50 
+F2 "TS+" I L 18050 6050 50 
+F3 "TS-" I L 18050 6150 50 
+F4 "TSAL+" I R 18750 6050 50 
+F5 "TSAL-" I R 18750 6150 50 
+F6 "VBATT+" I L 18050 6350 50 
+F7 "VBATT-" I L 18050 6450 50 
 $EndSheet
-Text HLabel 16050 4250 2    50   Output ~ 0
+Text HLabel 20300 6150 2    50   Output ~ 0
 TSAL-
-Text HLabel 16050 4150 2    50   Output ~ 0
+Text HLabel 20300 6050 2    50   Output ~ 0
 TSAL+
-Text Label 14850 4250 0    50   ~ 0
+Text Label 19100 6150 0    50   ~ 0
 22_20
-Text Label 14850 4150 0    50   ~ 0
+Text Label 19100 6050 0    50   ~ 0
 21_20
 Wire Wire Line
-	12200 3300 12200 5450
+	16450 5200 16450 7350
 Wire Wire Line
-	12300 3400 12300 5450
+	16550 5300 16550 7350
 Wire Wire Line
-	13050 3600 13050 4150
+	17300 5500 17300 6050
 Wire Wire Line
-	12950 3500 12950 4250
+	17200 5400 17200 6150
 Wire Wire Line
-	13050 4150 13800 4150
-Connection ~ 13050 4150
+	17300 6050 18050 6050
+Connection ~ 17300 6050
 Wire Wire Line
-	13050 4150 13050 5450
+	17300 6050 17300 7350
 Wire Wire Line
-	12950 4250 13800 4250
-Connection ~ 12950 4250
+	17200 6150 18050 6150
+Connection ~ 17200 6150
 Wire Wire Line
-	12950 4250 12950 5450
+	17200 6150 17200 7350
 Wire Wire Line
-	13800 4450 13350 4450
+	18050 6350 17600 6350
 Wire Wire Line
-	13350 4450 13350 8400
-Wire Wire Line
-	13350 8400 7600 8400
-Wire Wire Line
-	13800 4550 13450 4550
-Wire Wire Line
-	13450 4550 13450 8500
-Wire Wire Line
-	13450 8500 7500 8500
+	18050 6450 17700 6450
 $Comp
 L Device:Fuse F7
 U 1 1 5FC950C3
-P 7600 5400
-F 0 "F7" H 7660 5446 50  0000 L CNN
-F 1 "Fuse" H 7660 5355 50  0000 L CNN
-F 2 "" V 7530 5400 50  0001 C CNN
-F 3 "~" H 7600 5400 50  0001 C CNN
-	1    7600 5400
+P 11850 7300
+F 0 "F7" H 11910 7346 50  0000 L CNN
+F 1 "Fuse" H 11910 7255 50  0000 L CNN
+F 2 "" V 11780 7300 50  0001 C CNN
+F 3 "~" H 11850 7300 50  0001 C CNN
+	1    11850 7300
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:Fuse F6
-U 1 1 5FC95B82
-P 7500 8250
-F 0 "F6" H 7441 8204 50  0000 R CNN
-F 1 "Fuse" H 7441 8295 50  0000 R CNN
-F 2 "" V 7430 8250 50  0001 C CNN
-F 3 "~" H 7500 8250 50  0001 C CNN
-	1    7500 8250
-	1    0    0    1   
-$EndComp
 Wire Wire Line
-	7600 5550 7600 8400
+	11850 7150 11850 6900
 Wire Wire Line
-	7600 5250 7600 5000
-Wire Wire Line
-	7600 5000 8050 5000
+	11850 6900 12300 6900
 $Sheet
-S 2550 5600 1100 1700
-U 602AD660
-F0 "Battery Segment 2" 50
-F1 "BatterySegment.sch" 50
-F2 "Segment+" O R 3650 5650 50 
-F3 "Segment-" O R 3650 5750 50 
-F4 "ThermistorA" O L 2550 5650 30 
-F5 "ThermistorB" O L 2550 5700 30 
-F6 "ThermistorC" O L 2550 5750 30 
-F7 "ThermistorD" O L 2550 5800 30 
-F8 "ThermistorE" O L 2550 5850 30 
-F9 "ThermistorF" O L 2550 6000 30 
-F10 "ThermistorG" O L 2550 6150 30 
-F11 "ThermistorH" O L 2550 6200 30 
-F12 "ThermistorI" O L 2550 6250 30 
-F13 "ThermistorJ" O L 2550 6300 30 
-F14 "ThermistorK" O L 2550 6350 30 
-F15 "ThermistorL" O L 2550 6500 30 
-F16 "ThermistorM" O L 2550 6550 30 
-F17 "ThermistorN" O L 2550 6600 30 
-F18 "ThermistorO" O L 2550 6650 30 
-F19 "ThermistorP" O L 2550 6700 30 
-F20 "ThermistorQ" O L 2550 6850 30 
-F21 "ThermistorR" O L 2550 7000 30 
-F22 "ThermistorS" O L 2550 7050 30 
-F23 "ThermistorU" O L 2550 7150 30 
-F24 "ThermistorV" O L 2550 7200 30 
-F25 "ThermistorT" O L 2550 7100 30 
-F26 "ThermistorF_GND" O L 2550 6050 30 
-F27 "ThermistorQ_GND" O L 2550 6900 30 
-F28 "ThermistorA-E_GND" O L 2550 5900 30 
-F29 "ThermistorG-K_GND" O L 2550 6400 30 
-F30 "ThermistorL-P_GND" O L 2550 6750 30 
-F31 "ThermistorR-V_GND" O L 2550 7250 30 
-F32 "ParallelCells_GND" I R 3650 6100 30 
-F33 "ParallelCells_Row1" I R 3650 6150 30 
-F34 "ParallelCells_Row2" I R 3650 6200 30 
-F35 "ParallelCells_Row3" I R 3650 6250 30 
-F36 "ParallelCells_Row4" I R 3650 6300 30 
-F37 "ParallelCells_Row5" I R 3650 6350 30 
-F38 "ParallelCells_Row6" I R 3650 6400 30 
-F39 "ParallelCells_Row7" I R 3650 6450 30 
-F40 "ParallelCells_Row8" I R 3650 6500 30 
-F41 "ParallelCells_Row9" I R 3650 6550 30 
-F42 "ParallelCells_Row10" I R 3650 6600 30 
-F43 "ParallelCells_Row11" I R 3650 6650 30 
-F44 "ParallelCells_Row12" I R 3650 6700 30 
-F45 "ParallelCells_Row13" I R 3650 6750 30 
-F46 "ParallelCells_Row14" I R 3650 6800 30 
-F47 "ParallelCells_Row15" I R 3650 6850 30 
-F48 "ParallelCells_Row16" I R 3650 6900 30 
-F49 "ParallelCells_Row17" I R 3650 6950 30 
-F50 "ParallelCells_Row18" I R 3650 7000 30 
-$EndSheet
-$Sheet
-S 2550 3400 1100 1700
-U 602C1510
-F0 "Battery Segment 3" 50
-F1 "BatterySegment.sch" 50
-F2 "Segment+" O R 3650 3450 50 
-F3 "Segment-" O R 3650 3550 50 
-F4 "ThermistorA" O L 2550 3450 30 
-F5 "ThermistorB" O L 2550 3500 30 
-F6 "ThermistorC" O L 2550 3550 30 
-F7 "ThermistorD" O L 2550 3600 30 
-F8 "ThermistorE" O L 2550 3650 30 
-F9 "ThermistorF" O L 2550 3800 30 
-F10 "ThermistorG" O L 2550 3950 30 
-F11 "ThermistorH" O L 2550 4000 30 
-F12 "ThermistorI" O L 2550 4050 30 
-F13 "ThermistorJ" O L 2550 4100 30 
-F14 "ThermistorK" O L 2550 4150 30 
-F15 "ThermistorL" O L 2550 4300 30 
-F16 "ThermistorM" O L 2550 4350 30 
-F17 "ThermistorN" O L 2550 4400 30 
-F18 "ThermistorO" O L 2550 4450 30 
-F19 "ThermistorP" O L 2550 4500 30 
-F20 "ThermistorQ" O L 2550 4650 30 
-F21 "ThermistorR" O L 2550 4800 30 
-F22 "ThermistorS" O L 2550 4850 30 
-F23 "ThermistorU" O L 2550 4950 30 
-F24 "ThermistorV" O L 2550 5000 30 
-F25 "ThermistorT" O L 2550 4900 30 
-F26 "ThermistorF_GND" O L 2550 3850 30 
-F27 "ThermistorQ_GND" O L 2550 4700 30 
-F28 "ThermistorA-E_GND" O L 2550 3700 30 
-F29 "ThermistorG-K_GND" O L 2550 4200 30 
-F30 "ThermistorL-P_GND" O L 2550 4550 30 
-F31 "ThermistorR-V_GND" O L 2550 5050 30 
-F32 "ParallelCells_GND" I R 3650 3900 30 
-F33 "ParallelCells_Row1" I R 3650 3950 30 
-F34 "ParallelCells_Row2" I R 3650 4000 30 
-F35 "ParallelCells_Row3" I R 3650 4050 30 
-F36 "ParallelCells_Row4" I R 3650 4100 30 
-F37 "ParallelCells_Row5" I R 3650 4150 30 
-F38 "ParallelCells_Row6" I R 3650 4200 30 
-F39 "ParallelCells_Row7" I R 3650 4250 30 
-F40 "ParallelCells_Row8" I R 3650 4300 30 
-F41 "ParallelCells_Row9" I R 3650 4350 30 
-F42 "ParallelCells_Row10" I R 3650 4400 30 
-F43 "ParallelCells_Row11" I R 3650 4450 30 
-F44 "ParallelCells_Row12" I R 3650 4500 30 
-F45 "ParallelCells_Row13" I R 3650 4550 30 
-F46 "ParallelCells_Row14" I R 3650 4600 30 
-F47 "ParallelCells_Row15" I R 3650 4650 30 
-F48 "ParallelCells_Row16" I R 3650 4700 30 
-F49 "ParallelCells_Row17" I R 3650 4750 30 
-F50 "ParallelCells_Row18" I R 3650 4800 30 
-$EndSheet
-$Sheet
-S 2550 1200 1100 1700
-U 602C155C
-F0 "Battery Segment 4" 50
-F1 "BatterySegment.sch" 50
-F2 "Segment+" O R 3650 1250 50 
-F3 "Segment-" O R 3650 1350 50 
-F4 "ThermistorA" O L 2550 1250 30 
-F5 "ThermistorB" O L 2550 1300 30 
-F6 "ThermistorC" O L 2550 1350 30 
-F7 "ThermistorD" O L 2550 1400 30 
-F8 "ThermistorE" O L 2550 1450 30 
-F9 "ThermistorF" O L 2550 1600 30 
-F10 "ThermistorG" O L 2550 1750 30 
-F11 "ThermistorH" O L 2550 1800 30 
-F12 "ThermistorI" O L 2550 1850 30 
-F13 "ThermistorJ" O L 2550 1900 30 
-F14 "ThermistorK" O L 2550 1950 30 
-F15 "ThermistorL" O L 2550 2100 30 
-F16 "ThermistorM" O L 2550 2150 30 
-F17 "ThermistorN" O L 2550 2200 30 
-F18 "ThermistorO" O L 2550 2250 30 
-F19 "ThermistorP" O L 2550 2300 30 
-F20 "ThermistorQ" O L 2550 2450 30 
-F21 "ThermistorR" O L 2550 2600 30 
-F22 "ThermistorS" O L 2550 2650 30 
-F23 "ThermistorU" O L 2550 2750 30 
-F24 "ThermistorV" O L 2550 2800 30 
-F25 "ThermistorT" O L 2550 2700 30 
-F26 "ThermistorF_GND" O L 2550 1650 30 
-F27 "ThermistorQ_GND" O L 2550 2500 30 
-F28 "ThermistorA-E_GND" O L 2550 1500 30 
-F29 "ThermistorG-K_GND" O L 2550 2000 30 
-F30 "ThermistorL-P_GND" O L 2550 2350 30 
-F31 "ThermistorR-V_GND" O L 2550 2850 30 
-F32 "ParallelCells_GND" I R 3650 1700 30 
-F33 "ParallelCells_Row1" I R 3650 1750 30 
-F34 "ParallelCells_Row2" I R 3650 1800 30 
-F35 "ParallelCells_Row3" I R 3650 1850 30 
-F36 "ParallelCells_Row4" I R 3650 1900 30 
-F37 "ParallelCells_Row5" I R 3650 1950 30 
-F38 "ParallelCells_Row6" I R 3650 2000 30 
-F39 "ParallelCells_Row7" I R 3650 2050 30 
-F40 "ParallelCells_Row8" I R 3650 2100 30 
-F41 "ParallelCells_Row9" I R 3650 2150 30 
-F42 "ParallelCells_Row10" I R 3650 2200 30 
-F43 "ParallelCells_Row11" I R 3650 2250 30 
-F44 "ParallelCells_Row12" I R 3650 2300 30 
-F45 "ParallelCells_Row13" I R 3650 2350 30 
-F46 "ParallelCells_Row14" I R 3650 2400 30 
-F47 "ParallelCells_Row15" I R 3650 2450 30 
-F48 "ParallelCells_Row16" I R 3650 2500 30 
-F49 "ParallelCells_Row17" I R 3650 2550 30 
-F50 "ParallelCells_Row18" I R 3650 2600 30 
-$EndSheet
-$Sheet
-S 3950 1650 1450 1050
+S 6600 5450 1450 1050
 U 602C1575
 F0 "Voltage Tap PCB 4" 50
 F1 "VT_PCB.sch" 50
-F2 "ParallelCells_GND" I L 3950 1700 30 
-F3 "ParallelCells_Row1" I L 3950 1750 30 
-F4 "ParallelCells_Row2" I L 3950 1800 30 
-F5 "ParallelCells_Row3" I L 3950 1850 30 
-F6 "ParallelCells_Row4" I L 3950 1900 30 
-F7 "ParallelCells_Row5" I L 3950 1950 30 
-F8 "ParallelCells_Row6" I L 3950 2000 30 
-F9 "ParallelCells_Row7" I L 3950 2050 30 
-F10 "ParallelCells_Row8" I L 3950 2100 30 
-F11 "ParallelCells_Row9" I L 3950 2150 30 
-F12 "Shutdown+" I R 5400 1800 50 
-F13 "Shutdown-" I R 5400 1700 50 
-F14 "ParallelCells_Row16" I L 3950 2500 30 
-F15 "ParallelCells_Row17" I L 3950 2550 30 
-F16 "ParallelCells_Row15" I L 3950 2450 30 
-F17 "ParallelCells_Row14" I L 3950 2400 30 
-F18 "ParallelCells_Row13" I L 3950 2350 30 
-F19 "ParallelCells_Row12" I L 3950 2300 30 
-F20 "ParallelCells_Row11" I L 3950 2250 30 
-F21 "ParallelCells_Row10" I L 3950 2200 30 
-F22 "ParallelCells_Row18" I L 3950 2600 30 
-F23 "VoltageTaps(1-12)" O R 5400 2500 50 
-F24 "VoltageTaps(13-24)" O R 5400 2600 50 
+F2 "ParallelCells_GND" I L 6600 5500 30 
+F3 "ParallelCells_Row1" I L 6600 5550 30 
+F4 "ParallelCells_Row2" I L 6600 5600 30 
+F5 "ParallelCells_Row3" I L 6600 5650 30 
+F6 "ParallelCells_Row4" I L 6600 5700 30 
+F7 "ParallelCells_Row5" I L 6600 5750 30 
+F8 "ParallelCells_Row6" I L 6600 5800 30 
+F9 "ParallelCells_Row7" I L 6600 5850 30 
+F10 "ParallelCells_Row8" I L 6600 5900 30 
+F11 "ParallelCells_Row9" I L 6600 5950 30 
+F12 "Shutdown+" I R 8050 5600 50 
+F13 "Shutdown-" I R 8050 5500 50 
+F14 "ParallelCells_Row16" I L 6600 6300 30 
+F15 "ParallelCells_Row17" I L 6600 6350 30 
+F16 "ParallelCells_Row15" I L 6600 6250 30 
+F17 "ParallelCells_Row14" I L 6600 6200 30 
+F18 "ParallelCells_Row13" I L 6600 6150 30 
+F19 "ParallelCells_Row12" I L 6600 6100 30 
+F20 "ParallelCells_Row11" I L 6600 6050 30 
+F21 "ParallelCells_Row10" I L 6600 6000 30 
+F22 "ParallelCells_Row18" I L 6600 6400 30 
+F23 "VoltageTaps(1-12)" O R 8050 6300 50 
+F24 "VoltageTaps(13-24)" O R 8050 6400 50 
 $EndSheet
 $Sheet
-S 3950 3850 1450 1050
+S 6600 8350 1450 1050
 U 605A4F7F
 F0 "Voltage Tap PCB 3" 50
 F1 "VT_PCB.sch" 50
-F2 "ParallelCells_GND" I L 3950 3900 30 
-F3 "ParallelCells_Row1" I L 3950 3950 30 
-F4 "ParallelCells_Row2" I L 3950 4000 30 
-F5 "ParallelCells_Row3" I L 3950 4050 30 
-F6 "ParallelCells_Row4" I L 3950 4100 30 
-F7 "ParallelCells_Row5" I L 3950 4150 30 
-F8 "ParallelCells_Row6" I L 3950 4200 30 
-F9 "ParallelCells_Row7" I L 3950 4250 30 
-F10 "ParallelCells_Row8" I L 3950 4300 30 
-F11 "ParallelCells_Row9" I L 3950 4350 30 
-F12 "Shutdown+" I R 5400 4000 50 
-F13 "Shutdown-" I R 5400 3900 50 
-F14 "ParallelCells_Row16" I L 3950 4700 30 
-F15 "ParallelCells_Row17" I L 3950 4750 30 
-F16 "ParallelCells_Row15" I L 3950 4650 30 
-F17 "ParallelCells_Row14" I L 3950 4600 30 
-F18 "ParallelCells_Row13" I L 3950 4550 30 
-F19 "ParallelCells_Row12" I L 3950 4500 30 
-F20 "ParallelCells_Row11" I L 3950 4450 30 
-F21 "ParallelCells_Row10" I L 3950 4400 30 
-F22 "ParallelCells_Row18" I L 3950 4800 30 
-F23 "VoltageTaps(1-12)" O R 5400 4700 50 
-F24 "VoltageTaps(13-24)" O R 5400 4800 50 
+F2 "ParallelCells_GND" I L 6600 8400 30 
+F3 "ParallelCells_Row1" I L 6600 8450 30 
+F4 "ParallelCells_Row2" I L 6600 8500 30 
+F5 "ParallelCells_Row3" I L 6600 8550 30 
+F6 "ParallelCells_Row4" I L 6600 8600 30 
+F7 "ParallelCells_Row5" I L 6600 8650 30 
+F8 "ParallelCells_Row6" I L 6600 8700 30 
+F9 "ParallelCells_Row7" I L 6600 8750 30 
+F10 "ParallelCells_Row8" I L 6600 8800 30 
+F11 "ParallelCells_Row9" I L 6600 8850 30 
+F12 "Shutdown+" I R 8050 8500 50 
+F13 "Shutdown-" I R 8050 8400 50 
+F14 "ParallelCells_Row16" I L 6600 9200 30 
+F15 "ParallelCells_Row17" I L 6600 9250 30 
+F16 "ParallelCells_Row15" I L 6600 9150 30 
+F17 "ParallelCells_Row14" I L 6600 9100 30 
+F18 "ParallelCells_Row13" I L 6600 9050 30 
+F19 "ParallelCells_Row12" I L 6600 9000 30 
+F20 "ParallelCells_Row11" I L 6600 8950 30 
+F21 "ParallelCells_Row10" I L 6600 8900 30 
+F22 "ParallelCells_Row18" I L 6600 9300 30 
+F23 "VoltageTaps(1-12)" O R 8050 9200 50 
+F24 "VoltageTaps(13-24)" O R 8050 9300 50 
 $EndSheet
 $Sheet
-S 3950 6050 1450 1050
+S 6600 11250 1450 1050
 U 605AC384
 F0 "Voltage Tap PCB 2" 50
 F1 "VT_PCB.sch" 50
-F2 "ParallelCells_GND" I L 3950 6100 30 
-F3 "ParallelCells_Row1" I L 3950 6150 30 
-F4 "ParallelCells_Row2" I L 3950 6200 30 
-F5 "ParallelCells_Row3" I L 3950 6250 30 
-F6 "ParallelCells_Row4" I L 3950 6300 30 
-F7 "ParallelCells_Row5" I L 3950 6350 30 
-F8 "ParallelCells_Row6" I L 3950 6400 30 
-F9 "ParallelCells_Row7" I L 3950 6450 30 
-F10 "ParallelCells_Row8" I L 3950 6500 30 
-F11 "ParallelCells_Row9" I L 3950 6550 30 
-F12 "Shutdown+" I R 5400 6200 50 
-F13 "Shutdown-" I R 5400 6100 50 
-F14 "ParallelCells_Row16" I L 3950 6900 30 
-F15 "ParallelCells_Row17" I L 3950 6950 30 
-F16 "ParallelCells_Row15" I L 3950 6850 30 
-F17 "ParallelCells_Row14" I L 3950 6800 30 
-F18 "ParallelCells_Row13" I L 3950 6750 30 
-F19 "ParallelCells_Row12" I L 3950 6700 30 
-F20 "ParallelCells_Row11" I L 3950 6650 30 
-F21 "ParallelCells_Row10" I L 3950 6600 30 
-F22 "ParallelCells_Row18" I L 3950 7000 30 
-F23 "VoltageTaps(1-12)" O R 5400 6900 50 
-F24 "VoltageTaps(13-24)" O R 5400 7000 50 
+F2 "ParallelCells_GND" I L 6600 11300 30 
+F3 "ParallelCells_Row1" I L 6600 11350 30 
+F4 "ParallelCells_Row2" I L 6600 11400 30 
+F5 "ParallelCells_Row3" I L 6600 11450 30 
+F6 "ParallelCells_Row4" I L 6600 11500 30 
+F7 "ParallelCells_Row5" I L 6600 11550 30 
+F8 "ParallelCells_Row6" I L 6600 11600 30 
+F9 "ParallelCells_Row7" I L 6600 11650 30 
+F10 "ParallelCells_Row8" I L 6600 11700 30 
+F11 "ParallelCells_Row9" I L 6600 11750 30 
+F12 "Shutdown+" I R 8050 11400 50 
+F13 "Shutdown-" I R 8050 11300 50 
+F14 "ParallelCells_Row16" I L 6600 12100 30 
+F15 "ParallelCells_Row17" I L 6600 12150 30 
+F16 "ParallelCells_Row15" I L 6600 12050 30 
+F17 "ParallelCells_Row14" I L 6600 12000 30 
+F18 "ParallelCells_Row13" I L 6600 11950 30 
+F19 "ParallelCells_Row12" I L 6600 11900 30 
+F20 "ParallelCells_Row11" I L 6600 11850 30 
+F21 "ParallelCells_Row10" I L 6600 11800 30 
+F22 "ParallelCells_Row18" I L 6600 12200 30 
+F23 "VoltageTaps(1-12)" O R 8050 12100 50 
+F24 "VoltageTaps(13-24)" O R 8050 12200 50 
 $EndSheet
 $Sheet
-S 3950 8250 1450 1050
+S 6600 14150 1450 1050
 U 605B3BFB
 F0 "Voltage Tap PCB 1" 50
 F1 "VT_PCB.sch" 50
-F2 "ParallelCells_GND" I L 3950 8300 30 
-F3 "ParallelCells_Row1" I L 3950 8350 30 
-F4 "ParallelCells_Row2" I L 3950 8400 30 
-F5 "ParallelCells_Row3" I L 3950 8450 30 
-F6 "ParallelCells_Row4" I L 3950 8500 30 
-F7 "ParallelCells_Row5" I L 3950 8550 30 
-F8 "ParallelCells_Row6" I L 3950 8600 30 
-F9 "ParallelCells_Row7" I L 3950 8650 30 
-F10 "ParallelCells_Row8" I L 3950 8700 30 
-F11 "ParallelCells_Row9" I L 3950 8750 30 
-F12 "Shutdown+" I R 5400 8400 50 
-F13 "Shutdown-" I R 5400 8300 50 
-F14 "ParallelCells_Row16" I L 3950 9100 30 
-F15 "ParallelCells_Row17" I L 3950 9150 30 
-F16 "ParallelCells_Row15" I L 3950 9050 30 
-F17 "ParallelCells_Row14" I L 3950 9000 30 
-F18 "ParallelCells_Row13" I L 3950 8950 30 
-F19 "ParallelCells_Row12" I L 3950 8900 30 
-F20 "ParallelCells_Row11" I L 3950 8850 30 
-F21 "ParallelCells_Row10" I L 3950 8800 30 
-F22 "ParallelCells_Row18" I L 3950 9200 30 
-F23 "VoltageTaps(1-12)" O R 5400 9100 50 
-F24 "VoltageTaps(13-24)" O R 5400 9200 50 
+F2 "ParallelCells_GND" I L 6600 14200 30 
+F3 "ParallelCells_Row1" I L 6600 14250 30 
+F4 "ParallelCells_Row2" I L 6600 14300 30 
+F5 "ParallelCells_Row3" I L 6600 14350 30 
+F6 "ParallelCells_Row4" I L 6600 14400 30 
+F7 "ParallelCells_Row5" I L 6600 14450 30 
+F8 "ParallelCells_Row6" I L 6600 14500 30 
+F9 "ParallelCells_Row7" I L 6600 14550 30 
+F10 "ParallelCells_Row8" I L 6600 14600 30 
+F11 "ParallelCells_Row9" I L 6600 14650 30 
+F12 "Shutdown+" I R 8050 14300 50 
+F13 "Shutdown-" I R 8050 14200 50 
+F14 "ParallelCells_Row16" I L 6600 15000 30 
+F15 "ParallelCells_Row17" I L 6600 15050 30 
+F16 "ParallelCells_Row15" I L 6600 14950 30 
+F17 "ParallelCells_Row14" I L 6600 14900 30 
+F18 "ParallelCells_Row13" I L 6600 14850 30 
+F19 "ParallelCells_Row12" I L 6600 14800 30 
+F20 "ParallelCells_Row11" I L 6600 14750 30 
+F21 "ParallelCells_Row10" I L 6600 14700 30 
+F22 "ParallelCells_Row18" I L 6600 15100 30 
+F23 "VoltageTaps(1-12)" O R 8050 15000 50 
+F24 "VoltageTaps(13-24)" O R 8050 15100 50 
 $EndSheet
 Wire Wire Line
-	3800 7700 4500 7700
+	5250 10950 5400 10950
 Wire Wire Line
-	3650 7850 4500 7850
+	5400 10000 6100 10000
 Wire Wire Line
-	3650 5750 3800 5750
+	5250 10850 6100 10850
 Wire Wire Line
-	3650 6100 3950 6100
+	5400 8050 5250 8050
 Wire Wire Line
-	3650 6150 3950 6150
+	5400 7100 6100 7100
 Wire Wire Line
-	3650 6200 3950 6200
+	5250 7950 6100 7950
 Wire Wire Line
-	3650 6250 3950 6250
+	5400 5150 5250 5150
+Connection ~ 11850 6900
 Wire Wire Line
-	3650 6300 3950 6300
+	5400 8050 5400 10000
 Wire Wire Line
-	3650 6350 3950 6350
+	5400 5150 5400 7100
 Wire Wire Line
-	3650 6400 3950 6400
+	13250 3150 13350 3150
 Wire Wire Line
-	3650 6450 3950 6450
+	13250 2700 13250 3150
+Wire Wire Line
+	13900 1200 13900 1350
+Wire Wire Line
+	13800 1200 13900 1200
+Text HLabel 13800 1200 0    50   Input ~ 0
+MotorController_Precharge+
 Wire Wire Line
-	3650 6500 3950 6500
+	14250 3150 14250 3550
 Wire Wire Line
-	3650 6550 3950 6550
+	13950 3150 14250 3150
+Connection ~ 14250 3550
 Wire Wire Line
-	3650 6600 3950 6600
+	14400 1850 14400 3150
 Wire Wire Line
-	3650 6650 3950 6650
+	15200 3150 15200 3550
+Connection ~ 15200 3550
 Wire Wire Line
-	3650 6700 3950 6700
+	14200 2350 15450 2350
 Wire Wire Line
-	3650 6750 3950 6750
+	12850 2350 14100 2350
 Wire Wire Line
-	3650 6800 3950 6800
+	13900 1850 13900 2700
 Wire Wire Line
-	3650 6850 3950 6850
+	13250 2700 13900 2700
 Wire Wire Line
-	3650 6900 3950 6900
+	14100 1000 14100 1350
 Wire Wire Line
-	3650 6950 3950 6950
-Wire Wire Line
-	3650 7000 3950 7000
-Wire Wire Line
-	3800 5500 4500 5500
-Wire Wire Line
-	3650 5650 4500 5650
-Wire Wire Line
-	3800 3550 3650 3550
-Wire Wire Line
-	3800 3300 4500 3300
-Wire Wire Line
-	3650 3450 4500 3450
-Wire Wire Line
-	3800 1350 3650 1350
-Wire Wire Line
-	3650 8300 3950 8300
-Wire Wire Line
-	3650 8350 3950 8350
-Wire Wire Line
-	3650 8400 3950 8400
-Wire Wire Line
-	3650 8450 3950 8450
-Wire Wire Line
-	3650 8500 3950 8500
-Wire Wire Line
-	3650 8550 3950 8550
-Wire Wire Line
-	3650 8600 3950 8600
-Wire Wire Line
-	3650 8650 3950 8650
-Wire Wire Line
-	3650 8700 3950 8700
-Wire Wire Line
-	3650 8750 3950 8750
-Wire Wire Line
-	3650 8800 3950 8800
-Wire Wire Line
-	3650 8850 3950 8850
-Wire Wire Line
-	3650 8900 3950 8900
-Wire Wire Line
-	3650 8950 3950 8950
-Wire Wire Line
-	3650 9000 3950 9000
-Wire Wire Line
-	3650 9050 3950 9050
-Wire Wire Line
-	3650 9100 3950 9100
-Wire Wire Line
-	3650 9150 3950 9150
-Wire Wire Line
-	3650 9200 3950 9200
-Wire Wire Line
-	3650 3900 3950 3900
-Wire Wire Line
-	3650 3950 3950 3950
-Wire Wire Line
-	3650 4000 3950 4000
-Wire Wire Line
-	3650 4050 3950 4050
-Wire Wire Line
-	3650 4100 3950 4100
-Wire Wire Line
-	3650 4150 3950 4150
-Wire Wire Line
-	3650 4200 3950 4200
-Wire Wire Line
-	3650 4250 3950 4250
-Wire Wire Line
-	3650 4300 3950 4300
-Wire Wire Line
-	3650 4350 3950 4350
-Wire Wire Line
-	3650 4400 3950 4400
-Wire Wire Line
-	3650 4450 3950 4450
-Wire Wire Line
-	3650 4500 3950 4500
-Wire Wire Line
-	3650 4550 3950 4550
-Wire Wire Line
-	3650 4600 3950 4600
-Wire Wire Line
-	3650 4650 3950 4650
-Wire Wire Line
-	3650 4700 3950 4700
-Wire Wire Line
-	3650 4750 3950 4750
-Wire Wire Line
-	3650 4800 3950 4800
-Wire Wire Line
-	3650 1700 3950 1700
-Wire Wire Line
-	3650 1750 3950 1750
-Wire Wire Line
-	3650 1800 3950 1800
-Wire Wire Line
-	3650 1850 3950 1850
-Wire Wire Line
-	3650 1900 3950 1900
-Wire Wire Line
-	3650 1950 3950 1950
-Wire Wire Line
-	3650 2000 3950 2000
-Wire Wire Line
-	3650 2050 3950 2050
-Wire Wire Line
-	3650 2100 3950 2100
-Wire Wire Line
-	3650 2150 3950 2150
-Wire Wire Line
-	3650 2200 3950 2200
-Wire Wire Line
-	3650 2250 3950 2250
-Wire Wire Line
-	3650 2300 3950 2300
-Wire Wire Line
-	3650 2350 3950 2350
-Wire Wire Line
-	3650 2400 3950 2400
-Wire Wire Line
-	3650 2450 3950 2450
-Wire Wire Line
-	3650 2500 3950 2500
-Wire Wire Line
-	3650 2550 3950 2550
-Wire Wire Line
-	3650 2600 3950 2600
+	14200 900  14200 1350
+Entry Wire Line
+	2350 2200 2250 2300
+Entry Wire Line
+	2350 2400 2250 2500
+Entry Wire Line
+	2350 2500 2250 2600
+Entry Wire Line
+	2350 2600 2250 2700
+Entry Wire Line
+	2350 2700 2250 2800
+Entry Wire Line
+	2350 2800 2250 2900
+Entry Wire Line
+	2350 2900 2250 3000
+Entry Wire Line
+	2450 3950 2350 4050
+Entry Wire Line
+	2450 3850 2350 3950
+Entry Wire Line
+	2450 3750 2350 3850
+Entry Wire Line
+	2450 3650 2350 3750
+Entry Wire Line
+	2450 3550 2350 3650
+Entry Wire Line
+	2450 3450 2350 3550
+Entry Wire Line
+	2450 3350 2350 3450
+Entry Wire Line
+	2450 3250 2350 3350
+NoConn ~ 2750 1700
+NoConn ~ 2750 1800
+NoConn ~ 4150 1500
+Text HLabel 19650 14850 2    50   Output ~ 0
+Segment1_CriticalThermistors
+Text HLabel 19650 14950 2    50   Output ~ 0
+Segment2_CriticalThermistors
+Text HLabel 19650 15050 2    50   Output ~ 0
+Segment3_CriticalThermistors
+Text HLabel 19650 15150 2    50   Output ~ 0
+Segment4_CriticalThermistors
+Entry Wire Line
+	2350 2300 2250 2400
+Wire Wire Line
+	2450 3250 2650 3250
+Wire Wire Line
+	2450 3350 2750 3350
+Wire Wire Line
+	2450 3450 2650 3450
+Wire Wire Line
+	2450 3550 2750 3550
+Wire Wire Line
+	2450 3650 2650 3650
+Wire Wire Line
+	2450 3750 2750 3750
+Wire Wire Line
+	2450 3850 2650 3850
+Wire Wire Line
+	2450 3950 2750 3950
+Entry Wire Line
+	4400 2900 4500 3000
+Entry Wire Line
+	4400 2800 4500 2900
+Entry Wire Line
+	4400 2700 4500 2800
+Entry Wire Line
+	4400 2600 4500 2700
+Entry Wire Line
+	4400 2500 4500 2600
+Entry Wire Line
+	4400 2400 4500 2500
+Entry Wire Line
+	4400 2300 4500 2400
+Entry Wire Line
+	4400 2200 4500 2300
+Wire Wire Line
+	4300 3950 4150 3950
+Wire Wire Line
+	4300 3850 4250 3850
+Wire Wire Line
+	4300 3750 4150 3750
+Wire Wire Line
+	4250 3650 4300 3650
+Wire Wire Line
+	4300 3550 4150 3550
+Wire Wire Line
+	4300 3450 4250 3450
+Wire Wire Line
+	4300 3350 4150 3350
+Wire Wire Line
+	4300 3250 4250 3250
+Entry Wire Line
+	4300 3950 4400 4050
+Entry Wire Line
+	4300 3850 4400 3950
+Entry Wire Line
+	4300 3750 4400 3850
+Entry Wire Line
+	4300 3650 4400 3750
+Entry Wire Line
+	4300 3550 4400 3650
+Entry Wire Line
+	4300 3450 4400 3550
+Entry Wire Line
+	4300 3350 4400 3450
+Entry Wire Line
+	4300 3250 4400 3350
+Wire Wire Line
+	4150 2900 4400 2900
+Wire Wire Line
+	4250 2800 4400 2800
+Wire Wire Line
+	4150 2700 4400 2700
+Wire Wire Line
+	4250 2600 4400 2600
+Wire Wire Line
+	4150 2500 4400 2500
+Wire Wire Line
+	4250 2400 4400 2400
+Wire Wire Line
+	4150 2300 4400 2300
+Wire Wire Line
+	4250 2200 4400 2200
+Wire Wire Line
+	2750 1600 2650 1600
+Text HLabel 19650 13700 2    50   Output ~ 0
+Thermistor_Expansion
+Entry Wire Line
+	2550 1800 2650 1900
+$Comp
+L NER:OrionThermExp U?
+U 1 1 5FB81724
+P 3450 1300
+AR Path="/60D53BFB/5FB81724" Ref="U?"  Part="1" 
+AR Path="/5F45B05E/5FB81724" Ref="U7"  Part="1" 
+F 0 "U7" H 3450 1465 50  0000 C CNN
+F 1 "OrionThermExp" H 3450 1374 50  0000 C CNN
+F 2 "" H 3450 1200 50  0001 C CNN
+F 3 "" H 3450 1200 50  0001 C CNN
+	1    3450 1300
+	-1   0    0    -1  
+$EndComp
+Entry Wire Line
+	2550 1500 2650 1600
+Wire Wire Line
+	2750 1900 2650 1900
+Entry Wire Line
+	2550 1400 2650 1500
+Wire Wire Line
+	2750 1500 2650 1500
+Wire Wire Line
+	4150 1900 4250 1900
+Entry Wire Line
+	4250 1900 4350 1800
 Wire Bus Line
-	5400 2500 6150 2500
-Wire Bus Line
-	5400 2600 6150 2600
+	4350 1800 4350 850 
 Entry Bus Bus
-	6150 2500 6250 2600
+	4350 850  4450 750 
 Entry Bus Bus
-	6150 2600 6250 2700
-Entry Bus Bus
-	6050 4700 6150 4800
-Entry Bus Bus
-	6050 4800 6150 4900
-Wire Bus Line
-	5400 4800 6050 4800
-Wire Bus Line
-	5400 6900 5950 6900
-Wire Bus Line
-	5400 7000 5950 7000
-Entry Bus Bus
-	5950 6900 6050 7000
-Entry Bus Bus
-	5950 7000 6050 7100
-Wire Bus Line
-	5400 9100 5850 9100
-Wire Bus Line
-	5400 9200 5850 9200
-Entry Bus Bus
-	5850 9100 5950 9200
-Entry Bus Bus
-	5850 9200 5950 9300
-Wire Wire Line
-	6800 1250 7600 1250
-Wire Wire Line
-	7600 1250 7600 5000
-Connection ~ 7600 5000
-Wire Wire Line
-	3800 5750 3800 7700
-Wire Wire Line
-	3800 3550 3800 5500
-Wire Wire Line
-	3800 1350 3800 3300
-Connection ~ 6950 3900
-Wire Wire Line
-	6950 3900 6950 6100
-Connection ~ 7050 4000
-Wire Wire Line
-	7050 4000 7050 6200
-Wire Wire Line
-	6950 6100 6950 8300
-Connection ~ 6950 6100
-Wire Wire Line
-	7050 6200 7050 8400
-Connection ~ 7050 6200
-Wire Wire Line
-	7500 8400 7500 8500
-Wire Wire Line
-	7500 8100 7500 7950
-Wire Bus Line
-	5400 4700 6050 4700
-Wire Wire Line
-	3650 1250 6500 1250
-Wire Wire Line
-	3650 7950 7500 7950
-Connection ~ 7500 7950
-Wire Wire Line
-	6950 1700 6950 3900
-Wire Wire Line
-	7050 1800 7050 4000
-Connection ~ 6950 1700
-Connection ~ 7050 1800
-Wire Wire Line
-	5400 1800 7050 1800
-Wire Wire Line
-	5400 1700 6950 1700
-Wire Wire Line
-	5400 3900 6950 3900
-Wire Wire Line
-	5400 4000 7050 4000
-Wire Wire Line
-	5400 6200 7050 6200
-Wire Wire Line
-	5400 6100 6950 6100
-Wire Wire Line
-	5400 8400 7050 8400
-Wire Wire Line
-	5400 8300 6950 8300
-Wire Wire Line
-	9700 7000 9700 7950
-Wire Wire Line
-	7500 7950 8900 7950
-Wire Bus Line
-	6250 9500 7150 9500
-Wire Bus Line
-	6150 9600 7150 9600
-Wire Bus Line
-	6050 9700 7150 9700
-Wire Bus Line
-	5950 9800 7150 9800
+	2550 850  2650 750 
+Wire Notes Line
+	19450 15250 21100 15250
+Wire Notes Line
+	21100 13600 19450 13600
+Text Notes 19450 13500 0    50   ~ 0
+All leave the accumulator container via cord grips
 $Sheet
-S 1350 1200 1050 1700
-U 6015F1FE
-F0 "Thermistor PCB 4" 50
-F1 "ThermistorPCB.sch" 50
-F2 "ThermistorA" I R 2400 1250 30 
-F3 "ThermistorB" I R 2400 1300 30 
-F4 "ThermistorC" I R 2400 1350 30 
-F5 "ThermistorD" I R 2400 1400 30 
-F6 "ThermistorE" I R 2400 1450 30 
-F7 "ThermistorA-E_GND" I R 2400 1500 30 
-F8 "ThermistorF" I R 2400 1600 30 
-F9 "ThermistorF_GND" I R 2400 1650 30 
-F10 "ThermistorL" I R 2400 2100 30 
-F11 "ThermistorM" I R 2400 2150 30 
-F12 "ThermistorN" I R 2400 2200 30 
-F13 "ThermistorO" I R 2400 2250 30 
-F14 "ThermistorP" I R 2400 2300 30 
-F15 "ThermistorL-P_GND" I R 2400 2350 30 
-F16 "ThermistorQ" I R 2400 2450 30 
-F17 "ThermistorQ_GND" I R 2400 2500 30 
-F18 "ThermistorG" I R 2400 1750 30 
-F19 "ThermistorH" I R 2400 1800 30 
-F20 "ThermistorI" I R 2400 1850 30 
-F21 "ThermistorJ" I R 2400 1900 30 
-F22 "ThermistorK" I R 2400 1950 30 
-F23 "ThermistorG-K_GND" I R 2400 2000 30 
-F24 "ThermistorR" I R 2400 2600 30 
-F25 "ThermistorT" I R 2400 2700 30 
-F26 "ThermistorU" I R 2400 2750 30 
-F27 "ThermistorV" I R 2400 2800 30 
-F28 "ThermistorR-V_GND" I R 2400 2850 30 
-F29 "ThermistorS" I R 2400 2650 30 
-F30 "ThermistorsA-V" O L 1350 1250 50 
+S 4150 13700 1100 2250
+U 5F7F6054
+F0 "Battery Segment 1" 50
+F1 "BatterySegment.sch" 50
+F2 "Segment+" O R 5250 13750 50 
+F3 "Segment-" O R 5250 13850 50 
+F4 "ThermistorA" O L 4150 13750 30 
+F5 "ThermistorB" O L 4150 13850 30 
+F6 "ThermistorC" O L 4150 13950 30 
+F7 "ThermistorD" O L 4150 14050 30 
+F8 "ThermistorE" O L 4150 14150 30 
+F9 "ThermistorF" O L 4150 14250 30 
+F10 "ThermistorG" O L 4150 14350 30 
+F11 "ThermistorH" O L 4150 14450 30 
+F12 "ThermistorI" O L 4150 14550 30 
+F13 "ThermistorJ" O L 4150 14650 30 
+F14 "ThermistorK" O L 4150 14750 30 
+F15 "ThermistorL" O L 4150 14850 30 
+F16 "ThermistorM" O L 4150 14950 30 
+F17 "ThermistorN" O L 4150 15050 30 
+F18 "ThermistorO" O L 4150 15150 30 
+F19 "ThermistorP" O L 4150 15250 30 
+F20 "ThermistorQ" O L 4150 15350 30 
+F21 "ThermistorR" O L 4150 15450 30 
+F22 "ThermistorS" O L 4150 15550 30 
+F23 "ThermistorU" O L 4150 15750 30 
+F24 "ThermistorV" O L 4150 15850 30 
+F25 "ThermistorT" O L 4150 15650 30 
+F26 "ThermistorF_GND" O L 4150 14300 30 
+F27 "ThermistorQ_GND" O L 4150 15400 30 
+F28 "ParallelCells_GND" I R 5250 14200 30 
+F29 "ParallelCells_Row1" I R 5250 14250 30 
+F30 "ParallelCells_Row2" I R 5250 14300 30 
+F31 "ParallelCells_Row3" I R 5250 14350 30 
+F32 "ParallelCells_Row4" I R 5250 14400 30 
+F33 "ParallelCells_Row5" I R 5250 14450 30 
+F34 "ParallelCells_Row6" I R 5250 14500 30 
+F35 "ParallelCells_Row7" I R 5250 14550 30 
+F36 "ParallelCells_Row8" I R 5250 14600 30 
+F37 "ParallelCells_Row9" I R 5250 14650 30 
+F38 "ParallelCells_Row10" I R 5250 14700 30 
+F39 "ParallelCells_Row11" I R 5250 14750 30 
+F40 "ParallelCells_Row12" I R 5250 14800 30 
+F41 "ParallelCells_Row13" I R 5250 14850 30 
+F42 "ParallelCells_Row14" I R 5250 14900 30 
+F43 "ParallelCells_Row15" I R 5250 14950 30 
+F44 "ParallelCells_Row16" I R 5250 15000 30 
+F45 "ParallelCells_Row17" I R 5250 15050 30 
+F46 "ParallelCells_Row18" I R 5250 15100 30 
+F47 "ThermistorA_GND" O L 4150 13800 30 
+F48 "ThermistorG_GND" O L 4150 14400 30 
+F49 "ThermistorL_GND" O L 4150 14900 30 
+F50 "ThermistorR_GND" O L 4150 15500 30 
+F51 "ThermistorB_GND" O L 4150 13900 30 
+F52 "ThermistorC_GND" O L 4150 14000 30 
+F53 "ThermistorD_GND" O L 4150 14100 30 
+F54 "ThermistorE_GND" O L 4150 14200 30 
+F55 "ThermistorH_GND" O L 4150 14500 30 
+F56 "ThermistorI_GND" O L 4150 14600 30 
+F57 "ThermistorJ_GND" O L 4150 14700 30 
+F58 "ThermistorK_GND" O L 4150 14800 30 
+F59 "ThermistorM_GND" O L 4150 15000 30 
+F60 "ThermistorN_GND" O L 4150 15100 30 
+F61 "ThermistorO_GND" O L 4150 15200 30 
+F62 "ThermistorP_GND" O L 4150 15300 30 
+F63 "ThermistorS_GND" O L 4150 15600 30 
+F64 "ThermistorT_GND" O L 4150 15700 30 
+F65 "ThermistorU_GND" O L 4150 15800 30 
+F66 "ThermistorV_GND" O L 4150 15900 30 
 $EndSheet
-Wire Wire Line
-	2400 1250 2550 1250
-Wire Wire Line
-	2550 1300 2400 1300
-Wire Wire Line
-	2400 1350 2550 1350
-Wire Wire Line
-	2550 1400 2400 1400
-Wire Wire Line
-	2400 1450 2550 1450
-Wire Wire Line
-	2400 1500 2550 1500
-Wire Wire Line
-	2400 1600 2550 1600
-Wire Wire Line
-	2400 1650 2550 1650
-Wire Wire Line
-	2400 1750 2550 1750
-Wire Wire Line
-	2400 1800 2550 1800
-Wire Wire Line
-	2400 1850 2550 1850
-Wire Wire Line
-	2400 1900 2550 1900
-Wire Wire Line
-	2400 1950 2550 1950
-Wire Wire Line
-	2400 2000 2550 2000
-Wire Wire Line
-	2400 2100 2550 2100
-Wire Wire Line
-	2400 2150 2550 2150
-Wire Wire Line
-	2400 2200 2550 2200
-Wire Wire Line
-	2400 2250 2550 2250
-Wire Wire Line
-	2400 2300 2550 2300
-Wire Wire Line
-	2400 2350 2550 2350
-Wire Wire Line
-	2400 2450 2550 2450
-Wire Wire Line
-	2400 2500 2550 2500
-Wire Wire Line
-	2400 2600 2550 2600
-Wire Wire Line
-	2400 2650 2550 2650
-Wire Wire Line
-	2400 2700 2550 2700
-Wire Wire Line
-	2400 2750 2550 2750
-Wire Wire Line
-	2400 2800 2550 2800
-Wire Wire Line
-	2550 2850 2400 2850
 $Sheet
-S 1350 3400 1050 1700
-U 616A3BA9
-F0 "Thermistor PCB 3" 50
-F1 "ThermistorPCB.sch" 50
-F2 "ThermistorA" I R 2400 3450 30 
-F3 "ThermistorB" I R 2400 3500 30 
-F4 "ThermistorC" I R 2400 3550 30 
-F5 "ThermistorD" I R 2400 3600 30 
-F6 "ThermistorE" I R 2400 3650 30 
-F7 "ThermistorA-E_GND" I R 2400 3700 30 
-F8 "ThermistorF" I R 2400 3800 30 
-F9 "ThermistorF_GND" I R 2400 3850 30 
-F10 "ThermistorL" I R 2400 4300 30 
-F11 "ThermistorM" I R 2400 4350 30 
-F12 "ThermistorN" I R 2400 4400 30 
-F13 "ThermistorO" I R 2400 4450 30 
-F14 "ThermistorP" I R 2400 4500 30 
-F15 "ThermistorL-P_GND" I R 2400 4550 30 
-F16 "ThermistorQ" I R 2400 4650 30 
-F17 "ThermistorQ_GND" I R 2400 4700 30 
-F18 "ThermistorG" I R 2400 3950 30 
-F19 "ThermistorH" I R 2400 4000 30 
-F20 "ThermistorI" I R 2400 4050 30 
-F21 "ThermistorJ" I R 2400 4100 30 
-F22 "ThermistorK" I R 2400 4150 30 
-F23 "ThermistorG-K_GND" I R 2400 4200 30 
-F24 "ThermistorR" I R 2400 4800 30 
-F25 "ThermistorT" I R 2400 4900 30 
-F26 "ThermistorU" I R 2400 4950 30 
-F27 "ThermistorV" I R 2400 5000 30 
-F28 "ThermistorR-V_GND" I R 2400 5050 30 
-F29 "ThermistorS" I R 2400 4850 30 
-F30 "ThermistorsA-V" O L 1350 3450 50 
-$EndSheet
-Wire Wire Line
-	2400 3450 2550 3450
-Wire Wire Line
-	2550 3500 2400 3500
-Wire Wire Line
-	2400 3550 2550 3550
-Wire Wire Line
-	2550 3600 2400 3600
-Wire Wire Line
-	2400 3650 2550 3650
-Wire Wire Line
-	2400 3700 2550 3700
-Wire Wire Line
-	2400 3800 2550 3800
-Wire Wire Line
-	2400 3850 2550 3850
-Wire Wire Line
-	2400 3950 2550 3950
-Wire Wire Line
-	2400 4000 2550 4000
-Wire Wire Line
-	2400 4050 2550 4050
-Wire Wire Line
-	2400 4100 2550 4100
-Wire Wire Line
-	2400 4150 2550 4150
-Wire Wire Line
-	2400 4200 2550 4200
-Wire Wire Line
-	2400 4300 2550 4300
-Wire Wire Line
-	2400 4350 2550 4350
-Wire Wire Line
-	2400 4400 2550 4400
-Wire Wire Line
-	2400 4450 2550 4450
-Wire Wire Line
-	2400 4500 2550 4500
-Wire Wire Line
-	2400 4550 2550 4550
-Wire Wire Line
-	2400 4650 2550 4650
-Wire Wire Line
-	2400 4700 2550 4700
-Wire Wire Line
-	2400 4800 2550 4800
-Wire Wire Line
-	2400 4850 2550 4850
-Wire Wire Line
-	2400 4900 2550 4900
-Wire Wire Line
-	2400 4950 2550 4950
-Wire Wire Line
-	2400 5000 2550 5000
-Wire Wire Line
-	2550 5050 2400 5050
-$Sheet
-S 1350 5600 1050 1700
-U 616C72F3
-F0 "Thermistor PCB 2" 50
-F1 "ThermistorPCB.sch" 50
-F2 "ThermistorA" I R 2400 5650 30 
-F3 "ThermistorB" I R 2400 5700 30 
-F4 "ThermistorC" I R 2400 5750 30 
-F5 "ThermistorD" I R 2400 5800 30 
-F6 "ThermistorE" I R 2400 5850 30 
-F7 "ThermistorA-E_GND" I R 2400 5900 30 
-F8 "ThermistorF" I R 2400 6000 30 
-F9 "ThermistorF_GND" I R 2400 6050 30 
-F10 "ThermistorL" I R 2400 6500 30 
-F11 "ThermistorM" I R 2400 6550 30 
-F12 "ThermistorN" I R 2400 6600 30 
-F13 "ThermistorO" I R 2400 6650 30 
-F14 "ThermistorP" I R 2400 6700 30 
-F15 "ThermistorL-P_GND" I R 2400 6750 30 
-F16 "ThermistorQ" I R 2400 6850 30 
-F17 "ThermistorQ_GND" I R 2400 6900 30 
-F18 "ThermistorG" I R 2400 6150 30 
-F19 "ThermistorH" I R 2400 6200 30 
-F20 "ThermistorI" I R 2400 6250 30 
-F21 "ThermistorJ" I R 2400 6300 30 
-F22 "ThermistorK" I R 2400 6350 30 
-F23 "ThermistorG-K_GND" I R 2400 6400 30 
-F24 "ThermistorR" I R 2400 7000 30 
-F25 "ThermistorT" I R 2400 7100 30 
-F26 "ThermistorU" I R 2400 7150 30 
-F27 "ThermistorV" I R 2400 7200 30 
-F28 "ThermistorR-V_GND" I R 2400 7250 30 
-F29 "ThermistorS" I R 2400 7050 30 
-F30 "ThermistorsA-V" O L 1350 5650 50 
-$EndSheet
-Wire Wire Line
-	2400 5650 2550 5650
-Wire Wire Line
-	2550 5700 2400 5700
-Wire Wire Line
-	2400 5750 2550 5750
-Wire Wire Line
-	2550 5800 2400 5800
-Wire Wire Line
-	2400 5850 2550 5850
-Wire Wire Line
-	2400 5900 2550 5900
-Wire Wire Line
-	2400 6000 2550 6000
-Wire Wire Line
-	2400 6050 2550 6050
-Wire Wire Line
-	2400 6150 2550 6150
-Wire Wire Line
-	2400 6200 2550 6200
-Wire Wire Line
-	2400 6250 2550 6250
-Wire Wire Line
-	2400 6300 2550 6300
-Wire Wire Line
-	2400 6350 2550 6350
-Wire Wire Line
-	2400 6400 2550 6400
-Wire Wire Line
-	2400 6500 2550 6500
-Wire Wire Line
-	2400 6550 2550 6550
-Wire Wire Line
-	2400 6600 2550 6600
-Wire Wire Line
-	2400 6650 2550 6650
-Wire Wire Line
-	2400 6700 2550 6700
-Wire Wire Line
-	2400 6750 2550 6750
-Wire Wire Line
-	2400 6850 2550 6850
-Wire Wire Line
-	2400 6900 2550 6900
-Wire Wire Line
-	2400 7000 2550 7000
-Wire Wire Line
-	2400 7050 2550 7050
-Wire Wire Line
-	2400 7100 2550 7100
-Wire Wire Line
-	2400 7150 2550 7150
-Wire Wire Line
-	2400 7200 2550 7200
-Wire Wire Line
-	2550 7250 2400 7250
-Wire Wire Line
-	2400 7850 2550 7850
-Wire Wire Line
-	2550 7900 2400 7900
-Wire Wire Line
-	2400 7950 2550 7950
-Wire Wire Line
-	2550 8000 2400 8000
-Wire Wire Line
-	2400 8050 2550 8050
-Wire Wire Line
-	2400 8100 2550 8100
-Wire Wire Line
-	2400 8200 2550 8200
-Wire Wire Line
-	2400 8250 2550 8250
-Wire Wire Line
-	2400 8350 2550 8350
-Wire Wire Line
-	2400 8400 2550 8400
-Wire Wire Line
-	2400 8450 2550 8450
-Wire Wire Line
-	2400 8500 2550 8500
-Wire Wire Line
-	2400 8550 2550 8550
-Wire Wire Line
-	2400 8600 2550 8600
-Wire Wire Line
-	2400 8700 2550 8700
-Wire Wire Line
-	2400 8750 2550 8750
-Wire Wire Line
-	2400 8800 2550 8800
-Wire Wire Line
-	2400 8850 2550 8850
-Wire Wire Line
-	2400 8900 2550 8900
-Wire Wire Line
-	2400 8950 2550 8950
-Wire Wire Line
-	2400 9050 2550 9050
-Wire Wire Line
-	2400 9100 2550 9100
-Wire Wire Line
-	2400 9200 2550 9200
-Wire Wire Line
-	2400 9250 2550 9250
-Wire Wire Line
-	2400 9300 2550 9300
-Wire Wire Line
-	2400 9350 2550 9350
-Wire Wire Line
-	2400 9400 2550 9400
-Wire Wire Line
-	2550 9450 2400 9450
-Wire Bus Line
-	1050 10200 1050 5750
-Wire Bus Line
-	950  10300 950  3550
-Wire Bus Line
-	1150 7950 1150 10100
-$Sheet
-S 1350 7800 1050 1700
+S 1300 13700 1350 2250
 U 616F2C65
 F0 "Thermistor PCB 1" 50
 F1 "ThermistorPCB.sch" 50
-F2 "ThermistorA" I R 2400 7850 30 
-F3 "ThermistorB" I R 2400 7900 30 
-F4 "ThermistorC" I R 2400 7950 30 
-F5 "ThermistorD" I R 2400 8000 30 
-F6 "ThermistorE" I R 2400 8050 30 
-F7 "ThermistorA-E_GND" I R 2400 8100 30 
-F8 "ThermistorF" I R 2400 8200 30 
-F9 "ThermistorF_GND" I R 2400 8250 30 
-F10 "ThermistorL" I R 2400 8700 30 
-F11 "ThermistorM" I R 2400 8750 30 
-F12 "ThermistorN" I R 2400 8800 30 
-F13 "ThermistorO" I R 2400 8850 30 
-F14 "ThermistorP" I R 2400 8900 30 
-F15 "ThermistorL-P_GND" I R 2400 8950 30 
-F16 "ThermistorQ" I R 2400 9050 30 
-F17 "ThermistorQ_GND" I R 2400 9100 30 
-F18 "ThermistorG" I R 2400 8350 30 
-F19 "ThermistorH" I R 2400 8400 30 
-F20 "ThermistorI" I R 2400 8450 30 
-F21 "ThermistorJ" I R 2400 8500 30 
-F22 "ThermistorK" I R 2400 8550 30 
-F23 "ThermistorG-K_GND" I R 2400 8600 30 
-F24 "ThermistorR" I R 2400 9200 30 
-F25 "ThermistorT" I R 2400 9300 30 
-F26 "ThermistorU" I R 2400 9350 30 
-F27 "ThermistorV" I R 2400 9400 30 
-F28 "ThermistorR-V_GND" I R 2400 9450 30 
-F29 "ThermistorS" I R 2400 9250 30 
-F30 "ThermistorsA-V" O L 1350 7850 50 
+F2 "ThermistorA" I R 2650 13750 30 
+F3 "ThermistorB" I R 2650 13850 30 
+F4 "ThermistorC" I R 2650 13950 30 
+F5 "ThermistorD" I R 2650 14050 30 
+F6 "ThermistorE" I R 2650 14150 30 
+F7 "ThermistorF" I R 2650 14250 30 
+F8 "ThermistorF_GND" I R 2650 14300 30 
+F9 "ThermistorL" I R 2650 14850 30 
+F10 "ThermistorM" I R 2650 14950 30 
+F11 "ThermistorN" I R 2650 15050 30 
+F12 "ThermistorO" I R 2650 15150 30 
+F13 "ThermistorP" I R 2650 15250 30 
+F14 "ThermistorQ" I R 2650 15350 30 
+F15 "ThermistorQ_GND" I R 2650 15400 30 
+F16 "ThermistorG" I R 2650 14350 30 
+F17 "ThermistorH" I R 2650 14450 30 
+F18 "ThermistorI" I R 2650 14550 30 
+F19 "ThermistorJ" I R 2650 14650 30 
+F20 "ThermistorK" I R 2650 14750 30 
+F21 "ThermistorR" I R 2650 15450 30 
+F22 "ThermistorT" I R 2650 15650 30 
+F23 "ThermistorU" I R 2650 15750 30 
+F24 "ThermistorV" I R 2650 15850 30 
+F25 "ThermistorS" I R 2650 15550 30 
+F26 "Thermistors_NonCritical" O L 1300 13750 50 
+F27 "Thermistors_Critical" O L 1300 13850 50 
+F28 "ThermistorA_GND" I R 2650 13800 30 
+F29 "ThermistorB_GND" I R 2650 13900 30 
+F30 "ThermistorC_GND" I R 2650 14000 30 
+F31 "ThermistorD_GND" I R 2650 14100 30 
+F32 "ThermistorE_GND" I R 2650 14200 30 
+F33 "ThermistorG_GND" I R 2650 14400 30 
+F34 "ThermistorH_GND" I R 2650 14500 30 
+F35 "ThermistorI_GND" I R 2650 14600 30 
+F36 "ThermistorJ_GND" I R 2650 14700 30 
+F37 "ThermistorK_GND" I R 2650 14800 30 
+F38 "ThermistorL_GND" I R 2650 14900 30 
+F39 "ThermistorM_GND" I R 2650 15000 30 
+F40 "ThermistorN_GND" I R 2650 15100 30 
+F41 "ThermistorO_GND" I R 2650 15200 30 
+F42 "ThermistorP_GND" I R 2650 15300 30 
+F43 "ThermistorR_GND" I R 2650 15500 30 
+F44 "ThermistorS_GND" I R 2650 15600 30 
+F45 "ThermistorT_GND" I R 2650 15700 30 
+F46 "ThermistorU_GND" I R 2650 15800 30 
+F47 "ThermistorV_GND" I R 2650 15900 30 
 $EndSheet
+$Sheet
+S 4150 10800 1100 2250
+U 60298533
+F0 "Battery Segment 2" 50
+F1 "BatterySegment.sch" 50
+F2 "Segment+" O R 5250 10850 50 
+F3 "Segment-" O R 5250 10950 50 
+F4 "ThermistorA" O L 4150 10850 30 
+F5 "ThermistorB" O L 4150 10950 30 
+F6 "ThermistorC" O L 4150 11050 30 
+F7 "ThermistorD" O L 4150 11150 30 
+F8 "ThermistorE" O L 4150 11250 30 
+F9 "ThermistorF" O L 4150 11350 30 
+F10 "ThermistorG" O L 4150 11450 30 
+F11 "ThermistorH" O L 4150 11550 30 
+F12 "ThermistorI" O L 4150 11650 30 
+F13 "ThermistorJ" O L 4150 11750 30 
+F14 "ThermistorK" O L 4150 11850 30 
+F15 "ThermistorL" O L 4150 11950 30 
+F16 "ThermistorM" O L 4150 12050 30 
+F17 "ThermistorN" O L 4150 12150 30 
+F18 "ThermistorO" O L 4150 12250 30 
+F19 "ThermistorP" O L 4150 12350 30 
+F20 "ThermistorQ" O L 4150 12450 30 
+F21 "ThermistorR" O L 4150 12550 30 
+F22 "ThermistorS" O L 4150 12650 30 
+F23 "ThermistorU" O L 4150 12850 30 
+F24 "ThermistorV" O L 4150 12950 30 
+F25 "ThermistorT" O L 4150 12750 30 
+F26 "ThermistorF_GND" O L 4150 11400 30 
+F27 "ThermistorQ_GND" O L 4150 12500 30 
+F28 "ParallelCells_GND" I R 5250 11300 30 
+F29 "ParallelCells_Row1" I R 5250 11350 30 
+F30 "ParallelCells_Row2" I R 5250 11400 30 
+F31 "ParallelCells_Row3" I R 5250 11450 30 
+F32 "ParallelCells_Row4" I R 5250 11500 30 
+F33 "ParallelCells_Row5" I R 5250 11550 30 
+F34 "ParallelCells_Row6" I R 5250 11600 30 
+F35 "ParallelCells_Row7" I R 5250 11650 30 
+F36 "ParallelCells_Row8" I R 5250 11700 30 
+F37 "ParallelCells_Row9" I R 5250 11750 30 
+F38 "ParallelCells_Row10" I R 5250 11800 30 
+F39 "ParallelCells_Row11" I R 5250 11850 30 
+F40 "ParallelCells_Row12" I R 5250 11900 30 
+F41 "ParallelCells_Row13" I R 5250 11950 30 
+F42 "ParallelCells_Row14" I R 5250 12000 30 
+F43 "ParallelCells_Row15" I R 5250 12050 30 
+F44 "ParallelCells_Row16" I R 5250 12100 30 
+F45 "ParallelCells_Row17" I R 5250 12150 30 
+F46 "ParallelCells_Row18" I R 5250 12200 30 
+F47 "ThermistorA_GND" O L 4150 10900 30 
+F48 "ThermistorG_GND" O L 4150 11500 30 
+F49 "ThermistorL_GND" O L 4150 12000 30 
+F50 "ThermistorR_GND" O L 4150 12600 30 
+F51 "ThermistorB_GND" O L 4150 11000 30 
+F52 "ThermistorC_GND" O L 4150 11100 30 
+F53 "ThermistorD_GND" O L 4150 11200 30 
+F54 "ThermistorE_GND" O L 4150 11300 30 
+F55 "ThermistorH_GND" O L 4150 11600 30 
+F56 "ThermistorI_GND" O L 4150 11700 30 
+F57 "ThermistorJ_GND" O L 4150 11800 30 
+F58 "ThermistorK_GND" O L 4150 11900 30 
+F59 "ThermistorM_GND" O L 4150 12100 30 
+F60 "ThermistorN_GND" O L 4150 12200 30 
+F61 "ThermistorO_GND" O L 4150 12300 30 
+F62 "ThermistorP_GND" O L 4150 12400 30 
+F63 "ThermistorS_GND" O L 4150 12700 30 
+F64 "ThermistorT_GND" O L 4150 12800 30 
+F65 "ThermistorU_GND" O L 4150 12900 30 
+F66 "ThermistorV_GND" O L 4150 13000 30 
+$EndSheet
+$Sheet
+S 1300 10800 1350 2250
+U 60298563
+F0 "Thermistor PCB 2" 50
+F1 "ThermistorPCB.sch" 50
+F2 "ThermistorA" I R 2650 10850 30 
+F3 "ThermistorB" I R 2650 10950 30 
+F4 "ThermistorC" I R 2650 11050 30 
+F5 "ThermistorD" I R 2650 11150 30 
+F6 "ThermistorE" I R 2650 11250 30 
+F7 "ThermistorF" I R 2650 11350 30 
+F8 "ThermistorF_GND" I R 2650 11400 30 
+F9 "ThermistorL" I R 2650 11950 30 
+F10 "ThermistorM" I R 2650 12050 30 
+F11 "ThermistorN" I R 2650 12150 30 
+F12 "ThermistorO" I R 2650 12250 30 
+F13 "ThermistorP" I R 2650 12350 30 
+F14 "ThermistorQ" I R 2650 12450 30 
+F15 "ThermistorQ_GND" I R 2650 12500 30 
+F16 "ThermistorG" I R 2650 11450 30 
+F17 "ThermistorH" I R 2650 11550 30 
+F18 "ThermistorI" I R 2650 11650 30 
+F19 "ThermistorJ" I R 2650 11750 30 
+F20 "ThermistorK" I R 2650 11850 30 
+F21 "ThermistorR" I R 2650 12550 30 
+F22 "ThermistorT" I R 2650 12750 30 
+F23 "ThermistorU" I R 2650 12850 30 
+F24 "ThermistorV" I R 2650 12950 30 
+F25 "ThermistorS" I R 2650 12650 30 
+F26 "Thermistors_NonCritical" O L 1300 10850 50 
+F27 "Thermistors_Critical" O L 1300 10950 50 
+F28 "ThermistorA_GND" I R 2650 10900 30 
+F29 "ThermistorB_GND" I R 2650 11000 30 
+F30 "ThermistorC_GND" I R 2650 11100 30 
+F31 "ThermistorD_GND" I R 2650 11200 30 
+F32 "ThermistorE_GND" I R 2650 11300 30 
+F33 "ThermistorG_GND" I R 2650 11500 30 
+F34 "ThermistorH_GND" I R 2650 11600 30 
+F35 "ThermistorI_GND" I R 2650 11700 30 
+F36 "ThermistorJ_GND" I R 2650 11800 30 
+F37 "ThermistorK_GND" I R 2650 11900 30 
+F38 "ThermistorL_GND" I R 2650 12000 30 
+F39 "ThermistorM_GND" I R 2650 12100 30 
+F40 "ThermistorN_GND" I R 2650 12200 30 
+F41 "ThermistorO_GND" I R 2650 12300 30 
+F42 "ThermistorP_GND" I R 2650 12400 30 
+F43 "ThermistorR_GND" I R 2650 12600 30 
+F44 "ThermistorS_GND" I R 2650 12700 30 
+F45 "ThermistorT_GND" I R 2650 12800 30 
+F46 "ThermistorU_GND" I R 2650 12900 30 
+F47 "ThermistorV_GND" I R 2650 13000 30 
+$EndSheet
+$Sheet
+S 4150 7900 1100 2250
+U 602D10BE
+F0 "Battery Segment 3" 50
+F1 "BatterySegment.sch" 50
+F2 "Segment+" O R 5250 7950 50 
+F3 "Segment-" O R 5250 8050 50 
+F4 "ThermistorA" O L 4150 7950 30 
+F5 "ThermistorB" O L 4150 8050 30 
+F6 "ThermistorC" O L 4150 8150 30 
+F7 "ThermistorD" O L 4150 8250 30 
+F8 "ThermistorE" O L 4150 8350 30 
+F9 "ThermistorF" O L 4150 8450 30 
+F10 "ThermistorG" O L 4150 8550 30 
+F11 "ThermistorH" O L 4150 8650 30 
+F12 "ThermistorI" O L 4150 8750 30 
+F13 "ThermistorJ" O L 4150 8850 30 
+F14 "ThermistorK" O L 4150 8950 30 
+F15 "ThermistorL" O L 4150 9050 30 
+F16 "ThermistorM" O L 4150 9150 30 
+F17 "ThermistorN" O L 4150 9250 30 
+F18 "ThermistorO" O L 4150 9350 30 
+F19 "ThermistorP" O L 4150 9450 30 
+F20 "ThermistorQ" O L 4150 9550 30 
+F21 "ThermistorR" O L 4150 9650 30 
+F22 "ThermistorS" O L 4150 9750 30 
+F23 "ThermistorU" O L 4150 9950 30 
+F24 "ThermistorV" O L 4150 10050 30 
+F25 "ThermistorT" O L 4150 9850 30 
+F26 "ThermistorF_GND" O L 4150 8500 30 
+F27 "ThermistorQ_GND" O L 4150 9600 30 
+F28 "ParallelCells_GND" I R 5250 8400 30 
+F29 "ParallelCells_Row1" I R 5250 8450 30 
+F30 "ParallelCells_Row2" I R 5250 8500 30 
+F31 "ParallelCells_Row3" I R 5250 8550 30 
+F32 "ParallelCells_Row4" I R 5250 8600 30 
+F33 "ParallelCells_Row5" I R 5250 8650 30 
+F34 "ParallelCells_Row6" I R 5250 8700 30 
+F35 "ParallelCells_Row7" I R 5250 8750 30 
+F36 "ParallelCells_Row8" I R 5250 8800 30 
+F37 "ParallelCells_Row9" I R 5250 8850 30 
+F38 "ParallelCells_Row10" I R 5250 8900 30 
+F39 "ParallelCells_Row11" I R 5250 8950 30 
+F40 "ParallelCells_Row12" I R 5250 9000 30 
+F41 "ParallelCells_Row13" I R 5250 9050 30 
+F42 "ParallelCells_Row14" I R 5250 9100 30 
+F43 "ParallelCells_Row15" I R 5250 9150 30 
+F44 "ParallelCells_Row16" I R 5250 9200 30 
+F45 "ParallelCells_Row17" I R 5250 9250 30 
+F46 "ParallelCells_Row18" I R 5250 9300 30 
+F47 "ThermistorA_GND" O L 4150 8000 30 
+F48 "ThermistorG_GND" O L 4150 8600 30 
+F49 "ThermistorL_GND" O L 4150 9100 30 
+F50 "ThermistorR_GND" O L 4150 9700 30 
+F51 "ThermistorB_GND" O L 4150 8100 30 
+F52 "ThermistorC_GND" O L 4150 8200 30 
+F53 "ThermistorD_GND" O L 4150 8300 30 
+F54 "ThermistorE_GND" O L 4150 8400 30 
+F55 "ThermistorH_GND" O L 4150 8700 30 
+F56 "ThermistorI_GND" O L 4150 8800 30 
+F57 "ThermistorJ_GND" O L 4150 8900 30 
+F58 "ThermistorK_GND" O L 4150 9000 30 
+F59 "ThermistorM_GND" O L 4150 9200 30 
+F60 "ThermistorN_GND" O L 4150 9300 30 
+F61 "ThermistorO_GND" O L 4150 9400 30 
+F62 "ThermistorP_GND" O L 4150 9500 30 
+F63 "ThermistorS_GND" O L 4150 9800 30 
+F64 "ThermistorT_GND" O L 4150 9900 30 
+F65 "ThermistorU_GND" O L 4150 10000 30 
+F66 "ThermistorV_GND" O L 4150 10100 30 
+$EndSheet
+$Sheet
+S 1300 7900 1350 2250
+U 602D10EE
+F0 "Thermistor PCB 3" 50
+F1 "ThermistorPCB.sch" 50
+F2 "ThermistorA" I R 2650 7950 30 
+F3 "ThermistorB" I R 2650 8050 30 
+F4 "ThermistorC" I R 2650 8150 30 
+F5 "ThermistorD" I R 2650 8250 30 
+F6 "ThermistorE" I R 2650 8350 30 
+F7 "ThermistorF" I R 2650 8450 30 
+F8 "ThermistorF_GND" I R 2650 8500 30 
+F9 "ThermistorL" I R 2650 9050 30 
+F10 "ThermistorM" I R 2650 9150 30 
+F11 "ThermistorN" I R 2650 9250 30 
+F12 "ThermistorO" I R 2650 9350 30 
+F13 "ThermistorP" I R 2650 9450 30 
+F14 "ThermistorQ" I R 2650 9550 30 
+F15 "ThermistorQ_GND" I R 2650 9600 30 
+F16 "ThermistorG" I R 2650 8550 30 
+F17 "ThermistorH" I R 2650 8650 30 
+F18 "ThermistorI" I R 2650 8750 30 
+F19 "ThermistorJ" I R 2650 8850 30 
+F20 "ThermistorK" I R 2650 8950 30 
+F21 "ThermistorR" I R 2650 9650 30 
+F22 "ThermistorT" I R 2650 9850 30 
+F23 "ThermistorU" I R 2650 9950 30 
+F24 "ThermistorV" I R 2650 10050 30 
+F25 "ThermistorS" I R 2650 9750 30 
+F26 "Thermistors_NonCritical" O L 1300 7950 50 
+F27 "Thermistors_Critical" O L 1300 8050 50 
+F28 "ThermistorA_GND" I R 2650 8000 30 
+F29 "ThermistorB_GND" I R 2650 8100 30 
+F30 "ThermistorC_GND" I R 2650 8200 30 
+F31 "ThermistorD_GND" I R 2650 8300 30 
+F32 "ThermistorE_GND" I R 2650 8400 30 
+F33 "ThermistorG_GND" I R 2650 8600 30 
+F34 "ThermistorH_GND" I R 2650 8700 30 
+F35 "ThermistorI_GND" I R 2650 8800 30 
+F36 "ThermistorJ_GND" I R 2650 8900 30 
+F37 "ThermistorK_GND" I R 2650 9000 30 
+F38 "ThermistorL_GND" I R 2650 9100 30 
+F39 "ThermistorM_GND" I R 2650 9200 30 
+F40 "ThermistorN_GND" I R 2650 9300 30 
+F41 "ThermistorO_GND" I R 2650 9400 30 
+F42 "ThermistorP_GND" I R 2650 9500 30 
+F43 "ThermistorR_GND" I R 2650 9700 30 
+F44 "ThermistorS_GND" I R 2650 9800 30 
+F45 "ThermistorT_GND" I R 2650 9900 30 
+F46 "ThermistorU_GND" I R 2650 10000 30 
+F47 "ThermistorV_GND" I R 2650 10100 30 
+$EndSheet
+$Sheet
+S 4150 5000 1100 2250
+U 6031BDC8
+F0 "Battery Segment 4" 50
+F1 "BatterySegment.sch" 50
+F2 "Segment+" O R 5250 5050 50 
+F3 "Segment-" O R 5250 5150 50 
+F4 "ThermistorA" O L 4150 5050 30 
+F5 "ThermistorB" O L 4150 5150 30 
+F6 "ThermistorC" O L 4150 5250 30 
+F7 "ThermistorD" O L 4150 5350 30 
+F8 "ThermistorE" O L 4150 5450 30 
+F9 "ThermistorF" O L 4150 5550 30 
+F10 "ThermistorG" O L 4150 5650 30 
+F11 "ThermistorH" O L 4150 5750 30 
+F12 "ThermistorI" O L 4150 5850 30 
+F13 "ThermistorJ" O L 4150 5950 30 
+F14 "ThermistorK" O L 4150 6050 30 
+F15 "ThermistorL" O L 4150 6150 30 
+F16 "ThermistorM" O L 4150 6250 30 
+F17 "ThermistorN" O L 4150 6350 30 
+F18 "ThermistorO" O L 4150 6450 30 
+F19 "ThermistorP" O L 4150 6550 30 
+F20 "ThermistorQ" O L 4150 6650 30 
+F21 "ThermistorR" O L 4150 6750 30 
+F22 "ThermistorS" O L 4150 6850 30 
+F23 "ThermistorU" O L 4150 7050 30 
+F24 "ThermistorV" O L 4150 7150 30 
+F25 "ThermistorT" O L 4150 6950 30 
+F26 "ThermistorF_GND" O L 4150 5600 30 
+F27 "ThermistorQ_GND" O L 4150 6700 30 
+F28 "ParallelCells_GND" I R 5250 5500 30 
+F29 "ParallelCells_Row1" I R 5250 5550 30 
+F30 "ParallelCells_Row2" I R 5250 5600 30 
+F31 "ParallelCells_Row3" I R 5250 5650 30 
+F32 "ParallelCells_Row4" I R 5250 5700 30 
+F33 "ParallelCells_Row5" I R 5250 5750 30 
+F34 "ParallelCells_Row6" I R 5250 5800 30 
+F35 "ParallelCells_Row7" I R 5250 5850 30 
+F36 "ParallelCells_Row8" I R 5250 5900 30 
+F37 "ParallelCells_Row9" I R 5250 5950 30 
+F38 "ParallelCells_Row10" I R 5250 6000 30 
+F39 "ParallelCells_Row11" I R 5250 6050 30 
+F40 "ParallelCells_Row12" I R 5250 6100 30 
+F41 "ParallelCells_Row13" I R 5250 6150 30 
+F42 "ParallelCells_Row14" I R 5250 6200 30 
+F43 "ParallelCells_Row15" I R 5250 6250 30 
+F44 "ParallelCells_Row16" I R 5250 6300 30 
+F45 "ParallelCells_Row17" I R 5250 6350 30 
+F46 "ParallelCells_Row18" I R 5250 6400 30 
+F47 "ThermistorA_GND" O L 4150 5100 30 
+F48 "ThermistorG_GND" O L 4150 5700 30 
+F49 "ThermistorL_GND" O L 4150 6200 30 
+F50 "ThermistorR_GND" O L 4150 6800 30 
+F51 "ThermistorB_GND" O L 4150 5200 30 
+F52 "ThermistorC_GND" O L 4150 5300 30 
+F53 "ThermistorD_GND" O L 4150 5400 30 
+F54 "ThermistorE_GND" O L 4150 5500 30 
+F55 "ThermistorH_GND" O L 4150 5800 30 
+F56 "ThermistorI_GND" O L 4150 5900 30 
+F57 "ThermistorJ_GND" O L 4150 6000 30 
+F58 "ThermistorK_GND" O L 4150 6100 30 
+F59 "ThermistorM_GND" O L 4150 6300 30 
+F60 "ThermistorN_GND" O L 4150 6400 30 
+F61 "ThermistorO_GND" O L 4150 6500 30 
+F62 "ThermistorP_GND" O L 4150 6600 30 
+F63 "ThermistorS_GND" O L 4150 6900 30 
+F64 "ThermistorT_GND" O L 4150 7000 30 
+F65 "ThermistorU_GND" O L 4150 7100 30 
+F66 "ThermistorV_GND" O L 4150 7200 30 
+$EndSheet
+$Sheet
+S 1300 5000 1350 2250
+U 6031BDF8
+F0 "Thermistor PCB 4" 50
+F1 "ThermistorPCB.sch" 50
+F2 "ThermistorA" I R 2650 5050 30 
+F3 "ThermistorB" I R 2650 5150 30 
+F4 "ThermistorC" I R 2650 5250 30 
+F5 "ThermistorD" I R 2650 5350 30 
+F6 "ThermistorE" I R 2650 5450 30 
+F7 "ThermistorF" I R 2650 5550 30 
+F8 "ThermistorF_GND" I R 2650 5600 30 
+F9 "ThermistorL" I R 2650 6150 30 
+F10 "ThermistorM" I R 2650 6250 30 
+F11 "ThermistorN" I R 2650 6350 30 
+F12 "ThermistorO" I R 2650 6450 30 
+F13 "ThermistorP" I R 2650 6550 30 
+F14 "ThermistorQ" I R 2650 6650 30 
+F15 "ThermistorQ_GND" I R 2650 6700 30 
+F16 "ThermistorG" I R 2650 5650 30 
+F17 "ThermistorH" I R 2650 5750 30 
+F18 "ThermistorI" I R 2650 5850 30 
+F19 "ThermistorJ" I R 2650 5950 30 
+F20 "ThermistorK" I R 2650 6050 30 
+F21 "ThermistorR" I R 2650 6750 30 
+F22 "ThermistorT" I R 2650 6950 30 
+F23 "ThermistorU" I R 2650 7050 30 
+F24 "ThermistorV" I R 2650 7150 30 
+F25 "ThermistorS" I R 2650 6850 30 
+F26 "Thermistors_NonCritical" O L 1300 5050 50 
+F27 "Thermistors_Critical" O L 1300 5150 50 
+F28 "ThermistorA_GND" I R 2650 5100 30 
+F29 "ThermistorB_GND" I R 2650 5200 30 
+F30 "ThermistorC_GND" I R 2650 5300 30 
+F31 "ThermistorD_GND" I R 2650 5400 30 
+F32 "ThermistorE_GND" I R 2650 5500 30 
+F33 "ThermistorG_GND" I R 2650 5700 30 
+F34 "ThermistorH_GND" I R 2650 5800 30 
+F35 "ThermistorI_GND" I R 2650 5900 30 
+F36 "ThermistorJ_GND" I R 2650 6000 30 
+F37 "ThermistorK_GND" I R 2650 6100 30 
+F38 "ThermistorL_GND" I R 2650 6200 30 
+F39 "ThermistorM_GND" I R 2650 6300 30 
+F40 "ThermistorN_GND" I R 2650 6400 30 
+F41 "ThermistorO_GND" I R 2650 6500 30 
+F42 "ThermistorP_GND" I R 2650 6600 30 
+F43 "ThermistorR_GND" I R 2650 6800 30 
+F44 "ThermistorS_GND" I R 2650 6900 30 
+F45 "ThermistorT_GND" I R 2650 7000 30 
+F46 "ThermistorU_GND" I R 2650 7100 30 
+F47 "ThermistorV_GND" I R 2650 7200 30 
+$EndSheet
+Wire Wire Line
+	5400 10950 5400 13050
+Wire Wire Line
+	5250 5500 6600 5500
+Wire Wire Line
+	5250 5550 6600 5550
+Wire Wire Line
+	5250 5600 6600 5600
+Wire Wire Line
+	5250 5650 6600 5650
+Wire Wire Line
+	5250 5700 6600 5700
+Wire Wire Line
+	5250 5750 6600 5750
+Wire Wire Line
+	5250 5800 6600 5800
+Wire Wire Line
+	5250 5850 6600 5850
+Wire Wire Line
+	5250 5900 6600 5900
+Wire Wire Line
+	5250 5950 6600 5950
+Wire Wire Line
+	5250 6000 6600 6000
+Wire Wire Line
+	5250 6050 6600 6050
+Wire Wire Line
+	5250 6100 6600 6100
+Wire Wire Line
+	5250 6150 6600 6150
+Wire Wire Line
+	5250 6200 6600 6200
+Wire Wire Line
+	5250 6250 6600 6250
+Wire Wire Line
+	5250 6300 6600 6300
+Wire Wire Line
+	5250 6350 6600 6350
+Wire Wire Line
+	5250 6400 6600 6400
+Wire Wire Line
+	5250 8400 6600 8400
+Wire Wire Line
+	5250 8450 6600 8450
+Wire Wire Line
+	5250 8500 6600 8500
+Wire Wire Line
+	5250 8550 6600 8550
+Wire Wire Line
+	5250 8600 6600 8600
+Wire Wire Line
+	5250 8650 6600 8650
+Wire Wire Line
+	5250 8700 6600 8700
+Wire Wire Line
+	5250 8750 6600 8750
+Wire Wire Line
+	5250 8800 6600 8800
+Wire Wire Line
+	5250 8850 6600 8850
+Wire Wire Line
+	5250 8900 6600 8900
+Wire Wire Line
+	5250 8950 6600 8950
+Wire Wire Line
+	5250 9000 6600 9000
+Wire Wire Line
+	5250 9050 6600 9050
+Wire Wire Line
+	5250 9100 6600 9100
+Wire Wire Line
+	5250 9150 6600 9150
+Wire Wire Line
+	5250 9200 6600 9200
+Wire Wire Line
+	5250 9250 6600 9250
+Wire Wire Line
+	5250 9300 6600 9300
+Wire Wire Line
+	5250 11300 6600 11300
+Wire Wire Line
+	5250 11350 6600 11350
+Wire Wire Line
+	5250 11400 6600 11400
+Wire Wire Line
+	5250 11450 6600 11450
+Wire Wire Line
+	5250 11500 6600 11500
+Wire Wire Line
+	5250 11550 6600 11550
+Wire Wire Line
+	5250 11600 6600 11600
+Wire Wire Line
+	5250 11650 6600 11650
+Wire Wire Line
+	5250 11700 6600 11700
+Wire Wire Line
+	5250 11750 6600 11750
+Wire Wire Line
+	5250 11800 6600 11800
+Wire Wire Line
+	5250 11850 6600 11850
+Wire Wire Line
+	5250 11900 6600 11900
+Wire Wire Line
+	5250 11950 6600 11950
+Wire Wire Line
+	5250 12000 6600 12000
+Wire Wire Line
+	5250 12050 6600 12050
+Wire Wire Line
+	5250 12100 6600 12100
+Wire Wire Line
+	5250 12150 6600 12150
+Wire Wire Line
+	5250 12200 6600 12200
+Wire Wire Line
+	5400 13050 6100 13050
+Wire Wire Line
+	5250 14200 6600 14200
+Wire Wire Line
+	5250 14250 6600 14250
+Wire Wire Line
+	5250 14300 6600 14300
+Wire Wire Line
+	5250 14350 6600 14350
+Wire Wire Line
+	5250 14400 6600 14400
+Wire Wire Line
+	5250 14450 6600 14450
+Wire Wire Line
+	5250 14500 6600 14500
+Wire Wire Line
+	5250 14550 6600 14550
+Wire Wire Line
+	5250 14600 6600 14600
+Wire Wire Line
+	5250 14650 6600 14650
+Wire Wire Line
+	5250 14700 6600 14700
+Wire Wire Line
+	5250 14750 6600 14750
+Wire Wire Line
+	5250 14800 6600 14800
+Wire Wire Line
+	5250 14850 6600 14850
+Wire Wire Line
+	5250 14900 6600 14900
+Wire Wire Line
+	5250 14950 6600 14950
+Wire Wire Line
+	5250 15000 6600 15000
+Wire Wire Line
+	5250 15050 6600 15050
+Wire Wire Line
+	5250 15100 6600 15100
+Wire Wire Line
+	2650 5050 4150 5050
+Wire Wire Line
+	4150 5100 2650 5100
+Wire Wire Line
+	2650 5150 4150 5150
+Wire Wire Line
+	2650 5200 4150 5200
+Wire Wire Line
+	2650 5250 4150 5250
+Wire Wire Line
+	2650 5300 4150 5300
+Wire Wire Line
+	2650 5350 4150 5350
+Wire Wire Line
+	2650 5400 4150 5400
+Wire Wire Line
+	2650 5450 4150 5450
+Wire Wire Line
+	2650 5500 4150 5500
+Wire Wire Line
+	2650 5550 4150 5550
+Wire Wire Line
+	2650 5600 4150 5600
+Wire Wire Line
+	2650 5650 4150 5650
+Wire Wire Line
+	2650 5700 4150 5700
+Wire Wire Line
+	2650 5750 4150 5750
+Wire Wire Line
+	2650 5800 4150 5800
+Wire Wire Line
+	2650 5850 4150 5850
+Wire Wire Line
+	4150 5900 2650 5900
+Wire Wire Line
+	2650 5950 4150 5950
+Wire Wire Line
+	2650 6000 4150 6000
+Wire Wire Line
+	2650 6050 4150 6050
+Wire Wire Line
+	2650 6100 4150 6100
+Wire Wire Line
+	2650 6150 4150 6150
+Wire Wire Line
+	2650 6200 4150 6200
+Wire Wire Line
+	2650 6250 4150 6250
+Wire Wire Line
+	2650 6300 4150 6300
+Wire Wire Line
+	2650 6350 4150 6350
+Wire Wire Line
+	2650 6400 4150 6400
+Wire Wire Line
+	2650 6450 4150 6450
+Wire Wire Line
+	2650 6500 4150 6500
+Wire Wire Line
+	2650 6550 4150 6550
+Wire Wire Line
+	2650 6600 4150 6600
+Wire Wire Line
+	2650 6650 4150 6650
+Wire Wire Line
+	2650 6700 4150 6700
+Wire Wire Line
+	2650 6750 4150 6750
+Wire Wire Line
+	2650 6800 4150 6800
+Wire Wire Line
+	2650 6850 4150 6850
+Wire Wire Line
+	2650 6900 4150 6900
+Wire Wire Line
+	2650 6950 4150 6950
+Wire Wire Line
+	2650 7000 4150 7000
+Wire Wire Line
+	2650 7050 4150 7050
+Wire Wire Line
+	2650 7100 4150 7100
+Wire Wire Line
+	2650 7150 4150 7150
+Wire Wire Line
+	2650 7200 4150 7200
+Wire Wire Line
+	2650 7950 4150 7950
+Wire Wire Line
+	2650 8000 4150 8000
+Wire Wire Line
+	2650 8050 4150 8050
+Wire Wire Line
+	2650 8100 4150 8100
+Wire Wire Line
+	2650 8150 4150 8150
+Wire Wire Line
+	2650 8200 4150 8200
+Wire Wire Line
+	2650 8250 4150 8250
+Wire Wire Line
+	2650 8300 4150 8300
+Wire Wire Line
+	2650 8350 4150 8350
+Wire Wire Line
+	2650 8400 4150 8400
+Wire Wire Line
+	2650 8450 4150 8450
+Wire Wire Line
+	2650 8500 4150 8500
+Wire Wire Line
+	2650 8550 4150 8550
+Wire Wire Line
+	2650 8600 4150 8600
+Wire Wire Line
+	2650 8650 4150 8650
+Wire Wire Line
+	2650 8700 4150 8700
+Wire Wire Line
+	2650 8750 4150 8750
+Wire Wire Line
+	2650 8800 4150 8800
+Wire Wire Line
+	2650 8850 4150 8850
+Wire Wire Line
+	2650 8900 4150 8900
+Wire Wire Line
+	2650 8950 4150 8950
+Wire Wire Line
+	2650 9000 4150 9000
+Wire Wire Line
+	2650 9050 4150 9050
+Wire Wire Line
+	2650 9100 4150 9100
+Wire Wire Line
+	2650 9150 4150 9150
+Wire Wire Line
+	2650 9200 4150 9200
+Wire Wire Line
+	2650 9250 4150 9250
+Wire Wire Line
+	2650 9300 4150 9300
+Wire Wire Line
+	2650 9350 4150 9350
+Wire Wire Line
+	2650 9400 4150 9400
+Wire Wire Line
+	2650 9450 4150 9450
+Wire Wire Line
+	2650 9500 4150 9500
+Wire Wire Line
+	2650 9550 4150 9550
+Wire Wire Line
+	2650 9600 4150 9600
+Wire Wire Line
+	2650 9650 4150 9650
+Wire Wire Line
+	2650 9700 4150 9700
+Wire Wire Line
+	2650 9750 4150 9750
+Wire Wire Line
+	2650 9800 4150 9800
+Wire Wire Line
+	2650 9850 4150 9850
+Wire Wire Line
+	2650 9900 4150 9900
+Wire Wire Line
+	2650 9950 4150 9950
+Wire Wire Line
+	2650 10000 4150 10000
+Wire Wire Line
+	2650 10050 4150 10050
+Wire Wire Line
+	2650 10100 4150 10100
+Wire Wire Line
+	2650 13000 4150 13000
+Wire Wire Line
+	2650 12450 4150 12450
+Wire Wire Line
+	2650 12950 4150 12950
+Wire Wire Line
+	2650 12900 4150 12900
+Wire Wire Line
+	2650 12850 4150 12850
+Wire Wire Line
+	2650 12800 4150 12800
+Wire Wire Line
+	2650 12750 4150 12750
+Wire Wire Line
+	2650 12700 4150 12700
+Wire Wire Line
+	2650 12650 4150 12650
+Wire Wire Line
+	2650 12600 4150 12600
+Wire Wire Line
+	2650 12550 4150 12550
+Wire Wire Line
+	2650 12500 4150 12500
+Wire Wire Line
+	2650 12400 4150 12400
+Wire Wire Line
+	2650 12350 4150 12350
+Wire Wire Line
+	2650 12300 4150 12300
+Wire Wire Line
+	2650 12250 4150 12250
+Wire Wire Line
+	2650 12200 4150 12200
+Wire Wire Line
+	2650 12150 4150 12150
+Wire Wire Line
+	2650 12100 4150 12100
+Wire Wire Line
+	2650 12050 4150 12050
+Wire Wire Line
+	2650 12000 4150 12000
+Wire Wire Line
+	2650 11950 4150 11950
+Wire Wire Line
+	2650 11900 4150 11900
+Wire Wire Line
+	2650 11850 4150 11850
+Wire Wire Line
+	2650 11800 4150 11800
+Wire Wire Line
+	2650 11750 4150 11750
+Wire Wire Line
+	2650 11700 4150 11700
+Wire Wire Line
+	2650 11650 4150 11650
+Wire Wire Line
+	2650 11600 4150 11600
+Wire Wire Line
+	2650 11550 4150 11550
+Wire Wire Line
+	2650 11500 4150 11500
+Wire Wire Line
+	2650 11450 4150 11450
+Wire Wire Line
+	2650 11400 4150 11400
+Wire Wire Line
+	2650 11350 4150 11350
+Wire Wire Line
+	2650 11300 4150 11300
+Wire Wire Line
+	2650 11250 4150 11250
+Wire Wire Line
+	2650 11200 4150 11200
+Wire Wire Line
+	2650 11150 4150 11150
+Wire Wire Line
+	2650 11100 4150 11100
+Wire Wire Line
+	2650 11050 4150 11050
+Wire Wire Line
+	2650 11000 4150 11000
+Wire Wire Line
+	2650 10950 4150 10950
+Wire Wire Line
+	2650 10900 4150 10900
+Wire Wire Line
+	2650 10850 4150 10850
+Wire Wire Line
+	2650 13750 4150 13750
+Wire Wire Line
+	2650 13800 4150 13800
+Wire Wire Line
+	2650 13850 4150 13850
+Wire Wire Line
+	2650 13900 4150 13900
+Wire Wire Line
+	2650 13950 4150 13950
+Wire Wire Line
+	2650 14000 4150 14000
+Wire Wire Line
+	2650 14050 4150 14050
+Wire Wire Line
+	2650 14100 4150 14100
+Wire Wire Line
+	2650 14150 4150 14150
+Wire Wire Line
+	2650 14200 4150 14200
+Wire Wire Line
+	2650 14250 4150 14250
+Wire Wire Line
+	2650 14300 4150 14300
+Wire Wire Line
+	2650 14350 4150 14350
+Wire Wire Line
+	2650 14400 4150 14400
+Wire Wire Line
+	2650 14450 4150 14450
+Wire Wire Line
+	2650 14500 4150 14500
+Wire Wire Line
+	2650 14550 4150 14550
+Wire Wire Line
+	2650 14600 4150 14600
+Wire Wire Line
+	2650 14650 4150 14650
+Wire Wire Line
+	2650 14700 4150 14700
+Wire Wire Line
+	2650 14750 4150 14750
+Wire Wire Line
+	2650 14800 4150 14800
+Wire Wire Line
+	2650 14850 4150 14850
+Wire Wire Line
+	2650 14900 4150 14900
+Wire Wire Line
+	2650 14950 4150 14950
+Wire Wire Line
+	2650 15000 4150 15000
+Wire Wire Line
+	2650 15050 4150 15050
+Wire Wire Line
+	2650 15100 4150 15100
+Wire Wire Line
+	2650 15150 4150 15150
+Wire Wire Line
+	2650 15200 4150 15200
+Wire Wire Line
+	2650 15250 4150 15250
+Wire Wire Line
+	2650 15300 4150 15300
+Wire Wire Line
+	2650 15350 4150 15350
+Wire Wire Line
+	2650 15400 4150 15400
+Wire Wire Line
+	2650 15450 4150 15450
+Wire Wire Line
+	2650 15500 4150 15500
+Wire Wire Line
+	2650 15550 4150 15550
+Wire Wire Line
+	2650 15600 4150 15600
+Wire Wire Line
+	2650 15650 4150 15650
+Wire Wire Line
+	2650 15700 4150 15700
+Wire Wire Line
+	2650 15750 4150 15750
+Wire Wire Line
+	2650 15800 4150 15800
+Wire Wire Line
+	2650 15850 4150 15850
+Wire Wire Line
+	2650 15900 4150 15900
+Wire Bus Line
+	1300 5150 600  5150
+Wire Bus Line
+	600  5150 600  16400
+Wire Bus Line
+	1300 8050 650  8050
+Wire Bus Line
+	650  8050 650  16300
+Wire Bus Line
+	1300 10950 700  10950
+Wire Bus Line
+	1300 13850 750  13850
+Wire Bus Line
+	750  13850 750  16100
+Wire Bus Line
+	700  10950 700  16200
+Wire Bus Line
+	1300 13750 800  13750
+Wire Bus Line
+	800  13750 800  4300
+Wire Bus Line
+	1300 10850 850  10850
+Wire Bus Line
+	850  10850 850  4350
+Wire Bus Line
+	1300 7950 900  7950
+Wire Bus Line
+	900  7950 900  4400
+Wire Bus Line
+	1300 5050 950  5050
+Wire Bus Line
+	950  5050 950  4450
+Wire Bus Line
+	4500 4450 950  4450
+Wire Bus Line
+	900  4400 4400 4400
+Wire Bus Line
+	850  4350 2350 4350
+Wire Bus Line
+	800  4300 2250 4300
+Wire Wire Line
+	5250 5050 8850 5050
+Wire Wire Line
+	9150 5050 11850 5050
+Wire Wire Line
+	11850 5050 11850 6900
+Connection ~ 14100 2150
+Wire Wire Line
+	14100 2150 14100 2350
+Wire Wire Line
+	14100 1850 14100 2150
+Wire Wire Line
+	14200 1850 14200 2050
+Connection ~ 14200 2050
+Wire Wire Line
+	14200 2050 14200 2350
+Wire Wire Line
+	10000 5500 8050 5500
+Wire Wire Line
+	10000 2050 14200 2050
+Wire Wire Line
+	10100 5600 8050 5600
+Wire Wire Line
+	10100 2150 14100 2150
+Wire Wire Line
+	10000 5500 10000 8400
+Wire Wire Line
+	10000 8400 8050 8400
+Connection ~ 10000 5500
+Wire Wire Line
+	8050 8500 10100 8500
+Wire Wire Line
+	10100 8500 10100 5600
+Connection ~ 10100 5600
+Wire Wire Line
+	10000 8400 10000 11300
+Wire Wire Line
+	10000 11300 8050 11300
+Connection ~ 10000 8400
+Wire Wire Line
+	10100 8500 10100 11400
+Wire Wire Line
+	10100 11400 8050 11400
+Connection ~ 10100 8500
+Wire Wire Line
+	10000 11300 10000 14200
+Wire Wire Line
+	10000 14200 8050 14200
+Connection ~ 10000 11300
+Wire Wire Line
+	8050 14300 10100 14300
+Wire Wire Line
+	10100 14300 10100 11400
+Connection ~ 10100 11400
+Wire Wire Line
+	2350 2900 2750 2900
+Wire Wire Line
+	2350 2800 2650 2800
+Wire Wire Line
+	2350 2700 2750 2700
+Wire Wire Line
+	2350 2600 2650 2600
+Wire Wire Line
+	2350 2500 2750 2500
+Wire Wire Line
+	2350 2400 2650 2400
+Wire Wire Line
+	2350 2300 2750 2300
+Wire Wire Line
+	2350 2200 2650 2200
+$Comp
+L Device:Fuse F6
+U 1 1 5FC95B82
+P 11850 13450
+F 0 "F6" H 11791 13404 50  0000 R CNN
+F 1 "Fuse" H 11791 13495 50  0000 R CNN
+F 2 "" V 11780 13450 50  0001 C CNN
+F 3 "~" H 11850 13450 50  0001 C CNN
+	1    11850 13450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	16550 8350 16550 13850
+Wire Wire Line
+	13750 13450 15450 13450
+Text Label 14500 13850 0    50   ~ 0
+12_2
+Wire Wire Line
+	13150 13450 12850 13450
+$Comp
+L Relay:DIPxx-1Axx-11x K9
+U 1 1 5EBDE2B9
+P 13450 13650
+F 0 "K9" V 12883 13650 50  0000 C CNN
+F 1 "SPST-NO (AIR)" V 12974 13650 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 13800 13600 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 13450 13650 50  0001 C CNN
+	1    13450 13650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	11850 11950 11850 13300
+Wire Wire Line
+	5250 13750 6100 13750
+Wire Wire Line
+	11850 7450 11850 11850
+Connection ~ 16550 8350
+Wire Wire Line
+	17200 8350 18750 8350
+Wire Wire Line
+	17300 7900 17850 7900
+Wire Wire Line
+	17600 6350 17600 11850
+Wire Wire Line
+	13750 6900 15950 6900
+Connection ~ 15450 3900
+Wire Wire Line
+	14400 3550 14400 7500
+Wire Wire Line
+	13850 3850 13850 6500
+Wire Wire Line
+	12850 2350 12850 6500
+Connection ~ 12850 6500
+Wire Wire Line
+	10000 2050 10000 5500
+Wire Wire Line
+	10100 2150 10100 5600
+Wire Bus Line
+	13650 16400 13650 15150
+Wire Bus Line
+	600  16400 13650 16400
+Wire Bus Line
+	13550 16300 13550 15050
+Wire Bus Line
+	650  16300 13550 16300
+Wire Bus Line
+	13450 16200 13450 14950
+Wire Bus Line
+	700  16200 13450 16200
+Wire Bus Line
+	750  16100 13350 16100
+Wire Bus Line
+	13450 14950 19650 14950
+Wire Bus Line
+	20700 7250 20700 12000
+Wire Bus Line
+	19250 13700 19650 13700
+Wire Bus Line
+	19100 14000 19650 14000
 Entry Bus Bus
-	1150 7950 1250 7850
-Wire Bus Line
-	1250 7850 1350 7850
+	10600 6300 10700 6400
 Entry Bus Bus
-	1050 5750 1150 5650
+	10600 6400 10700 6500
 Wire Bus Line
-	1350 5650 1150 5650
+	8050 9200 10550 9200
 Wire Bus Line
-	1350 3450 1050 3450
+	8050 9300 10550 9300
 Entry Bus Bus
-	950  3550 1050 3450
+	10550 9200 10650 9300
 Entry Bus Bus
-	850  1350 950  1250
+	10550 9300 10650 9400
 Wire Bus Line
-	950  1250 1350 1250
+	8050 12100 10500 12100
 Wire Bus Line
-	850  10400 7150 10400
+	8050 12200 10500 12200
+Entry Bus Bus
+	10500 12100 10600 12200
+Entry Bus Bus
+	10500 12200 10600 12300
 Wire Bus Line
-	850  1350 850  10400
+	8050 15000 10500 15000
 Wire Bus Line
-	950  10300 7150 10300
+	8050 15100 10500 15100
+Entry Bus Bus
+	10500 15100 10600 15000
+Entry Bus Bus
+	10500 15000 10600 14900
 Wire Bus Line
-	1050 10200 7150 10200
+	8050 6400 10600 6400
 Wire Bus Line
-	1150 10100 7150 10100
-Wire Wire Line
-	8600 2050 8600 4600
-Wire Wire Line
-	9000 2850 9100 2850
-Wire Wire Line
-	9000 2400 9000 2850
-Wire Wire Line
-	9650 900  9650 1050
-Wire Wire Line
-	9550 900  9650 900 
-Text HLabel 9550 900  0    50   Input ~ 0
-MotorController_Precharge+
-Wire Wire Line
-	10000 2850 10000 3250
-Wire Wire Line
-	9700 2850 10000 2850
-Connection ~ 10000 3250
-Wire Wire Line
-	10150 1550 10150 2850
-Wire Wire Line
-	10950 2850 10950 3250
-Connection ~ 10950 3250
-Wire Wire Line
-	9950 1550 9950 1800
-Wire Wire Line
-	9950 2050 11200 2050
-Connection ~ 9950 1800
-Wire Wire Line
-	9950 1800 9950 2050
-Wire Wire Line
-	7050 1800 9950 1800
-Wire Wire Line
-	9850 1550 9850 1700
-Wire Wire Line
-	8600 2050 9850 2050
-Connection ~ 9850 1700
-Wire Wire Line
-	9850 1700 9850 2050
-Wire Wire Line
-	6950 1700 9850 1700
-Wire Wire Line
-	9650 1550 9650 2400
-Wire Wire Line
-	9000 2400 9650 2400
-Wire Wire Line
-	9850 700  9850 1050
-Wire Wire Line
-	9950 600  9950 1050
+	8050 6300 10600 6300
+Wire Notes Line
+	21100 15250 21100 13600
 Wire Bus Line
-	5950 9200 5950 9800
+	13650 15150 19650 15150
 Wire Bus Line
-	6050 7000 6050 9700
+	13550 15050 19650 15050
+Wire Notes Line
+	19450 13600 19450 15250
 Wire Bus Line
-	6150 4800 6150 9600
+	19100 12000 19100 14000
 Wire Bus Line
-	6250 2600 6250 9500
+	19250 12150 19250 13700
 Wire Bus Line
-	13900 5350 15900 5350
+	20850 750  20850 12150
+Wire Bus Line
+	19100 12000 20700 12000
+Wire Bus Line
+	19250 12150 20850 12150
+Wire Wire Line
+	13750 13850 14000 13850
+Connection ~ 12850 10250
+Wire Wire Line
+	12850 10250 12850 13450
+Connection ~ 15450 10250
+Wire Wire Line
+	15450 10250 15450 13450
+Wire Wire Line
+	12850 7500 12850 10250
+Wire Wire Line
+	15450 3900 15450 10250
+Wire Wire Line
+	14200 10650 14000 10650
+Wire Wire Line
+	14000 10650 14000 13850
+Connection ~ 14000 13850
+Wire Wire Line
+	14000 13850 16550 13850
+Wire Wire Line
+	15950 9400 15950 10650
+Wire Wire Line
+	17700 11950 17700 6450
+Wire Wire Line
+	5250 13850 11850 13850
+Wire Wire Line
+	11850 13600 11850 13850
+Connection ~ 11850 13850
+Wire Wire Line
+	11850 13850 13150 13850
+Wire Wire Line
+	17700 11950 11850 11950
+Wire Wire Line
+	17600 11850 11850 11850
+Wire Bus Line
+	10700 14250 19650 14250
+Wire Bus Line
+	10650 14350 19650 14350
+Wire Bus Line
+	10600 14450 19650 14450
+Wire Bus Line
+	10600 14550 19650 14550
+Wire Bus Line
+	13350 14850 13350 16100
+Wire Bus Line
+	13350 14850 19650 14850
+Wire Bus Line
+	10600 14550 10600 15000
+Wire Bus Line
+	10600 12200 10600 14450
+Wire Bus Line
+	10650 9300 10650 14350
+Wire Bus Line
+	10700 6400 10700 14250
+Wire Bus Line
+	2650 750  20850 750 
+Wire Bus Line
+	2550 850  2550 1800
+Wire Bus Line
+	18150 7250 20700 7250
+Wire Bus Line
+	4400 3350 4400 4400
+Wire Bus Line
+	4500 2300 4500 4450
+Wire Bus Line
+	2350 3350 2350 4350
+Wire Bus Line
+	2250 2300 2250 4300
 $EndSCHEMATC

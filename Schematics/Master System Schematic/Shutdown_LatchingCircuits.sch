@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 20 22
+Sheet 22 22
 Title "Shutdown Latching Circuits"
 Date "2020-10-12"
 Rev "2"
@@ -30,7 +30,7 @@ BMS_Latch_Reset+
 Text HLabel 3150 4450 0    50   Input ~ 0
 BMS_Latch_Reset-
 Text HLabel 3150 2250 0    50   Input ~ 0
-GLV+_Fused
+GLV
 Text HLabel 3150 2650 0    50   Input ~ 0
 Shutdown_IN
 Text HLabel 6300 4850 0    50   Input ~ 0
