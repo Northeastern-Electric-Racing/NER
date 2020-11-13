@@ -110,5 +110,4 @@ void changeDirection(bool justOn) {
     CAN.sendMsgBuf(0x02, 0, 1, REVERSE); // tell pedal box to set inverter to reverse
     prevDirection = false;
   }
-  
 }
