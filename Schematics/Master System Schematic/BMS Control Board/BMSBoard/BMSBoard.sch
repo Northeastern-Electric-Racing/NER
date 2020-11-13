@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:BMSBoard-cache
 EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
@@ -52,14 +51,12 @@ Text GLabel 1550 5900 2    50   Input ~ 0
 CANS_Thrm
 Text GLabel 1550 1900 2    50   Input ~ 0
 CANH_Main
-Text GLabel 9650 1700 0    50   Input ~ 0
-CANS_BMS
-Text GLabel 9650 1550 0    50   Input ~ 0
-CANL_BMS
-Text GLabel 9650 1400 0    50   Input ~ 0
-CANH_BMS
 Text GLabel 9650 1850 0    50   Input ~ 0
-BMSIn12V
+CANS_BMS
+Text GLabel 9650 1700 0    50   Input ~ 0
+CANL_BMS
+Text GLabel 9650 1550 0    50   Input ~ 0
+CANH_BMS
 Text GLabel 9650 2000 0    50   Input ~ 0
 BMSGND
 Text GLabel 9650 2150 0    50   Input ~ 0
@@ -161,8 +158,6 @@ Wire Wire Line
 Text HLabel 1100 6000 0    50   Input ~ 0
 ThermEx
 Entry Wire Line
-	9850 1950 9750 1850
-Entry Wire Line
 	9850 2100 9750 2000
 Entry Wire Line
 	9850 2250 9750 2150
@@ -172,8 +167,6 @@ Entry Wire Line
 	9850 2550 9750 2450
 Entry Wire Line
 	9850 2700 9750 2600
-Wire Wire Line
-	9750 1850 9650 1850
 Wire Wire Line
 	9750 2000 9650 2000
 Wire Wire Line
@@ -185,17 +178,17 @@ Wire Wire Line
 Wire Wire Line
 	9750 2600 9650 2600
 Entry Wire Line
-	9850 1500 9750 1400
-Entry Wire Line
 	9850 1650 9750 1550
 Entry Wire Line
 	9850 1800 9750 1700
-Wire Wire Line
-	9750 1400 9650 1400
+Entry Wire Line
+	9850 1950 9750 1850
 Wire Wire Line
 	9750 1550 9650 1550
 Wire Wire Line
 	9750 1700 9650 1700
+Wire Wire Line
+	9750 1850 9650 1850
 Text HLabel 10100 2700 2    50   Input ~ 0
 BMS
 Wire Notes Line
@@ -307,19 +300,12 @@ Text GLabel 6800 4200 0    50   Input ~ 0
 GLV_BMSContainer
 Text GLabel 7000 4350 2    50   Input ~ 0
 ThermExIn12V
-Text GLabel 7000 4500 2    50   Input ~ 0
-BMSIn12V
 Wire Wire Line
 	6800 4200 6900 4200
 Wire Wire Line
 	7000 4350 6900 4350
 Wire Wire Line
 	6900 4350 6900 4200
-Wire Wire Line
-	7000 4500 6900 4500
-Wire Wire Line
-	6900 4500 6900 4350
-Connection ~ 6900 4350
 Text GLabel 6550 4800 0    50   Input ~ 0
 ChassisGND
 Text GLabel 6750 4950 2    50   Input ~ 0
@@ -491,13 +477,8 @@ Wire Wire Line
 Wire Wire Line
 	3600 4400 3700 4400
 Connection ~ 4400 4400
-Text GLabel 7000 4650 2    50   Input ~ 0
+Text GLabel 7000 4500 2    50   Input ~ 0
 PWR_Ready
-Wire Wire Line
-	6900 4500 6900 4650
-Wire Wire Line
-	6900 4650 7000 4650
-Connection ~ 6900 4500
 Wire Notes Line
 	5950 6000 8950 6000
 Wire Wire Line
@@ -510,10 +491,10 @@ GLV_PreBRB
 Text GLabel 7050 2050 0    50   Input ~ 0
 GLV_BMSContainer
 Entry Wire Line
-	9850 1350 9750 1250
+	9850 1500 9750 1400
 Wire Wire Line
-	9750 1250 9650 1250
-Text GLabel 9650 1250 0    50   Input ~ 0
+	9750 1400 9650 1400
+Text GLabel 9650 1400 0    50   Input ~ 0
 MPOut3
 Text GLabel 8050 2050 2    50   Input ~ 0
 MPOut3
@@ -729,6 +710,10 @@ Wire Bus Line
 	1100 4650 1350 4650
 Wire Bus Line
 	1100 6000 1350 6000
+Wire Wire Line
+	6900 4350 6900 4500
+Wire Wire Line
+	6900 4500 7000 4500
 Wire Bus Line
 	1350 5400 1350 6000
 Wire Bus Line
@@ -736,5 +721,6 @@ Wire Bus Line
 Wire Bus Line
 	1350 1550 1350 2300
 Wire Bus Line
-	9850 1350 9850 2700
+	9850 1500 9850 2700
+Connection ~ 6900 4350
 $EndSCHEMATC
