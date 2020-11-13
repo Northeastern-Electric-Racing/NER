@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:BMSBoard-cache
 EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
@@ -7,9 +8,9 @@ Sheet 1 1
 Title "BMS Control Board"
 Date "2020-11-12"
 Rev "1.1"
-Comp ""
-Comment1 ""
-Comment2 ""
+Comp "Northeastern Electric Racing"
+Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
+Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 "Diode connecting power supplied by charger and GLV. Connections for CAN, Power, Ground."
 Comment4 "Relays to control charge power, pump and fan."
 $EndDescr

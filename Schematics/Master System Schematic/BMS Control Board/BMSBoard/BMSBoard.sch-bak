@@ -8,10 +8,10 @@ Title "BMS Control Board"
 Date "2020-11-12"
 Rev "1.1"
 Comp ""
-Comment1 "Diode connecting power supplied by charger and GLV, connections for CAN, Power, Ground"
-Comment2 "Relays to control charge power, pump and fan"
-Comment3 ""
-Comment4 ""
+Comment1 ""
+Comment2 ""
+Comment3 "Diode connecting power supplied by charger and GLV. Connections for CAN, Power, Ground."
+Comment4 "Relays to control charge power, pump and fan."
 $EndDescr
 Text GLabel 1550 1450 2    50   Input ~ 0
 BMSFault
@@ -669,17 +669,17 @@ F 3 "~" H 4300 2850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4450 2850 4500 2850
-Text Notes 1300 6500 0    79   ~ 16
+Text Notes 1300 6650 0    79   ~ 16
 Notes
 Wire Notes Line
-	1250 6350 5750 6350
+	1250 6500 5750 6500
 Wire Notes Line
-	5750 6350 5750 7700
+	5750 6500 5750 7850
 Wire Notes Line
-	5750 7700 1250 7700
+	5750 7850 1250 7850
 Wire Notes Line
-	1250 7700 1250 6350
-Text Notes 1300 6650 0    50   ~ 0
+	1250 7850 1250 6500
+Text Notes 1300 6800 0    50   ~ 0
 > GLV_PreBRB --> BRB1 --> BRB2 --> Fusebox --> GLV_BMSContainer\n
 Wire Bus Line
 	1350 4500 1350 4650
@@ -706,9 +706,9 @@ Text GLabel 7100 3850 2    50   Input ~ 0
 GLV_PreBRB
 Text GLabel 6800 3850 0    50   Input ~ 0
 ChargerSupply12V
-Text Notes 1300 6750 0    50   ~ 0
+Text Notes 1300 6900 0    50   ~ 0
 > When Charger is plugged in, GLV battery is removed\n
-Text Notes 1300 6950 0    50   ~ 0
+Text Notes 1300 7100 0    50   ~ 0
 > When charger is plugged in, ChargerSupply12V connects to \nGLV_PreBRB through a diode
 Text Notes 2550 3700 0    50   Italic 0
 > If 12v is present on GLV and car is not charging, \npower is connected to ToPump.\n\n> If 12v is present on GLV and car is charging, \npower is not connected to ToPump.\n\n> If 12v is not present on GLV (BRB's pressed),\npower is not connected to ToPump.
