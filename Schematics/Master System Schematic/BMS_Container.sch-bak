@@ -106,13 +106,10 @@ Wire Bus Line
 NoConn ~ 6700 4700
 NoConn ~ 6700 5000
 NoConn ~ 6700 5100
-NoConn ~ 6700 5300
-NoConn ~ 6700 5400
 NoConn ~ 6700 5500
 NoConn ~ 6700 5900
 NoConn ~ 6700 6000
 NoConn ~ 6700 6100
-NoConn ~ 6700 6200
 NoConn ~ 6700 6600
 NoConn ~ 6700 6700
 NoConn ~ 6700 6800
@@ -494,6 +491,24 @@ Wire Wire Line
 	5550 4300 5550 5800
 Wire Wire Line
 	5550 1550 9850 1550
+Wire Wire Line
+	6700 5300 5700 5300
+Wire Wire Line
+	5700 5300 5700 6900
+Wire Wire Line
+	5700 6900 2850 6900
+Wire Wire Line
+	6700 5400 5800 5400
+Wire Wire Line
+	5800 5400 5800 7000
+Wire Wire Line
+	5800 7000 2850 7000
+Wire Wire Line
+	6700 6200 5900 6200
+Wire Wire Line
+	5900 6200 5900 7100
+Wire Wire Line
+	5900 7100 2850 7100
 Wire Bus Line
 	8850 8500 8850 8800
 Wire Bus Line
@@ -506,4 +521,10 @@ Wire Bus Line
 	8850 7550 8850 7850
 Wire Bus Line
 	4950 1150 5750 1150
+Text HLabel 2850 6900 0    50   Output ~ 0
+Discharge_En
+Text HLabel 2850 7000 0    50   Output ~ 0
+Charge_En
+Text HLabel 2850 7100 0    50   Output ~ 0
+Discharge_Limit
 $EndSCHEMATC
