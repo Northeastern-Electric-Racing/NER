@@ -357,65 +357,11 @@ Connection ~ 5050 1900
 Wire Wire Line
 	5550 1550 5550 4300
 Connection ~ 5550 1550
-Wire Wire Line
-	4850 1650 4950 1650
 Connection ~ 6550 4100
 Wire Wire Line
 	4800 3600 8000 3600
 Wire Wire Line
 	8000 1650 8000 2800
-Wire Wire Line
-	6700 5600 4150 5600
-Text HLabel 2900 6000 0    50   Output ~ 0
-BMS_Fan
-Wire Wire Line
-	3100 6000 2900 6000
-Wire Wire Line
-	3700 6000 4150 6000
-Wire Wire Line
-	4950 6000 4950 4900
-Connection ~ 4950 1650
-$Comp
-L Device:R R10
-U 1 1 64558B5B
-P 4150 5800
-F 0 "R10" H 4220 5846 50  0000 L CNN
-F 1 "2.2k" H 4220 5755 50  0000 L CNN
-F 2 "" V 4080 5800 50  0001 C CNN
-F 3 "~" H 4150 5800 50  0001 C CNN
-	1    4150 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4150 5650 4150 5600
-Connection ~ 4150 5600
-Wire Wire Line
-	4150 5600 3700 5600
-Wire Wire Line
-	4150 5950 4150 6000
-Connection ~ 4150 6000
-Wire Wire Line
-	4150 6000 4950 6000
-Wire Wire Line
-	3100 5600 2900 5600
-Wire Wire Line
-	2900 5600 2900 4900
-Wire Wire Line
-	2900 4900 4950 4900
-Connection ~ 4950 4900
-Wire Wire Line
-	4950 4900 4950 1650
-$Comp
-L Relay:DIPxx-1Axx-11x K55
-U 1 1 5FB9D72C
-P 3400 5800
-F 0 "K55" V 3850 5850 50  0000 R CNN
-F 1 "BMS_Fan_Relay" V 3750 6100 50  0000 R CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 3750 5750 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 3400 5800 50  0001 C CNN
-	1    3400 5800
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8350 3200 6550 3200
 Wire Wire Line
@@ -458,8 +404,6 @@ Wire Wire Line
 	9850 1550 14100 1550
 Wire Wire Line
 	8000 1650 14100 1650
-Wire Wire Line
-	4950 1650 5700 1650
 Wire Wire Line
 	5150 2000 6000 2000
 Wire Wire Line
@@ -509,6 +453,12 @@ Wire Wire Line
 	5900 6200 5900 7100
 Wire Wire Line
 	5900 7100 2850 7100
+Text HLabel 2850 6900 0    50   Output ~ 0
+Discharge_En
+Text HLabel 2850 7000 0    50   Output ~ 0
+Charge_En
+Text HLabel 2850 7100 0    50   Output ~ 0
+Discharge_Limit
 Wire Bus Line
 	8850 8500 8850 8800
 Wire Bus Line
@@ -521,10 +471,6 @@ Wire Bus Line
 	8850 7550 8850 7850
 Wire Bus Line
 	4950 1150 5750 1150
-Text HLabel 2850 6900 0    50   Output ~ 0
-Discharge_En
-Text HLabel 2850 7000 0    50   Output ~ 0
-Charge_En
-Text HLabel 2850 7100 0    50   Output ~ 0
-Discharge_Limit
+Wire Wire Line
+	4850 1650 5700 1650
 $EndSCHEMATC
