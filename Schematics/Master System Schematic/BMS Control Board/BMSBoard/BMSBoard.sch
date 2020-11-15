@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "BMS Control Board"
 Date "2020-11-14"
-Rev "2"
+Rev "2.1"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -170,16 +170,16 @@ Text GLabel 5700 5750 0    50   Input ~ 0
 BMSFault
 Wire Wire Line
 	5700 5750 5850 5750
-Text GLabel 6900 4450 0    50   Input ~ 0
+Text GLabel 6250 4050 0    50   Input ~ 0
 GLV_BMSContainer
-Text GLabel 7100 4600 2    50   Input ~ 0
+Text GLabel 6850 4200 2    50   Input ~ 0
 ThermExIn12V
 Wire Wire Line
-	6900 4450 7000 4450
+	6250 4050 6350 4050
 Wire Wire Line
-	7100 4600 7000 4600
+	6450 4200 6350 4200
 Wire Wire Line
-	7000 4600 7000 4450
+	6350 4200 6350 4050
 Text GLabel 6550 4800 0    50   Input ~ 0
 ChassisGND
 Text GLabel 6750 4950 2    50   Input ~ 0
@@ -218,7 +218,7 @@ Wire Wire Line
 Connection ~ 8150 5850
 Wire Notes Line
 	2500 1250 2500 6000
-Text GLabel 3850 4900 0    50   Input ~ 0
+Text GLabel 3550 4900 0    50   Input ~ 0
 ChargerSupply12V
 Text GLabel 4450 4900 2    50   Input ~ 0
 PWR_Charge
@@ -348,7 +348,7 @@ Wire Wire Line
 Wire Wire Line
 	3700 4500 3800 4500
 Connection ~ 4500 4500
-Text GLabel 7100 4750 2    50   Input ~ 0
+Text GLabel 6850 4550 2    50   Input ~ 0
 PWR_Ready
 Wire Wire Line
 	7300 5850 8150 5850
@@ -391,7 +391,7 @@ L Device:Fuse F1
 U 1 1 5FC0FA27
 P 4250 2750
 F 0 "F1" V 4447 2750 50  0000 C CNN
-F 1 "Fuse" V 4356 2750 50  0000 C CNN
+F 1 "12A" V 4356 2750 50  0000 C CNN
 F 2 "" V 4180 2750 50  0001 C CNN
 F 3 "~" H 4250 2750 50  0001 C CNN
 	1    4250 2750
@@ -423,11 +423,7 @@ Text Notes 2550 3850 0    50   Italic 0
 > If 12v is present on GLV and car is not charging, \npower is connected to ToPump.\n\n> If 12v is present on GLV and car is charging, \npower is not connected to ToPump.\n\n> If 12v is not present on GLV (BRB's pressed),\npower is not connected to ToPump.
 Text Notes 2550 5900 0    50   ~ 0
 > If 12v is present on GLV (not in shutdown), \npower from charger is connected to PWR_Charge.\n^(power here may or may not be present)\n\n> If 12v is not present on GLV (shutdown),\npower from charger is not connected to PWR_Charge.
-Wire Wire Line
-	7000 4600 7000 4750
-Wire Wire Line
-	7000 4750 7100 4750
-Connection ~ 7000 4600
+Connection ~ 6350 4200
 $Comp
 L Relay:G5Q-1A K4
 U 1 1 5FB0A0C4
@@ -674,4 +670,45 @@ F 3 "~" H 10350 2700 50  0001 C CNN
 	1    10350 2700
 	-1   0    0    -1  
 $EndComp
+$Comp
+L Device:Fuse F2
+U 1 1 5FB0792D
+P 3700 4900
+F 0 "F2" V 3897 4900 50  0000 C CNN
+F 1 "5A" V 3806 4900 50  0000 C CNN
+F 2 "" V 3630 4900 50  0001 C CNN
+F 3 "~" H 3700 4900 50  0001 C CNN
+	1    3700 4900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Fuse F3
+U 1 1 5FB100A8
+P 6600 4550
+F 0 "F3" V 6797 4550 50  0000 C CNN
+F 1 "5A" V 6706 4550 50  0000 C CNN
+F 2 "" V 6530 4550 50  0001 C CNN
+F 3 "~" H 6600 4550 50  0001 C CNN
+	1    6600 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6350 4550 6450 4550
+Wire Wire Line
+	6350 4200 6350 4550
+Wire Wire Line
+	6750 4550 6850 4550
+$Comp
+L Device:Fuse F4
+U 1 1 5FB1D8F5
+P 6600 4200
+F 0 "F4" V 6797 4200 50  0000 C CNN
+F 1 "100mA" V 6706 4200 50  0000 C CNN
+F 2 "" V 6530 4200 50  0001 C CNN
+F 3 "~" H 6600 4200 50  0001 C CNN
+	1    6600 4200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6750 4200 6850 4200
 $EndSCHEMATC
