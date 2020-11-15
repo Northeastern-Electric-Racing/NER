@@ -29,14 +29,14 @@ $EndComp
 $Comp
 L Device:Fuse F?
 U 1 1 61EEF40A
-P 5900 2950
+P 5650 2750
 AR Path="/61EEF40A" Ref="F?"  Part="1" 
 AR Path="/61ECC7CF/61EEF40A" Ref="F1"  Part="1" 
-F 0 "F1" V 6000 2950 50  0000 C CNN
-F 1 "10A" V 5800 2950 50  0000 C CNN
-F 2 "" V 5830 2950 50  0001 C CNN
-F 3 "~" H 5900 2950 50  0001 C CNN
-	1    5900 2950
+F 0 "F1" V 5750 2750 50  0000 C CNN
+F 1 "10A" V 5550 2750 50  0000 C CNN
+F 2 "" V 5580 2750 50  0001 C CNN
+F 3 "~" H 5650 2750 50  0001 C CNN
+	1    5650 2750
 	0    1    -1   0   
 $EndComp
 $Comp
@@ -70,14 +70,14 @@ Wire Wire Line
 $Comp
 L Connector:Conn_WallSocket_Earth J?
 U 1 1 61EEF421
-P 6500 2950
+P 6800 2950
 AR Path="/61EEF421" Ref="J?"  Part="1" 
 AR Path="/61ECC7CF/61EEF421" Ref="J7"  Part="1" 
-F 0 "J7" H 6506 2454 50  0000 C CNN
-F 1 "WallSocket" H 6506 2545 50  0000 C CNN
-F 2 "" H 6200 3050 50  0001 C CNN
-F 3 "~" H 6200 3050 50  0001 C CNN
-	1    6500 2950
+F 0 "J7" H 6806 2454 50  0000 C CNN
+F 1 "WallSocket" H 6806 2545 50  0000 C CNN
+F 2 "" H 6500 3050 50  0001 C CNN
+F 3 "~" H 6500 3050 50  0001 C CNN
+	1    6800 2950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -126,8 +126,6 @@ Wire Wire Line
 Wire Wire Line
 	6100 2350 6100 2950
 Connection ~ 6100 2950
-Wire Wire Line
-	6100 2950 6050 2950
 $Comp
 L Device:Fuse F86
 U 1 1 6016ADF1
@@ -143,7 +141,6 @@ Wire Wire Line
 	6100 2050 6100 2000
 Wire Wire Line
 	6000 2200 6000 2750
-Connection ~ 6000 2750
 Wire Wire Line
 	6000 2750 6300 2750
 Wire Wire Line
@@ -154,8 +151,6 @@ Connection ~ 4900 2000
 Connection ~ 4900 3150
 Wire Wire Line
 	4900 3150 4600 3150
-Wire Wire Line
-	4900 3150 6300 3150
 Wire Wire Line
 	4600 3150 4600 4200
 Wire Wire Line
@@ -187,8 +182,8 @@ $Comp
 L Device:Fuse F2
 U 1 1 5FA10442
 P 4650 2200
-F 0 "F2" V 4847 2200 50  0000 C CNN
-F 1 "Fuse" V 4756 2200 50  0000 C CNN
+F 0 "F2" V 4750 2200 50  0000 C CNN
+F 1 "Fuse" V 4550 2200 50  0000 C CNN
 F 2 "" V 4580 2200 50  0001 C CNN
 F 3 "~" H 4650 2200 50  0001 C CNN
 	1    4650 2200
@@ -197,15 +192,11 @@ $EndComp
 Wire Wire Line
 	4800 2200 5100 2200
 Wire Wire Line
-	4150 2750 6000 2750
-Wire Wire Line
 	4500 2200 4350 2200
 Wire Wire Line
 	4350 2200 4350 2550
 Wire Wire Line
 	4350 2550 4150 2550
-Wire Wire Line
-	4150 2950 5750 2950
 Wire Wire Line
 	3450 3800 4950 3800
 Wire Wire Line
@@ -217,4 +208,35 @@ Wire Wire Line
 Wire Wire Line
 	3300 2200 4350 2200
 Connection ~ 4350 2200
+Wire Wire Line
+	4150 2750 5500 2750
+Wire Wire Line
+	5800 2750 6000 2750
+Connection ~ 6000 2750
+Wire Wire Line
+	4150 2950 6100 2950
+$Comp
+L Device:Fuse F200
+U 1 1 603DFD27
+P 6450 2950
+F 0 "F200" V 6350 2950 50  0000 C CNN
+F 1 "Fuse" V 6550 2950 50  0000 C CNN
+F 2 "" V 6380 2950 50  0001 C CNN
+F 3 "~" H 6450 2950 50  0001 C CNN
+	1    6450 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse F199
+U 1 1 603DB64B
+P 6450 2750
+F 0 "F199" V 6253 2750 50  0000 C CNN
+F 1 "Fuse" V 6344 2750 50  0000 C CNN
+F 2 "" V 6380 2750 50  0001 C CNN
+F 3 "~" H 6450 2750 50  0001 C CNN
+	1    6450 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4900 3150 6600 3150
 $EndSCHEMATC
