@@ -65,8 +65,6 @@ F 3 "~" H 6450 4200 50  0001 C CNN
 	1    6450 4200
 	0    1    -1   0   
 $EndComp
-Wire Wire Line
-	6300 2950 6100 2950
 $Comp
 L Connector:Conn_WallSocket_Earth J?
 U 1 1 61EEF421
@@ -216,17 +214,6 @@ Connection ~ 6000 2750
 Wire Wire Line
 	4150 2950 6100 2950
 $Comp
-L Device:Fuse F200
-U 1 1 603DFD27
-P 6450 2950
-F 0 "F200" V 6350 2950 50  0000 C CNN
-F 1 "Fuse" V 6550 2950 50  0000 C CNN
-F 2 "" V 6380 2950 50  0001 C CNN
-F 3 "~" H 6450 2950 50  0001 C CNN
-	1    6450 2950
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:Fuse F199
 U 1 1 603DB64B
 P 6450 2750
@@ -239,4 +226,6 @@ F 3 "~" H 6450 2750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4900 3150 6600 3150
+Wire Wire Line
+	6100 2950 6600 2950
 $EndSCHEMATC
