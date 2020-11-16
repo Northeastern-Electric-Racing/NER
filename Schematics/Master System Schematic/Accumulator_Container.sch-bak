@@ -58,7 +58,7 @@ F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	12300 7900 13150 7900
+	11850 7900 13150 7900
 Wire Wire Line
 	13150 6500 12850 6500
 Wire Wire Line
@@ -305,11 +305,11 @@ Text HLabel 6100 13050 2    50   Input ~ 0
 SMD_1-
 Text HLabel 6100 13750 2    50   Input ~ 0
 SMD_1+
-Connection ~ 12300 6900
+Connection ~ 11850 6900
 Wire Wire Line
-	12300 6900 13150 6900
+	11850 6900 13150 6900
 Wire Wire Line
-	12300 6900 12300 7900
+	11850 6900 11850 7900
 Connection ~ 16450 7900
 Wire Wire Line
 	13800 1000 14100 1000
@@ -470,18 +470,16 @@ Wire Wire Line
 $Comp
 L Device:Fuse F7
 U 1 1 5FC950C3
-P 11850 7300
-F 0 "F7" H 11910 7346 50  0000 L CNN
-F 1 "Fuse" H 11910 7255 50  0000 L CNN
-F 2 "" V 11780 7300 50  0001 C CNN
-F 3 "~" H 11850 7300 50  0001 C CNN
-	1    11850 7300
+P 11850 8400
+F 0 "F7" H 11910 8446 50  0000 L CNN
+F 1 "Fuse" H 11910 8355 50  0000 L CNN
+F 2 "" V 11780 8400 50  0001 C CNN
+F 3 "~" H 11850 8400 50  0001 C CNN
+	1    11850 8400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	11850 7150 11850 6900
-Wire Wire Line
-	11850 6900 12300 6900
+	11850 8250 11850 7900
 $Sheet
 S 6600 5450 1450 1050
 U 602C1575
@@ -612,7 +610,6 @@ Wire Wire Line
 	5250 7950 6100 7950
 Wire Wire Line
 	5400 5150 5250 5150
-Connection ~ 11850 6900
 Wire Wire Line
 	5400 8050 5400 10000
 Wire Wire Line
@@ -1960,7 +1957,7 @@ Wire Wire Line
 Wire Wire Line
 	5250 13750 6100 13750
 Wire Wire Line
-	11850 7450 11850 11850
+	11850 8550 11850 11850
 Connection ~ 16550 8350
 Wire Wire Line
 	17200 8350 18750 8350
@@ -2100,6 +2097,7 @@ Wire Bus Line
 	13350 14850 13350 16100
 Wire Bus Line
 	13350 14850 19650 14850
+Connection ~ 11850 7900
 Wire Bus Line
 	10600 14550 10600 15000
 Wire Bus Line
