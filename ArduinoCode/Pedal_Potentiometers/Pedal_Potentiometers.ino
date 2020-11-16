@@ -17,8 +17,10 @@ int brakePin1Val;
 int brakePin2Val;
  
 // CAN stuff
-const int CAN_BRAKE = 0x03;       // device's CAN id
+const int CAN_BRAKE = 0x03;        // device's CAN id
 const int CAN_MOTOR = 0xC0;        // device's CAN id
+const int CAN_ACCEL_BROKE = 0x02;  // device error ID
+const int CAN_BRAKE_BROKE = 0x04;  // device error ID
 
 //Dashboard variables
 unsigned char len = 0;  //length of the data in the buffer
@@ -80,7 +82,9 @@ void readPotentiometers() {
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, reverse);
     }
   } 
-  else {  //turn off motor
+  else {  //turn off motor and send error message
+    unsigned char valueMessage[4] = {'P', 0, 5, 00};  //error message of "Vehicle Speed Sensor Malfunction" 
+    CAN.sendMsgBuf(CAN_ACCEL_BROKE, 0, 4, valueMessage);
     MotorOff();
   }
 }
@@ -97,6 +101,10 @@ void readSwitches() {
     unsigned char valueMessage[1] = {1};
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, valueMessage); // send message that the switches are turned on
   } 
+  else if (brakePin1Val != brakePin2Val) {  // sends error message if brake pins don't agree
+    unsigned char valueMessage[4] = {'P', 0, 5, 04};  // error message of "Brake Switch A / B Correlation"
+    CAN.sendMsgBuf(CAN_BRAKE_BROKE, 0, 4, valueMessage);
+  }
   else {    // switches  are off
     unsigned char valueMessage[1] = {0};
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, valueMessage); // send message that the switches are turned off
@@ -142,5 +150,4 @@ void MotorOff() {
   unsigned char valueMessage[8] = {0,0,0,0,0,0,0,0};
   CAN.sendMsgBuf(CAN_MOTOR, 0, 8, valueMessage);
 }
-
  
