@@ -121,26 +121,7 @@ Wire Wire Line
 	5900 2200 6000 2200
 Wire Wire Line
 	5900 2000 6100 2000
-Wire Wire Line
-	6100 2350 6100 2950
 Connection ~ 6100 2950
-$Comp
-L Device:Fuse F86
-U 1 1 6016ADF1
-P 6100 2200
-F 0 "F86" H 6160 2246 50  0000 L CNN
-F 1 "Fuse" H 6160 2155 50  0000 L CNN
-F 2 "" V 6030 2200 50  0001 C CNN
-F 3 "~" H 6100 2200 50  0001 C CNN
-	1    6100 2200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6100 2050 6100 2000
-Wire Wire Line
-	6000 2200 6000 2750
-Wire Wire Line
-	6000 2750 6300 2750
 Wire Wire Line
 	5100 2000 4900 2000
 Wire Wire Line
@@ -209,9 +190,6 @@ Connection ~ 4350 2200
 Wire Wire Line
 	4150 2750 5500 2750
 Wire Wire Line
-	5800 2750 6000 2750
-Connection ~ 6000 2750
-Wire Wire Line
 	4150 2950 6100 2950
 $Comp
 L Device:Fuse F199
@@ -228,4 +206,24 @@ Wire Wire Line
 	4900 3150 6600 3150
 Wire Wire Line
 	6100 2950 6600 2950
+$Comp
+L Device:Fuse F86
+U 1 1 6016ADF1
+P 6000 2350
+F 0 "F86" H 5750 2350 50  0000 L CNN
+F 1 "Fuse" H 5750 2250 50  0000 L CNN
+F 2 "" V 5930 2350 50  0001 C CNN
+F 3 "~" H 6000 2350 50  0001 C CNN
+	1    6000 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2750 6000 2750
+Wire Wire Line
+	6000 2500 6000 2750
+Connection ~ 6000 2750
+Wire Wire Line
+	6000 2750 6300 2750
+Wire Wire Line
+	6100 2000 6100 2950
 $EndSCHEMATC
