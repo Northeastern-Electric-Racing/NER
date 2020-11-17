@@ -19,7 +19,7 @@ int brakePin2Val;
 // CAN stuff
 const int CAN_BRAKE = 0x03;        // device's CAN id
 const int CAN_MOTOR = 0xC0;        // device's CAN id
-const int CAN_ACCEL_BROKE = 0x02;  // device error ID
+const int CAN_ACCEL_BROKE = 0x05;  // device error ID
 const int CAN_BRAKE_BROKE = 0x04;  // device error ID
 
 //Dashboard variables
@@ -97,7 +97,7 @@ void readSwitches() {
   brakePin1Val = digitalRead(brakePin1);
   brakePin2Val = digitalRead(brakePin2);
 
-  if ((brakePin1Val == LOW) || (brakePin2Val == LOW)) {  // switches are on
+  if ((brakePin1Val == LOW) && (brakePin2Val == LOW)) {  // switches are on
     unsigned char valueMessage[1] = {1};
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, valueMessage); // send message that the switches are turned on
   } 
