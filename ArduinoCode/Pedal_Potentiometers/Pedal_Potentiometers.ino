@@ -110,7 +110,6 @@ void readSwitches() {
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, valueMessage); // send message that the switches are turned off
   }
 }
-
 /*
  * readDashboard() receives two can ID's for motor on/off, and forward/reverse in order to be used in other functions.
  * 0x01 holds the message whether the motor is on/off and stores the value in a global boolean variable - invertorOn.
