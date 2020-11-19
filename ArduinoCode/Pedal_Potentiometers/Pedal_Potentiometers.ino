@@ -134,8 +134,7 @@ void readDashboard() {
      else if (canID == 0x02) {  //determine whether forward or reverse
       if (buf[0] == 0) {
        isForward = false;
-      }
-      else if (buf[0] == 1) {
+      } else if (buf[0] == 1) {
        isForward = true;
       }
      }
