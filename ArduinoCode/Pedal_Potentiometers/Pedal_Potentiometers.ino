@@ -116,7 +116,6 @@ void readSwitches() {
  * 0x01 holds the message whether the motor is on/off and stores the value in a global boolean variable - invertorOn.
  * 0x02 holds the message whether in forward/reverse and stores the value in a global boolean variable - isForward.
  */
-
 void readDashboard() {
     if(CAN_MSGAVAIL == CAN.checkReceive()) {   // if a new message has been recieved. 
       CAN.readMsgBuf(&len, buf); // enters message into program
