@@ -116,7 +116,7 @@ void readDashboard() {
     if(CAN_MSGAVAIL == CAN.checkReceive()) {   // if a new message has been recieved. 
       CAN.readMsgBuf(&len, buf); // enters message into program
       canId = CAN.getCanId(); // gets sender ID
-     if (canID == 0x01) {  // determine whether Dashboard is on or off
+      if (canID == 0x01) {  // determine whether Dashboard is on or off
       MotorOff();
       if (buf[0] == 0) {  // motor is off
        invertorOn = false;
