@@ -80,8 +80,7 @@ void readPotentiometers() {
       reverse[0] = byteReading;
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, reverse);
     }
-  } 
-  else {  //turn off motor and send error message
+  } else {  //turn off motor and send error message
     unsigned char valueMessage[4] = {'P', 0, 5, 00};  //error message of "Vehicle Speed Sensor Malfunction" 
     CAN.sendMsgBuf(CAN_ACCEL_BROKE, 0, 4, valueMessage);
     MotorOff();
