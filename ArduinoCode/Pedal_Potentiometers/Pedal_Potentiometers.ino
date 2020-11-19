@@ -76,8 +76,7 @@ void readPotentiometers() {
     if (isForward) {     // send motor potentiometer values when going forward
       forward[0] = byteReading;
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, forward);
-    }
-    else {    // send motor potentiometer values when in reverse
+    } else {    // send motor potentiometer values when in reverse
       reverse[0] = byteReading;
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, reverse);
     }
