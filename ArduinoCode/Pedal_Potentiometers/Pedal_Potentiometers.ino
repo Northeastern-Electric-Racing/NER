@@ -145,4 +145,3 @@ void MotorOff() {
   unsigned char valueMessage[8] = {0,0,0,0,0,0,0,0};
   CAN.sendMsgBuf(CAN_MOTOR, 0, 8, valueMessage);
 }
- 
