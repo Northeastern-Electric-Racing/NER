@@ -113,24 +113,24 @@ void readSwitches() {
  * 0x02 holds the message whether in forward/reverse and stores the value in a global boolean variable - isForward.
  */
 void readDashboard() {
-    if(CAN_MSGAVAIL == CAN.checkReceive()) {   // if a new message has been recieved. 
-      CAN.readMsgBuf(&len, buf); // enters message into program
-      canId = CAN.getCanId(); // gets sender ID
-      if (canID == 0x01) {  // determine whether Dashboard is on or off
-       MotorOff(); // tells motor controller to turn off the motor
+  if(CAN_MSGAVAIL == CAN.checkReceive()) {   // if a new message has been recieved.
+    CAN.readMsgBuf(&len, buf); // enters message into program
+    canId = CAN.getCanId(); // gets sender ID
+    if (canID == 0x01) {  // message about on/off
+      MotorOff(); // tells motor controller to turn off the motor
       if (buf[0] == 0) {  // motor is off
-       invertorOn = false;
+        invertorOn = false;
       } else if (buf[0] == 1) {  // motor is on
-       invertorOn = true;
+        invertorOn = true;
       }
-     } else if (canID == 0x02) {  // determine whether forward or reverse
-       if (buf[0] == 0) {
+    } else if (canID == 0x02) {  // message about forward/reverse
+      if (buf[0] == 0) {
         isForward = false;
-       } else if (buf[0] == 1) {
+      } else if (buf[0] == 1) {
         isForward = true;
-       }
-     }
+      }
     }
+  }
 }
 
 /*
