@@ -117,7 +117,7 @@ void readDashboard() {
       CAN.readMsgBuf(&len, buf); // enters message into program
       canId = CAN.getCanId(); // gets sender ID
       if (canID == 0x01) {  // determine whether Dashboard is on or off
-      MotorOff();
+       MotorOff(); // tells motor controller to turn off the motor
       if (buf[0] == 0) {  // motor is off
        invertorOn = false;
       } else if (buf[0] == 1) {  // motor is on
