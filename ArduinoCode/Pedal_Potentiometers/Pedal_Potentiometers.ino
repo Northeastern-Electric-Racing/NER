@@ -125,8 +125,7 @@ void readDashboard() {
       MotorOff();
       if (buf[0] == 0) {  // motor is off
        invertorOn = false;
-      }
-      else if (buf[0] == 1) {  //motor is on
+      } else if (buf[0] == 1) {  // motor is on
        invertorOn = true;
       }
      } else if (canID == 0x02) {  // determine whether forward or reverse
