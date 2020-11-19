@@ -98,8 +98,7 @@ void readSwitches() {
   if ((brakePin1Val == LOW) && (brakePin2Val == LOW)) {  // switches are on
     unsigned char valueMessage[1] = {1};
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, valueMessage); // send message that the switches are turned on
-  } 
-  else if (brakePin1Val != brakePin2Val) {  // sends error message if brake pins don't agree
+  } else if (brakePin1Val != brakePin2Val) {  // sends error message if brake pins don't agree
     unsigned char valueMessage[4] = {'P', 0, 5, 04};  // error message of "Brake Switch A / B Correlation"
     CAN.sendMsgBuf(CAN_BRAKE_BROKE, 0, 4, valueMessage);
   }
