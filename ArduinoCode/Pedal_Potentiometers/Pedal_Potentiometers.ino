@@ -139,7 +139,6 @@ void readDashboard() {
 /*
  * MotorOff() sends 8 byte array message to the motor (0xC0) of all zeros turning off the motor
  */
-
 void MotorOff() {
   unsigned char valueMessage[8] = {0,0,0,0,0,0,0,0};
   CAN.sendMsgBuf(CAN_MOTOR, 0, 8, valueMessage);
