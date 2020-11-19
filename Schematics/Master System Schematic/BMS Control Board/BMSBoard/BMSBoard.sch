@@ -369,15 +369,6 @@ F 3 "https://standexelectronics.com/de/produkte/ms-reed-relais/" H 3850 2150 50 
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6650 5250 6650 5400
-Text GLabel 6750 5400 2    50   Input ~ 0
-FanGND
-Wire Wire Line
-	6750 5400 6650 5400
-Connection ~ 6650 5400
-Wire Wire Line
-	6650 5400 6650 5550
-Wire Wire Line
 	7300 5550 6650 5550
 Wire Wire Line
 	7300 5550 7300 5850
@@ -698,4 +689,7 @@ Wire Wire Line
 	6750 4550 6850 4550
 Wire Wire Line
 	6350 4200 6850 4200
+Wire Wire Line
+	6650 5250 6650 5550
+NoConn ~ 1000 1500
 $EndSCHEMATC
