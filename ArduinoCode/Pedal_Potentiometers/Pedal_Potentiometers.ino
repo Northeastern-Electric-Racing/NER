@@ -101,8 +101,7 @@ void readSwitches() {
   } else if (brakePin1Val != brakePin2Val) {  // sends error message if brake pins don't agree
     unsigned char valueMessage[4] = {'P', 0, 5, 04};  // error message of "Brake Switch A / B Correlation"
     CAN.sendMsgBuf(CAN_BRAKE_BROKE, 0, 4, valueMessage);
-  }
-  else {    // switches  are off
+  } else {    // switches  are off
     unsigned char valueMessage[1] = {0};
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, valueMessage); // send message that the switches are turned off
   }
