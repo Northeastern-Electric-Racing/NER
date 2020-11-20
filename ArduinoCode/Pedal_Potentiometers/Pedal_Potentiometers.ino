@@ -76,13 +76,11 @@ void readPotentiometers() {
     if (isForward) {     // send motor potentiometer values when going forward
       forward[0] = byteReading;
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, forward);
-    }
-    else {    // send motor potentiometer values when in reverse
+    } else {    // send motor potentiometer values when in reverse
       reverse[0] = byteReading;
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, reverse);
     }
-  } 
-  else {  //turn off motor and send error message
+  } else {  //turn off motor and send error message
     unsigned char valueMessage[4] = {'P', 0, 5, 00};  //error message of "Vehicle Speed Sensor Malfunction" 
     CAN.sendMsgBuf(CAN_ACCEL_BROKE, 0, 4, valueMessage);
     MotorOff();
@@ -100,54 +98,44 @@ void readSwitches() {
   if ((brakePin1Val == LOW) && (brakePin2Val == LOW)) {  // switches are on
     unsigned char valueMessage[1] = {1};
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, valueMessage); // send message that the switches are turned on
-  } 
-  else if (brakePin1Val != brakePin2Val) {  // sends error message if brake pins don't agree
+  } else if (brakePin1Val != brakePin2Val) {  // sends error message if brake pins don't agree
     unsigned char valueMessage[4] = {'P', 0, 5, 04};  // error message of "Brake Switch A / B Correlation"
     CAN.sendMsgBuf(CAN_BRAKE_BROKE, 0, 4, valueMessage);
-  }
-  else {    // switches  are off
+  } else {    // switches  are off
     unsigned char valueMessage[1] = {0};
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, valueMessage); // send message that the switches are turned off
   }
 }
-
 /*
  * readDashboard() receives two can ID's for motor on/off, and forward/reverse in order to be used in other functions.
  * 0x01 holds the message whether the motor is on/off and stores the value in a global boolean variable - invertorOn.
  * 0x02 holds the message whether in forward/reverse and stores the value in a global boolean variable - isForward.
  */
-
 void readDashboard() {
-    if(CAN_MSGAVAIL == CAN.checkReceive()) {   //if a new message has been recieved. 
-      CAN.readMsgBuf(&len, buf); //enters message into program
-      canId = CAN.getCanId(); //gets sender ID
-     if (canID == 0x01) {  //determine whether Dashboard is on or off
-      MotorOff();
+  if(CAN_MSGAVAIL == CAN.checkReceive()) {   // if a new message has been recieved.
+    CAN.readMsgBuf(&len, buf); // enters message into program
+    canId = CAN.getCanId(); // gets sender ID
+    if (canID == 0x01) {  // message about on/off
+      MotorOff(); // tells motor controller to turn off the motor
       if (buf[0] == 0) {  // motor is off
-       invertorOn = false;
+        invertorOn = false;
+      } else if (buf[0] == 1) {  // motor is on
+        invertorOn = true;
       }
-      else if (buf[0] == 1) {  //motor is on
-       invertorOn = true;
-      }
-     }
-     
-     else if (canID == 0x02) {  //determine whether forward or reverse
+    } else if (canID == 0x02) {  // message about forward/reverse
       if (buf[0] == 0) {
-       isForward = false;
+        isForward = false;
+      } else if (buf[0] == 1) {
+        isForward = true;
       }
-      else if (buf[0] == 1) {
-       isForward = true;
-      }
-     }
     }
+  }
 }
 
 /*
  * MotorOff() sends 8 byte array message to the motor (0xC0) of all zeros turning off the motor
  */
-
 void MotorOff() {
   unsigned char valueMessage[8] = {0,0,0,0,0,0,0,0};
   CAN.sendMsgBuf(CAN_MOTOR, 0, 8, valueMessage);
 }
- 
