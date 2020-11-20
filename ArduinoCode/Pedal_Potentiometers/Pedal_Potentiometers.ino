@@ -70,20 +70,24 @@ void readPotentiometers() {
   accelPin1Val = analogRead(accelPin1); 
   accelPin2Val = analogRead(accelPin2);
 
-  if (abs(accelPin1Val - accelPin2Val) <= (1024 * 0.1)) {
-    int averageReading = (accelPin1Val + accelPin2Val) / 2;
-    unsigned char byteReading = averageReading / 4;
-    if (isForward) {     // send motor potentiometer values when going forward
-      forward[0] = byteReading;
-      CAN.sendMsgBuf(CAN_MOTOR, 0, 8, forward);
-    } else {    // send motor potentiometer values when in reverse
-      reverse[0] = byteReading;
-      CAN.sendMsgBuf(CAN_MOTOR, 0, 8, reverse);
+  if (!invertorOn) {
+    return;
+  } else {
+    if (abs(accelPin1Val - accelPin2Val) <= (1024 * 0.1)) {
+      int averageReading = (accelPin1Val + accelPin2Val) / 2;
+      unsigned char byteReading = averageReading / 4;
+      if (isForward) {     // send motor potentiometer values when going forward
+        forward[0] = byteReading;
+        CAN.sendMsgBuf(CAN_MOTOR, 0, 8, forward);
+      } else {    // send motor potentiometer values when in reverse
+        reverse[0] = byteReading;
+        CAN.sendMsgBuf(CAN_MOTOR, 0, 8, reverse);
+      }
+    } else {  //turn off motor and send error message
+      unsigned char valueMessage[4] = {'P', 0, 5, 00};  //error message of "Vehicle Speed Sensor Malfunction" 
+      CAN.sendMsgBuf(CAN_ACCEL_BROKE, 0, 4, valueMessage);
+      MotorOff();
     }
-  } else {  //turn off motor and send error message
-    unsigned char valueMessage[4] = {'P', 0, 5, 00};  //error message of "Vehicle Speed Sensor Malfunction" 
-    CAN.sendMsgBuf(CAN_ACCEL_BROKE, 0, 4, valueMessage);
-    MotorOff();
   }
 }
 
