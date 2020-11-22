@@ -25,6 +25,7 @@ const int CAN_BRAKE_BROKE = 0x04;  // device error ID
 //Dashboard variables
 unsigned char len = 0;  //length of the data in the buffer
 unsigned char buf[1];  //received data (only 1 byte)
+unsigned long canId; // CAN id of incoming message
 bool invertorOn = false;
 bool isForward = true;
 
@@ -57,9 +58,11 @@ void setup() {
  * Continuoulsy read values of potentiometers and switches
  */
 void loop() {
-  readPotentiometers();
-  readSwitches();
   readDashboard();
+  if (invertorOn) {    // only read potentiometers when the inverter is on
+    readPotentiometers();
+  }
+  readSwitches();
 }
 
 /**
@@ -70,24 +73,20 @@ void readPotentiometers() {
   accelPin1Val = analogRead(accelPin1); 
   accelPin2Val = analogRead(accelPin2);
 
-  if (!invertorOn) {
-    return;
-  } else {
-    if (abs(accelPin1Val - accelPin2Val) <= (1024 * 0.1)) {
-      int averageReading = (accelPin1Val + accelPin2Val) / 2;
-      unsigned char byteReading = averageReading / 4;
-      if (isForward) {     // send motor potentiometer values when going forward
-        forward[0] = byteReading;
-        CAN.sendMsgBuf(CAN_MOTOR, 0, 8, forward);
-      } else {    // send motor potentiometer values when in reverse
-        reverse[0] = byteReading;
-        CAN.sendMsgBuf(CAN_MOTOR, 0, 8, reverse);
-      }
-    } else {  //turn off motor and send error message
-      unsigned char valueMessage[4] = {'P', 0, 5, 00};  //error message of "Vehicle Speed Sensor Malfunction" 
-      CAN.sendMsgBuf(CAN_ACCEL_BROKE, 0, 4, valueMessage);
-      MotorOff();
+  if (abs(accelPin1Val - accelPin2Val) <= (1024 * 0.1)) {
+    int averageReading = (accelPin1Val + accelPin2Val) / 2;
+    unsigned char byteReading = averageReading / 4;
+    if (isForward) {     // send motor potentiometer values when going forward
+      forward[0] = byteReading;
+      CAN.sendMsgBuf(CAN_MOTOR, 0, 8, forward);
+    } else {    // send motor potentiometer values when in reverse
+      reverse[0] = byteReading;
+      CAN.sendMsgBuf(CAN_MOTOR, 0, 8, reverse);
     }
+  } else {  //turn off motor and send error message
+    unsigned char valueMessage[4] = {'P', 0, 5, 00};  //error message of "Vehicle Speed Sensor Malfunction" 
+    CAN.sendMsgBuf(CAN_ACCEL_BROKE, 0, 4, valueMessage);
+    MotorOff();
   }
 }
 
@@ -119,14 +118,14 @@ void readDashboard() {
   if(CAN_MSGAVAIL == CAN.checkReceive()) {   // if a new message has been recieved.
     CAN.readMsgBuf(&len, buf); // enters message into program
     canId = CAN.getCanId(); // gets sender ID
-    if (canID == 0x01) {  // message about on/off
+    if (canId == 0x01) {  // message about on/off
       MotorOff(); // tells motor controller to turn off the motor
       if (buf[0] == 0) {  // motor is off
         invertorOn = false;
       } else if (buf[0] == 1) {  // motor is on
         invertorOn = true;
       }
-    } else if (canID == 0x02) {  // message about forward/reverse
+    } else if (canId == 0x02) {  // message about forward/reverse
       if (buf[0] == 0) {
         isForward = false;
       } else if (buf[0] == 1) {
