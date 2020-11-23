@@ -5,8 +5,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "BMS Control Board"
-Date "2020-11-19"
-Rev "2.2"
+Date "2020-11-23"
+Rev "2.3"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -216,9 +216,9 @@ Wire Wire Line
 Connection ~ 8150 5850
 Wire Notes Line
 	2500 1250 2500 6000
-Text GLabel 3550 4900 0    50   Input ~ 0
+Text GLabel 3850 4900 0    50   Input ~ 0
 ChargerSupply12V
-Text GLabel 4450 4900 2    50   Input ~ 0
+Text GLabel 4900 4900 2    50   Input ~ 0
 PWR_Charge
 $Comp
 L power:GND #PWR02
@@ -662,12 +662,12 @@ $EndComp
 $Comp
 L Device:Fuse F2
 U 1 1 5FB0792D
-P 3700 4900
-F 0 "F2" V 3897 4900 50  0000 C CNN
-F 1 "5A" V 3806 4900 50  0000 C CNN
-F 2 "" V 3630 4900 50  0001 C CNN
-F 3 "~" H 3700 4900 50  0001 C CNN
-	1    3700 4900
+P 4750 4900
+F 0 "F2" V 4947 4900 50  0000 C CNN
+F 1 "5A" V 4856 4900 50  0000 C CNN
+F 2 "" V 4680 4900 50  0001 C CNN
+F 3 "~" H 4750 4900 50  0001 C CNN
+	1    4750 4900
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -692,4 +692,6 @@ Wire Wire Line
 Wire Wire Line
 	6650 5250 6650 5550
 NoConn ~ 1000 1500
+Wire Wire Line
+	4450 4900 4600 4900
 $EndSCHEMATC
