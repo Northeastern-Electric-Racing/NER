@@ -5,8 +5,8 @@ $Descr D 34000 22000
 encoding utf-8
 Sheet 1 22
 Title "NER FH 2020-2021 Master Electrical Schematic"
-Date "2020-11-12"
-Rev "10"
+Date "2020-11-23"
+Rev "11"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
