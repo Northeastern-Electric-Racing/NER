@@ -5,8 +5,8 @@ $Descr D 34000 22000
 encoding utf-8
 Sheet 1 22
 Title "NER FH 2020-2021 Master Electrical Schematic"
-Date "2020-11-12"
-Rev "10"
+Date "2020-11-23"
+Rev "11"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -1938,8 +1938,6 @@ Wire Wire Line
 	29400 8150 29400 8250
 Wire Wire Line
 	29400 7250 29400 8150
-Wire Bus Line
-	24600 6900 30850 6900
 Wire Wire Line
 	25450 10500 25900 10500
 Wire Wire Line
@@ -1987,6 +1985,10 @@ Wire Wire Line
 Wire Wire Line
 	26800 8300 26800 8350
 Wire Wire Line
+	26800 8350 27150 8350
+Wire Bus Line
+	24600 6900 30850 6900
+Wire Wire Line
 	26400 7000 26500 7000
 Wire Wire Line
 	29200 12450 30000 12450
@@ -2008,6 +2010,4 @@ Wire Bus Line
 	17650 6900 24400 6900
 Wire Bus Line
 	26450 7000 26450 8500
-Wire Wire Line
-	26800 8350 27150 8350
 $EndSCHEMATC

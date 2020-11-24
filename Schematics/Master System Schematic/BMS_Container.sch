@@ -5,8 +5,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 22 22
 Title "BMS & MC Container"
-Date "2020-11-12"
-Rev "7"
+Date "2020-11-23"
+Rev "8"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
