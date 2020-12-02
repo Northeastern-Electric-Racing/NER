@@ -24,10 +24,14 @@ const int CAN_BRAKE_BROKE = 0x04;  // device error ID
 
 //Dashboard variables
 unsigned char len = 0;  //length of the data in the buffer
-unsigned char buf[1];  //received data (only 1 byte)
+unsigned char buf[1];  //received data (1 byte)
+unsigned char buf2[2];  //received data (2 bytes)
 unsigned long canId; // CAN id of incoming message
 bool invertorOn = false;
 bool isForward = true;
+bool brakePressed = false;     // whether brake is being pressed
+bool dischargeEnabled = false; // true when discharge is enabled (torque can be given to motor)
+bool chargeEnabled = false;    // true when charge is enabled (regen torque is allowed)
 
 // readPotentiometers() variables
 unsigned char forward[8] = {0,0,0,0,1,1,0,0};
@@ -116,9 +120,9 @@ void readSwitches() {
  */
 void readDashboard() {
   if(CAN_MSGAVAIL == CAN.checkReceive()) {   // if a new message has been recieved.
-    CAN.readMsgBuf(&len, buf); // enters message into program
     canId = CAN.getCanId(); // gets sender ID
     if (canId == 0x01) {  // message about on/off
+      CAN.readMsgBuf(&len, buf); // enters message into program
       MotorOff(); // tells motor controller to turn off the motor
       if (buf[0] == 0) {  // motor is off
         invertorOn = false;
@@ -126,11 +130,16 @@ void readDashboard() {
         invertorOn = true;
       }
     } else if (canId == 0x02) {  // message about forward/reverse
+      CAN.readMsgBuf(&len, buf); // enters message into program
       if (buf[0] == 0) {
         isForward = false;
       } else if (buf[0] == 1) {
         isForward = true;
       }
+    } else if (canId = 0x07) {
+      CAN.readMsgBuf(&len, buf2);
+      dischargeEnabled = buf2[0] & 1;     // get first bit of first byte
+      chargeEnabled = (buf2[0] >> 1) & 1; // get second bit of first byte 
     }
   }
 }
