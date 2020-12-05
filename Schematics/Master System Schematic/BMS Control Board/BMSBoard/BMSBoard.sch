@@ -5,8 +5,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Vehicle Power Management Board"
-Date "2020-12-03"
-Rev "4"
+Date "2020-12-05"
+Rev "4.1"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -309,7 +309,7 @@ L Device:Fuse F2
 U 1 1 5FB0792D
 P 8450 3250
 F 0 "F2" V 8647 3250 50  0000 C CNN
-F 1 "5A" V 8556 3250 50  0000 C CNN
+F 1 "1A" V 8556 3250 50  0000 C CNN
 F 2 "" V 8380 3250 50  0001 C CNN
 F 3 "~" H 8450 3250 50  0001 C CNN
 	1    8450 3250
@@ -320,7 +320,7 @@ L Device:Fuse F3
 U 1 1 5FB100A8
 P 8450 3150
 F 0 "F3" V 8647 3150 50  0000 C CNN
-F 1 "5A" V 8556 3150 50  0000 C CNN
+F 1 "1A" V 8556 3150 50  0000 C CNN
 F 2 "" V 8380 3150 50  0001 C CNN
 F 3 "~" H 8450 3150 50  0001 C CNN
 	1    8450 3150
