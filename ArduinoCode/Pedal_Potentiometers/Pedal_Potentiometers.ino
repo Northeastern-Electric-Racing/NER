@@ -20,6 +20,15 @@ bool isForward = true;
 bool brakePressed = false;
 bool dischargeEnabled = false; // true when torque can be given to motor
 bool chargeEnabled = false;    // true when regen torque is allowed
+
+/*
+ * Need to be set 
+ */
+// regen braking constants
+const int START_TIME = 0; // delay from when brake is pressed to when regen starts
+const int MIN_TORQUE = 0; // minimum regen torque value
+const int MAX_TORQUE = 0; // maximum regen torque value
+const int RAMP_TIME =  0; // time difference between minumum and maximum torques
  
 // CAN IDs  
 const int CAN_POWER = 0x01;
@@ -27,13 +36,13 @@ const int CAN_DIRECTION = 0x02;
 const int CAN_BRAKE = 0x03;
 const int CAN_BRAKE_ERROR = 0x04;
 const int CAN_ACCEL_ERROR = 0x05;
-const int CAN_BMS_STATES = 0x07;
+const int CAN_BMS_STATES = 0x6B0;
 const int CAN_MOTOR = 0xC0;
 
 // CAN info
 unsigned char len = 0; // length of incoming data
 unsigned char buf1[1]; // received data (1 byte)
-unsigned char buf2[2]; // received data (2 bytes)
+unsigned char buf8[8]; // received data (2 bytes)
 unsigned long canId;   // CAN id of incoming message
 const unsigned char MOTOR_OFF[8] = {0,0,0,0,0,0,0,0}; // message to turn motor off
 const unsigned char ACCEL_ERROR[4] = {'P', 0, 5, 00}; // error message of "Vehicle Speed Sensor Malfunction" 
@@ -85,10 +94,30 @@ void readPotentiometers() {
   accelPin1Val = analogRead(ACCEL_PIN1); 
   accelPin2Val = analogRead(ACCEL_PIN2);
 
+  if (dischargeEnabled) {  // sending torque to the motor is allowed
+    
+  }
+  if (chargeEnabled) {     // regen braking is allowed
+    
+  }
+
+
   if (abs(accelPin1Val - accelPin2Val) <= (1024 * 0.1)) {
-    int averageReading = (accelPin1Val + accelPin2Val) / 2;
-    unsigned char byteReading = averageReading / 4;
-    unsigned char message[8] = {byteReading,0,0,0,isForward,1,0,0};
+    unsigned char accelTorque = 0;
+    unsigned char regenTorque = 0;
+
+    if (dischargeEnabled) {  // acceleration torque is allowed
+      int averageReading = (accelPin1Val + accelPin2Val) / 2;
+      accelTorque = averageReading / 4;
+    } 
+    if (chargeEnabled) {  // regen torque is allowed 
+      /*
+       * CALCULATE REGEN VALUE BELOW
+       * 
+       */
+    }
+    
+    unsigned char message[8] = {accelTorque,regenTorque,0,0,isForward,1,0,0};
     commandMessage(message); // send message to motor with torque and direction
   } else {  // turn off motor and send error message
     commandMessage(MOTOR_OFF);
@@ -105,10 +134,13 @@ void readSwitches() {
   brakePin2Val = digitalRead(BRAKE_PIN2);
 
   if ((brakePin1Val == LOW) && (brakePin2Val == LOW)) {  // both switches are on
+    brakePressed = true;
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, {1});
   } else if ((brakePin1Val == HIGH) && (brakePin2Val == HIGH)) { // both switches are off
+    brakePressed = false;
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, {0});
   } else {  // error due to switches having different values
+    brakePressed = false;
     CAN.sendMsgBuf(CAN_BRAKE_ERROR, 0, 4, BRAKE_ERROR);
   }
 }
@@ -131,9 +163,9 @@ void readStates() {
       CAN.readMsgBuf(&len, buf1);
       isForward = buf1[0]; // set direction state
     } else if (canId = CAN_BMS_STATES) {
-      CAN.readMsgBuf(&len, buf2);
-      dischargeEnabled = buf2[0] & 1;     // get first bit of first byte
-      chargeEnabled = (buf2[0] >> 1) & 1; // get second bit of first byte 
+      CAN.readMsgBuf(&len, buf8);
+      dischargeEnabled = buf8[5] & 1;     // get first bit of Relay State byte
+      chargeEnabled = (buf8[5] >> 1) & 1; // get second bit of Relay State byte 
     }
   }
 }
