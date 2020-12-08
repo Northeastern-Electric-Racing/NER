@@ -111,7 +111,7 @@ L Converter_ACDC:HLK-PM12 PS1
 U 1 1 6015DD85
 P 5500 2100
 F 0 "PS1" H 5500 1783 50  0000 C CNN
-F 1 "PLACEHOLDER" H 5500 1874 50  0000 C CNN
+F 1 "TRH100A" H 5500 1874 50  0000 C CNN
 F 2 "Converter_ACDC:Converter_ACDC_HiLink_HLK-PMxx" H 5500 1800 50  0001 C CNN
 F 3 "http://www.hlktech.net/product_detail.php?ProId=56" H 5900 1750 50  0001 C CNN
 	1    5500 2100
@@ -228,4 +228,8 @@ Wire Wire Line
 	6800 5450 6800 4050
 Text Label 6700 4700 3    50   ~ 0
 W1_2WG
+Text Notes 6300 1700 0    79   ~ 0
+All wires are 16 AWG unless specified
+Text Label 6800 5000 1    50   ~ 0
+W2_2AWG
 $EndSCHEMATC
