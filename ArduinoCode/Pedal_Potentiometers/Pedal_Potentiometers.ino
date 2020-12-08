@@ -20,15 +20,12 @@ bool isForward = true;
 bool brakePressed = false;
 bool dischargeEnabled = false; // true when torque can be given to motor
 bool chargeEnabled = false;    // true when regen torque is allowed
-unsigned long timeInit = 0; 
+unsigned long timeBrake = 0;    // the last time the brake was pressed
 
-/*
- * Need to be set 
- */
 // regen braking constants
-const int START_TIME = 0; // delay from when brake is pressed to when regen starts
+const int START_TIME = 0;   // delay from when brake is pressed to when regen starts
 const int MAX_TORQUE = 255; // maximum regen torque value
-const int RAMP_TIME =  10; // time difference between minumum and maximum torques
+const int RAMP_TIME =  10;  // time until the maximum regen torque is reached
  
 // CAN IDs  
 const int CAN_POWER = 0x01;
@@ -103,11 +100,11 @@ void readPotentiometers() {
       accelTorque = averageReading / 4;
     } 
     if (chargeEnabled && brakePressed) {  // regen torque is allowed 
-      int timeDifference = (millis() - timeInit)/1000;
-      if (timeDifference > RAMP_TIME) {
+      int timeDifference = (millis() - timeBrake) / 1000; // length of time the brake has been pressed
+      if (timeDifference - START_TIME > RAMP_TIME) { // max regen torque is allowed
         regenTorque = MAX_TORQUE;
-    } else {
-        regenTorque = timeDifference * (MAX_TORQUE / RAMP_TIME);
+      } else if (timeDifference - START_TIME > 0) {
+        regenTorque = timeDifference * (MAX_TORQUE / RAMP_TIME); // regen torque depends on how long the brake has been held
       }
     }
     
@@ -128,8 +125,8 @@ void readSwitches() {
   brakePin2Val = digitalRead(BRAKE_PIN2);
 
   if ((brakePin1Val == LOW) && (brakePin2Val == LOW)) {  // both switches are on
-    if (!brakePressed) {
-      timeInit = millis();
+    if (!brakePressed) {  // set the brake time if the brake has just been pressed
+      timeBrake = millis();
     } 
     brakePressed = true;
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, {1});
