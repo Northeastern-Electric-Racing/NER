@@ -232,4 +232,8 @@ Text Notes 6300 1700 0    79   ~ 0
 All wires are 16 AWG unless specified
 Text Label 6800 5000 1    50   ~ 0
 W2_2AWG
+Text Label 3750 2000 0    50   ~ 0
+W3_18AWG
+Text Label 3750 2200 0    50   ~ 0
+W4_18AWG
 $EndSCHEMATC

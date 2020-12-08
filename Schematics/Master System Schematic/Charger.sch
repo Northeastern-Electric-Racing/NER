@@ -55,14 +55,14 @@ $EndComp
 $Comp
 L Device:Fuse F?
 U 1 1 61EEF417
-P 6450 4200
+P 6950 4200
 AR Path="/61EEF417" Ref="F?"  Part="1" 
 AR Path="/61ECC7CF/61EEF417" Ref="F4"  Part="1" 
-F 0 "F4" V 6253 4200 50  0000 C CNN
-F 1 "20A" V 6344 4200 50  0000 C CNN
-F 2 "" V 6380 4200 50  0001 C CNN
-F 3 "~" H 6450 4200 50  0001 C CNN
-	1    6450 4200
+F 0 "F4" V 6753 4200 50  0000 C CNN
+F 1 "20A" V 6844 4200 50  0000 C CNN
+F 2 "" V 6880 4200 50  0001 C CNN
+F 3 "~" H 6950 4200 50  0001 C CNN
+	1    6950 4200
 	0    1    -1   0   
 $EndComp
 $Comp
@@ -79,9 +79,7 @@ F 3 "~" H 6500 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6200 4200 6300 4200
-Wire Wire Line
-	6700 4200 6700 5450
+	7200 4200 7200 5450
 Wire Wire Line
 	3450 3800 3450 2950
 Wire Wire Line
@@ -94,9 +92,9 @@ Text HLabel 3300 2550 0    50   Output ~ 0
 Charger_Safety
 Text HLabel 3300 2200 0    50   Output ~ 0
 +12V
-Text HLabel 6700 5450 3    50   Output ~ 0
+Text HLabel 7200 5450 3    50   Output ~ 0
 TS+
-Text HLabel 6800 5450 3    50   Output ~ 0
+Text HLabel 7300 5450 3    50   Output ~ 0
 TS-
 Wire Wire Line
 	6200 3650 6750 3650
@@ -137,24 +135,22 @@ Wire Wire Line
 Text HLabel 3300 2000 0    50   Output ~ 0
 GND
 Wire Wire Line
-	6700 4200 6600 4200
+	7200 4200 7100 4200
 $Comp
 L Device:Fuse F?
 U 1 1 6017BDE1
-P 6450 4050
+P 6950 4050
 AR Path="/6017BDE1" Ref="F?"  Part="1" 
 AR Path="/61ECC7CF/6017BDE1" Ref="F3"  Part="1" 
-F 0 "F3" V 6253 4050 50  0000 C CNN
-F 1 "20A" V 6344 4050 50  0000 C CNN
-F 2 "" V 6380 4050 50  0001 C CNN
-F 3 "~" H 6450 4050 50  0001 C CNN
-	1    6450 4050
+F 0 "F3" V 6753 4050 50  0000 C CNN
+F 1 "20A" V 6844 4050 50  0000 C CNN
+F 2 "" V 6880 4050 50  0001 C CNN
+F 3 "~" H 6950 4050 50  0001 C CNN
+	1    6950 4050
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	6200 4050 6300 4050
-Wire Wire Line
-	6600 4050 6800 4050
+	7100 4050 7300 4050
 $Comp
 L Device:Fuse F2
 U 1 1 5FA10442
@@ -225,15 +221,23 @@ Wire Wire Line
 Wire Wire Line
 	6100 2000 6100 2950
 Wire Wire Line
-	6800 5450 6800 4050
-Text Label 6700 4700 3    50   ~ 0
+	7300 5450 7300 4050
+Text Label 7200 4700 3    50   ~ 0
 W1_2WG
 Text Notes 6300 1700 0    79   ~ 0
 All wires are 16 AWG unless specified
-Text Label 6800 5000 1    50   ~ 0
+Text Label 7300 5000 1    50   ~ 0
 W2_2AWG
 Text Label 3750 2000 0    50   ~ 0
 W3_18AWG
 Text Label 3750 2200 0    50   ~ 0
 W4_18AWG
+Wire Wire Line
+	6200 4050 6800 4050
+Wire Wire Line
+	6200 4200 6800 4200
+Text Label 6350 4050 0    50   ~ 0
+W5_8AWG
+Text Label 6350 4200 0    50   ~ 0
+W6_8AWG
 $EndSCHEMATC
