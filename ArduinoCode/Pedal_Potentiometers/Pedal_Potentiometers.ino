@@ -20,15 +20,15 @@ bool isForward = true;
 bool brakePressed = false;
 bool dischargeEnabled = false; // true when torque can be given to motor
 bool chargeEnabled = false;    // true when regen torque is allowed
+unsigned long timeInit = 0; 
 
 /*
  * Need to be set 
  */
 // regen braking constants
 const int START_TIME = 0; // delay from when brake is pressed to when regen starts
-const int MIN_TORQUE = 0; // minimum regen torque value
-const int MAX_TORQUE = 0; // maximum regen torque value
-const int RAMP_TIME =  0; // time difference between minumum and maximum torques
+const int MAX_TORQUE = 255; // maximum regen torque value
+const int RAMP_TIME =  10; // time difference between minumum and maximum torques
  
 // CAN IDs  
 const int CAN_POWER = 0x01;
@@ -94,14 +94,6 @@ void readPotentiometers() {
   accelPin1Val = analogRead(ACCEL_PIN1); 
   accelPin2Val = analogRead(ACCEL_PIN2);
 
-  if (dischargeEnabled) {  // sending torque to the motor is allowed
-    
-  }
-  if (chargeEnabled) {     // regen braking is allowed
-    
-  }
-
-
   if (abs(accelPin1Val - accelPin2Val) <= (1024 * 0.1)) {
     unsigned char accelTorque = 0;
     unsigned char regenTorque = 0;
@@ -110,11 +102,13 @@ void readPotentiometers() {
       int averageReading = (accelPin1Val + accelPin2Val) / 2;
       accelTorque = averageReading / 4;
     } 
-    if (chargeEnabled) {  // regen torque is allowed 
-      /*
-       * CALCULATE REGEN VALUE BELOW
-       * 
-       */
+    if (chargeEnabled && brakePressed) {  // regen torque is allowed 
+      int timeDifference = (millis() - timeInit)/1000;
+      if (timeDifference > RAMP_TIME) {
+        regenTorque = MAX_TORQUE;
+    } else {
+        regenTorque = timeDifference * (MAX_TORQUE / RAMP_TIME);
+      }
     }
     
     unsigned char message[8] = {accelTorque,regenTorque,0,0,isForward,1,0,0};
@@ -134,6 +128,9 @@ void readSwitches() {
   brakePin2Val = digitalRead(BRAKE_PIN2);
 
   if ((brakePin1Val == LOW) && (brakePin2Val == LOW)) {  // both switches are on
+    if (!brakePressed) {
+      timeInit = millis();
+    } 
     brakePressed = true;
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, {1});
   } else if ((brakePin1Val == HIGH) && (brakePin2Val == HIGH)) { // both switches are off
