@@ -39,9 +39,9 @@ long lastLog = 0; // Time of last successful log to SD
 int nextFileName = 0; // Log file names in the format log-0.txt
 
 /**
-   Sets relavent pins to output or input, initializes serial for debugging, initializes CAN, SD card reader,
-   determines proper file name for future logs.
-*/
+ * Sets relavent pins to output or input, initializes serial for debugging, initializes CAN, SD card reader,
+ * determines proper file name for future logs.
+ */
 void setup() {
   Serial.begin(9600);
 
