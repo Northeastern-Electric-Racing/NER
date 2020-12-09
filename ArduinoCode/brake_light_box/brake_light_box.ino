@@ -96,8 +96,8 @@ bool SDWrite(String errors);
 void logError(String id, unsigned char error[8]);
 
 /**
-   Deals with incoming CAN messages, if an error is recieved, it is logged. Writes to SD card every 30 seconds.
-*/
+ * Deals with incoming CAN messages, if an error is recieved, it is logged. Writes to SD card every 30 seconds.
+ */
 void loop() {
   if (CAN_MSGAVAIL == CAN.checkReceive()) { //if a new message has been recieved.
     CAN.readMsgBuf(&len, buf); //enters message into program
