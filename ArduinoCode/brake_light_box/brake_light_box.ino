@@ -147,11 +147,11 @@ void logError(String id, unsigned char error[8]) {
 }
 
 /**
-   Logs errors to SD card.
-
-   @param errors the error(s) to be logged
-   @returns true if logging was successful, false if it failed
-*/
+ * Logs errors to SD card.
+ *
+ * @param errors the error(s) to be logged
+ * @returns true if logging was successful, false if it failed
+ */
 bool SDWrite(String errors) {
   digitalWrite(CAN_SS_PIN, HIGH); // disable CAN module
   digitalWrite(SD_SS_PIN, LOW); // enable SD module
