@@ -125,11 +125,11 @@ void loop() {
 }
 
 /**
-   Compiles errors, writes to SD every 5 errors
-
-   @param id the sender id of the error
-   @param error the errors to be logged
-*/
+ * Compiles errors, writes to SD every 5 errors
+ *
+ * @param id the sender id of the error
+ * @param error the errors to be logged
+ */
 void logError(String id, unsigned char error[8]) {
   errorBuffer += "millis: " + String(millis()) + "  |  ";
   errorBuffer += "id: " + id + "  |  error: | ";
