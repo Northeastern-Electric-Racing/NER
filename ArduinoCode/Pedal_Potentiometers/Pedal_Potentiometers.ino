@@ -20,7 +20,7 @@ bool isForward = true;
 bool brakePressed = false;
 bool dischargeEnabled = false; // true when torque can be given to motor
 bool chargeEnabled = false;    // true when regen torque is allowed
-unsigned long timeBrake = 0;    // the last time the brake was pressed
+unsigned long timeBrake = 0;   // the time at which the brake was last pressed
 
 // regen braking constants
 const int START_TIME = 0;   // delay from when brake is pressed to when regen starts
@@ -28,7 +28,7 @@ const int MAX_TORQUE = 255; // maximum regen torque value
 const int RAMP_TIME =  10;  // time until the maximum regen torque is reached
  
 // CAN IDs  
-const int CAN_POWER = 0x01;
+const int CAN_START_MOTOR = 0x01;
 const int CAN_DIRECTION = 0x02;
 const int CAN_BRAKE = 0x03;
 const int CAN_BRAKE_ERROR = 0x04;
@@ -38,8 +38,7 @@ const int CAN_MOTOR = 0xC0;
 
 // CAN info
 unsigned char len = 0; // length of incoming data
-unsigned char buf1[1]; // received data (1 byte)
-unsigned char buf8[8]; // received data (2 bytes)
+unsigned char buf[8];  // received data
 unsigned long canId;   // CAN id of incoming message
 const unsigned char MOTOR_OFF[8] = {0,0,0,0,0,0,0,0}; // message to turn motor off
 const unsigned char ACCEL_ERROR[4] = {'P', 0, 5, 00}; // error message of "Vehicle Speed Sensor Malfunction" 
@@ -48,10 +47,9 @@ const unsigned char BRAKE_ERROR[4] = {'P', 0, 5, 04}; // error message of "Brake
 const int SPI_CS_PIN = 10; // base CAN pin
 
 // function declarations
+void readStates();
 void readPotentiometers();
 void readSwitches();
-void readStates();
-void commandMessage(unsigned char message[8]);
 
 MCP_CAN CAN(SPI_CS_PIN); // setup can device
 
@@ -73,7 +71,7 @@ void setup() {
 }
 
 /**
- * Continuoulsy read values of potentiometers, switches, and the dashboard
+ * Continuoulsy read incoming CAN messages and the values of the accelerator potentiometers and brake switches
  */
 void loop() {
   readStates();
@@ -83,8 +81,31 @@ void loop() {
   readSwitches();
 }
 
+/*
+ * readStates() reads the CAN messages from other parts of the car to set the following states:
+ *  - CAN_START_MOTOR message is used to set the inverterOn state
+ *  - CAN_DIRECTION message is used to set the isForward state
+ *  - CAN_BMS_STATES message is used to set the dischargeEnabled and chargeEnabled states
+ */
+void readStates() {
+  if(CAN_MSGAVAIL == CAN.checkReceive()) {   // if a new message has been recieved.
+    CAN.readMsgBuf(&len, buf);
+    canId = CAN.getCanId(); // gets sender ID
+
+    if (canId == CAN_START_MOTOR) {
+      CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF); // turns motor off to release lockout or because switch is off
+      invertorOn = buf[0]; // set inverter state
+    } else if (canId == CAN_DIRECTION) {
+      isForward = buf[0]; // set direction state
+    } else if (canId = CAN_BMS_STATES) {
+      dischargeEnabled = buf[5] & 1;     // get first bit of Relay State byte
+      chargeEnabled = (buf[5] >> 1) & 1; // get second bit of Relay State byte 
+    }
+  }
+}
+
 /**
- * Read the values of the two potentiometers
+ * Read the values of the two accelerator pedal potentiometers
  * Compare them to make sure the values agree and send value to CAN
  */
 void readPotentiometers() {
@@ -109,15 +130,15 @@ void readPotentiometers() {
     }
     
     unsigned char message[8] = {accelTorque,regenTorque,0,0,isForward,1,0,0};
-    commandMessage(message); // send message to motor with torque and direction
+    CAN.sendMsgBuf(CAN_MOTOR, 0, 8, message); // send message to motor controller with torques and direction
   } else {  // turn off motor and send error message
-    commandMessage(MOTOR_OFF);
+    CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
     CAN.sendMsgBuf(CAN_ACCEL_ERROR, 0, 4, ACCEL_ERROR);
   }
 }
 
 /**
- * Read the values of the two switches
+ * Read the values of the two brake switches
  * Compare them to make sure the values agree and send value to CAN
  */
 void readSwitches() {
@@ -137,36 +158,4 @@ void readSwitches() {
     brakePressed = false;
     CAN.sendMsgBuf(CAN_BRAKE_ERROR, 0, 4, BRAKE_ERROR);
   }
-}
-
-/*
- * readStates() reads the CAN messages from other parts of the car to set the following states:
- *  - CAN_POWER message is used to set the inverterOn state
- *  - CAN_DIRECTION message is used to set the isForward state
- *  - CAN_BMS_STATES message is used to set the dischargeEnabled and chargeEnabled states
- */
-void readStates() {
-  if(CAN_MSGAVAIL == CAN.checkReceive()) {   // if a new message has been recieved.
-    canId = CAN.getCanId(); // gets sender ID
-
-    if (canId == CAN_POWER) {
-      CAN.readMsgBuf(&len, buf1);
-      commandMessage(MOTOR_OFF); // turns motor off to release lockout or because switch is off
-      invertorOn = buf1[0]; // set inverter state
-    } else if (canId == CAN_DIRECTION) {
-      CAN.readMsgBuf(&len, buf1);
-      isForward = buf1[0]; // set direction state
-    } else if (canId = CAN_BMS_STATES) {
-      CAN.readMsgBuf(&len, buf8);
-      dischargeEnabled = buf8[5] & 1;     // get first bit of Relay State byte
-      chargeEnabled = (buf8[5] >> 1) & 1; // get second bit of Relay State byte 
-    }
-  }
-}
-
-/*
- * commandMessage() sends 8 byte array message to the motor (0xC0)
- */
-void commandMessage(unsigned char message[8]) {
-  CAN.sendMsgBuf(CAN_MOTOR, 0, 8, message);
 }
