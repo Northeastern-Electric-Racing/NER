@@ -38,6 +38,11 @@ long lastLog = 0; // Time of last successful log to SD
 
 int nextFileName = 0; // Log file names in the format log-0.txt
 
+void switchCANToSD();
+void switchSDToCAN();
+void logError(String id, unsigned char error[8]);
+bool SDWrite(String errors);
+
 /**
  * Sets relavent pins to output or input, initializes serial for debugging, initializes CAN, SD card reader,
  * determines proper file name for future logs.
@@ -49,8 +54,7 @@ void setup() {
   pinMode(CAN_SS_PIN, OUTPUT);
   pinMode(BRAKE_LIGHT_PIN, OUTPUT);
 
-  digitalWrite(SD_SS_PIN, HIGH); // disable SD module
-  digitalWrite(CAN_SS_PIN, LOW); // enable CAN module
+  switchSDToCAN();
 
   while (CAN_OK != CAN.begin(CAN_500KBPS, MCP_8MHz)) { //specify 8MHz crystal
     Serial.println("CAN BUS init Failed");
@@ -58,8 +62,7 @@ void setup() {
   }
   Serial.println("CAN BUS Shield Init OK!");
 
-  digitalWrite(CAN_SS_PIN, HIGH); // disable CAN module
-  digitalWrite(SD_SS_PIN, LOW); // enable SD module
+  switchCANToSD();
 
   while (!SD.begin(SD_SS_PIN)) {
     Serial.println("initialization failed!");
@@ -87,13 +90,8 @@ void setup() {
   myFile.println(String(nextFileName)); // record the file number being used this time
   myFile.close();
 
-  digitalWrite(SD_SS_PIN, HIGH); // disable SD module
-  digitalWrite(CAN_SS_PIN, LOW); // enable CAN module
-
+  switchSDToCAN();
 }
-
-bool SDWrite(String errors);
-void logError(String id, unsigned char error[8]);
 
 /**
  * Deals with incoming CAN messages, if an error is recieved, it is logged. Writes to SD card every 30 seconds.
@@ -125,6 +123,22 @@ void loop() {
 }
 
 /**
+ * Activates CAN module and deactivates SD module
+ */
+void switchSDToCAN() {
+  digitalWrite(SD_SS_PIN, HIGH);
+  digitalWrite(CAN_SS_PIN, LOW);
+}
+
+/**
+ * Activates SD module and deactivates CAN module
+ */
+void switchCANToSD() {
+  digitalWrite(CAN_SS_PIN, HIGH);
+  digitalWrite(SD_SS_PIN, LOW);
+}
+
+/**
  * Compiles errors, writes to SD every 5 errors
  *
  * @param id the sender id of the error
@@ -153,13 +167,11 @@ void logError(String id, unsigned char error[8]) {
  * @returns true if logging was successful, false if it failed
  */
 bool SDWrite(String errors) {
-  digitalWrite(CAN_SS_PIN, HIGH); // disable CAN module
-  digitalWrite(SD_SS_PIN, LOW); // enable SD module
+  switchCANToSD();
 
   if (!SD.begin(SD_SS_PIN)) {
     Serial.println("initialization failed!");
-    digitalWrite(SD_SS_PIN, HIGH); // disable SD module
-    digitalWrite(CAN_SS_PIN, LOW); // enable CAN module
+    switchSDToCAN();
     return false;
   }
 
@@ -170,13 +182,11 @@ bool SDWrite(String errors) {
     myFile.close();
   } else {
     Serial.println("error opening: log-" + String(nextFileName) + ".txt");
-    digitalWrite(SD_SS_PIN, HIGH); //disable SD module
-    digitalWrite(CAN_SS_PIN, LOW); // enable CAN module
+    switchSDToCAN();
     return false;
   }
 
-  digitalWrite(SD_SS_PIN, HIGH); // disable SD module
-  digitalWrite(CAN_SS_PIN, LOW); // enable CAN module
+  switchSDToCAN();
   lastLog = millis();
   return true;
 }
