@@ -131,7 +131,7 @@ void switchSDToCAN() {
 }
 
 /**
- * Activates SD module and deactivates CAN module
+ * Deactivates CAN module and then activates SD module
  */
 void switchCANToSD() {
   digitalWrite(CAN_SS_PIN, HIGH);
