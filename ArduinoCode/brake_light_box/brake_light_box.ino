@@ -8,10 +8,10 @@
    CLK - pin 13
 
    SD card module:
-   SS - pin 10
+   CS - pin 8
 
    CAN module:
-   SS - pin 9
+   CS - pin 10
 
    Note: This program keeps the CAN module activated by default, but deactivates it when writing to the SD card.
    This Arduino may miss CAN messages if it recieves a message while writing to the SD card.
@@ -22,12 +22,12 @@
 #include <SPI.h>
 #include <SD.h>
 
-#define SD_SS_PIN 10
-#define CAN_SS_PIN 9
-#define BRAKE_LIGHT_PIN 6 // Does not have to be PWM pin.
+#define CAN_CS_PIN 10
+#define SD_CS_PIN 8
+#define BRAKE_LIGHT_PIN 9
 
 File myFile;
-MCP_CAN CAN(CAN_SS_PIN);
+MCP_CAN CAN(CAN_CS_PIN);
 
 unsigned char len = 0; // Length of incoming message
 unsigned char buf[8]; // Memory for incoming message
@@ -50,8 +50,8 @@ bool SDWrite(String errors);
 void setup() {
   Serial.begin(9600);
 
-  pinMode(SD_SS_PIN, OUTPUT);
-  pinMode(CAN_SS_PIN, OUTPUT);
+  pinMode(SD_CS_PIN, OUTPUT);
+  pinMode(CAN_CS_PIN, OUTPUT);
   pinMode(BRAKE_LIGHT_PIN, OUTPUT);
 
   switchSDToCAN();
@@ -64,7 +64,7 @@ void setup() {
 
   switchCANToSD();
 
-  while (!SD.begin(SD_SS_PIN)) {
+  while (!SD.begin(SD_CS_PIN)) {
     Serial.println("initialization failed!");
     delay(250);
   }
@@ -126,16 +126,16 @@ void loop() {
  * Deactivates SD module and then activates CAN module
  */
 void switchSDToCAN() {
-  digitalWrite(SD_SS_PIN, HIGH);
-  digitalWrite(CAN_SS_PIN, LOW);
+  digitalWrite(SD_CS_PIN, HIGH);
+  digitalWrite(CAN_CS_PIN, LOW);
 }
 
 /**
  * Deactivates CAN module and then activates SD module
  */
 void switchCANToSD() {
-  digitalWrite(CAN_SS_PIN, HIGH);
-  digitalWrite(SD_SS_PIN, LOW);
+  digitalWrite(CAN_CS_PIN, HIGH);
+  digitalWrite(SD_CS_PIN, LOW);
 }
 
 /**
@@ -169,7 +169,7 @@ void logError(String id, unsigned char error[8]) {
 bool SDWrite(String errors) {
   switchCANToSD();
 
-  if (!SD.begin(SD_SS_PIN)) {
+  if (!SD.begin(SD_CS_PIN)) {
     Serial.println("initialization failed!");
     switchSDToCAN();
     return false;
