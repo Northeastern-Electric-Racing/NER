@@ -16,14 +16,14 @@ $EndDescr
 $Comp
 L Relay:Fujitsu_FTR-F1A K?
 U 1 1 61EEF404
-P 3850 2750
+P 3550 2750
 AR Path="/61EEF404" Ref="K?"  Part="1" 
 AR Path="/61ECC7CF/61EEF404" Ref="K6"  Part="1" 
-F 0 "K6" H 3850 2233 50  0000 C CNN
-F 1 "Safety Relay" H 3850 2324 50  0000 C CNN
-F 2 "Relay_THT:Relay_DPST_Fujitsu_FTR-F1A" H 3850 2350 50  0001 C CNN
-F 3 "https://www.fujitsu.com/downloads/MICRO/fcai/relays/ftr-f1.pdf" H 3900 3300 50  0001 C CNN
-	1    3850 2750
+F 0 "K6" H 3550 2233 50  0000 C CNN
+F 1 "Safety Relay" H 3550 2324 50  0000 C CNN
+F 2 "Relay_THT:Relay_DPST_Fujitsu_FTR-F1A" H 3550 2350 50  0001 C CNN
+F 3 "https://www.fujitsu.com/downloads/MICRO/fcai/relays/ftr-f1.pdf" H 3600 3300 50  0001 C CNN
+	1    3550 2750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -79,16 +79,14 @@ F 3 "~" H 6500 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3450 3800 3450 2950
+	3150 3800 3150 2950
 Wire Wire Line
-	3450 2950 3550 2950
+	3150 2950 3250 2950
 Wire Wire Line
-	3300 2750 3300 3950
-Wire Wire Line
-	4600 4200 4700 4200
-Text HLabel 3300 2550 0    50   Output ~ 0
+	3000 2750 3000 3950
+Text HLabel 3000 2550 0    50   Output ~ 0
 Charger_Safety
-Text HLabel 3300 2200 0    50   Output ~ 0
+Text HLabel 3000 2200 0    50   Output ~ 0
 +12V
 Text HLabel 7200 5450 3    50   Output ~ 0
 TS+
@@ -116,21 +114,16 @@ $EndComp
 Wire Wire Line
 	5900 2200 6000 2200
 Wire Wire Line
-	5900 2000 6100 2000
-Connection ~ 6100 2950
+	5900 2000 6200 2000
 Wire Wire Line
-	5100 2000 4900 2000
+	5100 2000 4600 2000
 Wire Wire Line
-	4900 2000 4900 3150
-Connection ~ 4900 2000
-Connection ~ 4900 3150
+	4600 2000 4600 3150
 Wire Wire Line
-	4900 3150 4600 3150
+	4600 3150 4600 4200
 Wire Wire Line
-	4600 3150 4600 4100
-Wire Wire Line
-	3550 2550 3300 2550
-Text HLabel 3300 2000 0    50   Output ~ 0
+	3250 2550 3000 2550
+Text HLabel 3000 2000 0    50   Output ~ 0
 GND
 Wire Wire Line
 	7200 4200 7100 4200
@@ -152,37 +145,37 @@ Wire Wire Line
 $Comp
 L Device:Fuse F2
 U 1 1 5FA10442
-P 4650 2200
-F 0 "F2" V 4750 2200 50  0000 C CNN
-F 1 "10A" V 4550 2200 50  0000 C CNN
-F 2 "" V 4580 2200 50  0001 C CNN
-F 3 "~" H 4650 2200 50  0001 C CNN
-	1    4650 2200
+P 4350 2200
+F 0 "F2" V 4450 2200 50  0000 C CNN
+F 1 "10A" V 4250 2200 50  0000 C CNN
+F 2 "" V 4280 2200 50  0001 C CNN
+F 3 "~" H 4350 2200 50  0001 C CNN
+	1    4350 2200
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	4800 2200 5100 2200
+	4500 2200 5100 2200
 Wire Wire Line
-	4500 2200 4350 2200
+	4200 2200 4050 2200
 Wire Wire Line
-	4350 2200 4350 2550
+	4050 2200 4050 2550
 Wire Wire Line
-	4350 2550 4150 2550
+	4050 2550 3850 2550
 Wire Wire Line
-	3450 3800 4950 3800
+	3150 3800 4950 3800
 Wire Wire Line
-	3300 2750 3550 2750
+	3000 2750 3250 2750
 Wire Wire Line
-	3300 3950 4950 3950
+	3000 3950 4950 3950
 Wire Wire Line
-	3300 2000 4900 2000
+	3000 2000 4600 2000
 Wire Wire Line
-	3300 2200 4350 2200
-Connection ~ 4350 2200
+	3000 2200 4050 2200
+Connection ~ 4050 2200
 Wire Wire Line
-	4150 2750 5500 2750
+	3850 2750 5500 2750
 Wire Wire Line
-	4150 2950 6100 2950
+	3850 2950 6200 2950
 $Comp
 L Device:Fuse F199
 U 1 1 603DB64B
@@ -195,9 +188,7 @@ F 3 "~" H 6450 2750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4900 3150 6400 3150
-Wire Wire Line
-	6100 2950 6600 2950
+	6200 2950 6600 2950
 $Comp
 L Device:Fuse F86
 U 1 1 6016ADF1
@@ -217,7 +208,7 @@ Connection ~ 6000 2750
 Wire Wire Line
 	6000 2750 6300 2750
 Wire Wire Line
-	6100 2000 6100 2950
+	6200 2000 6200 2950
 Wire Wire Line
 	7300 5450 7300 4050
 Text Label 7200 4700 3    50   ~ 0
@@ -226,9 +217,9 @@ Text Notes 6300 1700 0    79   ~ 0
 All wires are 16 AWG unless specified
 Text Label 7300 5000 1    50   ~ 0
 W2_2AWG
-Text Label 3750 2000 0    50   ~ 0
+Text Label 3450 2000 0    50   ~ 0
 W3_18AWG
-Text Label 3750 2200 0    50   ~ 0
+Text Label 3450 2200 0    50   ~ 0
 W4_18AWG
 Wire Wire Line
 	6200 4050 6800 4050
@@ -238,13 +229,11 @@ Text Label 6350 4050 0    50   ~ 0
 W5_8AWG
 Text Label 6350 4200 0    50   ~ 0
 W6_8AWG
-Text HLabel 3300 4100 0    50   Input ~ 0
+Text HLabel 3000 4200 0    50   Input ~ 0
 CAN_Shield
 Wire Wire Line
-	3300 4100 4600 4100
-Connection ~ 4600 4100
-Wire Wire Line
-	4600 4100 4600 4200
+	3000 4200 4600 4200
+Connection ~ 4600 4200
 Entry Wire Line
 	7300 4050 7400 3950
 Wire Wire Line
@@ -261,14 +250,18 @@ TS_Shield
 Entry Wire Line
 	7200 4650 7100 4550
 Wire Wire Line
-	7100 4550 4700 4550
+	7100 4550 4600 4550
 Wire Wire Line
-	4700 4550 4700 4200
+	4600 4550 4600 4200
 Wire Wire Line
-	7200 4200 7200 5450
-Connection ~ 4700 4200
-Wire Wire Line
-	4700 4200 4950 4200
+	4600 4200 4950 4200
 Text Label 6700 4550 0    50   ~ 0
 TS_Shield
+Connection ~ 4600 3150
+Wire Wire Line
+	4600 3150 6400 3150
+Connection ~ 4600 2000
+Connection ~ 6200 2950
+Wire Wire Line
+	7200 4200 7200 5450
 $EndSCHEMATC
