@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 2 22
+Sheet 22 22
 Title "Charging System"
 Date "2020-10-20"
 Rev "4"
@@ -79,15 +79,13 @@ F 3 "~" H 6500 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7200 4200 7200 5450
-Wire Wire Line
 	3450 3800 3450 2950
 Wire Wire Line
 	3450 2950 3550 2950
 Wire Wire Line
 	3300 2750 3300 3950
 Wire Wire Line
-	4600 4200 4950 4200
+	4600 4200 4700 4200
 Text HLabel 3300 2550 0    50   Output ~ 0
 Charger_Safety
 Text HLabel 3300 2200 0    50   Output ~ 0
@@ -129,7 +127,7 @@ Connection ~ 4900 3150
 Wire Wire Line
 	4900 3150 4600 3150
 Wire Wire Line
-	4600 3150 4600 4200
+	4600 3150 4600 4100
 Wire Wire Line
 	3550 2550 3300 2550
 Text HLabel 3300 2000 0    50   Output ~ 0
@@ -197,7 +195,7 @@ F 3 "~" H 6450 2750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4900 3150 6600 3150
+	4900 3150 6400 3150
 Wire Wire Line
 	6100 2950 6600 2950
 $Comp
@@ -240,4 +238,37 @@ Text Label 6350 4050 0    50   ~ 0
 W5_8AWG
 Text Label 6350 4200 0    50   ~ 0
 W6_8AWG
+Text HLabel 3300 4100 0    50   Input ~ 0
+CAN_Shield
+Wire Wire Line
+	3300 4100 4600 4100
+Connection ~ 4600 4100
+Wire Wire Line
+	4600 4100 4600 4200
+Entry Wire Line
+	7300 4050 7400 3950
+Wire Wire Line
+	7400 3950 7400 3500
+Wire Wire Line
+	7400 3500 6400 3500
+Wire Wire Line
+	6400 3500 6400 3150
+Connection ~ 6400 3150
+Wire Wire Line
+	6400 3150 6600 3150
+Text Label 7050 3500 0    50   ~ 0
+TS_Shield
+Entry Wire Line
+	7200 4650 7100 4550
+Wire Wire Line
+	7100 4550 4700 4550
+Wire Wire Line
+	4700 4550 4700 4200
+Wire Wire Line
+	7200 4200 7200 5450
+Connection ~ 4700 4200
+Wire Wire Line
+	4700 4200 4950 4200
+Text Label 6700 4550 0    50   ~ 0
+TS_Shield
 $EndSCHEMATC

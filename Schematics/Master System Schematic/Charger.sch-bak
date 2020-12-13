@@ -19,7 +19,7 @@ U 1 1 61EEF404
 P 3850 2750
 AR Path="/61EEF404" Ref="K?"  Part="1" 
 AR Path="/61ECC7CF/61EEF404" Ref="K6"  Part="1" 
-F 0 "K6" H 3850 2233 50  0000 C CNN
+F 0 "K?" H 3850 2233 50  0000 C CNN
 F 1 "Safety Relay" H 3850 2324 50  0000 C CNN
 F 2 "Relay_THT:Relay_DPST_Fujitsu_FTR-F1A" H 3850 2350 50  0001 C CNN
 F 3 "https://www.fujitsu.com/downloads/MICRO/fcai/relays/ftr-f1.pdf" H 3900 3300 50  0001 C CNN
@@ -32,7 +32,7 @@ U 1 1 61EEF40A
 P 5650 2750
 AR Path="/61EEF40A" Ref="F?"  Part="1" 
 AR Path="/61ECC7CF/61EEF40A" Ref="F1"  Part="1" 
-F 0 "F1" V 5750 2750 50  0000 C CNN
+F 0 "F?" V 5750 2750 50  0000 C CNN
 F 1 "15A" V 5550 2750 50  0000 C CNN
 F 2 "" V 5580 2750 50  0001 C CNN
 F 3 "~" H 5650 2750 50  0001 C CNN
@@ -45,7 +45,7 @@ U 1 1 61EEF410
 P 5550 4350
 AR Path="/61EEF410" Ref="U?"  Part="1" 
 AR Path="/61ECC7CF/61EEF410" Ref="U5"  Part="1" 
-F 0 "U5" H 5550 4350 50  0001 C CNN
+F 0 "U?" H 5550 4350 50  0001 C CNN
 F 1 "TSM2500" H 5600 4383 50  0000 C CNN
 F 2 "" H 5550 4350 50  0001 C CNN
 F 3 "http://www.thunderstruck-ev.com/images/ThunderStruck%20TSM2500%20ManualV1.05.pdf" H 5550 4350 50  0001 C CNN
@@ -55,14 +55,14 @@ $EndComp
 $Comp
 L Device:Fuse F?
 U 1 1 61EEF417
-P 6450 4200
+P 6950 4200
 AR Path="/61EEF417" Ref="F?"  Part="1" 
 AR Path="/61ECC7CF/61EEF417" Ref="F4"  Part="1" 
-F 0 "F4" V 6253 4200 50  0000 C CNN
-F 1 "20A" V 6344 4200 50  0000 C CNN
-F 2 "" V 6380 4200 50  0001 C CNN
-F 3 "~" H 6450 4200 50  0001 C CNN
-	1    6450 4200
+F 0 "F?" V 6753 4200 50  0000 C CNN
+F 1 "20A" V 6844 4200 50  0000 C CNN
+F 2 "" V 6880 4200 50  0001 C CNN
+F 3 "~" H 6950 4200 50  0001 C CNN
+	1    6950 4200
 	0    1    -1   0   
 $EndComp
 $Comp
@@ -71,7 +71,7 @@ U 1 1 61EEF421
 P 6800 2950
 AR Path="/61EEF421" Ref="J?"  Part="1" 
 AR Path="/61ECC7CF/61EEF421" Ref="J7"  Part="1" 
-F 0 "J7" H 6806 2454 50  0000 C CNN
+F 0 "J?" H 6806 2454 50  0000 C CNN
 F 1 "WallSocket" H 6806 2545 50  0000 C CNN
 F 2 "" H 6500 3050 50  0001 C CNN
 F 3 "~" H 6500 3050 50  0001 C CNN
@@ -79,9 +79,7 @@ F 3 "~" H 6500 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6200 4200 6300 4200
-Wire Wire Line
-	6700 4200 6700 5450
+	7200 4200 7200 5450
 Wire Wire Line
 	3450 3800 3450 2950
 Wire Wire Line
@@ -94,9 +92,9 @@ Text HLabel 3300 2550 0    50   Output ~ 0
 Charger_Safety
 Text HLabel 3300 2200 0    50   Output ~ 0
 +12V
-Text HLabel 6700 5450 3    50   Output ~ 0
+Text HLabel 7200 5450 3    50   Output ~ 0
 TS+
-Text HLabel 6800 5450 3    50   Output ~ 0
+Text HLabel 7300 5450 3    50   Output ~ 0
 TS-
 Wire Wire Line
 	6200 3650 6750 3650
@@ -110,7 +108,7 @@ $Comp
 L Converter_ACDC:HLK-PM12 PS1
 U 1 1 6015DD85
 P 5500 2100
-F 0 "PS1" H 5500 1783 50  0000 C CNN
+F 0 "PS?" H 5500 1783 50  0000 C CNN
 F 1 "TRH100A" H 5500 1874 50  0000 C CNN
 F 2 "Converter_ACDC:Converter_ACDC_HiLink_HLK-PMxx" H 5500 1800 50  0001 C CNN
 F 3 "http://www.hlktech.net/product_detail.php?ProId=56" H 5900 1750 50  0001 C CNN
@@ -137,29 +135,27 @@ Wire Wire Line
 Text HLabel 3300 2000 0    50   Output ~ 0
 GND
 Wire Wire Line
-	6700 4200 6600 4200
+	7200 4200 7100 4200
 $Comp
 L Device:Fuse F?
 U 1 1 6017BDE1
-P 6450 4050
+P 6950 4050
 AR Path="/6017BDE1" Ref="F?"  Part="1" 
 AR Path="/61ECC7CF/6017BDE1" Ref="F3"  Part="1" 
-F 0 "F3" V 6253 4050 50  0000 C CNN
-F 1 "20A" V 6344 4050 50  0000 C CNN
-F 2 "" V 6380 4050 50  0001 C CNN
-F 3 "~" H 6450 4050 50  0001 C CNN
-	1    6450 4050
+F 0 "F?" V 6753 4050 50  0000 C CNN
+F 1 "20A" V 6844 4050 50  0000 C CNN
+F 2 "" V 6880 4050 50  0001 C CNN
+F 3 "~" H 6950 4050 50  0001 C CNN
+	1    6950 4050
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	6200 4050 6300 4050
-Wire Wire Line
-	6600 4050 6800 4050
+	7100 4050 7300 4050
 $Comp
 L Device:Fuse F2
 U 1 1 5FA10442
 P 4650 2200
-F 0 "F2" V 4750 2200 50  0000 C CNN
+F 0 "F?" V 4750 2200 50  0000 C CNN
 F 1 "10A" V 4550 2200 50  0000 C CNN
 F 2 "" V 4580 2200 50  0001 C CNN
 F 3 "~" H 4650 2200 50  0001 C CNN
@@ -193,7 +189,7 @@ $Comp
 L Device:Fuse F199
 U 1 1 603DB64B
 P 6450 2750
-F 0 "F199" V 6253 2750 50  0000 C CNN
+F 0 "F?" V 6253 2750 50  0000 C CNN
 F 1 "15A" V 6344 2750 50  0000 C CNN
 F 2 "" V 6380 2750 50  0001 C CNN
 F 3 "~" H 6450 2750 50  0001 C CNN
@@ -208,7 +204,7 @@ $Comp
 L Device:Fuse F86
 U 1 1 6016ADF1
 P 6000 2350
-F 0 "F86" H 5750 2350 50  0000 L CNN
+F 0 "F?" H 5750 2350 50  0000 L CNN
 F 1 "1A" H 5750 2250 50  0000 L CNN
 F 2 "" V 5930 2350 50  0001 C CNN
 F 3 "~" H 6000 2350 50  0001 C CNN
@@ -225,15 +221,23 @@ Wire Wire Line
 Wire Wire Line
 	6100 2000 6100 2950
 Wire Wire Line
-	6800 5450 6800 4050
-Text Label 6700 4700 3    50   ~ 0
+	7300 5450 7300 4050
+Text Label 7200 4700 3    50   ~ 0
 W1_2WG
 Text Notes 6300 1700 0    79   ~ 0
 All wires are 16 AWG unless specified
-Text Label 6800 5000 1    50   ~ 0
+Text Label 7300 5000 1    50   ~ 0
 W2_2AWG
 Text Label 3750 2000 0    50   ~ 0
 W3_18AWG
 Text Label 3750 2200 0    50   ~ 0
 W4_18AWG
+Wire Wire Line
+	6200 4050 6800 4050
+Wire Wire Line
+	6200 4200 6800 4200
+Text Label 6350 4050 0    50   ~ 0
+W5_8AWG
+Text Label 6350 4200 0    50   ~ 0
+W6_8AWG
 $EndSCHEMATC
