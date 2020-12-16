@@ -1952,8 +1952,6 @@ Wire Wire Line
 	26800 8100 26800 8150
 Wire Wire Line
 	26800 8150 27150 8150
-Wire Bus Line
-	24600 6900 30850 6900
 $Comp
 L NER:6_Pin_ChargerLV J2
 U 1 1 5FE44DF5
@@ -1996,6 +1994,8 @@ Text HLabel 28100 16550 0    50   Input ~ 0
 CAN_Shield
 Wire Wire Line
 	28250 16550 28100 16550
+Wire Bus Line
+	24600 6900 30850 6900
 Wire Wire Line
 	26400 7000 26500 7000
 Wire Wire Line

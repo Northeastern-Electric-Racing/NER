@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
@@ -38,19 +39,6 @@ F 2 "" V 5580 2750 50  0001 C CNN
 F 3 "~" H 5650 2750 50  0001 C CNN
 	1    5650 2750
 	0    1    -1   0   
-$EndComp
-$Comp
-L NER:TSM2500 U?
-U 1 1 61EEF410
-P 5550 4350
-AR Path="/61EEF410" Ref="U?"  Part="1" 
-AR Path="/61ECC7CF/61EEF410" Ref="U5"  Part="1" 
-F 0 "U5" H 5550 4350 50  0001 C CNN
-F 1 "TSM2500" H 5600 4383 50  0000 C CNN
-F 2 "" H 5550 4350 50  0001 C CNN
-F 3 "http://www.thunderstruck-ev.com/images/ThunderStruck%20TSM2500%20ManualV1.05.pdf" H 5550 4350 50  0001 C CNN
-	1    5550 4350
-	1    0    0    1   
 $EndComp
 $Comp
 L Device:Fuse F?
@@ -262,6 +250,17 @@ Wire Wire Line
 	4600 3150 6400 3150
 Connection ~ 4600 2000
 Connection ~ 6200 2950
+$Comp
+L NER:TSM2500 PS2
+U 1 1 5FDDB926
+P 5550 4350
+F 0 "PS2" H 5575 3385 50  0000 C CNN
+F 1 "TSM2500" H 5575 3476 50  0000 C CNN
+F 2 "" H 5550 4450 50  0001 C CNN
+F 3 "" H 5550 4450 50  0001 C CNN
+	1    5550 4350
+	1    0    0    1   
+$EndComp
 Wire Wire Line
 	7200 4200 7200 5450
 $EndSCHEMATC
