@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 22 22
+Sheet 21 22
 Title "BMS & MC Container"
 Date "2020-11-23"
 Rev "8"
@@ -17,7 +18,7 @@ Text HLabel 5100 7100 0    50   BiDi ~ 0
 CAN_H(BMS)
 Text HLabel 5100 7200 0    50   BiDi ~ 0
 CAN_L(BMS)
-Text HLabel 5050 3500 0    50   Input ~ 0
+Text HLabel 4800 3500 0    50   Input ~ 0
 GLV
 Text HLabel 11900 1300 2    50   UnSpc ~ 0
 GND
@@ -145,7 +146,7 @@ Text HLabel 5100 5900 0    50   Output ~ 0
 ChargerSafety
 Wire Wire Line
 	5050 7900 7950 7900
-Text HLabel 5050 1800 0    50   Input ~ 0
+Text HLabel 4800 1800 0    50   Input ~ 0
 ChargerPWR
 $Comp
 L NER:OrionBMS2 U6
@@ -301,8 +302,6 @@ Wire Wire Line
 	8150 3500 8950 3500
 Wire Wire Line
 	5750 1800 6200 1800
-Wire Wire Line
-	5050 1800 5750 1800
 Wire Wire Line
 	8550 2200 8550 3900
 Wire Wire Line
@@ -519,15 +518,17 @@ Wire Notes Line
 Wire Wire Line
 	6600 3500 7100 3500
 Wire Wire Line
-	5050 3500 5300 3500
-Connection ~ 5300 3500
-Wire Wire Line
 	5300 3500 6150 3500
 Connection ~ 7100 3500
 Wire Wire Line
 	7100 3500 7550 3500
 Text Notes 5150 950  0    50   ~ 0
 Vehicle Power Management Board
+Wire Wire Line
+	4800 3500 5300 3500
+Connection ~ 5300 3500
+Wire Wire Line
+	4800 1800 5750 1800
 Wire Bus Line
 	10100 9200 10100 9500
 Wire Bus Line
