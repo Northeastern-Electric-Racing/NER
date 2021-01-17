@@ -2014,8 +2014,6 @@ Text HLabel 28100 16550 0    50   Input ~ 0
 CAN_Shield
 Wire Wire Line
 	28250 16550 28100 16550
-Wire Bus Line
-	26450 10550 26650 10550
 Wire Wire Line
 	26650 10550 26650 10600
 Wire Wire Line
@@ -2071,6 +2069,8 @@ Wire Wire Line
 	26550 8150 27150 8150
 Wire Bus Line
 	24600 6900 30850 6900
+Wire Wire Line
+	26650 10550 26450 10550
 Wire Wire Line
 	26400 7000 26500 7000
 Wire Wire Line
