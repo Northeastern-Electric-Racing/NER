@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:BMSBoard-cache
 EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
@@ -22,28 +23,6 @@ Text Notes 7500 4450 0    50   ~ 0
 Text Notes 3150 4450 0    50   ~ 0
 > If car is charging, GLV_PreBRB\n will be driven by ChargerSupply12V\n\n> If car is not charging, GLV_PreBRB \nwill be disconnected from the \ncharger supply
 $Comp
-L Connector:Conn_01x02_Female J5
-U 1 1 5FC5C590
-P 1450 3650
-F 0 "J5" H 1342 3325 50  0000 C CNN
-F 1 "PumpIO" H 1342 3416 50  0000 C CNN
-F 2 "" H 1450 3650 50  0001 C CNN
-F 3 "~" H 1450 3650 50  0001 C CNN
-	1    1450 3650
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x03_Female J1
-U 1 1 5FC8396E
-P 1450 1650
-F 0 "J1" H 1350 2000 50  0000 C CNN
-F 1 "GLV/Charge_PWR" H 1350 1900 50  0000 C CNN
-F 2 "" H 1450 1650 50  0001 C CNN
-F 3 "~" H 1450 1650 50  0001 C CNN
-	1    1450 1650
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR04
 U 1 1 5FCA9C4C
 P 2050 1900
@@ -55,7 +34,7 @@ F 3 "" H 2050 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2050 2400 1650 2400
+	2050 2400 1950 2400
 $Comp
 L power:GND #PWR05
 U 1 1 5FCC4D73
@@ -66,17 +45,6 @@ F 2 "" H 2050 2550 50  0001 C CNN
 F 3 "" H 2050 2550 50  0001 C CNN
 	1    2050 2550
 	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J10
-U 1 1 5FDFEF4C
-P 1450 2400
-F 0 "J10" H 1600 2200 50  0000 R CNN
-F 1 "GND_QC" H 1750 2300 50  0000 R CNN
-F 2 "" H 1450 2400 50  0001 C CNN
-F 3 "~" H 1450 2400 50  0001 C CNN
-	1    1450 2400
-	1    0    0    1   
 $EndComp
 Wire Wire Line
 	2050 2400 2050 2550
@@ -89,14 +57,8 @@ Pump_PWR\n
 Text Notes 2100 3550 0    50   ~ 0
 GLV_PreBRB\n
 Wire Wire Line
-	1650 1750 2050 1750
-Wire Wire Line
 	2050 1750 2050 1900
-Wire Wire Line
-	1650 3550 4000 3550
 Connection ~ 4000 3550
-Wire Wire Line
-	1650 1550 4000 1550
 Connection ~ 4000 1550
 Wire Wire Line
 	8250 1650 9400 1650
@@ -287,8 +249,6 @@ Wire Wire Line
 	5650 3650 5650 3550
 Wire Wire Line
 	5650 3550 5550 3550
-Wire Wire Line
-	1650 3650 5650 3650
 $Comp
 L Device:Fuse F1
 U 1 1 5FC0FA27
@@ -449,8 +409,6 @@ F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 5750 3000 50  000
 $EndComp
 Wire Wire Line
 	4000 1550 6550 1550
-Wire Wire Line
-	1650 1650 5750 1650
 $Comp
 L Transistor_FET:2N7002 Q4
 U 1 1 5FCCB41E
@@ -652,4 +610,71 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/4357fd.
 	1    3250 2400
 	0    1    1    0   
 $EndComp
+Text HLabel 1200 3650 0    50   Output ~ 0
+Pump_PWR
+Text HLabel 1200 3550 0    50   Input ~ 0
+GLV_PreBRB
+$Comp
+L NER:2-Pos_Generic J5
+U 1 1 60052B8B
+P 1500 3450
+F 0 "J5" H 1500 3575 50  0000 C CNN
+F 1 "PumpIO" H 1500 3484 50  0000 C CNN
+F 2 "" H 1500 3450 50  0001 C CNN
+F 3 "" H 1500 3450 50  0001 C CNN
+	1    1500 3450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 3550 4000 3550
+Wire Wire Line
+	1750 3650 5650 3650
+Wire Wire Line
+	1250 3550 1200 3550
+Wire Wire Line
+	1250 3650 1200 3650
+$Comp
+L NER:3-Pos_Generic J1
+U 1 1 60084A61
+P 1700 1450
+F 0 "J1" H 1700 1575 50  0000 C CNN
+F 1 "GLV/Charge_PWR" H 1700 1484 50  0000 C CNN
+F 2 "" H 1700 1450 50  0001 C CNN
+F 3 "" H 1700 1450 50  0001 C CNN
+	1    1700 1450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 1550 4000 1550
+Wire Wire Line
+	1950 1650 5750 1650
+Wire Wire Line
+	1950 1750 2050 1750
+Text HLabel 1400 1550 0    50   Input ~ 0
+ChargerSupply12V
+Text HLabel 1400 1650 0    50   Input ~ 0
+GLV_BMSContainer
+Text HLabel 1400 2400 0    50   Input ~ 0
+BMS_GND
+Wire Wire Line
+	1450 2400 1400 2400
+Wire Wire Line
+	1450 1650 1400 1650
+Wire Wire Line
+	1450 1550 1400 1550
+$Comp
+L NER:1-Pos_Generic J10
+U 1 1 600B3510
+P 1700 2300
+F 0 "J10" H 1700 2425 50  0000 C CNN
+F 1 "GND_QC" H 1700 2334 50  0000 C CNN
+F 2 "" H 1700 2300 50  0001 C CNN
+F 3 "" H 1700 2300 50  0001 C CNN
+	1    1700 2300
+	1    0    0    -1  
+$EndComp
+Text HLabel 1400 1750 0    50   UnSpc ~ 0
+ChargerGND
+Wire Wire Line
+	1450 1750 1400 1750
 $EndSCHEMATC
