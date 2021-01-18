@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 21 22
+Sheet 21 23
 Title "BMS & MC Container"
 Date "2020-11-23"
 Rev "8"
@@ -18,9 +18,9 @@ Text HLabel 5100 7100 0    50   BiDi ~ 0
 CAN_H(BMS)
 Text HLabel 5100 7200 0    50   BiDi ~ 0
 CAN_L(BMS)
-Text HLabel 4800 3500 0    50   Input ~ 0
+Text HLabel 5150 3500 0    50   Input ~ 0
 GLV
-Text HLabel 11900 1300 2    50   UnSpc ~ 0
+Text HLabel 10200 2150 2    50   UnSpc ~ 0
 GND
 Text HLabel 7450 8150 0    50   Input ~ 0
 Segment4_VoltageTaps
@@ -146,7 +146,7 @@ Text HLabel 5100 5900 0    50   Output ~ 0
 ChargerSafety
 Wire Wire Line
 	5050 7900 7950 7900
-Text HLabel 4800 1800 0    50   Input ~ 0
+Text HLabel 7600 2150 0    50   Input ~ 0
 ChargerPWR
 $Comp
 L NER:OrionBMS2 U6
@@ -213,66 +213,15 @@ Wire Wire Line
 	7950 7000 5100 7000
 Text HLabel 5100 7000 0    50   BiDi ~ 0
 CAN_SHIELD(BMS)
-$Comp
-L Relay:DIPxx-1Axx-11x K1
-U 1 1 60E83E04
-P 5950 3950
-F 0 "K1" V 6400 4000 50  0000 R CNN
-F 1 "BMS_PWR_Relay" V 6300 4250 50  0000 R CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 6300 3900 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 5950 3950 50  0001 C CNN
-	1    5950 3950
-	-1   0    0    1   
-$EndComp
-$Comp
-L Simulation_SPICE:DIODE D2
-U 1 1 60E83E0C
-P 6600 3950
-F 0 "D2" H 6600 3750 50  0000 C CNN
-F 1 "DIODE" H 6600 3850 50  0000 C CNN
-F 2 "" H 6600 3950 50  0001 C CNN
-F 3 "~" H 6600 3950 50  0001 C CNN
-F 4 "Y" H 6600 3950 50  0001 L CNN "Spice_Netlist_Enabled"
-F 5 "D" H 6600 3950 50  0001 L CNN "Spice_Primitive"
-	1    6600 3950
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Relay:DIPxx-1Axx-11x K?
-U 1 1 60E83E1C
-P 9600 3700
-AR Path="/60E83E1C" Ref="K?"  Part="1" 
-AR Path="/60D53BFB/60E83E1C" Ref="K55"  Part="1" 
-F 0 "K55" V 9033 3700 50  0000 C CNN
-F 1 "Cooling Pump Relay" V 9124 3700 50  0000 C CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 9950 3650 50  0001 L CNN
-F 3 "" H 9600 3700 50  0001 C CNN
-	1    9600 3700
-	0    1    1    0   
-$EndComp
-$Comp
-L Relay:MSxx-1Bxx-75 K?
-U 1 1 60E83E22
-P 7850 3300
-AR Path="/5F45B05E/60E83E22" Ref="K?"  Part="1" 
-AR Path="/60E83E22" Ref="K?"  Part="1" 
-AR Path="/60D53BFB/60E83E22" Ref="K54"  Part="1" 
-F 0 "K54" V 7283 3300 50  0000 C CNN
-F 1 "Cooling Pump Shutoff Relay" V 7374 3300 50  0000 C CNN
-F 2 "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB" H 8200 3250 50  0001 L CNN
-F 3 "https://standexelectronics.com/de/produkte/ms-reed-relais/" H 7850 3300 50  0001 C CNN
-	1    7850 3300
-	0    1    1    0   
-$EndComp
-Text HLabel 11900 2200 2    50   BiDi ~ 0
+Text HLabel 10200 3000 2    50   BiDi ~ 0
 GLV(Pre_BRB)
-Text HLabel 11950 3900 2    50   Output ~ 0
+Text HLabel 10200 3700 2    50   Output ~ 0
 CoolingPumpPower_OUT
 Text HLabel 5100 7450 0    50   Input ~ 0
 CAN_H(Charger)
 Text HLabel 5100 7350 0    50   Input ~ 0
 CAN_L(Charger)
-Text HLabel 11900 1800 2    50   UnSpc ~ 0
+Text HLabel 10200 2300 2    50   UnSpc ~ 0
 GND(Charger)
 Text HLabel 5100 6000 0    50   Output ~ 0
 Discharge_En
@@ -280,169 +229,16 @@ Text HLabel 5100 6100 0    50   Output ~ 0
 Charge_En
 Text HLabel 5100 6900 0    50   Output ~ 0
 Discharge_Limit
-$Comp
-L Relay:DIPxx-1Axx-11x K?
-U 1 1 60E83E76
-P 6500 2000
-AR Path="/60E83E76" Ref="K?"  Part="1" 
-AR Path="/60D53BFB/60E83E76" Ref="K53"  Part="1" 
-F 0 "K53" V 5933 2000 50  0000 C CNN
-F 1 "Charging Isolation Relay" V 6024 2000 50  0000 C CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 6850 1950 50  0001 L CNN
-F 3 "" H 6500 2000 50  0001 C CNN
-	1    6500 2000
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9900 3500 10700 3500
-Wire Wire Line
-	8150 3100 10700 3100
-Connection ~ 10700 3100
-Wire Wire Line
-	8150 3500 8950 3500
-Wire Wire Line
-	5750 1800 6200 1800
-Wire Wire Line
-	8550 2200 8550 3900
-Wire Wire Line
-	5750 1800 5750 2200
-Connection ~ 5750 2200
-Wire Wire Line
-	5750 2200 6200 2200
-Wire Wire Line
-	6800 2200 8550 2200
-Wire Wire Line
-	5750 2200 5750 3100
-Connection ~ 5750 3100
-Wire Wire Line
-	5750 3100 7100 3100
-Wire Wire Line
-	9900 3900 11950 3900
-Wire Wire Line
-	10700 3100 10700 3500
 Text Notes 550  800  0    50   ~ 0
 Mode 1: Ready to drive | No charger power, GLV power present, pump running, BMS not in charge mode\nMode 2: Charging | Charger power present, GLV present, pump off, BMS in charge mode\nMode 3: Shutdown | GLV not present, BMS not in charge mode, pump off
 Wire Wire Line
-	5750 3100 5750 3650
-Wire Wire Line
-	6150 3500 6600 3500
-Wire Wire Line
 	7100 5500 7950 5500
-Connection ~ 6150 3500
-Wire Wire Line
-	8550 3900 9300 3900
-Wire Wire Line
-	7100 3500 7100 5500
 Wire Wire Line
 	5100 5900 7950 5900
 Wire Wire Line
 	5100 6000 7950 6000
 Wire Wire Line
 	7950 6100 5100 6100
-Connection ~ 5750 1800
-Wire Wire Line
-	8550 2200 11900 2200
-Connection ~ 8550 2200
-Wire Wire Line
-	6800 1800 10700 1800
-Wire Wire Line
-	10700 4400 10700 3500
-Connection ~ 10700 3500
-Wire Wire Line
-	11900 1800 10700 1800
-Wire Wire Line
-	10700 1300 11900 1300
-Connection ~ 10700 1800
-Wire Wire Line
-	5750 5600 5750 4250
-Wire Wire Line
-	6150 3500 6150 3650
-Wire Wire Line
-	6600 3800 6600 3500
-Wire Wire Line
-	6150 4250 6150 4400
-Wire Wire Line
-	6150 4400 6600 4400
-Connection ~ 6600 4400
-Wire Wire Line
-	6600 4400 6600 4100
-Connection ~ 6600 3500
-Wire Wire Line
-	5750 5600 7950 5600
-$Comp
-L Simulation_SPICE:DIODE D31
-U 1 1 6064F904
-P 7850 2550
-F 0 "D31" H 7850 2350 50  0000 C CNN
-F 1 "DIODE" H 7850 2450 50  0000 C CNN
-F 2 "" H 7850 2550 50  0001 C CNN
-F 3 "~" H 7850 2550 50  0001 C CNN
-F 4 "Y" H 7850 2550 50  0001 L CNN "Spice_Netlist_Enabled"
-F 5 "D" H 7850 2550 50  0001 L CNN "Spice_Primitive"
-	1    7850 2550
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7100 2550 7100 3100
-Wire Wire Line
-	7100 2550 7700 2550
-Connection ~ 7100 3100
-Wire Wire Line
-	7100 3100 7550 3100
-Wire Wire Line
-	8000 2550 10700 2550
-Connection ~ 10700 2550
-Wire Wire Line
-	10700 2550 10700 2850
-$Comp
-L Simulation_SPICE:DIODE D32
-U 1 1 6066C741
-P 9600 2850
-F 0 "D32" H 9600 2650 50  0000 C CNN
-F 1 "DIODE" H 9600 2750 50  0000 C CNN
-F 2 "" H 9600 2850 50  0001 C CNN
-F 3 "~" H 9600 2850 50  0001 C CNN
-F 4 "Y" H 9600 2850 50  0001 L CNN "Spice_Netlist_Enabled"
-F 5 "D" H 9600 2850 50  0001 L CNN "Spice_Primitive"
-	1    9600 2850
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9750 2850 10700 2850
-Wire Wire Line
-	8950 3500 8950 2850
-Connection ~ 8950 3500
-Wire Wire Line
-	8950 3500 9300 3500
-Wire Wire Line
-	8950 2850 9450 2850
-Connection ~ 10700 2850
-Wire Wire Line
-	10700 2850 10700 3100
-$Comp
-L Simulation_SPICE:DIODE D1
-U 1 1 6068A356
-P 6500 1300
-F 0 "D1" H 6500 1100 50  0000 C CNN
-F 1 "DIODE" H 6500 1200 50  0000 C CNN
-F 2 "" H 6500 1300 50  0001 C CNN
-F 3 "~" H 6500 1300 50  0001 C CNN
-F 4 "Y" H 6500 1300 50  0001 L CNN "Spice_Netlist_Enabled"
-F 5 "D" H 6500 1300 50  0001 L CNN "Spice_Primitive"
-	1    6500 1300
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5750 1300 5750 1800
-Wire Wire Line
-	5750 1300 6350 1300
-Wire Wire Line
-	6650 1300 10700 1300
-Connection ~ 10700 1300
-Wire Wire Line
-	10700 1800 10700 2550
-Wire Wire Line
-	10700 1300 10700 1800
 Wire Wire Line
 	5100 7100 5800 7100
 Wire Wire Line
@@ -464,17 +260,11 @@ Wire Wire Line
 Wire Wire Line
 	7950 6500 6600 6500
 Wire Wire Line
-	6600 4400 10700 4400
-Wire Wire Line
 	5100 6900 7950 6900
-Wire Wire Line
-	6600 4400 6600 6500
 Wire Wire Line
 	5800 6800 5800 7100
 Wire Wire Line
 	5650 6800 5650 7200
-Wire Wire Line
-	5300 3500 5300 6400
 Entry Bus Bus
 	5500 6700 5400 6600
 Entry Bus Bus
@@ -507,28 +297,54 @@ Wire Bus Line
 Entry Wire Line
 	5950 6800 5850 6700
 NoConn ~ 7950 6300
-Wire Notes Line
-	10850 4550 10850 1000
-Wire Notes Line
-	10850 1000 5150 1000
-Wire Notes Line
-	5150 1000 5150 4550
-Wire Notes Line
-	5150 4550 10850 4550
 Wire Wire Line
-	6600 3500 7100 3500
+	5300 4950 6600 4950
 Wire Wire Line
-	5300 3500 6150 3500
-Connection ~ 7100 3500
+	5300 4950 5300 6400
+Connection ~ 6600 4950
 Wire Wire Line
-	7100 3500 7550 3500
-Text Notes 5150 950  0    50   ~ 0
-Vehicle Power Management Board
+	6600 4950 6600 6500
 Wire Wire Line
-	4800 3500 5300 3500
+	7100 4950 6600 4950
+Wire Wire Line
+	7100 4950 7100 5500
+Wire Wire Line
+	5150 3500 5300 3500
+Wire Wire Line
+	5300 3500 5300 4950
+Connection ~ 5300 4950
+$Sheet
+S 8050 2050 1650 1750
+U 61127439
+F0 "Vehicle Power Managment Board" 50
+F1 "VPMBoard.sch" 50
+F2 "Pump_PWR" O R 9700 3700 50 
+F3 "GLV_PreBRB" I R 9700 3000 50 
+F4 "ChargerSupply12V" I L 8050 2150 50 
+F5 "GLV_BMSContainer" I L 8050 3500 50 
+F6 "BMS_GND" I R 9700 2150 50 
+F7 "ChargerGND" U R 9700 2300 50 
+F8 "PWR_Charge" O L 8050 3700 50 
+$EndSheet
+Wire Wire Line
+	9700 3700 10200 3700
+Wire Wire Line
+	9700 3000 10200 3000
+Wire Wire Line
+	10200 2300 9700 2300
+Wire Wire Line
+	9700 2150 10200 2150
+Wire Wire Line
+	8050 2150 7600 2150
+Wire Wire Line
+	5300 3500 8050 3500
 Connection ~ 5300 3500
 Wire Wire Line
-	4800 1800 5750 1800
+	7950 5600 7200 5600
+Wire Wire Line
+	7200 5600 7200 3700
+Wire Wire Line
+	7200 3700 8050 3700
 Wire Bus Line
 	10100 9200 10100 9500
 Wire Bus Line
