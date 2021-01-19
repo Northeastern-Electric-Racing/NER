@@ -22,10 +22,16 @@ bool dischargeEnabled = false; // true when torque can be given to motor
 bool chargeEnabled = false;    // true when regen torque is allowed
 unsigned long timeBrake = 0;   // the time at which the brake was last pressed
 
+// message timing values
+const int COMMAND_MESSAGE_DELAY = 50; // in milliseconds
+const int BRAKE_MESSAGE_DELAY = 50; // in milliseconds
+unsigned long lastCommandMessage = 0; // the time the last command message was sent
+unsigned long lastBrakeMessage = 0; // the time the last brake message was sent
+
 // regen braking constants
 const int START_TIME = 0;   // delay from when brake is pressed to when regen starts
 const int MAX_TORQUE = 255; // maximum regen torque value
-const int RAMP_TIME =  10;  // time until the maximum regen torque is reached
+const int RAMP_TIME =  10;  // time until the maximum regen torque is reached (in seconds)
  
 // CAN IDs  
 const int CAN_START_MOTOR = 0x01;
@@ -75,10 +81,18 @@ void setup() {
  */
 void loop() {
   readStates();
-  if (invertorOn) { // only read potentiometers when the inverter is on
-    readPotentiometers();
+  
+  if ((millis() - lastCommandMessage) > COMMAND_MESSAGE_DELAY) { // Adds delay between pedal potentiometer readings
+    if (invertorOn) { // only read potentiometers when the inverter is on
+      readPotentiometers();
+      lastCommandMessage = millis(); // reset command message time
+    }
   }
-  readSwitches();
+
+  if ((millis() - lastBrakeMessage) > BRAKE_MESSAGE_DELAY) { // Adds delay between brake switch readings
+    readSwitches();
+    lastBrakeMessage = millis(); // reset brake message time
+  }
 }
 
 /*
@@ -120,6 +134,7 @@ void readPotentiometers() {
       int averageReading = (accelPin1Val + accelPin2Val) / 2;
       accelTorque = averageReading / 4;
     } 
+    
     if (chargeEnabled && brakePressed) {  // regen torque is allowed 
       int timeDifference = (millis() - timeBrake) / 1000; // length of time the brake has been pressed
       if (timeDifference - START_TIME > RAMP_TIME) { // max regen torque is allowed
