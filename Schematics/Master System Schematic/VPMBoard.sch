@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
@@ -67,8 +66,6 @@ Wire Wire Line
 Wire Wire Line
 	8950 1900 8950 1750
 Connection ~ 8250 1650
-Text Notes 9350 1650 2    50   ~ 0
-ThermEXIn12V
 $Comp
 L power:GND #PWR012
 U 1 1 5FD5EF12
@@ -80,62 +77,7 @@ F 3 "" H 8950 1900 50  0001 C CNN
 	1    8950 1900
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x02_Female J20
-U 1 1 5FC6E9A5
-P 9600 1650
-F 0 "J20" H 9492 1325 50  0000 C CNN
-F 1 "Therm_PWR" H 9500 1400 50  0000 C CNN
-F 2 "" H 9600 1650 50  0001 C CNN
-F 3 "~" H 9600 1650 50  0001 C CNN
-	1    9600 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x04_Female J14
-U 1 1 5FBD5D22
-P 1450 6050
-F 0 "J14" H 1342 5625 50  0000 C CNN
-F 1 "GLV_Signal" H 1342 5716 50  0000 C CNN
-F 2 "" H 1450 6050 50  0001 C CNN
-F 3 "~" H 1450 6050 50  0001 C CNN
-	1    1450 6050
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x04_Female J1
-U 1 1 5FC1125D
-P 1450 5400
-F 0 "J1" H 1342 4975 50  0000 C CNN
-F 1 "Charge_Signal" H 1342 5066 50  0000 C CNN
-F 2 "" H 1450 5400 50  0001 C CNN
-F 3 "~" H 1450 5400 50  0001 C CNN
-	1    1450 5400
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x04_Female J15
-U 1 1 5FC7CBDE
-P 1450 6700
-F 0 "J15" H 1342 6275 50  0000 C CNN
-F 1 "Therm_Signal" H 1342 6366 50  0000 C CNN
-F 2 "" H 1450 6700 50  0001 C CNN
-F 3 "~" H 1450 6700 50  0001 C CNN
-	1    1450 6700
-	-1   0    0    1   
-$EndComp
 NoConn ~ 1650 6500
-$Comp
-L Connector:Conn_01x06_Female J19
-U 1 1 5FDAC8DD
-P 4450 5950
-F 0 "J19" H 4342 5425 50  0000 C CNN
-F 1 "BMS_Signal" H 4342 5516 50  0000 C CNN
-F 2 "" H 4450 5950 50  0001 C CNN
-F 3 "~" H 4450 5950 50  0001 C CNN
-	1    4450 5950
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	1650 5950 3050 5950
 Wire Wire Line
@@ -660,7 +602,7 @@ F 1 "GND_QC" H 1700 2334 50  0000 C CNN
 F 2 "" H 1700 2300 50  0001 C CNN
 F 3 "" H 1700 2300 50  0001 C CNN
 	1    1700 2300
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 Text HLabel 1400 1750 0    50   UnSpc ~ 0
 ChargerGND
@@ -682,11 +624,106 @@ PWR_Charge
 Text HLabel 9950 3150 2    50   Output ~ 0
 PWR_Ready
 Text HLabel 9950 3350 2    50   Output ~ 0
-???
+BMS_GND
 Wire Wire Line
 	9950 3350 9900 3350
 Wire Wire Line
 	9950 3250 9900 3250
 Wire Wire Line
 	9950 3150 9900 3150
+$Comp
+L NER:2-Pos_Generic J20
+U 1 1 600B417F
+P 9650 1550
+F 0 "J20" H 9650 1675 50  0000 C CNN
+F 1 "ThermEX_PWR" H 9650 1584 50  0000 C CNN
+F 2 "" H 9650 1550 50  0001 C CNN
+F 3 "" H 9650 1550 50  0001 C CNN
+	1    9650 1550
+	1    0    0    -1  
+$EndComp
+Text HLabel 9900 1750 2    50   Output ~ 0
+ThermEX_GND
+Text HLabel 9900 1650 2    50   Output ~ 0
+ThermEX_PWR
+Text Notes 9350 1650 2    50   ~ 0
+ThermEX_PWR\n
+$Comp
+L NER:4-Pos_Generic J14
+U 1 1 600E1D3A
+P 1400 5750
+F 0 "J14" H 1400 5875 50  0000 C CNN
+F 1 "Main_Signal" H 1400 5784 50  0000 C CNN
+F 2 "" H 1400 5750 50  0001 C CNN
+F 3 "" H 1400 5750 50  0001 C CNN
+	1    1400 5750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L NER:4-Pos_Generic J15
+U 1 1 600E4AAA
+P 1400 6400
+F 0 "J15" H 1400 6525 50  0000 C CNN
+F 1 "Therm_Signal" H 1400 6434 50  0000 C CNN
+F 2 "" H 1400 6400 50  0001 C CNN
+F 3 "" H 1400 6400 50  0001 C CNN
+	1    1400 6400
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 1150 6500
+Text HLabel 1150 5500 0    50   Input ~ 0
+CANS_Chrg
+Text HLabel 1150 5400 0    50   Input ~ 0
+CANL_Chrg
+Text HLabel 1150 5300 0    50   Input ~ 0
+CANH_Chrg
+Text HLabel 1150 5200 0    50   Input ~ 0
+ChargerSafety
+Text HLabel 1150 6150 0    50   Input ~ 0
+CANS_Main
+Text HLabel 1150 6050 0    50   Input ~ 0
+CANL_Main
+Text HLabel 1150 5950 0    50   Input ~ 0
+CANH_Main
+Text HLabel 1150 5850 0    50   Input ~ 0
+BMS_Fault
+Text HLabel 1150 6800 0    50   Input ~ 0
+CANS_Thrm
+Text HLabel 1150 6600 0    50   Input ~ 0
+CANH_Thrm
+Text HLabel 1150 6700 0    50   Input ~ 0
+CANL_Thrm
+$Comp
+L NER:6-Pos_Generic J19
+U 1 1 600F4343
+P 4500 5550
+F 0 "J19" H 4500 5675 50  0000 C CNN
+F 1 "BMS_Signal" H 4500 5584 50  0000 C CNN
+F 2 "" H 4500 5550 50  0001 C CNN
+F 3 "" H 4500 5550 50  0001 C CNN
+	1    4500 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L NER:4-Pos_Generic J1
+U 1 1 600D5093
+P 1400 5100
+F 0 "J1" H 1400 5225 50  0000 C CNN
+F 1 "Charge_Signal" H 1400 5134 50  0000 C CNN
+F 2 "" H 1400 5100 50  0001 C CNN
+F 3 "" H 1400 5100 50  0001 C CNN
+	1    1400 5100
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 4750 5650
+Text HLabel 4750 5750 2    50   Input ~ 0
+Charge_Safety
+Text HLabel 4750 5850 2    50   Input ~ 0
+MP_EN
+Text HLabel 4750 5950 2    50   Input ~ 0
+CANH_BMS
+Text HLabel 4750 6050 2    50   Input ~ 0
+CANL_BMS
+Text HLabel 4750 6150 2    50   Input ~ 0
+CANS_BMS
 $EndSCHEMATC
