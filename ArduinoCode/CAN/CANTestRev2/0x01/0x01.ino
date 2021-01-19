@@ -37,7 +37,7 @@ void setup()
     Serial.begin(115200); //baud rate for CAN
     lcd.begin(16,2);
 
-    while (CAN_OK != CAN.begin(CAN_500KBPS, MCP_8MHz)) //specify 8MHz crystal
+    while (CAN_OK != CAN.begin(CAN_250KBPS, MCP_8MHz)) //specify 8MHz crystal
     { 
         Serial.println("CAN BUS init Failed");
         delay(250);
@@ -114,4 +114,3 @@ void decodeAccelValues(float out[3], unsigned char in[8]){ //convert from can --
     out[2] = 1*(float)in[5]/64;
   }
 }
-

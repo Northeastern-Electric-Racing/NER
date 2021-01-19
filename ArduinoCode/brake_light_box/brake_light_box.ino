@@ -56,7 +56,7 @@ void setup() {
 
   switchSDToCAN();
 
-  while (CAN_OK != CAN.begin(CAN_500KBPS, MCP_8MHz)) { //specify 8MHz crystal
+  while (CAN_OK != CAN.begin(CAN_250KBPS, MCP_8MHz)) { //specify 8MHz crystal
     Serial.println("CAN BUS init Failed");
     delay(250);
   }
