@@ -20,11 +20,16 @@ const int GEAR_SELECTOR_PIN = 4; // Pin for forward/reverse selector
 const int BUTTON_LED_PIN = 11; // Pin for integrated LED on the button.
 const int SPEAKER_PIN = 10; // Pin for speaker or relay for speaker (must be pwm pin).
 
+unsigned char len = 0; // length of incoming data
+unsigned char buf[8];  // received data
+unsigned long canId;   // CAN id of incoming messages
+
 bool shutdownVoltage = false;
 unsigned long speakerCooldown = 0; // Use unsigned long to match millis() function. Will overflow in around 50 days.
 unsigned long buttonCooldown = 0; // Use unsigned long to match millis() function. Will overflow in around 50 days.
 bool state = false;
 bool prevDirection = false;
+bool prechargeComplete = false;
 
 /**
  * Sets relavent pins to output or input, initializes serial for debugging, initializes CAN.
@@ -45,14 +50,34 @@ void setup() {
   Serial.println("CAN BUS Shield Init OK!");
 }
 
-void onOff();
 
+void checkMCStates();
+void onOff();
 void changeDirection();
 
 void loop() {
-  onOff();
-  if (state) { // Only update pedal box if car is on.
-    changeDirection(false);
+  if (!prechargeComplete) { // Do nothing until precharge has been completed
+    checkMCStates();
+  } else { // Run normally once precharge completed
+    onOff();
+    if (state) { // Only update pedal box if car is on.
+      changeDirection(false);
+    }
+  }
+}
+
+/**
+ * Receives the motor controller state broadcast message in order to recognize when 
+ * precharge has been completed and the driver can use the start button
+ */
+void checkMCStates() {
+  if (CAN_MSGAVAIL == CAN.checkReceive()) {
+    CAN.readMsgBuf(&len, buf);
+    canId = CAN.getCanId(); // gets sender ID
+
+    if (canId == 0x0AA) {
+      prechargeComplete = (buf[0] >> 4) & 1; // true if MC is in wait state 
+    }
   }
 }
 
