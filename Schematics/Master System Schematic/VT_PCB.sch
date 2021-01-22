@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 6 22
+Sheet 6 23
 Title "Voltage Tap Connector PCB"
 Date "2020-10-16"
 Rev "1"
