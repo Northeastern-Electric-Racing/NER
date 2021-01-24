@@ -5,8 +5,8 @@ $Descr D 34000 22000
 encoding utf-8
 Sheet 1 23
 Title "NER FH 2020-2021 Master Electrical Schematic"
-Date "2020-11-23"
-Rev "11"
+Date "2021-01-23"
+Rev "12"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -2070,12 +2070,12 @@ Entry Wire Line
 	29250 12200 29350 12300
 Wire Wire Line
 	29250 12000 29200 12000
-Wire Bus Line
-	24600 6900 30850 6900
 Entry Wire Line
 	30000 10300 29900 10200
 Wire Wire Line
 	30000 10300 30050 10300
+Wire Bus Line
+	24600 6900 30850 6900
 Wire Wire Line
 	26400 7000 26500 7000
 Wire Bus Line
