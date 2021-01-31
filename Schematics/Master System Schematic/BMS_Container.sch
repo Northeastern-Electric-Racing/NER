@@ -218,18 +218,10 @@ Text HLabel 9950 2250 2    50   Input ~ 0
 CAN_L(Charger)
 Text HLabel 9950 1850 2    50   UnSpc ~ 0
 GND(Charger)
-Text HLabel 7550 5450 0    50   Output ~ 0
-Discharge_En
-Text HLabel 7550 5550 0    50   Output ~ 0
-Charge_En
 Text Notes 550  800  0    50   ~ 0
 Mode 1: Ready to drive | No charger power, GLV power present, pump running, BMS not in charge mode\nMode 2: Charging | Charger power present, GLV present, pump off, BMS in charge mode\nMode 3: Shutdown | GLV not present, BMS not in charge mode, pump off
 Wire Wire Line
 	7350 4950 7700 4950
-Wire Wire Line
-	7550 5450 7700 5450
-Wire Wire Line
-	7700 5550 7550 5550
 Text HLabel 6900 2400 0    50   BiDi ~ 0
 Thermistor_Expansion
 NoConn ~ 7700 5750
@@ -362,6 +354,8 @@ Entry Wire Line
 Wire Wire Line
 	7300 2900 7800 2900
 NoConn ~ 7700 6350
+NoConn ~ 7700 5550
+NoConn ~ 7700 5450
 Wire Bus Line
 	9850 8650 9850 8950
 Wire Bus Line
