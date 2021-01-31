@@ -40,8 +40,8 @@ IMD_Latch_Reset+
 Text HLabel 6300 4450 0    50   Input ~ 0
 IMD_Latch_Reset-
 Text HLabel 3150 4850 0    50   Input ~ 0
-BMS_Status
-Text HLabel 3150 5750 0    50   Input ~ 0
+BMS_Fault
+Text HLabel 6300 5750 0    50   Input ~ 0
 Ground
 $Comp
 L Relay:G5V-2 K5
@@ -125,7 +125,7 @@ F 1 "1N4001" H 4200 3925 50  0000 C CNN
 F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4200 3625 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4200 3800 50  0001 C CNN
 	1    4200 3800
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	3350 4850 3900 4850
@@ -133,19 +133,9 @@ Connection ~ 3350 4850
 Wire Wire Line
 	4350 3800 4800 3800
 Wire Wire Line
-	4500 3050 4800 3050
-Wire Wire Line
 	4500 4450 4800 4450
-Connection ~ 4800 4450
-Wire Wire Line
-	3150 5750 4800 5750
-Connection ~ 4800 5750
-Wire Wire Line
-	4800 5750 7950 5750
 Wire Wire Line
 	7950 4450 7950 5750
-Wire Wire Line
-	4800 4450 4800 5750
 Wire Wire Line
 	3150 2250 3600 2250
 Wire Wire Line
@@ -198,7 +188,7 @@ Wire Wire Line
 Wire Wire Line
 	4800 2550 4800 2650
 Wire Wire Line
-	4800 2250 7050 2250
+	4800 2250 5900 2250
 Wire Wire Line
 	4800 2650 7050 2650
 Wire Wire Line
@@ -224,8 +214,6 @@ Connection ~ 4800 3800
 Wire Wire Line
 	4800 3800 4800 4450
 Wire Wire Line
-	4800 3050 4800 3800
-Wire Wire Line
 	3600 3050 3600 3800
 Connection ~ 6750 3800
 Wire Wire Line
@@ -237,4 +225,17 @@ Wire Wire Line
 	7950 3050 7950 3800
 Wire Wire Line
 	6750 3050 6750 3800
+Wire Wire Line
+	6300 5750 7950 5750
+Wire Wire Line
+	4800 3800 5900 3800
+Wire Wire Line
+	5900 3800 5900 2250
+Connection ~ 5900 2250
+Wire Wire Line
+	5900 2250 7050 2250
+Wire Wire Line
+	4500 3050 4800 3050
+Wire Wire Line
+	4800 3050 4800 3800
 $EndSCHEMATC

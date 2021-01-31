@@ -172,10 +172,6 @@ Wire Wire Line
 Wire Wire Line
 	1650 5850 4250 5850
 NoConn ~ 4250 5650
-Wire Wire Line
-	5100 3550 5150 3550
-Wire Wire Line
-	4000 3550 4600 3550
 $Comp
 L Device:Q_PMOS_GDS Q2
 U 1 1 5FCC6DCE
@@ -191,17 +187,6 @@ Wire Wire Line
 	5650 3650 5650 3550
 Wire Wire Line
 	5650 3550 5550 3550
-$Comp
-L Device:Fuse F200
-U 1 1 5FC0FA27
-P 4950 3550
-F 0 "F200" V 5147 3550 50  0000 C CNN
-F 1 "12A" V 5056 3550 50  0000 C CNN
-F 2 "" V 4880 3550 50  0001 C CNN
-F 3 "~" H 4950 3550 50  0001 C CNN
-	1    4950 3550
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	8250 1650 8250 3150
 Wire Wire Line
@@ -303,11 +288,6 @@ F 3 "" H 4600 3450 50  0001 C CNN
 	1    4600 3450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4600 3450 4600 3550
-Connection ~ 4600 3550
-Wire Wire Line
-	4600 3550 4800 3550
 $Comp
 L power:+12V #PWR010
 U 1 1 5FD37608
@@ -726,4 +706,11 @@ Text HLabel 4750 6050 2    50   Input ~ 0
 CANL_BMS
 Text HLabel 4750 6150 2    50   Input ~ 0
 CANS_BMS
+Wire Wire Line
+	4000 3550 4600 3550
+Wire Wire Line
+	4600 3450 4600 3550
+Connection ~ 4600 3550
+Wire Wire Line
+	4600 3550 5150 3550
 $EndSCHEMATC
