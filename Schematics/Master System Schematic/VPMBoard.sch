@@ -5,8 +5,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 22 23
 Title "Vehicle Power Management Board"
-Date "2020-12-05"
-Rev "4.1"
+Date "2021-01-30"
+Rev "4.2"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"

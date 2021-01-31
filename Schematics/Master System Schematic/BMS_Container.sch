@@ -5,8 +5,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 21 23
 Title "BMS Container"
-Date "2021-01-23"
-Rev "8.2"
+Date "2021-01-30"
+Rev "8.3"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"

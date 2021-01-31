@@ -5,8 +5,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 20 23
 Title "Shutdown Latching Circuits"
-Date "2020-10-12"
-Rev "2"
+Date "2021-01-30"
+Rev "3"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"

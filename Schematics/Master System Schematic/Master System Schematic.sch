@@ -5,8 +5,8 @@ $Descr D 34000 22000
 encoding utf-8
 Sheet 1 23
 Title "NER FH 2020-2021 Master Electrical Schematic"
-Date "2021-01-23"
-Rev "12"
+Date "2021-01-30"
+Rev "13"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -2058,10 +2058,10 @@ Wire Bus Line
 Wire Wire Line
 	4200 9250 4600 9250
 $Comp
-L Device:Fuse F?
+L Device:Fuse F200
 U 1 1 6038381F
 P 4600 10400
-F 0 "F?" H 4660 10446 50  0000 L CNN
+F 0 "F200" H 4660 10446 50  0000 L CNN
 F 1 "12A" H 4660 10355 50  0000 L CNN
 F 2 "" V 4530 10400 50  0001 C CNN
 F 3 "~" H 4600 10400 50  0001 C CNN
