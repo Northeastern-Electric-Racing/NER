@@ -19,7 +19,7 @@ Wire Wire Line
 	6300 4850 6500 4850
 Wire Wire Line
 	6300 4650 6500 4650
-Text HLabel 4850 2350 2    50   Input ~ 0
+Text HLabel 5050 2350 2    50   Input ~ 0
 BMS_Fault_Indicator
 Text HLabel 8300 2550 2    50   Input ~ 0
 Shutdown_OUT
@@ -143,14 +143,14 @@ Wire Wire Line
 Wire Wire Line
 	3600 1950 3600 2250
 Wire Wire Line
-	4800 1950 4800 2250
+	5900 1950 5900 2250
 Wire Wire Line
 	3150 4450 3600 4450
 Connection ~ 3600 2250
 Wire Wire Line
 	3600 2250 3900 2250
 Wire Wire Line
-	3600 1950 4800 1950
+	3600 1950 5900 1950
 Wire Wire Line
 	3600 3050 3900 3050
 Connection ~ 3600 4450
@@ -159,7 +159,7 @@ Wire Wire Line
 Wire Wire Line
 	3600 3800 4050 3800
 Wire Wire Line
-	4850 2350 4500 2350
+	4600 2350 4500 2350
 Connection ~ 6750 4450
 Wire Wire Line
 	6750 4450 7050 4450
@@ -180,15 +180,11 @@ NoConn ~ 4500 4750
 NoConn ~ 4500 2750
 NoConn ~ 4500 2150
 Wire Wire Line
-	7650 2350 8300 2350
-Wire Wire Line
 	7650 2550 8300 2550
 Wire Wire Line
 	4500 2550 4800 2550
 Wire Wire Line
 	4800 2550 4800 2650
-Wire Wire Line
-	4800 2250 5900 2250
 Wire Wire Line
 	4800 2650 7050 2650
 Wire Wire Line
@@ -238,4 +234,32 @@ Wire Wire Line
 	4500 3050 4800 3050
 Wire Wire Line
 	4800 3050 4800 3800
+$Comp
+L Device:R R14
+U 1 1 60BAE56E
+P 4750 2350
+F 0 "R14" V 4850 2350 50  0000 C CNN
+F 1 "470" V 4650 2350 50  0000 C CNN
+F 2 "" V 4680 2350 50  0001 C CNN
+F 3 "~" H 4750 2350 50  0001 C CNN
+	1    4750 2350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4900 2350 5050 2350
+$Comp
+L Device:R R15
+U 1 1 60BB2A76
+P 7950 2350
+F 0 "R15" V 8050 2350 50  0000 C CNN
+F 1 "470" V 7850 2350 50  0000 C CNN
+F 2 "" V 7880 2350 50  0001 C CNN
+F 3 "~" H 7950 2350 50  0001 C CNN
+	1    7950 2350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7650 2350 7800 2350
+Wire Wire Line
+	8100 2350 8300 2350
 $EndSCHEMATC
