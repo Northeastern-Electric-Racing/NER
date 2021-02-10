@@ -25,8 +25,10 @@ unsigned long timeBrake = 0;   // the time at which the brake was last pressed
 // message timing values
 const int COMMAND_MESSAGE_DELAY = 50; // in milliseconds
 const int BRAKE_MESSAGE_DELAY = 50; // in milliseconds
+const int BMS_MESSAGE_DELAY = 50;   // in milliseconds
 unsigned long lastCommandMessage = 0; // the time the last command message was sent
 unsigned long lastBrakeMessage = 0; // the time the last brake message was sent
+unsigned long lastBMSMessage = 0; // the time the last BMS message was sent
 
 // regen braking constants
 const int START_TIME = 0;   // delay from when brake is pressed to when regen starts
@@ -96,7 +98,12 @@ void loop() {
     readSwitches();
     lastBrakeMessage = millis(); // reset brake message time
   }
+
+  if((millis() - lastBMSMessage) > BMS_MESSAGE_DELAY) {  // Checks if BMS message is being recieved regularly 
+    CAN.sendMsgBuf(CAN_BMS_SHUTDOWN, 0, 8, BMS_ERROR); // triggers shutdown circuit through BMS
+  }
 }
+
 
 /*
  * readStates() reads the CAN messages from other parts of the car to set the following states:
@@ -118,6 +125,7 @@ void readStates() {
     } else if (canId == CAN_BMS_STATES) {
       dischargeEnabled = buf[5] & 1;     // get first bit of Relay State byte
       chargeEnabled = (buf[5] >> 1) & 1; // get second bit of Relay State byte 
+      lastBMSMessage = millis();
     } else if (canId == CAN_MC_FAULTS) {
       if ((buf[4] != 0) || ((buf[5] >> 3) & 1) || ((buf[5] >> 4) & 1)) { // only send message for fault bits 32-39, 43, 44
         CAN.sendMsgBuf(CAN_BMS_SHUTDOWN, 0, 8, BMS_ERROR); // triggers shutdown circuit through BMS
