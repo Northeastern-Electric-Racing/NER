@@ -104,7 +104,6 @@ void loop() {
   }
 }
 
-
 /*
  * readStates() reads the CAN messages from other parts of the car to set the following states:
  *  - CAN_START_MOTOR message is used to set the inverterOn state
