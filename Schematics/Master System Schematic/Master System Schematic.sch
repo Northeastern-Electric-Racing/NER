@@ -2057,8 +2057,6 @@ Wire Wire Line
 	4600 9250 4750 9250
 Wire Wire Line
 	4600 10550 4600 18000
-Wire Bus Line
-	24600 6900 30850 6900
 $Comp
 L NER:4-Pos_Generic J?
 U 1 1 6023B819
@@ -2161,6 +2159,8 @@ Entry Wire Line
 	30000 13900 30100 13800
 Wire Bus Line
 	30000 13800 30000 12350
+Wire Bus Line
+	24600 6900 30850 6900
 Wire Wire Line
 	26400 7000 26500 7000
 Wire Bus Line

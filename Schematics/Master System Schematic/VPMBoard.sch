@@ -5,8 +5,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 22 23
 Title "Vehicle Power Management Board"
-Date "2021-01-30"
-Rev "4.2"
+Date "2021-02-11"
+Rev "4.3"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -539,7 +539,7 @@ $EndComp
 Wire Wire Line
 	1750 3550 4000 3550
 Wire Wire Line
-	1750 3650 5650 3650
+	1750 3650 1800 3650
 Wire Wire Line
 	1250 3550 1200 3550
 Wire Wire Line
@@ -713,4 +713,31 @@ Wire Wire Line
 Connection ~ 4600 3550
 Wire Wire Line
 	4600 3550 5150 3550
+$Comp
+L Diode:MBR0520 D1
+U 1 1 602AC2AA
+P 1800 3800
+F 0 "D1" V 1754 3880 50  0000 L CNN
+F 1 "MBRD5100" V 1845 3880 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 1800 3625 50  0001 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/MBR0520~MBR0580(SOD123).pdf" H 1800 3800 50  0001 C CNN
+	1    1800 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 602ADBC9
+P 1800 3950
+F 0 "#PWR014" H 1800 3700 50  0001 C CNN
+F 1 "GND" H 1805 3777 50  0000 C CNN
+F 2 "" H 1800 3950 50  0001 C CNN
+F 3 "" H 1800 3950 50  0001 C CNN
+	1    1800 3950
+	-1   0    0    -1  
+$EndComp
+Text Notes 1250 4500 0    50   ~ 0
+> Flyback diode for transient\nprotection while switching the \npump motor
+Connection ~ 1800 3650
+Wire Wire Line
+	1800 3650 5650 3650
 $EndSCHEMATC
