@@ -3,10 +3,10 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 22 23
+Sheet 21 23
 Title "BMS Container"
-Date "2021-02-08"
-Rev "9"
+Date "2021-01-30"
+Rev "8.3"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -79,6 +79,30 @@ Wire Wire Line
 	9700 5950 9750 5950
 Entry Bus Bus
 	9850 5150 9950 5050
+Wire Bus Line
+	10250 5050 9950 5050
+Text HLabel 10250 5050 2    50   Input ~ 0
+Segment1_Thermistors
+Text HLabel 10250 4950 2    50   Input ~ 0
+Segment2_Thermistors
+Text HLabel 10250 4850 2    50   Input ~ 0
+Segment3_Thermistors
+Text HLabel 10250 4750 2    50   Input ~ 0
+Segment4_Thermistors
+Wire Bus Line
+	9950 5050 9950 4950
+Wire Bus Line
+	9950 4750 10250 4750
+Wire Bus Line
+	9950 4850 10250 4850
+Connection ~ 9950 4850
+Wire Bus Line
+	9950 4850 9950 4750
+Wire Bus Line
+	9950 4950 10250 4950
+Connection ~ 9950 4950
+Wire Bus Line
+	9950 4950 9950 4850
 NoConn ~ 7700 4850
 NoConn ~ 7700 5150
 NoConn ~ 7700 5250
@@ -198,8 +222,8 @@ Text Notes 550  800  0    50   ~ 0
 Mode 1: Ready to drive | No charger power, GLV power present, pump running, BMS not in charge mode\nMode 2: Charging | Charger power present, GLV present, pump off, BMS in charge mode\nMode 3: Shutdown | GLV not present, BMS not in charge mode, pump off
 Wire Wire Line
 	7350 4950 7700 4950
-Text HLabel 6650 2400 0    50   BiDi ~ 0
-Temperature_Data
+Text HLabel 6900 2400 0    50   BiDi ~ 0
+Thermistor_Expansion
 NoConn ~ 7700 5750
 $Sheet
 S 7800 1500 1650 2350
@@ -276,7 +300,7 @@ Entry Wire Line
 Entry Wire Line
 	7200 2700 7300 2800
 Wire Bus Line
-	7200 2400 6650 2400
+	7200 2400 6900 2400
 Wire Wire Line
 	7300 2500 7800 2500
 Wire Wire Line
@@ -333,12 +357,6 @@ NoConn ~ 7700 6350
 NoConn ~ 7700 5550
 NoConn ~ 7700 5450
 Wire Bus Line
-	9950 4250 9950 5050
-Entry Bus Bus
-	7200 4150 7300 4250
-Wire Bus Line
-	7300 4250 9950 4250
-Wire Bus Line
 	9850 8650 9850 8950
 Wire Bus Line
 	7450 7700 7450 8000
@@ -349,5 +367,5 @@ Wire Bus Line
 Wire Bus Line
 	9850 7700 9850 8000
 Wire Bus Line
-	7200 2400 7200 4150
+	7200 2400 7200 2800
 $EndSCHEMATC
