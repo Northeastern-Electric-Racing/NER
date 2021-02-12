@@ -3,10 +3,10 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 22 23
+Sheet 23 23
 Title "Vehicle Power Management Board"
-Date "2020-12-05"
-Rev "4.1"
+Date "2021-02-11"
+Rev "4.3"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -172,10 +172,6 @@ Wire Wire Line
 Wire Wire Line
 	1650 5850 4250 5850
 NoConn ~ 4250 5650
-Wire Wire Line
-	5100 3550 5150 3550
-Wire Wire Line
-	4000 3550 4600 3550
 $Comp
 L Device:Q_PMOS_GDS Q2
 U 1 1 5FCC6DCE
@@ -191,17 +187,6 @@ Wire Wire Line
 	5650 3650 5650 3550
 Wire Wire Line
 	5650 3550 5550 3550
-$Comp
-L Device:Fuse F200
-U 1 1 5FC0FA27
-P 4950 3550
-F 0 "F200" V 5147 3550 50  0000 C CNN
-F 1 "12A" V 5056 3550 50  0000 C CNN
-F 2 "" V 4880 3550 50  0001 C CNN
-F 3 "~" H 4950 3550 50  0001 C CNN
-	1    4950 3550
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	8250 1650 8250 3150
 Wire Wire Line
@@ -303,11 +288,6 @@ F 3 "" H 4600 3450 50  0001 C CNN
 	1    4600 3450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4600 3450 4600 3550
-Connection ~ 4600 3550
-Wire Wire Line
-	4600 3550 4800 3550
 $Comp
 L power:+12V #PWR010
 U 1 1 5FD37608
@@ -559,7 +539,7 @@ $EndComp
 Wire Wire Line
 	1750 3550 4000 3550
 Wire Wire Line
-	1750 3650 5650 3650
+	1750 3650 1950 3650
 Wire Wire Line
 	1250 3550 1200 3550
 Wire Wire Line
@@ -726,4 +706,36 @@ Text HLabel 4750 6050 2    50   Input ~ 0
 CANL_BMS
 Text HLabel 4750 6150 2    50   Input ~ 0
 CANS_BMS
+Wire Wire Line
+	4000 3550 4600 3550
+Wire Wire Line
+	4600 3450 4600 3550
+Connection ~ 4600 3550
+Wire Wire Line
+	4600 3550 5150 3550
+$Comp
+L Diode:MBR0520 D1
+U 1 1 602B5DB7
+P 1950 3800
+F 0 "D1" V 1904 3880 50  0000 L CNN
+F 1 "MBRD5100" V 1995 3880 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 1950 3625 50  0001 C CNN
+F 3 "http://www.smc-diodes.com/propdf/MBRD560-MBRD5200%20N0801%20REV.A.pdf" H 1950 3800 50  0001 C CNN
+	1    1950 3800
+	0    1    1    0   
+$EndComp
+Connection ~ 1950 3650
+Wire Wire Line
+	1950 3650 5650 3650
+$Comp
+L power:GND #PWR014
+U 1 1 602B6849
+P 1950 3950
+F 0 "#PWR014" H 1950 3700 50  0001 C CNN
+F 1 "GND" H 1955 3777 50  0000 C CNN
+F 2 "" H 1950 3950 50  0001 C CNN
+F 3 "" H 1950 3950 50  0001 C CNN
+	1    1950 3950
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
