@@ -5,8 +5,8 @@ $Descr C 22000 17000
 encoding utf-8
 Sheet 3 23
 Title "Accumulator Container"
-Date "2020-11-12"
-Rev "6"
+Date "2021-02-08"
+Rev "7"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -677,14 +677,6 @@ Entry Wire Line
 NoConn ~ 2750 1700
 NoConn ~ 2750 1800
 NoConn ~ 4150 1500
-Text HLabel 19650 14600 2    50   Output ~ 0
-Segment1_CriticalThermistors
-Text HLabel 19650 14700 2    50   Output ~ 0
-Segment2_CriticalThermistors
-Text HLabel 19650 14800 2    50   Output ~ 0
-Segment3_CriticalThermistors
-Text HLabel 19650 14900 2    50   Output ~ 0
-Segment4_CriticalThermistors
 Entry Wire Line
 	2350 2300 2250 2400
 Wire Wire Line
@@ -770,7 +762,7 @@ Wire Wire Line
 Wire Wire Line
 	2750 1600 2650 1600
 Text HLabel 19650 13450 2    50   Output ~ 0
-Thermistor_Expansion
+Temperature_Data
 Entry Wire Line
 	2550 1800 2650 1900
 $Comp
@@ -1811,21 +1803,11 @@ Wire Wire Line
 Wire Wire Line
 	2650 15900 4150 15900
 Wire Bus Line
-	1300 5150 600  5150
+	1300 5150 750  5150
 Wire Bus Line
-	600  5150 600  16400
+	1300 8050 700  8050
 Wire Bus Line
-	1300 8050 650  8050
-Wire Bus Line
-	650  8050 650  16300
-Wire Bus Line
-	1300 10950 700  10950
-Wire Bus Line
-	1300 13850 750  13850
-Wire Bus Line
-	750  13850 750  16100
-Wire Bus Line
-	700  10950 700  16200
+	1300 10950 650  10950
 Wire Bus Line
 	1300 13750 800  13750
 Wire Bus Line
@@ -1968,16 +1950,6 @@ Wire Wire Line
 Wire Wire Line
 	10100 2150 10100 5600
 Wire Bus Line
-	600  16400 13650 16400
-Wire Bus Line
-	650  16300 13550 16300
-Wire Bus Line
-	700  16200 13450 16200
-Wire Bus Line
-	750  16100 13350 16100
-Wire Bus Line
-	13450 14700 19650 14700
-Wire Bus Line
 	19250 13450 19650 13450
 Wire Bus Line
 	19100 13750 19650 13750
@@ -2015,10 +1987,6 @@ Wire Bus Line
 	8050 6300 10600 6300
 Wire Notes Line
 	21100 15000 21100 13350
-Wire Bus Line
-	13650 14900 19650 14900
-Wire Bus Line
-	13550 14800 19650 14800
 Wire Notes Line
 	19450 13350 19450 15000
 Wire Bus Line
@@ -2054,8 +2022,6 @@ Wire Bus Line
 	10600 14200 19650 14200
 Wire Bus Line
 	10600 14300 19650 14300
-Wire Bus Line
-	13350 14600 19650 14600
 Connection ~ 11850 6950
 Wire Wire Line
 	15450 2350 15450 3900
@@ -2089,17 +2055,27 @@ Wire Wire Line
 Wire Wire Line
 	13850 3850 13850 5550
 Wire Bus Line
-	13650 14900 13650 16400
-Wire Bus Line
-	13550 14800 13550 16300
-Wire Bus Line
-	13450 14700 13450 16200
-Wire Bus Line
-	13350 14600 13350 16100
-Wire Bus Line
 	19250 11200 19250 13450
 Wire Bus Line
 	19100 11050 19100 13750
+Entry Bus Bus
+	650  850  750  750 
+Wire Bus Line
+	650  10950 650  850 
+Wire Bus Line
+	600  13850 600  850 
+Wire Bus Line
+	600  13850 1300 13850
+Entry Bus Bus
+	600  850  700  750 
+Entry Bus Bus
+	750  850  850  750 
+Entry Bus Bus
+	700  850  800  750 
+Wire Bus Line
+	700  850  700  8050
+Wire Bus Line
+	750  850  750  5150
 Wire Bus Line
 	10600 12200 10600 14200
 Wire Bus Line
@@ -2107,13 +2083,13 @@ Wire Bus Line
 Wire Bus Line
 	10700 6400 10700 14000
 Wire Bus Line
-	2650 750  20850 750 
-Wire Bus Line
 	10600 14300 10600 15000
 Wire Bus Line
 	2550 850  2550 1800
 Wire Bus Line
 	18150 6300 20700 6300
+Wire Bus Line
+	700  750  20850 750 
 Wire Bus Line
 	4400 3350 4400 4400
 Wire Bus Line
@@ -2122,4 +2098,6 @@ Wire Bus Line
 	2350 3350 2350 4350
 Wire Bus Line
 	2250 2300 2250 4300
+Text Notes 4500 850  0    50   ~ 0
+Contains 4 critical thermistors, 4 critical thermistor gnds, thermistor expansion pwr and gnd, and thermistor expansion CANBUS
 $EndSCHEMATC
