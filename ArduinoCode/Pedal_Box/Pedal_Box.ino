@@ -44,6 +44,7 @@ const int CAN_ACCEL_ERROR = 0x05;
 const int CAN_BMS_SHUTDOWN = 0x09;
 const int CAN_MC_FAULTS = 0xAB;
 const int CAN_BMS_STATES = 0x6B0;
+const int CAN_BMS_FAULTS = 0x06;
 const int CAN_MOTOR = 0xC0;
 
 // CAN info
@@ -127,6 +128,10 @@ void readStates() {
       lastBMSMessage = millis();
     } else if (canId == CAN_MC_FAULTS) {
       if ((buf[4] != 0) || ((buf[5] >> 3) & 1) || ((buf[5] >> 4) & 1)) { // only send message for fault bits 32-39, 43, 44
+        CAN.sendMsgBuf(CAN_BMS_SHUTDOWN, 0, 8, BMS_ERROR); // triggers shutdown circuit through BMS
+      }
+    } else if (canId == CAN_BMS_FAULTS) {
+      if (((buf[0] >> 5) & 1) || ((buf[0] >> 6) & 1)) { // only send message for cell voltage too high/low faults
         CAN.sendMsgBuf(CAN_BMS_SHUTDOWN, 0, 8, BMS_ERROR); // triggers shutdown circuit through BMS
       }
     }
