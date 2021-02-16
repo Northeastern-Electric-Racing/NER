@@ -134,7 +134,7 @@ void readPotentiometers() {
   accelPin1Val = analogRead(ACCEL_PIN1); 
   accelPin2Val = analogRead(ACCEL_PIN2);
 
-  if(accelPin1Val || accelPin2Val == 0){
+  if(accelPin1Val == 0 || accelPin2Val == 0){
     CAN.sendMsgBuf(CAN_BMS_SHUTDOWN, 0, 8, BMS_ERROR);
     CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
     CAN.sendMsgBuf(CAN_ACCEL_ERROR, 0, 4, ACCEL_ERROR);
