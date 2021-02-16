@@ -147,7 +147,7 @@ void readPotentiometers() {
   }
 
 
-  if (abs(accelPin1Val - accelPin2Val) <= (1024 * 0.1)) {
+  if (abs(accelPin1Val - accelPin2Val) <= (1023 * 0.1)) {
     unsigned char accelTorque = 0;
     unsigned char regenTorque = 0;
 
