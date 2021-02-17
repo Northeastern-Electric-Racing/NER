@@ -1,5 +1,17 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 6_Pin_ChargerLV
+D Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)
+K 6 Pin Connector
+F ~
+$ENDCMP
+#
+$CMP ChargerLV
+D Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)
+K 6 Pin Connector
+F ~
+$ENDCMP
+#
 $CMP ULV8F2BSS331
 D Button with LED
 F ~

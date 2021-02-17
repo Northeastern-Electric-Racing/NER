@@ -1,0 +1,1542 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr B 17000 11000
+encoding utf-8
+Sheet 1 2
+Title "Shutdown Circuit Summary"
+Date "2021-01-23"
+Rev "1"
+Comp "Northeastern Electric Racing"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 1600 7550 3    50   UnSpc ~ 0
+CHASSIS_GND
+$Comp
+L Connector:Conn_01x01_Female J?
+U 1 1 76703874
+P 3300 7700
+AR Path="/76703874" Ref="J?"  Part="1" 
+AR Path="/766EFABD/76703874" Ref="J1"  Part="1" 
+F 0 "J?" V 3200 7550 50  0000 L CNN
+F 1 "GND" V 3100 7500 50  0000 L CNN
+F 2 "" H 3300 7700 50  0001 C CNN
+F 3 "~" H 3300 7700 50  0001 C CNN
+	1    3300 7700
+	0    -1   1    0   
+$EndComp
+Text Notes 4100 8150 0    50   ~ 0
+TSMP and Shutdown Reset Container
+Text GLabel 3300 6900 1    50   UnSpc ~ 0
+CHASSIS_GND
+$Comp
+L Switch:SW_DPST SW?
+U 1 1 7670387C
+P 4300 7650
+AR Path="/7670387C" Ref="SW?"  Part="1" 
+AR Path="/766EFABD/7670387C" Ref="SW5"  Part="1" 
+F 0 "SW?" H 4300 7450 50  0000 C CNN
+F 1 "Latching Circuit Reset" H 4300 7300 50  0000 C CNN
+F 2 "" H 4300 7650 50  0001 C CNN
+F 3 "~" H 4300 7650 50  0001 C CNN
+	1    4300 7650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 7350 4150 7350
+Wire Wire Line
+	4650 7350 4450 7350
+Wire Wire Line
+	4550 7450 4350 7450
+Wire Wire Line
+	4550 7550 4550 7450
+Wire Wire Line
+	4500 7550 4550 7550
+Wire Wire Line
+	4050 7450 4250 7450
+Wire Wire Line
+	4050 7550 4050 7450
+Wire Wire Line
+	4100 7550 4050 7550
+Wire Notes Line
+	5500 8050 5500 7000
+Wire Notes Line
+	3050 7000 3050 8050
+Wire Wire Line
+	3300 6900 3300 7500
+Text Label 1650 4650 0    50   ~ 0
+CoolingPumpPower
+Wire Notes Line
+	5500 7000 3050 7000
+Wire Notes Line
+	3050 8050 5500 8050
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 76703891
+P 1600 7150
+AR Path="/76703891" Ref="BT?"  Part="1" 
+AR Path="/766EFABD/76703891" Ref="BT1"  Part="1" 
+F 0 "BT?" V 1255 7200 50  0000 C CNN
+F 1 "GLV Battery" V 1346 7200 50  0000 C CNN
+F 2 "" V 1600 7210 50  0001 C CNN
+F 3 "~" V 1600 7210 50  0001 C CNN
+F 4 "12V" V 1437 7200 50  0000 C CNN "Voltage"
+	1    1600 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CircuitBreaker_1P CB?
+U 1 1 76703898
+P 1600 6200
+AR Path="/76703898" Ref="CB?"  Part="1" 
+AR Path="/766EFABD/76703898" Ref="CB1"  Part="1" 
+F 0 "CB?" V 1244 6200 50  0000 C CNN
+F 1 "GLV Main Breaker" V 1335 6200 50  0000 C CNN
+F 2 "" H 1600 6200 50  0001 C CNN
+F 3 "~" H 1600 6200 50  0001 C CNN
+F 4 "30A" V 1426 6200 50  0000 C CNN "Current"
+	1    1600 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 7670389E
+P 1600 5250
+AR Path="/7670389E" Ref="SW?"  Part="1" 
+AR Path="/766EFABD/7670389E" Ref="SW3"  Part="1" 
+F 0 "SW?" H 1600 5485 50  0000 C CNN
+F 1 "GLVMS" H 1600 5394 50  0000 C CNN
+F 2 "" H 1600 5250 50  0001 C CNN
+F 3 "~" H 1600 5250 50  0001 C CNN
+	1    1600 5250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Switch:SW_Push_Open SW?
+U 1 1 767038A4
+P 1600 4050
+AR Path="/767038A4" Ref="SW?"  Part="1" 
+AR Path="/766EFABD/767038A4" Ref="SW2"  Part="1" 
+F 0 "SW?" H 1600 3860 50  0000 C CNN
+F 1 "Side BRB" H 1600 3951 50  0000 C CNN
+F 2 "" H 1600 4250 50  0001 C CNN
+F 3 "~" H 1600 4250 50  0001 C CNN
+	1    1600 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push_Open SW?
+U 1 1 767038AA
+P 1600 3300
+AR Path="/767038AA" Ref="SW?"  Part="1" 
+AR Path="/766EFABD/767038AA" Ref="SW1"  Part="1" 
+F 0 "SW?" H 1600 3515 50  0000 C CNN
+F 1 "Side BRB" H 1600 3424 50  0000 C CNN
+F 2 "" H 1600 3500 50  0001 C CNN
+F 3 "~" H 1600 3500 50  0001 C CNN
+	1    1600 3300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1600 7550 1600 7250
+Wire Wire Line
+	1600 6950 1600 6500
+Wire Wire Line
+	1600 5900 1600 5450
+Wire Wire Line
+	1600 3850 1600 3500
+Wire Wire Line
+	6800 2400 6800 2250
+Wire Wire Line
+	7250 2400 7250 2250
+Text GLabel 6800 2400 3    50   UnSpc ~ 0
+CHASSIS_GND
+Text GLabel 7250 2400 3    50   UnSpc ~ 0
+CHASSIS_GND
+$Comp
+L Switch:SW_Push_Open SW?
+U 1 1 767038B8
+P 7950 1750
+AR Path="/767038B8" Ref="SW?"  Part="1" 
+AR Path="/766EFABD/767038B8" Ref="SW6"  Part="1" 
+F 0 "SW?" H 7950 1965 50  0000 C CNN
+F 1 "Cockpit BRB" H 7950 1874 50  0000 C CNN
+F 2 "" H 7950 1950 50  0001 C CNN
+F 3 "~" H 7950 1950 50  0001 C CNN
+	1    7950 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 767038BE
+P 8650 1750
+AR Path="/767038BE" Ref="SW?"  Part="1" 
+AR Path="/766EFABD/767038BE" Ref="SW7"  Part="1" 
+F 0 "SW?" H 8650 1985 50  0000 C CNN
+F 1 "TSMS" H 8650 1894 50  0000 C CNN
+F 2 "" H 8650 1750 50  0001 C CNN
+F 3 "~" H 8650 1750 50  0001 C CNN
+	1    8650 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 767038C4
+P 6800 2100
+AR Path="/767038C4" Ref="D?"  Part="1" 
+AR Path="/766EFABD/767038C4" Ref="D5"  Part="1" 
+F 0 "D?" V 6839 1983 50  0000 R CNN
+F 1 "SSOK" V 6748 1983 50  0000 R CNN
+F 2 "" H 6800 2100 50  0001 C CNN
+F 3 "~" H 6800 2100 50  0001 C CNN
+	1    6800 2100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 767038CA
+P 7250 2100
+AR Path="/767038CA" Ref="D?"  Part="1" 
+AR Path="/766EFABD/767038CA" Ref="D6"  Part="1" 
+F 0 "D?" V 7289 1983 50  0000 R CNN
+F 1 "SSOK" V 7198 1983 50  0000 R CNN
+F 2 "" H 7250 2100 50  0001 C CNN
+F 3 "~" H 7250 2100 50  0001 C CNN
+	1    7250 2100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6800 1950 6800 1750
+Wire Wire Line
+	7250 1950 7250 1750
+Wire Wire Line
+	4650 7350 4650 7750
+Wire Wire Line
+	4500 7750 4650 7750
+Wire Wire Line
+	3950 7350 3950 7750
+Wire Wire Line
+	3950 7750 4100 7750
+$Sheet
+S 6250 5100 950  550 
+U 767038D9
+F0 "IMD Container" 50
+F1 "IMD_Container.sch" 50
+F2 "HV_Sense+" B R 7200 5150 50 
+F3 "HV_Sense-" B R 7200 5250 50 
+F4 "GLV" I L 6250 5600 50 
+F5 "GND2" U L 6250 5350 50 
+F6 "GND1" U L 6250 5250 50 
+F7 "GND" U L 6250 5150 50 
+F8 "IMD_Fault" O L 6250 5500 50 
+$EndSheet
+Text GLabel 6000 5150 0    50   UnSpc ~ 0
+CHASSIS_GND
+Wire Wire Line
+	6000 5150 6250 5150
+Text GLabel 6000 5250 0    50   UnSpc ~ 0
+CHASSIS_GND
+Wire Wire Line
+	6000 5250 6250 5250
+Text GLabel 6000 5350 0    50   UnSpc ~ 0
+CHASSIS_GND
+Wire Wire Line
+	6000 5350 6250 5350
+Wire Wire Line
+	6250 5500 5000 5500
+Wire Wire Line
+	2950 5600 6250 5600
+Text GLabel 4550 4950 0    50   UnSpc ~ 0
+CHASSIS_GND
+Wire Wire Line
+	2200 1850 3050 1850
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 767038E9
+P 3250 1850
+AR Path="/767038E9" Ref="SW?"  Part="1" 
+AR Path="/766EFABD/767038E9" Ref="SW4"  Part="1" 
+F 0 "SW?" H 3250 2085 50  0000 C CNN
+F 1 "Brake Over-Travel Switch" H 3250 1994 50  0000 C CNN
+F 2 "" H 3250 1850 50  0001 C CNN
+F 3 "~" H 3250 1850 50  0001 C CNN
+	1    3250 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 3100 1600 2500
+$Comp
+L NER:FuseBox_PSZACCEPS052H U?
+U 1 1 767038F0
+P 1600 1600
+AR Path="/767038F0" Ref="U?"  Part="1" 
+AR Path="/766EFABD/767038F0" Ref="U1"  Part="1" 
+F 0 "U?" V 1554 1628 50  0000 L CNN
+F 1 "FuseBox_PSZACCEPS052H" V 1645 1628 50  0000 L CNN
+F 2 "" H 1600 1750 50  0001 C CNN
+F 3 "" H 1600 1750 50  0001 C CNN
+	1    1600 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:G5V-2 K?
+U 1 1 767038F6
+P 5700 4050
+AR Path="/5F45AFB3/767038F6" Ref="K?"  Part="1" 
+AR Path="/767038F6" Ref="K?"  Part="1" 
+AR Path="/766EFABD/767038F6" Ref="K4"  Part="1" 
+F 0 "K?" V 4933 4050 50  0000 C CNN
+F 1 "Omron DPDT Relay" V 5024 4050 50  0000 C CNN
+F 2 "Relay_THT:Relay_DPDT_Omron_G5V-2" H 6350 4000 50  0001 L CNN
+F 3 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_2.pdf" H 5700 4050 50  0001 C CNN
+	1    5700 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Relay:G5V-2 K?
+U 1 1 767038FC
+P 5700 1850
+AR Path="/5F45AFB3/767038FC" Ref="K?"  Part="1" 
+AR Path="/767038FC" Ref="K?"  Part="1" 
+AR Path="/766EFABD/767038FC" Ref="K3"  Part="1" 
+F 0 "K?" V 4933 1850 50  0000 C CNN
+F 1 "Omron DPDT Relay" V 5024 1850 50  0000 C CNN
+F 2 "Relay_THT:Relay_DPDT_Omron_G5V-2" H 6350 1800 50  0001 L CNN
+F 3 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_2.pdf" H 5700 1850 50  0001 C CNN
+	1    5700 1850
+	0    1    -1   0   
+$EndComp
+$Comp
+L Diode:1N4001 D?
+U 1 1 76703902
+P 5650 3000
+AR Path="/5F45AFB3/76703902" Ref="D?"  Part="1" 
+AR Path="/76703902" Ref="D?"  Part="1" 
+AR Path="/766EFABD/76703902" Ref="D3"  Part="1" 
+F 0 "D?" H 5650 3216 50  0000 C CNN
+F 1 "1N4001" H 5650 3125 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5650 2825 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5650 3000 50  0001 C CNN
+	1    5650 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3000 6200 3000
+Wire Wire Line
+	6000 2250 6200 2250
+Wire Wire Line
+	6000 3650 6200 3650
+Connection ~ 6200 3650
+$Comp
+L Relay:G5V-2 K?
+U 1 1 7670390C
+P 4200 4050
+AR Path="/5F45AFB3/7670390C" Ref="K?"  Part="1" 
+AR Path="/7670390C" Ref="K?"  Part="1" 
+AR Path="/766EFABD/7670390C" Ref="K2"  Part="1" 
+F 0 "K?" V 3433 4050 50  0000 C CNN
+F 1 "Omron DPDT Relay" V 3524 4050 50  0000 C CNN
+F 2 "Relay_THT:Relay_DPDT_Omron_G5V-2" H 4850 4000 50  0001 L CNN
+F 3 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_2.pdf" H 4200 4050 50  0001 C CNN
+	1    4200 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4001 D?
+U 1 1 76703912
+P 4150 3000
+AR Path="/5F45AFB3/76703912" Ref="D?"  Part="1" 
+AR Path="/76703912" Ref="D?"  Part="1" 
+AR Path="/766EFABD/76703912" Ref="D1"  Part="1" 
+F 0 "D?" H 4150 3216 50  0000 C CNN
+F 1 "1N4001" H 4150 3125 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4150 2825 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4150 3000 50  0001 C CNN
+	1    4150 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 3000 4700 3000
+Wire Wire Line
+	4500 3650 4700 3650
+Connection ~ 4700 3650
+Wire Wire Line
+	4700 4950 6200 4950
+Wire Wire Line
+	6200 3650 6200 4950
+Wire Wire Line
+	4700 3650 4700 4950
+Connection ~ 3650 3650
+Wire Wire Line
+	3650 3650 3900 3650
+Wire Wire Line
+	3650 3000 4000 3000
+Connection ~ 5200 3650
+Wire Wire Line
+	5200 3650 5400 3650
+Wire Wire Line
+	5200 3000 5500 3000
+Wire Wire Line
+	5200 2250 5400 2250
+NoConn ~ 6000 1950
+NoConn ~ 6000 1350
+NoConn ~ 6000 3950
+NoConn ~ 6000 4350
+NoConn ~ 6000 4550
+NoConn ~ 5400 4450
+NoConn ~ 4500 4350
+NoConn ~ 4500 4550
+NoConn ~ 3900 4450
+NoConn ~ 4500 3950
+Wire Wire Line
+	5300 1750 5300 1850
+Wire Wire Line
+	5300 1850 5400 1850
+Wire Wire Line
+	6100 4150 6100 4800
+Wire Wire Line
+	6100 4800 5200 4800
+Wire Wire Line
+	5200 4800 5200 3650
+Wire Wire Line
+	6000 4150 6100 4150
+Wire Wire Line
+	4600 4150 4600 4800
+Wire Wire Line
+	4500 4150 4600 4150
+Wire Wire Line
+	3650 4800 4600 4800
+Wire Wire Line
+	3650 3650 3650 4800
+Connection ~ 3650 3000
+Wire Wire Line
+	3650 3000 3650 3650
+Connection ~ 4700 3000
+Wire Wire Line
+	4700 3000 4700 3650
+Wire Wire Line
+	3650 2250 3650 3000
+Connection ~ 5200 3000
+Wire Wire Line
+	5200 3000 5200 3650
+Connection ~ 6200 3000
+Wire Wire Line
+	6200 3000 6200 3650
+Wire Wire Line
+	6200 2250 6200 3000
+Wire Wire Line
+	5200 2250 5200 3000
+$Comp
+L Connector:Conn_01x01_Female J?
+U 1 1 76703944
+P 5200 7700
+AR Path="/76703944" Ref="J?"  Part="1" 
+AR Path="/766EFABD/76703944" Ref="J3"  Part="1" 
+F 0 "J?" V 5100 7550 50  0000 L CNN
+F 1 "TS-" V 5000 7500 50  0000 L CNN
+F 2 "" H 5200 7700 50  0001 C CNN
+F 3 "~" H 5200 7700 50  0001 C CNN
+	1    5200 7700
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:MSxx-1Bxx-75 K?
+U 1 1 7670394A
+P 11000 6300
+AR Path="/5F45B05E/7670394A" Ref="K?"  Part="1" 
+AR Path="/7670394A" Ref="K?"  Part="1" 
+AR Path="/766EFABD/7670394A" Ref="K7"  Part="1" 
+F 0 "K?" V 10433 6300 50  0000 C CNN
+F 1 "SPST-NC (Discharge)" V 10524 6300 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB" H 11350 6250 50  0001 L CNN
+F 3 "https://standexelectronics.com/de/produkte/ms-reed-relais/" H 11000 6300 50  0001 C CNN
+	1    11000 6300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:DIPxx-1Axx-11x K?
+U 1 1 76703950
+P 12050 3400
+AR Path="/5F45B05E/76703950" Ref="K?"  Part="1" 
+AR Path="/76703950" Ref="K?"  Part="1" 
+AR Path="/766EFABD/76703950" Ref="K9"  Part="1" 
+F 0 "K?" V 11483 3400 50  0000 C CNN
+F 1 "SPST-NO (AIR)" V 11574 3400 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 12400 3350 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 12050 3400 50  0001 C CNN
+	1    12050 3400
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:DIPxx-1Axx-11x K?
+U 1 1 76703956
+P 12050 1950
+AR Path="/5F45B05E/76703956" Ref="K?"  Part="1" 
+AR Path="/76703956" Ref="K?"  Part="1" 
+AR Path="/766EFABD/76703956" Ref="K8"  Part="1" 
+F 0 "K?" V 11483 1950 50  0000 C CNN
+F 1 "SPST-NO (Precharge)" V 11574 1950 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 12400 1900 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 12050 1950 50  0001 C CNN
+	1    12050 1950
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	12350 1750 12700 1750
+Wire Wire Line
+	11300 6100 12700 6100
+$Comp
+L Device:R R?
+U 1 1 7670395F
+P 10650 2150
+AR Path="/5F45B05E/7670395F" Ref="R?"  Part="1" 
+AR Path="/7670395F" Ref="R?"  Part="1" 
+AR Path="/766EFABD/7670395F" Ref="R4"  Part="1" 
+F 0 "R?" V 10450 2100 50  0000 L CNN
+F 1 "600" V 10550 2050 50  0000 L CNN
+F 2 "" V 10580 2150 50  0001 C CNN
+F 3 "~" H 10650 2150 50  0001 C CNN
+	1    10650 2150
+	0    -1   1    0   
+$EndComp
+Text Label 11100 3600 2    50   ~ 0
+10_2
+Text Label 10100 1750 2    50   ~ 0
+26_20
+Text Label 9900 6500 2    50   ~ 0
+13_2
+Text Label 12750 2150 0    50   ~ 0
+27_20
+Text Label 9950 2150 2    50   ~ 0
+28_20
+Wire Wire Line
+	10700 6100 10100 6100
+$Comp
+L Relay:DIPxx-1Axx-11x K?
+U 1 1 7670396B
+P 10650 3000
+AR Path="/5F45B05E/7670396B" Ref="K?"  Part="1" 
+AR Path="/7670396B" Ref="K?"  Part="1" 
+AR Path="/766EFABD/7670396B" Ref="K6"  Part="1" 
+F 0 "K?" V 10083 3000 50  0000 C CNN
+F 1 "SPST-NO (AIR Control)" V 10174 3000 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 11000 2950 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 10650 3000 50  0001 C CNN
+	1    10650 3000
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	13100 2150 12350 2150
+Wire Wire Line
+	11900 8650 10100 8650
+Text Label 11600 6500 2    50   ~ 0
+12_2
+Wire Wire Line
+	12500 8650 12700 8650
+$Comp
+L Relay:DIPxx-1Axx-11x K?
+U 1 1 76703975
+P 12200 8850
+AR Path="/5F45B05E/76703975" Ref="K?"  Part="1" 
+AR Path="/76703975" Ref="K?"  Part="1" 
+AR Path="/766EFABD/76703975" Ref="K10"  Part="1" 
+F 0 "K?" V 11633 8850 50  0000 C CNN
+F 1 "SPST-NO (AIR)" V 11724 8850 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 12550 8800 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 12200 8850 50  0001 C CNN
+	1    12200 8850
+	0    -1   1    0   
+$EndComp
+Connection ~ 12700 6100
+Wire Wire Line
+	12700 6100 12700 8650
+Wire Wire Line
+	10100 6100 10100 8650
+Wire Wire Line
+	12700 1750 12700 2800
+Wire Wire Line
+	11300 6500 11600 6500
+Wire Wire Line
+	11600 6500 11600 9050
+Wire Wire Line
+	11900 9050 11600 9050
+Connection ~ 11600 9050
+Connection ~ 10100 6100
+$Comp
+L Device:Battery BT?
+U 1 1 76703985
+P 13500 2450
+AR Path="/76703985" Ref="BT?"  Part="1" 
+AR Path="/766EFABD/76703985" Ref="BT2"  Part="1" 
+F 0 "BT?" H 13608 2496 50  0000 L CNN
+F 1 "Segment 4" H 13608 2405 50  0000 L CNN
+F 2 "" V 13500 2510 50  0001 C CNN
+F 3 "~" V 13500 2510 50  0001 C CNN
+	1    13500 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery BT?
+U 1 1 7670398B
+P 13500 4500
+AR Path="/7670398B" Ref="BT?"  Part="1" 
+AR Path="/766EFABD/7670398B" Ref="BT3"  Part="1" 
+F 0 "BT?" H 13608 4546 50  0000 L CNN
+F 1 "Segment 3" H 13608 4455 50  0000 L CNN
+F 2 "" V 13500 4560 50  0001 C CNN
+F 3 "~" V 13500 4560 50  0001 C CNN
+	1    13500 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery BT?
+U 1 1 76703991
+P 13500 6550
+AR Path="/76703991" Ref="BT?"  Part="1" 
+AR Path="/766EFABD/76703991" Ref="BT4"  Part="1" 
+F 0 "BT?" H 13608 6596 50  0000 L CNN
+F 1 "Segment 2" H 13608 6505 50  0000 L CNN
+F 2 "" V 13500 6610 50  0001 C CNN
+F 3 "~" V 13500 6610 50  0001 C CNN
+	1    13500 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 76703997
+P 13500 3500
+AR Path="/76703997" Ref="SW?"  Part="1" 
+AR Path="/766EFABD/76703997" Ref="SW8"  Part="1" 
+F 0 "SW?" V 13546 3412 50  0000 R CNN
+F 1 "SMD/HVD 3" V 13455 3412 50  0000 R CNN
+F 2 "" H 13500 3500 50  0001 C CNN
+F 3 "~" H 13500 3500 50  0001 C CNN
+	1    13500 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 7670399D
+P 13500 5600
+AR Path="/7670399D" Ref="SW?"  Part="1" 
+AR Path="/766EFABD/7670399D" Ref="SW9"  Part="1" 
+F 0 "SW?" V 13546 5512 50  0000 R CNN
+F 1 "SMD/HVD 2" V 13455 5512 50  0000 R CNN
+F 2 "" H 13500 5600 50  0001 C CNN
+F 3 "~" H 13500 5600 50  0001 C CNN
+	1    13500 5600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8150 1750 8450 1750
+Wire Wire Line
+	6750 1550 6600 1550
+Wire Wire Line
+	4900 1550 4800 1550
+Text GLabel 6750 1550 2    50   UnSpc ~ 0
+CHASSIS_GND
+Text GLabel 4900 1550 2    50   UnSpc ~ 0
+CHASSIS_GND
+$Comp
+L Device:LED D?
+U 1 1 767039A8
+P 6450 1550
+AR Path="/767039A8" Ref="D?"  Part="1" 
+AR Path="/766EFABD/767039A8" Ref="D4"  Part="1" 
+F 0 "D?" H 6450 1250 50  0000 R CNN
+F 1 "IMD Fault Indicator" H 6800 1350 50  0000 R CNN
+F 2 "" H 6450 1550 50  0001 C CNN
+F 3 "~" H 6450 1550 50  0001 C CNN
+	1    6450 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 767039AE
+P 4650 1550
+AR Path="/767039AE" Ref="D?"  Part="1" 
+AR Path="/766EFABD/767039AE" Ref="D2"  Part="1" 
+F 0 "D?" H 4500 1250 50  0000 R CNN
+F 1 "BMS Fault Indcator" H 4750 1350 50  0000 R CNN
+F 2 "" H 4650 1550 50  0001 C CNN
+F 3 "~" H 4650 1550 50  0001 C CNN
+	1    4650 1550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6000 1550 6300 1550
+Wire Wire Line
+	2950 2000 2200 2000
+Text Label 9200 2600 2    50   ~ 0
+MotorController_PrechargeControl
+Text Label 9200 2800 2    50   ~ 0
+MotorController_AIRControl
+$Comp
+L Device:R R?
+U 1 1 767039B9
+P 6900 6800
+AR Path="/5F45B05E/767039B9" Ref="R?"  Part="1" 
+AR Path="/767039B9" Ref="R?"  Part="1" 
+AR Path="/766EFABD/767039B9" Ref="R2"  Part="1" 
+F 0 "R?" H 6970 6846 50  0000 L CNN
+F 1 "10k" H 6970 6755 50  0000 L CNN
+F 2 "" V 6830 6800 50  0001 C CNN
+F 3 "~" H 6900 6800 50  0001 C CNN
+	1    6900 6800
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 767039BF
+P 6900 6700
+AR Path="/5F45B05E/767039BF" Ref="R?"  Part="1" 
+AR Path="/767039BF" Ref="R?"  Part="1" 
+AR Path="/766EFABD/767039BF" Ref="R1"  Part="1" 
+F 0 "R?" H 6970 6746 50  0000 L CNN
+F 1 "10k" H 6970 6655 50  0000 L CNN
+F 2 "" V 6830 6700 50  0001 C CNN
+F 3 "~" H 6900 6700 50  0001 C CNN
+	1    6900 6700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Fuse F?
+U 1 1 767039C5
+P 7900 5150
+AR Path="/5F45B05E/767039C5" Ref="F?"  Part="1" 
+AR Path="/767039C5" Ref="F?"  Part="1" 
+AR Path="/766EFABD/767039C5" Ref="F1"  Part="1" 
+F 0 "F?" H 7841 5104 50  0000 R CNN
+F 1 "Fuse" H 7841 5195 50  0000 R CNN
+F 2 "" V 7830 5150 50  0001 C CNN
+F 3 "~" H 7900 5150 50  0001 C CNN
+	1    7900 5150
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:Fuse F?
+U 1 1 767039CB
+P 7900 5250
+AR Path="/5F45B05E/767039CB" Ref="F?"  Part="1" 
+AR Path="/767039CB" Ref="F?"  Part="1" 
+AR Path="/766EFABD/767039CB" Ref="F2"  Part="1" 
+F 0 "F?" H 7841 5204 50  0000 R CNN
+F 1 "Fuse" H 7841 5295 50  0000 R CNN
+F 2 "" V 7830 5250 50  0001 C CNN
+F 3 "~" H 7900 5250 50  0001 C CNN
+	1    7900 5250
+	0    1    -1   0   
+$EndComp
+$Comp
+L NER:2-Pos_Generic J?
+U 1 1 767039D1
+P 7650 3800
+AR Path="/5F45B05E/767039D1" Ref="J?"  Part="1" 
+AR Path="/767039D1" Ref="J?"  Part="1" 
+AR Path="/766EFABD/767039D1" Ref="J4"  Part="1" 
+F 0 "J?" H 7650 3925 50  0000 C CNN
+F 1 "Main TS Connector" H 7650 3834 50  0000 C CNN
+F 2 "" H 7650 3800 50  0001 C CNN
+F 3 "" H 7650 3800 50  0001 C CNN
+	1    7650 3800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7250 3600 7400 3600
+Wire Wire Line
+	7250 3700 7400 3700
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 767039D9
+P 13500 7650
+AR Path="/767039D9" Ref="SW?"  Part="1" 
+AR Path="/766EFABD/767039D9" Ref="SW10"  Part="1" 
+F 0 "SW?" V 13546 7562 50  0000 R CNN
+F 1 "SMD/HVD 1" V 13455 7562 50  0000 R CNN
+F 2 "" H 13500 7650 50  0001 C CNN
+F 3 "~" H 13500 7650 50  0001 C CNN
+	1    13500 7650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Battery BT?
+U 1 1 767039DF
+P 13500 8600
+AR Path="/767039DF" Ref="BT?"  Part="1" 
+AR Path="/766EFABD/767039DF" Ref="BT5"  Part="1" 
+F 0 "BT?" H 13608 8646 50  0000 L CNN
+F 1 "Segement 1 " H 13608 8555 50  0000 L CNN
+F 2 "" V 13500 8660 50  0001 C CNN
+F 3 "~" V 13500 8660 50  0001 C CNN
+	1    13500 8600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13500 9050 13500 8800
+Wire Wire Line
+	13500 7450 13500 6750
+Wire Wire Line
+	13500 5400 13500 4700
+Wire Wire Line
+	13500 4300 13500 3700
+Wire Wire Line
+	13500 3300 13500 2650
+Wire Bus Line
+	13650 2450 14150 2450
+Text Notes 14250 2900 0    50   ~ 0
+Each of the 19 Voltage Tap \nconncetions are fused and isolated \nwith a relay
+$Comp
+L Device:Fuse F?
+U 1 1 767039EC
+P 14650 2150
+AR Path="/767039EC" Ref="F?"  Part="1" 
+AR Path="/766EFABD/767039EC" Ref="F4"  Part="1" 
+F 0 "F?" V 14850 2150 50  0000 C CNN
+F 1 "Fuse" V 14750 2150 50  0000 C CNN
+F 2 "" V 14580 2150 50  0001 C CNN
+F 3 "~" H 14650 2150 50  0001 C CNN
+	1    14650 2150
+	0    1    1    0   
+$EndComp
+Entry Bus Bus
+	14150 2450 14250 2350
+Entry Wire Line
+	14350 2050 14450 2150
+Entry Wire Line
+	14350 2050 14450 1950
+$Comp
+L Device:Fuse F?
+U 1 1 767039F5
+P 14650 1950
+AR Path="/767039F5" Ref="F?"  Part="1" 
+AR Path="/766EFABD/767039F5" Ref="F3"  Part="1" 
+F 0 "F?" V 14400 1950 50  0000 C CNN
+F 1 "Fuse" V 14500 1950 50  0000 C CNN
+F 2 "" V 14580 1950 50  0001 C CNN
+F 3 "~" H 14650 1950 50  0001 C CNN
+	1    14650 1950
+	0    1    1    0   
+$EndComp
+Wire Bus Line
+	14250 2650 14850 2650
+Text Label 14850 2650 0    50   ~ 0
+CellTaps_3-19
+Wire Bus Line
+	13650 4500 14150 4500
+Entry Bus Bus
+	14150 4500 14250 4400
+Wire Bus Line
+	13650 6550 14150 6550
+Entry Bus Bus
+	14150 6550 14250 6450
+Wire Bus Line
+	13650 8600 14150 8600
+Entry Bus Bus
+	14150 8600 14250 8500
+Wire Wire Line
+	13500 7850 13500 8400
+Wire Wire Line
+	13500 5800 13500 6350
+Text Label 7100 4600 2    50   ~ 0
+TSAL_Isolation+
+Text Label 7100 4700 2    50   ~ 0
+TSAL_Isolation-
+Text Label 7250 3600 2    50   ~ 0
+MotorController_TS+
+Text Label 7250 3700 2    50   ~ 0
+MotorController_TS-
+Wire Wire Line
+	10350 1750 10100 1750
+$Comp
+L Relay:DIPxx-1Axx-11x K?
+U 1 1 76703A0B
+P 10650 1550
+AR Path="/5F45B05E/76703A0B" Ref="K?"  Part="1" 
+AR Path="/76703A0B" Ref="K?"  Part="1" 
+AR Path="/766EFABD/76703A0B" Ref="K5"  Part="1" 
+F 0 "K?" V 10083 1550 50  0000 C CNN
+F 1 "SPST-NO (Precharge Control)" V 10174 1550 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 11000 1500 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 10650 1550 50  0001 C CNN
+	1    10650 1550
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	10100 3200 10350 3200
+Connection ~ 10100 3200
+Wire Wire Line
+	10100 3200 10100 1750
+Wire Wire Line
+	9200 2800 10350 2800
+Wire Wire Line
+	9400 1350 10350 1350
+Wire Wire Line
+	10950 3200 11750 3200
+Wire Wire Line
+	10100 3200 10100 6100
+Wire Wire Line
+	10950 2800 11250 2800
+Wire Wire Line
+	11250 1350 10950 1350
+Wire Wire Line
+	4700 2250 4700 3000
+Wire Wire Line
+	5300 1150 5300 1450
+NoConn ~ 4450 1350
+Wire Wire Line
+	4450 1750 5300 1750
+NoConn ~ 4450 1950
+Wire Wire Line
+	3650 2250 3850 2250
+Wire Wire Line
+	4450 2250 4700 2250
+$Comp
+L Relay:G5V-2 K?
+U 1 1 76703A21
+P 4150 1850
+AR Path="/5F45AFB3/76703A21" Ref="K?"  Part="1" 
+AR Path="/76703A21" Ref="K?"  Part="1" 
+AR Path="/766EFABD/76703A21" Ref="K1"  Part="1" 
+F 0 "K?" V 3383 1850 50  0000 C CNN
+F 1 "Omron DPDT Relay" V 3474 1850 50  0000 C CNN
+F 2 "Relay_THT:Relay_DPDT_Omron_G5V-2" H 4800 1800 50  0001 L CNN
+F 3 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_2.pdf" H 4150 1850 50  0001 C CNN
+	1    4150 1850
+	0    1    -1   0   
+$EndComp
+Text Label 13000 3600 2    50   ~ 0
+11_2
+Text GLabel 12600 4900 0    50   UnSpc ~ 0
+CHASSIS_GND
+Wire Wire Line
+	12700 4900 12600 4900
+Text Label 3450 5500 0    50   ~ 0
+BMS_MPEnable
+Wire Wire Line
+	3450 1850 3850 1850
+Wire Wire Line
+	2200 1700 2550 1700
+Wire Wire Line
+	2550 1700 2550 1450
+Wire Wire Line
+	2550 1150 2550 1450
+Connection ~ 2550 1450
+Wire Wire Line
+	2550 1450 3850 1450
+Wire Wire Line
+	2950 2000 2950 5600
+Wire Wire Line
+	2550 1150 5300 1150
+Wire Wire Line
+	5300 1450 5400 1450
+Wire Wire Line
+	4450 1550 4500 1550
+Wire Wire Line
+	6000 1750 6800 1750
+$Comp
+L Connector:Conn_01x01_Female J?
+U 1 1 76703A36
+P 5100 7700
+AR Path="/76703A36" Ref="J?"  Part="1" 
+AR Path="/766EFABD/76703A36" Ref="J2"  Part="1" 
+F 0 "J?" V 5000 7800 50  0000 L CNN
+F 1 "TS+" V 4900 7750 50  0000 L CNN
+F 2 "" H 5100 7700 50  0001 C CNN
+F 3 "~" H 5100 7700 50  0001 C CNN
+	1    5100 7700
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5100 7500 5100 6700
+Wire Wire Line
+	5100 6700 6750 6700
+Wire Wire Line
+	5200 7500 5200 6800
+Wire Wire Line
+	5200 6800 6750 6800
+Wire Wire Line
+	4150 5300 4150 7350
+Connection ~ 6800 1750
+Connection ~ 7250 1750
+Wire Wire Line
+	6800 1750 7250 1750
+Wire Wire Line
+	7250 1750 7750 1750
+Wire Wire Line
+	4150 5300 3400 5300
+Wire Wire Line
+	3400 3650 3650 3650
+Wire Wire Line
+	3400 3650 3400 5300
+Wire Wire Line
+	4250 5200 3500 5200
+Wire Wire Line
+	3500 5200 3500 4050
+Wire Wire Line
+	3500 4050 3900 4050
+Wire Wire Line
+	4250 5200 4250 5500
+Wire Wire Line
+	4350 5200 4900 5200
+Wire Wire Line
+	4900 5200 4900 3650
+Wire Wire Line
+	4900 3650 5200 3650
+Wire Wire Line
+	4350 5200 4350 7450
+Wire Wire Line
+	4450 5300 5000 5300
+Wire Wire Line
+	5000 5300 5000 4050
+Wire Wire Line
+	5000 4050 5400 4050
+Wire Wire Line
+	4450 5300 4450 7350
+Wire Wire Line
+	5000 5300 5000 5500
+Connection ~ 5000 5300
+Wire Wire Line
+	4250 5500 3450 5500
+Wire Wire Line
+	8850 1750 9100 1750
+Wire Wire Line
+	9100 1750 10100 1750
+Connection ~ 10100 1750
+Wire Wire Line
+	15850 1750 15850 850 
+Wire Wire Line
+	9100 850  9100 1750
+Connection ~ 9100 1750
+Wire Wire Line
+	14050 1750 14850 1750
+Wire Wire Line
+	15850 7900 15850 5850
+Wire Wire Line
+	15450 1750 15850 1750
+Connection ~ 15850 1750
+$Comp
+L Relay:Fujitsu_FTR-F1A K?
+U 1 1 76703A68
+P 15150 1950
+AR Path="/5F45B05E/604010F7/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/604B77CB/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/604E5331/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/604E5333/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/60034172/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/60063A8B/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/60093404/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/600F3FA0/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/600F3FD1/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/602AD679/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/602C1529/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/602C1575/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/6032F654/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/6035774A/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/6035FF84/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/605A4F7F/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/605AC384/76703A68" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/605B3BFB/76703A68" Ref="K?"  Part="1" 
+AR Path="/76703A68" Ref="K?"  Part="1" 
+AR Path="/766EFABD/76703A68" Ref="K11"  Part="1" 
+F 0 "K?" H 15150 1450 50  0000 C CNN
+F 1 "Voltage Tap Relay" H 15150 1550 50  0000 C CNN
+F 2 "Relay_THT:Relay_DPST_Fujitsu_FTR-F1A" H 15150 1550 50  0001 C CNN
+F 3 "" H 15150 1950 50  0001 C CNN
+	1    15150 1950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	14500 1950 14450 1950
+Wire Wire Line
+	14800 2150 14850 2150
+Wire Wire Line
+	14800 1950 14850 1950
+Wire Bus Line
+	14250 2350 14250 2050
+Wire Bus Line
+	14250 2050 14350 2050
+Wire Wire Line
+	14450 2150 14500 2150
+Wire Wire Line
+	14050 1750 14050 3800
+$Comp
+L Device:Fuse F?
+U 1 1 76703A75
+P 14650 4200
+AR Path="/76703A75" Ref="F?"  Part="1" 
+AR Path="/766EFABD/76703A75" Ref="F6"  Part="1" 
+F 0 "F?" V 14850 4200 50  0000 C CNN
+F 1 "Fuse" V 14750 4200 50  0000 C CNN
+F 2 "" V 14580 4200 50  0001 C CNN
+F 3 "~" H 14650 4200 50  0001 C CNN
+	1    14650 4200
+	0    1    1    0   
+$EndComp
+Entry Wire Line
+	14350 4100 14450 4200
+Entry Wire Line
+	14350 4100 14450 4000
+$Comp
+L Device:Fuse F?
+U 1 1 76703A7D
+P 14650 4000
+AR Path="/76703A7D" Ref="F?"  Part="1" 
+AR Path="/766EFABD/76703A7D" Ref="F5"  Part="1" 
+F 0 "F?" V 14400 4000 50  0000 C CNN
+F 1 "Fuse" V 14500 4000 50  0000 C CNN
+F 2 "" V 14580 4000 50  0001 C CNN
+F 3 "~" H 14650 4000 50  0001 C CNN
+	1    14650 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	14050 3800 14850 3800
+Wire Wire Line
+	15450 3800 15850 3800
+$Comp
+L Relay:Fujitsu_FTR-F1A K?
+U 1 1 76703A85
+P 15150 4000
+AR Path="/5F45B05E/604010F7/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/604B77CB/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/604E5331/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/604E5333/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/60034172/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/60063A8B/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/60093404/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/600F3FA0/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/600F3FD1/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/602AD679/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/602C1529/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/602C1575/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/6032F654/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/6035774A/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/6035FF84/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/605A4F7F/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/605AC384/76703A85" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/605B3BFB/76703A85" Ref="K?"  Part="1" 
+AR Path="/76703A85" Ref="K?"  Part="1" 
+AR Path="/766EFABD/76703A85" Ref="K12"  Part="1" 
+F 0 "K?" H 15150 3500 50  0000 C CNN
+F 1 "Voltage Tap Relay" H 15150 3600 50  0000 C CNN
+F 2 "Relay_THT:Relay_DPST_Fujitsu_FTR-F1A" H 15150 3600 50  0001 C CNN
+F 3 "" H 15150 4000 50  0001 C CNN
+	1    15150 4000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	14500 4000 14450 4000
+Wire Wire Line
+	14800 4200 14850 4200
+Wire Wire Line
+	14800 4000 14850 4000
+Wire Bus Line
+	14250 4400 14250 4100
+Wire Bus Line
+	14250 4100 14350 4100
+Wire Wire Line
+	14450 4200 14500 4200
+$Comp
+L Device:Fuse F?
+U 1 1 76703A91
+P 14650 6250
+AR Path="/76703A91" Ref="F?"  Part="1" 
+AR Path="/766EFABD/76703A91" Ref="F8"  Part="1" 
+F 0 "F?" V 14850 6250 50  0000 C CNN
+F 1 "Fuse" V 14750 6250 50  0000 C CNN
+F 2 "" V 14580 6250 50  0001 C CNN
+F 3 "~" H 14650 6250 50  0001 C CNN
+	1    14650 6250
+	0    1    1    0   
+$EndComp
+Entry Wire Line
+	14350 6150 14450 6250
+Entry Wire Line
+	14350 6150 14450 6050
+$Comp
+L Device:Fuse F?
+U 1 1 76703A99
+P 14650 6050
+AR Path="/76703A99" Ref="F?"  Part="1" 
+AR Path="/766EFABD/76703A99" Ref="F7"  Part="1" 
+F 0 "F?" V 14400 6050 50  0000 C CNN
+F 1 "Fuse" V 14500 6050 50  0000 C CNN
+F 2 "" V 14580 6050 50  0001 C CNN
+F 3 "~" H 14650 6050 50  0001 C CNN
+	1    14650 6050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	14050 5850 14850 5850
+Wire Wire Line
+	15450 5850 15850 5850
+$Comp
+L Relay:Fujitsu_FTR-F1A K?
+U 1 1 76703AA1
+P 15150 6050
+AR Path="/5F45B05E/604010F7/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/604B77CB/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/604E5331/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/604E5333/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/60034172/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/60063A8B/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/60093404/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/600F3FA0/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/600F3FD1/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/602AD679/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/602C1529/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/602C1575/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/6032F654/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/6035774A/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/6035FF84/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/605A4F7F/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/605AC384/76703AA1" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/605B3BFB/76703AA1" Ref="K?"  Part="1" 
+AR Path="/76703AA1" Ref="K?"  Part="1" 
+AR Path="/766EFABD/76703AA1" Ref="K13"  Part="1" 
+F 0 "K?" H 15150 5550 50  0000 C CNN
+F 1 "Voltage Tap Relay" H 15150 5650 50  0000 C CNN
+F 2 "Relay_THT:Relay_DPST_Fujitsu_FTR-F1A" H 15150 5650 50  0001 C CNN
+F 3 "" H 15150 6050 50  0001 C CNN
+	1    15150 6050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	14500 6050 14450 6050
+Wire Wire Line
+	14800 6250 14850 6250
+Wire Wire Line
+	14800 6050 14850 6050
+Wire Bus Line
+	14250 6450 14250 6150
+Wire Bus Line
+	14250 6150 14350 6150
+Wire Wire Line
+	14450 6250 14500 6250
+$Comp
+L Device:Fuse F?
+U 1 1 76703AAD
+P 14650 8300
+AR Path="/76703AAD" Ref="F?"  Part="1" 
+AR Path="/766EFABD/76703AAD" Ref="F10"  Part="1" 
+F 0 "F?" V 14850 8300 50  0000 C CNN
+F 1 "Fuse" V 14750 8300 50  0000 C CNN
+F 2 "" V 14580 8300 50  0001 C CNN
+F 3 "~" H 14650 8300 50  0001 C CNN
+	1    14650 8300
+	0    1    1    0   
+$EndComp
+Entry Wire Line
+	14350 8200 14450 8300
+Entry Wire Line
+	14350 8200 14450 8100
+$Comp
+L Device:Fuse F?
+U 1 1 76703AB5
+P 14650 8100
+AR Path="/76703AB5" Ref="F?"  Part="1" 
+AR Path="/766EFABD/76703AB5" Ref="F9"  Part="1" 
+F 0 "F?" V 14400 8100 50  0000 C CNN
+F 1 "Fuse" V 14500 8100 50  0000 C CNN
+F 2 "" V 14580 8100 50  0001 C CNN
+F 3 "~" H 14650 8100 50  0001 C CNN
+	1    14650 8100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	14050 7900 14850 7900
+Wire Wire Line
+	15450 7900 15850 7900
+$Comp
+L Relay:Fujitsu_FTR-F1A K?
+U 1 1 76703ABD
+P 15150 8100
+AR Path="/5F45B05E/604010F7/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/604B77CB/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/604E5331/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/604E5333/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/60034172/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/60063A8B/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/60093404/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/600F3FA0/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/600F3FD1/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/602AD679/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/602C1529/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/602C1575/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/6032F654/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/6035774A/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/6035FF84/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/605A4F7F/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/605AC384/76703ABD" Ref="K?"  Part="1" 
+AR Path="/5F45B05E/605B3BFB/76703ABD" Ref="K?"  Part="1" 
+AR Path="/76703ABD" Ref="K?"  Part="1" 
+AR Path="/766EFABD/76703ABD" Ref="K14"  Part="1" 
+F 0 "K?" H 15150 7600 50  0000 C CNN
+F 1 "Voltage Tap Relay" H 15150 7700 50  0000 C CNN
+F 2 "Relay_THT:Relay_DPST_Fujitsu_FTR-F1A" H 15150 7700 50  0001 C CNN
+F 3 "" H 15150 8100 50  0001 C CNN
+	1    15150 8100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	14500 8100 14450 8100
+Wire Wire Line
+	14800 8300 14850 8300
+Wire Wire Line
+	14800 8100 14850 8100
+Wire Bus Line
+	14250 8500 14250 8200
+Wire Bus Line
+	14250 8200 14350 8200
+Wire Wire Line
+	14450 8300 14500 8300
+Wire Wire Line
+	15450 1950 15600 1950
+Wire Wire Line
+	15450 2150 15600 2150
+Entry Wire Line
+	15600 1950 15700 2050
+Entry Wire Line
+	15600 2150 15700 2250
+Wire Bus Line
+	15700 8700 15850 8700
+Text Label 15850 8700 0    50   ~ 0
+BMS_VoltageTaps
+Wire Wire Line
+	15450 4000 15600 4000
+Wire Wire Line
+	15450 4200 15600 4200
+Entry Wire Line
+	15600 4000 15700 4100
+Entry Wire Line
+	15600 4200 15700 4300
+Wire Wire Line
+	15450 6050 15600 6050
+Wire Wire Line
+	15450 6250 15600 6250
+Entry Wire Line
+	15600 6050 15700 6150
+Entry Wire Line
+	15600 6250 15700 6350
+Wire Wire Line
+	15450 8100 15600 8100
+Wire Wire Line
+	15450 8300 15600 8300
+Entry Wire Line
+	15600 8100 15700 8200
+Entry Wire Line
+	15600 8300 15700 8400
+Entry Bus Bus
+	14150 2450 14250 2550
+Wire Bus Line
+	14250 2550 14250 2650
+Text Notes 14250 4950 0    50   ~ 0
+Each of the 19 Voltage Tap \nconncetions are fused and isolated \nwith a relay
+Wire Bus Line
+	14250 4700 14850 4700
+Text Label 14850 4700 0    50   ~ 0
+CellTaps_3-19
+Entry Bus Bus
+	14150 4500 14250 4600
+Wire Bus Line
+	14250 4600 14250 4700
+Text Notes 14250 7000 0    50   ~ 0
+Each of the 19 Voltage Tap \nconncetions are fused and isolated \nwith a relay
+Wire Bus Line
+	14250 6750 14850 6750
+Text Label 14850 6750 0    50   ~ 0
+CellTaps_3-19
+Entry Bus Bus
+	14150 6550 14250 6650
+Wire Bus Line
+	14250 6650 14250 6750
+Text Notes 14250 9050 0    50   ~ 0
+Each of the 19 Voltage Tap \nconncetions are fused and isolated \nwith a relay
+Wire Bus Line
+	14250 8800 14850 8800
+Text Label 14850 8800 0    50   ~ 0
+CellTaps_3-19
+Entry Bus Bus
+	14150 8600 14250 8700
+Wire Bus Line
+	14250 8700 14250 8800
+Wire Wire Line
+	12350 3600 13100 3600
+Wire Wire Line
+	13100 3600 13100 2150
+Wire Wire Line
+	13500 2150 13500 2250
+Wire Wire Line
+	12350 3200 12700 3200
+Connection ~ 12700 3200
+Wire Wire Line
+	12700 3200 12700 4900
+Wire Wire Line
+	11250 1350 11250 2800
+Wire Wire Line
+	11750 1750 10950 1750
+$Comp
+L Device:R R?
+U 1 1 76703AF6
+P 10400 6500
+AR Path="/5F45B05E/76703AF6" Ref="R?"  Part="1" 
+AR Path="/76703AF6" Ref="R?"  Part="1" 
+AR Path="/766EFABD/76703AF6" Ref="R3"  Part="1" 
+F 0 "R?" V 10300 6450 50  0000 L CNN
+F 1 "3.3k" V 10200 6400 50  0000 L CNN
+F 2 "" V 10330 6500 50  0001 C CNN
+F 3 "~" H 10400 6500 50  0001 C CNN
+	1    10400 6500
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	10700 6500 10550 6500
+Wire Wire Line
+	10250 6500 9600 6500
+Wire Wire Line
+	4550 4950 4700 4950
+Connection ~ 4700 4950
+Wire Wire Line
+	7200 5150 7550 5150
+Wire Wire Line
+	7200 5250 7450 5250
+Wire Wire Line
+	9400 1350 9400 2600
+Wire Wire Line
+	9400 2600 9200 2600
+Wire Wire Line
+	9600 6500 9600 9050
+Wire Wire Line
+	9600 9050 11600 9050
+Wire Wire Line
+	9600 2150 10500 2150
+Wire Wire Line
+	10800 2150 11750 2150
+Connection ~ 12700 4900
+Wire Wire Line
+	12700 4900 12700 6100
+Wire Wire Line
+	11250 2800 12700 2800
+Connection ~ 11250 2800
+Connection ~ 12700 2800
+Wire Wire Line
+	12700 2800 12700 3200
+Wire Wire Line
+	8050 5150 8300 5150
+Wire Wire Line
+	7050 6700 8300 6700
+Wire Wire Line
+	7050 6800 8400 6800
+Wire Wire Line
+	7100 4700 7450 4700
+Wire Wire Line
+	7450 4700 7450 5250
+Connection ~ 7450 5250
+Wire Wire Line
+	7450 5250 7750 5250
+Wire Wire Line
+	7100 4600 7550 4600
+Wire Wire Line
+	7550 4600 7550 5150
+Connection ~ 7550 5150
+Wire Wire Line
+	7550 5150 7750 5150
+Connection ~ 14050 3800
+Wire Wire Line
+	14050 3800 14050 5850
+Connection ~ 14050 5850
+Wire Wire Line
+	14050 5850 14050 7900
+Connection ~ 15850 3800
+Wire Wire Line
+	15850 3800 15850 1750
+Connection ~ 15850 5850
+Wire Wire Line
+	15850 5850 15850 3800
+Wire Wire Line
+	12500 9050 13500 9050
+Wire Wire Line
+	13500 2150 13100 2150
+Connection ~ 13100 2150
+Wire Wire Line
+	14050 1750 12700 1750
+Connection ~ 14050 1750
+Connection ~ 12700 1750
+Wire Wire Line
+	9100 850  15850 850 
+Wire Wire Line
+	1600 4250 1600 4650
+Connection ~ 4250 5500
+Wire Wire Line
+	4250 5500 4250 7450
+Text Label 9100 850  2    50   ~ 0
+LatchingStartStopController
+Text Label 950  1700 2    50   ~ 0
+LV_System
+Text Label 950  1850 2    50   ~ 0
+LV_System
+Text Label 950  2000 2    50   ~ 0
+LV_System
+Text Label 950  2150 2    50   ~ 0
+LV_System
+Text Label 950  2300 2    50   ~ 0
+LV_System
+Text Label 2250 2150 0    50   ~ 0
+LV_System
+Text Label 2250 2300 0    50   ~ 0
+LV_System
+Wire Wire Line
+	1000 1700 950  1700
+Wire Wire Line
+	1000 1850 950  1850
+Wire Wire Line
+	1000 2000 950  2000
+Wire Wire Line
+	1000 2150 950  2150
+Wire Wire Line
+	1000 2300 950  2300
+Wire Wire Line
+	2200 2150 2250 2150
+Wire Wire Line
+	2250 2300 2200 2300
+Wire Wire Line
+	9600 6500 9600 3700
+Connection ~ 9600 6500
+Wire Wire Line
+	9600 3600 11750 3600
+Connection ~ 9600 3600
+Wire Wire Line
+	9600 2150 9600 3600
+Wire Wire Line
+	7900 3600 8300 3600
+Wire Wire Line
+	7900 3700 8400 3700
+Wire Wire Line
+	8300 5150 8300 3600
+Connection ~ 8300 3600
+Wire Wire Line
+	8300 3600 9600 3600
+Wire Wire Line
+	8400 5250 8400 3700
+Wire Wire Line
+	8050 5250 8400 5250
+Connection ~ 8400 3700
+Wire Wire Line
+	8400 3700 9600 3700
+Wire Wire Line
+	8300 6700 8300 5150
+Connection ~ 8300 5150
+Wire Wire Line
+	8400 5250 8400 6800
+Connection ~ 8400 5250
+Wire Wire Line
+	1600 4650 1650 4650
+Connection ~ 1600 4650
+Wire Wire Line
+	1600 4650 1600 5050
+Wire Bus Line
+	15700 2050 15700 8700
+$EndSCHEMATC
