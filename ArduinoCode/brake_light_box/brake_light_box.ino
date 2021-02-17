@@ -102,12 +102,12 @@ void loop() {
 
     if (canId == 0x03) { // from pedal box
       digitalWrite(BRAKE_LIGHT_PIN, buf[0]); // either 0 or 1
-    } else if (canId == 0x04) { // brake light error msg
-      logError("0x04", buf);
-    } else if (canId == 0x05) { // forward/backward error msg
-      logError("0x05", buf);
-    } else if (canId == 0x06) { // BMS DTC Status #1 and #2
-      logError("0x06", buf);
+    } else if (canId == 0x104) { // brake light error msg
+      logError("0x104", buf);
+    } else if (canId == 0x105) { // forward/backward error msg
+      logError("0x105", buf);
+    } else if (canId == 0x100) { // BMS DTC Status #1 and #2
+      logError("0x100", buf);
     } else if (canId == 0xAB) { // Motor controller fault codes
       logError("0xAB", buf);
     }
