@@ -1,6 +1,6 @@
 /*
    Author: Joshua Cheng
-   Date: December 1, 2020
+   Date: March 2, 2021
 
    Pinouts:
    MOSI - pin 11
@@ -11,38 +11,34 @@
    SS - pin 4
 
    CAN module:
-   SS - pin 9
+   SS - pin 10
 
    Note: This program keeps the CAN module activated by default, but deactivates it when writing to the SD card.
-   This Arduino may miss CAN messages if it recieves 2 or more messages while writing to the SD card. Also, when
-   the CAN module is used, strings longer than about 200-300 characters seem to be broken. It not only make the
-   string weird (cannot be appended to) as well as seems to break Serial.print() statements (only some parts of it
-   will actually print). I'm not sure if this is a problem with my code or a hardware issue. 
+   This Arduino may miss CAN messages if it recieves 2+ messages while writing to the SD card.
 */
-
 #include <mcp_can.h> // Uses Seeed-studio's CAN_BUS_Shield library.
 #include <mcp_can_dfs.h>
 #include <SPI.h>
+
 #include <SD.h>
-
 #define SD_SS_PIN 4
+
 #define CAN_SS_PIN 10
-#define BRAKE_LIGHT_PIN 6 // Does not have to be PWM pin.
+#define BRAKE_LIGHT_PIN 8 // Does not have to be PWM pin.
 
-#define ERRORS_PER_WRITE 2 // Number of errors before writing the buffer to the SD card 
-                           // anything greater than 2 seems to break the program
+#define ERRORS_PER_SAVE 5 // Number of errors stored in a chache before saving to the SD card
 
-File myFile;
 MCP_CAN CAN(CAN_SS_PIN);
 
-unsigned char len = 0; // Length of incoming message
-unsigned char buf[8]; // Memory for incoming message
-int canId; // Sender's ID
-String errorBuffer = "";
 int bufferLength = 0;
-long lastLog = 0; // Time of last successful log to SD
-
+String errbuff = "";
+long lastLog = 0;
 int nextFileName = 1; // Log file names in the format log-0.txt
+
+void switchCANToSD();
+void switchSDToCAN();
+bool SDWrite(String errors);
+void logError(String id, unsigned char error[8]);
 
 /**
    Sets relavent pins to output or input, initializes serial for debugging, initializes CAN, SD card reader,
@@ -55,132 +51,165 @@ void setup() {
   pinMode(CAN_SS_PIN, OUTPUT);
   pinMode(BRAKE_LIGHT_PIN, OUTPUT);
 
-  digitalWrite(SD_SS_PIN, HIGH); // disable SD module
-  digitalWrite(CAN_SS_PIN, LOW); // enable CAN module
+  switchSDToCAN();
 
   while (CAN_OK != CAN.begin(CAN_500KBPS, MCP_8MHz)) { //specify 8MHz crystal
-    Serial.println("CAN BUS init Failed");
+    Serial.println(F("CAN BUS init Failed"));
     delay(250);
   }
-  Serial.println("CAN BUS Shield Init OK!");
+  Serial.println(F("CAN BUS Shield Init OK!"));
 
-  digitalWrite(CAN_SS_PIN, HIGH); // disable CAN module
-  digitalWrite(SD_SS_PIN, LOW); // enable SD module
+  switchCANToSD();
 
   while (!SD.begin(SD_SS_PIN)) {
-    Serial.println("initialization failed!");
+    Serial.println(F("initialization failed!"));
     delay(250);
   }
 
-  while(SD.exists("log-" + String(nextFileName) + ".txt")){
-    Serial.println("log-" + String(nextFileName) + ".txt exists...");
+  while (SD.exists("log-" + String(nextFileName) + ".txt")) {
+    Serial.print(F("log-"));
+    Serial.print(String(nextFileName));
+    Serial.println(F(".txt exists..."));
     nextFileName += 1;
   }
-  
-  Serial.println("setup complete. nextFileName is " + String(nextFileName));
 
-  digitalWrite(SD_SS_PIN, HIGH); // disable SD module
-  digitalWrite(CAN_SS_PIN, LOW); // enable CAN module
+
+  Serial.print(F("setup complete. nextFileName is "));
+  Serial.println(String(nextFileName));
+
+  switchSDToCAN();
+
 }
 
-bool SDWrite(String errors);
-void logError(String id, unsigned char error[8]);
-
 /**
-   Deals with incoming CAN messages, if an error is recieved, it is logged. Writes to SD card every 30 seconds.
+   Deals with incoming CAN messages, if an error is recieved, it is logged. Logs buffer every 30 seconds.
 */
+
 void loop() {
+  unsigned char len = 0; // Length of incoming message
+  unsigned char buf[8]; // Memory for incoming message
+  int canId; // Sender's ID
+
+  switchSDToCAN();
+
   if (CAN_MSGAVAIL == CAN.checkReceive()) { //if a new message has been recieved.
     CAN.readMsgBuf(&len, buf); //enters message into program
     canId = CAN.getCanId(); //gets sender ID
 
-    Serial.print("Message Recieved from CAN ID: " + String(canId) + "  |  message: ");
-    for(int i = 0; i < 8; i ++){
-      Serial.print(String(buf[i]) + " | ");
+    Serial.print(F("Message Recieved from CAN ID: "));
+    Serial.print(String(canId));
+    Serial.print(F("  |  message: "));
+    for (int i = 0; i < 8; i ++) {
+      Serial.print(String(buf[i]));
+      Serial.print(F(" | "));
     }
     Serial.println();
 
     if (canId == 0x03) { // from pedal box
       digitalWrite(BRAKE_LIGHT_PIN, buf[0]); // either 0 or 1
-    } else if (canId == 0x104) { // brake light error msg
-      logError("0x104", buf);
-    } else if (canId == 0x105) { // forward/backward error msg
-      logError("0x105", buf);
-    } else if (canId == 0x100) { // BMS DTC Status #1 and #2
-      logError("0x100", buf);
-    } else if (canId == 0xAB) { // Motor controller fault codes
-      logError("0xAB", buf);
+    } else if (canId == 0x04) { // brake light error msg
+      logError("0x04", buf);
+    } else if (canId == 0x05) { // forward/backward error msg
+      logError("0x05", buf);
+    } else if (canId == 0x06) { // BMS DTC Status #1 and #2
+      logError("0x06", buf);
+    } else if (canId == 0x0AB) { // Motor controller fault codes
+      logError("0x0AB", buf);
     }
   }
 
   if (millis() - lastLog > 30000 && bufferLength > 0) { // if 30 seconds since last successful write to SD card and buffer is not empty
     if (SDWrite()) { // if successfully logged to SD card, clear buffer
-      errorBuffer = "";
+      errbuff = "";
       bufferLength = 0;
     }
   }
-  
 }
 
 /**
-   Compiles errors, writes to SD every 5 errors
+   Deactivates SD module and then activates CAN module
+*/
+void switchSDToCAN() {
+  digitalWrite(SD_SS_PIN, HIGH);
+  digitalWrite(CAN_SS_PIN, LOW);
+}
+
+/**
+   Deactivates CAN module and then activates SD module
+*/
+void switchCANToSD() {
+  digitalWrite(CAN_SS_PIN, HIGH);
+  digitalWrite(SD_SS_PIN, LOW);
+}
+
+/**
+   Compiles errors, writes to SD every ERRORS_PER_SAVE errors
 
    @param id the sender id of the error
    @param error the errors to be logged
 */
 void logError(String id, unsigned char error[8]) {
-  errorBuffer += "millis: ";
-  errorBuffer += String(millis());
-  errorBuffer += "  | id: ";
-  errorBuffer += id;
-  errorBuffer += " |  error: | ";
+  errbuff += "|| millis: ";
+  errbuff += String(millis());
+  errbuff += "  | id: ";
+  errbuff += id;
+  errbuff += " |  error: | ";
   for (int i = 0; i < 8; i ++) {
-    errorBuffer += String(int(error[i])) + " | ";  // stores the byte value (0-255) as a string
+    errbuff += String(int(error[i])) + " | ";  // stores the byte value (0-255) as a string
   }
-  errorBuffer += "\n";
-  Serial.println(errorBuffer);
+  errbuff += "\n";
+  Serial.print(F("errorBuffer: ("));
+  Serial.print(errbuff.length());
+  Serial.print(F(") "));
+  Serial.println(errbuff);
+
   bufferLength += 1;
-  if (bufferLength >= ERRORS_PER_WRITE) {
+  if (bufferLength >= ERRORS_PER_SAVE) { // more errors in buffer than ERRORS_PER_SAVE
     if (SDWrite()) { // if successfully logged to SD card, clear buffer
-      errorBuffer = "";
+      errbuff = "";
       bufferLength = 0;
+    } else { // does not clear buffer, the errors already in the buffer will be saved again next time
+      Serial.println(F("Error with logging, will try again"));
     }
   }
-  
 }
 
 /**
    Logs errors to SD card.
 
-   @param errors the error(s) to be logged
    @returns true if logging was successful, false if it failed
 */
 bool SDWrite() {
-  digitalWrite(CAN_SS_PIN, HIGH); // disable CAN module
-  digitalWrite(SD_SS_PIN, LOW); // enable SD module
-
+  File myFile;
+  switchCANToSD();
+  
   if (!SD.begin(SD_SS_PIN)) {
-    Serial.println("initialization failed!");
-    digitalWrite(SD_SS_PIN, HIGH); // disable SD module
-    digitalWrite(CAN_SS_PIN, LOW); // enable CAN module
+    Serial.println(F("initialization failed!"));
+    switchSDToCAN();
     return false;
   }
 
   myFile = SD.open("log-" + String(nextFileName) + ".txt", FILE_WRITE);
 
   if (myFile) {
-    myFile.println(errorBuffer);
+    Serial.print(F("saving: "));
+    Serial.print(errbuff.length());
+    Serial.println(F(" bytes"));
+    myFile.println(errbuff);
+    Serial.println(errbuff);
     myFile.close();
-    Serial.println("Successfully logged " + String(errorBuffer.length()) + " characters at: log-" + String(nextFileName) + ".txt");
+    Serial.print(F("Logged errors at: log-"));
+    Serial.print(String(nextFileName));
+    Serial.println(F(".txt"));
   } else {
-    Serial.println("error opening: log-" + String(nextFileName) + ".txt");
-    digitalWrite(SD_SS_PIN, HIGH); //disable SD module
-    digitalWrite(CAN_SS_PIN, LOW); // enable CAN module
+    Serial.print(F("error opening: log-"));
+    Serial.print(String(nextFileName));
+    Serial.println(F(".txt"));
+    switchSDToCAN();
     return false;
   }
 
-  digitalWrite(SD_SS_PIN, HIGH); // disable SD module
-  digitalWrite(CAN_SS_PIN, LOW); // enable CAN module
+  switchSDToCAN();
   lastLog = millis();
   return true;
 }
