@@ -36,12 +36,12 @@ const int MAX_TORQUE = 255; // maximum regen torque value
 const int RAMP_TIME =  10;  // time until the maximum regen torque is reached (in seconds)
  
 // CAN IDs  
-const int CAN_START_MOTOR = 0x01;
-const int CAN_DIRECTION = 0x02;
-const int CAN_BRAKE = 0x03;
-const int CAN_BRAKE_ERROR = 0x04;
-const int CAN_ACCEL_ERROR = 0x05;
-const int CAN_BMS_SHUTDOWN = 0x09;
+const int CAN_START_MOTOR = 0x101;
+const int CAN_DIRECTION = 0x102;
+const int CAN_BRAKE = 0x103;
+const int CAN_BRAKE_ERROR = 0x104;
+const int CAN_ACCEL_ERROR = 0x105;
+const int CAN_BMS_SHUTDOWN = 0x001;
 const int CAN_MC_FAULTS = 0xAB;
 const int CAN_BMS_STATES = 0x6B0;
 const int CAN_MOTOR = 0xC0;
