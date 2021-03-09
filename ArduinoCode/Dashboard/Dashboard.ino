@@ -75,7 +75,7 @@ void checkMCStates() {
     CAN.readMsgBuf(&len, buf);
     canId = CAN.getCanId(); // gets sender ID
 
-    if (canId == 0x0AA) {
+    if (canId == 0xAA) {
       prechargeComplete = (buf[0] >> 4) & 1; // true if MC is in wait state 
     }
   }
@@ -113,10 +113,10 @@ void onOff() {
     if (state) { // Car is turned on.
       analogWrite(SPEAKER_PIN, 128);
       speakerCooldown = millis() + 3000;
-      CAN.sendMsgBuf(0x01, 0, 1, ON); // Tell pedal box to turn inverter on
+      CAN.sendMsgBuf(0x101, 0, 1, ON); // Tell pedal box to turn inverter on
       changeDirection(true);
     } else { // Car is turned off.
-      CAN.sendMsgBuf(0x01, 0, 1, OFF); // tell pedal box to turn inverter off
+      CAN.sendMsgBuf(0x101, 0, 1, OFF); // tell pedal box to turn inverter off
     }
   }
 }
@@ -129,10 +129,10 @@ void changeDirection(bool justOn) {
     return;
   }
   if (digitalRead(GEAR_SELECTOR_PIN)) {
-    CAN.sendMsgBuf(0x02, 0, 1, FORWARD); // tell pedal box to set inverter to forward
+    CAN.sendMsgBuf(0x102, 0, 1, FORWARD); // tell pedal box to set inverter to forward
     prevDirection = true;
   } else {
-    CAN.sendMsgBuf(0x02, 0, 1, REVERSE); // tell pedal box to set inverter to reverse
+    CAN.sendMsgBuf(0x102, 0, 1, REVERSE); // tell pedal box to set inverter to reverse
     prevDirection = false;
   }
 }
