@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 18 22
+Sheet 17 23
 Title "Brake Light CAN Box"
 Date "2020-11-01"
 Rev "2"
@@ -26,10 +26,6 @@ F 3 "" H 4650 1650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3450 5300 3450 3850
-Text HLabel 7650 3500 2    50   Input ~ 0
-CAN_H
-Text HLabel 7650 3750 2    50   Input ~ 0
-CAN_L
 Text HLabel 5800 2850 2    50   Input ~ 0
 GLV+
 Text HLabel 3350 2850 0    50   Input ~ 0
@@ -69,18 +65,7 @@ Wire Wire Line
 	5700 3850 5700 3350
 Wire Wire Line
 	3450 5300 6100 5300
-NoConn ~ 6100 3350
-Wire Wire Line
-	6100 3850 5700 3850
-Wire Wire Line
-	7650 3750 7250 3750
-Wire Wire Line
-	7650 3500 7250 3500
-Wire Wire Line
-	6100 5300 6100 3950
 NoConn ~ 5300 4500
-Wire Wire Line
-	6100 3750 5300 3750
 NoConn ~ 4100 4150
 NoConn ~ 4100 3200
 NoConn ~ 4100 3300
@@ -93,12 +78,9 @@ NoConn ~ 4100 3450
 NoConn ~ 4100 3550
 Wire Wire Line
 	5700 3350 5300 3350
-NoConn ~ 5300 3950
 NoConn ~ 5300 4600
 NoConn ~ 5300 3050
 NoConn ~ 5300 3150
-Wire Wire Line
-	6100 3450 5300 3450
 NoConn ~ 5300 4700
 NoConn ~ 5300 4800
 NoConn ~ 5300 3250
@@ -111,17 +93,6 @@ NoConn ~ 4100 4300
 Wire Wire Line
 	3450 3850 3800 3850
 NoConn ~ 4100 3750
-$Comp
-L NER:CAN_Bus_Module U13
-U 1 1 5F8C522E
-P 6650 3200
-F 0 "U13" H 6675 3315 50  0000 C CNN
-F 1 "CAN_Bus_Module" H 6675 3224 50  0000 C CNN
-F 2 "" H 6650 3200 50  0001 C CNN
-F 3 "" H 6650 3200 50  0001 C CNN
-	1    6650 3200
-	1    0    0    -1  
-$EndComp
 $Comp
 L NER:Arduino_UNO_rev3 A3
 U 1 1 5F8BEBC7
@@ -140,15 +111,11 @@ Wire Wire Line
 Wire Wire Line
 	5800 3600 5800 3650
 Wire Wire Line
-	5800 3650 6100 3650
-Wire Wire Line
 	5600 3600 5800 3600
 Wire Wire Line
 	5750 3550 5750 3650
 Wire Wire Line
 	5750 3650 5300 3650
-Wire Wire Line
-	5750 3550 6100 3550
 Wire Wire Line
 	3600 5150 5500 5150
 Wire Wire Line
@@ -182,11 +149,105 @@ Wire Wire Line
 Text HLabel 3350 3950 0    50   Input ~ 0
 CAN_SHIELD
 Wire Wire Line
-	5300 4200 7650 4200
-Wire Wire Line
-	5300 4300 7650 4300
-Text HLabel 7650 4200 2    50   Output ~ 0
+	5700 5400 8050 5400
+Text HLabel 8050 5400 2    50   Output ~ 0
 BattFanPWM1
-Text HLabel 7650 4300 2    50   Output ~ 0
+Text HLabel 8050 5500 2    50   Output ~ 0
 BattFanPWM2
+$Comp
+L NER:CAN_Bus_Module U13
+U 1 1 5F8C522E
+P 7450 3200
+F 0 "U13" H 7475 3315 50  0000 C CNN
+F 1 "CAN_Bus_Module" H 7475 3224 50  0000 C CNN
+F 2 "" H 7450 3200 50  0001 C CNN
+F 3 "" H 7450 3200 50  0001 C CNN
+	1    7450 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 5300 6100 3950
+Wire Wire Line
+	8450 3500 8050 3500
+Wire Wire Line
+	8450 3750 8050 3750
+NoConn ~ 6900 3350
+Text HLabel 8450 3750 2    50   Input ~ 0
+CAN_L
+Text HLabel 8450 3500 2    50   Input ~ 0
+CAN_H
+Wire Wire Line
+	5300 3450 6700 3450
+Wire Wire Line
+	5750 3550 6600 3550
+Wire Wire Line
+	5800 3650 6500 3650
+Wire Wire Line
+	5700 3850 6300 3850
+Wire Wire Line
+	6100 3950 6400 3950
+Wire Wire Line
+	6900 4550 6700 4550
+Connection ~ 6700 3450
+Wire Wire Line
+	6700 3450 6900 3450
+Wire Wire Line
+	6900 4650 6600 4650
+Connection ~ 6600 3550
+Wire Wire Line
+	6600 3550 6900 3550
+Wire Wire Line
+	6900 4750 6500 4750
+Connection ~ 6500 3650
+Wire Wire Line
+	6500 3650 6900 3650
+Wire Wire Line
+	6900 4850 6400 4850
+Connection ~ 6400 3950
+Wire Wire Line
+	6400 3950 6900 3950
+Wire Wire Line
+	6900 4950 6300 4950
+Connection ~ 6300 3850
+Wire Wire Line
+	6300 3850 6900 3850
+Wire Wire Line
+	5300 3750 6900 3750
+Wire Wire Line
+	5900 3950 5300 3950
+Wire Wire Line
+	5900 4450 6900 4450
+Wire Wire Line
+	5700 5400 5700 4200
+Wire Wire Line
+	5700 4200 5300 4200
+Wire Wire Line
+	8050 5500 5600 5500
+Wire Wire Line
+	5600 5500 5600 4300
+Wire Wire Line
+	5600 4300 5300 4300
+$Comp
+L NER:SD_Card_Module U8
+U 1 1 6053C07D
+P 7400 4250
+F 0 "U8" H 7400 4300 50  0000 C CNN
+F 1 "SD_Card_Module" H 7400 4200 50  0000 C BNN
+F 2 "" H 7400 4250 50  0001 C CNN
+F 3 "" H 7400 4250 50  0001 C CNN
+	1    7400 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3950 5900 4450
+Wire Wire Line
+	6300 3850 6300 4950
+Wire Wire Line
+	6400 3950 6400 4850
+Wire Wire Line
+	6500 3650 6500 4750
+Wire Wire Line
+	6600 3550 6600 4650
+Wire Wire Line
+	6700 3450 6700 4550
 $EndSCHEMATC

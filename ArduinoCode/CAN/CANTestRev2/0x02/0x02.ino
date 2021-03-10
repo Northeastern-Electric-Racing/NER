@@ -36,7 +36,7 @@ void setup()
   accel.init(SCALE_4G); //scaled to +-4G because we realistically wont go higher than that, and will allow for more precise conversion
   Serial.println("HOWDY");
 
-  while (CAN_OK != CAN.begin(CAN_500KBPS, MCP_8MHz)) //specify 8MHz crystal
+  while (CAN_OK != CAN.begin(CAN_250KBPS, MCP_8MHz)) //specify 8MHz crystal
   {
     Serial.println("CAN BUS init Failed");
     delay(250);
@@ -90,4 +90,3 @@ void updateAccels(float accels[3], unsigned char stmp[8]) {
     stmp[5] = 1.0 * accels[2] * 64;
   }
 }
-

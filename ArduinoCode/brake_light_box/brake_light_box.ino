@@ -40,15 +40,20 @@ void switchSDToCAN();
 bool SDWrite(String errors);
 void logError(String id, unsigned char error[8]);
 
+void switchCANToSD();
+void switchSDToCAN();
+void logError(String id, unsigned char error[8]);
+bool SDWrite(String errors);
+
 /**
-   Sets relavent pins to output or input, initializes serial for debugging, initializes CAN, SD card reader,
-   determines proper file name for future logs.
-*/
+ * Sets relavent pins to output or input, initializes serial for debugging, initializes CAN, SD card reader,
+ * determines proper file name for future logs.
+ */
 void setup() {
   Serial.begin(9600);
 
-  pinMode(SD_SS_PIN, OUTPUT);
-  pinMode(CAN_SS_PIN, OUTPUT);
+  pinMode(SD_CS_PIN, OUTPUT);
+  pinMode(CAN_CS_PIN, OUTPUT);
   pinMode(BRAKE_LIGHT_PIN, OUTPUT);
 
   switchSDToCAN();
@@ -72,7 +77,6 @@ void setup() {
     Serial.println(F(".txt exists..."));
     nextFileName += 1;
   }
-
 
   Serial.print(F("setup complete. nextFileName is "));
   Serial.println(String(nextFileName));
@@ -145,9 +149,20 @@ void switchCANToSD() {
 /**
    Compiles errors, writes to SD every ERRORS_PER_SAVE errors
 
-   @param id the sender id of the error
-   @param error the errors to be logged
-*/
+/**
+ * Deactivates CAN module and then activates SD module
+ */
+void switchCANToSD() {
+  digitalWrite(CAN_CS_PIN, HIGH);
+  digitalWrite(SD_CS_PIN, LOW);
+}
+
+/**
+ * Compiles errors, writes to SD every 5 errors
+ *
+ * @param id the sender id of the error
+ * @param error the errors to be logged
+ */
 void logError(String id, unsigned char error[8]) {
   errbuff += "|| millis: ";
   errbuff += String(millis());
