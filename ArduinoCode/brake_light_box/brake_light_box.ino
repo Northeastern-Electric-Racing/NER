@@ -114,7 +114,7 @@ void loop() {
     } else if (canId == 0x104) { // brake light error msg
       logError("0x104", buf);
     } else if (canId == 0x105) { // forward/backward error msg
-      logError("01x05", buf);
+      logError("0x105", buf);
     } else if (canId == 0x100) { // BMS DTC Status #1 and #2
       logError("0x100", buf);
     } else if (canId == 0xAB) { // Motor controller fault codes
