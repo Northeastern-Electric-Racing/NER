@@ -109,7 +109,7 @@ void loop() {
     }
     Serial.println();
 
-    if (canId == 0x03) { // from pedal box
+    if (canId == 0x103) { // from pedal box
       digitalWrite(BRAKE_LIGHT_PIN, buf[0]); // either 0 or 1
     } else if (canId == 0x104) { // brake light error msg
       logError("0x104", buf);
@@ -117,7 +117,7 @@ void loop() {
       logError("0x105", buf);
     } else if (canId == 0x100) { // BMS DTC Status #1 and #2
       logError("0x100", buf);
-    } else if (canId == 0x0AB) { // Motor controller fault codes
+    } else if (canId == 0xAB) { // Motor controller fault codes
       logError("0x0AB", buf);
     }
   }
