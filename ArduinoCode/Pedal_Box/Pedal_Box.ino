@@ -30,6 +30,10 @@ unsigned long lastCommandMessage = 0; // the time the last command message was s
 unsigned long lastBrakeMessage = 0; // the time the last brake message was sent
 unsigned long lastBMSMessage = 0; // the time the last BMS message was sent
 
+// brake switch error variables
+const int MAX_BRAKE_ERRORS = 5; // the maximum consecutive invalid brake switch readings before throwing an error
+int currentBrakeErrors = 0; // current number of consectutive brake errors
+
 // regen braking constants
 const int START_TIME = 0;   // delay from when brake is pressed to when regen starts
 const int MAX_TORQUE = 255; // maximum regen torque value
@@ -44,6 +48,7 @@ const int CAN_ACCEL_ERROR = 0x105;
 const int CAN_BMS_SHUTDOWN = 0x001;
 const int CAN_MC_FAULTS = 0xAB;
 const int CAN_BMS_STATES = 0x6B0;
+const int CAN_BMS_FAULTS = 0x06;
 const int CAN_MOTOR = 0xC0;
 
 // CAN info
@@ -129,6 +134,10 @@ void readStates() {
       if ((buf[4] != 0) || ((buf[5] >> 3) & 1) || ((buf[5] >> 4) & 1)) { // only send message for fault bits 32-39, 43, 44
         CAN.sendMsgBuf(CAN_BMS_SHUTDOWN, 0, 8, BMS_ERROR); // triggers shutdown circuit through BMS
       }
+    } else if (canId == CAN_BMS_FAULTS) {
+      if (((buf[0] >> 5) & 1) || ((buf[0] >> 6) & 1)) { // only send message for cell voltage too high/low faults
+        CAN.sendMsgBuf(CAN_BMS_SHUTDOWN, 0, 8, BMS_ERROR); // triggers shutdown circuit through BMS
+      }
     }
   }
 }
@@ -181,12 +190,20 @@ void readSwitches() {
       timeBrake = millis();
     } 
     brakePressed = true;
+    currentBrakeErrors = 0;
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, {1});
   } else if ((brakePin1Val == HIGH) && (brakePin2Val == HIGH)) { // both switches are off
     brakePressed = false;
+    currentBrakeErrors = 0;
     CAN.sendMsgBuf(CAN_BRAKE, 0, 1, {0});
   } else {  // error due to switches having different values
     brakePressed = false;
-    CAN.sendMsgBuf(CAN_BRAKE_ERROR, 0, 4, BRAKE_ERROR);
+    currentBrakeErrors++;
+    if (currentBrakeErrors >= MAX_BRAKE_ERRORS) { // send shutdown message, turn off motor, and send error message
+      CAN.sendMsgBuf(CAN_BMS_SHUTDOWN, 0, 8, BMS_ERROR);
+      CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
+      CAN.sendMsgBuf(CAN_BRAKE_ERROR, 0, 4, BRAKE_ERROR);
+    }
+    
   }
 }
