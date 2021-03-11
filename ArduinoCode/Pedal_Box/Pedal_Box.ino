@@ -199,7 +199,7 @@ void readSwitches() {
   } else {  // error due to switches having different values
     brakePressed = false;
     currentBrakeErrors++;
-    if (currentBrakeErrors == MAX_BRAKE_ERRORS) { // send shutdown message, turn off motor, and send error message
+    if (currentBrakeErrors >= MAX_BRAKE_ERRORS) { // send shutdown message, turn off motor, and send error message
       CAN.sendMsgBuf(CAN_BMS_SHUTDOWN, 0, 8, BMS_ERROR);
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
       CAN.sendMsgBuf(CAN_BRAKE_ERROR, 0, 4, BRAKE_ERROR);
