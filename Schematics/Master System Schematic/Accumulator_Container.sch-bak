@@ -197,13 +197,13 @@ Wire Wire Line
 	19650 6950 19300 6950
 Wire Wire Line
 	19300 7050 19650 7050
-Text HLabel 19650 14300 2    50   Output ~ 0
+Text HLabel 19550 14300 2    50   Output ~ 0
 Segment1_VoltageTaps
-Text HLabel 19650 14200 2    50   Output ~ 0
+Text HLabel 19550 14200 2    50   Output ~ 0
 Segment2_VoltageTaps
-Text HLabel 19650 14100 2    50   Output ~ 0
+Text HLabel 19550 14100 2    50   Output ~ 0
 Segment3_VoltageTaps
-Text HLabel 19650 14000 2    50   Output ~ 0
+Text HLabel 19550 14000 2    50   Output ~ 0
 Segment4_VoltageTaps
 $Comp
 L Device:Fuse F8
@@ -230,67 +230,10 @@ Wire Wire Line
 	16450 4250 17850 4250
 Wire Wire Line
 	16550 4350 17850 4350
-$Comp
-L Relay:DIPxx-1Axx-11x K10
-U 1 1 5F80B7CF
-P 13650 3350
-F 0 "K10" V 13083 3350 50  0000 C CNN
-F 1 "SPST-NO (Precharge Control)" V 13174 3350 50  0000 C CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 14000 3300 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 13650 3350 50  0001 C CNN
-	1    13650 3350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	13850 3850 13250 3850
-Wire Wire Line
-	13250 3850 13250 3550
-Wire Wire Line
-	13250 3550 13350 3550
-Wire Wire Line
-	13950 3550 14250 3550
-Wire Wire Line
-	14400 3550 14500 3550
-Wire Wire Line
-	14250 3550 14250 3900
-Wire Wire Line
-	14400 3150 14500 3150
-Wire Wire Line
-	15100 3150 15200 3150
 Wire Wire Line
 	14800 9300 15450 9300
 Wire Wire Line
-	14250 3900 15200 3900
-Wire Wire Line
 	13750 6550 14400 6550
-Wire Notes Line
-	13000 2450 15300 2450
-Wire Notes Line
-	15300 4100 13000 4100
-Wire Wire Line
-	15100 3550 15200 3550
-Wire Wire Line
-	15200 3550 15200 3900
-Connection ~ 15200 3900
-Wire Wire Line
-	15200 3900 15450 3900
-Wire Notes Line
-	15300 4100 15300 2450
-Wire Notes Line
-	13000 2450 13000 4100
-Text Notes 13050 4050 0    50   ~ 0
-MC Control Relay PCB
-$Comp
-L Relay:DIPxx-1Axx-11x K12
-U 1 1 5F814F76
-P 14800 3350
-F 0 "K12" V 14233 3350 50  0000 C CNN
-F 1 "SPST-NO (AIR Control)" V 14324 3350 50  0000 C CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 15150 3300 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 14800 3350 50  0001 C CNN
-	1    14800 3350
-	0    1    1    0   
-$EndComp
 Text HLabel 6100 10000 2    50   Input ~ 0
 HVD-
 Text HLabel 6100 10850 2    50   Input ~ 0
@@ -402,7 +345,7 @@ Entry Wire Line
 	18350 6400 18450 6300
 Entry Wire Line
 	18500 6400 18600 6300
-Text HLabel 19650 13750 2    50   Output ~ 0
+Text HLabel 19550 13750 2    50   Output ~ 0
 Current_Sensor
 Wire Wire Line
 	20200 5200 20300 5200
@@ -613,33 +556,15 @@ Wire Wire Line
 Wire Wire Line
 	5400 5150 5400 7100
 Wire Wire Line
-	13250 3150 13350 3150
-Wire Wire Line
-	13250 2700 13250 3150
-Wire Wire Line
 	13900 1200 13900 1350
 Wire Wire Line
 	13800 1200 13900 1200
 Text HLabel 13800 1200 0    50   Input ~ 0
 MotorController_Precharge+
 Wire Wire Line
-	14250 3150 14250 3550
-Wire Wire Line
-	13950 3150 14250 3150
-Connection ~ 14250 3550
-Wire Wire Line
-	14400 1850 14400 3150
-Wire Wire Line
-	15200 3150 15200 3550
-Connection ~ 15200 3550
-Wire Wire Line
 	14200 2350 15450 2350
 Wire Wire Line
 	12850 2350 14100 2350
-Wire Wire Line
-	13900 1850 13900 2700
-Wire Wire Line
-	13250 2700 13900 2700
 Wire Wire Line
 	14100 1000 14100 1350
 Wire Wire Line
@@ -677,14 +602,6 @@ Entry Wire Line
 NoConn ~ 2750 1700
 NoConn ~ 2750 1800
 NoConn ~ 4150 1500
-Text HLabel 19650 14600 2    50   Output ~ 0
-Segment1_CriticalThermistors
-Text HLabel 19650 14700 2    50   Output ~ 0
-Segment2_CriticalThermistors
-Text HLabel 19650 14800 2    50   Output ~ 0
-Segment3_CriticalThermistors
-Text HLabel 19650 14900 2    50   Output ~ 0
-Segment4_CriticalThermistors
 Entry Wire Line
 	2350 2300 2250 2400
 Wire Wire Line
@@ -769,8 +686,8 @@ Wire Wire Line
 	4250 2200 4400 2200
 Wire Wire Line
 	2750 1600 2650 1600
-Text HLabel 19650 13450 2    50   Output ~ 0
-Thermistor_Expansion
+Text HLabel 20650 14100 2    50   Output ~ 0
+Temperature_Data
 Entry Wire Line
 	2550 1800 2650 1900
 $Comp
@@ -805,9 +722,9 @@ Entry Bus Bus
 Entry Bus Bus
 	2550 850  2650 750 
 Wire Notes Line
-	19450 15000 21100 15000
+	19450 15000 21450 15000
 Wire Notes Line
-	21100 13350 19450 13350
+	21450 13350 19450 13350
 Text Notes 19450 13250 0    50   ~ 0
 All leave the accumulator container via cord grips
 $Sheet
@@ -1976,11 +1893,7 @@ Wire Bus Line
 Wire Bus Line
 	750  16100 13350 16100
 Wire Bus Line
-	13450 14700 19650 14700
-Wire Bus Line
-	19250 13450 19650 13450
-Wire Bus Line
-	19100 13750 19650 13750
+	19100 13750 19550 13750
 Entry Bus Bus
 	10600 6300 10700 6400
 Entry Bus Bus
@@ -2014,11 +1927,7 @@ Wire Bus Line
 Wire Bus Line
 	8050 6300 10600 6300
 Wire Notes Line
-	21100 15000 21100 13350
-Wire Bus Line
-	13650 14900 19650 14900
-Wire Bus Line
-	13550 14800 19650 14800
+	21450 15000 21450 13350
 Wire Notes Line
 	19450 13350 19450 15000
 Wire Bus Line
@@ -2047,19 +1956,14 @@ Wire Wire Line
 Wire Wire Line
 	17600 10900 11850 10900
 Wire Bus Line
-	10700 14000 19650 14000
+	10700 14000 19550 14000
 Wire Bus Line
-	10650 14100 19650 14100
+	10650 14100 19550 14100
 Wire Bus Line
-	10600 14200 19650 14200
+	10600 14200 19550 14200
 Wire Bus Line
-	10600 14300 19650 14300
-Wire Bus Line
-	13350 14600 19650 14600
+	10600 14300 19550 14300
 Connection ~ 11850 6950
-Wire Wire Line
-	15450 2350 15450 3900
-Connection ~ 15450 3900
 Wire Wire Line
 	11850 5050 11850 5950
 Wire Wire Line
@@ -2081,13 +1985,7 @@ Wire Bus Line
 Connection ~ 12850 5550
 Wire Wire Line
 	12850 2350 12850 5550
-Wire Wire Line
-	15450 3900 15450 9300
 Connection ~ 15450 9300
-Wire Wire Line
-	14400 6550 14400 3550
-Wire Wire Line
-	13850 3850 13850 5550
 Wire Bus Line
 	13650 14900 13650 16400
 Wire Bus Line
@@ -2101,6 +1999,34 @@ Wire Bus Line
 Wire Bus Line
 	19100 11050 19100 13750
 Wire Bus Line
+	20550 13450 20550 14100
+Wire Bus Line
+	19250 13450 20550 13450
+Wire Bus Line
+	13350 14600 20550 14600
+Wire Bus Line
+	20550 14700 20550 14600
+Wire Bus Line
+	13450 14700 20550 14700
+Connection ~ 20550 14600
+Wire Bus Line
+	20550 14800 20550 14700
+Wire Bus Line
+	13550 14800 20550 14800
+Connection ~ 20550 14700
+Wire Bus Line
+	20550 14900 20550 14800
+Connection ~ 20550 14800
+Wire Bus Line
+	13650 14900 20550 14900
+Wire Bus Line
+	20650 14100 20550 14100
+Connection ~ 20550 14100
+Wire Bus Line
+	20550 14100 20550 14600
+Wire Bus Line
+	10600 14300 10600 15000
+Wire Bus Line
 	10600 12200 10600 14200
 Wire Bus Line
 	10650 9300 10650 14100
@@ -2109,11 +2035,7 @@ Wire Bus Line
 Wire Bus Line
 	2650 750  20850 750 
 Wire Bus Line
-	10600 14300 10600 15000
-Wire Bus Line
 	2550 850  2550 1800
-Wire Bus Line
-	18150 6300 20700 6300
 Wire Bus Line
 	4400 3350 4400 4400
 Wire Bus Line
@@ -2122,4 +2044,90 @@ Wire Bus Line
 	2350 3350 2350 4350
 Wire Bus Line
 	2250 2300 2250 4300
+Wire Bus Line
+	18150 6300 20700 6300
+Wire Wire Line
+	13850 3850 13850 5550
+Wire Wire Line
+	14400 6550 14400 3550
+Wire Wire Line
+	13250 2700 13900 2700
+Wire Wire Line
+	13900 1850 13900 2700
+Wire Wire Line
+	14400 1850 14400 3150
+Wire Wire Line
+	13950 3150 14250 3150
+Wire Wire Line
+	13250 2700 13250 3150
+Wire Wire Line
+	13250 3150 13350 3150
+$Comp
+L Relay:DIPxx-1Axx-11x K12
+U 1 1 5F814F76
+P 14800 3350
+F 0 "K12" V 14233 3350 50  0000 C CNN
+F 1 "SPST-NO (AIR Control)" V 14324 3350 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 15150 3300 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 14800 3350 50  0001 C CNN
+	1    14800 3350
+	0    1    1    0   
+$EndComp
+Text Notes 13050 4050 0    50   ~ 0
+MC Control Relay PCB
+Wire Notes Line
+	13000 2450 13000 4100
+Wire Notes Line
+	15300 4100 15300 2450
+Wire Wire Line
+	15450 3900 15450 9300
+Wire Wire Line
+	15450 2350 15450 3900
+Connection ~ 15450 3900
+Wire Wire Line
+	15200 3900 15450 3900
+Wire Wire Line
+	15200 3150 15200 3550
+Wire Wire Line
+	15200 3550 15200 3900
+Connection ~ 15200 3550
+Wire Wire Line
+	15100 3550 15200 3550
+Wire Notes Line
+	15300 4100 13000 4100
+Wire Notes Line
+	13000 2450 15300 2450
+Connection ~ 15200 3900
+Wire Wire Line
+	14250 3900 15200 3900
+Wire Wire Line
+	15100 3150 15200 3150
+Wire Wire Line
+	14400 3150 14500 3150
+Wire Wire Line
+	14400 3550 14500 3550
+Wire Wire Line
+	14250 3150 14250 3550
+Wire Wire Line
+	14250 3550 14250 3900
+Connection ~ 14250 3550
+Wire Wire Line
+	13950 3550 14250 3550
+Wire Wire Line
+	13250 3550 13350 3550
+Wire Wire Line
+	13250 3850 13250 3550
+Wire Wire Line
+	13850 3850 13250 3850
+$Comp
+L Relay:DIPxx-1Axx-11x K10
+U 1 1 5F80B7CF
+P 13650 3350
+F 0 "K10" V 13083 3350 50  0000 C CNN
+F 1 "SPST-NO (Precharge Control)" V 13174 3350 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 14000 3300 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 13650 3350 50  0001 C CNN
+	1    13650 3350
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

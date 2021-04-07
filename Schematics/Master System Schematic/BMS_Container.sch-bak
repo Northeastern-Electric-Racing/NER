@@ -5,8 +5,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 22 23
 Title "BMS Container"
-Date "2021-02-08"
-Rev "9"
+Date "2021-03-24"
+Rev "9.1"
 Comp "Northeastern Electric Racing"
 Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
 Comment2 "For authors and other info, contact Chief Electrical Engineer"
@@ -90,7 +90,6 @@ NoConn ~ 7700 6750
 NoConn ~ 7700 6850
 NoConn ~ 7700 6950
 NoConn ~ 7700 7050
-NoConn ~ 7700 7150
 NoConn ~ 9600 4850
 NoConn ~ 9600 4950
 NoConn ~ 9600 5050
@@ -200,9 +199,8 @@ Wire Wire Line
 	7350 4950 7700 4950
 Text HLabel 6650 2400 0    50   BiDi ~ 0
 Temperature_Data
-NoConn ~ 7700 5750
 $Sheet
-S 7800 1500 1650 2350
+S 7800 1500 1650 2500
 U 61127439
 F0 "Vehicle Power Managment Board" 50
 F1 "VPMBoard.sch" 50
@@ -212,8 +210,8 @@ F4 "ChargerSupply12V" I L 7800 1600 50
 F5 "GLV_BMSContainer" I L 7800 1800 50 
 F6 "BMS_GND" I R 9450 1600 50 
 F7 "ChargerGND" U R 9450 1850 50 
-F8 "PWR_Charge" O L 7800 3750 50 
-F9 "PWR_Ready" O L 7800 3650 50 
+F8 "PWR_Charge" O L 7800 3900 50 
+F9 "PWR_Ready" O L 7800 3800 50 
 F10 "ThermEX_GND" O L 7800 2600 50 
 F11 "ThermEX_PWR" O L 7800 2500 50 
 F12 "CANS_Chrg" I R 9450 2350 50 
@@ -232,6 +230,10 @@ F24 "MP_EN" I L 7800 3200 50
 F25 "CANH_BMS" I L 7800 3300 50 
 F26 "CANL_BMS" I L 7800 3400 50 
 F27 "CANS_BMS" I L 7800 3500 50 
+F28 "RadFan_PWR" I R 9450 3050 50 
+F29 "BatFan_PWM" I L 7800 3000 50 
+F30 "MPO4" I L 7800 3600 50 
+F31 "MPO3" I L 7800 3700 50 
 $EndSheet
 Wire Wire Line
 	9450 3150 9950 3150
@@ -243,14 +245,6 @@ Wire Wire Line
 	7800 1600 7350 1600
 Wire Wire Line
 	7700 5050 7450 5050
-Wire Wire Line
-	7450 5050 7450 3750
-Wire Wire Line
-	7450 3750 7800 3750
-Wire Wire Line
-	7800 3650 7350 3650
-Wire Wire Line
-	7350 3650 7350 4950
 Wire Wire Line
 	7350 1800 7800 1800
 Wire Wire Line
@@ -338,6 +332,34 @@ Entry Bus Bus
 	7200 4150 7300 4250
 Wire Bus Line
 	7300 4250 9950 4250
+Entry Wire Line
+	7200 2900 7300 3000
+Wire Wire Line
+	7300 3000 7800 3000
+Wire Wire Line
+	7800 3800 7350 3800
+Wire Wire Line
+	7350 3800 7350 4950
+Wire Wire Line
+	7450 3900 7800 3900
+Wire Wire Line
+	7450 3900 7450 5050
+Wire Wire Line
+	7800 3600 6850 3600
+Wire Wire Line
+	6850 3600 6850 7150
+Wire Wire Line
+	6850 7150 7700 7150
+Wire Wire Line
+	7800 3700 6950 3700
+Wire Wire Line
+	6950 3700 6950 5750
+Wire Wire Line
+	6950 5750 7700 5750
+Text HLabel 9950 3050 2    50   Input ~ 0
+RadFan_PWR
+Wire Wire Line
+	9950 3050 9450 3050
 Wire Bus Line
 	9850 8650 9850 8950
 Wire Bus Line
