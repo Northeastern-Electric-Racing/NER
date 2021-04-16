@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 20 26
+Sheet 20 38
 Title "Shutdown Latching Circuits"
 Date "2021-01-30"
 Rev "3"

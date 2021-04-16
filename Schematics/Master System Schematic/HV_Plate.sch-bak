@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 19 26
+Sheet 27 35
 Title "HV Plate"
 Date "2021-04-15"
 Rev "1.0"
@@ -20,7 +20,7 @@ P 6150 3350
 F 0 "R11" H 5750 3450 50  0000 C CNN
 F 1 "PCharge: 600R" H 5750 3350 50  0000 C CNN
 F 2 "" V 6080 3350 50  0001 C CNN
-F 3 "~" H 6150 3350 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/418/5/ENG_CD_1625999_AH2-686901.pdf" H 6150 3350 50  0001 C CNN
 	1    6150 3350
 	-1   0    0    -1  
 $EndComp
@@ -53,7 +53,7 @@ P 2400 3950
 F 0 "F203" V 2203 3950 50  0000 C CNN
 F 1 "TS Fuse: 200A" V 2294 3950 50  0000 C CNN
 F 2 "" V 2330 3950 50  0001 C CNN
-F 3 "~" H 2400 3950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/240/L50QS_High_Speed_Fuse_Datasheet-1102248.pdf" H 2400 3950 50  0001 C CNN
 	1    2400 3950
 	0    1    1    0   
 $EndComp
@@ -64,7 +64,7 @@ P 7000 4450
 F 0 "R12" H 6650 4550 50  0000 C CNN
 F 1 "DCharge: 3.3K" H 6650 4450 50  0000 C CNN
 F 2 "" V 6930 4450 50  0001 C CNN
-F 3 "~" H 7000 4450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/418/3/NG_CS_1309350_PASSIVE_COMPONENT_0807-1235206.pdf" H 7000 4450 50  0001 C CNN
 	1    7000 4450
 	1    0    0    -1  
 $EndComp
@@ -86,7 +86,7 @@ P 8950 3500
 F 0 "R13" H 8880 3454 50  0000 R CNN
 F 1 "TSMP+: 10K" H 8880 3545 50  0000 R CNN
 F 2 "" V 8880 3500 50  0001 C CNN
-F 3 "~" H 8950 3500 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7F1773035%7FC%7Fpdf%7FEnglish%7FENG_DS_1773035_C.pdf%7F1625984-3" H 8950 3500 50  0001 C CNN
 	1    8950 3500
 	1    0    0    1   
 $EndComp
@@ -97,7 +97,7 @@ P 9050 3500
 F 0 "R16" H 8980 3454 50  0000 R CNN
 F 1 "TSMP-: 10K" H 8980 3545 50  0000 R CNN
 F 2 "" V 8980 3500 50  0001 C CNN
-F 3 "~" H 9050 3500 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7F1773035%7FC%7Fpdf%7FEnglish%7FENG_DS_1773035_C.pdf%7F1625984-3" H 9050 3500 50  0001 C CNN
 	1    9050 3500
 	-1   0    0    1   
 $EndComp
@@ -236,7 +236,7 @@ P 7850 2950
 F 0 "F204" H 7650 3050 50  0000 C CNN
 F 1 "IMD Fuse+: 0.5A" H 7450 2950 50  0000 C CNN
 F 2 "" V 7780 2950 50  0001 C CNN
-F 3 "~" H 7850 2950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/240/Littelfuse_Fuse_477_Datasheet_pdf-555535.pdf" H 7850 2950 50  0001 C CNN
 	1    7850 2950
 	1    0    0    -1  
 $EndComp
@@ -247,7 +247,7 @@ P 7950 2950
 F 0 "F205" H 7750 3050 50  0000 C CNN
 F 1 "IMD Fuse-: 0.5A" H 7550 2950 50  0000 C CNN
 F 2 "" V 7880 2950 50  0001 C CNN
-F 3 "~" H 7950 2950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/240/Littelfuse_Fuse_477_Datasheet_pdf-555535.pdf" H 7950 2950 50  0001 C CNN
 	1    7950 2950
 	-1   0    0    -1  
 $EndComp
@@ -424,7 +424,7 @@ Wire Wire Line
 	7850 2350 9700 2350
 Wire Wire Line
 	7950 1900 7950 2450
+Connection ~ 7950 2450
 Wire Bus Line
 	8600 4950 8600 5400
-Connection ~ 7950 2450
 $EndSCHEMATC

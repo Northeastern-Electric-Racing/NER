@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 23 26
+Sheet 23 38
 Title "Vehicle Power Management Board"
 Date "2021-03-23"
 Rev "5"

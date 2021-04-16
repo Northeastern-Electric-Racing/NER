@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr D 34000 22000
 encoding utf-8
-Sheet 3 26
+Sheet 3 35
 Title "Accumulator Container"
 Date "2020-11-12"
 Rev "6"
@@ -2089,6 +2089,22 @@ S 22900 3100 2150 5350
 U 60828791
 F0 "Segment_Layer" 50
 F1 "Segment_Layer.sch" 50
+F2 "Batt+" I R 25050 8000 50 
+F3 "Batt-" I R 25050 8100 50 
+F4 "SMD_2-" I R 25050 7600 50 
+F5 "SMD_2+" I R 25050 7500 50 
+F6 "HVD-" I R 25050 7100 50 
+F7 "HVD+" I R 25050 7000 50 
+F8 "SMD_1-" I R 25050 6550 50 
+F9 "SMD_1+" I R 25050 6450 50 
+F10 "ThermsNC_4" I R 25050 3500 50 
+F11 "ThermsC_4" I R 25050 3600 50 
+F12 "ThermsNC_3" I R 25050 3900 50 
+F13 "ThermsC_3" I R 25050 4000 50 
+F14 "ThermsNC_2" I R 25050 4300 50 
+F15 "ThermsC_2" I R 25050 4400 50 
+F16 "ThermsNC_1" I R 25050 4700 50 
+F17 "ThermsC_1" I R 25050 4800 50 
 $EndSheet
 Connection ~ 17200 7400
 Wire Wire Line
@@ -2147,6 +2163,73 @@ F20 "TSAL_TS-" I R 28250 7800 50
 F21 "TSAL_BATT+" I R 28250 7900 50 
 F22 "TSAL_BATT-" I R 28250 8000 50 
 $EndSheet
+Wire Wire Line
+	25050 8000 26200 8000
+Wire Wire Line
+	25050 8100 26200 8100
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 60ADABFB
+P 25400 6550
+AR Path="/5F45B05E/60ADABFB" Ref="SW?"  Part="1" 
+AR Path="/60ADABFB" Ref="SW?"  Part="1" 
+F 0 "SW?" H 25400 6785 50  0000 C CNN
+F 1 "SMD" H 25400 6694 50  0000 C CNN
+F 2 "" H 25400 6550 50  0001 C CNN
+F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/HBD21.pdf" H 25400 6550 50  0001 C CNN
+	1    25400 6550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	25050 6550 25200 6550
+Wire Wire Line
+	25600 6550 25650 6550
+Wire Wire Line
+	25650 6550 25650 6450
+Wire Wire Line
+	25650 6450 25050 6450
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 60CCAEF5
+P 25400 7100
+AR Path="/5F45B05E/60CCAEF5" Ref="SW?"  Part="1" 
+AR Path="/60CCAEF5" Ref="SW?"  Part="1" 
+F 0 "SW?" H 25400 7335 50  0000 C CNN
+F 1 "HVD" H 25400 7244 50  0000 C CNN
+F 2 "" H 25400 7100 50  0001 C CNN
+F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/HBD21.pdf" H 25400 7100 50  0001 C CNN
+	1    25400 7100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	25050 7100 25200 7100
+Wire Wire Line
+	25600 7100 25650 7100
+Wire Wire Line
+	25650 7100 25650 7000
+Wire Wire Line
+	25650 7000 25050 7000
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 60D1ED0A
+P 25400 7600
+AR Path="/5F45B05E/60D1ED0A" Ref="SW?"  Part="1" 
+AR Path="/60D1ED0A" Ref="SW?"  Part="1" 
+F 0 "SW?" H 25400 7835 50  0000 C CNN
+F 1 "SMD" H 25400 7744 50  0000 C CNN
+F 2 "" H 25400 7600 50  0001 C CNN
+F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/HBD21.pdf" H 25400 7600 50  0001 C CNN
+	1    25400 7600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	25050 7600 25200 7600
+Wire Wire Line
+	25600 7600 25650 7600
+Wire Wire Line
+	25650 7600 25650 7500
+Wire Wire Line
+	25650 7500 25050 7500
 Wire Bus Line
 	10600 14300 10600 15000
 Wire Bus Line

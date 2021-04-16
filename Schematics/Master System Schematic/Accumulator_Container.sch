@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr D 34000 22000
 encoding utf-8
-Sheet 3 26
+Sheet 3 38
 Title "Accumulator Container"
 Date "2020-11-12"
 Rev "6"
@@ -2079,16 +2079,40 @@ F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.
 	0    1    1    0   
 $EndComp
 $Sheet
-S 29250 3100 2150 5250
+S 28400 3000 2250 5350
 U 60827CB0
 F0 "LV_Plate" 50
 F1 "LV_Plate.sch" 50
 $EndSheet
 $Sheet
-S 22900 3100 2150 5350
+S 22050 3000 2150 5350
 U 60828791
 F0 "Segment_Layer" 50
 F1 "Segment_Layer.sch" 50
+F2 "Batt+" I R 24200 7900 50 
+F3 "Batt-" I R 24200 8000 50 
+F4 "SMD_2-" I R 24200 7350 50 
+F5 "SMD_2+" I R 24200 7250 50 
+F6 "HVD-" I R 24200 6700 50 
+F7 "HVD+" I R 24200 6600 50 
+F8 "SMD_1-" I R 24200 6050 50 
+F9 "SMD_1+" I R 24200 5950 50 
+F10 "ThermsNC_4" I R 24200 3400 50 
+F11 "ThermsC_4" I R 24200 3500 50 
+F12 "ThermsNC_3" I R 24200 3800 50 
+F13 "ThermsC_3" I R 24200 3900 50 
+F14 "ThermsNC_2" I R 24200 4200 50 
+F15 "ThermsC_2" I R 24200 4300 50 
+F16 "ThermsNC_1" I R 24200 4600 50 
+F17 "ThermsC_1" I R 24200 4700 50 
+F18 "VT(1-12)_Seg4" I R 24200 3600 50 
+F19 "VT(13-24)_Seg4" I R 24200 3700 50 
+F20 "VT(1-12)_Seg3" I R 24200 4000 50 
+F21 "VT(13-24)_Seg3" I R 24200 4100 50 
+F22 "VT(1-12)_Seg2" I R 24200 4400 50 
+F23 "VT(13-24)_Seg2" I R 24200 4500 50 
+F24 "VT(1-12)_Seg1" I R 24200 4800 50 
+F25 "VT(13-24)_Seg1" I R 24200 4900 50 
 $EndSheet
 Connection ~ 17200 7400
 Wire Wire Line
@@ -2121,32 +2145,124 @@ F 3 "" H 18250 7100 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Sheet
-S 26200 5550 2050 3550
+S 25350 5450 2000 4100
 U 6082840F
 F0 "HV_Plate" 50
 F1 "HV_Plate.sch" 50
-F2 "CurrentSensor" I R 28250 5950 50 
-F3 "TS+" I R 28250 8800 50 
-F4 "TS-" I R 28250 8900 50 
-F5 "AIR-_SigL" I R 28250 6350 50 
-F6 "DCharge_SigH" I R 28250 6450 50 
-F7 "Segment-" I L 26200 8100 50 
-F8 "Segment+" I L 26200 8000 50 
-F9 "AIR+_SigH" I R 28250 6050 50 
-F10 "AIR+_SigL" I R 28250 6150 50 
-F11 "AIR-_SigH" I R 28250 6250 50 
-F12 "DCharge_SigL" I R 28250 6550 50 
-F13 "TSMP-" I R 28250 7400 50 
-F14 "IMD_HV_Sense+" I R 28250 7500 50 
-F15 "TSMP+" I R 28250 7300 50 
-F16 "IMD_HV_Sense-" I R 28250 7600 50 
-F17 "PCharge_SigH" I R 28250 6650 50 
-F18 "PCharge_SigL" I R 28250 6750 50 
-F19 "TSAL_TS+" I R 28250 7700 50 
-F20 "TSAL_TS-" I R 28250 7800 50 
-F21 "TSAL_BATT+" I R 28250 7900 50 
-F22 "TSAL_BATT-" I R 28250 8000 50 
+F2 "CurrentSensor" I R 27350 5850 50 
+F3 "TS+" I R 27350 9200 50 
+F4 "TS-" I R 27350 9300 50 
+F5 "AIR-_SigL" I R 27350 6250 50 
+F6 "DCharge_SigH" I R 27350 6350 50 
+F7 "Segment-" I L 25350 8000 50 
+F8 "Segment+" I L 25350 7900 50 
+F9 "AIR+_SigH" I R 27350 5950 50 
+F10 "AIR+_SigL" I R 27350 6050 50 
+F11 "AIR-_SigH" I R 27350 6150 50 
+F12 "DCharge_SigL" I R 27350 6450 50 
+F13 "TSMP-" I R 27350 7300 50 
+F14 "IMD_HV_Sense+" I R 27350 7400 50 
+F15 "TSMP+" I R 27350 7200 50 
+F16 "IMD_HV_Sense-" I R 27350 7500 50 
+F17 "PCharge_SigH" I R 27350 6550 50 
+F18 "PCharge_SigL" I R 27350 6650 50 
+F19 "TSAL_TS+" I R 27350 7600 50 
+F20 "TSAL_TS-" I R 27350 7700 50 
+F21 "TSAL_BATT+" I R 27350 7800 50 
+F22 "TSAL_BATT-" I R 27350 7900 50 
 $EndSheet
+Wire Wire Line
+	24200 7900 25350 7900
+Wire Wire Line
+	24200 8000 25350 8000
+$Comp
+L Switch:SW_SPST SW11
+U 1 1 60ADABFB
+P 24550 6050
+AR Path="/5F45B05E/60ADABFB" Ref="SW11"  Part="1" 
+AR Path="/60ADABFB" Ref="SW?"  Part="1" 
+F 0 "SW11" H 24550 6285 50  0000 C CNN
+F 1 "SMD" H 24550 6194 50  0000 C CNN
+F 2 "" H 24550 6050 50  0001 C CNN
+F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/HBD21.pdf" H 24550 6050 50  0001 C CNN
+	1    24550 6050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	24200 6050 24350 6050
+Wire Wire Line
+	24750 6050 24800 6050
+Wire Wire Line
+	24800 6050 24800 5950
+Wire Wire Line
+	24800 5950 24200 5950
+$Comp
+L Switch:SW_SPST SW15
+U 1 1 60CCAEF5
+P 24550 6700
+AR Path="/5F45B05E/60CCAEF5" Ref="SW15"  Part="1" 
+AR Path="/60CCAEF5" Ref="SW?"  Part="1" 
+F 0 "SW15" H 24550 6935 50  0000 C CNN
+F 1 "HVD" H 24550 6844 50  0000 C CNN
+F 2 "" H 24550 6700 50  0001 C CNN
+F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/HBD21.pdf" H 24550 6700 50  0001 C CNN
+	1    24550 6700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	24200 6700 24350 6700
+Wire Wire Line
+	24750 6700 24800 6700
+Wire Wire Line
+	24800 6700 24800 6600
+Wire Wire Line
+	24800 6600 24200 6600
+$Comp
+L Switch:SW_SPST SW16
+U 1 1 60D1ED0A
+P 24550 7350
+AR Path="/5F45B05E/60D1ED0A" Ref="SW16"  Part="1" 
+AR Path="/60D1ED0A" Ref="SW?"  Part="1" 
+F 0 "SW16" H 24550 7585 50  0000 C CNN
+F 1 "SMD" H 24550 7494 50  0000 C CNN
+F 2 "" H 24550 7350 50  0001 C CNN
+F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/HBD21.pdf" H 24550 7350 50  0001 C CNN
+	1    24550 7350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	24200 7350 24350 7350
+Wire Wire Line
+	24750 7350 24800 7350
+Wire Wire Line
+	24800 7250 24800 7350
+Wire Wire Line
+	24800 7250 24200 7250
+$Comp
+L Master-System-Schematic-rescue:2-Pos_Generic-NER J31
+U 1 1 6102FC5C
+P 28050 9100
+F 0 "J31" H 28050 9225 50  0000 C CNN
+F 1 "Main TS Connector" H 28050 9134 50  0000 C CNN
+F 2 "" H 28050 9100 50  0001 C CNN
+F 3 "" H 28050 9100 50  0001 C CNN
+	1    28050 9100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	27350 9200 27800 9200
+Wire Wire Line
+	27800 9300 27350 9300
+Text HLabel 28300 9200 2    50   Output ~ 0
+TS+
+Text HLabel 28300 9300 2    50   Output ~ 0
+TS-
+Text Notes 24450 5950 0    50   ~ 0
+2AWG
+Text Notes 24450 6600 0    50   ~ 0
+2AWG
+Text Notes 24450 7250 0    50   ~ 0
+2AWG
 Wire Bus Line
 	10600 14300 10600 15000
 Wire Bus Line
