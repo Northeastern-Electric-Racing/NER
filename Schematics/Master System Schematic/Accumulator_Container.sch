@@ -1,9 +1,9 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr C 22000 17000
+$Descr D 34000 22000
 encoding utf-8
-Sheet 3 23
+Sheet 3 26
 Title "Accumulator Container"
 Date "2020-11-12"
 Rev "6"
@@ -221,7 +221,6 @@ Wire Wire Line
 Connection ~ 17300 6950
 Wire Wire Line
 	16550 7400 17200 7400
-Connection ~ 17200 7400
 Wire Wire Line
 	17200 4450 17850 4450
 Wire Wire Line
@@ -268,7 +267,7 @@ Wire Wire Line
 Wire Wire Line
 	14800 9700 15950 9700
 $Comp
-L NER:2-Pos_Generic J10
+L Master-System-Schematic-rescue:2-Pos_Generic-NER J10
 U 1 1 5F84E6B9
 P 19050 6850
 F 0 "J10" H 19050 6975 50  0000 C CNN
@@ -279,7 +278,7 @@ F 3 "" H 19050 6850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L NER:4-Pos_Generic J9
+L Master-System-Schematic-rescue:4-Pos_Generic-NER J9
 U 1 1 5F95323D
 P 18100 4150
 F 0 "J9" H 18100 4275 50  0000 C CNN
@@ -298,7 +297,7 @@ Wire Wire Line
 Wire Wire Line
 	18350 4550 18450 4550
 $Comp
-L NER:6-Pos_Generic J8
+L Master-System-Schematic-rescue:6-Pos_Generic-NER J8
 U 1 1 5FAB592D
 P 14500 1600
 F 0 "J8" V 14454 1588 50  0000 L CNN
@@ -307,17 +306,6 @@ F 2 "" H 14500 1600 50  0001 C CNN
 F 3 "" H 14500 1600 50  0001 C CNN
 	1    14500 1600
 	0    1    1    0   
-$EndComp
-$Comp
-L NER:OrionCurrentSens U14
-U 1 1 5F8DBC0B
-P 18250 7100
-F 0 "U14" H 18250 7123 50  0000 C CNN
-F 1 "OrionCurrentSens" H 18250 7214 50  0000 C CNN
-F 2 "" H 18250 7100 50  0001 C CNN
-F 3 "" H 18250 7100 50  0001 C CNN
-	1    18250 7100
-	1    0    0    1   
 $EndComp
 Wire Wire Line
 	16550 6700 16550 7400
@@ -329,22 +317,6 @@ Wire Wire Line
 	18750 7050 18800 7050
 Wire Wire Line
 	18650 6950 18800 6950
-Wire Wire Line
-	18500 6450 18500 6400
-Wire Wire Line
-	18350 6450 18350 6400
-Wire Wire Line
-	18200 6450 18200 6400
-Wire Wire Line
-	18050 6450 18050 6400
-Entry Wire Line
-	18050 6400 18150 6300
-Entry Wire Line
-	18200 6400 18300 6300
-Entry Wire Line
-	18350 6400 18450 6300
-Entry Wire Line
-	18500 6400 18600 6300
 Text HLabel 19550 13750 2    50   Output ~ 0
 Current_Sensor
 Wire Wire Line
@@ -352,7 +324,7 @@ Wire Wire Line
 Wire Wire Line
 	20200 5100 20300 5100
 $Comp
-L NER:2-Pos_Generic J11
+L Master-System-Schematic-rescue:2-Pos_Generic-NER J11
 U 1 1 5F95267C
 P 19950 5000
 F 0 "J11" H 19950 5125 50  0000 C CNN
@@ -691,7 +663,7 @@ Temperature_Data
 Entry Wire Line
 	2550 1800 2650 1900
 $Comp
-L NER:OrionThermExp U?
+L Master-System-Schematic-rescue:OrionThermExp-NER U?
 U 1 1 5FB81724
 P 3450 1300
 AR Path="/60D53BFB/5FB81724" Ref="U?"  Part="1" 
@@ -1873,8 +1845,6 @@ Wire Wire Line
 	11850 7600 11850 10900
 Connection ~ 16550 7400
 Wire Wire Line
-	17200 7400 18750 7400
-Wire Wire Line
 	17300 6950 17850 6950
 Wire Wire Line
 	17600 5400 17600 10900
@@ -2108,6 +2078,75 @@ F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.
 	1    13650 3350
 	0    1    1    0   
 $EndComp
+$Sheet
+S 29250 3100 2150 5250
+U 60827CB0
+F0 "LV_Plate" 50
+F1 "LV_Plate.sch" 50
+$EndSheet
+$Sheet
+S 22900 3100 2150 5350
+U 60828791
+F0 "Segment_Layer" 50
+F1 "Segment_Layer.sch" 50
+$EndSheet
+Connection ~ 17200 7400
+Wire Wire Line
+	17200 7400 18750 7400
+Entry Wire Line
+	18500 6400 18600 6300
+Entry Wire Line
+	18350 6400 18450 6300
+Entry Wire Line
+	18200 6400 18300 6300
+Entry Wire Line
+	18050 6400 18150 6300
+Wire Wire Line
+	18050 6450 18050 6400
+Wire Wire Line
+	18200 6450 18200 6400
+Wire Wire Line
+	18350 6450 18350 6400
+Wire Wire Line
+	18500 6450 18500 6400
+$Comp
+L Master-System-Schematic-rescue:OrionCurrentSens-NER U14
+U 1 1 5F8DBC0B
+P 18250 7100
+F 0 "U14" H 18250 7123 50  0000 C CNN
+F 1 "OrionCurrentSens" H 18250 7214 50  0000 C CNN
+F 2 "" H 18250 7100 50  0001 C CNN
+F 3 "" H 18250 7100 50  0001 C CNN
+	1    18250 7100
+	1    0    0    1   
+$EndComp
+$Sheet
+S 26200 5550 2050 3550
+U 6082840F
+F0 "HV_Plate" 50
+F1 "HV_Plate.sch" 50
+F2 "CurrentSensor" I R 28250 5950 50 
+F3 "TS+" I R 28250 8800 50 
+F4 "TS-" I R 28250 8900 50 
+F5 "AIR-_SigL" I R 28250 6350 50 
+F6 "DCharge_SigH" I R 28250 6450 50 
+F7 "Segment-" I L 26200 8100 50 
+F8 "Segment+" I L 26200 8000 50 
+F9 "AIR+_SigH" I R 28250 6050 50 
+F10 "AIR+_SigL" I R 28250 6150 50 
+F11 "AIR-_SigH" I R 28250 6250 50 
+F12 "DCharge_SigL" I R 28250 6550 50 
+F13 "TSMP-" I R 28250 7400 50 
+F14 "IMD_HV_Sense+" I R 28250 7500 50 
+F15 "TSMP+" I R 28250 7300 50 
+F16 "IMD_HV_Sense-" I R 28250 7600 50 
+F17 "PCharge_SigH" I R 28250 6650 50 
+F18 "PCharge_SigL" I R 28250 6750 50 
+F19 "TSAL_TS+" I R 28250 7700 50 
+F20 "TSAL_TS-" I R 28250 7800 50 
+F21 "TSAL_BATT+" I R 28250 7900 50 
+F22 "TSAL_BATT-" I R 28250 8000 50 
+$EndSheet
 Wire Bus Line
 	10600 14300 10600 15000
 Wire Bus Line
