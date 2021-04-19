@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 2 38
+Sheet 2 40
 Title "Pedal Box"
 Date "2020-10-15"
 Rev "2"
@@ -22,7 +22,7 @@ GLV_GND
 Wire Wire Line
 	3600 3050 4350 3050
 $Comp
-L Master-System-Schematic-rescue:Arduino_UNO_rev3-NER A2
+L NER:Arduino_UNO_rev3 A2
 U 1 1 5F6833F8
 P 4950 2900
 F 0 "A2" H 4950 3015 50  0000 C CNN
@@ -180,7 +180,7 @@ Wire Wire Line
 Connection ~ 3850 4050
 NoConn ~ 4350 4150
 $Comp
-L Master-System-Schematic-rescue:CAN_Bus_Module-NER U10
+L NER:CAN_Bus_Module U10
 U 1 1 5F6D982E
 P 7600 3200
 F 0 "U10" H 7625 3315 50  0000 C CNN

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 23 35
+Sheet 23 40
 Title "Charging System"
 Date "2020-10-20"
 Rev "4"
@@ -250,7 +250,7 @@ Wire Wire Line
 Connection ~ 4600 2000
 Connection ~ 6200 2950
 $Comp
-L Master-System-Schematic-rescue:TSM2500-NER PS2
+L NER:TSM2500 PS2
 U 1 1 5FDDB926
 P 5550 4350
 F 0 "PS2" H 5575 3385 50  0000 C CNN

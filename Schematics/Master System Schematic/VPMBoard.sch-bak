@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 23 35
+Sheet 40 40
 Title "Vehicle Power Management Board"
 Date "2021-03-23"
 Rev "5"
@@ -525,7 +525,7 @@ Wire Wire Line
 Wire Wire Line
 	1250 3650 1200 3650
 $Comp
-L Master-System-Schematic-rescue:3-Pos_Generic-NER J17
+L NER:3-Pos_Generic J17
 U 1 1 60084A61
 P 1700 1450
 F 0 "J17" H 1700 1575 50  0000 C CNN
@@ -554,7 +554,7 @@ Wire Wire Line
 Wire Wire Line
 	1450 1550 1400 1550
 $Comp
-L Master-System-Schematic-rescue:1-Pos_Generic-NER J?
+L NER:1-Pos_Generic J?
 U 1 1 600B3510
 P 1700 2300
 AR Path="/600B3510" Ref="J?"  Part="1" 
@@ -571,7 +571,7 @@ ChargerGND
 Wire Wire Line
 	1450 1750 1400 1750
 $Comp
-L Master-System-Schematic-rescue:3-Pos_Generic-NER J21
+L NER:3-Pos_Generic J21
 U 1 1 6116408D
 P 9650 3050
 F 0 "J21" H 9650 3175 50  0000 C CNN
@@ -594,7 +594,7 @@ Wire Wire Line
 Wire Wire Line
 	9950 3150 9900 3150
 $Comp
-L Master-System-Schematic-rescue:2-Pos_Generic-NER J20
+L NER:2-Pos_Generic J20
 U 1 1 600B417F
 P 9650 1550
 F 0 "J20" H 9650 1675 50  0000 C CNN
@@ -611,7 +611,7 @@ ThermEX_PWR
 Text Notes 9350 1650 2    50   ~ 0
 ThermEX_PWR\n
 $Comp
-L Master-System-Schematic-rescue:4-Pos_Generic-NER J14
+L NER:4-Pos_Generic J14
 U 1 1 600E1D3A
 P 1400 6250
 F 0 "J14" H 1400 5650 50  0000 C CNN
@@ -622,7 +622,7 @@ F 3 "" H 1400 6250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Master-System-Schematic-rescue:4-Pos_Generic-NER J15
+L NER:4-Pos_Generic J15
 U 1 1 600E4AAA
 P 1400 7000
 F 0 "J15" H 1400 6400 50  0000 C CNN
@@ -655,7 +655,7 @@ CANH_Thrm
 Text HLabel 1150 6700 0    50   Input ~ 0
 CANL_Thrm
 $Comp
-L Master-System-Schematic-rescue:4-Pos_Generic-NER J13
+L NER:4-Pos_Generic J13
 U 1 1 600D5093
 P 1400 5600
 F 0 "J13" H 1400 5000 50  0000 C CNN
@@ -708,7 +708,7 @@ F 3 "" H 1950 3950 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Master-System-Schematic-rescue:2-Pos_Generic-NER J1
+L NER:2-Pos_Generic J1
 U 1 1 605FE893
 P 1400 4600
 F 0 "J1" H 1400 4725 50  0000 C CNN
@@ -791,7 +791,7 @@ Wire Wire Line
 Text HLabel 1200 3550 0    50   Input ~ 0
 RadFan_PWR
 $Comp
-L Master-System-Schematic-rescue:2-Pos_Generic-NER J16
+L NER:2-Pos_Generic J16
 U 1 1 60052B8B
 P 1500 3450
 F 0 "J16" H 1500 3575 50  0000 C CNN
@@ -804,7 +804,7 @@ $EndComp
 Text HLabel 1150 6900 0    50   Input ~ 0
 BatFan_PWM
 $Comp
-L Master-System-Schematic-rescue:7-Pos_Generic-NER J19
+L NER:7-Pos_Generic J19
 U 1 1 605FD3CD
 P 4500 6250
 F 0 "J19" H 4500 5335 50  0000 C CNN

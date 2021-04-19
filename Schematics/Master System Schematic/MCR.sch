@@ -1,0 +1,332 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 18 40
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 1900 1750 0    50   Input ~ 0
+GLV_GND
+Text HLabel 1900 1850 0    50   Input ~ 0
+GLV_12V
+Text HLabel 1900 1950 0    50   Input ~ 0
+Shutdown_12V
+$Comp
+L NER:2-Pos_Generic J?
+U 1 1 60881D3A
+P 8950 3750
+F 0 "J?" H 8950 3875 50  0000 C CNN
+F 1 "AIR+" H 8950 3784 50  0000 C CNN
+F 2 "" H 8950 3750 50  0001 C CNN
+F 3 "" H 8950 3750 50  0001 C CNN
+	1    8950 3750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L NER:2-Pos_Generic J?
+U 1 1 60883B2A
+P 8950 4300
+F 0 "J?" H 8950 4425 50  0000 C CNN
+F 1 "AIR-" H 8950 4334 50  0000 C CNN
+F 2 "" H 8950 4300 50  0001 C CNN
+F 3 "" H 8950 4300 50  0001 C CNN
+	1    8950 4300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L NER:2-Pos_Generic J?
+U 1 1 60883FAA
+P 8950 4850
+F 0 "J?" H 8950 4975 50  0000 C CNN
+F 1 "DCharge" H 8950 4884 50  0000 C CNN
+F 2 "" H 8950 4850 50  0001 C CNN
+F 3 "" H 8950 4850 50  0001 C CNN
+	1    8950 4850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L NER:2-Pos_Generic J?
+U 1 1 60884497
+P 8950 5400
+F 0 "J?" H 8950 5525 50  0000 C CNN
+F 1 "PCharge" H 8950 5434 50  0000 C CNN
+F 2 "" H 8950 5400 50  0001 C CNN
+F 3 "" H 8950 5400 50  0001 C CNN
+	1    8950 5400
+	-1   0    0    -1  
+$EndComp
+Text HLabel 9200 3850 2    50   Input ~ 0
+AIR+_SigH
+Text HLabel 9200 3950 2    50   Input ~ 0
+AIR+_SigL
+Text HLabel 9200 4400 2    50   Input ~ 0
+AIR-_SigH
+Text HLabel 9200 4500 2    50   Input ~ 0
+AIR-_SigL
+Text HLabel 9200 4950 2    50   Input ~ 0
+DCharge-_SigH
+Text HLabel 9200 5050 2    50   Input ~ 0
+DCharge-_SigL
+Text HLabel 9200 5500 2    50   Input ~ 0
+PCharge-_SigH
+Text HLabel 9200 5600 2    50   Input ~ 0
+PCharge-_SigL
+$Comp
+L NER:2-Pos_Generic J?
+U 1 1 6088A051
+P 8950 2250
+F 0 "J?" H 8950 2375 50  0000 C CNN
+F 1 "ThermEx_PWR" H 8950 2284 50  0000 C CNN
+F 2 "" H 8950 2250 50  0001 C CNN
+F 3 "" H 8950 2250 50  0001 C CNN
+	1    8950 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L NER:2-Pos_Generic J?
+U 1 1 6088A8C0
+P 8950 2850
+F 0 "J?" H 8950 2975 50  0000 C CNN
+F 1 "IMD_PWR" H 8950 2884 50  0000 C CNN
+F 2 "" H 8950 2850 50  0001 C CNN
+F 3 "" H 8950 2850 50  0001 C CNN
+	1    8950 2850
+	1    0    0    -1  
+$EndComp
+Text HLabel 9200 1650 2    50   Input ~ 0
+BMS_R_12V
+Text HLabel 9200 1850 2    50   Input ~ 0
+BMS_GND
+Text HLabel 9200 2350 2    50   Input ~ 0
+Therm_12V
+Text HLabel 9200 2450 2    50   Input ~ 0
+Therm_GND
+Text HLabel 9200 2950 2    50   Input ~ 0
+IMD_12V
+Text HLabel 9200 3050 2    50   Input ~ 0
+IMD_GND
+$Comp
+L Device:Fuse F?
+U 1 1 6088F013
+P 8400 1650
+F 0 "F?" V 8597 1650 50  0000 C CNN
+F 1 "1A" V 8506 1650 50  0000 C CNN
+F 2 "" V 8330 1650 50  0001 C CNN
+F 3 "~" H 8400 1650 50  0001 C CNN
+	1    8400 1650
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:Fuse F?
+U 1 1 6088F383
+P 8400 2350
+F 0 "F?" V 8203 2350 50  0000 C CNN
+F 1 "250mA" V 8294 2350 50  0000 C CNN
+F 2 "" V 8330 2350 50  0001 C CNN
+F 3 "~" H 8400 2350 50  0001 C CNN
+	1    8400 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse F?
+U 1 1 6088F561
+P 8400 2950
+F 0 "F?" V 8203 2950 50  0000 C CNN
+F 1 "Fuse" V 8294 2950 50  0000 C CNN
+F 2 "" V 8330 2950 50  0001 C CNN
+F 3 "~" H 8400 2950 50  0001 C CNN
+	1    8400 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse F?
+U 1 1 6089D37E
+P 8400 1750
+F 0 "F?" V 8597 1750 50  0000 C CNN
+F 1 "1A" V 8506 1750 50  0000 C CNN
+F 2 "" V 8330 1750 50  0001 C CNN
+F 3 "~" H 8400 1750 50  0001 C CNN
+	1    8400 1750
+	0    1    1    0   
+$EndComp
+Text HLabel 9200 1750 2    50   Input ~ 0
+BMS_C_12V
+$Comp
+L NER:3-Pos_Generic J?
+U 1 1 6089FCCB
+P 2150 1650
+F 0 "J?" H 2150 1775 50  0000 C CNN
+F 1 "GLV_PWR" H 2150 1684 50  0000 C CNN
+F 2 "" H 2150 1650 50  0001 C CNN
+F 3 "" H 2150 1650 50  0001 C CNN
+	1    2150 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L NER:3-Pos_Generic J?
+U 1 1 608A0369
+P 2150 3750
+F 0 "J?" H 2150 3875 50  0000 C CNN
+F 1 "THERM_CAN" H 2150 3784 50  0000 C CNN
+F 2 "" H 2150 3750 50  0001 C CNN
+F 3 "" H 2150 3750 50  0001 C CNN
+	1    2150 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L NER:3-Pos_Generic J?
+U 1 1 608A1290
+P 2150 4400
+F 0 "J?" H 2150 4525 50  0000 C CNN
+F 1 "BMS_CAN" H 2150 4434 50  0000 C CNN
+F 2 "" H 2150 4400 50  0001 C CNN
+F 3 "" H 2150 4400 50  0001 C CNN
+	1    2150 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L NER:3-Pos_Generic J?
+U 1 1 608A1AB1
+P 2150 3100
+F 0 "J?" H 2150 3225 50  0000 C CNN
+F 1 "MAIN_CAN" H 2150 3134 50  0000 C CNN
+F 2 "" H 2150 3100 50  0001 C CNN
+F 3 "" H 2150 3100 50  0001 C CNN
+	1    2150 3100
+	1    0    0    -1  
+$EndComp
+Text HLabel 1900 3200 0    50   Input ~ 0
+GLV_CANH
+Text HLabel 1900 3300 0    50   Input ~ 0
+GLV_CANL
+Text HLabel 1900 3400 0    50   Input ~ 0
+GLV_CANS
+Text HLabel 1900 3850 0    50   Input ~ 0
+THRM_CANH
+Text HLabel 1900 3950 0    50   Input ~ 0
+THRM_CANL
+Text HLabel 1900 4050 0    50   Input ~ 0
+THRM_CANS
+Text HLabel 1900 4500 0    50   Input ~ 0
+BMS_CANH
+Text HLabel 1900 4600 0    50   Input ~ 0
+BMS_CANL
+Text HLabel 1900 4700 0    50   Input ~ 0
+BMS_CANS
+Wire Wire Line
+	2400 3400 2550 3400
+Wire Wire Line
+	2550 3400 2550 4050
+Wire Wire Line
+	2400 4700 2550 4700
+Connection ~ 2550 4700
+Wire Wire Line
+	2550 4700 2550 4950
+Wire Wire Line
+	2400 4050 2550 4050
+Connection ~ 2550 4050
+Wire Wire Line
+	2550 4050 2550 4700
+$Comp
+L power:GND #PWR?
+U 1 1 608A5D0A
+P 2550 4950
+F 0 "#PWR?" H 2550 4700 50  0001 C CNN
+F 1 "GND" H 2555 4777 50  0000 C CNN
+F 2 "" H 2550 4950 50  0001 C CNN
+F 3 "" H 2550 4950 50  0001 C CNN
+	1    2550 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 608A66F7
+P 8700 2450
+F 0 "#PWR?" H 8700 2200 50  0001 C CNN
+F 1 "GND" H 8705 2277 50  0000 C CNN
+F 2 "" H 8700 2450 50  0001 C CNN
+F 3 "" H 8700 2450 50  0001 C CNN
+	1    8700 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 608A67E2
+P 8700 3050
+F 0 "#PWR?" H 8700 2800 50  0001 C CNN
+F 1 "GND" H 8705 2877 50  0000 C CNN
+F 2 "" H 8700 3050 50  0001 C CNN
+F 3 "" H 8700 3050 50  0001 C CNN
+	1    8700 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3300 2650 3300
+Wire Wire Line
+	2650 3300 2650 3950
+Wire Wire Line
+	2650 3950 2400 3950
+Wire Wire Line
+	2650 3950 2650 4600
+Wire Wire Line
+	2650 4600 2400 4600
+Connection ~ 2650 3950
+Wire Wire Line
+	2400 3200 2750 3200
+Wire Wire Line
+	2750 3200 2750 3850
+Wire Wire Line
+	2750 3850 2400 3850
+Wire Wire Line
+	2750 3850 2750 4500
+Wire Wire Line
+	2750 4500 2400 4500
+Connection ~ 2750 3850
+$Comp
+L NER:3-Pos_Generic J?
+U 1 1 608C3AD8
+P 8950 1550
+F 0 "J?" H 8950 1675 50  0000 C CNN
+F 1 "BMS_PWR" H 8950 1584 50  0000 C CNN
+F 2 "" H 8950 1550 50  0001 C CNN
+F 3 "" H 8950 1550 50  0001 C CNN
+	1    8950 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 608C46E8
+P 8700 1850
+F 0 "#PWR?" H 8700 1600 50  0001 C CNN
+F 1 "GND" H 8705 1677 50  0000 C CNN
+F 2 "" H 8700 1850 50  0001 C CNN
+F 3 "" H 8700 1850 50  0001 C CNN
+	1    8700 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L NER:3-Pos_Generic J?
+U 1 1 61825C1A
+P 2150 2300
+F 0 "J?" H 2150 2425 50  0000 C CNN
+F 1 "MC_SIG" H 2150 2334 50  0000 C CNN
+F 2 "" H 2150 2300 50  0001 C CNN
+F 3 "" H 2150 2300 50  0001 C CNN
+	1    2150 2300
+	1    0    0    -1  
+$EndComp
+Text HLabel 1900 2400 0    50   Input ~ 0
+MC_Precharge+
+Text HLabel 1900 2500 0    50   Input ~ 0
+MC_AIR+
+Text HLabel 1900 2600 0    50   Input ~ 0
+CHRG_12V
+$EndSCHEMATC

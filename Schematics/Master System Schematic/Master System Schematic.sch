@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr D 34000 22000
 encoding utf-8
-Sheet 1 38
+Sheet 1 40
 Title "NER FH 2020-2021 Master Electrical Schematic"
 Date "2021-03-24"
 Rev "14.1"
@@ -64,7 +64,7 @@ F 3 "~" H 18450 11100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Master-System-Schematic-rescue:Emrax228HV_Motor-NER U4
+L NER:Emrax228HV_Motor U4
 U 1 1 5F972C2B
 P 30750 10850
 F 0 "U4" H 30700 11000 50  0000 L CNN
@@ -173,7 +173,7 @@ F 3 "~" H 18400 11550 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Master-System-Schematic-rescue:ULV8F2BSS331-NER S1
+L NER:ULV8F2BSS331 S1
 U 1 1 5F94EA0B
 P 18400 4000
 F 0 "S1" H 18400 4485 50  0000 C CNN
@@ -250,7 +250,7 @@ Wire Wire Line
 Wire Wire Line
 	22750 4550 22650 4550
 $Comp
-L Master-System-Schematic-rescue:ST-R10_LED-NER D6
+L NER:ST-R10_LED D6
 U 1 1 5F87123F
 P 22500 4200
 F 0 "D6" H 22475 4431 50  0000 C CNN
@@ -622,7 +622,7 @@ Connection ~ 19400 13700
 Wire Wire Line
 	19400 13700 20450 13700
 $Comp
-L Master-System-Schematic-rescue:2-Pos_Generic-NER J12
+L NER:2-Pos_Generic J12
 U 1 1 608930F9
 P 16400 14900
 F 0 "J12" H 16400 15025 50  0000 C CNN
@@ -633,7 +633,7 @@ F 3 "" H 16400 14900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Master-System-Schematic-rescue:2-Pos_Generic-NER J4
+L NER:2-Pos_Generic J4
 U 1 1 608979A2
 P 16400 13900
 F 0 "J4" H 16400 14025 50  0000 C CNN
@@ -1001,7 +1001,7 @@ Wire Wire Line
 Wire Wire Line
 	15500 14100 15500 15000
 $Comp
-L Master-System-Schematic-rescue:RinehartPM100DX_MotorController-NER U3
+L NER:RinehartPM100DX_MotorController U3
 U 1 1 5FAF2B99
 P 28200 10700
 AR Path="/5FAF2B99" Ref="U3"  Part="1" 
@@ -1234,7 +1234,7 @@ Wire Wire Line
 Wire Wire Line
 	5900 9250 6500 9250
 $Comp
-L Master-System-Schematic-rescue:FuseBox_PSZACCEPS052H-NER U1
+L NER:FuseBox_PSZACCEPS052H U1
 U 1 1 5FCB7816
 P 7400 9250
 F 0 "U1" V 7354 9278 50  0000 L CNN
@@ -1421,7 +1421,7 @@ Wire Wire Line
 Wire Wire Line
 	26850 10450 26850 10500
 $Comp
-L Master-System-Schematic-rescue:6_Pin_ChargerLV-NER J2
+L NER:6_Pin_ChargerLV J2
 U 1 1 5FE44DF5
 P 28700 16600
 F 0 "J2" H 28700 17065 50  0000 C CNN
@@ -1524,7 +1524,7 @@ Wire Wire Line
 Wire Wire Line
 	4600 10550 4600 18000
 $Comp
-L Master-System-Schematic-rescue:4-Pos_Generic-NER J?
+L NER:4-Pos_Generic J?
 U 1 1 6023B819
 P 23600 13900
 AR Path="/5F45B05E/6023B819" Ref="J?"  Part="1" 
@@ -1572,7 +1572,7 @@ Wire Wire Line
 Wire Wire Line
 	29550 14250 29550 13350
 $Comp
-L Master-System-Schematic-rescue:6-Pos_Generic-NER J?
+L NER:6-Pos_Generic J?
 U 1 1 6023B81F
 P 29450 14500
 AR Path="/60D53BFB/6023B81F" Ref="J?"  Part="1" 
@@ -1601,7 +1601,7 @@ Wire Wire Line
 Wire Wire Line
 	25300 10600 25500 10600
 $Comp
-L Master-System-Schematic-rescue:4-Pos_Generic-NER J30
+L NER:4-Pos_Generic J30
 U 1 1 61CBEBD7
 P 30550 11150
 F 0 "J30" H 30550 10650 50  0000 C CNN
@@ -1633,7 +1633,7 @@ Wire Wire Line
 Wire Wire Line
 	30050 14200 30050 14250
 $Comp
-L Master-System-Schematic-rescue:1-Pos_Generic-NER J24
+L NER:1-Pos_Generic J24
 U 1 1 6290407B
 P 23600 11750
 F 0 "J24" H 23600 11875 50  0000 C CNN
@@ -1644,7 +1644,7 @@ F 3 "" H 23600 11750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Master-System-Schematic-rescue:1-Pos_Generic-NER J26
+L NER:1-Pos_Generic J26
 U 1 1 62904A9A
 P 23600 12100
 F 0 "J26" H 23600 12225 50  0000 C CNN
@@ -1655,7 +1655,7 @@ F 3 "" H 23600 12100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Master-System-Schematic-rescue:1-Pos_Generic-NER J27
+L NER:1-Pos_Generic J27
 U 1 1 62943572
 P 23600 12450
 F 0 "J27" H 23600 12575 50  0000 C CNN
@@ -1666,7 +1666,7 @@ F 3 "" H 23600 12450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Master-System-Schematic-rescue:1-Pos_Generic-NER J28
+L NER:1-Pos_Generic J28
 U 1 1 629C0E6C
 P 23600 12800
 F 0 "J28" H 23600 12925 50  0000 C CNN
@@ -1677,7 +1677,7 @@ F 3 "" H 23600 12800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Master-System-Schematic-rescue:1-Pos_Generic-NER J29
+L NER:1-Pos_Generic J29
 U 1 1 62A3EAAD
 P 23600 13200
 F 0 "J29" H 23600 13400 50  0000 C CNN
@@ -1748,7 +1748,7 @@ Wire Wire Line
 Wire Wire Line
 	25650 11350 25650 8150
 $Comp
-L Master-System-Schematic-rescue:6-Pos_Generic-NER J?
+L NER:6-Pos_Generic J?
 U 1 1 6023B82B
 P 26250 11150
 AR Path="/60D53BFB/6023B82B" Ref="J?"  Part="1" 

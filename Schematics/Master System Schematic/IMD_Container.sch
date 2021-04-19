@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 19 38
+Sheet 36 40
 Title "IMD Container"
 Date "2020-11-02"
 Rev "1"
@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Master-System-Schematic-rescue:Bender_Isometer_IR155-3204-NER U?
+L NER:Bender_Isometer_IR155-3204 U?
 U 1 1 627152B9
 P 5200 3600
 AR Path="/627152B9" Ref="U?"  Part="1" 

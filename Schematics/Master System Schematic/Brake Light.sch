@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 17 38
+Sheet 17 40
 Title "Brake Light CAN Box"
 Date "2020-11-01"
 Rev "2"
@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Master-System-Schematic-rescue:KY-019-NER U15
+L NER:KY-019 U15
 U 1 1 5F8C06C7
 P 4700 1950
 F 0 "U15" V 4275 1925 50  0000 C CNN
@@ -94,7 +94,7 @@ Wire Wire Line
 	3450 3850 3800 3850
 NoConn ~ 4100 3750
 $Comp
-L Master-System-Schematic-rescue:Arduino_UNO_rev3-NER A3
+L NER:Arduino_UNO_rev3 A3
 U 1 1 5F8BEBC7
 P 4700 2700
 F 0 "A3" H 4700 2815 50  0000 C CNN
@@ -149,7 +149,7 @@ Wire Wire Line
 Text HLabel 3350 3950 0    50   Input ~ 0
 CAN_SHIELD
 $Comp
-L Master-System-Schematic-rescue:CAN_Bus_Module-NER U13
+L NER:CAN_Bus_Module U13
 U 1 1 5F8C522E
 P 7450 3200
 F 0 "U13" H 7475 3315 50  0000 C CNN
@@ -212,7 +212,7 @@ Wire Wire Line
 Wire Wire Line
 	5900 4450 6900 4450
 $Comp
-L Master-System-Schematic-rescue:SD_Card_Module-NER U8
+L NER:SD_Card_Module U8
 U 1 1 6053C07D
 P 7400 4250
 F 0 "U8" H 7400 4300 50  0000 C CNN

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 18 38
+Sheet 18 40
 Title "Driver IO Dashboard"
 Date "2020-11-01"
 Rev "2"
@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Master-System-Schematic-rescue:Arduino_UNO_rev3-NER A1
+L NER:Arduino_UNO_rev3 A1
 U 1 1 5F848DBE
 P 5450 2800
 F 0 "A1" H 5450 2915 50  0000 C CNN
@@ -25,7 +25,7 @@ F 3 "" H 5450 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Master-System-Schematic-rescue:KY-019-NER U12
+L NER:KY-019 U12
 U 1 1 5F8416AD
 P 5400 2100
 F 0 "U12" H 5678 2121 50  0000 L CNN
@@ -115,7 +115,7 @@ Wire Wire Line
 Text HLabel 9200 3850 2    50   Input ~ 0
 CAN_L
 $Comp
-L Master-System-Schematic-rescue:CAN_Bus_Module-NER U11
+L NER:CAN_Bus_Module U11
 U 1 1 5F847676
 P 8350 3300
 F 0 "U11" H 8375 3415 50  0000 C CNN

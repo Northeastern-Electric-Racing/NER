@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 25 35
+Sheet 39 40
 Title "BMS Container"
 Date "2021-03-24"
 Rev "9.1"
@@ -121,7 +121,7 @@ ChargerSafety
 Text HLabel 7350 1600 0    50   Input ~ 0
 ChargerPWR
 $Comp
-L Master-System-Schematic-rescue:OrionBMS2-NER U6
+L NER:OrionBMS2 U6
 U 1 1 60E83DDC
 P 8650 5700
 F 0 "U6" H 8650 7065 50  0000 C CNN
