@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 4 27
+Sheet 4 25
 Title "LV_Plate"
 Date "2021-04-19"
 Rev "1.0"

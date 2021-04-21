@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 7 27
+Sheet 7 25
 Title "HV Plate"
 Date "2021-04-15"
 Rev "1.0"
@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:R R11
+L Device:R R?
 U 1 1 608CF874
 P 6150 3350
-F 0 "R11" H 5750 3450 50  0000 C CNN
+F 0 "R?" H 5750 3450 50  0000 C CNN
 F 1 "PCharge: 600R" H 5750 3350 50  0000 C CNN
 F 2 "" V 6080 3350 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/418/5/ENG_CD_1625999_AH2-686901.pdf" H 6150 3350 50  0001 C CNN
@@ -25,10 +25,10 @@ F 3 "https://www.mouser.com/datasheet/2/418/5/ENG_CD_1625999_AH2-686901.pdf" H 6
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Relay:DIPxx-1Axx-11x K1
+L Relay:DIPxx-1Axx-11x K?
 U 1 1 608D0328
 P 3450 5750
-F 0 "K1" V 2883 5750 50  0000 C CNN
+F 0 "K?" V 2883 5750 50  0000 C CNN
 F 1 "AIR-: GX14" V 2974 5750 50  0000 C CNN
 F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 3800 5700 50  0001 L CNN
 F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/gx14.pdf" H 3450 5750 50  0001 C CNN
@@ -36,10 +36,10 @@ F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/gx14.pdf" H 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:DIPxx-1Axx-11x K54
+L Relay:DIPxx-1Axx-11x K?
 U 1 1 608D24D5
 P 4650 3750
-F 0 "K54" V 4083 3750 50  0000 C CNN
+F 0 "K?" V 4083 3750 50  0000 C CNN
 F 1 "AIR+: GX14" V 4174 3750 50  0000 C CNN
 F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 5000 3700 50  0001 L CNN
 F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/gx14.pdf" H 4650 3750 50  0001 C CNN
@@ -47,10 +47,10 @@ F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/gx14.pdf" H 
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Fuse F203
+L Device:Fuse F?
 U 1 1 608D366E
 P 2400 3950
-F 0 "F203" V 2203 3950 50  0000 C CNN
+F 0 "F?" V 2203 3950 50  0000 C CNN
 F 1 "TS Fuse: 200A" V 2294 3950 50  0000 C CNN
 F 2 "" V 2330 3950 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/240/L50QS_High_Speed_Fuse_Datasheet-1102248.pdf" H 2400 3950 50  0001 C CNN
@@ -58,10 +58,10 @@ F 3 "https://www.mouser.com/datasheet/2/240/L50QS_High_Speed_Fuse_Datasheet-1102
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R12
+L Device:R R?
 U 1 1 608CEF02
 P 7000 4450
-F 0 "R12" H 6650 4550 50  0000 C CNN
+F 0 "R?" H 6650 4550 50  0000 C CNN
 F 1 "DCharge: 3.3K" H 6650 4450 50  0000 C CNN
 F 2 "" V 6930 4450 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/418/3/NG_CS_1309350_PASSIVE_COMPONENT_0807-1235206.pdf" H 7000 4450 50  0001 C CNN
@@ -69,10 +69,10 @@ F 3 "https://www.mouser.com/datasheet/2/418/3/NG_CS_1309350_PASSIVE_COMPONENT_08
 	1    0    0    -1  
 $EndComp
 $Comp
-L Relay:MSxx-1Bxx-75 K55
+L Relay:MSxx-1Bxx-75 K?
 U 1 1 608D570D
 P 5600 5000
-F 0 "K55" V 5033 5000 50  0000 C CNN
+F 0 "K?" V 5033 5000 50  0000 C CNN
 F 1 "DCharge: PNC113" V 5124 5000 50  0000 C CNN
 F 2 "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB" H 5950 4950 50  0001 L CNN
 F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/PNC113_DATASHEET_rev_C.pdf" H 5600 5000 50  0001 C CNN
@@ -80,10 +80,10 @@ F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/PNC113_DATAS
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R13
+L Device:R R?
 U 1 1 60827E73
 P 8950 3500
-F 0 "R13" H 8880 3454 50  0000 R CNN
+F 0 "R?" H 8880 3454 50  0000 R CNN
 F 1 "TSMP+: 10K" H 8880 3545 50  0000 R CNN
 F 2 "" V 8880 3500 50  0001 C CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7F1773035%7FC%7Fpdf%7FEnglish%7FENG_DS_1773035_C.pdf%7F1625984-3" H 8950 3500 50  0001 C CNN
@@ -91,10 +91,10 @@ F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&D
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:R R16
+L Device:R R?
 U 1 1 608282DF
 P 9050 3500
-F 0 "R16" H 8980 3454 50  0000 R CNN
+F 0 "R?" H 8980 3454 50  0000 R CNN
 F 1 "TSMP-: 10K" H 8980 3545 50  0000 R CNN
 F 2 "" V 8980 3500 50  0001 C CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7F1773035%7FC%7Fpdf%7FEnglish%7FENG_DS_1773035_C.pdf%7F1625984-3" H 9050 3500 50  0001 C CNN
@@ -107,7 +107,7 @@ U 1 1 6082A419
 P 7400 5250
 AR Path="/5F45B05E/6082A419" Ref="U?"  Part="1" 
 AR Path="/5F45B05E/6082840F/6082A419" Ref="U5"  Part="1" 
-F 0 "U5" V 6950 4700 50  0000 C CNN
+F 0 "U?" V 6950 4700 50  0000 C CNN
 F 1 "OrionCurrentSens" V 6850 4700 50  0000 C CNN
 F 2 "" H 7400 5250 50  0001 C CNN
 F 3 "" H 7400 5250 50  0001 C CNN
@@ -230,10 +230,10 @@ Wire Bus Line
 Wire Wire Line
 	7950 2450 7950 2800
 $Comp
-L Device:Fuse F204
+L Device:Fuse F?
 U 1 1 608289D7
 P 7850 2950
-F 0 "F204" H 7650 3050 50  0000 C CNN
+F 0 "F?" H 7650 3050 50  0000 C CNN
 F 1 "IMD Fuse+: 0.5A" H 7450 2950 50  0000 C CNN
 F 2 "" V 7780 2950 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/240/Littelfuse_Fuse_477_Datasheet_pdf-555535.pdf" H 7850 2950 50  0001 C CNN
@@ -241,10 +241,10 @@ F 3 "https://www.mouser.com/datasheet/2/240/Littelfuse_Fuse_477_Datasheet_pdf-55
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Fuse F205
+L Device:Fuse F?
 U 1 1 608D8D1E
 P 7950 2950
-F 0 "F205" H 7750 3050 50  0000 C CNN
+F 0 "F?" H 7750 3050 50  0000 C CNN
 F 1 "IMD Fuse-: 0.5A" H 7550 2950 50  0000 C CNN
 F 2 "" V 7880 2950 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/240/Littelfuse_Fuse_477_Datasheet_pdf-555535.pdf" H 7950 2950 50  0001 C CNN
@@ -308,10 +308,10 @@ Wire Wire Line
 Text HLabel 5300 2450 2    50   Input ~ 0
 PCharge_SigL
 $Comp
-L Relay:DIPxx-1Axx-11x K53
+L Relay:DIPxx-1Axx-11x K?
 U 1 1 608D1508
 P 4650 2650
-F 0 "K53" V 4083 2650 50  0000 C CNN
+F 0 "K?" V 4083 2650 50  0000 C CNN
 F 1 "PCharge: P105BDA" V 4174 2650 50  0000 C CNN
 F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 5000 2600 50  0001 L CNN
 F 3 "https://dc-components.com/wp-content/uploads/2019/02/p105.pdf" H 4650 2650 50  0001 C CNN
@@ -379,10 +379,10 @@ Text Notes 9550 1800 2    50   ~ 0
 Text Notes 9550 1200 2    50   ~ 0
 2x ??AWG
 $Comp
-L Device:Fuse F202
+L Device:Fuse F?
 U 1 1 6091E6DC
 P 1850 2950
-F 0 "F202" H 1700 3050 50  0000 C CNN
+F 0 "F?" H 1700 3050 50  0000 C CNN
 F 1 "TSAL Fuse-: ??A" H 1450 2950 50  0000 C CNN
 F 2 "" V 1780 2950 50  0001 C CNN
 F 3 "~" H 1850 2950 50  0001 C CNN
@@ -390,10 +390,10 @@ F 3 "~" H 1850 2950 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:Fuse F201
+L Device:Fuse F?
 U 1 1 6091E6D6
 P 1750 2950
-F 0 "F201" H 1600 3050 50  0000 C CNN
+F 0 "F?" H 1600 3050 50  0000 C CNN
 F 1 "TSAL Fuse+: ??A" H 1350 2950 50  0000 C CNN
 F 2 "" V 1680 2950 50  0001 C CNN
 F 3 "~" H 1750 2950 50  0001 C CNN

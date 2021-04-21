@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 4 27
+Sheet 4 25
 Title "LV_Plate"
 Date "2021-04-19"
 Rev "1.0"
@@ -41,7 +41,6 @@ NoConn ~ 11300 2750
 NoConn ~ 11300 2850
 NoConn ~ 11300 3250
 NoConn ~ 11300 3350
-NoConn ~ 11300 3450
 NoConn ~ 11300 3550
 NoConn ~ 11300 3950
 NoConn ~ 11300 4050
@@ -361,24 +360,6 @@ Wire Wire Line
 	5000 2650 5200 2650
 Wire Wire Line
 	5000 2750 5200 2750
-Wire Bus Line
-	5300 2850 10150 2850
-Entry Wire Line
-	10250 3750 10150 3650
-Entry Wire Line
-	10250 3650 10150 3550
-Wire Wire Line
-	11300 3850 10250 3850
-Wire Wire Line
-	11300 3750 10250 3750
-Wire Wire Line
-	11300 3650 10250 3650
-Wire Wire Line
-	10350 3150 11300 3150
-Wire Wire Line
-	10350 2350 10350 3150
-Wire Wire Line
-	5000 2350 10350 2350
 Wire Wire Line
 	5000 2250 11300 2250
 Wire Wire Line
@@ -411,8 +392,6 @@ Wire Bus Line
 	5300 3550 6850 3550
 Wire Bus Line
 	8850 3550 8850 4950
-Entry Wire Line
-	10250 3850 10150 3750
 Entry Wire Line
 	8850 4950 8750 5050
 Wire Wire Line
@@ -664,6 +643,18 @@ Text HLabel 4050 9200 2    50   Input ~ 0
 TSAL_BATT-
 Text HLabel 4050 9100 2    50   Input ~ 0
 TSAL_BATT+
+Text HLabel 11300 4350 0    50   Input ~ 0
+BattFanPWM
+Text HLabel 11300 2950 0    50   Input ~ 0
+RadFan
+Wire Wire Line
+	5000 2350 10350 2350
+Wire Wire Line
+	10350 2350 10350 3150
+Wire Wire Line
+	10350 3150 11300 3150
+Wire Bus Line
+	13600 2650 13600 3450
 Wire Bus Line
 	13750 2550 13750 3350
 Wire Bus Line
@@ -673,16 +664,6 @@ Wire Bus Line
 Wire Bus Line
 	13500 4150 13500 4450
 Wire Bus Line
-	10150 2850 10150 3750
-Wire Bus Line
-	13600 2650 13600 3450
-Wire Bus Line
-	11000 5100 11000 6850
-Wire Bus Line
-	13650 4650 13650 6150
-Wire Bus Line
-	13500 4550 13500 5200
-Wire Bus Line
 	9000 5450 9000 7550
 Wire Bus Line
 	8850 6500 8850 7650
@@ -690,8 +671,28 @@ Wire Bus Line
 	6650 5450 6650 7850
 Wire Bus Line
 	6850 6500 6850 7750
-Text HLabel 11300 4350 0    50   Input ~ 0
-BattFanPWM
-Text HLabel 11300 2950 0    50   Input ~ 0
-RadFan
+Wire Bus Line
+	11000 5100 11000 6850
+Wire Bus Line
+	13650 4650 13650 6150
+Wire Bus Line
+	13500 4550 13500 5200
+Wire Bus Line
+	5300 2850 10150 2850
+Entry Wire Line
+	10250 3750 10150 3650
+Entry Wire Line
+	10250 3650 10150 3550
+Wire Wire Line
+	11300 3850 10250 3850
+Wire Wire Line
+	11300 3750 10250 3750
+Wire Wire Line
+	11300 3650 10250 3650
+Entry Wire Line
+	10250 3850 10150 3750
+Wire Bus Line
+	10150 2850 10150 3750
+Text HLabel 11300 3450 0    50   Input ~ 0
+BMSFanSig
 $EndSCHEMATC

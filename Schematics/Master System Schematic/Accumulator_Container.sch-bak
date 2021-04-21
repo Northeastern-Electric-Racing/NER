@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 3 27
+Sheet 9 25
 Title "Accumulator Container"
 Date "2021-04-20"
 Rev "7"
@@ -65,6 +65,8 @@ F45 "BattFan12V" I L 12050 6850 50
 F46 "BattFanGND" I L 12050 6950 50 
 F47 "BMSFan12V" I R 14050 6850 50 
 F48 "BMSFanGND" I R 14050 6950 50 
+F49 "TSAL_LED+" I L 12050 5400 50 
+F50 "TSAL_LED-" I L 12050 5500 50 
 $EndSheet
 $Sheet
 S 7000 4000 2000 4000
@@ -288,31 +290,7 @@ Text Notes 10950 4500 0    50   ~ 0
 Text Notes 10950 5750 0    50   ~ 0
 ??AWG
 Wire Wire Line
-	3850 4450 4500 4450
-Wire Wire Line
-	3850 4550 4500 4550
-Wire Wire Line
 	3850 5100 3850 5200
-Wire Wire Line
-	3850 5100 4500 5100
-Wire Wire Line
-	3850 5200 4500 5200
-Wire Wire Line
-	3850 5750 4500 5750
-Wire Wire Line
-	3850 5850 4500 5850
-Text HLabel 4500 4450 2    50   Input ~ 0
-SMD_1+
-Text HLabel 4500 4550 2    50   Input ~ 0
-SMD_1-
-Text HLabel 4500 5100 2    50   Input ~ 0
-HVD+
-Text HLabel 4500 5200 2    50   Input ~ 0
-HVD-
-Text HLabel 4500 5750 2    50   Input ~ 0
-SMD_2+
-Text HLabel 4500 5850 2    50   Input ~ 0
-SMD_2-
 Text Notes 9150 7600 0    50   ~ 0
 2AWG
 Wire Wire Line
@@ -324,10 +302,10 @@ TS-
 Text HLabel 10000 7600 2    50   Output ~ 0
 TS+
 $Comp
-L NER:2-Pos_Generic J31
+L NER:2-Pos_Generic J?
 U 1 1 6102FC5C
 P 9750 7500
-F 0 "J31" H 9750 7625 50  0000 C CNN
+F 0 "J?" H 9750 7625 50  0000 C CNN
 F 1 "Main TS Connector" H 9750 7534 50  0000 C CNN
 F 2 "" H 9750 7500 50  0001 C CNN
 F 3 "" H 9750 7500 50  0001 C CNN
@@ -435,6 +413,7 @@ U 1 1 609373E5
 P 1250 9450
 AR Path="/609373E5" Ref="M?"  Part="1" 
 AR Path="/5F45B05E/609373E5" Ref="M?"  Part="1" 
+AR Path="/60C39CCE/609373E5" Ref="M?"  Part="1" 
 F 0 "M?" H 1408 9546 50  0000 L CNN
 F 1 "Fan_4pin" H 1408 9455 50  0000 L CNN
 F 2 "" H 1250 9460 50  0001 C CNN
@@ -448,6 +427,7 @@ U 1 1 609373DF
 P 2300 9450
 AR Path="/609373DF" Ref="M?"  Part="1" 
 AR Path="/5F45B05E/609373DF" Ref="M?"  Part="1" 
+AR Path="/60C39CCE/609373DF" Ref="M?"  Part="1" 
 F 0 "M?" H 2458 9546 50  0000 L CNN
 F 1 "Fan_4pin" H 2458 9455 50  0000 L CNN
 F 2 "" H 2300 9460 50  0001 C CNN
@@ -461,6 +441,7 @@ U 1 1 609373D9
 P 3350 9450
 AR Path="/609373D9" Ref="M?"  Part="1" 
 AR Path="/5F45B05E/609373D9" Ref="M?"  Part="1" 
+AR Path="/60C39CCE/609373D9" Ref="M?"  Part="1" 
 F 0 "M?" H 3508 9546 50  0000 L CNN
 F 1 "Fan_4pin" H 3508 9455 50  0000 L CNN
 F 2 "" H 3350 9460 50  0001 C CNN
@@ -474,6 +455,7 @@ U 1 1 609373D3
 P 4400 9450
 AR Path="/609373D3" Ref="M?"  Part="1" 
 AR Path="/5F45B05E/609373D3" Ref="M?"  Part="1" 
+AR Path="/60C39CCE/609373D3" Ref="M?"  Part="1" 
 F 0 "M?" H 4558 9546 50  0000 L CNN
 F 1 "Fan_4pin" H 4558 9455 50  0000 L CNN
 F 2 "" H 4400 9460 50  0001 C CNN
@@ -487,6 +469,7 @@ U 1 1 609373CD
 P 4400 8650
 AR Path="/609373CD" Ref="M?"  Part="1" 
 AR Path="/5F45B05E/609373CD" Ref="M?"  Part="1" 
+AR Path="/60C39CCE/609373CD" Ref="M?"  Part="1" 
 F 0 "M?" H 4557 8654 50  0000 L CNN
 F 1 "Fan_4pin" H 4557 8745 50  0000 L CNN
 F 2 "" H 4400 8660 50  0001 C CNN
@@ -500,6 +483,7 @@ U 1 1 609373C7
 P 3350 8650
 AR Path="/609373C7" Ref="M?"  Part="1" 
 AR Path="/5F45B05E/609373C7" Ref="M?"  Part="1" 
+AR Path="/60C39CCE/609373C7" Ref="M?"  Part="1" 
 F 0 "M?" H 3507 8654 50  0000 L CNN
 F 1 "Fan_4pin" H 3507 8745 50  0000 L CNN
 F 2 "" H 3350 8660 50  0001 C CNN
@@ -513,6 +497,7 @@ U 1 1 609373C1
 P 2300 8650
 AR Path="/609373C1" Ref="M?"  Part="1" 
 AR Path="/5F45B05E/609373C1" Ref="M?"  Part="1" 
+AR Path="/60C39CCE/609373C1" Ref="M?"  Part="1" 
 F 0 "M?" H 2457 8654 50  0000 L CNN
 F 1 "Fan_4pin" H 2457 8745 50  0000 L CNN
 F 2 "" H 2300 8660 50  0001 C CNN
@@ -526,6 +511,7 @@ U 1 1 609373BB
 P 1250 8650
 AR Path="/609373BB" Ref="M?"  Part="1" 
 AR Path="/5F45B05E/609373BB" Ref="M?"  Part="1" 
+AR Path="/60C39CCE/609373BB" Ref="M?"  Part="1" 
 F 0 "M?" H 1407 8654 50  0000 L CNN
 F 1 "Fan_4pin" H 1407 8745 50  0000 L CNN
 F 2 "" H 1250 8660 50  0001 C CNN
@@ -629,5 +615,39 @@ Wire Wire Line
 Text Notes 12450 8150 0    157  ~ 0
 BMS Fans
 Text Notes 14250 6850 0    50   ~ 0
+??AWG
+Text HLabel 5950 5850 2    50   Input ~ 0
+SMD_2-
+Text HLabel 5950 5750 2    50   Input ~ 0
+SMD_2+
+Text HLabel 5950 5200 2    50   Input ~ 0
+HVD-
+Text HLabel 5950 5100 2    50   Input ~ 0
+HVD+
+Text HLabel 5950 4550 2    50   Input ~ 0
+SMD_1-
+Text HLabel 5950 4450 2    50   Input ~ 0
+SMD_1+
+Wire Wire Line
+	3850 5850 5950 5850
+Wire Wire Line
+	3850 5750 5950 5750
+Wire Wire Line
+	3850 5200 5950 5200
+Wire Wire Line
+	3850 5100 5950 5100
+Wire Wire Line
+	3850 4550 5950 4550
+Wire Wire Line
+	3850 4450 5950 4450
+Text HLabel 10150 5400 0    50   Input ~ 0
+TSAL_LED+
+Text HLabel 10150 5500 0    50   Input ~ 0
+TSAL_LED-
+Wire Wire Line
+	10150 5400 12050 5400
+Wire Wire Line
+	12050 5500 10150 5500
+Text Notes 10950 5400 0    50   ~ 0
 ??AWG
 $EndSCHEMATC
