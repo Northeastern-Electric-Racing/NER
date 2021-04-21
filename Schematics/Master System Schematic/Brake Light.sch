@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 17 40
+Sheet 17 27
 Title "Brake Light CAN Box"
 Date "2020-11-01"
 Rev "2"

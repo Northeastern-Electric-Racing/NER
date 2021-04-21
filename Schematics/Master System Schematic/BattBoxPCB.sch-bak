@@ -3,10 +3,10 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 18 40
-Title ""
-Date ""
-Rev ""
+Sheet 19 27
+Title "BattBox PCB"
+Date "2021-04-20"
+Rev "1.0"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -22,62 +22,62 @@ Shutdown_12V
 $Comp
 L NER:2-Pos_Generic J?
 U 1 1 60881D3A
-P 8950 3750
-F 0 "J?" H 8950 3875 50  0000 C CNN
-F 1 "AIR+" H 8950 3784 50  0000 C CNN
-F 2 "" H 8950 3750 50  0001 C CNN
-F 3 "" H 8950 3750 50  0001 C CNN
-	1    8950 3750
+P 5600 5200
+F 0 "J?" H 5600 5325 50  0000 C CNN
+F 1 "AIR+" H 5600 5234 50  0000 C CNN
+F 2 "" H 5600 5200 50  0001 C CNN
+F 3 "" H 5600 5200 50  0001 C CNN
+	1    5600 5200
 	-1   0    0    -1  
 $EndComp
 $Comp
 L NER:2-Pos_Generic J?
 U 1 1 60883B2A
-P 8950 4300
-F 0 "J?" H 8950 4425 50  0000 C CNN
-F 1 "AIR-" H 8950 4334 50  0000 C CNN
-F 2 "" H 8950 4300 50  0001 C CNN
-F 3 "" H 8950 4300 50  0001 C CNN
-	1    8950 4300
+P 5600 5750
+F 0 "J?" H 5600 5875 50  0000 C CNN
+F 1 "AIR-" H 5600 5784 50  0000 C CNN
+F 2 "" H 5600 5750 50  0001 C CNN
+F 3 "" H 5600 5750 50  0001 C CNN
+	1    5600 5750
 	-1   0    0    -1  
 $EndComp
 $Comp
 L NER:2-Pos_Generic J?
 U 1 1 60883FAA
-P 8950 4850
-F 0 "J?" H 8950 4975 50  0000 C CNN
-F 1 "DCharge" H 8950 4884 50  0000 C CNN
-F 2 "" H 8950 4850 50  0001 C CNN
-F 3 "" H 8950 4850 50  0001 C CNN
-	1    8950 4850
+P 5600 6300
+F 0 "J?" H 5600 6425 50  0000 C CNN
+F 1 "DCharge" H 5600 6334 50  0000 C CNN
+F 2 "" H 5600 6300 50  0001 C CNN
+F 3 "" H 5600 6300 50  0001 C CNN
+	1    5600 6300
 	-1   0    0    -1  
 $EndComp
 $Comp
 L NER:2-Pos_Generic J?
 U 1 1 60884497
-P 8950 5400
-F 0 "J?" H 8950 5525 50  0000 C CNN
-F 1 "PCharge" H 8950 5434 50  0000 C CNN
-F 2 "" H 8950 5400 50  0001 C CNN
-F 3 "" H 8950 5400 50  0001 C CNN
-	1    8950 5400
+P 5600 6850
+F 0 "J?" H 5600 6975 50  0000 C CNN
+F 1 "PCharge" H 5600 6884 50  0000 C CNN
+F 2 "" H 5600 6850 50  0001 C CNN
+F 3 "" H 5600 6850 50  0001 C CNN
+	1    5600 6850
 	-1   0    0    -1  
 $EndComp
-Text HLabel 9200 3850 2    50   Input ~ 0
+Text HLabel 5850 5300 2    50   Input ~ 0
 AIR+_SigH
-Text HLabel 9200 3950 2    50   Input ~ 0
+Text HLabel 5850 5400 2    50   Input ~ 0
 AIR+_SigL
-Text HLabel 9200 4400 2    50   Input ~ 0
+Text HLabel 5850 5850 2    50   Input ~ 0
 AIR-_SigH
-Text HLabel 9200 4500 2    50   Input ~ 0
+Text HLabel 5850 5950 2    50   Input ~ 0
 AIR-_SigL
-Text HLabel 9200 4950 2    50   Input ~ 0
+Text HLabel 5850 6400 2    50   Input ~ 0
 DCharge-_SigH
-Text HLabel 9200 5050 2    50   Input ~ 0
+Text HLabel 5850 6500 2    50   Input ~ 0
 DCharge-_SigL
-Text HLabel 9200 5500 2    50   Input ~ 0
+Text HLabel 5850 6950 2    50   Input ~ 0
 PCharge-_SigH
-Text HLabel 9200 5600 2    50   Input ~ 0
+Text HLabel 5850 7050 2    50   Input ~ 0
 PCharge-_SigL
 $Comp
 L NER:2-Pos_Generic J?
@@ -88,17 +88,6 @@ F 1 "ThermEx_PWR" H 8950 2284 50  0000 C CNN
 F 2 "" H 8950 2250 50  0001 C CNN
 F 3 "" H 8950 2250 50  0001 C CNN
 	1    8950 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L NER:2-Pos_Generic J?
-U 1 1 6088A8C0
-P 8950 2850
-F 0 "J?" H 8950 2975 50  0000 C CNN
-F 1 "IMD_PWR" H 8950 2884 50  0000 C CNN
-F 2 "" H 8950 2850 50  0001 C CNN
-F 3 "" H 8950 2850 50  0001 C CNN
-	1    8950 2850
 	1    0    0    -1  
 $EndComp
 Text HLabel 9200 1650 2    50   Input ~ 0
@@ -173,77 +162,77 @@ $EndComp
 $Comp
 L NER:3-Pos_Generic J?
 U 1 1 608A0369
-P 2150 3750
-F 0 "J?" H 2150 3875 50  0000 C CNN
-F 1 "THERM_CAN" H 2150 3784 50  0000 C CNN
-F 2 "" H 2150 3750 50  0001 C CNN
-F 3 "" H 2150 3750 50  0001 C CNN
-	1    2150 3750
+P 2150 4650
+F 0 "J?" H 2150 4775 50  0000 C CNN
+F 1 "THERM_CAN" H 2150 4684 50  0000 C CNN
+F 2 "" H 2150 4650 50  0001 C CNN
+F 3 "" H 2150 4650 50  0001 C CNN
+	1    2150 4650
 	1    0    0    -1  
 $EndComp
 $Comp
 L NER:3-Pos_Generic J?
 U 1 1 608A1290
-P 2150 4400
-F 0 "J?" H 2150 4525 50  0000 C CNN
-F 1 "BMS_CAN" H 2150 4434 50  0000 C CNN
-F 2 "" H 2150 4400 50  0001 C CNN
-F 3 "" H 2150 4400 50  0001 C CNN
-	1    2150 4400
+P 2150 5300
+F 0 "J?" H 2150 5425 50  0000 C CNN
+F 1 "BMS_CAN" H 2150 5334 50  0000 C CNN
+F 2 "" H 2150 5300 50  0001 C CNN
+F 3 "" H 2150 5300 50  0001 C CNN
+	1    2150 5300
 	1    0    0    -1  
 $EndComp
 $Comp
 L NER:3-Pos_Generic J?
 U 1 1 608A1AB1
-P 2150 3100
-F 0 "J?" H 2150 3225 50  0000 C CNN
-F 1 "MAIN_CAN" H 2150 3134 50  0000 C CNN
-F 2 "" H 2150 3100 50  0001 C CNN
-F 3 "" H 2150 3100 50  0001 C CNN
-	1    2150 3100
+P 2150 4000
+F 0 "J?" H 2150 4125 50  0000 C CNN
+F 1 "MAIN_CAN" H 2150 4034 50  0000 C CNN
+F 2 "" H 2150 4000 50  0001 C CNN
+F 3 "" H 2150 4000 50  0001 C CNN
+	1    2150 4000
 	1    0    0    -1  
 $EndComp
-Text HLabel 1900 3200 0    50   Input ~ 0
+Text HLabel 1900 4100 0    50   Input ~ 0
 GLV_CANH
-Text HLabel 1900 3300 0    50   Input ~ 0
+Text HLabel 1900 4200 0    50   Input ~ 0
 GLV_CANL
-Text HLabel 1900 3400 0    50   Input ~ 0
+Text HLabel 1900 4300 0    50   Input ~ 0
 GLV_CANS
-Text HLabel 1900 3850 0    50   Input ~ 0
+Text HLabel 1900 4750 0    50   Input ~ 0
 THRM_CANH
-Text HLabel 1900 3950 0    50   Input ~ 0
+Text HLabel 1900 4850 0    50   Input ~ 0
 THRM_CANL
-Text HLabel 1900 4050 0    50   Input ~ 0
+Text HLabel 1900 4950 0    50   Input ~ 0
 THRM_CANS
-Text HLabel 1900 4500 0    50   Input ~ 0
+Text HLabel 1900 5400 0    50   Input ~ 0
 BMS_CANH
-Text HLabel 1900 4600 0    50   Input ~ 0
+Text HLabel 1900 5500 0    50   Input ~ 0
 BMS_CANL
-Text HLabel 1900 4700 0    50   Input ~ 0
+Text HLabel 1900 5600 0    50   Input ~ 0
 BMS_CANS
 Wire Wire Line
-	2400 3400 2550 3400
+	2400 4300 2550 4300
 Wire Wire Line
-	2550 3400 2550 4050
+	2550 4300 2550 4950
 Wire Wire Line
-	2400 4700 2550 4700
-Connection ~ 2550 4700
+	2400 5600 2550 5600
+Connection ~ 2550 5600
 Wire Wire Line
-	2550 4700 2550 4950
+	2550 5600 2550 5850
 Wire Wire Line
-	2400 4050 2550 4050
-Connection ~ 2550 4050
+	2400 4950 2550 4950
+Connection ~ 2550 4950
 Wire Wire Line
-	2550 4050 2550 4700
+	2550 4950 2550 5600
 $Comp
 L power:GND #PWR?
 U 1 1 608A5D0A
-P 2550 4950
-F 0 "#PWR?" H 2550 4700 50  0001 C CNN
-F 1 "GND" H 2555 4777 50  0000 C CNN
-F 2 "" H 2550 4950 50  0001 C CNN
-F 3 "" H 2550 4950 50  0001 C CNN
-	1    2550 4950
+P 2550 5850
+F 0 "#PWR?" H 2550 5600 50  0001 C CNN
+F 1 "GND" H 2555 5677 50  0000 C CNN
+F 2 "" H 2550 5850 50  0001 C CNN
+F 3 "" H 2550 5850 50  0001 C CNN
+	1    2550 5850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -260,36 +249,36 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 608A67E2
-P 8700 3050
-F 0 "#PWR?" H 8700 2800 50  0001 C CNN
-F 1 "GND" H 8705 2877 50  0000 C CNN
-F 2 "" H 8700 3050 50  0001 C CNN
-F 3 "" H 8700 3050 50  0001 C CNN
-	1    8700 3050
+P 8550 3050
+F 0 "#PWR?" H 8550 2800 50  0001 C CNN
+F 1 "GND" H 8555 2877 50  0000 C CNN
+F 2 "" H 8550 3050 50  0001 C CNN
+F 3 "" H 8550 3050 50  0001 C CNN
+	1    8550 3050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2400 3300 2650 3300
+	2400 4200 2650 4200
 Wire Wire Line
-	2650 3300 2650 3950
+	2650 4200 2650 4850
 Wire Wire Line
-	2650 3950 2400 3950
+	2650 4850 2400 4850
 Wire Wire Line
-	2650 3950 2650 4600
+	2650 4850 2650 5500
 Wire Wire Line
-	2650 4600 2400 4600
-Connection ~ 2650 3950
+	2650 5500 2400 5500
+Connection ~ 2650 4850
 Wire Wire Line
-	2400 3200 2750 3200
+	2400 4100 2750 4100
 Wire Wire Line
-	2750 3200 2750 3850
+	2750 4100 2750 4750
 Wire Wire Line
-	2750 3850 2400 3850
+	2750 4750 2400 4750
 Wire Wire Line
-	2750 3850 2750 4500
+	2750 4750 2750 5400
 Wire Wire Line
-	2750 4500 2400 4500
-Connection ~ 2750 3850
+	2750 5400 2400 5400
+Connection ~ 2750 4750
 $Comp
 L NER:3-Pos_Generic J?
 U 1 1 608C3AD8
@@ -312,21 +301,40 @@ F 3 "" H 8700 1850 50  0001 C CNN
 	1    8700 1850
 	1    0    0    -1  
 $EndComp
-$Comp
-L NER:3-Pos_Generic J?
-U 1 1 61825C1A
-P 2150 2300
-F 0 "J?" H 2150 2425 50  0000 C CNN
-F 1 "MC_SIG" H 2150 2334 50  0000 C CNN
-F 2 "" H 2150 2300 50  0001 C CNN
-F 3 "" H 2150 2300 50  0001 C CNN
-	1    2150 2300
-	1    0    0    -1  
-$EndComp
 Text HLabel 1900 2400 0    50   Input ~ 0
 MC_Precharge+
 Text HLabel 1900 2500 0    50   Input ~ 0
 MC_AIR+
 Text HLabel 1900 2600 0    50   Input ~ 0
 CHRG_12V
+$Comp
+L NER:7-Pos_Generic J?
+U 1 1 608C6250
+P 8950 2850
+F 0 "J?" H 8950 2975 50  0000 C CNN
+F 1 "7-Pos_Generic" H 8950 2884 50  0000 C CNN
+F 2 "" H 8950 2850 50  0001 C CNN
+F 3 "" H 8950 2850 50  0001 C CNN
+	1    8950 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 3050 8700 3050
+Wire Wire Line
+	8550 2950 8700 2950
+Text HLabel 9200 3150 2    50   Input ~ 0
+IMD_Fault_IN
+$Comp
+L NER:4-Pos_Generic J?
+U 1 1 608E1079
+P 2150 2300
+F 0 "J?" H 2150 2425 50  0000 C CNN
+F 1 "4-Pos_Generic" H 2150 2334 50  0000 C CNN
+F 2 "" H 2150 2300 50  0001 C CNN
+F 3 "" H 2150 2300 50  0001 C CNN
+	1    2150 2300
+	1    0    0    -1  
+$EndComp
+Text HLabel 1900 2700 0    50   Input ~ 0
+IMD_Fault_OUT
 $EndSCHEMATC
