@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 17 23
+Sheet 17 25
 Title "Brake Light CAN Box"
 Date "2020-11-01"
 Rev "2"
@@ -148,12 +148,6 @@ Wire Wire Line
 	4100 3950 3350 3950
 Text HLabel 3350 3950 0    50   Input ~ 0
 CAN_SHIELD
-Wire Wire Line
-	5700 5400 8050 5400
-Text HLabel 8050 5400 2    50   Output ~ 0
-BattFanPWM1
-Text HLabel 8050 5500 2    50   Output ~ 0
-BattFanPWM2
 $Comp
 L NER:CAN_Bus_Module U13
 U 1 1 5F8C522E
@@ -217,16 +211,6 @@ Wire Wire Line
 	5900 3950 5300 3950
 Wire Wire Line
 	5900 4450 6900 4450
-Wire Wire Line
-	5700 5400 5700 4200
-Wire Wire Line
-	5700 4200 5300 4200
-Wire Wire Line
-	8050 5500 5600 5500
-Wire Wire Line
-	5600 5500 5600 4300
-Wire Wire Line
-	5600 4300 5300 4300
 $Comp
 L NER:SD_Card_Module U8
 U 1 1 6053C07D
