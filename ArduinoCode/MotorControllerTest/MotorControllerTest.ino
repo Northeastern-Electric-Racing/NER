@@ -22,6 +22,7 @@ MCP_CAN CAN(CAN_SS_PIN);
 bool isForward = true;
 bool isOn = false;
 unsigned int accelTorque = 0;
+unsigned long lastCommand = 0;
 
 /**
    Sets relavent pins to output or input, initializes serial for debugging, initializes CAN module
@@ -48,8 +49,9 @@ void loop() {
     serialIn = Serial.readStringUntil('\r');
   }
 
-  // send command message if MC is on
-  if (isOn) {
+  // send command message if MC is on and its been 50ms
+  if (isOn && (millis() - lastCommand) > 50) {
+    lastCommand = millis();
     unsigned char message[8] = {accelTorque,0,0,0,isForward,1,0,0};
     CAN.sendMsgBuf(CAN_MOTOR, 0, 8, message);
   }
