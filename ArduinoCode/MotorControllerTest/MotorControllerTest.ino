@@ -20,6 +20,7 @@ const unsigned char MOTOR_OFF[8] = {0, 0, 0, 0, 0, 0, 0, 0}; // message to turn 
 MCP_CAN CAN(CAN_SS_PIN);
 
 bool isForward = true;
+bool isOn = false;
 unsigned int accelTorque = 0;
 
 /**
@@ -35,19 +36,25 @@ void setup() {
   Serial.println(F("CAN BUS Shield Init OK!"));
   Serial.println(F("Please set your serial monitor to 'Both NL & CR' near the bottom. "));
   Serial.println(F("Type a numerical value between 0-255 to set the torque or"));
-  Serial.println(F("'reverse' to reverse the motor controller or 'off' to turn the motor controller off."));
+  Serial.println(F("'reverse' to change the direction or 'on'/'off' to turn the MC on or off."));
 }
 
 /**
    Prints incoming CAN messages to the Serial Monitor, allows user to send CAN messages via the Serial Monitor.
 */
-
 void loop() {
   String serialIn = "";
   while (Serial.available() > 0) {
     serialIn = Serial.readStringUntil('\r');
   }
 
+  // send command message if MC is on
+  if (isOn) {
+    unsigned char message[8] = {accelTorque,0,0,0,isForward,1,0,0};
+    CAN.sendMsgBuf(CAN_MOTOR, 0, 8, message);
+  }
+
+  // handle user input
   if (serialIn.length() > 0) {
     if (serialIn.equals("reverse")) {
       isForward = !isForward;
@@ -57,16 +64,19 @@ void loop() {
       } else{
         Serial.println(F("backwards"));
       }
-      unsigned char message[8] = {accelTorque,0,0,0,isForward,1,0,0};
-      CAN.sendMsgBuf(CAN_MOTOR, 0, 8, message); // send message to motor controller with torque and direction
-    } else if (serialIn.equals("off")) {
-      Serial.println(F("Turing off motor controller"));
+    } else if (serialIn.equals("on") && !isOn) {
+      Serial.println(F("Turning on motor controller"));
+      CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF); // release lockout
+      isOn = true;
+      isForward = true;
+      accelTorque = 0;
+    } else if (serialIn.equals("off") && isOn) {
+      Serial.println(F("Turning off motor controller"));
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
+      isOn = false;
     } else if (serialIn.equals("0") || (serialIn.toInt() > 0 && serialIn.toInt() <= 255)) {
       Serial.println("Setting torque value: " + serialIn);
       accelTorque = serialIn.toInt();
-      unsigned char message[8] = {accelTorque,0,0,0,isForward,1,0,0};
-      CAN.sendMsgBuf(CAN_MOTOR, 0, 8, message); // send message to motor controller with torque and direction
     }
   }
 
