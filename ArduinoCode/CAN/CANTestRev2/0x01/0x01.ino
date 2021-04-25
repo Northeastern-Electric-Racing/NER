@@ -10,8 +10,6 @@
 //    0-potentiometerValue
 
 #include <mcp_can.h>
-#include <mcp_can_dfs.h>
-#include <SPI.h>
 #include <LiquidCrystal.h>
 
 const int myCAN = 0x01; 

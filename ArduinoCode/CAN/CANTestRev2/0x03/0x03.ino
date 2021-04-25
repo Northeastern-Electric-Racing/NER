@@ -7,8 +7,6 @@
 //    0-change in potValue
 
 #include <mcp_can.h>
-#include <mcp_can_dfs.h>
-#include <SPI.h>
 
 
 const int myCAN = 0x03; 

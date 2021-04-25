@@ -1,3 +1,4 @@
+
 /*
    Author: Joshua Cheng
    Date: March 11, 2021
@@ -10,8 +11,6 @@
 
 */
 #include <mcp_can.h> // Uses Seeed-studio's CAN_BUS_Shield library.
-#include <mcp_can_dfs.h>
-#include <SPI.h>
 
 #define CAN_SS_PIN 10
 #define CAN_MOTOR 0xC0 // canID for msg to send to motor controller

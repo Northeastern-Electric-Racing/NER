@@ -2,8 +2,6 @@
 // Date: November 3, 2020
 
 #include <mcp_can.h> // uses seeed-studio's CAN_BUS_Shield library
-#include <mcp_can_dfs.h>
-#include <SPI.h>
 
 const int spiCSPin = 10; // Base CAN pin
 MCP_CAN CAN(spiCSPin); // Set CS pin
