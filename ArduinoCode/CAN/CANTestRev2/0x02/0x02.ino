@@ -14,8 +14,6 @@
 //    Note:
 
 #include <mcp_can.h>
-#include <mcp_can_dfs.h>
-#include <SPI.h>
 #include <SFE_MMA8452Q.h>
 
 const int canId = 0x02;

@@ -17,8 +17,6 @@
    This Arduino may miss CAN messages if it recieves 2+ messages while writing to the SD card.
 */
 #include <mcp_can.h> // Uses Seeed-studio's CAN_BUS_Shield library.
-#include <mcp_can_dfs.h>
-#include <SPI.h>
 
 #include <SD.h>
 #define SD_SS_PIN 4
@@ -52,8 +50,8 @@ bool SDWrite(String errors);
 void setup() {
   Serial.begin(9600);
 
-  pinMode(SD_CS_PIN, OUTPUT);
-  pinMode(CAN_CS_PIN, OUTPUT);
+  pinMode(SD_SS_PIN, OUTPUT);
+  pinMode(CAN_SS_PIN, OUTPUT);
   pinMode(BRAKE_LIGHT_PIN, OUTPUT);
 
   switchSDToCAN();
@@ -144,17 +142,6 @@ void switchSDToCAN() {
 void switchCANToSD() {
   digitalWrite(CAN_SS_PIN, HIGH);
   digitalWrite(SD_SS_PIN, LOW);
-}
-
-/**
-   Compiles errors, writes to SD every ERRORS_PER_SAVE errors
-
-/**
- * Deactivates CAN module and then activates SD module
- */
-void switchCANToSD() {
-  digitalWrite(CAN_CS_PIN, HIGH);
-  digitalWrite(SD_CS_PIN, LOW);
 }
 
 /**

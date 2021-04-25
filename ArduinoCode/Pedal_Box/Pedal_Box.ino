@@ -1,6 +1,4 @@
 #include <mcp_can.h>
-#include <mcp_can_dfs.h>
-#include <SPI.h>
 
 // sensor pins
 const int ACCEL_PIN1 = A0; 

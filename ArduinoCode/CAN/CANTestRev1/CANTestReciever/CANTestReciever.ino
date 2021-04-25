@@ -1,5 +1,4 @@
-#include <SPI.h>
-#include "mcp_can.h"
+#include <mcp_can.h>
 
 const int spiCSPin = 10;
 
