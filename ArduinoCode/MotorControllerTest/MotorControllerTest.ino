@@ -22,6 +22,7 @@ bool isForward = true;
 bool isOn = false;
 unsigned int accelTorque = 0;
 unsigned long lastCommand = 0;
+unsigned long lastReceivedMessage = 0;
 
 /**
    Sets relavent pins to output or input, initializes serial for debugging, initializes CAN module
@@ -81,20 +82,24 @@ void loop() {
     }
   }
 
-  if (CAN_MSGAVAIL == CAN.checkReceive()) { //if a new message has been recieved.
-    unsigned char len = 0; // Length of incoming message
-    unsigned char buf[8]; // Memory for incoming message
-    int canId; // Sender's ID
-    CAN.readMsgBuf(&len, buf); //enters message into program
-    canId = CAN.getCanId(); //gets sender ID
-
-    Serial.print(F("Message Recieved from CAN ID: "));
-    Serial.print(String(canId));
-    Serial.print(F("  |  message: "));
-    for (int i = 0; i < 8; i ++) {
-      Serial.print(String(buf[i]));
-      Serial.print(F(" | "));
+  // accept messages every 1 second 
+  if ((millis() - lastReceivedMessage) > 1000) {
+    lastReceivedMessage = millis();
+    if (CAN_MSGAVAIL == CAN.checkReceive()) { //if a new message has been recieved.
+      unsigned char len = 0; // Length of incoming message
+      unsigned char buf[8]; // Memory for incoming message
+      int canId; // Sender's ID
+      CAN.readMsgBuf(&len, buf); //enters message into program
+      canId = CAN.getCanId(); //gets sender ID
+  
+      Serial.print(F("Message Recieved from CAN ID: "));
+      Serial.print(String(canId));
+      Serial.print(F("  |  message: "));
+      for (int i = 0; i < 8; i ++) {
+        Serial.print(String(buf[i]));
+        Serial.print(F(" | "));
+      }
+      Serial.println();
     }
-    Serial.println();
   }
 }
