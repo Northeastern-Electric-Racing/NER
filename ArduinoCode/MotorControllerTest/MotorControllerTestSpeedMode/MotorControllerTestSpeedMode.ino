@@ -1,4 +1,3 @@
-
 /*
    Author: Joshua Cheng
    Date: March 11, 2021
@@ -7,7 +6,7 @@
    MOSI - pin 11
    MISO - pin 12
    CLK - pin 13
-   SS - pin 10
+   SS - pin 10  
 
 */
 #include <mcp_can.h> // Uses Seeed-studio's CAN_BUS_Shield library.
@@ -20,7 +19,7 @@ MCP_CAN CAN(CAN_SS_PIN);
 
 bool isForward = true;
 bool isOn = false;
-unsigned int accelTorque = 0;
+unsigned int speedCommand = 0;
 unsigned long lastCommand = 0;
 unsigned long lastReceivedMessage = 0;
 
@@ -36,7 +35,7 @@ void setup() {
   }
   Serial.println(F("CAN BUS Shield Init OK!"));
   Serial.println(F("Please set your serial monitor to 'Both NL & CR' near the bottom. "));
-  Serial.println(F("Type a numerical value between 0-255 to set the torque or"));
+  Serial.println(F("Type a numerical value between 0-255 to set the speed or"));
   Serial.println(F("'reverse' to change the direction or 'on'/'off' to turn the MC on or off."));
 }
 
@@ -51,8 +50,16 @@ void loop() {
 
   // send command message if MC is on and its been 50ms
   if ((millis() - lastCommand) > 50) {
-    lastCommand = millis();
-    unsigned char message[8] = {accelTorque,0,0,0,isForward,isOn,0,0};
+    lastCommand = millis();    
+    int settingsValue = 0;
+   
+    if (isOn) {
+      settingsValue = 5;
+    } else {
+      settingsValue = 4;
+    }
+    unsigned char message[8] = {0,0,speedCommand,0,isForward,settingsValue,0,0};
+
     CAN.sendMsgBuf(CAN_MOTOR, 0, 8, message);
     //Serial.print(F("Sending command message."));
   }
@@ -72,14 +79,14 @@ void loop() {
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF); // release lockout
       isOn = true;
       isForward = true;
-      accelTorque = 0;
+      speedCommand = 0;
     } else if (serialIn.equals("off") && isOn) {
       Serial.println(F("Turning off motor controller"));
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
       isOn = false;
     } else if (serialIn.equals("0") || (serialIn.toInt() > 0 && serialIn.toInt() <= 255)) {
-      Serial.println("Setting torque value: " + serialIn);
-      accelTorque = serialIn.toInt();
+      Serial.println("Setting speed value: " + serialIn);
+      speedCommand = serialIn.toInt();
     }
   }
 
