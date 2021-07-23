@@ -13,6 +13,7 @@
 #include <mcp_can.h> // Uses Seeed-studio's CAN_BUS_Shield library.
 
 #define CAN_SS_PIN 10
+#define HARD_TORQUE_LIMIT 10
 #define CAN_MOTOR 0xC0 // canID for msg to send to motor controller
 const unsigned char MOTOR_OFF[8] = {0, 0, 0, 0, 0, 0, 0, 0}; // message to turn motor off
 
@@ -75,7 +76,7 @@ void loop() {
       Serial.println(F("Turning off motor controller"));
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
       isOn = false;
-    } else if (serialIn.equals("0") || (serialIn.toInt() > 0 && serialIn.toInt() <= 255)) {
+    } else if (serialIn.equals("0") || (serialIn.toInt() > 0 && serialIn.toInt() <= HARD_TORQUE_LIMIT)) {
       Serial.println("Setting torque value: " + serialIn);
       accelTorque = serialIn.toInt();
     }
