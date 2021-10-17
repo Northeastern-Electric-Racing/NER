@@ -21,7 +21,8 @@ MCP_CAN CAN(CAN_SS_PIN);
 
 bool isForward = true;
 bool isOn = false;
-unsigned int accelTorque = 0;
+unsigned int accelTorqueLow = 0;
+unsigned int accelTorqueHigh = 0;
 unsigned long lastCommand = 0;
 
 /**
@@ -62,35 +63,32 @@ void loop() {
     } else if (serialIn.equals("on")) {
       Serial.println(F("Turning on motor controller"));
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF); // release lockout
-      if (!isOn) {
-        accelTorque = 0;
-      }
+      accelTorqueLow = 0;
+      accelTorqueHigh = 0;
       isOn = true;
-      isForward = true;
     } else if (serialIn.equals("off") && isOn) {
       Serial.println(F("Turning off motor controller"));
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
       isOn = false;
     } else if (serialIn.equals("0") || (serialIn.toInt() > 0 && serialIn.toInt() <= HARD_TORQUE_LIMIT)) {
       Serial.println("Setting torque value: " + serialIn);
-      accelTorque = serialIn.toInt();
+      accelTorqueLow = serialIn.toInt() % 256;
+      accelTorqueHigh = serialIn.toInt() / 256;
     }
   }
 
   // send command message if MC is on and its been 50ms
-  if (isOn && (millis() - lastCommand) > 50) {
+  if ((millis() - lastCommand) > 50) {
     lastCommand = millis();
-    unsigned char message[8] = {accelTorque,0,0,0,isForward,1,0,0};
+    unsigned char message[8] = {accelTorqueLow,accelTorqueHigh,0,0,isForward,isOn,0,0};
     CAN.sendMsgBuf(CAN_MOTOR, 0, 8, message);
   }
   
-  // send command message if MC is of and its been 50ms
+  // send command message if MC is off and its been 50ms
   if (!isOn && (millis() - lastCommand) > 50) {
     lastCommand = millis();
     CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
   }
-
-  
 
   if (CAN_MSGAVAIL == CAN.checkReceive()) { //if a new message has been recieved.
     unsigned char len = 0; // Length of incoming message
