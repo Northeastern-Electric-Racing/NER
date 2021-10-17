@@ -13,6 +13,7 @@
 #include <mcp_can.h> // Uses Seeed-studio's CAN_BUS_Shield library.
 
 #define CAN_SS_PIN 10
+#define HARD_TORQUE_LIMIT 1000
 #define CAN_MOTOR 0xC0 // canID for msg to send to motor controller
 const unsigned char MOTOR_OFF[8] = {0, 0, 0, 0, 0, 0, 0, 0}; // message to turn motor off
 
@@ -49,13 +50,6 @@ void loop() {
     serialIn = Serial.readStringUntil('\r');
   }
 
-  // send command message if MC is on and its been 50ms
-  if (isOn && (millis() - lastCommand) > 50) {
-    lastCommand = millis();
-    unsigned char message[8] = {accelTorque,0,0,0,isForward,1,0,0};
-    CAN.sendMsgBuf(CAN_MOTOR, 0, 8, message);
-  }
-
   // handle user input
   if (serialIn.length() > 0) {
     if (serialIn.equals("reverse")) {
@@ -66,30 +60,23 @@ void loop() {
       } else{
         Serial.println(F("backwards"));
       }
-    } else if (serialIn.equals("on") && !isOn) {
+    } else if (serialIn.equals("on")) {
       Serial.println(F("Turning on motor controller"));
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF); // release lockout
-<<<<<<< Updated upstream
-=======
       accelTorqueLow = 0;
       accelTorqueHigh = 0;
->>>>>>> Stashed changes
       isOn = true;
-      isForward = true;
-      accelTorque = 0;
     } else if (serialIn.equals("off") && isOn) {
       Serial.println(F("Turning off motor controller"));
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
       isOn = false;
-    } else if (serialIn.equals("0") || (serialIn.toInt() > 0 && serialIn.toInt() <= 255)) {
+    } else if (serialIn.equals("0") || (serialIn.toInt() > 0 && serialIn.toInt() <= HARD_TORQUE_LIMIT)) {
       Serial.println("Setting torque value: " + serialIn);
       accelTorqueLow = serialIn.toInt() % 256;
       accelTorqueHigh = serialIn.toInt() / 256;
     }
   }
 
-<<<<<<< Updated upstream
-=======
   // send command message if MC is on and its been 50ms
   if ((millis() - lastCommand) > 50) {
     lastCommand = millis();
@@ -97,15 +84,12 @@ void loop() {
     CAN.sendMsgBuf(CAN_MOTOR, 0, 8, message);
   }
   
-  // send command message if MC is of and its been 50ms
+  // send command message if MC is off and its been 50ms
   if (!isOn && (millis() - lastCommand) > 50) {
     lastCommand = millis();
     CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
   }
 
-  
-
->>>>>>> Stashed changes
   if (CAN_MSGAVAIL == CAN.checkReceive()) { //if a new message has been recieved.
     unsigned char len = 0; // Length of incoming message
     unsigned char buf[8]; // Memory for incoming message
