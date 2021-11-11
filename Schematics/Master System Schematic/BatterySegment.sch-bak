@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 25 25
+Sheet 25 24
 Title "Accumulator Segment"
 Date "2020-11-11"
 Rev "3"
