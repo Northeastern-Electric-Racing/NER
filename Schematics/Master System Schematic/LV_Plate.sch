@@ -6,11 +6,11 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 22 24
 Title "LV_Plate"
-Date "2021-04-19"
+Date "2021-11-10"
 Rev "1.0"
-Comp "All connections not going to a cutout go to the GLV connector"
-Comment1 ""
-Comment2 ""
+Comp "Northeastern Electric Racing"
+Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
+Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 ""
 Comment4 ""
 $EndDescr

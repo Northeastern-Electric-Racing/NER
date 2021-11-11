@@ -8,9 +8,9 @@ Sheet 8 24
 Title "HV Plate"
 Date "2021-04-15"
 Rev "1.0"
-Comp ""
-Comment1 ""
-Comment2 ""
+Comp "Northeastern Electric Racing"
+Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
+Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 ""
 Comment4 ""
 $EndDescr
