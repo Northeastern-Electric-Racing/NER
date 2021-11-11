@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 9 24
+Sheet 23 24
 Title ""
 Date ""
 Rev ""
@@ -30,4 +30,6 @@ Text HLabel 10350 3200 0    50   Input ~ 0
 TSAL_LED+
 Text HLabel 10250 3400 0    50   Input ~ 0
 TSAL_LED-
+Text Notes 2650 1300 0    157  ~ 0
+SEE ALTIUM SCHEMATIC FOR FINAL IMPLEMENTATION
 $EndSCHEMATC
