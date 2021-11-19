@@ -7,6 +7,6 @@ The distance and any important messages are written to the SD card in the DATA.t
 
 ## Functionalities:
 
-Writing to SD Card
-Reading and Writing to/from EEPROM
-Incorporating Sample Sensor (Ultrasonic Distance Sensor)
+Writing to SD Card <br />
+Reading and Writing to/from EEPROM <br />
+Incorporating Sample Sensor (Ultrasonic Distance Sensor) <br />
