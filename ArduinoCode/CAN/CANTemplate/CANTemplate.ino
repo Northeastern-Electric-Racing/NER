@@ -5,7 +5,6 @@
  *  simply be added in. Also, this contains options for both transmission and reception. 
  */
 
-
 //necessary libraries 
 
 #include <mcp_can.h>
