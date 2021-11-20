@@ -1,3 +1,8 @@
+/*
+ * Author: Nick DePatie
+ * Last Updated: 19 November 2021
+ */
+
 #include <EEPROM.h>
 #include <SD.h>
 

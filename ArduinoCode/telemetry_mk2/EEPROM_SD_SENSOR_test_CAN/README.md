@@ -5,14 +5,17 @@ Writes sensor parameters to the EEPROM (in this case, 10) to turn on the LED if 
 less than the specified parameters.
 The distance and any important messages are written to the SD card in the DATA.txt file included
 
-## TODO
-Recalibrate parameters by calling setup() function on a condition <br />
+//## TODO
 
 <br />
 
 ## Functionalities:
 
-Writing to SD Card <br />
+Writing to SD Card <br /> <br />
 Reading and Writing to/from EEPROM <br />
+Pulling Pin #'s and Parameters from EEPROM <br /> <br />
+Reconfiguring Pin #'s and Parameters based on CAN configuration message <br />
+Sending configuration message <br /> <br />
 Incorporating Sample Sensor (Ultrasonic Distance Sensor) <br />
+
 

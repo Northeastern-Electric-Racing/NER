@@ -1,7 +1,6 @@
-/* EEPROM Read
- *
- * Reads the value of each byte of the EEPROM and prints it 
- * to the computer.
+/*
+ * Author: Nick DePatie
+ * Last Updated: 2 November 2021
  */
 
 #include <EEPROM.h>

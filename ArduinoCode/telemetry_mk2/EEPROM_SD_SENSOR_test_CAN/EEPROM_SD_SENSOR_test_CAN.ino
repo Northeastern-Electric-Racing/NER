@@ -1,3 +1,9 @@
+/*
+ * Author: Nick DePatie
+ * Last Updated: 19 November 2021
+ */
+
+
 #include <EEPROM.h>
 #include <SD.h>
 #include <mcp_can.h> // uses seeed-studio's CAN_BUS_Shield library
@@ -9,9 +15,11 @@
  */
 
 //EEPROM variables
-int address = 0;                      //current address of EEPROM
-int sensor_param_location = 0,
-    sensor_param;                     //location of the sensor parameter on EEPROM
+int address = 0;                           //current address of EEPROM
+int sensor_param_location = 1,
+    LED_pin_location = 0,
+    sensor_param;                          //location of the sensor parameter on EEPROM
+
 
 //SD card variables
 File myFile;                                                      
@@ -20,11 +28,10 @@ File myFile;
 float echoTime, calculatedDistance;
 
 //basic pin variables
-static const int LED    = 7, 
-                 trig   = 6, 
+static const int trig   = 6, 
                  echo   = 5, 
                  SDout  = 3;     //pin numbers
-
+int LED;
 
 //CAN variables
 const int spiCSPin = 10; // Base CAN pin
@@ -34,35 +41,48 @@ unsigned char len = 0;  // length of incoming data
 unsigned char buf[8];   // received data
 unsigned long canId;    // CAN id of incoming messages
 
+//Startup bool to only initialize node once
+bool startup = 0;
+
 /*****************************************************************************************************/
 
 void setup(){
-  
+  if(startup == 0){
+     
+    //establish a serial connection
+    Serial.begin(9600);
+    
+    //Initializes the SD card and makes sure an SD card is present
+      if (!SD.begin(SDout)) {
+        Serial.println("initialization failed!");
+        while(1){}
+      }
+      Serial.println("initialization done.");
+      SDWRITE("SD Card Intitialized!", "intitializing CAN Bus...");        //Gives an indication that the SD Card is ready
+    
+    
+    //Initializes the CAN Bus to make sure a connection can be established
+    while (CAN_OK != CAN.begin(CAN_250KBPS, MCP_8MHz)) {                 //specify 8MHz crystal
+        Serial.println("CAN BUS init Failed");
+        while(1){}
+      }
+      SDWRITE("CAN Bus Intitialized!", "logging data...");                 //Gives an indication that the CAN Bus is ready
+    
+
+    startup = 1;
+    }
+
+    
+  EEPROM.write(sensor_param_location,10);    //write values to EEPROM (Will not be in main code in reality)
+  EEPROM.write(LED_pin_location, 7);          
+
+  LED = EEPROM.read(LED_pin_location);                    //reads LED pin value from EEPROM
+  sensor_param = EEPROM.read(sensor_param_location);      //reading parameter value from EEPROM
   pinMode(LED,OUTPUT);
   pinMode(SDout,OUTPUT);
   pinMode(trig,OUTPUT);
   pinMode(echo,INPUT);
-  
-  Serial.begin(9600);
 
-  //Initializes the SD card and makes sure an SD card is present
-  if (!SD.begin(SDout)) {
-    Serial.println("initialization failed!");
-    while(1){}
-  }
-  Serial.println("initialization done.");
-  SDWRITE("SD Card Intitialized!", "intitializing CAN Bus...");        //Gives an indication that the SD Card is ready
-
-  EEPROM.write(sensor_param_location,10);                              //write parameter value to EEPROM
-
-  sensor_param = EEPROM.read(sensor_param_location);                   //reading parameter value from EEPROM
-  Serial.println(sensor_param);
-
-  while (CAN_OK != CAN.begin(CAN_250KBPS, MCP_8MHz)) {                 //specify 8MHz crystal
-    Serial.println("CAN BUS init Failed");
-    while(1){}
-  }
-  SDWRITE("CAN Bus Intitialized!", "logging data...");                 //Gives an indication that the CAN Bus is ready
 }
 
 /*****************************************************************************************************/
@@ -86,6 +106,16 @@ void loop(){
     digitalWrite(LED,LOW);
     }
 
+  if(CAN_MSGAVAIL == CAN.checkReceive()) //if a new message has been recieved. 
+    {
+    CAN.readMsgBuf(&len, buf); //enters message into program
+    canId = CAN.getCanId(); //gets sender ID
+    
+    if(canId == 0x00){
+      canNode_configReceive(buf);
+      }
+    }
+  
   delay(500);
 }
 
@@ -112,5 +142,24 @@ template <class T> void SDWRITE(String SDdata_label,T SDdata) {
     // if the file didn't open, print an error:
     Serial.println("error opening test.txt");
   }
+  
+}
+
+/*****************************************************************************************************/
+
+//This section sends out a test configuration message that configures the parameters of other CAN nodes
+
+void canNode_configSend(char configmsg[8]){
+  
+  CAN.sendMsgBuf(0x01, CAN_STDID, 8, configmsg); //send config message
+  delay(100);
+  
+}
+
+void canNode_configReceive(char configmsg[8]){
+  
+  EEPROM.write(LED_pin_location, configmsg[0]);         //reconfigure EEPROM values
+  EEPROM.write(sensor_param_location, configmsg[1]);
+  setup();      //restart the setup of the Node, reassigning values as needed
   
 }
