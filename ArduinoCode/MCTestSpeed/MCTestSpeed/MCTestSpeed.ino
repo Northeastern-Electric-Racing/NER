@@ -13,7 +13,7 @@
 #include <mcp_can.h> // Uses Seeed-studio's CAN_BUS_Shield library.
 
 #define CAN_SS_PIN 10
-#define HARD_TORQUE_LIMIT 1000
+#define HARD_SPEED_LIMIT 6500
 #define CAN_MOTOR 0xC0 // canID for msg to send to motor controller
 const unsigned char MOTOR_OFF[8] = {0, 0, 0, 0, 0, 0, 0, 0}; // message to turn motor off
 
@@ -21,8 +21,8 @@ MCP_CAN CAN(CAN_SS_PIN);
 
 bool isForward = true;
 bool isOn = false;
-unsigned int accelTorqueLow = 0;
-unsigned int accelTorqueHigh = 0;
+unsigned int speedLow = 0;
+unsigned int speedHigh = 0;
 unsigned long lastCommand = 0;
 
 /**
@@ -37,7 +37,7 @@ void setup() {
   }
   Serial.println(F("CAN BUS Shield Init OK!"));
   Serial.println(F("Please set your serial monitor to 'Both NL & CR' near the bottom. "));
-  Serial.println(F("Type a numerical value between 0-255 to set the torque or"));
+  Serial.println(F("Type a numerical value to set the speed or"));
   Serial.println(F("'reverse' to change the direction or 'on'/'off' to turn the MC on or off."));
 }
 
@@ -63,24 +63,25 @@ void loop() {
     } else if (serialIn.equals("on")) {
       Serial.println(F("Turning on motor controller"));
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF); // release lockout
-      accelTorqueLow = 0;
-      accelTorqueHigh = 0;
+      speedLow = 0;
+      speedHigh = 0;
       isOn = true;
+      isForward = true;
     } else if (serialIn.equals("off") && isOn) {
       Serial.println(F("Turning off motor controller"));
       CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
       isOn = false;
-    } else if (serialIn.equals("0") || (serialIn.toInt() > 0 && serialIn.toInt() <= HARD_TORQUE_LIMIT)) {
-      Serial.println("Setting torque value: " + serialIn);
-      accelTorqueLow = serialIn.toInt() % 256;
-      accelTorqueHigh = serialIn.toInt() / 256;
+    } else if (serialIn.equals("0") || (serialIn.toInt() > 0 && serialIn.toInt() <= HARD_SPEED_LIMIT)) {
+      Serial.println("Setting speed value: " + serialIn);
+      speedLow = serialIn.toInt() % 256;
+      speedHigh = serialIn.toInt() / 256;
     }
   }
 
   // send command message if MC is on and its been 50ms
   if ((millis() - lastCommand) > 50) {
     lastCommand = millis();
-    unsigned char message[8] = {accelTorqueLow,accelTorqueHigh,0,0,isForward,isOn,0,0};
+    unsigned char message[8] = {0,0,speedLow,speedHigh,isForward,isOn,0,0};
     CAN.sendMsgBuf(CAN_MOTOR, 0, 8, message);
   }
   
