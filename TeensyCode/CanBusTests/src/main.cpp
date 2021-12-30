@@ -1,10 +1,9 @@
 #include <Arduino.h>
 #include <FlexCAN_T4.h> // header file to use the library
 
-#define BAUD_RATE 500000U // 500 kbps 
+#define BAUD_RATE 250000U // 250 kbps 
 
-
-FlexCAN_T4<CAN2, RX_SIZE_256, TX_SIZE_16> myCan; // main CAN object
+FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> myCan; // main CAN object
 
 static CAN_message_t msg; // can message
 
@@ -17,7 +16,7 @@ void testCallback(const CAN_message_t &msg);
 
 // put your setup code here, to run once:
 void setup() {
-  Serial.begin(115200); 
+  Serial.begin(9600); 
   delay(400);
   
   myCan.begin(); // needed to initialize the CAN object (must be first method called)
@@ -28,8 +27,11 @@ void setup() {
   myCan.enableFIFOInterrupt(); // enables interrupts to be used with FIFO
   myCan.onReceive(testCallback); // sets the callback for received messages
   myCan.mailboxStatus(); // prints out mailbox config information
-
   timeout = millis(); // set initial timeout to current time
+
+  pinMode(LED_BUILTIN, OUTPUT);
+  delay(100);
+  digitalWrite(LED_BUILTIN, HIGH);
 }
 
 // put your main code here, to run repeatedly:
@@ -37,7 +39,8 @@ void loop() {
   myCan.events(); // enable CAN messages to be received (trigger interrupts to the callbacks)
 
   // send a CAN message every 200 ms
-  if ( millis() - timeout > 200 ) {
+  if ( millis() - timeout > 500 ) {
+    Serial.println("Writing CAN message");
     msg.id = 0x1;
     msg.len = 8;
     for ( uint8_t i = 0; i < 8; i++ ) {
