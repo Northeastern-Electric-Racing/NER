@@ -19,31 +19,40 @@
 #define DIRECTION_SWITCH   8
 #define SPEAKER            9
 
-const uint8_t ON[1] = {1}; // Message for turning inverter on
-const uint8_t OFF[1] = {0}; // Message for turning inverter off
-const uint8_t FORWARD[1] = {1}; // Message for setting inverter to forward
-const uint8_t REVERSE[1] = {0}; // Message for setting inverter to reverse
 
-bool shutdownVoltage = false;
-uint32_t speakerCooldown = 0; // Use unsigned long to match millis() function. Will overflow in around 50 days.
-uint32_t buttonCooldown = 0; // Use unsigned long to match millis() function. Will overflow in around 50 days.
-bool state = false;
-bool prevDirection = false;
-bool prechargeComplete = false;
+typedef struct {
+  bool shutdownDetect;    // true when enabled and car can run
+  bool power;             // true when car is on
+  bool direction;         // true for forward
+  bool prechargeComplete; // true when precharge has been completed
+} States;
+
+// CAN message buffers
+const uint8_t ON[1] = {1};
+const uint8_t OFF[1] = {0};
+const uint8_t FORWARD[1] = {1}; 
+const uint8_t REVERSE[1] = {0}; 
+
+uint32_t speakerCooldown = 0; 
+
+States states;
 
 FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> myCan; // main CAN object
 
 
 // function declarations
-void onOff();
-void changeDirection(bool justOn);
+void onOffISR();
+void shutdownISR();
+void directionISR();
 int sendMessage(uint32_t id, uint8_t len, const uint8_t *buf); 
 void incomingCANCallback(const CAN_message_t &msg);
 
 
 /**
- * @brief Initializes the serial console, brake light LED pin, and CAN bus
- * 
+ * @brief Initializes the serial console, CAN bus, dashboard pins, and state variables. The three input 
+ *        pins are set trigger on interrupts to simplify the loop() code. The on/off button ISR is 
+ *        triggered when the button is pressed, and both the direction switch and shutdown detection 
+ *        ISRs are triggered on state change.
  */
 void setup() {
   Serial.begin(115200); 
@@ -60,84 +69,107 @@ void setup() {
   pinMode(GENERAL_LED_2, OUTPUT); 
   pinMode(GENERAL_LED_1, OUTPUT); 
   pinMode(ON_OFF_LED, OUTPUT); 
-  pinMode(ON_OFF_BUTTON, INPUT); 
-  pinMode(SHUTDOWN_DETECTION, INPUT); 
-  pinMode(DIRECTION_SWITCH, INPUT); 
   pinMode(SPEAKER, OUTPUT);
+
+  pinMode(ON_OFF_BUTTON, INPUT); 
+  attachInterrupt(digitalPinToInterrupt(ON_OFF_BUTTON), onOffISR, FALLING);
+
+  pinMode(SHUTDOWN_DETECTION, INPUT);
+  attachInterrupt(digitalPinToInterrupt(SHUTDOWN_DETECTION), shutdownISR, CHANGE);
+
+  pinMode(DIRECTION_SWITCH, INPUT); 
+  attachInterrupt(digitalPinToInterrupt(DIRECTION_SWITCH), directionISR, CHANGE);
+
+  states.direction = digitalRead(DIRECTION_SWITCH);
+  states.power = false;
+  states.prechargeComplete = false;
+  states.shutdownDetect = digitalRead(SHUTDOWN_DETECTION);
+
+  if (states.shutdownDetect) {
+    digitalWrite(ON_OFF_LED, HIGH);
+  }
 }
 
 
 /**
- * @brief Continuoulsy reads incoming CAN messages and controls the state of dashboard I/O
- * 
+ * @brief Continuoulsy reads incoming CAN messages and turns the speaker off after its cooldown.
  */
 void loop() {
   myCan.events();
 
-  if (prechargeComplete) { // Do nothing until precharge has been completed
-    onOff();
-    if (state) { // Only update pedal box if car is on.
-      changeDirection(false);
-    }
-  }
-}
-
-
-/**
- * @brief Use the shutdown circuit detection, on/off button, and gear selection pin to determine the car's state (on or off)
- *        and direction. Car will only be ready to drive if shutdown circuit is detected. Speaker is turned on for 3 seconds
- *        or until car is turned off (whichever comes first).
- * 
- */
-void onOff() {
-  shutdownVoltage = digitalRead(SHUTDOWN_DETECTION); // Detects if shutdown circuit is active (5v divided from 12v).
-
-  // If shutdown circuit is active, turn on the LED. Otherwise, turn LED and speaker off, and set state to off
-  if (shutdownVoltage) {
-    digitalWrite(ON_OFF_LED, HIGH);
-  } else {
-    digitalWrite(ON_OFF_LED, LOW);
-    state = 0;
-    speakerCooldown = millis() + 1;
-  }
-
-  // Turns speaker off once cooldown is passed or state is false.
-  if (speakerCooldown < millis() || !state) {
+  if (speakerCooldown < millis()) {
     analogWrite(SPEAKER, 0);
   }
+}
 
-  /* If the shutdown circuit is active, button cooldown has passed, and on/off button is pressed,
-   * toggle state, reset button cooldown. If state is true, turn on speaker and tell pedal box
-   * to turn on and the drive direction of the vehicle. If car was turned off, tell that to the pedal box. */
-  if (shutdownVoltage && buttonCooldown < millis() && digitalRead(ON_OFF_BUTTON) == LOW) {
-    state = !state;
-    buttonCooldown = millis() + 500; // Set cooldown to 500ms (prevents triggering button multiple times with one press).
+
+/**
+ * @brief ISR which triggers when the on/off button is pressed. If precharge isn't complete or the 
+ *        shutdown circuit isn't enabled, nothing happens. Otherwise, the speaker is controlled and 
+ *        an on/off CAN message is sent.
+ */
+void onOffISR() {
+  if (!states.prechargeComplete || !states.shutdownDetect) {
+    return;
+  }
+
+  states.power = !states.power;
+
+  if (states.power) { // power on, start speaker
+    analogWrite(SPEAKER, 128);
+    speakerCooldown = millis() + 3000;
     
-    if (state) { // When car is initially turned on.
-      analogWrite(SPEAKER, 128);
-      speakerCooldown = millis() + 3000;
-      sendMessage(CAN_START_MOTOR_ID, 0, ON); // Tell pedal box to turn inverter on
-      changeDirection(true);
-    } else { // Car is turned off.
-      sendMessage(CAN_START_MOTOR_ID, 1, OFF); // tell pedal box to turn inverter off
+    sendMessage(CAN_START_MOTOR_ID, 1, ON); // Tell pedal box to turn inverter on
+    
+    if (states.direction) {
+      sendMessage(CAN_DIRECTION_ID, 1, FORWARD); // tell pedal box to set inverter to forward
+    } 
+    else {
+      sendMessage(CAN_DIRECTION_ID, 1, REVERSE);// tell pedal box to set inverter to reverse
     }
+
+  } 
+  else { // power off, turn speaker off
+    analogWrite(SPEAKER, 0);
+    sendMessage(CAN_START_MOTOR_ID, 1, OFF); // tell pedal box to turn inverter off
   }
 }
 
 
 /**
- * Tells pedal box the forward/reverse direction. Only sends message when there is a change or when car is just turned on.
+ * @brief ISR which triggers on changing state of the shutdown detect line.
  */
-void changeDirection(bool justOn) {
-  if (!justOn && prevDirection == digitalRead(DIRECTION_SWITCH)) {
+void shutdownISR() {
+  states.shutdownDetect = digitalRead(SHUTDOWN_DETECTION);
+
+  if (states.shutdownDetect) {
+    digitalWrite(ON_OFF_LED, HIGH);
+  }
+  else {
+    digitalWrite(ON_OFF_LED, LOW);
+    states.power = false;
+    analogWrite(SPEAKER, 0);
+  }
+}
+
+
+/**
+ * @brief ISR which triggers when the direction switch is toggled. If precharge isn't complete
+ *        or the shutdown circuit isn't enabled, nothing happens. Otherwise, send a CAN message 
+ *        to set the direction.
+ */
+void directionISR() {
+  if (!states.prechargeComplete || !states.shutdownDetect) {
     return;
   }
-  if (digitalRead(DIRECTION_SWITCH)) {
+
+  states.direction = digitalRead(DIRECTION_SWITCH);
+
+  if (states.direction) {
     sendMessage(CAN_DIRECTION_ID, 1, FORWARD); // tell pedal box to set inverter to forward
-    prevDirection = true;
-  } else {
+  } 
+  else {
     sendMessage(CAN_DIRECTION_ID, 1, REVERSE);// tell pedal box to set inverter to reverse
-    prevDirection = false;
   }
 }
 
@@ -150,7 +182,7 @@ void changeDirection(bool justOn) {
 void incomingCANCallback(const CAN_message_t &msg)
 {
   if (msg.id == MC_STATES_ID) {
-    prechargeComplete = (msg.buf[0] >> 4) & 1; // true if MC is in wait state 
+    states.prechargeComplete = (msg.buf[0] >> 4) & 1; // true if MC is in wait state 
   }
 }
 
