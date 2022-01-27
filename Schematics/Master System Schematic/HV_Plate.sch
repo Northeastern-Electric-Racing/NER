@@ -1,23 +1,24 @@
 EESchema Schematic File Version 4
+LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 7 25
+Sheet 8 24
 Title "HV Plate"
 Date "2021-04-15"
 Rev "1.0"
-Comp ""
-Comment1 ""
-Comment2 ""
+Comp "Northeastern Electric Racing"
+Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
+Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:R R?
+L Device:R R801
 U 1 1 608CF874
 P 6150 3350
-F 0 "R?" H 5750 3450 50  0000 C CNN
+F 0 "R801" H 5750 3450 50  0000 C CNN
 F 1 "PCharge: 600R" H 5750 3350 50  0000 C CNN
 F 2 "" V 6080 3350 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/418/5/ENG_CD_1625999_AH2-686901.pdf" H 6150 3350 50  0001 C CNN
@@ -25,10 +26,10 @@ F 3 "https://www.mouser.com/datasheet/2/418/5/ENG_CD_1625999_AH2-686901.pdf" H 6
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Relay:DIPxx-1Axx-11x K?
+L Relay:DIPxx-1Axx-11x K801
 U 1 1 608D0328
 P 3450 5750
-F 0 "K?" V 2883 5750 50  0000 C CNN
+F 0 "K801" V 2883 5750 50  0000 C CNN
 F 1 "AIR-: GX14" V 2974 5750 50  0000 C CNN
 F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 3800 5700 50  0001 L CNN
 F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/gx14.pdf" H 3450 5750 50  0001 C CNN
@@ -36,10 +37,10 @@ F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/gx14.pdf" H 
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:DIPxx-1Axx-11x K?
+L Relay:DIPxx-1Axx-11x K803
 U 1 1 608D24D5
 P 4650 3750
-F 0 "K?" V 4083 3750 50  0000 C CNN
+F 0 "K803" V 4083 3750 50  0000 C CNN
 F 1 "AIR+: GX14" V 4174 3750 50  0000 C CNN
 F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 5000 3700 50  0001 L CNN
 F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/gx14.pdf" H 4650 3750 50  0001 C CNN
@@ -47,10 +48,10 @@ F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/gx14.pdf" H 
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Fuse F?
+L Device:Fuse F803
 U 1 1 608D366E
 P 2400 3950
-F 0 "F?" V 2203 3950 50  0000 C CNN
+F 0 "F803" V 2203 3950 50  0000 C CNN
 F 1 "TS Fuse: 200A" V 2294 3950 50  0000 C CNN
 F 2 "" V 2330 3950 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/240/L50QS_High_Speed_Fuse_Datasheet-1102248.pdf" H 2400 3950 50  0001 C CNN
@@ -58,10 +59,10 @@ F 3 "https://www.mouser.com/datasheet/2/240/L50QS_High_Speed_Fuse_Datasheet-1102
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R802
 U 1 1 608CEF02
 P 7000 4450
-F 0 "R?" H 6650 4550 50  0000 C CNN
+F 0 "R802" H 6650 4550 50  0000 C CNN
 F 1 "DCharge: 3.3K" H 6650 4450 50  0000 C CNN
 F 2 "" V 6930 4450 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/418/3/NG_CS_1309350_PASSIVE_COMPONENT_0807-1235206.pdf" H 7000 4450 50  0001 C CNN
@@ -69,10 +70,10 @@ F 3 "https://www.mouser.com/datasheet/2/418/3/NG_CS_1309350_PASSIVE_COMPONENT_08
 	1    0    0    -1  
 $EndComp
 $Comp
-L Relay:MSxx-1Bxx-75 K?
+L Relay:MSxx-1Bxx-75 K804
 U 1 1 608D570D
 P 5600 5000
-F 0 "K?" V 5033 5000 50  0000 C CNN
+F 0 "K804" V 5033 5000 50  0000 C CNN
 F 1 "DCharge: PNC113" V 5124 5000 50  0000 C CNN
 F 2 "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB" H 5950 4950 50  0001 L CNN
 F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/PNC113_DATASHEET_rev_C.pdf" H 5600 5000 50  0001 C CNN
@@ -80,10 +81,10 @@ F 3 "https://www.gigavac.com/sites/default/files/catalog/spec_sheet/PNC113_DATAS
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R803
 U 1 1 60827E73
 P 8950 3500
-F 0 "R?" H 8880 3454 50  0000 R CNN
+F 0 "R803" H 8880 3454 50  0000 R CNN
 F 1 "TSMP+: 10K" H 8880 3545 50  0000 R CNN
 F 2 "" V 8880 3500 50  0001 C CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7F1773035%7FC%7Fpdf%7FEnglish%7FENG_DS_1773035_C.pdf%7F1625984-3" H 8950 3500 50  0001 C CNN
@@ -91,10 +92,10 @@ F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&D
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R804
 U 1 1 608282DF
 P 9050 3500
-F 0 "R?" H 8980 3454 50  0000 R CNN
+F 0 "R804" H 8980 3454 50  0000 R CNN
 F 1 "TSMP-: 10K" H 8980 3545 50  0000 R CNN
 F 2 "" V 8980 3500 50  0001 C CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7F1773035%7FC%7Fpdf%7FEnglish%7FENG_DS_1773035_C.pdf%7F1625984-3" H 9050 3500 50  0001 C CNN
@@ -104,17 +105,18 @@ $EndComp
 $Comp
 L NER:OrionCurrentSens U?
 U 1 1 6082A419
-P 7400 5250
+P 2150 4950
 AR Path="/5F45B05E/6082A419" Ref="U?"  Part="1" 
-AR Path="/5F45B05E/6082840F/6082A419" Ref="U5"  Part="1" 
-F 0 "U?" V 6950 4700 50  0000 C CNN
-F 1 "OrionCurrentSens" V 6850 4700 50  0000 C CNN
-F 2 "" H 7400 5250 50  0001 C CNN
-F 3 "" H 7400 5250 50  0001 C CNN
-	1    7400 5250
-	0    -1   1    0   
+AR Path="/5F45B05E/6082840F/6082A419" Ref="U?"  Part="1" 
+AR Path="/60C39CCE/6082840F/6082A419" Ref="U801"  Part="1" 
+F 0 "U801" V 1700 4400 50  0000 C CNN
+F 1 "OrionCurrentSens" V 1600 4400 50  0000 C CNN
+F 2 "" H 2150 4950 50  0001 C CNN
+F 3 "" H 2150 4950 50  0001 C CNN
+	1    2150 4950
+	0    1    1    0   
 $EndComp
-Text HLabel 9700 4950 2    50   Input ~ 0
+Text HLabel 9800 6300 2    50   Input ~ 0
 CurrentSensor
 Text HLabel 9700 3950 2    50   Input ~ 0
 TS+
@@ -127,28 +129,28 @@ DCharge_SigH
 Text HLabel 1100 4100 0    50   Input ~ 0
 Segment-
 Entry Wire Line
-	8600 4950 8500 5050
+	1050 4750 950  4850
 Entry Wire Line
-	8600 5100 8500 5200
+	1050 4900 950  5000
 Entry Wire Line
-	8600 5250 8500 5350
+	1050 5050 950  5150
 Entry Wire Line
-	8600 5400 8500 5500
+	1050 5200 950  5300
 Wire Wire Line
-	8500 5050 8050 5050
+	1050 4750 1500 4750
 Wire Wire Line
-	8500 5200 8050 5200
+	1050 4900 1500 4900
 Wire Wire Line
-	8500 5350 8050 5350
+	1050 5050 1500 5050
 Wire Wire Line
-	8500 5500 8050 5500
-Text Label 8150 5050 0    50   ~ 0
+	1050 5200 1500 5200
+Text Label 1400 4750 2    50   ~ 0
 CS_5V
-Text Label 8150 5200 0    50   ~ 0
+Text Label 1400 4900 2    50   ~ 0
 CS_H
-Text Label 8150 5350 0    50   ~ 0
+Text Label 1400 5050 2    50   ~ 0
 CS_GND
-Text Label 8150 5500 0    50   ~ 0
+Text Label 1400 5200 2    50   ~ 0
 CS_L
 Text HLabel 1100 3950 0    50   Input ~ 0
 Segment+
@@ -164,8 +166,6 @@ Wire Wire Line
 	3150 5950 2000 5950
 Wire Wire Line
 	3750 5950 5000 5950
-Wire Wire Line
-	7550 4100 7550 4850
 Text HLabel 2750 5550 0    50   Input ~ 0
 AIR-_SigH
 Wire Wire Line
@@ -185,11 +185,11 @@ DCharge_SigL
 Wire Wire Line
 	5300 4800 4950 4800
 Text Notes 5000 4800 0    50   ~ 0
-??AWG
+22AWG
 Wire Wire Line
 	6250 4800 5900 4800
 Text Notes 5950 4800 0    50   ~ 0
-??AWG
+22AWG
 Wire Wire Line
 	5300 5200 5000 5200
 Wire Wire Line
@@ -217,23 +217,17 @@ Wire Wire Line
 	1100 3950 1750 3950
 Wire Wire Line
 	1100 4100 1850 4100
-Wire Wire Line
-	2000 4100 2000 5950
 Text HLabel 9700 2900 2    50   Input ~ 0
 TSMP-
 Text HLabel 9700 2350 2    50   Input ~ 0
 IMD_HV_Sense+
 Wire Wire Line
-	7550 5650 7550 5950
-Wire Bus Line
-	9700 4950 8600 4950
-Wire Wire Line
 	7950 2450 7950 2800
 $Comp
-L Device:Fuse F?
+L Device:Fuse F804
 U 1 1 608289D7
 P 7850 2950
-F 0 "F?" H 7650 3050 50  0000 C CNN
+F 0 "F804" H 7650 3050 50  0000 C CNN
 F 1 "IMD Fuse+: 0.5A" H 7450 2950 50  0000 C CNN
 F 2 "" V 7780 2950 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/240/Littelfuse_Fuse_477_Datasheet_pdf-555535.pdf" H 7850 2950 50  0001 C CNN
@@ -241,10 +235,10 @@ F 3 "https://www.mouser.com/datasheet/2/240/Littelfuse_Fuse_477_Datasheet_pdf-55
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Fuse F?
+L Device:Fuse F805
 U 1 1 608D8D1E
 P 7950 2950
-F 0 "F?" H 7750 3050 50  0000 C CNN
+F 0 "F805" H 7750 3050 50  0000 C CNN
 F 1 "IMD Fuse-: 0.5A" H 7550 2950 50  0000 C CNN
 F 2 "" V 7880 2950 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/240/Littelfuse_Fuse_477_Datasheet_pdf-555535.pdf" H 7950 2950 50  0001 C CNN
@@ -292,9 +286,9 @@ Wire Wire Line
 Wire Wire Line
 	7950 2450 9700 2450
 Text Notes 5000 2450 0    50   ~ 0
-??AWG
+22AWG
 Text Notes 4050 2450 0    50   ~ 0
-??AWG
+22AWG
 Wire Wire Line
 	5300 2450 4950 2450
 Wire Wire Line
@@ -308,10 +302,10 @@ Wire Wire Line
 Text HLabel 5300 2450 2    50   Input ~ 0
 PCharge_SigL
 $Comp
-L Relay:DIPxx-1Axx-11x K?
+L Relay:DIPxx-1Axx-11x K802
 U 1 1 608D1508
 P 4650 2650
-F 0 "K?" V 4083 2650 50  0000 C CNN
+F 0 "K802" V 4083 2650 50  0000 C CNN
 F 1 "PCharge: P105BDA" V 4174 2650 50  0000 C CNN
 F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 5000 2600 50  0001 L CNN
 F 3 "https://dc-components.com/wp-content/uploads/2019/02/p105.pdf" H 4650 2650 50  0001 C CNN
@@ -319,31 +313,31 @@ F 3 "https://dc-components.com/wp-content/uploads/2019/02/p105.pdf" H 4650 2650 
 	0    1    1    0   
 $EndComp
 Text Notes 8350 3950 0    50   ~ 0
-??AWG
+2AWG
 Text Notes 3550 3950 0    50   ~ 0
-??AWG
+2AWG
 Text Notes 1250 4100 0    50   ~ 0
-??AWG
+2AWG
 Text Notes 5750 5950 0    50   ~ 0
-??AWG
+2AWG
 Text Notes 8350 4100 0    50   ~ 0
-??AWG
+2AWG
 Text Notes 7800 3750 2    50   ~ 0
-2x ??AWG
+2x 22AWG
 Text Notes 8900 3750 2    50   ~ 0
-2x ??AWG
-Text Notes 9300 4950 2    50   ~ 0
-4x ??AWG
+2x 22AWG
+Text Notes 600  4800 0    50   ~ 0
+4x 22AWG
 Text Notes 9550 2350 2    50   ~ 0
-2x ??AWG
+2x 22AWG
 Text Notes 9550 2800 2    50   ~ 0
-2x ??AWG
+2x 22AWG
 Text Notes 3250 3750 2    50   ~ 0
 ??AWG
 Text Notes 5450 2850 0    50   ~ 0
-??AWG
+22AWG
 Text Notes 6200 3750 0    50   ~ 0
-??AWG
+22AWG
 Wire Wire Line
 	3300 2850 4350 2850
 Connection ~ 3300 3950
@@ -352,13 +346,13 @@ Wire Wire Line
 Wire Wire Line
 	2550 3950 3300 3950
 Text Notes 1250 3950 0    50   ~ 0
-??AWG
+2AWG
 Text Notes 7050 4200 0    50   ~ 0
-??AWG
+22AWG
 Text Notes 6150 5200 0    50   ~ 0
-??AWG
+22AWG
 Text Notes 4950 5750 2    50   ~ 0
-??AWG
+22AWG
 Text HLabel 9700 1800 2    50   Input ~ 0
 TSAL_TS+
 Text HLabel 9700 1900 2    50   Input ~ 0
@@ -375,14 +369,14 @@ Connection ~ 7850 2350
 Wire Wire Line
 	9700 1900 7950 1900
 Text Notes 9550 1800 2    50   ~ 0
-2x ??AWG
+2x 22AWG
 Text Notes 9550 1200 2    50   ~ 0
-2x ??AWG
+2x 22AWG
 $Comp
-L Device:Fuse F?
+L Device:Fuse F802
 U 1 1 6091E6DC
 P 1850 2950
-F 0 "F?" H 1700 3050 50  0000 C CNN
+F 0 "F802" H 1700 3050 50  0000 C CNN
 F 1 "TSAL Fuse-: ??A" H 1450 2950 50  0000 C CNN
 F 2 "" V 1780 2950 50  0001 C CNN
 F 3 "~" H 1850 2950 50  0001 C CNN
@@ -390,10 +384,10 @@ F 3 "~" H 1850 2950 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:Fuse F?
+L Device:Fuse F801
 U 1 1 6091E6D6
 P 1750 2950
-F 0 "F?" H 1600 3050 50  0000 C CNN
+F 0 "F801" H 1600 3050 50  0000 C CNN
 F 1 "TSAL Fuse+: ??A" H 1350 2950 50  0000 C CNN
 F 2 "" V 1680 2950 50  0001 C CNN
 F 3 "~" H 1750 2950 50  0001 C CNN
@@ -419,12 +413,20 @@ Wire Wire Line
 Wire Wire Line
 	1850 1300 1850 2800
 Text Notes 1700 3700 2    50   ~ 0
-2x ??AWG
+2x 22AWG
 Wire Wire Line
 	7850 2350 9700 2350
 Wire Wire Line
 	7950 1900 7950 2450
 Connection ~ 7950 2450
 Wire Bus Line
-	8600 4950 8600 5400
+	950  6300 9800 6300
+Wire Wire Line
+	2000 4100 2000 4550
+Wire Wire Line
+	2000 5350 2000 5950
+Wire Wire Line
+	7550 4100 7550 5950
+Wire Bus Line
+	950  4850 950  6300
 $EndSCHEMATC

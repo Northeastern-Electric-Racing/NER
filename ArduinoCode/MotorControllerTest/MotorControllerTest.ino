@@ -84,13 +84,11 @@ void loop() {
     CAN.sendMsgBuf(CAN_MOTOR, 0, 8, message);
   }
   
-  // send command message if MC is of and its been 50ms
+  // send command message if MC is off and its been 50ms
   if (!isOn && (millis() - lastCommand) > 50) {
     lastCommand = millis();
     CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
   }
-
-  
 
   if (CAN_MSGAVAIL == CAN.checkReceive()) { //if a new message has been recieved.
     unsigned char len = 0; // Length of incoming message

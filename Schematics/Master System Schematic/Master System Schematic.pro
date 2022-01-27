@@ -1,6 +1,6 @@
-update=12/10/2020 8:35:23 PM
+update=Wednesday, November 10, 2021 at 09:32:08 PM
 version=1
-last_client=eeschema
+last_client=kicad
 [general]
 version=1
 RootSch=
@@ -34,10 +34,10 @@ LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=/Users/matthew/Desktop/Formula/SOE Review KiCAD Export/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew
 SpiceAjustPassiveValues=0
-LabSize=50
+LabSize=157
 ERC_TestSimilarLabels=1

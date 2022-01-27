@@ -1,15 +1,16 @@
 EESchema Schematic File Version 4
+LIBS:Master System Schematic-cache
 EELAYER 30 0
 EELAYER END
 $Descr B 11000 17000 portrait
 encoding utf-8
-Sheet 8 25
+Sheet 9 24
 Title "Segment_Layer"
 Date "2021-04-15"
 Rev "1.0"
-Comp ""
-Comment1 ""
-Comment2 ""
+Comp "Northeastern Electric Racing"
+Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
+Comment2 "For authors and other info, contact Chief Electrical Engineer"
 Comment3 ""
 Comment4 ""
 $EndDescr
