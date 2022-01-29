@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr D 34000 22000
 encoding utf-8
-Sheet 1 24
+Sheet 1 25
 Title "NER FH 2020-2021 Master Electrical Schematic"
 Date "2021-11-10"
 Rev "14.1"
@@ -1270,6 +1270,17 @@ Wire Wire Line
 	17800 13450 17450 13450
 Wire Wire Line
 	17800 13450 18150 13450
+$Sheet
+S 13100 1450 1850 2300
+U 61F69208
+F0 "Footwell Box" 50
+F1 "FootwellBox.sch" 50
+F2 "Button" I L 13100 1600 50 
+$EndSheet
+Wire Wire Line
+	13100 1600 12250 1600
+Wire Wire Line
+	12250 1600 12250 1850
 Wire Wire Line
 	26400 7000 26500 7000
 Wire Bus Line
