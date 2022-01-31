@@ -2,6 +2,7 @@
 #include <FlexCAN_T4.h> // header file to use the library
 
 #define BAUD_RATE 250000U // 250 kbps 
+#define MAX_MB_NUM 16
 
 FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> myCan; // main CAN object
 
@@ -22,7 +23,7 @@ void setup() {
   myCan.begin(); // needed to initialize the CAN object (must be first method called)
   myCan.setBaudRate(BAUD_RATE); // sets baud rate
 
-  myCan.setMaxMB(16);
+  myCan.setMaxMB(MAX_MB_NUM);
   myCan.enableFIFO(); // enables the FIFO operation mode, where all received messages are received and accessed via a queue
   myCan.enableFIFOInterrupt(); // enables interrupts to be used with FIFO
   myCan.onReceive(testCallback); // sets the callback for received messages
@@ -39,16 +40,16 @@ void loop() {
   myCan.events(); // enable CAN messages to be received (trigger interrupts to the callbacks)
 
   // send a CAN message every 200 ms
-  if ( millis() - timeout > 500 ) {
-    Serial.println("Writing CAN message");
-    msg.id = 0x1;
-    msg.len = 8;
-    for ( uint8_t i = 0; i < 8; i++ ) {
-      msg.buf[i] = i + 1;
-    }
-    myCan.write(msg);
-    timeout = millis();
-  }
+  // if ( millis() - timeout > 2000 ) {
+  //   Serial.println("Writing CAN message");
+  //   msg.id = 0x2;
+  //   msg.len = 8;
+  //   for ( uint8_t i = 0; i < 8; i++ ) {
+  //     msg.buf[i] = i + 1;
+  //   }
+  //   myCan.write(msg);
+  //   timeout = millis();
+  // }
 
 }
 
