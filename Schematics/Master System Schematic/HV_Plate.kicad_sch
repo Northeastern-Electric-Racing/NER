@@ -1046,7 +1046,7 @@
     (pin "2" (uuid 340f6138-482c-4180-bb48-48b200fe6655))
   )
 
-  (symbol (lib_id "NER:OrionCurrentSens") (at 54.61 125.73 270)
+  (symbol (lib_id "NER:OrionCurrentSens") (at 54.61 125.73 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006082a419)
     (property "Reference" "U801" (id 0) (at 40.64 114.3 90))

@@ -871,12 +871,12 @@
     (property "Datasheet" "" (id 3) (at 140.97 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "~" (uuid 84bb7c32-34c3-4d85-9b06-8754ebd07667))
-    (pin "~" (uuid 8192d200-ee65-428d-98e3-bbf71c775918))
-    (pin "~" (uuid 2f92fd74-660b-4108-b6ba-fda01b080a75))
-    (pin "~" (uuid bee1ef75-343e-4962-a38e-b644eba76267))
-    (pin "~" (uuid d181676b-a945-48d2-8028-37344bde222d))
-    (pin "~" (uuid cf83b53e-0675-4c51-a2ae-2513d87418b6))
+    (pin "~" (uuid 55b27b01-ad6d-4d48-89ff-513ab4ce2469))
+    (pin "~" (uuid 55b27b01-ad6d-4d48-89ff-513ab4ce2469))
+    (pin "~" (uuid 55b27b01-ad6d-4d48-89ff-513ab4ce2469))
+    (pin "~" (uuid 55b27b01-ad6d-4d48-89ff-513ab4ce2469))
+    (pin "~" (uuid 55b27b01-ad6d-4d48-89ff-513ab4ce2469))
+    (pin "~" (uuid 55b27b01-ad6d-4d48-89ff-513ab4ce2469))
     (pin "~" (uuid 55b27b01-ad6d-4d48-89ff-513ab4ce2469))
   )
 
@@ -916,7 +916,7 @@
     (pin "2" (uuid 27d652f9-aa44-4942-a08c-1755844fce1c))
   )
 
-  (symbol (lib_id "Device:Fuse") (at 176.53 102.87 90) (mirror x)
+  (symbol (lib_id "Device:Fuse") (at 176.53 102.87 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006017bde1)
     (property "Reference" "F605" (id 0) (at 176.53 97.8662 90))
@@ -946,7 +946,7 @@
     (pin "2" (uuid b2757557-3ddf-404b-9f84-4d32f7b5e91e))
   )
 
-  (symbol (lib_id "Relay:Fujitsu_FTR-F1A") (at 90.17 69.85 0)
+  (symbol (lib_id "Relay:Fujitsu_FTR-F1A") (at 90.17 69.85 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061eef404)
     (property "Reference" "K601" (id 0) (at 90.17 82.9818 0))
@@ -965,7 +965,7 @@
     (pin "8" (uuid c5d9054d-127d-453c-88a2-9d1f7ee1ce54))
   )
 
-  (symbol (lib_id "Device:Fuse") (at 143.51 69.85 270) (mirror x)
+  (symbol (lib_id "Device:Fuse") (at 143.51 69.85 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061eef40a)
     (property "Reference" "F602" (id 0) (at 143.51 67.31 90))
@@ -980,7 +980,7 @@
     (pin "2" (uuid eb99e896-4ca2-4280-bfe4-a0dee116d031))
   )
 
-  (symbol (lib_id "Device:Fuse") (at 176.53 106.68 270) (mirror x)
+  (symbol (lib_id "Device:Fuse") (at 176.53 106.68 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061eef417)
     (property "Reference" "F606" (id 0) (at 176.53 111.6838 90))
@@ -995,7 +995,7 @@
     (pin "2" (uuid efd0fe06-daf6-4399-b1fb-895659ff0549))
   )
 
-  (symbol (lib_id "Connector:Conn_WallSocket_Earth") (at 172.72 74.93 0)
+  (symbol (lib_id "Connector:Conn_WallSocket_Earth") (at 172.72 74.93 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061eef421)
     (property "Reference" "J601" (id 0) (at 172.8724 87.5284 0))
