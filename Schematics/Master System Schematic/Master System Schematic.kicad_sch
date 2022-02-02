@@ -4266,7 +4266,7 @@
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid 423e3cfc-e779-429a-bf26-6232b206a782)
     )
-    (pin "GLV_GND" passive (at 283.21 148.59 0)
+    (pin "GND" passive (at 283.21 148.59 0)
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid 2f3abfa2-e3c6-4501-b886-b4562faf545b)
     )
