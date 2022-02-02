@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 8 24
+Sheet 8 25
 Title "HV Plate"
 Date "2021-04-15"
 Rev "1.0"
