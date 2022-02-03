@@ -3187,10 +3187,10 @@
     (property "Datasheet" "" (id 3) (at 646.43 368.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083cc))
-    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083cc))
-    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083cc))
-    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083cc))
+    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083cf))
+    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083cf))
+    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083cf))
+    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083cf))
   )
 
   (symbol (lib_id "Connector:Conn_01x01_Female") (at 420.37 330.2 180) (unit 1)
@@ -3222,56 +3222,56 @@
     (property "Datasheet" "" (id 3) (at 711.835 364.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 41e830fa-15cd-4c31-b9eb-34095d7028cb))
-    (pin "1" (uuid 41e830fa-15cd-4c31-b9eb-34095d7028cb))
-    (pin "11" (uuid 2bfaa22e-bd1b-4321-bbbf-397c91cb9229))
-    (pin "11" (uuid 2bfaa22e-bd1b-4321-bbbf-397c91cb9229))
-    (pin "12" (uuid 8c07b495-5bff-4b3e-a7f2-649b0811fede))
-    (pin "12" (uuid 8c07b495-5bff-4b3e-a7f2-649b0811fede))
+    (pin "1" (uuid 41e830fa-15cd-4c31-b9eb-34095d7028cc))
+    (pin "1" (uuid 41e830fa-15cd-4c31-b9eb-34095d7028cc))
+    (pin "11" (uuid 2bfaa22e-bd1b-4321-bbbf-397c91cb922a))
+    (pin "11" (uuid 2bfaa22e-bd1b-4321-bbbf-397c91cb922a))
+    (pin "12" (uuid 8c07b495-5bff-4b3e-a7f2-649b0811fedf))
+    (pin "12" (uuid 8c07b495-5bff-4b3e-a7f2-649b0811fedf))
     (pin "13" (uuid 5ab70ec2-62a3-41fd-87e4-e9705e2957fa))
-    (pin "14" (uuid c012c783-cb72-46e0-8c5b-7dfeb0012622))
-    (pin "14" (uuid c012c783-cb72-46e0-8c5b-7dfeb0012622))
-    (pin "15" (uuid e850e8a6-bac7-478d-8b4d-f8e7ed670888))
-    (pin "15" (uuid e850e8a6-bac7-478d-8b4d-f8e7ed670888))
-    (pin "16" (uuid a71a40b8-fb5c-477e-b0ff-e12388fc4266))
-    (pin "16" (uuid a71a40b8-fb5c-477e-b0ff-e12388fc4266))
+    (pin "14" (uuid c012c783-cb72-46e0-8c5b-7dfeb0012623))
+    (pin "14" (uuid c012c783-cb72-46e0-8c5b-7dfeb0012623))
+    (pin "15" (uuid e850e8a6-bac7-478d-8b4d-f8e7ed670889))
+    (pin "15" (uuid e850e8a6-bac7-478d-8b4d-f8e7ed670889))
+    (pin "16" (uuid a71a40b8-fb5c-477e-b0ff-e12388fc4267))
+    (pin "16" (uuid a71a40b8-fb5c-477e-b0ff-e12388fc4267))
     (pin "17" (uuid 426a95bc-c31c-4e3f-84b2-05091fe1089a))
     (pin "18" (uuid 4b9e64ba-a5e0-41c9-832b-44ae249586c9))
     (pin "19" (uuid 6ce8230c-595b-49b4-b7e1-27c56bb79809))
-    (pin "2" (uuid 3dc5735e-34ce-4c21-9b2f-2dd31bf6f053))
-    (pin "2" (uuid 3dc5735e-34ce-4c21-9b2f-2dd31bf6f053))
+    (pin "2" (uuid 3dc5735e-34ce-4c21-9b2f-2dd31bf6f054))
+    (pin "2" (uuid 3dc5735e-34ce-4c21-9b2f-2dd31bf6f054))
     (pin "20" (uuid c1199844-c6c3-47df-bb2f-fa30883f610b))
-    (pin "21" (uuid 6533b2ed-bfe0-455e-a8cc-e29a9b928992))
-    (pin "21" (uuid 6533b2ed-bfe0-455e-a8cc-e29a9b928992))
-    (pin "22" (uuid 19ca3d68-8095-495a-bda2-dc142bbf7bd3))
-    (pin "22" (uuid 19ca3d68-8095-495a-bda2-dc142bbf7bd3))
-    (pin "23" (uuid 2feeaaaf-a216-455b-a150-cd1f24912b8a))
-    (pin "23" (uuid 2feeaaaf-a216-455b-a150-cd1f24912b8a))
+    (pin "21" (uuid 6533b2ed-bfe0-455e-a8cc-e29a9b928993))
+    (pin "21" (uuid 6533b2ed-bfe0-455e-a8cc-e29a9b928993))
+    (pin "22" (uuid 19ca3d68-8095-495a-bda2-dc142bbf7bd4))
+    (pin "22" (uuid 19ca3d68-8095-495a-bda2-dc142bbf7bd4))
+    (pin "23" (uuid 2feeaaaf-a216-455b-a150-cd1f24912b8b))
+    (pin "23" (uuid 2feeaaaf-a216-455b-a150-cd1f24912b8b))
     (pin "24" (uuid 5c1fa9d0-3740-499c-abaa-b2e53e11dd5f))
     (pin "25" (uuid 8d122ec8-2ac7-43b0-a391-461b51ecef74))
     (pin "26" (uuid 335dcba3-d560-4fc8-b5ed-440c6e4b0843))
-    (pin "3" (uuid c1150a5a-c884-415a-99cd-1291b336491d))
-    (pin "3" (uuid c1150a5a-c884-415a-99cd-1291b336491d))
-    (pin "3" (uuid c1150a5a-c884-415a-99cd-1291b336491d))
+    (pin "3" (uuid c1150a5a-c884-415a-99cd-1291b336491f))
+    (pin "3" (uuid c1150a5a-c884-415a-99cd-1291b336491f))
+    (pin "3" (uuid c1150a5a-c884-415a-99cd-1291b336491f))
     (pin "30" (uuid 9af563e5-2a2a-4a23-b41c-82ceae36db4c))
     (pin "31" (uuid 0bd8323b-4e11-4a22-8bce-058ea2497fbb))
     (pin "32" (uuid 1101b822-29f2-4ad1-b527-5afdfe69ff1d))
     (pin "33" (uuid 1ba2666e-c4e2-4d04-a4f6-f1c6b52de8d0))
     (pin "34" (uuid 629dad91-cbe0-4066-96a9-ee4717c98203))
     (pin "35" (uuid bec1c7b5-de79-43c7-aae4-de57635be877))
-    (pin "4" (uuid 7cb9a3c4-d3e8-4c15-bba8-c835701379b1))
-    (pin "4" (uuid 7cb9a3c4-d3e8-4c15-bba8-c835701379b1))
+    (pin "4" (uuid 7cb9a3c4-d3e8-4c15-bba8-c835701379b2))
+    (pin "4" (uuid 7cb9a3c4-d3e8-4c15-bba8-c835701379b2))
     (pin "6" (uuid 06f39ede-c791-4795-ad3a-8bb601808b3b))
     (pin "7" (uuid f16cd131-5325-499f-b791-879ec083811d))
-    (pin "8" (uuid 9a6eaa3c-7149-4e11-bf3e-33453de8c319))
-    (pin "8" (uuid 9a6eaa3c-7149-4e11-bf3e-33453de8c319))
-    (pin "9" (uuid c36fa718-7055-4fa9-acd6-c23259cab53d))
-    (pin "9" (uuid c36fa718-7055-4fa9-acd6-c23259cab53d))
-    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5ab))
-    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5ab))
-    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5ab))
-    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5ab))
-    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5ab))
+    (pin "8" (uuid 9a6eaa3c-7149-4e11-bf3e-33453de8c31a))
+    (pin "8" (uuid 9a6eaa3c-7149-4e11-bf3e-33453de8c31a))
+    (pin "9" (uuid c36fa718-7055-4fa9-acd6-c23259cab53e))
+    (pin "9" (uuid c36fa718-7055-4fa9-acd6-c23259cab53e))
+    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5af))
+    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5af))
+    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5af))
+    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5af))
+    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5af))
   )
 
   (symbol (lib_id "Connector:Conn_01x01_Female") (at 420.37 319.405 180) (unit 1)
@@ -3671,7 +3671,7 @@
   (symbol (lib_id "power:GNDPWR") (at 605.155 337.185 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 2d260ab8-bb6d-4ba3-87f6-67a7afd6c9c7)
-    (property "Reference" "CHASSIS" (id 0) (at 605.155 340.995 0))
+    (property "Reference" "CHASSIS012" (id 0) (at 605.155 340.995 0))
     (property "Value" "GNDPWR" (id 1) (at 605.028 341.3411 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3687,7 +3687,7 @@
   (symbol (lib_id "power:GNDPWR") (at 439.42 330.2 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 2fb61537-dc75-4afe-8520-a4f1463407d9)
-    (property "Reference" "CHASSIS" (id 0) (at 439.42 334.01 0))
+    (property "Reference" "CHASSIS08" (id 0) (at 439.42 334.01 0))
     (property "Value" "GNDPWR" (id 1) (at 439.293 334.3561 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3703,7 +3703,7 @@
   (symbol (lib_id "power:GNDPWR") (at 99.06 327.66 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 42e7d8f3-1b2c-44f9-a5be-eac8b5d04981)
-    (property "Reference" "CHASSIS" (id 0) (at 99.06 331.47 0))
+    (property "Reference" "CHASSIS01" (id 0) (at 99.06 331.47 0))
     (property "Value" "GNDPWR" (id 1) (at 98.933 331.8161 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3719,7 +3719,7 @@
   (symbol (lib_id "power:GNDPWR") (at 280.67 334.01 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 44ec67a8-57e8-45d2-847c-a99d49ed8fb9)
-    (property "Reference" "CHASSIS" (id 0) (at 280.67 337.82 0))
+    (property "Reference" "CHASSIS05" (id 0) (at 280.67 337.82 0))
     (property "Value" "GNDPWR" (id 1) (at 280.543 338.1661 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3735,7 +3735,7 @@
   (symbol (lib_id "power:GNDPWR") (at 257.175 324.485 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 45022333-2a25-4991-b538-be8fb16607aa)
-    (property "Reference" "CHASSIS" (id 0) (at 257.175 328.295 0))
+    (property "Reference" "CHASSIS03" (id 0) (at 257.175 328.295 0))
     (property "Value" "GNDPWR" (id 1) (at 257.048 328.6411 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3751,7 +3751,7 @@
   (symbol (lib_id "Device:LED") (at 274.32 319.405 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 6931f0c1-c40c-40cf-b39a-92464045e669)
-    (property "Reference" "D?" (id 0) (at 274.1422 325.882 0))
+    (property "Reference" "D11" (id 0) (at 274.1422 325.882 0))
     (property "Value" "CAN Fault Indicator" (id 1) (at 274.1422 323.5706 0))
     (property "Footprint" "" (id 2) (at 274.32 319.405 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3766,7 +3766,7 @@
   (symbol (lib_id "power:GNDPWR") (at 459.74 389.89 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 72c43c35-b502-461f-9ea5-e341b54c936a)
-    (property "Reference" "CHASSIS_POINT2" (id 0) (at 459.74 393.7 0))
+    (property "Reference" "CHASSIS_POINT02" (id 0) (at 459.74 393.7 0))
     (property "Value" "GNDPWR" (id 1) (at 459.613 394.0461 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3782,7 +3782,7 @@
   (symbol (lib_id "Device:LED") (at 357.505 193.04 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 80806b24-c16f-4519-a604-8025cf35c455)
-    (property "Reference" "D?" (id 0) (at 357.6828 199.517 0))
+    (property "Reference" "D13" (id 0) (at 357.6828 199.517 0))
     (property "Value" "Indicator_5" (id 1) (at 357.6828 197.2056 0))
     (property "Footprint" "" (id 2) (at 357.505 193.04 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3797,7 +3797,7 @@
   (symbol (lib_id "Switch:SW_DIP_x03") (at 394.335 330.2 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 81d9b433-4bf7-4711-a6bf-17fe96a2ecd8)
-    (property "Reference" "SW?" (id 0) (at 394.335 337.185 0))
+    (property "Reference" "SW5" (id 0) (at 394.335 337.185 0))
     (property "Value" "TPST MOMENTARY BUTTON" (id 1) (at 394.335 334.645 0))
     (property "Footprint" "" (id 2) (at 394.335 330.2 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3816,7 +3816,7 @@
   (symbol (lib_id "power:GNDPWR") (at 459.74 383.54 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 85d81ad5-4040-4d2c-aa1a-69c0e68aa99f)
-    (property "Reference" "CHASSIS_POINT1" (id 0) (at 459.74 387.35 0))
+    (property "Reference" "CHASSIS_POINT01" (id 0) (at 459.74 387.35 0))
     (property "Value" "GNDPWR" (id 1) (at 459.613 387.6961 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3832,7 +3832,7 @@
   (symbol (lib_id "power:GNDPWR") (at 459.74 342.265 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 88d19a0a-0481-41d8-bbcf-7b5a64447c43)
-    (property "Reference" "CHASSIS" (id 0) (at 459.74 346.075 0))
+    (property "Reference" "CHASSIS09" (id 0) (at 459.74 346.075 0))
     (property "Value" "GNDPWR" (id 1) (at 459.613 346.4211 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3848,7 +3848,7 @@
   (symbol (lib_id "Device:LED") (at 357.505 203.2 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 8bed2468-874f-4b44-b109-d86b69c1527e)
-    (property "Reference" "D?" (id 0) (at 357.6828 209.677 0))
+    (property "Reference" "D14" (id 0) (at 357.6828 209.677 0))
     (property "Value" "Indicator_6" (id 1) (at 357.6828 207.3656 0))
     (property "Footprint" "" (id 2) (at 357.505 203.2 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3863,7 +3863,7 @@
   (symbol (lib_id "power:GNDPWR") (at 481.33 365.76 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 9c615d12-5225-46df-9ed7-a7529010f7bd)
-    (property "Reference" "CHASSIS" (id 0) (at 481.33 369.57 0))
+    (property "Reference" "CHASSIS010" (id 0) (at 481.33 369.57 0))
     (property "Value" "GNDPWR" (id 1) (at 481.203 369.9161 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3879,7 +3879,7 @@
   (symbol (lib_id "power:GNDPWR") (at 280.67 250.19 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a14d4105-3cc9-4756-9792-0a9b21c1dcd3)
-    (property "Reference" "CHASSIS" (id 0) (at 280.67 254 0))
+    (property "Reference" "CHASSIS04" (id 0) (at 280.67 254 0))
     (property "Value" "GNDPWR" (id 1) (at 280.543 254.3461 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3895,7 +3895,7 @@
   (symbol (lib_id "power:GNDPWR") (at 374.65 204.47 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a1e0fd85-0eff-434c-b4cf-3a90232492f5)
-    (property "Reference" "CHASSIS" (id 0) (at 374.65 208.28 0))
+    (property "Reference" "CHASSIS07" (id 0) (at 374.65 208.28 0))
     (property "Value" "GNDPWR" (id 1) (at 374.523 208.6261 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3911,7 +3911,7 @@
   (symbol (lib_id "power:GNDPWR") (at 190.5 398.145 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid bb4792f6-59b4-4020-887b-cd6101e284a4)
-    (property "Reference" "CHASSIS" (id 0) (at 190.5 401.955 0))
+    (property "Reference" "CHASSIS02" (id 0) (at 190.5 401.955 0))
     (property "Value" "GNDPWR" (id 1) (at 190.373 402.3011 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3927,7 +3927,7 @@
   (symbol (lib_id "power:GNDPWR") (at 654.685 316.23 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c489952b-a8c4-42b2-808d-fcbcad635e33)
-    (property "Reference" "CHASSIS" (id 0) (at 654.685 320.04 0))
+    (property "Reference" "CHASSIS013" (id 0) (at 654.685 320.04 0))
     (property "Value" "GNDPWR" (id 1) (at 654.558 320.3861 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3943,7 +3943,7 @@
   (symbol (lib_id "Device:LED") (at 357.505 182.88 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid d0bd088e-5b9b-4a9d-881a-7a8799557c18)
-    (property "Reference" "D?" (id 0) (at 357.6828 189.357 0))
+    (property "Reference" "D12" (id 0) (at 357.6828 189.357 0))
     (property "Value" "Indicator_4" (id 1) (at 357.6828 187.0456 0))
     (property "Footprint" "" (id 2) (at 357.505 182.88 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3958,7 +3958,7 @@
   (symbol (lib_id "power:GNDPWR") (at 506.095 265.43 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e079d6cc-9ffe-430f-a263-f5cc2deda68b)
-    (property "Reference" "CHASSIS" (id 0) (at 506.095 269.24 0))
+    (property "Reference" "CHASSIS011" (id 0) (at 506.095 269.24 0))
     (property "Value" "GNDPWR" (id 1) (at 505.968 269.5861 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3974,7 +3974,7 @@
   (symbol (lib_id "power:GNDPWR") (at 362.585 295.91 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e5390301-45f5-412f-a1d6-30464892262a)
-    (property "Reference" "CHASSIS" (id 0) (at 362.585 299.72 0))
+    (property "Reference" "CHASSIS06" (id 0) (at 362.585 299.72 0))
     (property "Value" "GNDPWR" (id 1) (at 362.458 300.0661 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -4441,16 +4441,16 @@
       (reference "#PWR06") (unit 1) (value "Earth") (footprint "")
     )
     (path "/f4866840-157c-49b9-bb5f-8808a53a5638/ee690c4b-5c9e-441e-b8e2-ba2e88614888"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+      (reference "#PWR07") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/33bb4ce3-955e-4e23-885e-cfd3de31da3e"
+      (reference "A1") (unit 1) (value "Arduino_UNO_rev3") (footprint "")
+    )
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/9f05e0d0-cd36-4a71-940c-e79e9ea67493"
+      (reference "A2") (unit 1) (value "Arduino_UNO_rev3") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005f890a03/00000000-0000-0000-0000-00005f8bebc7"
       (reference "A3") (unit 1) (value "Arduino_UNO_rev3") (footprint "")
-    )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/33bb4ce3-955e-4e23-885e-cfd3de31da3e"
-      (reference "A?") (unit 1) (value "Arduino_UNO_rev3") (footprint "")
-    )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/9f05e0d0-cd36-4a71-940c-e79e9ea67493"
-      (reference "A?") (unit 1) (value "Arduino_UNO_rev3") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005fb68579"
       (reference "BT1") (unit 1) (value "GLV Battery") (footprint "")
@@ -5970,50 +5970,50 @@
     (path "/00000000-0000-0000-0000-00005fb82bb8"
       (reference "CB1") (unit 1) (value "GLV Main Breaker") (footprint "")
     )
-    (path "/2d260ab8-bb6d-4ba3-87f6-67a7afd6c9c7"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
-    )
-    (path "/2fb61537-dc75-4afe-8520-a4f1463407d9"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
-    )
     (path "/42e7d8f3-1b2c-44f9-a5be-eac8b5d04981"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
-    )
-    (path "/44ec67a8-57e8-45d2-847c-a99d49ed8fb9"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
-    )
-    (path "/45022333-2a25-4991-b538-be8fb16607aa"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
-    )
-    (path "/88d19a0a-0481-41d8-bbcf-7b5a64447c43"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
-    )
-    (path "/9c615d12-5225-46df-9ed7-a7529010f7bd"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
-    )
-    (path "/a14d4105-3cc9-4756-9792-0a9b21c1dcd3"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
-    )
-    (path "/a1e0fd85-0eff-434c-b4cf-3a90232492f5"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
+      (reference "CHASSIS01") (unit 1) (value "GNDPWR") (footprint "")
     )
     (path "/bb4792f6-59b4-4020-887b-cd6101e284a4"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
+      (reference "CHASSIS02") (unit 1) (value "GNDPWR") (footprint "")
     )
-    (path "/c489952b-a8c4-42b2-808d-fcbcad635e33"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
+    (path "/45022333-2a25-4991-b538-be8fb16607aa"
+      (reference "CHASSIS03") (unit 1) (value "GNDPWR") (footprint "")
     )
-    (path "/e079d6cc-9ffe-430f-a263-f5cc2deda68b"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
+    (path "/a14d4105-3cc9-4756-9792-0a9b21c1dcd3"
+      (reference "CHASSIS04") (unit 1) (value "GNDPWR") (footprint "")
+    )
+    (path "/44ec67a8-57e8-45d2-847c-a99d49ed8fb9"
+      (reference "CHASSIS05") (unit 1) (value "GNDPWR") (footprint "")
     )
     (path "/e5390301-45f5-412f-a1d6-30464892262a"
-      (reference "CHASSIS") (unit 1) (value "GNDPWR") (footprint "")
+      (reference "CHASSIS06") (unit 1) (value "GNDPWR") (footprint "")
+    )
+    (path "/a1e0fd85-0eff-434c-b4cf-3a90232492f5"
+      (reference "CHASSIS07") (unit 1) (value "GNDPWR") (footprint "")
+    )
+    (path "/2fb61537-dc75-4afe-8520-a4f1463407d9"
+      (reference "CHASSIS08") (unit 1) (value "GNDPWR") (footprint "")
+    )
+    (path "/88d19a0a-0481-41d8-bbcf-7b5a64447c43"
+      (reference "CHASSIS09") (unit 1) (value "GNDPWR") (footprint "")
+    )
+    (path "/9c615d12-5225-46df-9ed7-a7529010f7bd"
+      (reference "CHASSIS010") (unit 1) (value "GNDPWR") (footprint "")
+    )
+    (path "/e079d6cc-9ffe-430f-a263-f5cc2deda68b"
+      (reference "CHASSIS011") (unit 1) (value "GNDPWR") (footprint "")
+    )
+    (path "/2d260ab8-bb6d-4ba3-87f6-67a7afd6c9c7"
+      (reference "CHASSIS012") (unit 1) (value "GNDPWR") (footprint "")
+    )
+    (path "/c489952b-a8c4-42b2-808d-fcbcad635e33"
+      (reference "CHASSIS013") (unit 1) (value "GNDPWR") (footprint "")
     )
     (path "/85d81ad5-4040-4d2c-aa1a-69c0e68aa99f"
-      (reference "CHASSIS_POINT1") (unit 1) (value "GNDPWR") (footprint "")
+      (reference "CHASSIS_POINT01") (unit 1) (value "GNDPWR") (footprint "")
     )
     (path "/72c43c35-b502-461f-9ea5-e341b54c936a"
-      (reference "CHASSIS_POINT2") (unit 1) (value "GNDPWR") (footprint "")
+      (reference "CHASSIS_POINT02") (unit 1) (value "GNDPWR") (footprint "")
     )
     (path "/00000000-0000-0000-0000-0000621f7bb5"
       (reference "D1") (unit 1) (value "SSOK") (footprint "")
@@ -6046,19 +6046,19 @@
       (reference "D10") (unit 1) (value "ACCUM_30V_LED") (footprint "")
     )
     (path "/6931f0c1-c40c-40cf-b39a-92464045e669"
-      (reference "D?") (unit 1) (value "CAN Fault Indicator") (footprint "")
-    )
-    (path "/80806b24-c16f-4519-a604-8025cf35c455"
-      (reference "D?") (unit 1) (value "Indicator_5") (footprint "")
-    )
-    (path "/8bed2468-874f-4b44-b109-d86b69c1527e"
-      (reference "D?") (unit 1) (value "Indicator_6") (footprint "")
+      (reference "D11") (unit 1) (value "CAN Fault Indicator") (footprint "")
     )
     (path "/d0bd088e-5b9b-4a9d-881a-7a8799557c18"
-      (reference "D?") (unit 1) (value "Indicator_4") (footprint "")
+      (reference "D12") (unit 1) (value "Indicator_4") (footprint "")
+    )
+    (path "/80806b24-c16f-4519-a604-8025cf35c455"
+      (reference "D13") (unit 1) (value "Indicator_5") (footprint "")
+    )
+    (path "/8bed2468-874f-4b44-b109-d86b69c1527e"
+      (reference "D14") (unit 1) (value "Indicator_6") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005f45afb3/fc8d60aa-484c-4e1c-9391-c2fa1560e4c7"
-      (reference "D?") (unit 1) (value "1N4001") (footprint "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
+      (reference "D15") (unit 1) (value "1N4001") (footprint "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/00000000-0000-0000-0000-000060854f08/00000000-0000-0000-0000-00005fdcccb1"
       (reference "F2") (unit 1) (value "Fuse_Small") (footprint "")
@@ -6712,10 +6712,10 @@
       (reference "K9") (unit 1) (value "Safety Relay") (footprint "Relay_THT:Relay_DPST_Fujitsu_FTR-F1A")
     )
     (path "/00000000-0000-0000-0000-00005f45afb3/350b101c-ddfe-45b9-b595-51dd8bda8401"
-      (reference "K?") (unit 1) (value "Omron DPDT Relay") (footprint "Relay_THT:Relay_DPDT_Omron_G5V-2")
+      (reference "K10") (unit 1) (value "Omron DPDT Relay") (footprint "Relay_THT:Relay_DPDT_Omron_G5V-2")
     )
     (path "/00000000-0000-0000-0000-00005f45afb3/7813bd07-6ee8-4016-8112-405dca1763d9"
-      (reference "K?") (unit 1) (value "Omron DPDT Relay") (footprint "Relay_THT:Relay_DPDT_Omron_G5V-2")
+      (reference "K11") (unit 1) (value "Omron DPDT Relay") (footprint "Relay_THT:Relay_DPDT_Omron_G5V-2")
     )
     (path "/00000000-0000-0000-0000-0000620aed7f"
       (reference "LS1") (unit 1) (value "Speaker") (footprint "")
@@ -6768,6 +6768,18 @@
     (path "/00000000-0000-0000-0000-00005f45afb3/00000000-0000-0000-0000-000060bb2a76"
       (reference "R3") (unit 1) (value "470") (footprint "")
     )
+    (path "/00000000-0000-0000-0000-00005f45afb3/757d2fe8-d490-49c7-bcf0-2b222134f073"
+      (reference "R4") (unit 1) (value "470") (footprint "")
+    )
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/a290ccc5-185b-47cf-9210-987990d48b59"
+      (reference "R5") (unit 1) (value "6.8MΩ") (footprint "")
+    )
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/bc10fe7b-3612-41af-9a8e-722170c0858b"
+      (reference "R6") (unit 1) (value "10kΩ") (footprint "")
+    )
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/4b733529-bf85-48af-949c-60db99e27fdb"
+      (reference "R7") (unit 1) (value "10MΩ") (footprint "")
+    )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/00000000-0000-0000-0000-0000608cf874"
       (reference "R8") (unit 1) (value "PCharge: 600R") (footprint "")
     )
@@ -6780,20 +6792,8 @@
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/00000000-0000-0000-0000-0000608282df"
       (reference "R11") (unit 1) (value "TSMP-: 10K") (footprint "")
     )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/4b733529-bf85-48af-949c-60db99e27fdb"
-      (reference "R?") (unit 1) (value "10MΩ") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-00005f45afb3/757d2fe8-d490-49c7-bcf0-2b222134f073"
-      (reference "R?") (unit 1) (value "470") (footprint "")
-    )
     (path "/f4866840-157c-49b9-bb5f-8808a53a5638/85b7caab-06f0-421d-8662-c62cbfd90f2c"
-      (reference "R?") (unit 1) (value "15kΩ") (footprint "")
-    )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/a290ccc5-185b-47cf-9210-987990d48b59"
-      (reference "R?") (unit 1) (value "6.8MΩ") (footprint "")
-    )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/bc10fe7b-3612-41af-9a8e-722170c0858b"
-      (reference "R?") (unit 1) (value "10kΩ") (footprint "")
+      (reference "R12") (unit 1) (value "15kΩ") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005f71e67b"
       (reference "RV1") (unit 1) (value "R_POT") (footprint "")
@@ -6815,6 +6815,9 @@
     )
     (path "/00000000-0000-0000-0000-00005fe5c813"
       (reference "SW4") (unit 1) (value "Brake Over-Travel Switch") (footprint "")
+    )
+    (path "/81d9b433-4bf7-4711-a6bf-17fe96a2ecd8"
+      (reference "SW5") (unit 1) (value "TPST MOMENTARY BUTTON") (footprint "")
     )
     (path "/00000000-0000-0000-0000-0000616878e3"
       (reference "SW6") (unit 1) (value "Cockpit BRB") (footprint "")
@@ -6839,9 +6842,6 @@
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000061824850"
       (reference "SW13") (unit 1) (value "SMD_2") (footprint "")
-    )
-    (path "/81d9b433-4bf7-4711-a6bf-17fe96a2ecd8"
-      (reference "SW?") (unit 1) (value "TPST MOMENTARY BUTTON") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/00000000-0000-0000-0000-000060854f4b/00000000-0000-0000-0000-0000611d2662"
       (reference "TH1") (unit 1) (value "Thermistor") (footprint "")
@@ -7116,6 +7116,15 @@
     (path "/00000000-0000-0000-0000-00005f972c2b"
       (reference "U3") (unit 1) (value "Emrax 228MV Motor") (footprint "")
     )
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/c17b24cf-87cc-4f2e-9572-4008b1ddf08b"
+      (reference "U4") (unit 1) (value "KY-019") (footprint "")
+    )
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/70085f58-7bc0-44f8-b902-5c460ef110e1"
+      (reference "U5") (unit 1) (value "CAN_Bus_Module") (footprint "")
+    )
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/9ef6df9c-ea55-48ff-bc47-7ff83a281903"
+      (reference "U6") (unit 1) (value "CAN_Bus_Module") (footprint "")
+    )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/00000000-0000-0000-0000-00006082a419"
       (reference "U7") (unit 1) (value "OrionCurrentSens") (footprint "")
     )
@@ -7136,15 +7145,6 @@
     )
     (path "/00000000-0000-0000-0000-00005f890a03/00000000-0000-0000-0000-00005f8c522e"
       (reference "U13") (unit 1) (value "CAN_Bus_Module") (footprint "")
-    )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/70085f58-7bc0-44f8-b902-5c460ef110e1"
-      (reference "U?") (unit 1) (value "CAN_Bus_Module") (footprint "")
-    )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/9ef6df9c-ea55-48ff-bc47-7ff83a281903"
-      (reference "U?") (unit 1) (value "CAN_Bus_Module") (footprint "")
-    )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/c17b24cf-87cc-4f2e-9572-4008b1ddf08b"
-      (reference "U?") (unit 1) (value "KY-019") (footprint "")
     )
   )
 )
