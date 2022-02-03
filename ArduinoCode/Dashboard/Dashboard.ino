@@ -7,8 +7,10 @@
 
 
 #define CAN_FAULT_LED      0
+
 #define GENERAL_LED_1      1 // custom behavior 
 #define GENERAL_LED_2      2 // custom behavior
+
 #define ON_OFF_LED         3 // intergrated LED on the ON_OFF button
 #define ON_OFF_BUTTON      4
 #define SHUTDOWN_DETECTION 5 // shutdown circuit enable for if the car can run
