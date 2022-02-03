@@ -224,7 +224,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "unannotated": "error",
@@ -281,7 +281,7 @@
     "annotate_start_num": 0,
     "drawing": {
       "default_line_thickness": 6.0,
-      "default_text_size": 157.0,
+      "default_text_size": 50.0,
       "field_names": [],
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
@@ -325,16 +325,8 @@
       "Shutdown Latching Circuits"
     ],
     [
-      "00000000-0000-0000-0000-00005f6c8190",
-      "Pedal Box"
-    ],
-    [
       "00000000-0000-0000-0000-000060c39cce",
       "Accumulator Container"
-    ],
-    [
-      "00000000-0000-0000-0000-00005f647a32",
-      "Driver IO Enclosure"
     ],
     [
       "00000000-0000-0000-0000-000060828791",
@@ -411,6 +403,10 @@
     [
       "00000000-0000-0000-0000-000061ecc7cf",
       "Charger"
+    ],
+    [
+      "f4866840-157c-49b9-bb5f-8808a53a5638",
+      "Footwell Box"
     ]
   ],
   "text_variables": {}
