@@ -1,3 +1,5 @@
+#include <Mouse.h>
+
 // Author: Joshua Cheng
 // Date: November 3, 2020
 
@@ -5,8 +7,10 @@
 
 
 #define CAN_FAULT_LED      0
-#define GENERAL_LED_2      1 // custom behavior 
-#define GENERAL_LED_1      2 // custom behavior
+
+#define GENERAL_LED_1      1 // custom behavior 
+#define GENERAL_LED_2      2 // custom behavior
+
 #define ON_OFF_LED         3 // intergrated LED on the ON_OFF button
 #define ON_OFF_BUTTON      4
 #define SHUTDOWN_DETECTION 5 // shutdown circuit enable for if the car can run
@@ -46,7 +50,7 @@ void setup() {
   pinMode(SHUTDOWN_DETECTION, INPUT); 
   pinMode(DIRECTION_SWITCH, INPUT); 
   pinMode(SPEAKER, OUTPUT);
-  
+
   while (CAN_OK != CAN.begin(CAN_250KBPS, MCP_8MHz)) { //specify 8MHz crystal
     Serial.println("CAN BUS init Failed");
     delay(250);
