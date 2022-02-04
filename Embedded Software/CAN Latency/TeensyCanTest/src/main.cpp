@@ -8,7 +8,7 @@ FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> myCan; // main CAN object
 
 static CAN_message_t msg; // can message
 
-static uint32_t timeout; // timeout value for sending CAN messages
+static uint32_t timeout1; // timeout value for sending CAN messages
 
 
 
@@ -63,7 +63,7 @@ void setup() {
   myCan.enableFIFOInterrupt(); // enables interrupts to be used with FIFO
   myCan.onReceive(testCallback); // sets the callback for received messages
   myCan.mailboxStatus(); // prints out mailbox config information
-  timeout = millis(); // set initial timeout to current time
+  timeout1 = millis(); // set initial timeout to current time
 
   pinMode(LED_BUILTIN, OUTPUT);
   delay(100);
@@ -94,12 +94,12 @@ void loop() {
 
     double multiplier = (double)midValue/1023; // value from 0 to 1;
 
-    int actualTorque = multiplier * MAX_TORQUE *10;
+    int actualTorque = multiplier * MAX_TORQUE;
 
     accelTorqueLow = actualTorque % 256;
     accelTorqueHigh = actualTorque / 256;
 
-    //Serial.println(actualTorque / 10); // prints out applied torque
+    Serial.println(actualTorque / 10); // prints out applied torque
 
   }
 
@@ -107,7 +107,7 @@ void loop() {
 
 
   //send a CAN message every 200 ms
-  // if ( millis() - timeout > 100 ) {
+  // if ( millis() - timeout1 > 100 ) {
   //   Serial.println("Writing CAN message");
   //   msg.id = 0x3;
   //   msg.len = 8;
@@ -115,7 +115,7 @@ void loop() {
   //     msg.buf[i] = 1;
   //   }
   //   myCan.write(msg);
-  //   timeout = millis();
+  //   timeout1 = millis();
   // }
 
   String serialIn = "";
@@ -178,11 +178,11 @@ void loop() {
 // callback that runs for received data
 void testCallback(const CAN_message_t &msg)
 {
-  // return;
-  // if (msg.id != 0x00)
-  // {
-  //   return;
-  // }
+   //return;
+  if (msg.id != 0xA0)
+  {
+    return;
+  }
   Serial.print("MB "); Serial.print(msg.mb);
   Serial.print("  OVERRUN: "); Serial.print(msg.flags.overrun);
   Serial.print("  LEN: "); Serial.print(msg.len);
