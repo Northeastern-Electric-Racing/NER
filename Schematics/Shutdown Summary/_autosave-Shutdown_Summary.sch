@@ -19,16 +19,17 @@ Comment8 ""
 Comment9 ""
 $EndDescr
 Connection ~ 2800 6000
-Connection ~ 3750 1900
 Connection ~ 4850 3350
 Connection ~ 4850 4100
+Connection ~ 4900 1600
 Connection ~ 5450 5950
 Connection ~ 5900 3350
 Connection ~ 5900 4100
 Connection ~ 5900 5400
-Connection ~ 6200 5750
+Connection ~ 6200 5550
 Connection ~ 6400 3450
 Connection ~ 6400 4100
+Connection ~ 6500 1600
 Connection ~ 7400 3450
 Connection ~ 7400 4100
 Connection ~ 7650 3450
@@ -36,14 +37,15 @@ Connection ~ 7650 4100
 Connection ~ 7650 4400
 Connection ~ 8650 3450
 Connection ~ 8650 4100
+Connection ~ 9050 2200
 Connection ~ 9500 2200
-Connection ~ 9700 5700
-Connection ~ 9800 5600
-Connection ~ 10550 4050
-Connection ~ 10550 5600
-Connection ~ 10650 4150
-Connection ~ 10650 5700
+Connection ~ 10550 6200
+Connection ~ 10650 6100
 Connection ~ 11350 2200
+Connection ~ 11400 4050
+Connection ~ 11400 6100
+Connection ~ 11500 4150
+Connection ~ 11500 6200
 Connection ~ 11850 4050
 Connection ~ 11850 5600
 Connection ~ 12350 2200
@@ -108,19 +110,15 @@ Wire Wire Line
 Wire Wire Line
 	3400 2300 4250 2300
 Wire Wire Line
+	3400 2450 3450 2450
+Wire Wire Line
 	3400 2600 3450 2600
 Wire Wire Line
 	3450 2750 3400 2750
 Wire Wire Line
-	3750 1600 3750 1900
+	3750 1600 3750 2150
 Wire Wire Line
-	3750 1600 6500 1600
-Wire Wire Line
-	3750 1900 5050 1900
-Wire Wire Line
-	3750 2150 3750 1900
-Wire Wire Line
-	4150 2450 3400 2450
+	3750 1600 4900 1600
 Wire Wire Line
 	4500 7350 4500 7950
 Wire Wire Line
@@ -147,6 +145,12 @@ Wire Wire Line
 	4850 4100 5100 4100
 Wire Wire Line
 	4850 5250 5800 5250
+Wire Wire Line
+	4900 1600 4900 1900
+Wire Wire Line
+	4900 1600 6500 1600
+Wire Wire Line
+	4900 1900 5050 1900
 Wire Wire Line
 	5150 7800 5150 8200
 Wire Wire Line
@@ -178,8 +182,6 @@ Wire Wire Line
 Wire Wire Line
 	5550 5650 6100 5650
 Wire Wire Line
-	5650 2000 5700 2000
-Wire Wire Line
 	5650 2200 6500 2200
 Wire Wire Line
 	5650 2700 5900 2700
@@ -195,6 +197,14 @@ Wire Wire Line
 	5700 8000 5750 8000
 Wire Wire Line
 	5700 8200 5850 8200
+Wire Wire Line
+	5750 800  5850 800 
+Wire Wire Line
+	5750 1000 5750 800 
+Wire Wire Line
+	5750 1300 5750 2000
+Wire Wire Line
+	5750 2000 5650 2000
 Wire Wire Line
 	5750 5400 5900 5400
 Wire Wire Line
@@ -216,17 +226,17 @@ Wire Wire Line
 Wire Wire Line
 	5900 5400 7400 5400
 Wire Wire Line
-	6100 2000 6000 2000
-Wire Wire Line
 	6100 4100 6400 4100
 Wire Wire Line
 	6100 5650 6100 4100
 Wire Wire Line
 	6200 4500 6600 4500
 Wire Wire Line
-	6200 5750 6200 4500
+	6200 5550 6200 4500
 Wire Wire Line
-	6200 5750 6200 5950
+	6200 5550 10300 5550
+Wire Wire Line
+	6200 5750 6200 5550
 Wire Wire Line
 	6400 2700 6400 3450
 Wire Wire Line
@@ -242,6 +252,8 @@ Wire Wire Line
 Wire Wire Line
 	6500 1600 6500 1900
 Wire Wire Line
+	6500 1600 7750 1600
+Wire Wire Line
 	6500 1900 6600 1900
 Wire Wire Line
 	6500 2200 6500 2300
@@ -254,23 +266,25 @@ Wire Wire Line
 Wire Wire Line
 	7000 3450 7400 3450
 Wire Wire Line
+	7200 2200 7750 2200
+Wire Wire Line
 	7200 2700 7400 2700
 Wire Wire Line
 	7200 4100 7400 4100
 Wire Wire Line
 	7200 4600 7300 4600
 Wire Wire Line
-	7200 5600 8500 5600
+	7300 800  7400 800 
 Wire Wire Line
-	7200 5700 8500 5700
+	7300 1000 7300 800 
 Wire Wire Line
-	7200 5800 8500 5800
+	7300 1300 7300 2000
+Wire Wire Line
+	7300 2000 7200 2000
 Wire Wire Line
 	7300 4600 7300 5250
 Wire Wire Line
 	7300 5250 6400 5250
-Wire Wire Line
-	7350 7150 10000 7150
 Wire Wire Line
 	7400 2700 7400 3450
 Wire Wire Line
@@ -278,17 +292,9 @@ Wire Wire Line
 Wire Wire Line
 	7400 4100 7400 5400
 Wire Wire Line
-	7450 7250 10000 7250
-Wire Wire Line
 	7500 4400 7500 6800
 Wire Wire Line
 	7550 4500 7550 6850
-Wire Wire Line
-	7600 1350 7600 1450
-Wire Wire Line
-	7600 1750 7600 2000
-Wire Wire Line
-	7600 2000 7200 2000
 Wire Wire Line
 	7650 2700 7650 3450
 Wire Wire Line
@@ -306,9 +312,23 @@ Wire Wire Line
 Wire Wire Line
 	7650 5250 7650 4400
 Wire Wire Line
+	7750 1600 7750 1900
+Wire Wire Line
+	7750 1900 7850 1900
+Wire Wire Line
+	7750 2200 7750 2300
+Wire Wire Line
+	7750 2300 7850 2300
+Wire Wire Line
 	7850 4500 7550 4500
 Wire Wire Line
+	8200 7150 10850 7150
+Wire Wire Line
 	8250 3450 8650 3450
+Wire Wire Line
+	8300 7250 10850 7250
+Wire Wire Line
+	8450 2200 9050 2200
 Wire Wire Line
 	8450 2700 8650 2700
 Wire Wire Line
@@ -316,11 +336,23 @@ Wire Wire Line
 Wire Wire Line
 	8450 4600 8550 4600
 Wire Wire Line
-	8500 5950 6200 5950
+	8550 800  8650 800 
+Wire Wire Line
+	8550 1000 8550 800 
+Wire Wire Line
+	8550 1300 8550 2000
+Wire Wire Line
+	8550 2000 8450 2000
 Wire Wire Line
 	8550 4600 8550 5250
 Wire Wire Line
 	8550 5250 7650 5250
+Wire Wire Line
+	8600 6000 8750 6000
+Wire Wire Line
+	8600 6100 8750 6100
+Wire Wire Line
+	8600 6200 8750 6200
 Wire Wire Line
 	8650 2700 8650 3450
 Wire Wire Line
@@ -328,25 +360,13 @@ Wire Wire Line
 Wire Wire Line
 	8650 4100 8650 5400
 Wire Wire Line
-	8850 1350 8850 1450
-Wire Wire Line
-	8850 1750 8850 2000
-Wire Wire Line
-	8850 2000 8450 2000
+	8650 5900 8750 5900
 Wire Wire Line
 	9050 2200 9500 2200
 Wire Wire Line
 	9050 2400 9050 2200
 Wire Wire Line
 	9050 2850 9050 2700
-Wire Wire Line
-	9350 5050 9800 5050
-Wire Wire Line
-	9350 5150 9700 5150
-Wire Wire Line
-	9450 5600 9800 5600
-Wire Wire Line
-	9450 5700 9700 5700
 Wire Wire Line
 	9500 2200 10000 2200
 Wire Wire Line
@@ -358,47 +378,59 @@ Wire Wire Line
 Wire Wire Line
 	9500 4150 9650 4150
 Wire Wire Line
-	9700 5150 9700 5700
+	10150 4050 11400 4050
 Wire Wire Line
-	9700 5700 10000 5700
+	10150 4150 11500 4150
 Wire Wire Line
-	9800 5050 9800 5600
+	10150 6100 10650 6100
 Wire Wire Line
-	9800 5600 10000 5600
+	10150 6200 10550 6200
 Wire Wire Line
-	10150 4050 10550 4050
+	10200 6550 10650 6550
 Wire Wire Line
-	10150 4150 10650 4150
+	10200 6650 10550 6650
 Wire Wire Line
-	10300 5600 10550 5600
+	10300 5550 10300 5900
 Wire Wire Line
-	10300 5700 10650 5700
-Wire Wire Line
-	10300 7150 10550 7150
-Wire Wire Line
-	10300 7250 10650 7250
+	10300 5900 10150 5900
 Wire Wire Line
 	10400 2200 10700 2200
 Wire Wire Line
-	10550 4050 11850 4050
+	10550 6200 10850 6200
 Wire Wire Line
-	10550 5600 10550 4050
+	10550 6650 10550 6200
 Wire Wire Line
-	10550 7150 10550 5600
+	10650 6100 10850 6100
 Wire Wire Line
-	10650 4150 11850 4150
-Wire Wire Line
-	10650 5700 10650 4150
-Wire Wire Line
-	10650 5700 10650 7250
+	10650 6550 10650 6100
 Wire Wire Line
 	11100 2200 11350 2200
+Wire Wire Line
+	11150 6100 11400 6100
+Wire Wire Line
+	11150 6200 11500 6200
+Wire Wire Line
+	11150 7150 11400 7150
+Wire Wire Line
+	11150 7250 11500 7250
 Wire Wire Line
 	11350 1900 11350 2200
 Wire Wire Line
 	11350 2200 12350 2200
 Wire Wire Line
+	11400 4050 11400 6100
+Wire Wire Line
+	11400 4050 11850 4050
+Wire Wire Line
+	11400 6100 11400 7150
+Wire Wire Line
 	11450 3250 12600 3250
+Wire Wire Line
+	11500 4150 11500 6200
+Wire Wire Line
+	11500 4150 11850 4150
+Wire Wire Line
+	11500 6200 11500 7250
 Wire Wire Line
 	11650 1800 11650 3050
 Wire Wire Line
@@ -509,10 +541,12 @@ Wire Notes Line
 	6700 7450 4250 7450
 Wire Notes Line
 	6700 8500 6700 7450
+Text Notes 650  10400 0    138  ~ 0
+CONECPTUAL REPRESENTATION - SEE MASTER SCHEMATICS FOR LOCATIONS AND WIRE GAUGES
 Text Notes 5300 8600 0    50   ~ 0
 TSMP and Shutdown Reset Container
 Text Label 2150 2150 2    50   ~ 0
-LV_System
+Battery-Box_12V
 Text Label 2150 2300 2    50   ~ 0
 LV_System
 Text Label 2150 2450 2    50   ~ 0
@@ -525,20 +559,24 @@ Text Label 2450 5400 2    50   ~ 0
 CANDetection
 Text Label 2850 6000 0    50   ~ 0
 CoolingPumpPower
+Text Label 3450 2450 0    50   ~ 0
+LV_System
 Text Label 3450 2600 0    50   ~ 0
 LV_System
 Text Label 3450 2750 0    50   ~ 0
 LV_System
 Text Label 4650 5950 0    50   ~ 0
 BMS_MPEnable
-Text Label 9350 5050 2    50   ~ 0
-TSAL_Isolation+
-Text Label 9350 5150 2    50   ~ 0
-TSAL_Isolation-
+Text Label 8650 5900 2    50   ~ 0
+Battery-Box_12V
 Text Label 9500 4050 2    50   ~ 0
 MotorController_TS+
 Text Label 9500 4150 2    50   ~ 0
 MotorController_TS-
+Text Label 10200 6550 2    50   ~ 0
+TSAL_Isolation+
+Text Label 10200 6650 2    50   ~ 0
+TSAL_Isolation-
 Text Label 11350 1900 1    50   ~ 0
 StartStopController
 Text Label 11450 3050 2    50   ~ 0
@@ -551,17 +589,17 @@ Text GLabel 4500 7350 1    50   UnSpc ~ 0
 CHASSIS_GND
 Text GLabel 5750 5400 0    50   UnSpc ~ 0
 CHASSIS_GND
-Text GLabel 6100 2000 2    50   UnSpc ~ 0
+Text GLabel 5850 800  2    50   UnSpc ~ 0
 CHASSIS_GND
-Text GLabel 7200 5600 0    50   UnSpc ~ 0
+Text GLabel 7400 800  2    50   UnSpc ~ 0
 CHASSIS_GND
-Text GLabel 7200 5700 0    50   UnSpc ~ 0
+Text GLabel 8600 6000 0    50   UnSpc ~ 0
 CHASSIS_GND
-Text GLabel 7200 5800 0    50   UnSpc ~ 0
+Text GLabel 8600 6100 0    50   UnSpc ~ 0
 CHASSIS_GND
-Text GLabel 7600 1350 1    50   UnSpc ~ 0
+Text GLabel 8600 6200 0    50   UnSpc ~ 0
 CHASSIS_GND
-Text GLabel 8850 1350 1    50   UnSpc ~ 0
+Text GLabel 8650 800  2    50   UnSpc ~ 0
 CHASSIS_GND
 Text GLabel 9050 2850 3    50   UnSpc ~ 0
 CHASSIS_GND
@@ -611,57 +649,57 @@ $EndComp
 $Comp
 L Device:Fuse F?
 U 1 1 767039C5
-P 10150 5600
+P 11000 6100
 AR Path="/5F45B05E/767039C5" Ref="F?"  Part="1" 
 AR Path="/767039C5" Ref="F1"  Part="1" 
 AR Path="/766EFABD/767039C5" Ref="F1"  Part="1" 
-F 0 "F1" H 10091 5554 50  0000 R CNN
-F 1 "Fuse" H 10091 5645 50  0000 R CNN
-F 2 "" V 10080 5600 50  0001 C CNN
-F 3 "~" H 10150 5600 50  0001 C CNN
-	1    10150 5600
+F 0 "F1" H 10941 6054 50  0000 R CNN
+F 1 "Fuse" H 10941 6145 50  0000 R CNN
+F 2 "" V 10930 6100 50  0001 C CNN
+F 3 "~" H 11000 6100 50  0001 C CNN
+	1    11000 6100
 	0    -1   1    0   
 $EndComp
 $Comp
 L Device:Fuse F?
 U 1 1 767039CB
-P 10150 5700
+P 11000 6200
 AR Path="/5F45B05E/767039CB" Ref="F?"  Part="1" 
 AR Path="/767039CB" Ref="F2"  Part="1" 
 AR Path="/766EFABD/767039CB" Ref="F2"  Part="1" 
-F 0 "F2" H 10091 5654 50  0000 R CNN
-F 1 "Fuse" H 10091 5745 50  0000 R CNN
-F 2 "" V 10080 5700 50  0001 C CNN
-F 3 "~" H 10150 5700 50  0001 C CNN
-	1    10150 5700
+F 0 "F2" H 10941 6154 50  0000 R CNN
+F 1 "Fuse" H 10941 6245 50  0000 R CNN
+F 2 "" V 10930 6200 50  0001 C CNN
+F 3 "~" H 11000 6200 50  0001 C CNN
+	1    11000 6200
 	0    1    -1   0   
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 767039BF
-P 10150 7150
+P 11000 7150
 AR Path="/5F45B05E/767039BF" Ref="R?"  Part="1" 
 AR Path="/767039BF" Ref="R1"  Part="1" 
 AR Path="/766EFABD/767039BF" Ref="R1"  Part="1" 
-F 0 "R1" H 10220 7196 50  0000 L CNN
-F 1 "10k" H 10220 7105 50  0000 L CNN
-F 2 "" V 10080 7150 50  0001 C CNN
-F 3 "~" H 10150 7150 50  0001 C CNN
-	1    10150 7150
+F 0 "R1" H 11070 7196 50  0000 L CNN
+F 1 "10k" H 11070 7105 50  0000 L CNN
+F 2 "" V 10930 7150 50  0001 C CNN
+F 3 "~" H 11000 7150 50  0001 C CNN
+	1    11000 7150
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 767039B9
-P 10150 7250
+P 11000 7250
 AR Path="/5F45B05E/767039B9" Ref="R?"  Part="1" 
 AR Path="/767039B9" Ref="R2"  Part="1" 
 AR Path="/766EFABD/767039B9" Ref="R2"  Part="1" 
-F 0 "R2" H 10220 7296 50  0000 L CNN
-F 1 "10k" H 10220 7205 50  0000 L CNN
-F 2 "" V 10080 7250 50  0001 C CNN
-F 3 "~" H 10150 7250 50  0001 C CNN
-	1    10150 7250
+F 0 "R2" H 11070 7296 50  0000 L CNN
+F 1 "10k" H 11070 7205 50  0000 L CNN
+F 2 "" V 10930 7250 50  0001 C CNN
+F 3 "~" H 11000 7250 50  0001 C CNN
+	1    11000 7250
 	0    -1   1    0   
 $EndComp
 $Comp
@@ -849,40 +887,36 @@ F 3 "~" H 15750 6500 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED D2
-U 1 1 767039AE
-P 5850 2000
-AR Path="/767039AE" Ref="D2"  Part="1" 
-AR Path="/766EFABD/767039AE" Ref="D2"  Part="1" 
-F 0 "D2" H 5700 1700 50  0000 R CNN
-F 1 "BMS Fault Indcator" H 5950 1800 50  0000 R CNN
-F 2 "" H 5850 2000 50  0001 C CNN
-F 3 "~" H 5850 2000 50  0001 C CNN
-	1    5850 2000
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:LED D4
-U 1 1 767039A8
-P 7600 1600
-AR Path="/767039A8" Ref="D4"  Part="1" 
-AR Path="/766EFABD/767039A8" Ref="D4"  Part="1" 
-F 0 "D4" H 7600 1300 50  0000 R CNN
-F 1 "IMD Fault Indicator" H 7950 1400 50  0000 R CNN
-F 2 "" H 7600 1600 50  0001 C CNN
-F 3 "~" H 7600 1600 50  0001 C CNN
-	1    7600 1600
+L Device:LED D?
+U 1 1 00000000
+P 5750 1150
+F 0 "D?" H 5750 850 50  0000 R CNN
+F 1 "BMS Fault Indicator" H 6100 950 50  0000 R CNN
+F 2 "" H 5750 1150 50  0001 C CNN
+F 3 "~" H 5750 1150 50  0001 C CNN
+	1    5750 1150
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:LED D?
 U 1 1 00000000
-P 8850 1600
-F 0 "D?" H 8850 1300 50  0000 R CNN
-F 1 "CAN Fault Indicator" H 9200 1400 50  0000 R CNN
-F 2 "" H 8850 1600 50  0001 C CNN
-F 3 "~" H 8850 1600 50  0001 C CNN
-	1    8850 1600
+P 7300 1150
+F 0 "D?" H 7300 850 50  0000 R CNN
+F 1 "IMD Fault Indicator" H 7650 950 50  0000 R CNN
+F 2 "" H 7300 1150 50  0001 C CNN
+F 3 "~" H 7300 1150 50  0001 C CNN
+	1    7300 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 00000000
+P 8550 1150
+F 0 "D?" H 8550 850 50  0000 R CNN
+F 1 "CAN Fault Indicator" H 8900 950 50  0000 R CNN
+F 2 "" H 8550 1150 50  0001 C CNN
+F 3 "~" H 8550 1150 50  0001 C CNN
+	1    8550 1150
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1110,6 +1144,17 @@ F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 14800 7550 50  0001 L CNN
 F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 14450 7600 50  0001 C CNN
 	1    14450 7600
 	0    -1   1    0   
+$EndComp
+$Comp
+L NER:Bender_Isometer_IR155-3204 U?
+U 1 1 00000000
+P 9450 5750
+F 0 "U?" H 9450 5865 50  0000 C CNN
+F 1 "Bender_Isometer_IR155-3204" H 9450 5774 50  0000 C CNN
+F 2 "" H 9450 5750 50  0001 C CNN
+F 3 "" H 9450 5750 50  0001 C CNN
+	1    9450 5750
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Relay:G5V-2 K?
