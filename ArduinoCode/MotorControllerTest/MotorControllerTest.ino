@@ -17,6 +17,9 @@
 #define CAN_MOTOR 0xC0 // canID for msg to send to motor controller
 const unsigned char MOTOR_OFF[8] = {0, 0, 0, 0, 0, 0, 0, 0}; // message to turn motor off
 
+static uint32_t timeout1; // timeout value for sending CAN messages
+
+
 MCP_CAN CAN(CAN_SS_PIN);
 
 bool isForward = true;
@@ -31,7 +34,7 @@ unsigned long lastCommand = 0;
 void setup() {
   Serial.begin(9600);
 
-  while (CAN_OK != CAN.begin(CAN_500KBPS, MCP_8MHz)) { //specify 8MHz crystal
+  while (CAN_OK != CAN.begin(CAN_250KBPS, MCP_8MHz)) { //specify 8MHz crystal
     Serial.println(F("CAN BUS init Failed"));
     delay(250);
   }
@@ -45,6 +48,32 @@ void setup() {
    Prints incoming CAN messages to the Serial Monitor, allows user to send CAN messages via the Serial Monitor.
 */
 void loop() {
+  int MAX_TORQUE = 180;
+  int LOWER_BOUND = 35; 
+  
+  static unsigned long timeout = millis();
+  if (millis() - timeout > 50) {
+    timeout = millis();
+    int averageReading = analogRead(A0); // value from 0 to 1023 (need to reverse)
+
+    int midValue = (averageReading * -1) + 1023; // reverse it so 0 is when pedal not pressed, and 1023 is at full press
+
+    if (midValue < LOWER_BOUND) { // does nothing for first 50 of potentiometer values on 0 to 1023 scale
+      midValue = 0;
+    }
+
+    double multiplier = (double)midValue/1023; // value from 0 to 1;
+
+    int actualTorque = multiplier * MAX_TORQUE *10;
+
+    accelTorqueLow = actualTorque % 256;
+    accelTorqueHigh = actualTorque / 256;
+
+    //Serial.println(actualTorque / 10); // prints out applied torque
+
+  }
+
+  
   String serialIn = "";
   while (Serial.available() > 0) {
     serialIn = Serial.readStringUntil('\r');
@@ -52,6 +81,21 @@ void loop() {
 
   // handle user input
   if (serialIn.length() > 0) {
+    if (serialIn.equals("status")) {
+      Serial.println(F("Direction: "));
+      if (isForward) {
+        Serial.println(F("forward"));
+      } else {
+        Serial.println(F("reverse"));
+      }
+
+      Serial.println(F("State: "));
+      if (isOn) {
+        Serial.println(F("on"));
+      } else {
+        Serial.println(F("off"));
+      }
+    }
     if (serialIn.equals("reverse")) {
       isForward = !isForward;
       Serial.print(F("Reversing... Direction is now: "));
@@ -68,13 +112,9 @@ void loop() {
       isOn = true;
     } else if (serialIn.equals("off") && isOn) {
       Serial.println(F("Turning off motor controller"));
-      CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF);
+      CAN.sendMsgBuf(CAN_MOTOR, 0, 8, MOTOR_OFF); // release lockout
       isOn = false;
-    } else if (serialIn.equals("0") || (serialIn.toInt() > 0 && serialIn.toInt() <= HARD_TORQUE_LIMIT)) {
-      Serial.println("Setting torque value: " + serialIn);
-      accelTorqueLow = serialIn.toInt() % 256;
-      accelTorqueHigh = serialIn.toInt() / 256;
-    }
+    } 
   }
 
   // send command message if MC is on and its been 50ms

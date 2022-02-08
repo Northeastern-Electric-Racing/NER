@@ -4,15 +4,16 @@
 #define BAUD_RATE 250000U // 250 kbps 
 #define MAX_MB_NUM 16
 
+#define MAXIMUM_TORQUE 180 // in Nm 
+#define POT_LOWER_BOUND 35 // a pot value from 0 to 1023
+#define POT_UPPER_BOUND 1023 // a pot value from 0 to 1023
+
 FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> myCan; // main CAN object
 
 static CAN_message_t msg; // can message
 
 static uint32_t timeout1; // timeout value for sending CAN messages
 
-
-
-#define HARD_TORQUE_LIMIT 1000
 #define CAN_MOTOR 0xC0 // canID for msg to send to motor controller
 const unsigned char MOTOR_OFF[8] = {0, 0, 0, 0, 0, 0, 0, 0}; // message to turn motor off
 
@@ -21,7 +22,6 @@ bool isOn = false;
 unsigned int accelTorqueLow = 0;
 unsigned int accelTorqueHigh = 0;
 unsigned long lastCommand = 0;
-
 
 
 // prototype for the CAN receive callback
@@ -46,8 +46,6 @@ int sendMessage(uint32_t id, uint8_t len, const uint8_t *buf)
 
   return myCan.write(msg);
 }
-
-
 
 
 // put your setup code here, to run once:
@@ -76,10 +74,6 @@ void setup() {
 // put your main code here, to run repeatedly:
 void loop() {
   myCan.events(); // enable CAN messages to be received (trigger interrupts to the callbacks)
-
-
-  int MAX_TORQUE = 180;
-  int LOWER_BOUND = 35; 
   
   static unsigned long timeout = millis();
   if (millis() - timeout > 50) {
@@ -88,13 +82,13 @@ void loop() {
 
     int midValue = (averageReading * -1) + 1023; // reverse it so 0 is when pedal not pressed, and 1023 is at full press
 
-    if (midValue < LOWER_BOUND) { // does nothing for first 50 of potentiometer values on 0 to 1023 scale
+    if (midValue < POT_LOWER_BOUND) { // does nothing for first 50 of potentiometer values on 0 to 1023 scale
       midValue = 0;
     }
 
     double multiplier = (double)midValue/1023; // value from 0 to 1;
 
-    int actualTorque = multiplier * MAX_TORQUE;
+    int actualTorque = multiplier * MAXIMUM_TORQUE;
 
     accelTorqueLow = actualTorque % 256;
     accelTorqueHigh = actualTorque / 256;
