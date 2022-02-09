@@ -1,0 +1,40 @@
+SD Card Intitialized!:    logging data...
+Distance:    2.04
+ALERT!!:    Object Detected within specified parameters
+Distance:    8.41
+ALERT!!:    Object Detected within specified parameters
+Distance:    8.41
+ALERT!!:    Object Detected within specified parameters
+Distance:    8.45
+ALERT!!:    Object Detected within specified parameters
+Distance:    8.28
+ALERT!!:    Object Detected within specified parameters
+Distance:    10.51
+Distance:    22.11
+Distance:    49.55
+Distance:    65.65
+Distance:    2.34
+ALERT!!:    Object Detected within specified parameters
+Distance:    49.58
+Distance:    50.41
+Distance:    3.35
+ALERT!!:    Object Detected within specified parameters
+Distance:    49.01
+Distance:    53.39
+Distance:    66.20
+Distance:    45.35
+Distance:    2.61
+ALERT!!:    Object Detected within specified parameters
+Distance:    2.47
+ALERT!!:    Object Detected within specified parameters
+Distance:    48.88
+Distance:    48.30
+Distance:    4.39
+ALERT!!:    Object Detected within specified parameters
+Distance:    3.94
+ALERT!!:    Object Detected within specified parameters
+Distance:    46.30
+Distance:    58.61
+Distance:    54.26
+Distance:    55.05
+Distance:    54.51
