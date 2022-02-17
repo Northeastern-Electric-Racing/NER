@@ -14,8 +14,8 @@ class DecodeSignedInt:
 
     @staticmethod
     def find_byte(data):
-        first_byte = data[0] << 8
-        full_byte = first_byte | data[1]
+        first_byte = data[1] << 8
+        full_byte = first_byte | data[0]
 
         return full_byte
 
