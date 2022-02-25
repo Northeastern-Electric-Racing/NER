@@ -28,11 +28,11 @@ void loop()
     t = millis();
     sense1 = analogRead(A0);
     sense2 = analogRead(A1);
-    sense3 = analogRead(A1);
+    sense3 = analogRead(A2);
 
-    voltage1 = sense1 * (5.0 / 1024.0) + .14;
-    voltage2 = sense2 * (5.0 / 1024.0) + .14;
-    voltage3 = sense3 * (5.0 / 1024.0) + .14;
+    voltage1 = sense1 * (5.0 / 1024.0) + .09;
+    voltage2 = sense2 * (5.0 / 1024.0) + .09;
+    voltage3 = sense3 * (5.0 / 1024.0) + .09;
 
     Serial.println(String(t / 1000, 0) + "\t" + String(voltage1) + "\t" + String(voltage2) + "\t" + String(voltage3));
 
