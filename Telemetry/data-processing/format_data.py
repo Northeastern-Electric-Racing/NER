@@ -1,4 +1,7 @@
 class FormatData:
+    # Provides methods to correctly scale the data to the actual value
+    # based on its type/range
+
     @staticmethod
     def temperature(value):
         return value / 10
@@ -26,3 +29,7 @@ class FormatData:
     @staticmethod
     def high_voltage(value):
         return value / 10
+
+    @staticmethod
+    def timer(value):
+        return value * 0.003

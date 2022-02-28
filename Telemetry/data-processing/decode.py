@@ -3,23 +3,27 @@ from format_data import FormatData
 
 class DecodeSignedInt:
     def __init__(self, byte_vals):
+        # splits the given bytes into pairs of 2 for each value encoded
         self.byte_vals = [byte_vals[i : i + 2] for i in range(0, 8, 2)]
 
     @staticmethod
     def twos_comp(val, bits):
-        """compute the 2's complement of int value val"""
+        # compute the 2's complement of int value val
         if (val & (1 << (bits - 1))) != 0:
             val = val - (1 << bits)
         return val
 
     @staticmethod
     def find_byte(data):
+        # finds the full byte value by combining both byte values in
+        # the pair, using little endian format
         first_byte = data[1] << 8
         full_byte = first_byte | data[0]
 
         return full_byte
 
     def decode(self):
+        # finds the decoded 2's complement value for all of the byte values
         parsed_vals = [self.find_byte(byte_val) for byte_val in self.byte_vals]
 
         int_vals = [self.twos_comp(val, 16) for val in parsed_vals]
@@ -27,7 +31,7 @@ class DecodeSignedInt:
         return int_vals
 
 
-class Decode0X0A0(DecodeSignedInt):
+class Decode0X0A0(DecodeSignedInt):  # Temps (IGBT modules, Gate Driver Board)
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
 
@@ -44,7 +48,7 @@ class Decode0X0A0(DecodeSignedInt):
         }
 
 
-class Decode0X0A1(DecodeSignedInt):
+class Decode0X0A1(DecodeSignedInt):  # Temps (Control Board, RTD #1-3)
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
 
@@ -63,7 +67,7 @@ class Decode0X0A1(DecodeSignedInt):
         }
 
 
-class Decode0X0A2(DecodeSignedInt):
+class Decode0X0A2(DecodeSignedInt):  # Temps (RTD #4-5, Motor), Torque Shudder
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
 
@@ -81,7 +85,7 @@ class Decode0X0A2(DecodeSignedInt):
         }
 
 
-class Decode0X0A5(DecodeSignedInt):
+class Decode0X0A5(DecodeSignedInt):  # Motor angle, speed, frequency
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
 
@@ -101,7 +105,7 @@ class Decode0X0A5(DecodeSignedInt):
         }
 
 
-class Decode0X0A6(DecodeSignedInt):
+class Decode0X0A6(DecodeSignedInt):  # Currents (3 Phases, DC Bus)
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
 
@@ -118,7 +122,7 @@ class Decode0X0A6(DecodeSignedInt):
         }
 
 
-class Decode0X0A7(DecodeSignedInt):
+class Decode0X0A7(DecodeSignedInt):  # Voltages (DC Bus, Output)
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
 
@@ -143,9 +147,28 @@ class Decode0X0AB:  # Fault Codes
     pass
 
 
-class Decode0X0AC:  # Torque and Timer
+class Decode0X0AC(DecodeSignedInt):  # Torque and Timer
     def __init__(self, byte_vals):
-        pass
+        self.byte_vals = [byte_vals[i : i + 2] for i in range(0, 4, 2)]
+        self.timer_bytes = byte_vals[4:]
+
+    def find_timer_byte(self):
+        first_byte = self.timer_bytes[3] << 24
+        second_byte = self.timer_bytes[2] << 16
+        third_byte = self.timer_bytes[1] << 8
+        full_byte = first_byte | second_byte | third_byte | self.timer_bytes[0]
+
+        return full_byte
 
     def values(self):
-        pass
+        vals = self.decode()
+        timer_val = self.find_timer_byte()
+
+        commanded_torque, torque_feedback = [FormatData.torque(val) for val in vals]
+        timer_sec = FormatData.timer(timer_val)
+
+        return {
+            "Commanded Torque": commanded_torque,
+            "Torque Feedback": torque_feedback,
+            "Power on Timer": timer_sec,
+        }
