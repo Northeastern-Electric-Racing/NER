@@ -140,11 +140,45 @@ class Decode0X0A7(DecodeSignedInt):  # Voltages (DC Bus, Output)
 
 
 class Decode0X0AA:  # Internal States
-    pass
+    def __init__(self, byte_vals):
+        # converts all bytes into the equivalent 8 bit binary values
+        self.byte_vals = ["{:08b}".format(i) for i in byte_vals]
+
+    def values(self):
+        # The byte values can be manually reviewed with the documentation
+        # in case any information is needed, so no decoding is needed
+        return {
+            "VSM State": self.byte_vals[1] << 8 | self.byte_vals[0],
+            "Inverter State": self.byte_vals[2],
+            "Relay State": self.byte_vals[3],
+            "Inverter Run Mode": self.byte_vals[4][0],
+            "Inverter Active Discharge State": self.byte_vals[4][5:],
+            "Inverter Command Mode": self.byte_vals[5],
+            "Inverter Enable State": self.byte_vals[6][0],
+            "Inverter Enable Lockout": self.byte_vals[6][7],
+            "Direction Command": self.byte_vals[7][0],
+            "BMS Active": self.byte_vals[7][1],
+            "BMS Limiting Torque": self.byte_vals[7][2],
+        }
 
 
 class Decode0X0AB:  # Fault Codes
-    pass
+    def __init__(self, byte_vals):
+        # converts all bytes into the equivalent 16 bit binary values
+        self.byte_vals = [
+            "{:016b}".format(byte_vals[i + 1] << 8 | byte_vals[i])
+            for i in range(0, 8, 2)
+        ]
+
+    def values(self):
+        # The byte values can be manually reviewed with the documentation
+        # in case any information is needed, so no decoding is needed
+        return {
+            "POST Fault Lo": self.byte_vals[0],
+            "POST Fault Hi": self.byte_vals[1],
+            "Run Fault Lo": self.byte_vals[2],
+            "Run Fault Hi": self.byte_vals[3],
+        }
 
 
 class Decode0X0AC(DecodeSignedInt):  # Torque and Timer

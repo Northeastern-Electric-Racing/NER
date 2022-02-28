@@ -28,6 +28,14 @@ DECODE_IDS = {
         "device": "voltage information",
         "decode_class": decode.Decode0X0A7,
     },
+    "0x0AA": {
+        "device": "internal states",
+        "decode_class": decode.Decode0X0AA,
+    },
+    "0x0AB": {
+        "device": "fault codes",
+        "decode_class": decode.Decode0X0AB,
+    },
     "0x0AC": {
         "device": "torque and timer",
         "decode_class": decode.Decode0X0AC,
