@@ -224,7 +224,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "error",
+      "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "unannotated": "error",
@@ -238,7 +238,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Master System Schematic.kicad_pro",
+    "filename": "Shutdown_Summary.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -298,7 +298,7 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "Pcbnew",
+    "net_format_name": "",
     "ngspice": {
       "fix_include_paths": true,
       "fix_passive_vals": false,
@@ -317,96 +317,8 @@
   },
   "sheets": [
     [
-      "aee7520e-3bfc-435f-a66b-1dd1f5aa6a87",
+      "1552b3de-85c6-4aa4-a04e-0e188b8e565e",
       ""
-    ],
-    [
-      "00000000-0000-0000-0000-00005f45afb3",
-      "Shutdown Latching Circuits"
-    ],
-    [
-      "00000000-0000-0000-0000-000060c39cce",
-      "Accumulator Container"
-    ],
-    [
-      "00000000-0000-0000-0000-000060828791",
-      "Segment_Layer"
-    ],
-    [
-      "00000000-0000-0000-0000-000060854f08",
-      "ThermistorPCB3"
-    ],
-    [
-      "00000000-0000-0000-0000-000060854f7b",
-      "ThermistorPCB4"
-    ],
-    [
-      "00000000-0000-0000-0000-000060854e95",
-      "ThermistorPCB2"
-    ],
-    [
-      "00000000-0000-0000-0000-000060854e22",
-      "ThermistorPCB1"
-    ],
-    [
-      "00000000-0000-0000-0000-000060854f4b",
-      "BatterySegment4"
-    ],
-    [
-      "00000000-0000-0000-0000-000060854ed8",
-      "BatterySegment3"
-    ],
-    [
-      "00000000-0000-0000-0000-000060854df2",
-      "BatterySegment1"
-    ],
-    [
-      "00000000-0000-0000-0000-000060854e65",
-      "BatterySegment2"
-    ],
-    [
-      "00000000-0000-0000-0000-000060d7b7e4",
-      "VT_PCB4"
-    ],
-    [
-      "00000000-0000-0000-0000-000060f4aa76",
-      "VT_PCB3"
-    ],
-    [
-      "00000000-0000-0000-0000-000060f60cdb",
-      "VT_PCB2"
-    ],
-    [
-      "00000000-0000-0000-0000-000060f7a5d4",
-      "VT_PCB1"
-    ],
-    [
-      "00000000-0000-0000-0000-00006082840f",
-      "HV_Plate"
-    ],
-    [
-      "00000000-0000-0000-0000-00006139c054",
-      "TSAL PCB"
-    ],
-    [
-      "00000000-0000-0000-0000-000060827cb0",
-      "LV_Plate"
-    ],
-    [
-      "00000000-0000-0000-0000-00006139a762",
-      "MCR_PCB"
-    ],
-    [
-      "00000000-0000-0000-0000-00005f890a03",
-      "Brake Light"
-    ],
-    [
-      "00000000-0000-0000-0000-000061ecc7cf",
-      "Charger"
-    ],
-    [
-      "f4866840-157c-49b9-bb5f-8808a53a5638",
-      "Footwell Box"
     ]
   ],
   "text_variables": {}
