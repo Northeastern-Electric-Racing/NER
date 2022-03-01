@@ -1,4 +1,4 @@
 (sym_lib_table
-  (lib (name "Master-System-Schematic-rescue")(type "Legacy")(uri "${KIPRJMOD}/Master System Schematic-rescue.lib")(options "")(descr "")(disabled))
-  (lib (name "NER")(type "KiCad")(uri "C:/Users/range/OneDrive - Northeastern University/Projects/NER/Schematics/_Kicad Libraries/NER.kicad_sym")(options "")(descr ""))
+  (lib (name Master-System-Schematic-rescue)(type Legacy)(uri "${KIPRJMOD}/Master System Schematic-rescue.lib")(options "")(descr "")(disabled))
+  (lib (name NER)(type Legacy)(uri ${NERGITHUB}/NER.lib)(options "")(descr ""))
 )
