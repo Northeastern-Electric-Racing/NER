@@ -6,7 +6,7 @@
 #define BRAKE_PIN 10
 
 // motor torque constants
-#define MAXIMUM_TORQUE 180 // in Nm 
+#define MAXIMUM_TORQUE 180 // in Nm x 10 (ex: 123 = 12.3Nm)
 #define POT_LOWER_BOUND 35 // a pot value from 0 to 1023
 #define POT_UPPER_BOUND 1023 // a pot value from 0 to 1023
 
@@ -172,7 +172,7 @@ void readAccel() {
     int totalBrakeTime = (millis() - timeBrake) / 1000; // length of time in seconds that the brake has been held down
     
     if (totalBrakeTime - START_TIME > RAMP_TIME) { // max regen torque is allowed
-      appliedTorque = -MAX_REGEN_TORQUE;
+      appliedTorque = MAX_REGEN_TORQUE;
     } 
     else if (totalBrakeTime - START_TIME > 0) {
       appliedTorque = totalBrakeTime * (MAX_REGEN_TORQUE / RAMP_TIME); // regen torque depends on how long the brake has been held
