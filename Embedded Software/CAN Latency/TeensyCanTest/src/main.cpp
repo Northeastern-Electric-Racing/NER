@@ -2,8 +2,15 @@
 #include <FlexCAN_T4.h> // header file to use the library
 
 // IO pins
-#define ACCEL_PIN A0
+#define ACCEL1_PIN A0
+#define ACCEL2_PIN A1
 #define BRAKE_PIN 10
+#define LED4_PIN 3
+#define LED5_PIN 5
+#define SS_BUTT_PIN 29
+#define SS_LED_PIN 32
+#define SPEAKER_PIN 7
+#define REVERSE_SW_PIN 9
 
 // motor torque constants
 #define MAXIMUM_TORQUE 180 // in Nm x 10 (ex: 123 = 12.3Nm)
@@ -71,8 +78,16 @@ void setup() {
 
   pinMode(BRAKE_PIN, INPUT_PULLUP);
 
-  Serial.println(F("CAN BUS Shield Init OK!"));
+  pinMode(SS_LED_PIN, OUTPUT);
+  digitalWrite(SS_LED_PIN, HIGH);
+  pinMode(LED4_PIN, OUTPUT);
+  digitalWrite(LED4_PIN, LOW);
+  pinMode(LED5_PIN, OUTPUT);
+  digitalWrite(LED5_PIN, LOW);
+  pinMode(SPEAKER_PIN, OUTPUT);
+  digitalWrite(SPEAKER_PIN, LOW);
 
+  Serial.println(F("CAN BUS Shield Init OK!"));
 }
 
 
@@ -107,6 +122,9 @@ void loop() {
   while (Serial.available() > 0) {
     serialIn = Serial.readStringUntil('\r');
   }
+
+  // Handle Dashboard IO
+
 
   // handle user input
   if (serialIn.length() > 0) {
@@ -183,7 +201,7 @@ void readAccel() {
 
   }
   else {
-    int reading = analogRead(ACCEL_PIN); // value from 0 to 1023 (need to reverse)
+    int reading = analogRead(ACCEL1_PIN); // value from 0 to 1023 (need to reverse)
     int16_t flippedVal = (reading * -1) + 1023; // reverse it so 0 is when pedal not pressed, and 1023 is at full press
 
     if (flippedVal < POT_LOWER_BOUND) { // Set low point to prevent a positive torque in the resting pedal position
