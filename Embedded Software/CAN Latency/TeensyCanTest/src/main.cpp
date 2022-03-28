@@ -2,17 +2,24 @@
 #include <FlexCAN_T4.h> // header file to use the library
 
 // IO pins
-#define ACCEL_PIN A0
+#define ACCEL1_PIN A0
+#define ACCEL2_PIN A1
 #define BRAKE_PIN 10
+#define LED4_PIN 3
+#define LED5_PIN 5
+#define SS_BUTT_PIN 29
+#define SS_LED_PIN 32
+#define SPEAKER_PIN 7
+#define REVERSE_SW_PIN 9
 
 // motor torque constants
-#define MAXIMUM_TORQUE 180 // in Nm 
+#define MAXIMUM_TORQUE 2300 // in Nm x 10 (ex: 123 = 12.3Nm)
 #define POT_LOWER_BOUND 35 // a pot value from 0 to 1023
 #define POT_UPPER_BOUND 1023 // a pot value from 0 to 1023
 
 // regen braking constants
 #define START_TIME 0   // delay from when brake is pressed to when regen starts
-#define MAX_REGEN_TORQUE -180 // maximum regen torque value
+#define MAX_REGEN_TORQUE -250 // maximum regen torque value
 #define RAMP_TIME  10  // time until the maximum regen torque is reached (in seconds)
  
 // CAN info  
@@ -37,6 +44,10 @@ uint32_t lastPedalRead = 0; // the time the pedal actuation was last read
 uint32_t lastBrakeMessage = 0; // the time the last brake message was sent
 uint32_t lastCommand = 0; // the time the last command message was sent
 uint32_t lastSendMessage = 0; 
+uint32_t lastIORead = 0;
+uint32_t lastPowerTog = 0;
+
+uint32_t counter = 0;
 
 // breaking variables
 bool brakePressed = false;
@@ -71,8 +82,19 @@ void setup() {
 
   pinMode(BRAKE_PIN, INPUT_PULLUP);
 
-  Serial.println(F("CAN BUS Shield Init OK!"));
+  pinMode(SS_LED_PIN, OUTPUT);
+  digitalWrite(SS_LED_PIN, HIGH);
+  pinMode(LED4_PIN, OUTPUT);
+  digitalWrite(LED4_PIN, LOW);
+  pinMode(LED5_PIN, OUTPUT);
+  digitalWrite(LED5_PIN, LOW);
+  pinMode(SPEAKER_PIN, OUTPUT);
+  digitalWrite(SPEAKER_PIN, LOW);
+  
+  pinMode(SS_BUTT_PIN, INPUT_PULLUP);
+  pinMode(REVERSE_SW_PIN, INPUT_PULLUP);
 
+  Serial.println(F("CAN BUS Shield Init OK!"));
 }
 
 
@@ -108,7 +130,34 @@ void loop() {
     serialIn = Serial.readStringUntil('\r');
   }
 
-  // handle user input
+  if (digitalRead(SS_BUTT_PIN) == HIGH) {
+    counter++;
+  }else{
+    counter = 0;
+  }
+  // Handle Dashboard IO
+  if ((millis() - lastIORead) > 100) {
+    lastIORead = millis();
+    
+    if(digitalRead(REVERSE_SW_PIN) == HIGH) {
+      isForward = true;
+      Serial.println("T");
+    } else if (digitalRead(REVERSE_SW_PIN) == LOW) {
+      isForward = false;
+      Serial.println("F");
+    }
+
+    if ((counter > 50000) && ((millis() - lastPowerTog) > 1000)) {
+      lastPowerTog = millis();
+      isOn = !isOn;
+      sendMessage(CAN_MOTOR, 8, MOTOR_OFF); // release lockout / OFF
+      Serial.println("TOGGLING POWER");
+      counter = 0;
+    }
+  }
+
+
+  /*// handle user input
   if (serialIn.length() > 0) {
     if (serialIn.equals("status")) {
       Serial.println(F("Direction: "));
@@ -144,7 +193,7 @@ void loop() {
       sendMessage(CAN_MOTOR, 8, MOTOR_OFF);
       isOn = false;
     } 
-  }
+  }*/
 
   // send command message if MC is on and its been 50ms
   if ((millis() - lastCommand) > 50) {
@@ -172,7 +221,7 @@ void readAccel() {
     int totalBrakeTime = (millis() - timeBrake) / 1000; // length of time in seconds that the brake has been held down
     
     if (totalBrakeTime - START_TIME > RAMP_TIME) { // max regen torque is allowed
-      appliedTorque = -MAX_REGEN_TORQUE;
+      appliedTorque = MAX_REGEN_TORQUE;
     } 
     else if (totalBrakeTime - START_TIME > 0) {
       appliedTorque = totalBrakeTime * (MAX_REGEN_TORQUE / RAMP_TIME); // regen torque depends on how long the brake has been held
@@ -183,7 +232,7 @@ void readAccel() {
 
   }
   else {
-    int reading = analogRead(ACCEL_PIN); // value from 0 to 1023 (need to reverse)
+    int reading = analogRead(ACCEL1_PIN); // value from 0 to 1023 (need to reverse)
     int16_t flippedVal = (reading * -1) + 1023; // reverse it so 0 is when pedal not pressed, and 1023 is at full press
 
     if (flippedVal < POT_LOWER_BOUND) { // Set low point to prevent a positive torque in the resting pedal position
