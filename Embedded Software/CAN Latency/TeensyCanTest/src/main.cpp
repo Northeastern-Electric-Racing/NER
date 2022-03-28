@@ -13,13 +13,13 @@
 #define REVERSE_SW_PIN 9
 
 // motor torque constants
-#define MAXIMUM_TORQUE 180 // in Nm x 10 (ex: 123 = 12.3Nm)
+#define MAXIMUM_TORQUE 2300 // in Nm x 10 (ex: 123 = 12.3Nm)
 #define POT_LOWER_BOUND 35 // a pot value from 0 to 1023
 #define POT_UPPER_BOUND 1023 // a pot value from 0 to 1023
 
 // regen braking constants
 #define START_TIME 0   // delay from when brake is pressed to when regen starts
-#define MAX_REGEN_TORQUE -180 // maximum regen torque value
+#define MAX_REGEN_TORQUE -250 // maximum regen torque value
 #define RAMP_TIME  10  // time until the maximum regen torque is reached (in seconds)
  
 // CAN info  
@@ -44,6 +44,10 @@ uint32_t lastPedalRead = 0; // the time the pedal actuation was last read
 uint32_t lastBrakeMessage = 0; // the time the last brake message was sent
 uint32_t lastCommand = 0; // the time the last command message was sent
 uint32_t lastSendMessage = 0; 
+uint32_t lastIORead = 0;
+uint32_t lastPowerTog = 0;
+
+uint32_t counter = 0;
 
 // breaking variables
 bool brakePressed = false;
@@ -86,6 +90,9 @@ void setup() {
   digitalWrite(LED5_PIN, LOW);
   pinMode(SPEAKER_PIN, OUTPUT);
   digitalWrite(SPEAKER_PIN, LOW);
+  
+  pinMode(SS_BUTT_PIN, INPUT_PULLUP);
+  pinMode(REVERSE_SW_PIN, INPUT_PULLUP);
 
   Serial.println(F("CAN BUS Shield Init OK!"));
 }
@@ -123,10 +130,34 @@ void loop() {
     serialIn = Serial.readStringUntil('\r');
   }
 
+  if (digitalRead(SS_BUTT_PIN) == HIGH) {
+    counter++;
+  }else{
+    counter = 0;
+  }
   // Handle Dashboard IO
+  if ((millis() - lastIORead) > 100) {
+    lastIORead = millis();
+    
+    if(digitalRead(REVERSE_SW_PIN) == HIGH) {
+      isForward = true;
+      Serial.println("T");
+    } else if (digitalRead(REVERSE_SW_PIN) == LOW) {
+      isForward = false;
+      Serial.println("F");
+    }
+
+    if ((counter > 50000) && ((millis() - lastPowerTog) > 1000)) {
+      lastPowerTog = millis();
+      isOn = !isOn;
+      sendMessage(CAN_MOTOR, 8, MOTOR_OFF); // release lockout / OFF
+      Serial.println("TOGGLING POWER");
+      counter = 0;
+    }
+  }
 
 
-  // handle user input
+  /*// handle user input
   if (serialIn.length() > 0) {
     if (serialIn.equals("status")) {
       Serial.println(F("Direction: "));
@@ -162,7 +193,7 @@ void loop() {
       sendMessage(CAN_MOTOR, 8, MOTOR_OFF);
       isOn = false;
     } 
-  }
+  }*/
 
   // send command message if MC is on and its been 50ms
   if ((millis() - lastCommand) > 50) {
