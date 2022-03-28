@@ -32,6 +32,7 @@
 #include <FlexCAN_T4.h>
 #include <SD.h>
 #include <TimeLib.h>
+#include <TinyGPSPlus.h>
 
 #define BAUD_RATE 250000U // 250 kbps 
 #define MAX_MB_NUM 16 // maximum number of CAN mailboxes to use 
@@ -71,6 +72,8 @@ void incomingCANCallback(const CAN_message_t &msg);
 bool SDWrite();
 char *getTimestamp();
 
+TinyGPSPlus gps;
+
 
 /**
  * @brief Init serial console, CAN bus, and brake switch digital pins
@@ -78,7 +81,9 @@ char *getTimestamp();
  */
 void setup() {
   Serial.begin(115200); 
+  Serial1.begin(9600); // GPS serial port
   delay(400);
+
 
   // init startup times
   startUpTimeMillis = millis();
@@ -110,6 +115,8 @@ void setup() {
 
   Serial.print(F("setup complete. fileNum is "));
   Serial.println(String(fileNum));
+
+  
 }
 
 /**
@@ -124,6 +131,44 @@ void loop() {
   if ((lastLogTime > MIN_LOG_FREQUENCY) || (bufLength == MAX_BUFFERED_MESSAGES)) {
     SDWrite();
   }
+
+  if (Serial1.available()){
+  gps.encode(Serial1.read());
+  
+  double latitude = gps.location.lat();
+  double longtitude = gps.location.lng();
+  double speed = gps.speed.mph();
+
+  message_format_t message;
+        strncpy(message.timestamp, getTimestamp(), 25);
+        message.id = 0x303;
+        message.length = 8;
+        memcpy(message.dataBuf, &latitude, 8);
+        
+        messageBuf[bufLength] = message;
+        bufLength++;
+
+  message_format_t message1;
+        strncpy(message1.timestamp, getTimestamp(), 25);
+        message1.id = 0x304;
+        message1.length = 8;
+        memcpy(message1.dataBuf, &longtitude, 8);
+        
+        messageBuf[bufLength] = message1;
+        bufLength++;
+
+  message_format_t message2;
+        strncpy(message2.timestamp, getTimestamp(), 25);
+        message2.id = 0x305;
+        message2.length = 8;
+        memcpy(message2.dataBuf, &speed, 8);
+        
+        messageBuf[bufLength] = message2;
+        bufLength++;
+
+  }
+
+
 }
 
 /**
