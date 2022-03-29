@@ -4,69 +4,41 @@ from db import create_entry, insert_entries
 
 LOGS = "./logs/"
 DECODE_IDS = {
-    "0x00": {
-        "device": "acceleration",
-        "decode_class": decode.DecodeX01,
+    "0x0A0": {
+        "device": "temperatures (igbt modules, gate driver board)",
+        "decode_class": decode.Decode0X0A0,
     },
-    "0x01": {
-        "device": "vehicle speed",
-        "decode_class": decode.DecodeX01,
+    "0x0A1": {
+        "device": "temperatures (control board)",
+        "decode_class": decode.Decode0X0A1,
     },
-    "0x02": {
-        "device": "brake fluid pressue",
-        "decode_class": decode.DecodeX01,
+    "0x0A2": {
+        "device": "temperatures (motor)",
+        "decode_class": decode.Decode0X0A2,
     },
-    "0x03": {
-        "device": "tire pressure",
-        "decode_class": decode.DecodeX01,
+    "0x0A5": {
+        "device": "motor position information",
+        "decode_class": decode.Decode0X0A5,
     },
-    "0x04": {
-        "device": "gps",
-        "decode_class": decode.DecodeX01,
+    "0x0A6": {
+        "device": "current information",
+        "decode_class": decode.Decode0X0A6,
     },
-    "0x05": {
-        "device": "battery",
-        "decode_class": decode.DecodeX01,
+    "0x0A7": {
+        "device": "voltage information",
+        "decode_class": decode.Decode0X0A7,
     },
-    "0x06": {
-        "device": "wheel speed",
-        "decode_class": decode.DecodeX01,
+    "0x0AA": {
+        "device": "internal states",
+        "decode_class": decode.Decode0X0AA,
     },
-    "0x07": {
-        "device": "temperature",
-        "decode_class": decode.DecodeX01,
+    "0x0AB": {
+        "device": "fault codes",
+        "decode_class": decode.Decode0X0AB,
     },
-    "0x08": {
-        "device": "a",
-        "decode_class": decode.DecodeX01,
-    },
-    "0x09": {
-        "device": "b",
-        "decode_class": decode.DecodeX01,
-    },
-    "0x10": {
-        "device": "c",
-        "decode_class": decode.DecodeX01,
-    },
-    "0x11": {
-        "device": "d",
-        "decode_class": decode.DecodeX01,
-    },
-    "0x12": {
-        "device": "e",
-        "decode_class": decode.DecodeX01,
-    },
-    "0x13": {
-        "device": "f",
-        "decode_class": decode.DecodeX01,
-    },
-    "0x14": {
-        "device": "g",
-        "decode_class": decode.DecodeX01,
-    },
-    "0x15": {
-        "device": "h",
-        "decode_class": decode.DecodeX01,
+    "0x0AC": {
+        "device": "torque and timer",
+        "decode_class": decode.Decode0X0AC,
     },
 }
 
@@ -88,8 +60,8 @@ def process_data(log_path):
 
                 device = DECODE_IDS[can_id]["device"]
 
-                decode = DECODE_IDS[can_id]["decode_class"](length, data)
-                processed_data = decode.parse()
+                decode = DECODE_IDS[can_id]["decode_class"](data)
+                processed_data = decode.values()
 
                 entry = create_entry(can_id, device, processed_data, timestamp)
 
