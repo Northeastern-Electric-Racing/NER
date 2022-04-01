@@ -130,19 +130,19 @@ void loop() {
     SDWrite();
   }
  
-  static unsigned long writeTime = millis();
-  static int writeData = 0;
-  if (millis() - writeTime > 20) {
-    getTimestamp(messageBuf[bufLength].timestamp);
-    messageBuf[bufLength].id = 0x01;
-    messageBuf[bufLength].length = 8;
-    memset(messageBuf[bufLength].dataBuf, writeData, 8);
-    bufLength++;
+  // static unsigned long writeTime = millis();
+  // static int writeData = 0;
+  // if (millis() - writeTime > 20) {
+  //   getTimestamp(messageBuf[bufLength].timestamp);
+  //   messageBuf[bufLength].id = 0x01;
+  //   messageBuf[bufLength].length = 8;
+  //   memset(messageBuf[bufLength].dataBuf, writeData, 8);
+  //   bufLength++;
 
-    writeData++;
-    writeData %= 10;
-    writeTime = millis();
-  }
+  //   writeData++;
+  //   writeData %= 10;
+  //   writeTime = millis();
+  // }
 
 
 }

@@ -166,7 +166,7 @@ class Decode0X0AB:  # Fault Codes
     def __init__(self, byte_vals):
         # converts all bytes into the equivalent 16 bit binary values
         self.byte_vals = [
-            "{:016b}".format(byte_vals[i + 1] << 8 | byte_vals[i])
+            "{:016b}".format(byte_vals[i+1] << 8 | byte_vals[i])
             for i in range(0, 8, 2)
         ]
 
