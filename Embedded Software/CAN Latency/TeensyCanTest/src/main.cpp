@@ -8,13 +8,16 @@
 #define LED4_PIN 3
 #define LED5_PIN 5
 #define SS_BUTT_PIN 29
-#define SS_LED_PIN 32
+#define SS_LED_PIN 33
 #define SPEAKER_PIN 7
 #define REVERSE_SW_PIN 9
+#define BRAKE_SEN1 34
+#define BRAKE_SEN2 35
+// #define BRAKE_LED 
 
 // motor torque constants
-#define MAXIMUM_TORQUE 2300 // in Nm x 10 (ex: 123 = 12.3Nm)
-#define POT_LOWER_BOUND 35 // a pot value from 0 to 1023
+#define MAXIMUM_TORQUE 200 // in Nm x 10 (ex: 123 = 12.3Nm)
+#define POT_LOWER_BOUND 30 // a pot value from 0 to 1023
 #define POT_UPPER_BOUND 1023 // a pot value from 0 to 1023
 
 // regen braking constants
@@ -83,7 +86,7 @@ void setup() {
   pinMode(BRAKE_PIN, INPUT_PULLUP);
 
   pinMode(SS_LED_PIN, OUTPUT);
-  digitalWrite(SS_LED_PIN, HIGH);
+  digitalWrite(SS_LED_PIN, LOW);
   pinMode(LED4_PIN, OUTPUT);
   digitalWrite(LED4_PIN, LOW);
   pinMode(LED5_PIN, OUTPUT);
@@ -141,18 +144,24 @@ void loop() {
     
     if(digitalRead(REVERSE_SW_PIN) == HIGH) {
       isForward = true;
-      Serial.println("T");
     } else if (digitalRead(REVERSE_SW_PIN) == LOW) {
       isForward = false;
-      Serial.println("F");
     }
 
     if ((counter > 50000) && ((millis() - lastPowerTog) > 1000)) {
       lastPowerTog = millis();
       isOn = !isOn;
       sendMessage(CAN_MOTOR, 8, MOTOR_OFF); // release lockout / OFF
+      if (isOn) {
+        digitalWrite(SS_LED_PIN, HIGH);
+      } else {
+        digitalWrite(SS_LED_PIN, LOW);
+      }
       Serial.println("TOGGLING POWER");
       counter = 0;
+      digitalWrite(SPEAKER_PIN, HIGH);
+      delay(1000);
+      digitalWrite(SPEAKER_PIN, LOW);
     }
   }
 
