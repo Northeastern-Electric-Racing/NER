@@ -16,7 +16,7 @@
 // #define BRAKE_LED 
 
 // motor torque constants
-#define MAXIMUM_TORQUE 200 // in Nm x 10 (ex: 123 = 12.3Nm)
+#define MAXIMUM_TORQUE 1200 // in Nm x 10 (ex: 123 = 12.3Nm)
 #define POT_LOWER_BOUND 30 // a pot value from 0 to 1023
 #define POT_UPPER_BOUND 1023 // a pot value from 0 to 1023
 
