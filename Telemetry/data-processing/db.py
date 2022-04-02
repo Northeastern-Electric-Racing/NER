@@ -9,19 +9,14 @@ def connect_db():
     return client
 
 
-def create_entry(can_id, device, data, timestamp):
+def create_entry(can_id, device, data_fields, timestamp):
     entry = {
         "measurement": can_id,
         "tags": {
             "device": device,
         },
-        "fields": {
-            "data": data,
-            "timestamp": timestamp,
-            # TODO: Move the timestamp into the time field of the entry
-            # Peter said to use normal datetime format,
-            # can get from datetime.datetime for now
-        },
+        "fields": data_fields,
+        # TODO: Move the timestamp into the time field of the entry
     }
 
     return entry

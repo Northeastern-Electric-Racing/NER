@@ -33,6 +33,8 @@
 #include <SD.h>
 #include <TimeLib.h>
 
+#define LOG_ALL 1 // set to 1 to log all CAN messages, 0 to filter
+
 #define BAUD_RATE 250000U // 250 kbps 
 #define MAX_MB_NUM 16 // maximum number of CAN mailboxes to use 
 
@@ -50,7 +52,7 @@ FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> myCan; // main CAN object
 
 File logFile; // file logging object
 
-// CAN Ids of the messages to log to SD card
+// CAN Ids of the messages to log to SD card (only considered if LOG_ALL is 0)
 const uint32_t LOG_IDS[] = {0x01, 0x02, 0x03, 0x04};
 const int NUM_IDS = 4;
 
@@ -69,7 +71,7 @@ uint32_t startUpTimeRTC;
 int sendMessage(uint32_t id, uint8_t len, const uint8_t *buf); 
 void incomingCANCallback(const CAN_message_t &msg);
 bool SDWrite();
-char *getTimestamp();
+int getTimestamp(char *timestamp);
 
 
 /**
@@ -77,12 +79,13 @@ char *getTimestamp();
  * 
  */
 void setup() {
-  Serial.begin(115200); 
+  Serial.begin(9600); 
   delay(400);
+
 
   // init startup times
   startUpTimeMillis = millis();
-  startUpTimeRTC = now();
+  //startUpTimeRTC = now();
 
   // init CAN 
   myCan.begin();
@@ -110,6 +113,8 @@ void setup() {
 
   Serial.print(F("setup complete. fileNum is "));
   Serial.println(String(fileNum));
+
+
 }
 
 /**
@@ -121,35 +126,57 @@ void loop() {
   myCan.events();
 
   // log data at least every second or when the buffer is full
-  if ((lastLogTime > MIN_LOG_FREQUENCY) || (bufLength == MAX_BUFFERED_MESSAGES)) {
+  if ((millis() - lastLogTime > MIN_LOG_FREQUENCY) || (bufLength >= MAX_BUFFERED_MESSAGES)) {
     SDWrite();
   }
+ 
+  // static unsigned long writeTime = millis();
+  // static int writeData = 0;
+  // if (millis() - writeTime > 20) {
+  //   getTimestamp(messageBuf[bufLength].timestamp);
+  //   messageBuf[bufLength].id = 0x01;
+  //   messageBuf[bufLength].length = 8;
+  //   memset(messageBuf[bufLength].dataBuf, writeData, 8);
+  //   bufLength++;
+
+  //   writeData++;
+  //   writeData %= 10;
+  //   writeTime = millis();
+  // }
+
+
 }
 
 /**
  * @brief Returns a string with the current time in the format YYYY-MM-DDT00:00:00.000Z
  * 
- * @return char* - String timestamp
+ * @return int - 0 on success, 1 on error
  */
-char *getTimestamp() {
-  char timestamp[25]; 
-  time_t currentTime = now();
-
+int getTimestamp(char *timestamp) {
+  //time_t currentTime = now();
+  
   // calculate millisecond precisions
   uint32_t millisSinceStart = millis() - startUpTimeMillis;
-  uint32_t millisSinceStartRTC = (currentTime - startUpTimeRTC) * 1000;
+  //uint32_t millisSinceStartRTC = (currentTime - startUpTimeRTC) * 1000;
   
-  uint32_t millisDifference = 0;
-  if (millisSinceStart - millisSinceStartRTC > 0) {
-    currentTime += (millisSinceStart - millisSinceStartRTC) / 1000; // update currentTime if the millis go over a second
-    millisDifference = (millisSinceStart - millisSinceStartRTC) % 1000; // set to be in range of 0-999 
-  }
+  // REMOVED THE BELOW FOR TESTING BEFORE RTC, REPLACE FOR ACTUAL CAR
+  //uint32_t millisDifference = 0;
+  //if (millisSinceStart - millisSinceStartRTC > 0) {
+  //  currentTime += (millisSinceStart - millisSinceStartRTC) / 1000; // update currentTime if the millis go over a second
+  //  millisDifference = (millisSinceStart - millisSinceStartRTC) % 1000; // set to be in range of 0-999 
+  //}
 
-  sprintf(timestamp, "%.4d-%.2d-%.2dT%.2d:%.2d:%.2d.%.3luZ", year(currentTime), month(currentTime), 
-          day(currentTime), hour(currentTime), minute(currentTime), second(currentTime), millisDifference);
+  //sprintf(timestamp, "%.4d-%.2d-%.2dT%.2d:%.2d:%.2d.%.3luZ", year(currentTime), month(currentTime), 
+  //        day(currentTime), hour(currentTime), minute(currentTime), second(currentTime), millisDifference);
+
+  int minutes = millisSinceStart / 60000;
+  int seconds = (millisSinceStart - minutes*60000) / 1000;
+  unsigned long milliseconds = millisSinceStart - minutes*60000 - seconds*1000;
+  sprintf(timestamp, "%.4d-%.2d-%.2dT%.2d:%.2d:%.2d.%.3luZ", 2021, 1, 1, 0, minutes, seconds, milliseconds);
+  
   timestamp[24] = '\0'; // terminate string with NULL character
 
-  return timestamp;
+  return 0; // generic success code
 }
 
 
@@ -161,6 +188,9 @@ char *getTimestamp() {
  */
 bool SDWrite() {
   logFile = SD.open(fileName, FILE_WRITE);
+  Serial.print(" -- ");
+  Serial.print(bufLength);
+  Serial.print(" -- \n");
 
   if (logFile) {
     Serial.println("Writing to SD card...");
@@ -201,19 +231,30 @@ bool SDWrite() {
  */
 void incomingCANCallback(const CAN_message_t &msg)
 {
-  // only log if the message is in the NUM_IDS list
-  for (int i = 0; i < NUM_IDS; i++) {
-    if (LOG_IDS[i] == msg.id) {
-      message_format_t message;
-      strncpy(message.timestamp, getTimestamp(), 25);
-      message.id = msg.id;
-      message.length = msg.len;
-      memcpy(message.dataBuf, msg.buf, msg.len);
-      
-      messageBuf[bufLength] = message;
-      bufLength++;
+  // only log if the message id is in the LOG_IDS list or LOG_ALL is enabled
+  int foundId = 0;
+  if (LOG_ALL) {
+    foundId = 1;
+  } else {
+    for (int i = 0; i < NUM_IDS; i++) {
+      if (LOG_IDS[i] == msg.id) {
+        foundId = 1;
+        break;
+      }
     }
   }
+
+  // exit the function if we shouldn't log message
+  if (!foundId) {
+    return;
+  }
+
+  // add message to log buffer
+  getTimestamp(messageBuf[bufLength].timestamp);
+  messageBuf[bufLength].id = msg.id;
+  messageBuf[bufLength].length = msg.len;
+  memcpy(messageBuf[bufLength].dataBuf, msg.buf, msg.len);
+  bufLength++;
 }
 
 
