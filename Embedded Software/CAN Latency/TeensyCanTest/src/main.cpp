@@ -17,7 +17,7 @@
 #define SS_READY_SEN 6
 
 // motor torque constants
-#define MAXIMUM_TORQUE 200 // in Nm x 10 (ex: 123 = 12.3Nm)
+#define MAXIMUM_TORQUE 2400 // in Nm x 10 (ex: 123 = 12.3Nm)
 #define POT_LOWER_BOUND 30 // a pot value from 0 to 1023
 #define POT_UPPER_BOUND 1023 // a pot value from 0 to 1023
 
@@ -141,6 +141,7 @@ void loop() {
   if (!faultCleared && digitalRead(SS_READY_SEN) == HIGH) {
     sendMessage(0x0C1, 8, FAULT_CLEAR);
     digitalWrite(LED4_PIN, HIGH);
+    faultCleared = true;
   }
 
   if (digitalRead(SS_READY_SEN) == HIGH) {
@@ -158,10 +159,12 @@ void loop() {
   if ((millis() - lastIORead) > 100) {
     lastIORead = millis();
     
-    if(digitalRead(REVERSE_SW_PIN) == HIGH) {
+    if(digitalRead(REVERSE_SW_PIN) == HIGH && !isForward) {
       isForward = true;
-    } else if (digitalRead(REVERSE_SW_PIN) == LOW) {
+      isOn = false;
+    } else if (digitalRead(REVERSE_SW_PIN) == LOW && isForward) {
       isForward = false;
+      isOn = false;
     }
 
     if ((counter > 50000) && ((millis() - lastPowerTog) > 1000)) {
@@ -264,9 +267,9 @@ void readAccel() {
       flippedVal = 0;
     }
 
-    double multiplier = (double)flippedVal / 1023; // torque multiplier from 0 to 1;
+    double multiplier = (double)flippedVal / 950; // torque multiplier from 0 to 1;
 
-    appliedTorque = multiplier * MAXIMUM_TORQUE;
+    appliedTorque = (multiplier * MAXIMUM_TORQUE) - 100;
   }
 
   accelTorqueHigh = appliedTorque >> 8;
