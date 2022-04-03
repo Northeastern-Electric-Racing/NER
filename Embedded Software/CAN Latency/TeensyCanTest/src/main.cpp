@@ -13,7 +13,8 @@
 #define REVERSE_SW_PIN 9
 #define BRAKE_SEN1 34
 #define BRAKE_SEN2 35
-// #define BRAKE_LED 
+// #define BRAKE_LED
+#define SS_READY_SEN 6
 
 // motor torque constants
 #define MAXIMUM_TORQUE 200 // in Nm x 10 (ex: 123 = 12.3Nm)
@@ -36,11 +37,14 @@ FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> myCan; // main CAN object
 static CAN_message_t msg; // can message
 
 const unsigned char MOTOR_OFF[8] = {0, 0, 0, 0, 0, 0, 0, 0}; // message to turn motor off
+const unsigned char FAULT_CLEAR[8] = {20, 0, 1, 0, 0, 0, 0, 0};
 
 bool isForward = true;
 bool isOn = false;
 uint8_t accelTorqueLow = 0;
 uint8_t accelTorqueHigh = 0;
+
+bool faultCleared = false;
 
 // timing variables
 uint32_t lastPedalRead = 0; // the time the pedal actuation was last read
@@ -93,6 +97,7 @@ void setup() {
   digitalWrite(LED5_PIN, LOW);
   pinMode(SPEAKER_PIN, OUTPUT);
   digitalWrite(SPEAKER_PIN, HIGH);
+  pinMode(SS_READY_SEN, INPUT);
   
   pinMode(SS_BUTT_PIN, INPUT_PULLUP);
   pinMode(REVERSE_SW_PIN, INPUT_PULLUP);
@@ -131,6 +136,17 @@ void loop() {
   String serialIn = "";
   while (Serial.available() > 0) {
     serialIn = Serial.readStringUntil('\r');
+  }
+
+  if (!faultCleared && digitalRead(SS_READY_SEN) == HIGH) {
+    sendMessage(0x0C1, 8, FAULT_CLEAR);
+    digitalWrite(LED4_PIN, HIGH);
+  }
+
+  if (digitalRead(SS_READY_SEN) == HIGH) {
+    digitalWrite(LED5_PIN, HIGH);
+  } else {
+    digitalWrite(LED5_PIN, LOW);
   }
 
   if (digitalRead(SS_BUTT_PIN) == HIGH) {
