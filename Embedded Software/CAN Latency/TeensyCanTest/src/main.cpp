@@ -16,7 +16,7 @@
 // #define BRAKE_LED 
 
 // motor torque constants
-#define MAXIMUM_TORQUE 1200 // in Nm x 10 (ex: 123 = 12.3Nm)
+#define MAXIMUM_TORQUE 200 // in Nm x 10 (ex: 123 = 12.3Nm)
 #define POT_LOWER_BOUND 30 // a pot value from 0 to 1023
 #define POT_UPPER_BOUND 1023 // a pot value from 0 to 1023
 
@@ -92,7 +92,7 @@ void setup() {
   pinMode(LED5_PIN, OUTPUT);
   digitalWrite(LED5_PIN, LOW);
   pinMode(SPEAKER_PIN, OUTPUT);
-  digitalWrite(SPEAKER_PIN, LOW);
+  digitalWrite(SPEAKER_PIN, HIGH);
   
   pinMode(SS_BUTT_PIN, INPUT_PULLUP);
   pinMode(REVERSE_SW_PIN, INPUT_PULLUP);
@@ -154,14 +154,14 @@ void loop() {
       sendMessage(CAN_MOTOR, 8, MOTOR_OFF); // release lockout / OFF
       if (isOn) {
         digitalWrite(SS_LED_PIN, HIGH);
+        digitalWrite(SPEAKER_PIN, LOW);
+        delay(200);
+        digitalWrite(SPEAKER_PIN, HIGH);
       } else {
         digitalWrite(SS_LED_PIN, LOW);
       }
       Serial.println("TOGGLING POWER");
       counter = 0;
-      digitalWrite(SPEAKER_PIN, HIGH);
-      delay(1000);
-      digitalWrite(SPEAKER_PIN, LOW);
     }
   }
 
