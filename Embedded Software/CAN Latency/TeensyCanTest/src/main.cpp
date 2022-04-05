@@ -8,13 +8,17 @@
 #define LED4_PIN 3
 #define LED5_PIN 5
 #define SS_BUTT_PIN 29
-#define SS_LED_PIN 32
+#define SS_LED_PIN 33
 #define SPEAKER_PIN 7
 #define REVERSE_SW_PIN 9
+#define BRAKE_SEN1 34
+#define BRAKE_SEN2 35
+// #define BRAKE_LED
+#define SS_READY_SEN 6
 
 // motor torque constants
-#define MAXIMUM_TORQUE 2300 // in Nm x 10 (ex: 123 = 12.3Nm)
-#define POT_LOWER_BOUND 35 // a pot value from 0 to 1023
+#define MAXIMUM_TORQUE 2400 // in Nm x 10 (ex: 123 = 12.3Nm)
+#define POT_LOWER_BOUND 30 // a pot value from 0 to 1023
 #define POT_UPPER_BOUND 1023 // a pot value from 0 to 1023
 
 // regen braking constants
@@ -33,11 +37,14 @@ FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> myCan; // main CAN object
 static CAN_message_t msg; // can message
 
 const unsigned char MOTOR_OFF[8] = {0, 0, 0, 0, 0, 0, 0, 0}; // message to turn motor off
+const unsigned char FAULT_CLEAR[8] = {20, 0, 1, 0, 0, 0, 0, 0};
 
 bool isForward = true;
 bool isOn = false;
 uint8_t accelTorqueLow = 0;
 uint8_t accelTorqueHigh = 0;
+
+bool faultCleared = false;
 
 // timing variables
 uint32_t lastPedalRead = 0; // the time the pedal actuation was last read
@@ -83,13 +90,14 @@ void setup() {
   pinMode(BRAKE_PIN, INPUT_PULLUP);
 
   pinMode(SS_LED_PIN, OUTPUT);
-  digitalWrite(SS_LED_PIN, HIGH);
+  digitalWrite(SS_LED_PIN, LOW);
   pinMode(LED4_PIN, OUTPUT);
   digitalWrite(LED4_PIN, LOW);
   pinMode(LED5_PIN, OUTPUT);
   digitalWrite(LED5_PIN, LOW);
   pinMode(SPEAKER_PIN, OUTPUT);
-  digitalWrite(SPEAKER_PIN, LOW);
+  digitalWrite(SPEAKER_PIN, HIGH);
+  pinMode(SS_READY_SEN, INPUT);
   
   pinMode(SS_BUTT_PIN, INPUT_PULLUP);
   pinMode(REVERSE_SW_PIN, INPUT_PULLUP);
@@ -130,6 +138,18 @@ void loop() {
     serialIn = Serial.readStringUntil('\r');
   }
 
+  if (!faultCleared && digitalRead(SS_READY_SEN) == HIGH) {
+    sendMessage(0x0C1, 8, FAULT_CLEAR);
+    digitalWrite(LED4_PIN, HIGH);
+    faultCleared = true;
+  }
+
+  if (digitalRead(SS_READY_SEN) == HIGH) {
+    digitalWrite(LED5_PIN, HIGH);
+  } else {
+    digitalWrite(LED5_PIN, LOW);
+  }
+
   if (digitalRead(SS_BUTT_PIN) == HIGH) {
     counter++;
   }else{
@@ -139,18 +159,26 @@ void loop() {
   if ((millis() - lastIORead) > 100) {
     lastIORead = millis();
     
-    if(digitalRead(REVERSE_SW_PIN) == HIGH) {
+    if(digitalRead(REVERSE_SW_PIN) == HIGH && !isForward) {
       isForward = true;
-      Serial.println("T");
-    } else if (digitalRead(REVERSE_SW_PIN) == LOW) {
+      isOn = false;
+    } else if (digitalRead(REVERSE_SW_PIN) == LOW && isForward) {
       isForward = false;
-      Serial.println("F");
+      isOn = false;
     }
 
     if ((counter > 50000) && ((millis() - lastPowerTog) > 1000)) {
       lastPowerTog = millis();
       isOn = !isOn;
       sendMessage(CAN_MOTOR, 8, MOTOR_OFF); // release lockout / OFF
+      if (isOn) {
+        digitalWrite(SS_LED_PIN, HIGH);
+        digitalWrite(SPEAKER_PIN, LOW);
+        delay(200);
+        digitalWrite(SPEAKER_PIN, HIGH);
+      } else {
+        digitalWrite(SS_LED_PIN, LOW);
+      }
       Serial.println("TOGGLING POWER");
       counter = 0;
     }
@@ -239,9 +267,9 @@ void readAccel() {
       flippedVal = 0;
     }
 
-    double multiplier = (double)flippedVal / 1023; // torque multiplier from 0 to 1;
+    double multiplier = (double)flippedVal / 950; // torque multiplier from 0 to 1;
 
-    appliedTorque = multiplier * MAXIMUM_TORQUE;
+    appliedTorque = (multiplier * MAXIMUM_TORQUE) - 100;
   }
 
   accelTorqueHigh = appliedTorque >> 8;
