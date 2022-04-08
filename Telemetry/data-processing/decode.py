@@ -271,6 +271,6 @@ class Decode0X202():
 
     def values(self):
         return {
-            "Pack DCL": self.byte_vals[0] << 8 | self.byte_vals[1],
-            "Pack CCL": self.byte_vals[2] << 8 | self.byte_vals[3],
+            "Pack DCL": self.byte_vals[1] << 8 | self.byte_vals[0],
+            "Pack CCL": self.byte_vals[3] << 8 | self.byte_vals[2],
         }
