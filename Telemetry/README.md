@@ -6,6 +6,7 @@ Currently only the getCSV.py script is working, which converts the files in the 
   - '-id=00' sets an id to filter the data on, which must be in decimal (default is no filter to show all data)
   - '-data="Data Name"' sets a filter on the data from a specific id by the name in the description column (default is no filter to show all data from an id)
   - '-n=0' sets the format of the timestamp (0 for default string version or 1 for a numeric value)
+- To graph a specific data value, filter by the correct -id and -data parameters and use a value of 1 for -n, then graphing the data vs timestamp columns in excel should be straightforward
 
 ## TODO
 - Update influx scripts using changes from csv version
