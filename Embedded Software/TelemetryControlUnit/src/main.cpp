@@ -35,7 +35,7 @@
 
 #define PROGRAM_MODE 0 // whether or not commands to initialize the teensy RTC should appear 
 
-#define LOG_ALL 1 // set to 1 to log all CAN messages, 0 to filter
+#define LOG_ALL 0 // set to 1 to log all CAN messages, 0 to filter
 
 #define BAUD_RATE 250000U // 250 kbps 
 #define MAX_MB_NUM 16 // maximum number of CAN mailboxes to use 
@@ -55,8 +55,8 @@ FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> myCan; // main CAN object
 File logFile; // file logging object
 
 // CAN Ids of the messages to log to SD card (only considered if LOG_ALL is 0)
-const uint32_t LOG_IDS[] = {0x01, 0x02, 0x03, 0x04};
-const int NUM_IDS = 4;
+const uint32_t LOG_IDS[] = {0x001, 0x002, 0x003, 0x004, 0x0A0, 0x0A1, 0x0A2, 0x0A5, 0x0A6, 0x0A7, 0x0AA, 0x0AB, 0x0AC, 0x202};
+const int NUM_IDS = 14;
 
 // Logging information (use 2 buffers to prevent overwrites during logging delays)
 int buf1Length = 0;
