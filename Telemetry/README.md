@@ -8,7 +8,11 @@ Currently only the getCSV.py script is working, which converts the files in the 
   - '-n=0' sets the format of the timestamp (0 for default string version or 1 for a numeric value)
 - To graph a specific data value, filter by the correct -id and -data parameters and use a value of 1 for -n, then graphing the data vs timestamp columns in excel should be straightforward
 
-## TODO
+### Input/Output Directories
+The scripts process all of the data in the /log directory and send an output to the /outputs directory. 
+- Remove any old log files from the /log directory before running the scripts to have accurate outputs
+
+### TODO
 - Update influx scripts using changes from csv version
 - Add graphical support
 - Enhance command line to allow different input and output formats
