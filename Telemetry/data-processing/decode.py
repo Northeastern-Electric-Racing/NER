@@ -31,6 +31,63 @@ class DecodeSignedInt:
         return int_vals
 
 
+class Decode0X001():
+    def __init__(self, byte_vals):
+        # inits the byte vals
+        self.byte_vals = byte_vals
+
+    def values(self):
+        return {
+            "Pack Inst Voltage": self.byte_vals[0] << 8 | self.byte_vals[1],
+            "Pack Current": self.byte_vals[2] << 8 | self.byte_vals[3],
+            "Pack Amphours": self.byte_vals[4] << 8 | self.byte_vals[5],
+            "Pack SOC": self.byte_vals[6],
+            "Pack Health": self.byte_vals[7],
+        }
+
+
+class Decode0X002():
+    def __init__(self, byte_vals):
+        # inits the byte vals
+        self.byte_vals = byte_vals
+
+    def values(self):
+        return {
+            "Failsafe Statuses": "{:08b}".format(self.byte_vals[0]),
+            "DTC Status 1": "{:08b}".format(self.byte_vals[1]),
+            "DTC Status 2": "{:016b}".format(self.byte_vals[2] << 8 | self.byte_vals[3]),
+            "Current Limits Status": "{:016b}".format(self.byte_vals[4] << 8 | self.byte_vals[5]),
+            "Average Temp": DecodeSignedInt.twos_comp(self.byte_vals[6], 8),
+            "Internal Temp": DecodeSignedInt.twos_comp(self.byte_vals[7], 8),
+        }
+
+
+class Decode0X003():
+    def __init__(self, byte_vals):
+        # inits the byte vals
+        self.byte_vals = byte_vals
+
+    def values(self):
+        return {
+            "MPE State": self.byte_vals[0]
+        }
+
+
+class Decode0X004():
+    def __init__(self, byte_vals):
+        # inits the byte vals
+        self.byte_vals = byte_vals
+
+    def values(self):
+        return {
+            "High Cell Voltage": self.byte_vals[0] << 8 | self.byte_vals[1],
+            "High Cell Voltage ID": self.byte_vals[2],
+            "Low Cell Voltage": self.byte_vals[3] << 8 | self.byte_vals[4],
+            "Low Cell Voltage ID": self.byte_vals[5],
+            "Average Cell Voltage": self.byte_vals[6] << 8 | self.byte_vals[7],
+        }
+
+
 class Decode0X0A0(DecodeSignedInt):  # Temps (IGBT modules, Gate Driver Board)
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
@@ -205,4 +262,15 @@ class Decode0X0AC(DecodeSignedInt):  # Torque and Timer
             "Commanded Torque": commanded_torque,
             "Torque Feedback": torque_feedback,
             "Power on Timer": timer_sec,
+        }
+
+class Decode0X202():
+    def __init__(self, byte_vals):
+        # inits the byte vals
+        self.byte_vals = byte_vals
+
+    def values(self):
+        return {
+            "Pack DCL": self.byte_vals[0] << 8 | self.byte_vals[1],
+            "Pack CCL": self.byte_vals[2] << 8 | self.byte_vals[3],
         }

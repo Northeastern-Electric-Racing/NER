@@ -7,6 +7,22 @@ import csv
 LOGS = "./logs/"
 OUTPUTS = "./outputs/"
 DECODE_IDS = {
+    "1": {
+        "device": "accumulator status",
+        "decode_class": decode.Decode0X001,
+    },
+    "2": {
+        "device": "BMS status",
+        "decode_class": decode.Decode0X002,
+    },
+    "3": {
+        "device": "shutdown control",
+        "decode_class": decode.Decode0X003,
+    },
+    "4": {
+        "device": "cell data",
+        "decode_class": decode.Decode0X004,
+    },
     "160": {
         "device": "temperatures (igbt modules, gate driver board)",
         "decode_class": decode.Decode0X0A0,
@@ -43,6 +59,10 @@ DECODE_IDS = {
         "device": "torque and timer",
         "decode_class": decode.Decode0X0AC,
     },
+    "514": {
+        "device": "current limits",
+        "decode_class": decode.Decode0X202,
+    }
 }
 
 
@@ -91,9 +111,6 @@ def process_data(log_path, output_file_name, id_filter):
 
         for data_value in values:
             writer.writerow(data_value)
-
-                
-
 
 
 if __name__ == "__main__":
