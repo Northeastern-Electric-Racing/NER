@@ -38,6 +38,14 @@ def plot_data(x,y):
     plt.ylabel('Potentiometer Values')
     plt.legend()
 
+def timeparse(arg):
+    t = arg
+    hours = t[11:13]
+    minutes = t[14:16]
+    seconds = t[17:19]
+    millis = t[20:23]
+    total = int(millis) + 1000 * int(seconds) + 60000 * int(minutes) + 3600000 * int(hours)
+    return total
 
 if __name__ == "__main__":
     read_data(LOGS)
