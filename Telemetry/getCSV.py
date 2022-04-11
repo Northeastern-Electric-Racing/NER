@@ -32,7 +32,7 @@ def process_data(log_path, output_file_name, id_filter, filter_param, time_forma
                 # Filter by id
                 if can_id not in DECODE_IDS:
                     continue
-                if filterId != 0 and can_id != id_filter:
+                if id_filter != 0 and can_id != id_filter:
                     continue
 
                 # Decode the data bytes of the CAN message
