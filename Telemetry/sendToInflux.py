@@ -1,46 +1,9 @@
 from os import listdir
-from data_processing import decode
+from data_processing.decode_ids import DECODE_IDS
+from data_processing.utils import process_data_bytes
 from data_processing.db import create_entry, insert_entries
 
 LOGS = "./logs/"
-DECODE_IDS = {
-    "0x0A0": {
-        "device": "temperatures (igbt modules, gate driver board)",
-        "decode_class": decode.Decode0X0A0,
-    },
-    "0x0A1": {
-        "device": "temperatures (control board)",
-        "decode_class": decode.Decode0X0A1,
-    },
-    "0x0A2": {
-        "device": "temperatures (motor)",
-        "decode_class": decode.Decode0X0A2,
-    },
-    "0x0A5": {
-        "device": "motor position information",
-        "decode_class": decode.Decode0X0A5,
-    },
-    "0x0A6": {
-        "device": "current information",
-        "decode_class": decode.Decode0X0A6,
-    },
-    "0x0A7": {
-        "device": "voltage information",
-        "decode_class": decode.Decode0X0A7,
-    },
-    "0x0AA": {
-        "device": "internal states",
-        "decode_class": decode.Decode0X0AA,
-    },
-    "0x0AB": {
-        "device": "fault codes",
-        "decode_class": decode.Decode0X0AB,
-    },
-    "0x0AC": {
-        "device": "torque and timer",
-        "decode_class": decode.Decode0X0AC,
-    },
-}
 
 
 def process_data(log_path):
@@ -51,15 +14,17 @@ def process_data(log_path):
             for line in file:
                 info = line.strip().split(" ")
 
+                # Get the individual fields for each message
                 timestamp, can_id, length, data = (
-                    int(info[0]),
+                    info[0],
                     info[1],
                     info[2],
-                    [int(i) for i in info[3:]],
+                    process_data_bytes(info[3:][0]),
                 )
 
                 device = DECODE_IDS[can_id]["device"]
 
+                # Decode the data bytes of the CAN message
                 decode = DECODE_IDS[can_id]["decode_class"](data)
                 processed_data = decode.values()
 

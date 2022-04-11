@@ -1,90 +1,11 @@
 from os import listdir
 import sys
 import csv
-from data_processing import decode
-
+from data_processing.decode_ids import DECODE_IDS
+from data_processing.utils import getDoubleTime, process_data_bytes
 
 LOGS = "./logs/"
 OUTPUTS = "./outputs/"
-DECODE_IDS = {
-    "1": {
-        "device": "accumulator status",
-        "decode_class": decode.Decode0X001,
-    },
-    "2": {
-        "device": "BMS status",
-        "decode_class": decode.Decode0X002,
-    },
-    "3": {
-        "device": "shutdown control",
-        "decode_class": decode.Decode0X003,
-    },
-    "4": {
-        "device": "cell data",
-        "decode_class": decode.Decode0X004,
-    },
-    "160": {
-        "device": "temperatures (igbt modules, gate driver board)",
-        "decode_class": decode.Decode0X0A0,
-    },
-    "161": {
-        "device": "temperatures (control board)",
-        "decode_class": decode.Decode0X0A1,
-    },
-    "162": {
-        "device": "temperatures (motor)",
-        "decode_class": decode.Decode0X0A2,
-    },
-    "165": {
-        "device": "motor position information",
-        "decode_class": decode.Decode0X0A5,
-    },
-    "166": {
-        "device": "current information",
-        "decode_class": decode.Decode0X0A6,
-    },
-    "167": {
-        "device": "voltage information",
-        "decode_class": decode.Decode0X0A7,
-    },
-    "170": {
-        "device": "internal states",
-        "decode_class": decode.Decode0X0AA,
-    },
-    "171": {
-        "device": "fault codes",
-        "decode_class": decode.Decode0X0AB,
-    },
-    "172": {
-        "device": "torque and timer",
-        "decode_class": decode.Decode0X0AC,
-    },
-    "514": {
-        "device": "current limits",
-        "decode_class": decode.Decode0X202,
-    }
-}
-
-
-# Gets the time value in seconds of a string time ("YYYY-MM-DDT00:00:00.000Z") 
-#   - only uses the hour, minutes, seconds, and milliseconds fields
-#   - useful for graphing with time on the x axis in excel
-#   - returns a double time in seconds (decimals go to millisecond precision)
-def getDoubleTime(string_time):
-    hour =   int(string_time[11:13])
-    minute = int(string_time[14:16])
-    sec =    int(string_time[17:19])
-    milli =  int(string_time[20:23])
-
-    return (hour * 3600) + (minute * 60) + (sec * 1) + (milli * 0.001)
-
-
-# Processes the data bytes of a CAN message to remove brackets and commas
-def process_data_bytes(data_bytes):
-    data_bytes = data_bytes[1:-1] # remove brackets at start and end
-    seperated = data_bytes.split(",")
-    return [int(x) for x in seperated]
-
 
 # Process the raw logged data from the car. Input parameters are:
 #   * log_path         - path to the directory of all the SD log files to read from

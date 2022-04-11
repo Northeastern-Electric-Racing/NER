@@ -16,7 +16,7 @@ def create_entry(can_id, device, data_fields, timestamp):
             "device": device,
         },
         "fields": data_fields,
-        # TODO: Move the timestamp into the time field of the entry
+        "time": timestamp
     }
 
     return entry
