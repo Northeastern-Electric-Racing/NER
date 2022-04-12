@@ -1,10 +1,11 @@
 from os import listdir
-import sys
+from sys import path, argv
+path.append('./data_processing')
 import csv
-from data_processing.decode_ids import DECODE_IDS
-from data_processing.utils import getDoubleTime, process_data_bytes
+from decode_ids import DECODE_IDS
+from utils import getDoubleTime, process_data_bytes
 
-LOGS = "./logs/"
+LOGS = "./logs_active/"
 OUTPUTS = "./outputs/"
 
 # Process the raw logged data from the car. Input parameters are:
@@ -76,7 +77,7 @@ if __name__ == "__main__":
     filterParam = ""
     useNumericTime = 0
 
-    args = sys.argv[1:]
+    args = argv[1:]
 
     for arg in args:
         value_pair = arg.split("=")

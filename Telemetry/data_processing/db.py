@@ -1,6 +1,6 @@
 import influxdb_client
 from influxdb_client.client.write_api import SYNCHRONOUS
-from .constants import BUCKET, ORG, TOKEN, URL
+from constants import BUCKET, ORG, TOKEN, URL
 
 
 def connect_db():

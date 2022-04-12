@@ -1,9 +1,11 @@
 from os import listdir
-from data_processing.decode_ids import DECODE_IDS
-from data_processing.utils import process_data_bytes
-from data_processing.db import create_entry, insert_entries
+from sys import path
+path.append('./data_processing')
+from decode_ids import DECODE_IDS
+from utils import process_data_bytes
+from db import create_entry, insert_entries
 
-LOGS = "./logs/"
+LOGS = "./logs_active/"
 
 
 def process_data(log_path):
@@ -22,6 +24,10 @@ def process_data(log_path):
                     process_data_bytes(info[3:][0]),
                 )
 
+                # Filter by id
+                if can_id not in DECODE_IDS:
+                    continue
+
                 device = DECODE_IDS[can_id]["device"]
 
                 # Decode the data bytes of the CAN message
@@ -32,7 +38,8 @@ def process_data(log_path):
 
                 entries.append(entry)
 
-    insert_entries(entries)
+        insert_entries(entries)
+        entries = []
 
 
 if __name__ == "__main__":

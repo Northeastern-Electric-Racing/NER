@@ -1,4 +1,4 @@
-from .decode import *
+from decode import *
 
 # Defines the supported CAN IDs in our system with their associated name and processing class
 # Import this dictionary to get access to processing any message (with the values() method)

@@ -1,4 +1,4 @@
-from .format_data import FormatData
+from format_data import FormatData
 
 
 class DecodeSignedInt:
