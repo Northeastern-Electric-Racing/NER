@@ -31,9 +31,8 @@
 #include <FlexCAN_T4.h>
 #include <SD.h>
 #include <TimeLib.h>
-#include <DS1307RTC.h>  // a basic DS1307 library that returns time as a time_t
 
-#define PROGRAM_MODE 0 // whether or not commands to initialize the teensy RTC should appear 
+#define TEST_LOG 0 // set to 1 to log the test messages in the main loop()
 
 #define LOG_ALL 0 // set to 1 to log all CAN messages, 0 to filter
 
@@ -81,6 +80,15 @@ void bufferMessage(uint32_t id, uint8_t len, const uint8_t *buf);
 void getRealTimestamp(char *timestamp);
 void getRelativeTimestamp(char *timestamp);
 
+/**
+ * @brief Wrapper function to pass to time sync function
+ * 
+ * @return time_t 
+ */
+time_t getTeensy3Time()
+{
+  return Teensy3Clock.get();
+}
 
 /**
  * @brief Init serial console, CAN bus, and brake switch digital pins
@@ -90,31 +98,12 @@ void setup() {
   Serial.begin(9600); 
   delay(400);
 
-  // Program the RTC
-  if (PROGRAM_MODE) {
-    Serial.println("Enter the current epoch time (find easily online)"); 
-    while (Serial.available() < 10) {
-      // Wait for User to Input Data
-    }
-    // Get the input time and set to both RTC and system times
-    time_t t = Serial.parseInt();
-    Serial.print("Setting time to: ");
-    Serial.print(t);
-    Serial.print("\n");
-    if (t != 0) {
-      RTC.set(t);
-      setTime(t);
-    }
-
-    delay(400);
-  }
-
   // Init the RTC
-  setSyncProvider(RTC.get);   // the function to get the time from the RTC
+  setSyncProvider(getTeensy3Time);   // the function to get the time from the RTC
   
   if (timeStatus() == timeSet) {
     Serial.println("RTC has set the system time");  
-    useRTC = true;
+    useRTC = true; 
   } else {
     Serial.println("Unable to sync with the RTC");
   }
@@ -169,16 +158,18 @@ void loop() {
   }
 
   // USED FOR TESTING WHEN NOT CONNECTED TO CAN
-  // static unsigned long writeTime = millis();
-  // static uint8_t writeData = 0;
-  // if (millis() - writeTime > 5) {
-  //   uint8_t buf[] = {writeData, writeData, writeData, writeData};
-  //   bufferMessage(0x01, 4, buf);
+#if TEST_LOG == 1 
+  static unsigned long writeTime = millis();
+  static uint8_t writeData = 0;
+  if (millis() - writeTime > 5) {
+    uint8_t buf[] = {writeData, writeData, writeData, writeData};
+    bufferMessage(0x01, 4, buf);
 
-  //   writeData++;
-  //   writeData %= 20;
-  //   writeTime = millis();
-  // }
+    writeData++;
+    writeData %= 20;
+    writeTime = millis();
+  }
+#endif
 }
 
 
