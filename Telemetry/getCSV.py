@@ -1,6 +1,7 @@
 from os import listdir
 from sys import path, argv
-path.append('./data_processing')
+
+path.append("./data_processing")
 import csv
 from decode_ids import DECODE_IDS
 from utils import getDoubleTime, process_data_bytes
@@ -15,7 +16,7 @@ OUTPUTS = "./outputs/"
 #   * filter_param     - specific piece of data to filter by inside an id
 #   * time_format      - 0 means string time, 1 means epoch time (seconds since 1970, in double format)
 def process_data(log_path, output_file_name, id_filter, filter_param, time_format):
-    values = [] # array of lists of form [timestamp, description, value]
+    values = []  # array of lists of form [timestamp, description, value]
 
     for file_name in listdir(log_path):
         with open(log_path + file_name) as file:
@@ -50,9 +51,9 @@ def process_data(log_path, output_file_name, id_filter, filter_param, time_forma
                     if filter_param != "" and filter_param != value:
                         continue
                     values.append([timestamp, can_id, value, processed_data[value]])
-    
-    header = ['time', 'message_id', 'description', 'value']
-    with open(OUTPUTS + output_file_name, 'w', encoding='UTF8', newline='') as f:
+
+    header = ["time", "message_id", "description", "value"]
+    with open(OUTPUTS + output_file_name, "w", encoding="UTF8", newline="") as f:
         writer = csv.writer(f)
 
         # write the header
@@ -91,7 +92,7 @@ if __name__ == "__main__":
         elif value_pair[0] == "-n":
             useNumericTime = value_pair[1]
 
-    process_data(LOGS, outputName, filterId, filterParam, int(useNumericTime)) 
+    process_data(LOGS, outputName, filterId, filterParam, int(useNumericTime))
 
     print("Data filtered by id: " + str(filterId))
     print("Data filtered by parameter: " + filterParam)
