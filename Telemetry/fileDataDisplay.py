@@ -1,7 +1,7 @@
 from os import listdir
 from sys import path, argv
 path.append('./data_processing')
-from decode_ids import DECODE_IDS
+from decode_ids import DECODE_IDS, DATA_IDS
 from utils import getDoubleTime, process_data_bytes
 import matplotlib.pyplot as plt
 
@@ -31,7 +31,7 @@ def process_data(log_path, id_filter, filter_param):
                     continue
 
                 # Decode the data bytes of the CAN message
-                decode = DECODE_IDS[can_id]["decode_class"](data)
+                decode = DATA_IDS[DECODE_IDS[can_id]]["decode_class"](data)
                 processed_data = decode.values()
 
                 timestamp = getDoubleTime(timestamp)

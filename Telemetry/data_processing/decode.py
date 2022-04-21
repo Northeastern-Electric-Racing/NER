@@ -31,7 +31,7 @@ class DecodeSignedInt:
         return int_vals
 
 
-class Decode0X001():
+class Decode1():
     def __init__(self, byte_vals):
         # inits the byte vals
         self.byte_vals = byte_vals
@@ -46,7 +46,7 @@ class Decode0X001():
         }
 
 
-class Decode0X002():
+class Decode2():
     def __init__(self, byte_vals):
         # inits the byte vals
         self.byte_vals = byte_vals
@@ -62,7 +62,7 @@ class Decode0X002():
         }
 
 
-class Decode0X003():
+class Decode3():
     def __init__(self, byte_vals):
         # inits the byte vals
         self.byte_vals = byte_vals
@@ -73,7 +73,7 @@ class Decode0X003():
         }
 
 
-class Decode0X004():
+class Decode4():
     def __init__(self, byte_vals):
         # inits the byte vals
         self.byte_vals = byte_vals
@@ -88,7 +88,7 @@ class Decode0X004():
         }
 
 
-class Decode0X0A0(DecodeSignedInt):  # Temps (IGBT modules, Gate Driver Board)
+class Decode5(DecodeSignedInt):  # Temps (IGBT modules, Gate Driver Board)
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
 
@@ -105,7 +105,7 @@ class Decode0X0A0(DecodeSignedInt):  # Temps (IGBT modules, Gate Driver Board)
         }
 
 
-class Decode0X0A1(DecodeSignedInt):  # Temps (Control Board, RTD #1-3)
+class Decode6(DecodeSignedInt):  # Temps (Control Board, RTD #1-3)
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
 
@@ -124,7 +124,7 @@ class Decode0X0A1(DecodeSignedInt):  # Temps (Control Board, RTD #1-3)
         }
 
 
-class Decode0X0A2(DecodeSignedInt):  # Temps (RTD #4-5, Motor), Torque Shudder
+class Decode7(DecodeSignedInt):  # Temps (RTD #4-5, Motor), Torque Shudder
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
 
@@ -142,7 +142,7 @@ class Decode0X0A2(DecodeSignedInt):  # Temps (RTD #4-5, Motor), Torque Shudder
         }
 
 
-class Decode0X0A5(DecodeSignedInt):  # Motor angle, speed, frequency
+class Decode8(DecodeSignedInt):  # Motor angle, speed, frequency
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
 
@@ -162,7 +162,7 @@ class Decode0X0A5(DecodeSignedInt):  # Motor angle, speed, frequency
         }
 
 
-class Decode0X0A6(DecodeSignedInt):  # Currents (3 Phases, DC Bus)
+class Decode9(DecodeSignedInt):  # Currents (3 Phases, DC Bus)
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
 
@@ -179,7 +179,7 @@ class Decode0X0A6(DecodeSignedInt):  # Currents (3 Phases, DC Bus)
         }
 
 
-class Decode0X0A7(DecodeSignedInt):  # Voltages (DC Bus, Output)
+class Decode10(DecodeSignedInt):  # Voltages (DC Bus, Output)
     def __init__(self, byte_vals):
         super().__init__(byte_vals)
 
@@ -196,7 +196,7 @@ class Decode0X0A7(DecodeSignedInt):  # Voltages (DC Bus, Output)
         }
 
 
-class Decode0X0AA:  # Internal States
+class Decode11:  # Internal States
     def __init__(self, byte_vals):
         # converts all bytes into the equivalent 8 bit binary values
         self.byte_vals = ["{:08b}".format(i) for i in byte_vals]
@@ -219,7 +219,7 @@ class Decode0X0AA:  # Internal States
         }
 
 
-class Decode0X0AB:  # Fault Codes
+class Decode12:  # Fault Codes
     def __init__(self, byte_vals):
         # converts all bytes into the equivalent 16 bit binary values
         self.byte_vals = [
@@ -238,7 +238,7 @@ class Decode0X0AB:  # Fault Codes
         }
 
 
-class Decode0X0AC(DecodeSignedInt):  # Torque and Timer
+class Decode13(DecodeSignedInt):  # Torque and Timer
     def __init__(self, byte_vals):
         self.byte_vals = [byte_vals[i : i + 2] for i in range(0, 4, 2)]
         self.timer_bytes = byte_vals[4:]
@@ -264,7 +264,7 @@ class Decode0X0AC(DecodeSignedInt):  # Torque and Timer
             "Power on Timer": timer_sec,
         }
 
-class Decode0X202():
+class Decode14(): # Current limits
     def __init__(self, byte_vals):
         # inits the byte vals
         self.byte_vals = byte_vals

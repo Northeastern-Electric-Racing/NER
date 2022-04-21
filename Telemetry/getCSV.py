@@ -3,7 +3,7 @@ from sys import path, argv
 
 path.append("./data_processing")
 import csv
-from decode_ids import DECODE_IDS
+from decode_ids import DECODE_IDS, DATA_IDS
 from utils import getDoubleTime, process_data_bytes
 
 LOGS = "./logs_active/"
@@ -38,7 +38,7 @@ def process_data(log_path, output_file_name, id_filter, filter_param, time_forma
                     continue
 
                 # Decode the data bytes of the CAN message
-                decode = DECODE_IDS[can_id]["decode_class"](data)
+                decode = DATA_IDS[DECODE_IDS[can_id]]["decode_class"](data)
                 processed_data = decode.values()
 
                 # Get correct time value (numeric or string)

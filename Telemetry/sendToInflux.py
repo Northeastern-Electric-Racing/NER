@@ -1,7 +1,7 @@
 from os import listdir
 from sys import path
 path.append('./data_processing')
-from decode_ids import DECODE_IDS
+from decode_ids import DECODE_IDS, DATA_IDS
 from utils import process_data_bytes
 from db import create_entry, insert_entries
 
@@ -28,10 +28,10 @@ def process_data(log_path):
                 if can_id not in DECODE_IDS:
                     continue
 
-                device = DECODE_IDS[can_id]["device"]
+                device = DATA_IDS[DECODE_IDS[can_id]]["device"]
 
                 # Decode the data bytes of the CAN message
-                decode = DECODE_IDS[can_id]["decode_class"](data)
+                decode = DATA_IDS[DECODE_IDS[can_id]]["decode_class"](data)
                 processed_data = decode.values()
 
                 entry = create_entry(can_id, device, processed_data, timestamp)
