@@ -250,44 +250,44 @@ bool SDWrite() {
  * 
  */
 void logSensorData() {
-  XYZData_t xyzbuf[1];
-  HumidData_t humidbuf[1];
+  XYZData_t xyzData[1];
+  HumidData_t humidData[1];
 
-  NERduino.getADXLdata(xyzbuf, 1);
-  NERduino.getSHTdata(humidbuf, 1);
+  NERduino.getADXLdata(xyzData, 1);
+  NERduino.getSHTdata(humidData, 1);
 
   uint8_t accelBuf[6] = {
-    xyzbuf[0].XData.rawdata[0], xyzbuf[0].XData.rawdata[1],
-    xyzbuf[0].YData.rawdata[0], xyzbuf[0].YData.rawdata[1],
-    xyzbuf[0].ZData.rawdata[0], xyzbuf[0].ZData.rawdata[1]
+    xyzData[0].XData.rawdata[0], xyzData[0].XData.rawdata[1],
+    xyzData[0].YData.rawdata[0], xyzData[0].YData.rawdata[1],
+    xyzData[0].ZData.rawdata[0], xyzData[0].ZData.rawdata[1]
   };
 
   uint8_t humidBuf[4] = {
-    humidbuf[0].TempData.rawdata[0], humidbuf[0].TempData.rawdata[1],
-    humidbuf[0].HumidData.rawdata[0], humidbuf[0].HumidData.rawdata[1]
+    humidData[0].TempData.rawdata[0], humidData[0].TempData.rawdata[1],
+    humidData[0].HumidData.rawdata[0], humidData[0].HumidData.rawdata[1]
   };
 
   bufferMessage(ACCEL_LOG_ID, 6, accelBuf);
   bufferMessage(HUMID_LOG_ID, 4, humidBuf);
 
   Serial.println("Accelerometer Data:");
-  Serial.print(xyzbuf[0].XData.data);
+  Serial.print(xyzData[0].XData.data);
   Serial.print("\t");
-  Serial.print(xyzbuf[0].YData.data);
+  Serial.print(xyzData[0].YData.data);
   Serial.print("\t");
-  Serial.print(xyzbuf[0].ZData.data);
+  Serial.print(xyzData[0].ZData.data);
   Serial.print("\t");
   Serial.println();
  
   Serial.println("Humidity Data:");
   Serial.print("Temperature C: ");
-  Serial.print(humidbuf[0].tempC);
+  Serial.print(humidData[0].tempC);
   Serial.println(" C");
   Serial.print("Temperature F: ");
-  Serial.print(humidbuf[0].tempF);
+  Serial.print(humidData[0].tempF);
   Serial.println(" F");
   Serial.print("Relative Humidity: ");
-  Serial.print(humidbuf[0].relHumid);
+  Serial.print(humidData[0].relHumid);
   Serial.println(" %RH");
 }
 
