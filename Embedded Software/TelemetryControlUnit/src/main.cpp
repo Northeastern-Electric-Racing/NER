@@ -31,6 +31,7 @@
 #include <FlexCAN_T4.h>
 #include <SD.h>
 #include <TimeLib.h>
+#include "nerduino.h"
 
 #define TEST_LOG 0 // set to 1 to log the test messages in the main loop()
 
@@ -41,6 +42,10 @@
 
 #define MAX_BUFFERED_MESSAGES 50 // max number of buffered CAN messages before logging to SD card
 #define MIN_LOG_FREQUENCY 1000 // the max time length between logs (in ms)
+
+#define ACCEL_HUMID_LOG_FREQUENCY 100 // time between logging accel/humid data
+#define ACCEL_LOG_ID 0x300
+#define HUMID_LOG_ID 0x301
 
 typedef struct {
   char timestamp[25]; // timestamp in YYYY-MM-DDT00:00:00.000Z format
@@ -67,6 +72,7 @@ uint32_t lastLogTime = 0;
 int fileNum = 0; // current file number
 char fileName[16]; // format is log-0.txt (can support files up to number 99999999 as there can be 16 chars)
 
+// Timing information
 uint32_t startUpTimeMillis;
 uint32_t startUpTimeRTC;
 bool useRTC = false; // Default is to use system millis() time
@@ -79,6 +85,7 @@ bool SDWrite();
 void bufferMessage(uint32_t id, uint8_t len, const uint8_t *buf);
 void getRealTimestamp(char *timestamp);
 void getRelativeTimestamp(char *timestamp);
+void logSensorData();
 
 /**
  * @brief Wrapper function to pass to time sync function
@@ -97,6 +104,9 @@ time_t getTeensy3Time()
 void setup() {
   Serial.begin(9600); 
   delay(400);
+
+  // Start the nerduino peripherals
+  NERduino.begin();
 
   // Init the RTC
   setSyncProvider(getTeensy3Time);   // the function to get the time from the RTC
@@ -155,6 +165,13 @@ void loop() {
       (!usingBuf1 && (buf2Length >= MAX_BUFFERED_MESSAGES))) {
 
     SDWrite();
+  }
+
+  // logging the extra sensor data from the accelerometer and temp/humid sensor
+  static uint32_t dataLastRecorded = 0;
+  if (millis() - dataLastRecorded > ACCEL_HUMID_LOG_FREQUENCY) {
+    logSensorData();
+    dataLastRecorded = millis();
   }
 
   // USED FOR TESTING WHEN NOT CONNECTED TO CAN
@@ -224,6 +241,59 @@ bool SDWrite() {
   else {
     Serial.println("Could not open file on SD card");
     return false;
+  }
+}
+
+
+/**
+ * @brief Log the data from the attached sensors (accelerometer and humidity/temp sensor)
+ * 
+ */
+void logSensorData() {
+  XYZData_t xyzbuf[NUM_ADXL312_SAMPLES];
+  HumidData_t humidbuf[3];
+
+  NERduino.getADXLdata(xyzbuf, NUM_ADXL312_SAMPLES);
+  NERduino.getSHTdata(humidbuf,3);
+
+  uint8_t accelBuf[6] = {
+    xyzbuf[0].XData.rawdata[0], xyzbuf[0].XData.rawdata[1],
+    xyzbuf[0].YData.rawdata[0], xyzbuf[0].YData.rawdata[1],
+    xyzbuf[0].ZData.rawdata[0], xyzbuf[0].ZData.rawdata[1]
+  };
+
+  uint8_t humidBuf[4] = {
+    humidbuf[0].TempData.rawdata[0], humidbuf[0].TempData.rawdata[0],
+    humidbuf[0].HumidData.rawdata[0], humidbuf[0].HumidData.rawdata[0]
+  };
+
+  bufferMessage(ACCEL_LOG_ID, 6, accelBuf);
+  bufferMessage(HUMID_LOG_ID, 4, humidBuf);
+
+  Serial.println("Accelerometer Data:");
+  for(uint8_t i=0; i<NUM_ADXL312_SAMPLES; i++)
+  {
+    Serial.print(xyzbuf[i].XData.data);
+    Serial.print("\t");
+    Serial.print(xyzbuf[i].YData.data);
+    Serial.print("\t");
+    Serial.print(xyzbuf[i].ZData.data);
+    Serial.print("\t");
+    Serial.println();
+  }
+ 
+  Serial.println("Humidity Data:");
+  for(uint8_t i=0; i<3; i++)
+  {
+    Serial.print("Temperature C: ");
+    Serial.print(humidbuf[i].tempC);
+    Serial.println(" C");
+    Serial.print("Temperature F: ");
+    Serial.print(humidbuf[i].tempF);
+    Serial.println(" F");
+    Serial.print("Relative Humidity: ");
+    Serial.print(humidbuf[i].relHumid);
+    Serial.println(" %RH");
   }
 }
 
