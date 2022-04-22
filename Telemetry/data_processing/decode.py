@@ -274,7 +274,7 @@ class Decode14(): # Current limits
             "Pack CCL": self.byte_vals[3] << 8 | self.byte_vals[2],
         }
 
-class Decode15(): # nerduino accelerometer
+class Decode15(DecodeSignedInt): # nerduino accelerometer
     def __init__(self, byte_vals):
         super().__init__(byte_vals, 6)
 

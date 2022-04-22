@@ -37,7 +37,7 @@
 
 #define LOG_ALL 0 // set to 1 to log all CAN messages, 0 to filter
 
-#define BAUD_RATE 250000U // 250 kbps 
+#define BAUD_RATE 1000000U // 250 kbps 
 #define MAX_MB_NUM 16 // maximum number of CAN mailboxes to use 
 
 #define MAX_BUFFERED_MESSAGES 50 // max number of buffered CAN messages before logging to SD card
@@ -107,6 +107,7 @@ void setup() {
 
   // Start the nerduino peripherals
   NERduino.begin();
+  delay(3000);
 
   // Init the RTC
   setSyncProvider(getTeensy3Time);   // the function to get the time from the RTC
@@ -269,26 +270,6 @@ void logSensorData() {
 
   bufferMessage(ACCEL_LOG_ID, 6, accelBuf);
   bufferMessage(HUMID_LOG_ID, 4, humidBuf);
-
-  Serial.println("Accelerometer Data:");
-  Serial.print(xyzData[0].XData.data);
-  Serial.print("\t");
-  Serial.print(xyzData[0].YData.data);
-  Serial.print("\t");
-  Serial.print(xyzData[0].ZData.data);
-  Serial.print("\t");
-  Serial.println();
- 
-  Serial.println("Humidity Data:");
-  Serial.print("Temperature C: ");
-  Serial.print(humidData[0].tempC);
-  Serial.println(" C");
-  Serial.print("Temperature F: ");
-  Serial.print(humidData[0].tempF);
-  Serial.println(" F");
-  Serial.print("Relative Humidity: ");
-  Serial.print(humidData[0].relHumid);
-  Serial.println(" %RH");
 }
 
 
