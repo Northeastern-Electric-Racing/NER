@@ -31,17 +31,21 @@
 #include <FlexCAN_T4.h>
 #include <SD.h>
 #include <TimeLib.h>
-#include <DS1307RTC.h>  // a basic DS1307 library that returns time as a time_t
+#include "nerduino.h"
 
-#define PROGRAM_MODE 0 // whether or not commands to initialize the teensy RTC should appear 
+#define TEST_LOG 0 // set to 1 to log the test messages in the main loop()
 
-#define LOG_ALL 1 // set to 1 to log all CAN messages, 0 to filter
+#define LOG_ALL 0 // set to 1 to log all CAN messages, 0 to filter
 
-#define BAUD_RATE 250000U // 250 kbps 
+#define BAUD_RATE 1000000U // 250 kbps 
 #define MAX_MB_NUM 16 // maximum number of CAN mailboxes to use 
 
 #define MAX_BUFFERED_MESSAGES 50 // max number of buffered CAN messages before logging to SD card
 #define MIN_LOG_FREQUENCY 1000 // the max time length between logs (in ms)
+
+#define ACCEL_HUMID_LOG_FREQUENCY 100 // time between logging accel/humid data
+#define ACCEL_LOG_ID 0x300
+#define HUMID_LOG_ID 0x301
 
 typedef struct {
   char timestamp[25]; // timestamp in YYYY-MM-DDT00:00:00.000Z format
@@ -55,8 +59,8 @@ FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> myCan; // main CAN object
 File logFile; // file logging object
 
 // CAN Ids of the messages to log to SD card (only considered if LOG_ALL is 0)
-const uint32_t LOG_IDS[] = {0x01, 0x02, 0x03, 0x04};
-const int NUM_IDS = 4;
+const uint32_t LOG_IDS[] = {0x001, 0x002, 0x003, 0x004, 0x0A0, 0x0A1, 0x0A2, 0x0A5, 0x0A6, 0x0A7, 0x0AA, 0x0AB, 0x0AC, 0x202};
+const int NUM_IDS = 14;
 
 // Logging information (use 2 buffers to prevent overwrites during logging delays)
 int buf1Length = 0;
@@ -68,6 +72,7 @@ uint32_t lastLogTime = 0;
 int fileNum = 0; // current file number
 char fileName[16]; // format is log-0.txt (can support files up to number 99999999 as there can be 16 chars)
 
+// Timing information
 uint32_t startUpTimeMillis;
 uint32_t startUpTimeRTC;
 bool useRTC = false; // Default is to use system millis() time
@@ -80,7 +85,17 @@ bool SDWrite();
 void bufferMessage(uint32_t id, uint8_t len, const uint8_t *buf);
 void getRealTimestamp(char *timestamp);
 void getRelativeTimestamp(char *timestamp);
+void logSensorData();
 
+/**
+ * @brief Wrapper function to pass to time sync function
+ * 
+ * @return time_t 
+ */
+time_t getTeensy3Time()
+{
+  return Teensy3Clock.get();
+}
 
 /**
  * @brief Init serial console, CAN bus, and brake switch digital pins
@@ -90,31 +105,16 @@ void setup() {
   Serial.begin(9600); 
   delay(400);
 
-  // Program the RTC
-  if (PROGRAM_MODE) {
-    Serial.println("Enter the current epoch time (find easily online)"); 
-    while (Serial.available() < 10) {
-      // Wait for User to Input Data
-    }
-    // Get the input time and set to both RTC and system times
-    time_t t = Serial.parseInt();
-    Serial.print("Setting time to: ");
-    Serial.print(t);
-    Serial.print("\n");
-    if (t != 0) {
-      RTC.set(t);
-      setTime(t);
-    }
-
-    delay(400);
-  }
+  // Start the nerduino peripherals
+  NERduino.begin();
+  delay(3000);
 
   // Init the RTC
-  setSyncProvider(RTC.get);   // the function to get the time from the RTC
+  setSyncProvider(getTeensy3Time);   // the function to get the time from the RTC
   
   if (timeStatus() == timeSet) {
     Serial.println("RTC has set the system time");  
-    useRTC = true;
+    useRTC = true; 
   } else {
     Serial.println("Unable to sync with the RTC");
   }
@@ -168,17 +168,26 @@ void loop() {
     SDWrite();
   }
 
-  // USED FOR TESTING WHEN NOT CONNECTED TO CAN
-  // static unsigned long writeTime = millis();
-  // static uint8_t writeData = 0;
-  // if (millis() - writeTime > 5) {
-  //   uint8_t buf[] = {writeData, writeData, writeData, writeData};
-  //   bufferMessage(0x01, 4, buf);
+  // logging the extra sensor data from the accelerometer and temp/humid sensor
+  static uint32_t dataLastRecorded = 0;
+  if (millis() - dataLastRecorded > ACCEL_HUMID_LOG_FREQUENCY) {
+    logSensorData();
+    dataLastRecorded = millis();
+  }
 
-  //   writeData++;
-  //   writeData %= 20;
-  //   writeTime = millis();
-  // }
+  // USED FOR TESTING WHEN NOT CONNECTED TO CAN
+#if TEST_LOG == 1 
+  static unsigned long writeTime = millis();
+  static uint8_t writeData = 0;
+  if (millis() - writeTime > 5) {
+    uint8_t buf[] = {writeData, writeData, writeData, writeData};
+    bufferMessage(0x01, 4, buf);
+
+    writeData++;
+    writeData %= 20;
+    writeTime = millis();
+  }
+#endif
 }
 
 
@@ -234,6 +243,33 @@ bool SDWrite() {
     Serial.println("Could not open file on SD card");
     return false;
   }
+}
+
+
+/**
+ * @brief Log the data from the attached sensors (accelerometer and humidity/temp sensor)
+ * 
+ */
+void logSensorData() {
+  XYZData_t xyzData[1];
+  HumidData_t humidData[1];
+
+  NERduino.getADXLdata(xyzData, 1);
+  NERduino.getSHTdata(humidData, 1);
+
+  uint8_t accelBuf[6] = {
+    xyzData[0].XData.rawdata[0], xyzData[0].XData.rawdata[1],
+    xyzData[0].YData.rawdata[0], xyzData[0].YData.rawdata[1],
+    xyzData[0].ZData.rawdata[0], xyzData[0].ZData.rawdata[1]
+  };
+
+  uint8_t humidBuf[4] = {
+    humidData[0].TempData.rawdata[0], humidData[0].TempData.rawdata[1],
+    humidData[0].HumidData.rawdata[0], humidData[0].HumidData.rawdata[1]
+  };
+
+  bufferMessage(ACCEL_LOG_ID, 6, accelBuf);
+  bufferMessage(HUMID_LOG_ID, 4, humidBuf);
 }
 
 
