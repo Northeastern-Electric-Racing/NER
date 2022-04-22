@@ -250,11 +250,11 @@ bool SDWrite() {
  * 
  */
 void logSensorData() {
-  XYZData_t xyzbuf[NUM_ADXL312_SAMPLES];
-  HumidData_t humidbuf[3];
+  XYZData_t xyzbuf[1];
+  HumidData_t humidbuf[1];
 
-  NERduino.getADXLdata(xyzbuf, NUM_ADXL312_SAMPLES);
-  NERduino.getSHTdata(humidbuf,3);
+  NERduino.getADXLdata(xyzbuf, 1);
+  NERduino.getSHTdata(humidbuf, 1);
 
   uint8_t accelBuf[6] = {
     xyzbuf[0].XData.rawdata[0], xyzbuf[0].XData.rawdata[1],
@@ -263,38 +263,32 @@ void logSensorData() {
   };
 
   uint8_t humidBuf[4] = {
-    humidbuf[0].TempData.rawdata[0], humidbuf[0].TempData.rawdata[0],
-    humidbuf[0].HumidData.rawdata[0], humidbuf[0].HumidData.rawdata[0]
+    humidbuf[0].TempData.rawdata[0], humidbuf[0].TempData.rawdata[1],
+    humidbuf[0].HumidData.rawdata[0], humidbuf[0].HumidData.rawdata[1]
   };
 
   bufferMessage(ACCEL_LOG_ID, 6, accelBuf);
   bufferMessage(HUMID_LOG_ID, 4, humidBuf);
 
   Serial.println("Accelerometer Data:");
-  for(uint8_t i=0; i<NUM_ADXL312_SAMPLES; i++)
-  {
-    Serial.print(xyzbuf[i].XData.data);
-    Serial.print("\t");
-    Serial.print(xyzbuf[i].YData.data);
-    Serial.print("\t");
-    Serial.print(xyzbuf[i].ZData.data);
-    Serial.print("\t");
-    Serial.println();
-  }
+  Serial.print(xyzbuf[0].XData.data);
+  Serial.print("\t");
+  Serial.print(xyzbuf[0].YData.data);
+  Serial.print("\t");
+  Serial.print(xyzbuf[0].ZData.data);
+  Serial.print("\t");
+  Serial.println();
  
   Serial.println("Humidity Data:");
-  for(uint8_t i=0; i<3; i++)
-  {
-    Serial.print("Temperature C: ");
-    Serial.print(humidbuf[i].tempC);
-    Serial.println(" C");
-    Serial.print("Temperature F: ");
-    Serial.print(humidbuf[i].tempF);
-    Serial.println(" F");
-    Serial.print("Relative Humidity: ");
-    Serial.print(humidbuf[i].relHumid);
-    Serial.println(" %RH");
-  }
+  Serial.print("Temperature C: ");
+  Serial.print(humidbuf[0].tempC);
+  Serial.println(" C");
+  Serial.print("Temperature F: ");
+  Serial.print(humidbuf[0].tempF);
+  Serial.println(" F");
+  Serial.print("Relative Humidity: ");
+  Serial.print(humidbuf[0].relHumid);
+  Serial.println(" %RH");
 }
 
 

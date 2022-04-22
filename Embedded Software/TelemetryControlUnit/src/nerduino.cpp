@@ -24,36 +24,25 @@ bool NERDUINO::begin()
 
 void NERDUINO::getADXLdata(XYZData_t *xyzbuf, uint8_t numReadings)
 {
-    uint8_t *msg = new uint8_t[6];
-    for(uint8_t i=0;i<numReadings;i++)
-    {
-        adxl312.getXYZ(msg);
+    uint8_t msg[6];
+    adxl312.getXYZ(msg);
 
-        xyzbuf[i].XData.rawdata[0] = msg[0];
-        xyzbuf[i].XData.rawdata[1] = msg[1];
-        xyzbuf[i].YData.rawdata[0] = msg[2];
-        xyzbuf[i].YData.rawdata[1] = msg[3];
-        xyzbuf[i].ZData.rawdata[0] = msg[4];
-        xyzbuf[i].ZData.rawdata[1] = msg[5];
-        delay(5);
-    }
-    delete[] msg;
+    xyzbuf[0].XData.rawdata[0] = msg[0];
+    xyzbuf[0].XData.rawdata[1] = msg[1];
+    xyzbuf[0].YData.rawdata[0] = msg[2];
+    xyzbuf[0].YData.rawdata[1] = msg[3];
+    xyzbuf[0].ZData.rawdata[0] = msg[4];
+    xyzbuf[0].ZData.rawdata[1] = msg[5];
 }
 
 
 void NERDUINO::getSHTdata(HumidData_t *humidbuf, uint8_t numReadings)
 {
-    uint8_t *msg = new uint8_t[6];
-    for(uint8_t i=0;i<numReadings;i++)
-    {
-        sht30.getTempHumid(msg);
+    uint8_t msg[6];
+    sht30.getTempHumid(msg);
 
-        humidbuf[i].TempData.rawdata[0]  = msg[1];
-        humidbuf[i].TempData.rawdata[1]  = msg[0];
-        humidbuf[i].HumidData.rawdata[0] = msg[4];
-        humidbuf[i].HumidData.rawdata[1] = msg[3];
-        delay(5);
-    }
-
-    delete[] msg;
+    humidbuf[0].TempData.rawdata[0]  = msg[1];
+    humidbuf[0].TempData.rawdata[1]  = msg[0];
+    humidbuf[0].HumidData.rawdata[0] = msg[4];
+    humidbuf[0].HumidData.rawdata[1] = msg[3];
 }

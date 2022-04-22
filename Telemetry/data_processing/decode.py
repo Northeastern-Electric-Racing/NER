@@ -2,9 +2,9 @@ from format_data import FormatData
 
 
 class DecodeSignedInt:
-    def __init__(self, byte_vals):
+    def __init__(self, byte_vals, length=8):
         # splits the given bytes into pairs of 2 for each value encoded
-        self.byte_vals = [byte_vals[i : i + 2] for i in range(0, 8, 2)]
+        self.byte_vals = [byte_vals[i : i + 2] for i in range(0, length, 2)]
 
     @staticmethod
     def twos_comp(val, bits):
@@ -266,11 +266,41 @@ class Decode13(DecodeSignedInt):  # Torque and Timer
 
 class Decode14(): # Current limits
     def __init__(self, byte_vals):
-        # inits the byte vals
         self.byte_vals = byte_vals
 
     def values(self):
         return {
             "Pack DCL": self.byte_vals[1] << 8 | self.byte_vals[0],
             "Pack CCL": self.byte_vals[3] << 8 | self.byte_vals[2],
+        }
+
+class Decode15(): # nerduino accelerometer
+    def __init__(self, byte_vals):
+        super().__init__(byte_vals, 6)
+
+    def values(self):
+        vals = self.decode()
+
+        return {
+            "X-Axis": vals[0],
+            "Y-Axis": vals[1],
+            "Z-Axis": vals[2],
+        }
+
+class Decode16(): # nerduino humidity
+    def __init__(self, byte_vals):
+        self.byte_vals = byte_vals
+
+    def values(self):
+        temp = self.byte_vals[1] << 8 | self.byte_vals[0]
+        humid = self.byte_vals[3] << 8 | self.byte_vals[2]
+
+        tempF = -49 + (315 * temp / 65535.0)
+        tempC = -45 + (175 * temp / 65535.0)
+        relHumid = 100 * humid / 65535.0
+
+        return {
+            "Temp C": tempC,
+            "Temp F": tempF,
+            "Relative Humidity": relHumid,
         }
