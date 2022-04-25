@@ -8,7 +8,7 @@ from db import create_entry, insert_entries
 LOGS = "./logs_active/"
 
 
-def process_data(log_path):
+def process_data_influx(log_path):
     entries = []
 
     for file_name in listdir(log_path):

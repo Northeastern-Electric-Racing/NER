@@ -15,7 +15,7 @@ OUTPUTS = "./outputs/"
 #   * id_filter        - id to filter by (if 0 then use all ids)
 #   * filter_param     - specific piece of data to filter by inside an id
 #   * time_format      - 0 means string time, 1 means epoch time (seconds since 1970, in double format)
-def process_data(log_path, output_file_name, id_filter, filter_param, time_format):
+def process_data_csv(log_path, output_file_name, id_filter, filter_param, time_format):
     values = []  # array of lists of form [timestamp, description, value]
 
     for file_name in listdir(log_path):
