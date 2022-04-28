@@ -3118,8 +3118,8 @@
     (effects (font (size 1.5 1.5)) (justify left bottom))
     (uuid f7df7f31-5572-44bb-925c-62b054c3cc7b)
   )
-  (text "Wire colour coding\n35 mm^2 - Orange4\n8 AWG - Blue4\n12 AWG - Magenta2\n18 AWG - Yellow3\n20 AWG - Cyan3\n22 AWG - Default(#009600FF)\n26 AWG - Orange1\n30 AWG - Magenta3\n"
-    (at 257.81 381 0)
+  (text "Wire colour coding\n35 mm^2 - Orange4\n2AWG - Orange3\n8AWG - Blue4\n12AWG - Magenta2\n18AWG - Yellow3\n20AWG - Cyan3\n22AWG - Default(#009600FF)\n26AWG - Orange1\n30AWG - Magenta3"
+    (at 257.81 383.54 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid faa3d769-63c2-4406-8c52-3f2002ed46f5)
   )
