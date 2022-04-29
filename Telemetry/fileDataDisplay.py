@@ -53,11 +53,11 @@ def process_file_data(log_path, id_filter, filter_param):
 # Plots the filtered data
 def plot_data(xs, ys, ylabel):
     plt.figure()
-    plt.step(xs,ys)
+    plt.plot(xs,ys)
     plt.title('Post Run Data')
     plt.ylabel(ylabel)
     plt.xlabel('Time (sec)')
-    plt.grid()
+    # plt.grid()
     plt.legend()
     plt.show()
 
@@ -123,6 +123,6 @@ if __name__ == "__main__":
     if filterId == 0 or filterParam == "":
         print("Invalid data filters")
     else:
-        process_data(LOGS, filterId, filterParam)
+        process_file_data(LOGS, filterId, filterParam)
         print("Data filtered by id: " + str(filterId))
         print("Data filtered by parameter: " + filterParam)
