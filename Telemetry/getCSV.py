@@ -92,7 +92,7 @@ if __name__ == "__main__":
         elif value_pair[0] == "-n":
             useNumericTime = value_pair[1]
 
-    process_data(LOGS, outputName, filterId, filterParam, int(useNumericTime))
+    process_data_csv(LOGS, outputName, filterId, filterParam, int(useNumericTime))
 
     print("Data filtered by id: " + str(filterId))
     print("Data filtered by parameter: " + filterParam)

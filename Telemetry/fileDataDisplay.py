@@ -9,8 +9,9 @@ import matplotlib.pyplot as plt
 LOGS = "./logs_active/"
 
 # Process the data using a double timestamp and the requested filters for the data field
-def process_file_data(log_path, id_filter, filter_param):
+def process_file_data(log_path, id_filter, id_filter1, filter_param, filter_param1, useSeperatePlot):
     values = []  # array of lists of form [timestamp, description, value]
+    values1 = []
 
     for file_name in listdir(log_path):
         with open(log_path + file_name) as file:
@@ -28,7 +29,7 @@ def process_file_data(log_path, id_filter, filter_param):
                 # Filter by id
                 if can_id not in DECODE_IDS:
                     continue
-                if id_filter != 0 and can_id != id_filter:
+                if id_filter != can_id and id_filter1 != can_id:
                     continue
 
                 # Decode the data bytes of the CAN message
@@ -40,14 +41,22 @@ def process_file_data(log_path, id_filter, filter_param):
                 # Add processed data into final list
                 for value in processed_data:
                     # Filter by data desciption if listed
-                    if filter_param != "" and filter_param != value:
-                        continue
-                    values.append([timestamp, can_id, value, processed_data[value]])
+                    if can_id == filterId and filter_param == value:
+                        values.append([timestamp, can_id, value, processed_data[value]])
+                    if can_id == filterId1 and filter_param1 == value:
+                        values1.append([timestamp, can_id, value, processed_data[value]])
 
     x = [value[0] for value in values]
     y = [value[3] for value in values]
+    x1 = [value[0] for value in values1]
+    y1 = [value[3] for value in values1]
 
-    plot_data(x,y,filter_param)
+    if filter_param1 == "":
+        plot_data(x,y,filter_param)
+    elif useSeperatePlot:
+        plot_2sets_seperate(x,x1,y,y1,filter_param,filter_param1)
+    else:
+        plot_2sets_data(x,x1,y,y1,filter_param,filter_param1)
 
 
 # Plots the filtered data
@@ -62,16 +71,27 @@ def plot_data(xs, ys, ylabel):
     plt.show()
 
 # Plots two sets of data to compare 
-def plot_2sets_data(xs,ys,x1,y1,ylabel):
+def plot_2sets_data(x1,x2,y1,y2,y1label,y2label):
    plt.figure()
-   plt.plot(xs, ys)
-   plt.plot(x1, y1, ls = ':')
+   plt.plot(x1, y1, label=y1label)
+   plt.plot(x2, y2, ls = ':', label=y2label)
    plt.title('Post Run Data')
-   plt.ylabel(ylabel)
+   plt.ylabel('Double Plot')
    plt.xlabel('Time (sec)')
    plt.grid()
    plt.legend()
    plt.show()
+
+def plot_2sets_seperate(x1,x2,y1,y2,y1label,y2label):  
+    fig, ax = plt.subplots(nrows=2, ncols=1)
+    ax[0].plot(x1, y1, color='r', label=y1label)
+    ax[0].legend()
+    ax[1].plot(x2, y2, color='green', label=y2label)
+    ax[1].legend()
+    plt.suptitle(y1label + " and " + y2label, fontweight='bold')
+    plt.tight_layout()
+    plt.xlabel('Time (sec)')
+    plt.show()
 
 # Plots a histogram of y values
 def plot_histo(ys,ylabel):
@@ -108,7 +128,10 @@ def plot_step(xs,ys,ylabel):
 
 if __name__ == "__main__":
     filterId = 0
+    filterId1 = 0
     filterParam = ""
+    filterParam1 = ""
+    seperatePlot = True
 
     args = argv[1:]
 
@@ -117,12 +140,19 @@ if __name__ == "__main__":
 
         if value_pair[0] == "-id":
             filterId = value_pair[1]
+        elif value_pair[0] == "-id1":
+            filterId1 = value_pair[1]
         elif value_pair[0] == "-data":
             filterParam = value_pair[1]
+        elif value_pair[0] == "-data1":
+            filterParam1 = value_pair[1]
+        elif value_pair[0] == "-samePlot":
+            seperatePlot = False
 
     if filterId == 0 or filterParam == "":
         print("Invalid data filters")
     else:
-        process_file_data(LOGS, filterId, filterParam)
+        process_file_data(LOGS, filterId, filterId1, filterParam, filterParam1, seperatePlot)
         print("Data filtered by id: " + str(filterId))
         print("Data filtered by parameter: " + filterParam)
+        print("Data filtered by parameter1: " + filterParam1)

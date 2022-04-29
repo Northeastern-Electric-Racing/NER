@@ -205,7 +205,7 @@ class Decode11:  # Internal States
         # The byte values can be manually reviewed with the documentation
         # in case any information is needed, so no decoding is needed
         return {
-            "VSM State": self.byte_vals[1] << 8 | self.byte_vals[0],
+            "VSM State": int(self.byte_vals[1]) << 8 | int(self.byte_vals[0]),
             "Inverter State": self.byte_vals[2],
             "Relay State": self.byte_vals[3],
             "Inverter Run Mode": self.byte_vals[4][0],
@@ -270,7 +270,7 @@ class Decode14(): # Current limits
 
     def values(self):
         return {
-            "Pack DCL": self.byte_vals[1] << 8 | self.byte_vals[0],
+            "Pack DCL": self.byte_vals[0] << 8 | self.byte_vals[1],
             "Pack CCL": self.byte_vals[3] << 8 | self.byte_vals[2],
         }
 

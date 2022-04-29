@@ -89,6 +89,7 @@ void bufferMessage(uint32_t id, uint8_t len, const uint8_t *buf);
 int getRealTimestamp(char *timestamp);
 int getRelativeTimestamp(char *timestamp);
 void logSensorData();
+void setFileName();
 
 /**
  * @brief Wrapper function to pass to time sync function
@@ -140,6 +141,22 @@ void setup() {
     delay(250);
   }
 
+  setFileName();
+  while (true) {
+    logFile = SD.open(fileName, FILE_WRITE);
+    if (logFile) {
+      break;
+    }
+    fileNum++;
+    setFileName();
+  }
+
+  logFile.close();
+  Serial.print(F("setup complete. fileNum is "));
+  Serial.println(String(fileNum));
+}
+
+void setFileName() {
   sprintf(fileName, "log-%d.txt", fileNum); // create the next file name in the fileName variable
 
   while (SD.exists(fileName)) { // find correct file number to log data to on this session
@@ -149,9 +166,6 @@ void setup() {
     fileNum++;
     sprintf(fileName, "log-%d.txt", fileNum); // create the next file name in the fileName variable
   }
-
-  Serial.print(F("setup complete. fileNum is "));
-  Serial.println(String(fileNum));
 }
 
 
