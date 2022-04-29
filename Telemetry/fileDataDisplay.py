@@ -1,15 +1,16 @@
 from os import listdir
 from sys import path, argv
-path.append('./data_processing')
-from decode_ids import DECODE_IDS
+
+path.append("./data_processing")
+from decode_ids import DECODE_IDS, DATA_IDS
 from utils import getDoubleTime, process_data_bytes
 import matplotlib.pyplot as plt
 
 LOGS = "./logs_active/"
 
 # Process the data using a double timestamp and the requested filters for the data field
-def process_data(log_path, id_filter, filter_param):
-    values = [] # array of lists of form [timestamp, description, value]
+def process_file_data(log_path, id_filter, filter_param):
+    values = []  # array of lists of form [timestamp, description, value]
 
     for file_name in listdir(log_path):
         with open(log_path + file_name) as file:
@@ -31,7 +32,7 @@ def process_data(log_path, id_filter, filter_param):
                     continue
 
                 # Decode the data bytes of the CAN message
-                decode = DECODE_IDS[can_id]["decode_class"](data)
+                decode = DATA_IDS[DECODE_IDS[can_id]]["decode_class"](data)
                 processed_data = decode.values()
 
                 timestamp = getDoubleTime(timestamp)
@@ -42,14 +43,15 @@ def process_data(log_path, id_filter, filter_param):
                     if filter_param != "" and filter_param != value:
                         continue
                     values.append([timestamp, can_id, value, processed_data[value]])
-    
+
     x = [value[0] for value in values]
     y = [value[3] for value in values]
 
     plot_data(x,y,filter_param)
 
-# Plots the filtered data 
-def plot_data(xs,ys,ylabel):
+
+# Plots the filtered data
+def plot_data(xs, ys, ylabel):
     plt.figure()
     plt.step(xs,ys)
     plt.title('Post Run Data')
@@ -121,6 +123,6 @@ if __name__ == "__main__":
     if filterId == 0 or filterParam == "":
         print("Invalid data filters")
     else:
-        process_data(LOGS, filterId, filterParam) 
+        process_data(LOGS, filterId, filterParam)
         print("Data filtered by id: " + str(filterId))
         print("Data filtered by parameter: " + filterParam)
