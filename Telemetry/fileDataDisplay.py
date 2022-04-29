@@ -46,17 +46,62 @@ def process_data(log_path, id_filter, filter_param):
     x = [value[0] for value in values]
     y = [value[3] for value in values]
 
-    plot_data(x, y, filter_param)
+    plot_data(x,y,filter_param)
 
 # Plots the filtered data 
 def plot_data(xs,ys,ylabel):
     plt.figure()
-    plt.plot(xs, ys)
+    plt.step(xs,ys)
     plt.title('Post Run Data')
     plt.ylabel(ylabel)
     plt.xlabel('Time (sec)')
+    plt.grid()
     plt.legend()
     plt.show()
+
+# Plots two sets of data to compare 
+def plot_2sets_data(xs,ys,x1,y1,ylabel):
+   plt.figure()
+   plt.plot(xs, ys)
+   plt.plot(x1, y1, ls = ':')
+   plt.title('Post Run Data')
+   plt.ylabel(ylabel)
+   plt.xlabel('Time (sec)')
+   plt.grid()
+   plt.legend()
+   plt.show()
+
+# Plots a histogram of y values
+def plot_histo(ys,ylabel):
+   plt.figure()
+   plt.hist(ys)
+   plt.title('Post Run Data')
+   plt.ylabel(ylabel)
+   plt.grid()
+   plt.legend()
+   plt.show()
+
+# Plots a boxplot of y values
+def plot_boxplot(ys,ylabel):
+   plt.figure()
+   plt.boxplot(ys)
+   plt.title('Post Run Data')
+   plt.ylabel(ylabel)
+   plt.grid()
+   plt.legend()
+   plt.show()
+
+# Plots a step plot
+def plot_step(xs,ys,ylabel):
+   plt.figure()
+   plt.step(xs,ys)
+   plt.title('Post Run Data')
+   plt.ylabel(ylabel)
+   plt.xlabel('Time (sec)')
+   plt.grid()
+   plt.legend()
+   plt.show()
+
 
 
 if __name__ == "__main__":
