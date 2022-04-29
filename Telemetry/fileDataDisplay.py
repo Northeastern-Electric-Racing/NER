@@ -78,6 +78,6 @@ if __name__ == "__main__":
     if filterId == 0 or filterParam == "":
         print("Invalid data filters")
     else:
-        process_data(LOGS, filterId, filterParam)
+        process_file_data(LOGS, filterId, filterParam)
         print("Data filtered by id: " + str(filterId))
         print("Data filtered by parameter: " + filterParam)
