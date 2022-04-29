@@ -1086,6 +1086,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 4cd38139-85d8-4bb0-8ec5-44fb4adb00fa)
   )
+  (text "See Fusible Links Report 2022" (at 102.87 24.13 0)
+    (effects (font (size 5 5)) (justify left bottom))
+    (uuid 790e3f45-2b8a-4c18-9ac1-61b10ec6d6ad)
+  )
   (text "*Thermistors are distributed evenly throughout the segment. Each group of 5 has a common ground on the thermistor expansion."
     (at 106.68 199.39 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
