@@ -1160,7 +1160,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000608d366e)
     (property "Reference" "F192" (id 0) (at 60.96 95.3262 90))
-    (property "Value" "TS Fuse: 200A" (id 1) (at 60.96 97.6376 90))
+    (property "Value" "TS Fuse: 175A" (id 1) (at 60.96 97.6376 90))
     (property "Footprint" "" (id 2) (at 60.96 98.552 90)
       (effects (font (size 1.27 1.27)) hide)
     )
