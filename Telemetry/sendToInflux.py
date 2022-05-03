@@ -43,4 +43,4 @@ def process_data_influx(log_path):
 
 
 if __name__ == "__main__":
-    process_data(LOGS)
+    process_data_influx(LOGS)
