@@ -20,37 +20,40 @@ def process_data_csv(log_path, output_file_name, id_filter, filter_param, time_f
 
     for file_name in listdir(log_path):
         with open(log_path + file_name) as file:
-            for line in file:
-                info = line.strip().split(" ")
+            try:
+                for line in file:
+                    info = line.strip().split(" ")
 
-                # Get the individual fields for each message
-                timestamp, can_id, length, data = (
-                    info[0],
-                    info[1],
-                    info[2],
-                    process_data_bytes(info[3:][0]),
-                )
+                    # Get the individual fields for each message
+                    timestamp, can_id, length, data = (
+                        info[0],
+                        info[1],
+                        info[2],
+                        process_data_bytes(info[3:][0]),
+                    )
 
-                # Filter by id
-                if can_id not in DECODE_IDS:
-                    continue
-                if id_filter != 0 and can_id != id_filter:
-                    continue
-
-                # Decode the data bytes of the CAN message
-                decode = DATA_IDS[DECODE_IDS[can_id]]["decode_class"](data)
-                processed_data = decode.values()
-
-                # Get correct time value (numeric or string)
-                if time_format == 1:
-                    timestamp = getDoubleTime(timestamp)
-
-                # Add processed data into final list
-                for value in processed_data:
-                    # Filter by data desciption if listed
-                    if filter_param != "" and filter_param != value:
+                    # Filter by id
+                    if can_id not in DECODE_IDS:
                         continue
-                    values.append([timestamp, can_id, value, processed_data[value]])
+                    if id_filter != 0 and can_id != id_filter:
+                        continue
+
+                    # Decode the data bytes of the CAN message
+                    decode = DATA_IDS[DECODE_IDS[can_id]]["decode_class"](data)
+                    processed_data = decode.values()
+
+                    # Get correct time value (numeric or string)
+                    if time_format == 1:
+                        timestamp = getDoubleTime(timestamp)
+
+                    # Add processed data into final list
+                    for value in processed_data:
+                        # Filter by data desciption if listed
+                        if filter_param != "" and filter_param != value:
+                            continue
+                        values.append([timestamp, can_id, value, processed_data[value]])
+            except:
+                pass
 
     header = ["time", "message_id", "description", "value"]
     with open(OUTPUTS + output_file_name, "w", encoding="UTF8", newline="") as f:
