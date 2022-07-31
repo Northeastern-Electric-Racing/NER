@@ -34,7 +34,7 @@ typedef void (*XbeeCallback) (uint8_t *buf, int length);
  * @param serialPort Serial port
  * @param baudRate Baud rate
  */
-void XbeeInit(HardwareSerial serialPort, uint32_t baudRate);
+void XbeeInit(HardwareSerial *serialPort, uint32_t baudRate);
 
 /**
  * @brief Registers a callback to be notified when data is received.
@@ -49,16 +49,17 @@ int XbeeRegisterCallback(XbeeCallback callback);
  * 
  * @param buf Data buffer to send
  * @param len Length of the data to send
- * @return int status code (0 on success, other on failure)
+ * @return Actual amount of data sent
  */
 int XbeeSendData(uint8_t *buf, uint32_t len);
 
 /**
- * @brief Receives data from the xbee connection. NOTE: Only usable if we have not registered a callback.
+ * @brief Receives data from the xbee connection. 
+ *     NOTE: Only usable if we have not registered a callback.
  * 
  * @param buf Data buffer to store recevied data
- * @param len Integer pointer to store length of the received data
- * @return int status code (0 on success, other on failure)
+ * @param maxLen Max length of data to store in the buffer
+ * @return Actual amount of data received
  */
-int XbeeReceiveData(uint8_t *buf, uint32_t *len);
+int XbeeReceiveData(uint8_t *buf, uint32_t maxLen);
 

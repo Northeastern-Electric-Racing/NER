@@ -1,4 +1,5 @@
 #include "xbee_at.h"
+#include "debug.h"
 
 #define MAX_CALLBACK_COUNT 2
 #define CALLBACK_INTERVAL_US 1000 // 1 ms
@@ -53,15 +54,17 @@ int XbeeSendData(uint8_t *buf, uint32_t len) {
         return XBEE_ERROR_TX_FULL;
     }
     
-    int write_data = (*port).write(buf, len);
+    uint32_t write_data = (*port).write(buf, len);
 
     if (write_data < len) {
         return XBEE_ERROR_CONNECTION;
     }
+
+    return XBEE_SUCCESS;
 }
 
 
-int XbeeReceiveData(uint8_t *buf, uint32_t *len) {
+int XbeeReceiveData(uint8_t *buf, uint32_t maxLen) {
     if (num_callbacks > 0) {
         return XBEE_ERROR_RECEIVE_MODE;
     }
@@ -70,7 +73,7 @@ int XbeeReceiveData(uint8_t *buf, uint32_t *len) {
     }
 
     // read until we get the newline character
-    int num_read = (*port).readBytesUntil('\n', buf, MAX_READ_LENGTH);
+    uint32_t num_read = (*port).readBytesUntil('\n', buf, MAX_READ_LENGTH);
     *len = num_read;
 
     if (num_read == 0 || num_read == MAX_READ_LENGTH) {

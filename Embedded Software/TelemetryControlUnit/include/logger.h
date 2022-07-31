@@ -8,6 +8,13 @@
 
 #include <stdint.h>
 
+// Error codes for function return values
+#define LOGGER_SUCCESS           0
+#define LOGGER_ERROR_BUFFER_FULL 1
+#define LOGGER_ERROR_SD_CARD     2
+#define LOGGER_ERROR_NO_WRITE    3
+
+
 typedef struct {
   char timestamp[25]; // timestamp in YYYY-MM-DDT00:00:00.000Z format
   uint32_t id;
@@ -17,7 +24,7 @@ typedef struct {
 
 
 
-void LoggerInit(uint32_t logFrequency);
+int LoggerInit(uint32_t logFrequency);
 
 
 /**
@@ -28,7 +35,7 @@ void LoggerInit(uint32_t logFrequency);
  * @param len Message length
  * @param buf Data bytes (Array of length 'len')
  */
-void LoggerBufferMessage(uint32_t id, uint8_t len, const uint8_t *buf);
+int LoggerBufferMessage(uint32_t id, uint8_t len, const uint8_t *buf);
 
 
 /**
@@ -37,4 +44,4 @@ void LoggerBufferMessage(uint32_t id, uint8_t len, const uint8_t *buf);
  * @return true true on a successful write 
  * @return false when the write fails
  */
-bool LoggerWrite();
+int LoggerWrite();

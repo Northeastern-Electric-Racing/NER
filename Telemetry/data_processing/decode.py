@@ -1,6 +1,74 @@
 from format_data import FormatData
 
 
+class DecodeMain:
+    def __init__(self):
+        pass
+
+    # P
+    def decodeAllData(log_path, filter = None):
+        """Process the data found in the files at 'log_path' and return decoded dictionary.
+        - Filter is a map from a data id to the data param name we want to include in the output
+        - If there is no filter, all data is included
+        """
+        for file_name in listdir(log_path):
+            with open(log_path + file_name) as file:
+                for line in file:
+                    info = line.strip().split(" ")
+
+                    if len(info) != 4:
+                        raise IOError("File " + file_name + " has invalid data formats.")
+
+                    # Get the individual fields for each message
+                    timestamp, can_id, length, data = (
+                        info[0],
+                        info[1],
+                        info[2],
+                        process_data_bytes(info[3:][0]),
+                    )
+ 
+
+
+    # Process the data using a double timestamp and the requested filters for the data field
+def process_file_data(log_path, id_filter, id_filter1, filter_param, filter_param1, useSeperatePlot):
+    values = []  # array of lists of form [timestamp, description, value]
+    values1 = []
+
+    for file_name in listdir(log_path):
+        with open(log_path + file_name) as file:
+            for line in file:
+                info = line.strip().split(" ")
+
+                # Get the individual fields for each message
+                timestamp, can_id, length, data = (
+                    info[0],
+                    info[1],
+                    info[2],
+                    process_data_bytes(info[3:][0]),
+                )
+
+                # Filter by id
+                if can_id not in DECODE_IDS:
+                    continue
+                if id_filter != can_id and id_filter1 != can_id:
+                    continue
+
+                # Decode the data bytes of the CAN message
+                decode = DATA_IDS[DECODE_IDS[can_id]]["decode_class"](data)
+                processed_data = decode.values()
+
+                timestamp = getDoubleTime(timestamp)
+
+                # Add processed data into final list
+                for value in processed_data:
+                    # Filter by data desciption if listed
+                    if can_id == filterId and filter_param == value:
+                        values.append([timestamp, can_id, value, processed_data[value]])
+                    if can_id == filterId1 and filter_param1 == value:
+                        values1.append([timestamp, can_id, value, processed_data[value]])
+
+
+
 class DecodeSignedInt:
     def __init__(self, byte_vals, length=8):
         # splits the given bytes into pairs of 2 for each value encoded

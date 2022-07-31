@@ -1,4 +1,5 @@
 #include "logger.h"
+#include "debug.h"
 #include <Arduino.h>
 #include <TimeLib.h>
 #include <SD.h>
@@ -8,20 +9,22 @@
 
 File logFile; // file logging object
 
-// Logging information (use 2 buffers to prevent overwrites during logging delays)
+
+// Buffer information (use 2 buffers to prevent overwrites during logging delays)
 int buf1Length = 0;
 int buf2Length = 0;
 message_format_t messageBuf1[MAX_BUFFERED_MESSAGES]; 
 message_format_t messageBuf2[MAX_BUFFERED_MESSAGES]; 
 bool usingBuf1 = true; // true when using buf1, false when using buf2
+
 char fileName[19]; // format is log-1652888997.txt (19 digits as 10 for timestamp, 8 for text, 1 for termination)
+bool initialized = false;
 
 // Timing information
 uint32_t lastLogTime;
 uint32_t minLogFrequency;
 uint32_t startUpTimeMillis;
 uint32_t startUpTimeRTC;
-bool useRTC = false; // Default is to use system millis() time
 
 
 /**
@@ -42,97 +45,45 @@ static time_t getTeensy3Time()
  */
 static void setFileName() {
   uint32_t fileNum = 0;
-  if (useRTC) {
-      fileNum = now();
+  if (startUpTimeRTC > 0) {
+      fileNum = startUpTimeRTC;
   }
 
-  sprintf(fileName, "log-%d.txt\0", fileNum);
+  snprintf(fileName, 19, "log-%lu.txt\0", fileNum);
 
   while (SD.exists(fileName)) {
-    if (useRTC) {
-        delay(500);
-        fileNum = now();
-    }
-    else {
-        fileNum++;
-    }
-
-    sprintf(fileName, "log-%d.txt\0", fileNum); 
+    fileNum++;
+    snprintf(fileName, 19, "log-%lu.txt\0", fileNum); 
   }
 }
 
 
 /**
- * @brief Resets the buffers and the RTC when an error is detected
+ * @brief Resets the buffers, SD card, and clock
  * 
  */
 static void reset() {
-    buf1Length = 0;
-    buf2Length = 0;
-    memset((void *)messageBuf1, 0, MAX_BUFFERED_MESSAGES * sizeof(message_format_t));
-    memset((void *)messageBuf2, 0, MAX_BUFFERED_MESSAGES * sizeof(message_format_t));
-    usingBuf1 = true;
-    lastLogTime = millis();
-
-    // TODO: Add code to reset RTC
-    // TODO: Add delay
+  initialized = false;
+  buf1Length = 0;
+  buf2Length = 0;
+  memset((void *)messageBuf1, 0, MAX_BUFFERED_MESSAGES * sizeof(message_format_t));
+  memset((void *)messageBuf2, 0, MAX_BUFFERED_MESSAGES * sizeof(message_format_t));
+  usingBuf1 = true;
 }
 
 
 /**
- * @brief Get the real date/time in the format YYYY-MM-DDT00:00:00.000Z
+ * @brief Get the date/time in the format YYYY-MM-DDT00:00:00.000Z
  * 
- * @param timestamp Pointer to return to
+ * @param timestamp Char pointer to hold return value
  */
-static int getRealTimestamp(char *timestamp) {
-  time_t currentTime = now();
-  
-  // calculate millisecond precisions
+static void getTimestamp(char *timestamp) {
   uint32_t millisSinceStart = millis() - startUpTimeMillis;
-  uint32_t millisSinceStartRTC = (currentTime - startUpTimeRTC) * 1000;
-  
-  uint32_t millisDifference = 0;
-  if (millisSinceStart - millisSinceStartRTC > 0) {
-    currentTime += (millisSinceStart - millisSinceStartRTC) / 1000; // update currentTime if the millis go over a second
-    millisDifference = (millisSinceStart - millisSinceStartRTC) % 1000; // set to be in range of 0-999 
-  }
+  uint32_t currentTimeSec = startUpTimeRTC + (millisSinceStart / 1000);
+  uint32_t extraMillis = millisSinceStart % 1000;
 
-  sprintf(timestamp, "%.4d-%.2d-%.2dT%.2d:%.2d:%.2d.%.3luZ", year(currentTime), month(currentTime), 
-          day(currentTime), hour(currentTime), minute(currentTime), second(currentTime), millisDifference);
-
-  timestamp[24] = '\0'; // terminate string with NULL character
-
-  if (year(currentTime) > 3000) {
-    return -1;
-  }
-
-  return 0;
-}
-
-
-/**
- * @brief Get the time since startup of the car in the format YYYY-MM-DDT00:00:00.000Z.
- *        The year, month, and day values are irrelevant (hardcoded at 2021-1-1)
- * 
- * @param timestamp Pointer to return to
- */
-static int getRelativeTimestamp(char *timestamp) {
-  uint32_t millisSinceStart = millis() - startUpTimeMillis;
-  
-  // parse millisecond time value
-  int minutes = millisSinceStart / 60000; 
-  int seconds = (millisSinceStart - minutes*60000) / 1000; 
-  unsigned long milliseconds = millisSinceStart - minutes*60000 - seconds*1000; 
-  
-  // get the total hours from minutes value
-  int hours = minutes / 60;
-  minutes = minutes % 60;
-  
-  sprintf(timestamp, "%.4d-%.2d-%.2dT%.2d:%.2d:%.2d.%.3luZ", 2021, 1, 1, hours, minutes, seconds, milliseconds);
-  
-  timestamp[24] = '\0'; // terminate string with NULL character
-
-  return 0;
+  snprintf(timestamp, 25, "%.4d-%.2d-%.2dT%.2d:%.2d:%.2d.%.3luZ\0", year(currentTimeSec), month(currentTimeSec), 
+          day(currentTimeSec), hour(currentTimeSec), minute(currentTimeSec), second(currentTimeSec), extraMillis);
 }
 
 
@@ -140,34 +91,37 @@ static int getRelativeTimestamp(char *timestamp) {
  * @brief Initilizes SD logging
  * 
  */
-void LoggerInit(uint32_t logFrequency) {
+int LoggerInit(uint32_t logFrequency) {
+  // Start built-in SD card
+  if (!SD.begin(BUILTIN_SDCARD)) {
+    DPRINTLN(F("Error initializing SD card logging"));
+    return LOGGER_ERROR_SD_CARD;
+  }
+
   // Init the RTC
   setSyncProvider(getTeensy3Time);   // the function to get the time from the RTC
   
-  if (timeStatus() == timeSet) {
-    Serial.println("RTC has set the system time");  
-    useRTC = true; 
-  } else {
-    Serial.println("Unable to sync with the RTC");
-  }
-
   // Init startup times
-  startUpTimeMillis = millis();
-  startUpTimeRTC = now();
-
-  // Start built-in SD card
-  while (!SD.begin(BUILTIN_SDCARD)) {
-    Serial.println("Error initializing SD card logging");
-    delay(250);
+  if (timeStatus() == timeSet) {
+    DPRINTLN(F("RTC has set the system time")); 
+    startUpTimeRTC = now();
+  } else {
+    DPRINTLN(F("Unable to sync with the RTC"));
+    startUpTimeRTC = 0;
   }
-
+  startUpTimeMillis = millis();
+  
   // set the file name 
   setFileName();
-  Serial.print(F("setup complete. fileName is "));
-  Serial.println(fileName);
+  DPRINT(F("Setup complete. File name is "));
+  DPRINTLN(fileName);
 
-  logFrequency = minLogFrequency;
+  minLogFrequency = logFrequency;
   lastLogTime = millis();
+  logFile = SD.open(fileName, FILE_WRITE);
+  
+  initialized = true;
+  return LOGGER_SUCCESS;
 }
 
 
@@ -177,19 +131,21 @@ void LoggerInit(uint32_t logFrequency) {
  * @return true true on a successful write 
  * @return false when the write fails
  */
-bool LoggerWrite() {
+int LoggerWrite() {
+  if (!initialized) {
+    return LOGGER_ERROR_SD_CARD;
+  }
+
   // find appropriate buffer to use
   message_format_t *messageBuf = usingBuf1 ? messageBuf1 : messageBuf2; 
   int bufLength = usingBuf1 ? buf1Length : buf2Length;
 
   // only write on certain conditions
   if ((millis() - lastLogTime) <= minLogFrequency && bufLength < MAX_BUFFERED_MESSAGES) {
-      return false;
+      return LOGGER_ERROR_NO_WRITE;
   }
 
   usingBuf1 = !usingBuf1; // Switch main log buffer during write process
-
-  logFile = SD.open(fileName, FILE_WRITE);
 
   // create a new file if current one is too large
   if (logFile.size() > MAX_LOG_FILE_SIZE) {
@@ -198,44 +154,58 @@ bool LoggerWrite() {
     logFile = SD.open(fileName, FILE_WRITE);
   }
 
-  Serial.print(" -- ");
-  Serial.print(bufLength);
-  Serial.print(" -- \n");
+  DPRINT(F(" -- "));
+  DPRINT(F("Added from buf "));
+  if (usingBuf1) {
+    DPRINT(F("2: "));
+  } else {
+    DPRINT(F("1: "));
+  }
+  DPRINT(bufLength);
+  DPRINT(F(" -- \n"));
 
   if (logFile) {
-    Serial.println("Writing to SD card...");
+    DPRINTLN(F("Writing to SD card..."));
 
     // write all buffered messages to the SD card
     for (int i = 0; i < bufLength; i++) {
-      logFile.print(messageBuf[i].timestamp);
-      logFile.print(" ");
+      int writeLength = logFile.print(messageBuf[i].timestamp);
+      // checks for error on write (assumes rest are fine if this passes)
+      if (writeLength == 0) {
+        reset();
+        return LOGGER_ERROR_SD_CARD;
+      }
+      logFile.print(F(" "));
       logFile.print(messageBuf[i].id);
-      logFile.print(" ");
+      logFile.print(F(" "));
       logFile.print(messageBuf[i].length);
-      logFile.print(" [");
+      logFile.print(F(" ["));
       for (int j = 0; j < messageBuf[i].length; j++) {
         logFile.print(messageBuf[i].dataBuf[j]);
         if (j != messageBuf[i].length - 1) {
-          logFile.print(",");
+          logFile.print(F(","));
         }
       }
-      logFile.print("]\n");
+      logFile.print(F("]\n"));
     }
 
     lastLogTime = millis();
     
     // clear bufLength variables (must clear the opposite of whatever one is in use)
     if (usingBuf1) {
+      DPRINTLN(F("Reset buffer 2"));
       buf2Length = 0;
     } else {
+      DPRINTLN(F("Reset buffer 1"));
       buf1Length = 0;
     }
-    logFile.close();
-    return true;
+    logFile.flush();
+    return LOGGER_SUCCESS;
   } 
   else {
-    Serial.println("Could not open file on SD card");
-    return false;
+    DPRINTLN(F("Could not open file on SD card"));
+    reset();
+    return LOGGER_ERROR_SD_CARD;
   }
 }
 
@@ -248,30 +218,22 @@ bool LoggerWrite() {
  * @param len Message length
  * @param buf Data bytes (Array of length 'len')
  */
-void LoggerBufferMessage(uint32_t id, uint8_t len, const uint8_t *buf) {
+int LoggerBufferMessage(uint32_t id, uint8_t len, const uint8_t *buf) {
+  if (!initialized) {
+    return LOGGER_ERROR_SD_CARD;
+  }
+
+  noInterrupts();
   message_format_t *messageBuf = usingBuf1 ? messageBuf1 : messageBuf2; 
   int bufLength = usingBuf1 ? buf1Length : buf2Length;
 
-  if (bufLength > MAX_BUFFERED_MESSAGES) {
-    return; // TODO: add buffer switch
-  }
-
-  int timeStatus;
-  // find time stamps
-  if (useRTC) {
-    timeStatus = getRealTimestamp(messageBuf[bufLength].timestamp);
-  }
-  else {
-    timeStatus = getRelativeTimestamp(messageBuf[bufLength].timestamp);
-  }
-
-  // reset buffers on an error
-  if (timeStatus < 0 || len > 8) {
-    reset();
-    return;
+  if (bufLength >= MAX_BUFFERED_MESSAGES) {
+    DPRINTLN(F("Tried to write to already full buffer"));
+    return LOGGER_ERROR_BUFFER_FULL;
   }
 
   // add data to message buffer
+  getTimestamp(messageBuf[bufLength].timestamp);
   messageBuf[bufLength].id = id;
   messageBuf[bufLength].length = len;
   memcpy(messageBuf[bufLength].dataBuf, buf, len);
@@ -281,5 +243,8 @@ void LoggerBufferMessage(uint32_t id, uint8_t len, const uint8_t *buf) {
   } else {
     buf2Length++;
   }
+  interrupts();
+
+  return LOGGER_SUCCESS;
 }
 

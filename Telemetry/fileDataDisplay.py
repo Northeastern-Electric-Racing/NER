@@ -8,6 +8,11 @@ import matplotlib.pyplot as plt
 
 LOGS = "./logs_active/"
 
+# Negate the rpm input and perform calcs to get mph
+def rpmToSpeed(speed):
+    return (-speed) * 0.018421
+
+
 # Process the data using a double timestamp and the requested filters for the data field
 def process_file_data(log_path, id_filter, id_filter1, filter_param, filter_param1, useSeperatePlot):
     values = []  # array of lists of form [timestamp, description, value]
@@ -42,9 +47,9 @@ def process_file_data(log_path, id_filter, id_filter1, filter_param, filter_para
                 for value in processed_data:
                     # Filter by data desciption if listed
                     if can_id == filterId and filter_param == value:
-                        values.append([timestamp, can_id, value, processed_data[value]])
+                        values.append([timestamp, can_id, value, rpmToSpeed(processed_data[value])])
                     if can_id == filterId1 and filter_param1 == value:
-                        values1.append([timestamp, can_id, value, processed_data[value]])
+                        values1.append([timestamp, can_id, value, -processed_data[value]])
 
     x = [value[0] for value in values]
     y = [value[3] for value in values]
@@ -150,7 +155,7 @@ if __name__ == "__main__":
             seperatePlot = False
 
     if filterId == 0 or filterParam == "":
-        print("Invalid data filters")
+        print("Invalid data filters") 
     else:
         process_file_data(LOGS, filterId, filterId1, filterParam, filterParam1, seperatePlot)
         print("Data filtered by id: " + str(filterId))

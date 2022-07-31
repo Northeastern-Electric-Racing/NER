@@ -1,6 +1,6 @@
 /**
- * File names are logged in the format "log-0.txt", where the 0 is an incremented number for
- * each operation session.
+ * File names are logged in the format "log-0.txt", where the 0 is the numeric timestamp when the file
+ * was created.
  * 
  * The standard block size for SD card transfers is 512 bytes. Each write operation to the SD card should
  * be as close to this size as possible, as the remaining space will be padded and used anyway.
@@ -19,9 +19,7 @@
  * 
  * FUTURE WORK/CONSIDERATIONS
  *   - increase the buffer size if only writing 512 bytes at a time is too slow
- *   - create an additional receive buffer to prevent overwrites/eratic behavior
- *   - see if CAN interrupts cause bad behavior with SD writes
- *       - do we need to disable interrupts during a write to the SD card?
+ *   - create additional receive buffers (past 2) to prevent overwrites/eratic behavior
  *   - Create a way to update filtered IDs without hardcoding
  *       - Potentially a CAN message to alter it
  *       - Look into storing list in EEPROM 
@@ -30,8 +28,10 @@
 #include <Arduino.h>
 #include <FlexCAN_T4.h>
 #include "nerduino.h"
+#include "Watchdog_t4.h"
 #include "xbee_at.h"
 #include "logger.h"
+#include "debug.h"
 
 #define TEST_LOG 0 // set to 1 to log the test messages in the main loop()
 
@@ -48,12 +48,14 @@
 
 
 FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> myCan; // main CAN object
+WDT_T4<WDT1> wdt;
+
+bool loggable = false;
 
 
 // CAN Ids of the messages to log to SD card (only considered if LOG_ALL is 0)
-const uint32_t LOG_IDS[] = {0x001, 0x002, 0x003, 0x004, 0x0A0, 0x0A1, 0x0A2, 0x0A5, 0x0A6, 0x0A7, 0x0AA, 0x0AB, 0x0AC, 0x202};
-const int NUM_IDS = 14;
-
+const uint32_t LOG_IDS[] = {0x001, 0x002, 0x003, 0x004, 0x0A0, 0x0A1, 0x0A2, 0x0A5, 0x0A6, 0x0A7, 0x0AA, 0x0AB, 0x0AC, 0x202, 0xC0};
+const int NUM_IDS = 15;
 
 
 // function declarations
@@ -67,8 +69,14 @@ void logSensorData();
  * 
  */
 void setup() {
+#ifdef DEBUG
   Serial.begin(9600); 
   delay(400);
+#endif
+
+  if (LoggerInit(MIN_LOG_FREQUENCY) == LOGGER_SUCCESS) {
+    loggable = true;
+  }
 
   // Start the nerduino peripherals
   NERduino.begin();
@@ -82,8 +90,12 @@ void setup() {
   myCan.enableFIFOInterrupt(); 
   myCan.onReceive(incomingCANCallback);
   
-  LoggerInit(MIN_LOG_FREQUENCY);
-  XbeeInit(Serial1, 115200); // init the xbee on Serial1 with a baud rate of 115200
+  XbeeInit(&Serial1, 115200); // init the xbee on Serial1 with a baud rate of 115200
+
+  WDT_timings_t config;
+  config.trigger = 5; /* in seconds, 0->128 */
+  config.timeout = 15; /* in seconds, 0->128 */
+  wdt.begin(config);
 }
 
 
@@ -93,28 +105,34 @@ void setup() {
  * 
  */
 void loop() {
+  wdt.feed();
   myCan.events();
-  LoggerWrite();
+
+  if (LoggerWrite() == LOGGER_ERROR_SD_CARD) {
+    LoggerInit(MIN_LOG_FREQUENCY);
+  }
+
+  
 
   // logging the extra sensor data from the accelerometer and temp/humid sensor
   static uint32_t dataLastRecorded = 0;
   if (millis() - dataLastRecorded > ACCEL_HUMID_LOG_FREQUENCY) {
-    logSensorData();
+    //logSensorData();
     dataLastRecorded = millis();
   }
 
   // USED FOR TESTING WHEN NOT CONNECTED TO CAN
 #if TEST_LOG == 1 
-  //static unsigned long writeTime = millis();
+  static unsigned long writeTime = millis();
   static uint8_t writeData = 0;
-  //if (millis() - writeTime > 5) {
-    uint8_t buf[] = {writeData, writeData, writeData, writeData};
-    bufferMessage(0x01, 4, buf);
+  if (millis() - writeTime > 10) {
+    const uint8_t buf[] = {writeData, writeData, writeData, writeData};
+    LoggerBufferMessage(0x01, 4, buf);
 
     writeData++;
     writeData %= 20;
-    //writeTime = millis();
-  //}
+    writeTime = millis();
+  }
 #endif
 }
 
