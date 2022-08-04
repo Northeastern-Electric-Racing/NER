@@ -21,7 +21,8 @@ DECODE_IDS = {
     "172": 13,
     "514": 14,
     "768": 15,
-    "769": 16
+    "769": 16,
+    "192": 17
 }
 
 # Defines the supported DATA IDs in our system with their associated name and processing class
@@ -88,7 +89,11 @@ DATA_IDS = {
         "decode_class": Decode15,
     },
     16: {
-        "decode": "nerduino humidity",
+        "device": "nerduino humidity",
         "decode_class": Decode16,
+    },
+    17: {
+        "device": "commanded data",
+        "decode_class": Decode17,
     }
 }

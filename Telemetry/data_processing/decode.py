@@ -1,74 +1,6 @@
 from format_data import FormatData
 
 
-class DecodeMain:
-    def __init__(self):
-        pass
-
-    # P
-    def decodeAllData(log_path, filter = None):
-        """Process the data found in the files at 'log_path' and return decoded dictionary.
-        - Filter is a map from a data id to the data param name we want to include in the output
-        - If there is no filter, all data is included
-        """
-        for file_name in listdir(log_path):
-            with open(log_path + file_name) as file:
-                for line in file:
-                    info = line.strip().split(" ")
-
-                    if len(info) != 4:
-                        raise IOError("File " + file_name + " has invalid data formats.")
-
-                    # Get the individual fields for each message
-                    timestamp, can_id, length, data = (
-                        info[0],
-                        info[1],
-                        info[2],
-                        process_data_bytes(info[3:][0]),
-                    )
- 
-
-
-    # Process the data using a double timestamp and the requested filters for the data field
-def process_file_data(log_path, id_filter, id_filter1, filter_param, filter_param1, useSeperatePlot):
-    values = []  # array of lists of form [timestamp, description, value]
-    values1 = []
-
-    for file_name in listdir(log_path):
-        with open(log_path + file_name) as file:
-            for line in file:
-                info = line.strip().split(" ")
-
-                # Get the individual fields for each message
-                timestamp, can_id, length, data = (
-                    info[0],
-                    info[1],
-                    info[2],
-                    process_data_bytes(info[3:][0]),
-                )
-
-                # Filter by id
-                if can_id not in DECODE_IDS:
-                    continue
-                if id_filter != can_id and id_filter1 != can_id:
-                    continue
-
-                # Decode the data bytes of the CAN message
-                decode = DATA_IDS[DECODE_IDS[can_id]]["decode_class"](data)
-                processed_data = decode.values()
-
-                timestamp = getDoubleTime(timestamp)
-
-                # Add processed data into final list
-                for value in processed_data:
-                    # Filter by data desciption if listed
-                    if can_id == filterId and filter_param == value:
-                        values.append([timestamp, can_id, value, processed_data[value]])
-                    if can_id == filterId1 and filter_param1 == value:
-                        values1.append([timestamp, can_id, value, processed_data[value]])
-
-
-
 class DecodeSignedInt:
     def __init__(self, byte_vals, length=8):
         # splits the given bytes into pairs of 2 for each value encoded
@@ -338,7 +270,7 @@ class Decode14(): # Current limits
 
     def values(self):
         return {
-            "Pack DCL": self.byte_vals[0] << 8 | self.byte_vals[1],
+            "Pack DCL": self.byte_vals[1] << 8 | self.byte_vals[0],
             "Pack CCL": self.byte_vals[3] << 8 | self.byte_vals[2],
         }
 
@@ -371,4 +303,36 @@ class Decode16(): # nerduino humidity
             "Temp C": tempC,
             "Temp F": tempF,
             "Relative Humidity": relHumid,
+        }
+
+class Decode17(): # command message
+    def __init__(self, byte_vals):
+        self.byte_vals = byte_vals
+
+    def values(self):
+        torque = self.byte_vals[1] << 8 | self.byte_vals[0]
+        speed = self.byte_vals[3] << 8 | self.byte_vals[2]
+        torque_limit = self.byte_vals[7] << 8 | self.byte_vals[6]
+
+        torque = DecodeSignedInt.twos_comp(torque, 16)
+        speed = DecodeSignedInt.twos_comp(speed, 16)
+        torque_limit = DecodeSignedInt.twos_comp(torque_limit, 16)
+    
+        torque = FormatData.torque(torque)
+        speed = FormatData.angular_velocity(speed)
+        torque_limit = FormatData.torque(torque_limit)
+
+        direction = self.byte_vals[4]
+        inverter_enable = self.byte_vals[5] & 1
+        inverter_discharge = (self.byte_vals[5] >> 1) & 1
+        speed_mode = (self.byte_vals[5] >> 2) & 1
+
+        return {
+            "Torque Command": torque,
+            "Speed Command": speed,
+            "Direction Command": direction,
+            "Inverter Enable": inverter_enable,
+            "Inverter Discharge": inverter_discharge,
+            "Speed Mode Enable": speed_mode,
+            "Commanded Torque Limit": torque_limit,
         }
