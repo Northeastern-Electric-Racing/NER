@@ -39,7 +39,7 @@ class Decode1():
     def values(self):
         return {
             "Pack Inst Voltage": self.byte_vals[0] << 8 | self.byte_vals[1],
-            "Pack Current": self.byte_vals[2] << 8 | self.byte_vals[3],
+            "Pack Current": DecodeSignedInt.twos_comp(self.byte_vals[2] << 8 | self.byte_vals[3], 16),
             "Pack Amphours": self.byte_vals[4] << 8 | self.byte_vals[5],
             "Pack SOC": self.byte_vals[6],
             "Pack Health": self.byte_vals[7],
