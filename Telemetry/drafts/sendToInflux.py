@@ -1,11 +1,11 @@
 from os import listdir
 from sys import path
-path.append('./data_processing')
+path.append('../data_processing')
 from decode_ids import DECODE_IDS, DATA_IDS
 from utils import process_data_bytes
 from db import create_entry, insert_entries
 
-LOGS = "./logs_active/"
+LOGS = "../logs_active/"
 
 
 def process_data_influx(log_path):

@@ -1,12 +1,12 @@
 from os import listdir
 from sys import path, argv
 
-path.append("./data_processing")
+path.append("../data_processing")
 from decode_ids import DECODE_IDS, DATA_IDS
 from utils import getDoubleTime, process_data_bytes
 import matplotlib.pyplot as plt
 
-LOGS = "./logs_active/"
+LOGS = "../logs_active/"
 
 # Negate the rpm input and perform calcs to get mph
 def rpmToSpeed(speed):
