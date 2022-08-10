@@ -2,7 +2,7 @@
 
   (uuid fd087f5c-4502-4ee7-8af3-5178468c0f00)
 
-  (paper "A4")
+  (paper "A")
 
   (title_block
     (title "BattBox PCB")

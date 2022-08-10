@@ -309,7 +309,7 @@
       "workbook_filename": ""
     },
     "page_layout_descr_file": "",
-    "plot_directory": "C:/Users/huber/Downloads/",
+    "plot_directory": "../../../../Exports/",
     "spice_adjust_passive_values": false,
     "spice_external_command": "spice \"%I\"",
     "subpart_first_id": 65,
@@ -335,6 +335,10 @@
     [
       "00000000-0000-0000-0000-000060854f08",
       "ThermistorPCB3"
+    ],
+    [
+      "f4866840-157c-49b9-bb5f-8808a53a5638",
+      "Footwell Box"
     ],
     [
       "00000000-0000-0000-0000-000060854f7b",
@@ -381,6 +385,10 @@
       "VT_PCB1"
     ],
     [
+      "00000000-0000-0000-0000-000060827cb0",
+      "LV_Plate"
+    ],
+    [
       "00000000-0000-0000-0000-00006082840f",
       "HV_Plate"
     ],
@@ -389,24 +397,12 @@
       "TSAL PCB"
     ],
     [
-      "00000000-0000-0000-0000-000060827cb0",
-      "LV_Plate"
-    ],
-    [
       "00000000-0000-0000-0000-00006139a762",
       "MCR_PCB"
     ],
     [
-      "00000000-0000-0000-0000-00005f890a03",
-      "Brake Light"
-    ],
-    [
       "00000000-0000-0000-0000-000061ecc7cf",
       "Charger"
-    ],
-    [
-      "f4866840-157c-49b9-bb5f-8808a53a5638",
-      "Footwell Box"
     ]
   ],
   "text_variables": {}
