@@ -15,21 +15,26 @@ OUTPUTS = "./outputs/"
 #   * id_filter        - id to filter by (if 0 then use all ids)
 #   * filter_param     - specific piece of data to filter by inside an id
 #   * time_format      - 0 means string time, 1 means epoch time (seconds since 1970, in double format)
-def process_data(log_path, output_file_name, id_filter, filter_param, time_format):
+def process_data_csv(log_path, output_file_name, id_filter, filter_param, time_format):
     values = []  # array of lists of form [timestamp, description, value]
 
     for file_name in listdir(log_path):
         with open(log_path + file_name) as file:
+            line_count = 0
             for line in file:
+                line_count += 1
                 info = line.strip().split(" ")
 
-                # Get the individual fields for each message
-                timestamp, can_id, length, data = (
-                    info[0],
-                    info[1],
-                    info[2],
-                    process_data_bytes(info[3:][0]),
-                )
+                try:
+                    # Get the individual fields for each message
+                    timestamp, can_id, length, data = (
+                        info[0],
+                        info[1],
+                        info[2],
+                        process_data_bytes(info[3:][0]),
+                    )
+                except:
+                    print("Bad line structure: file - ", file_name, ", line - ", line_count)
 
                 # Filter by id
                 if can_id not in DECODE_IDS:
@@ -39,7 +44,10 @@ def process_data(log_path, output_file_name, id_filter, filter_param, time_forma
 
                 # Decode the data bytes of the CAN message
                 decode = DATA_IDS[DECODE_IDS[can_id]]["decode_class"](data)
-                processed_data = decode.values()
+                try:
+                    processed_data = decode.values()
+                except:
+                    print("Bad line data: file - ", file_name, ", line - ", line_count)
 
                 # Get correct time value (numeric or string)
                 if time_format == 1:
@@ -51,6 +59,7 @@ def process_data(log_path, output_file_name, id_filter, filter_param, time_forma
                     if filter_param != "" and filter_param != value:
                         continue
                     values.append([timestamp, can_id, value, processed_data[value]])
+        
 
     header = ["time", "message_id", "description", "value"]
     with open(OUTPUTS + output_file_name, "w", encoding="UTF8", newline="") as f:
@@ -92,7 +101,7 @@ if __name__ == "__main__":
         elif value_pair[0] == "-n":
             useNumericTime = value_pair[1]
 
-    process_data(LOGS, outputName, filterId, filterParam, int(useNumericTime))
+    process_data_csv(LOGS, outputName, filterId, filterParam, int(useNumericTime))
 
     print("Data filtered by id: " + str(filterId))
     print("Data filtered by parameter: " + filterParam)

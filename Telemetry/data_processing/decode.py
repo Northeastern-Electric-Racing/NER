@@ -39,7 +39,7 @@ class Decode1():
     def values(self):
         return {
             "Pack Inst Voltage": self.byte_vals[0] << 8 | self.byte_vals[1],
-            "Pack Current": self.byte_vals[2] << 8 | self.byte_vals[3],
+            "Pack Current": DecodeSignedInt.twos_comp(self.byte_vals[2] << 8 | self.byte_vals[3], 16),
             "Pack Amphours": self.byte_vals[4] << 8 | self.byte_vals[5],
             "Pack SOC": self.byte_vals[6],
             "Pack Health": self.byte_vals[7],
@@ -205,7 +205,7 @@ class Decode11:  # Internal States
         # The byte values can be manually reviewed with the documentation
         # in case any information is needed, so no decoding is needed
         return {
-            "VSM State": self.byte_vals[1] << 8 | self.byte_vals[0],
+            "VSM State": int(self.byte_vals[1]) << 8 | int(self.byte_vals[0]),
             "Inverter State": self.byte_vals[2],
             "Relay State": self.byte_vals[3],
             "Inverter Run Mode": self.byte_vals[4][0],
@@ -303,4 +303,36 @@ class Decode16(): # nerduino humidity
             "Temp C": tempC,
             "Temp F": tempF,
             "Relative Humidity": relHumid,
+        }
+
+class Decode17(): # command message
+    def __init__(self, byte_vals):
+        self.byte_vals = byte_vals
+
+    def values(self):
+        torque = self.byte_vals[1] << 8 | self.byte_vals[0]
+        speed = self.byte_vals[3] << 8 | self.byte_vals[2]
+        torque_limit = self.byte_vals[7] << 8 | self.byte_vals[6]
+
+        torque = DecodeSignedInt.twos_comp(torque, 16)
+        speed = DecodeSignedInt.twos_comp(speed, 16)
+        torque_limit = DecodeSignedInt.twos_comp(torque_limit, 16)
+    
+        torque = FormatData.torque(torque)
+        speed = FormatData.angular_velocity(speed)
+        torque_limit = FormatData.torque(torque_limit)
+
+        direction = self.byte_vals[4]
+        inverter_enable = self.byte_vals[5] & 1
+        inverter_discharge = (self.byte_vals[5] >> 1) & 1
+        speed_mode = (self.byte_vals[5] >> 2) & 1
+
+        return {
+            "Torque Command": torque,
+            "Speed Command": speed,
+            "Direction Command": direction,
+            "Inverter Enable": inverter_enable,
+            "Inverter Discharge": inverter_discharge,
+            "Speed Mode Enable": speed_mode,
+            "Commanded Torque Limit": torque_limit,
         }

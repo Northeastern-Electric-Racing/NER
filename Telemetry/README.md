@@ -7,6 +7,7 @@ Currently only the getCSV.py script is working, which converts the files in the 
   - '-data="Data Name"' sets a filter on the data from a specific id by the name in the description column (default is no filter to show all data from an id)
   - '-n=0' sets the format of the timestamp (0 for default string version or 1 for a numeric value)
 - To graph a specific data value, filter by the correct -id and -data parameters and use a value of 1 for -n, then graphing the data vs timestamp columns in excel should be straightforward
+The `drafts` directory contains unfinished scripts, with development moved to the Telemetry Hub
 
 ### Input/Output Directories
 The scripts process all of the data in the /log_active directory and send an output to the /outputs directory. 
