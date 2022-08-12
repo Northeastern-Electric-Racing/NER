@@ -74,7 +74,6 @@ int XbeeReceiveData(uint8_t *buf, uint32_t maxLen) {
 
     // read until we get the newline character
     uint32_t num_read = (*port).readBytesUntil('\n', buf, MAX_READ_LENGTH);
-    *len = num_read;
 
     if (num_read == 0 || num_read == MAX_READ_LENGTH) {
         return XBEE_ERROR_RECEIVE_FORMAT;
