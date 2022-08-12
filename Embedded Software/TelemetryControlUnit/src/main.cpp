@@ -1,30 +1,3 @@
-/**
- * File names are logged in the format "log-0.txt", where the 0 is the numeric timestamp when the file
- * was created.
- * 
- * The standard block size for SD card transfers is 512 bytes. Each write operation to the SD card should
- * be as close to this size as possible, as the remaining space will be padded and used anyway.
- *  - each message is a max of 49 bytes, so a buffer size of 10 is ideal
- * 
- * The Teensy Loader automatically syncs the RTC to the PCs system time on upload, so the time library
- * can be used for real time access if a coin cell is connected to VBAT on the teensy.
- * 
- * All RTC times are in units of seconds since Jan 1st 1970, which is an unsigned long.
- *   - We also keep track of the millis() of the car for extra precision on time stamps
- * 
- * The format for each CAN message logged to the SD card will be:
- *   - time canId length [dataBytes]
- *   - time is in RFC339 format: YYYY-MM-DDT00:00:00.000Z 
- *   - Example Format: 2022-01-12T14:32:21.657Z 123 6 [123,9,12,0,3,15] 
- * 
- * FUTURE WORK/CONSIDERATIONS
- *   - increase the buffer size if only writing 512 bytes at a time is too slow
- *   - create additional receive buffers (past 2) to prevent overwrites/eratic behavior
- *   - Create a way to update filtered IDs without hardcoding
- *       - Potentially a CAN message to alter it
- *       - Look into storing list in EEPROM 
- */
-
 #include <Arduino.h>
 #include <FlexCAN_T4.h>
 #include "nerduino.h"
@@ -34,7 +7,6 @@
 #include "debug.h"
 
 #define TEST_LOG 0 // set to 1 to log the test messages in the main loop()
-
 #define LOG_ALL 0 // set to 1 to log all CAN messages, 0 to filter
 
 #define BAUD_RATE 1000000U // 250 kbps 
@@ -65,24 +37,18 @@ void logSensorData();
 
 
 /**
- * @brief Init serial console, CAN bus, and brake switch digital pins
+ * @brief Init the many peripherals and communication lines.
  * 
  */
 void setup() {
-#ifdef DEBUG
   Serial.begin(9600); 
-  delay(400);
-#endif
+  delay(100);
 
-  if (LoggerInit(MIN_LOG_FREQUENCY) == LOGGER_SUCCESS) {
-    loggable = true;
-  }
+  LoggerInit(MIN_LOG_FREQUENCY);
 
-  // Start the nerduino peripherals
   NERduino.begin();
-  delay(3000);
+  delay(3000); // TODO: Do we need this delay
 
-  // Init CAN 
   myCan.begin();
   myCan.setBaudRate(BAUD_RATE);
   myCan.setMaxMB(MAX_MB_NUM);
@@ -90,7 +56,7 @@ void setup() {
   myCan.enableFIFOInterrupt(); 
   myCan.onReceive(incomingCANCallback);
   
-  XbeeInit(&Serial1, 115200); // init the xbee on Serial1 with a baud rate of 115200
+  // XbeeInit(&Serial1, 115200);
 
   WDT_timings_t config;
   config.trigger = 5; /* in seconds, 0->128 */
@@ -110,14 +76,13 @@ void loop() {
 
   if (LoggerWrite() == LOGGER_ERROR_SD_CARD) {
     LoggerInit(MIN_LOG_FREQUENCY);
+    DPRINTLN(F("Reinitializing logger due to internal error")); 
   }
-
-  
 
   // logging the extra sensor data from the accelerometer and temp/humid sensor
   static uint32_t dataLastRecorded = 0;
   if (millis() - dataLastRecorded > ACCEL_HUMID_LOG_FREQUENCY) {
-    //logSensorData();
+    //logSensorData(); // TODO: Fix Nerduino blocking I2C calls before uncommenting this line
     dataLastRecorded = millis();
   }
 

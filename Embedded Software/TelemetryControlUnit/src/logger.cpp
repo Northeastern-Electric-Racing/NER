@@ -1,3 +1,21 @@
+/**
+ * The standard block size for SD card transfers is 512 bytes. Each write operation to the SD card should
+ * be as close to this size as possible, as the remaining space will be padded and used anyway.
+ *  - each message is a max of 49 bytes, so a buffer size on multiples of 10 is ideal
+ * 
+ * The Teensy Loader automatically syncs the RTC to the PCs system time on upload, so the time library
+ * can be used for real time access if a coin cell is connected to VBAT on the teensy.
+ * 
+ * All RTC times are in units of seconds since Jan 1st 1970, which is an unsigned long.
+ *   - We also keep track of the millis() of the car for extra precision on time stamps
+ * 
+ * The format for each CAN message logged to the SD card will be:
+ *   - time canId length [dataBytes]
+ *   - time is in RFC339 format: YYYY-MM-DDT00:00:00.000Z 
+ *   - Example Format: 2022-01-12T14:32:21.657Z 123 6 [123,9,12,0,3,15] 
+ * 
+ */
+
 #include "logger.h"
 #include "debug.h"
 #include <Arduino.h>
@@ -7,18 +25,20 @@
 #define MAX_BUFFERED_MESSAGES 50 // max number of buffered CAN messages before logging to SD card
 #define MAX_LOG_FILE_SIZE 100000000U // 100 Megabytes
 
-File logFile; // file logging object
+#define FILE_NAME_SIZE 19 // 19 digits as 10 for timestamp, 8 for text, 1 for termination
 
+
+File logFile; // file logging object
+char fileName[FILE_NAME_SIZE]; // format is log-1652888997.txt
 
 // Buffer information (use 2 buffers to prevent overwrites during logging delays)
 int buf1Length = 0;
 int buf2Length = 0;
 message_format_t messageBuf1[MAX_BUFFERED_MESSAGES]; 
 message_format_t messageBuf2[MAX_BUFFERED_MESSAGES]; 
-bool usingBuf1 = true; // true when using buf1, false when using buf2
+bool usingBuf1 = true;
 
-char fileName[19]; // format is log-1652888997.txt (19 digits as 10 for timestamp, 8 for text, 1 for termination)
-bool initialized = false;
+bool initialized = false; // flag to verify logging has been initialized
 
 // Timing information
 uint32_t lastLogTime;
@@ -46,29 +66,15 @@ static time_t getTeensy3Time()
 static void setFileName() {
   uint32_t fileNum = 0;
   if (startUpTimeRTC > 0) {
-      fileNum = startUpTimeRTC;
+    fileNum = startUpTimeRTC;
   }
 
-  snprintf(fileName, 19, "log-%lu.txt\0", fileNum);
+  snprintf(fileName, FILE_NAME_SIZE, "log-%lu.txt\0", fileNum);
 
   while (SD.exists(fileName)) {
     fileNum++;
-    snprintf(fileName, 19, "log-%lu.txt\0", fileNum); 
+    snprintf(fileName, FILE_NAME_SIZE, "log-%lu.txt\0", fileNum); 
   }
-}
-
-
-/**
- * @brief Resets the buffers, SD card, and clock
- * 
- */
-static void reset() {
-  initialized = false;
-  buf1Length = 0;
-  buf2Length = 0;
-  memset((void *)messageBuf1, 0, MAX_BUFFERED_MESSAGES * sizeof(message_format_t));
-  memset((void *)messageBuf2, 0, MAX_BUFFERED_MESSAGES * sizeof(message_format_t));
-  usingBuf1 = true;
 }
 
 
@@ -88,20 +94,35 @@ static void getTimestamp(char *timestamp) {
 
 
 /**
- * @brief Initilizes SD logging
+ * @brief Resets the buffers, SD card, and clock
  * 
  */
+static void reset() {
+  noInterrupts()
+  initialized = false;
+  buf1Length = 0;
+  buf2Length = 0;
+  memset((void *)messageBuf1, 0, MAX_BUFFERED_MESSAGES * sizeof(message_format_t));
+  memset((void *)messageBuf2, 0, MAX_BUFFERED_MESSAGES * sizeof(message_format_t));
+  usingBuf1 = true;
+  interrupts()
+}
+
+
+/**
+ * @brief Initializes the SD logging functionality.
+ * 
+ * @param logFrequency Minimum rate at which to log the buffered messages
+ * @return int Status code
+ */
 int LoggerInit(uint32_t logFrequency) {
-  // Start built-in SD card
   if (!SD.begin(BUILTIN_SDCARD)) {
     DPRINTLN(F("Error initializing SD card logging"));
     return LOGGER_ERROR_SD_CARD;
   }
 
   // Init the RTC
-  setSyncProvider(getTeensy3Time);   // the function to get the time from the RTC
-  
-  // Init startup times
+  setSyncProvider(getTeensy3Time);
   if (timeStatus() == timeSet) {
     DPRINTLN(F("RTC has set the system time")); 
     startUpTimeRTC = now();
@@ -126,10 +147,9 @@ int LoggerInit(uint32_t logFrequency) {
 
 
 /**
- * @brief Writes the messages currently buffered in messageBuf to the SD card
+ * @brief Writes the messages currently buffered to the SD card. 
  * 
- * @return true true on a successful write 
- * @return false when the write fails
+ * @return int Status code
  */
 int LoggerWrite() {
   if (!initialized) {
@@ -142,7 +162,7 @@ int LoggerWrite() {
 
   // only write on certain conditions
   if ((millis() - lastLogTime) <= minLogFrequency && bufLength < MAX_BUFFERED_MESSAGES) {
-      return LOGGER_ERROR_NO_WRITE;
+    return LOGGER_ERROR_NO_WRITE;
   }
 
   usingBuf1 = !usingBuf1; // Switch main log buffer during write process
@@ -214,9 +234,10 @@ int LoggerWrite() {
  * @brief Adds the given data plus a generated timestamp to the message buffer.
  *        Uses a time since startup if the RTC is not in use, or the real time otherwise.
  * 
- * @param id  Message id
+ * @param id Message id
  * @param len Message length
- * @param buf Data bytes (Array of length 'len')
+ * @param buf Data bytes (Array of length `len`)
+ * @return int Status code
  */
 int LoggerBufferMessage(uint32_t id, uint8_t len, const uint8_t *buf) {
   if (!initialized) {

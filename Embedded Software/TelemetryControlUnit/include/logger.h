@@ -23,7 +23,12 @@ typedef struct {
 } message_format_t;
 
 
-
+/**
+ * @brief Initializes the SD logging functionality.
+ * 
+ * @param logFrequency Minimum rate at which to log the buffered messages
+ * @return int Status code
+ */
 int LoggerInit(uint32_t logFrequency);
 
 
@@ -31,17 +36,17 @@ int LoggerInit(uint32_t logFrequency);
  * @brief Adds the given data plus a generated timestamp to the message buffer.
  *        Uses a time since startup if the RTC is not in use, or the real time otherwise.
  * 
- * @param id  Message id
+ * @param id Message id
  * @param len Message length
- * @param buf Data bytes (Array of length 'len')
+ * @param buf Data bytes (Array of length `len`)
+ * @return int Status code
  */
 int LoggerBufferMessage(uint32_t id, uint8_t len, const uint8_t *buf);
 
 
 /**
- * @brief Writes the messages currently buffered in messageBuf to the SD card
+ * @brief Writes the messages currently buffered to the SD card. 
  * 
- * @return true true on a successful write 
- * @return false when the write fails
+ * @return int Status code
  */
 int LoggerWrite();
