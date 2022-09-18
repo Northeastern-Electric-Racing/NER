@@ -13,7 +13,7 @@ plotOrder = {'Motor Speed', 'Wheel Speed', {'BMS Pack Current', 'Discharge Curre
 dataQty = length(dataIDs);
 
 disp('Importing Data');
-T = readtable('091422_2127.csv', 'Delimiter', ','); % SELECT FILE HERE
+T = readtable('091422_2359.csv', 'Delimiter', ','); % SELECT FILE HERE
 h = height(T);
 cell = T{:,2};
 disp('Import Complete');
@@ -38,7 +38,7 @@ procT.Properties.VariableNames = dataName;
 temp = (table2array(procT(:,3)) > 1000);
 procT{temp,3} = -99;
 
-range = timerange('2022-09-14 21:10:00', '2022-09-14 21:22:00'); % SELECT TIME RANGE HERE
+range = timerange('2022-09-14 22:31:00', '2022-09-14 23:02:00'); % SELECT TIME RANGE HERE
 plotT = procT(range,:); % Keep only time we want
 
 % plotT(:,2:length(dataName)) = fillmissing(plotT(:,2:length(dataName)),'previous'); % Interpolate missing values (this just uses latest value)
