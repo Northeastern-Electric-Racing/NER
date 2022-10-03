@@ -3,17 +3,17 @@ close all;
 
 motor2roadConst = 0.01842102362; % Divide by diff ratio, multiply by wheel circumfrence, convert meters per min to MPH
 
-dataIDs = [45,45,2,89,51,1,10,28,91,92,93]; % CAN message ID
-dataMulti = [1,motor2roadConst,0.1,1,1,0.1,1,1,1,1,1]; % Data multiplier
-dataOffset = [0,0,0,0,0,0,0,0,0,0,0]; % Data +/- offset
-dataName = ["Motor Speed", "Wheel Speed", "BMS Pack Current", "Discharge Current Limit", "MC DC Current", "Pack Inst Voltage", "Average Temp", "Motor Temperature", "Accel X", "Accel Y", "Accel Z"];
-plotOrder = {'Motor Speed', 'Wheel Speed', {'BMS Pack Current', 'Discharge Current Limit', 'MC DC Current'}, 'Pack Inst Voltage', {'Average Temp', 'Motor Temperature'}, {'Accel X', 'Accel Y', 'Accel Z'}};
+dataIDs = [45,45,2,89,51,1,10,28,91,92,93,98,82]; % CAN message ID
+dataMulti = [1,motor2roadConst,0.1,1,1,0.1,1,1,0.0029,0.0029,0.0029,-1,1]; % Data multiplier
+dataOffset = [0,0,0,0,0,0,0,0,0.061,0.1769,-0.017,0,0]; % Data +/- offset
+dataName = ["Motor Speed", "Wheel Speed", "BMS Pack Current", "Discharge Current Limit", "MC DC Current", "Pack Inst Voltage", "Average Temp", "Motor Temperature", "Accel X", "Accel Y", "Accel Z", "GLV Current", "Torque Command"];
+plotOrder = {'Motor Speed', 'Wheel Speed', {'BMS Pack Current', 'Discharge Current Limit', 'MC DC Current'}, 'Pack Inst Voltage', {'Average Temp', 'Motor Temperature'}, {'Accel X', 'Accel Y', 'Accel Z'}, 'GLV Current', 'Torque Command'};
 
 dataQty = length(dataIDs);
 
 disp('Importing Data');
-T = readtable('091822_2154.csv', 'Delimiter', ','); % SELECT FILE HERE
-tv = [datetime(2019,1,1,0,29,0):milliseconds(5):datetime(2019,1,1,0,59,0)]; % SELECT TIME RANGE HERE
+T = readtable('100222_1912.csv', 'Delimiter', ','); % SELECT FILE HERE
+tv = [datetime(2022,10,2,19,5,0):milliseconds(5):datetime(2022,10,2,19,12,0)]; % SELECT TIME RANGE HERE
 h = height(T);
 cell = T{:,2};
 disp('Import Complete');
