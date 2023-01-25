@@ -1881,6 +1881,10 @@
     (stroke (width 1) (type default) (color 255 153 0 1))
     (uuid 4082fa0c-be7f-4887-ba3d-569dad440e26)
   )
+  (wire (pts (xy 139.7 199.39) (xy 134.62 199.39))
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid 40a681e1-b7dc-4da5-8fe4-867e54701b69)
+  )
   (wire (pts (xy 521.97 254) (xy 524.51 254))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 41c18011-40db-4384-9ba4-c0158d0d9d6a)
@@ -1901,7 +1905,7 @@
     (stroke (width 0) (type default) (color 132 0 132 1))
     (uuid 4493559e-e65b-4f75-b2fd-3f670a534853)
   )
-  (wire (pts (xy 527.05 199.39) (xy 527.05 238.76))
+  (wire (pts (xy 527.05 194.31) (xy 527.05 238.76))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 4523fb30-7a0d-475b-9ad6-fb9eb16e0ae7)
   )
@@ -2021,6 +2025,10 @@
   (wire (pts (xy 114.3 124.46) (xy 92.71 124.46))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 5c223097-59ae-4b62-8e31-b853c031f61a)
+  )
+  (wire (pts (xy 139.7 194.31) (xy 139.7 199.39))
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid 5d186def-74db-49e3-b202-d390432a49d5)
   )
   (wire (pts (xy 186.69 209.55) (xy 204.47 209.55))
     (stroke (width 0) (type default) (color 0 0 0 0))
@@ -2270,7 +2278,7 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 9637239f-8244-4c7c-bd9d-0d37a8b7fcce)
   )
-  (wire (pts (xy 134.62 199.39) (xy 527.05 199.39))
+  (wire (pts (xy 139.7 194.31) (xy 527.05 194.31))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 96578510-bea6-462c-ad0b-21a5253a3ad1)
   )
@@ -2855,7 +2863,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ba7ae2bd-ff0d-4951-ad55-a37ba18c05fe)
   )
-  (text "SHUTDOWN LOOP" (at 245.11 208.28 0)
+  (text "SHUTDOWN LOOP" (at 187.96 207.01 0)
     (effects (font (size 2.5 2.5)) (justify left bottom))
     (uuid bd9da1fc-97a7-472a-9d21-2dfe6693d1eb)
   )
@@ -2878,6 +2886,10 @@
   (text "8AWG" (at 52.07 289.56 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid cd8bbdec-fc66-46d6-a980-389591223c97)
+  )
+  (text "Accumulator Fans" (at 311.15 363.22 0)
+    (effects (font (size 3.9878 3.9878)) (justify left bottom))
+    (uuid cdc1b5d5-d8aa-4c0d-a12b-cc213ce6f4a0)
   )
   (text "Throttle Input" (at 80.01 79.375 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -6556,16 +6568,16 @@
       (reference "J?") (unit 1) (value "TS+") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/00000000-0000-0000-0000-0000608d0328"
-      (reference "K5") (unit 1) (value "AIR-: GX14") (footprint "Relay_THT:Relay_StandexMeder_DIP_LowProfile")
+      (reference "K5") (unit 1) (value "AIR-: GV24") (footprint "Relay_THT:Relay_StandexMeder_DIP_LowProfile")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/00000000-0000-0000-0000-0000608d1508"
-      (reference "K6") (unit 1) (value "PCharge: P105BDA") (footprint "Relay_THT:Relay_StandexMeder_DIP_LowProfile")
+      (reference "K6") (unit 1) (value "PCharge: 2-1904058-5") (footprint "Relay_THT:Relay_StandexMeder_DIP_LowProfile")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/00000000-0000-0000-0000-0000608d24d5"
-      (reference "K7") (unit 1) (value "AIR+: GX14") (footprint "Relay_THT:Relay_StandexMeder_DIP_LowProfile")
+      (reference "K7") (unit 1) (value "AIR+: GV24") (footprint "Relay_THT:Relay_StandexMeder_DIP_LowProfile")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/00000000-0000-0000-0000-0000608d570d"
-      (reference "K8") (unit 1) (value "DCharge: PNC113") (footprint "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB")
+      (reference "K8") (unit 1) (value "DCharge: CPC1135N") (footprint "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB")
     )
     (path "/00000000-0000-0000-0000-000061ecc7cf/00000000-0000-0000-0000-000061eef404"
       (reference "K9") (unit 1) (value "Safety Relay") (footprint "Relay_THT:Relay_DPST_Fujitsu_FTR-F1A")
@@ -6584,30 +6596,6 @@
     )
     (path "/00000000-0000-0000-0000-0000618194e8"
       (reference "M3") (unit 1) (value "RadFan") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-0000609373bb"
-      (reference "M4") (unit 1) (value "Fan_4pin") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-0000609373e5"
-      (reference "M5") (unit 1) (value "Fan_4pin") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-0000609373c1"
-      (reference "M6") (unit 1) (value "Fan_4pin") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-0000609373df"
-      (reference "M7") (unit 1) (value "Fan_4pin") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-0000609373c7"
-      (reference "M8") (unit 1) (value "Fan_4pin") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-0000609373d9"
-      (reference "M9") (unit 1) (value "Fan_4pin") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-0000609373cd"
-      (reference "M10") (unit 1) (value "Fan_4pin") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-0000609373d3"
-      (reference "M11") (unit 1) (value "Fan_4pin") (footprint "")
     )
     (path "/f4866840-157c-49b9-bb5f-8808a53a5638/bb87bd10-ae28-4653-9c9c-5f2417d98ebb"
       (reference "M12") (unit 1) (value "MNMOS") (footprint "")
@@ -6655,10 +6643,10 @@
       (reference "R7") (unit 1) (value "10MΩ") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/00000000-0000-0000-0000-0000608cf874"
-      (reference "R8") (unit 1) (value "PCharge: 600R") (footprint "")
+      (reference "R8") (unit 1) (value "PCharge: 1K") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/00000000-0000-0000-0000-0000608cef02"
-      (reference "R9") (unit 1) (value "DCharge: 3.3K") (footprint "")
+      (reference "R9") (unit 1) (value "DCharge: 5K") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/00000000-0000-0000-0000-000060827e73"
       (reference "R10") (unit 1) (value "TSMP+: 10K") (footprint "")
