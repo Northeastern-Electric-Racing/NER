@@ -1,0 +1,50 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid 35eaa4fc-b7f9-4d0b-8945-590f9afd1967)
+
+  (paper "A")
+
+  (title_block
+    (title "Wheel PCB")
+    (date "2023-01-25")
+    (rev "1")
+  )
+
+  (lib_symbols
+  )
+
+
+  (text "SEE ALTIUM SCHEMATIC FOR FINAL IMPLEMENTATION" (at 57.15 29.21 0)
+    (effects (font (size 3.9878 3.9878)) (justify left bottom))
+    (uuid a7d2e5b6-e7fa-4a87-958c-ebbbdb31272f)
+  )
+
+  (hierarchical_label "GND" (shape passive) (at 71.12 85.09 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 2072bd50-4431-4cc9-8329-44785851ffa8)
+  )
+  (hierarchical_label "RadioPTT1" (shape output) (at 121.92 82.55 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 4de75ac6-877b-4265-b86f-ca55a0a5c7fb)
+  )
+  (hierarchical_label "CAN_L" (shape bidirectional) (at 91.44 85.09 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 82b735d8-b284-41e3-8dd2-f9b0e9cf9726)
+  )
+  (hierarchical_label "CAN_Shield" (shape passive) (at 91.44 87.63 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid b9456a92-7b71-4b49-bf20-16455f8cb473)
+  )
+  (hierarchical_label "GLV" (shape input) (at 71.12 82.55 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid ce1c34d9-fbff-4130-8fa5-b2cc55892b47)
+  )
+  (hierarchical_label "RadioPTT2" (shape input) (at 121.92 85.09 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid d1ebf0f0-bbb9-42d3-ae98-8c7361276c8b)
+  )
+  (hierarchical_label "CAN_H" (shape bidirectional) (at 91.44 82.55 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid f0183b9d-16e8-4243-b260-847dfeb8b043)
+  )
+)
