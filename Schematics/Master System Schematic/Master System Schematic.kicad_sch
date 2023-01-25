@@ -6,8 +6,8 @@
 
   (title_block
     (title "NER 2021-2022 Master Electrical Schematic")
-    (date "2023-01-24")
-    (rev "17")
+    (date "2023-01-25")
+    (rev "18")
     (company "Northeastern Electric Racing")
     (comment 1 "https://github.com/Northeastern-Electric-Racing/NER")
     (comment 2 "For authors and other info, contact Chief Electrical Engineer")
@@ -1752,6 +1752,10 @@
     (stroke (width 0) (type default) (color 194 194 0 1))
     (uuid 3332fd58-69f9-4774-a11e-0af3a61cb72a)
   )
+  (wire (pts (xy 336.55 99.06) (xy 341.63 99.06))
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid 33c36223-33a7-4eee-9ef3-a0feabf8897e)
+  )
   (wire (pts (xy 429.26 298.45) (xy 469.9 298.45))
     (stroke (width 1) (type default) (color 255 153 0 1))
     (uuid 34945ab4-1fff-4a2f-a540-e5711ab33847)
@@ -2537,6 +2541,10 @@
     (stroke (width 0) (type default) (color 0 194 194 1))
     (uuid e12fb35a-27da-400b-99e0-25b2baab02cd)
   )
+  (wire (pts (xy 336.55 96.52) (xy 341.63 96.52))
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid e21a5719-4a97-404b-bdf1-0d4449d503a4)
+  )
   (wire (pts (xy 370.84 283.845) (xy 381 283.845))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid e2439441-901e-4312-8dc4-1d0d7eed767a)
@@ -2933,6 +2941,15 @@
     (uuid fd5eee24-574c-4bdc-b135-055231e872e8)
   )
 
+  (label "ToRadio" (at 341.63 96.52 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 42cce1c6-88f1-4409-a5d2-3fa4ae72b8c3)
+  )
+  (label "ToRadio" (at 341.63 99.06 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 53b551fe-918c-48f9-80d8-7f8f3f5f644c)
+  )
+
   (symbol (lib_id "Device:R_POT") (at 54.61 83.82 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005f71df92)
@@ -2988,10 +3005,10 @@
     (property "Datasheet" "" (id 3) (at 561.975 307.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083f9))
-    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083f9))
-    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083f9))
-    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083f9))
+    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083fc))
+    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083fc))
+    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083fc))
+    (pin "~" (uuid 0ad15ddc-72ef-4cc7-b25d-0cba030083fc))
   )
 
   (symbol (lib_id "NER:RinehartPM100DX_MotorController") (at 496.57 303.53 0) (mirror x) (unit 1)
@@ -3005,56 +3022,56 @@
     (property "Datasheet" "" (id 3) (at 496.57 303.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 41e830fa-15cd-4c31-b9eb-34095d7028da))
-    (pin "1" (uuid 41e830fa-15cd-4c31-b9eb-34095d7028da))
-    (pin "11" (uuid 2bfaa22e-bd1b-4321-bbbf-397c91cb9238))
-    (pin "11" (uuid 2bfaa22e-bd1b-4321-bbbf-397c91cb9238))
-    (pin "12" (uuid 8c07b495-5bff-4b3e-a7f2-649b0811feed))
-    (pin "12" (uuid 8c07b495-5bff-4b3e-a7f2-649b0811feed))
+    (pin "1" (uuid 41e830fa-15cd-4c31-b9eb-34095d7028db))
+    (pin "1" (uuid 41e830fa-15cd-4c31-b9eb-34095d7028db))
+    (pin "11" (uuid 2bfaa22e-bd1b-4321-bbbf-397c91cb9239))
+    (pin "11" (uuid 2bfaa22e-bd1b-4321-bbbf-397c91cb9239))
+    (pin "12" (uuid 8c07b495-5bff-4b3e-a7f2-649b0811feee))
+    (pin "12" (uuid 8c07b495-5bff-4b3e-a7f2-649b0811feee))
     (pin "13" (uuid 5ab70ec2-62a3-41fd-87e4-e9705e2957fa))
-    (pin "14" (uuid c012c783-cb72-46e0-8c5b-7dfeb0012631))
-    (pin "14" (uuid c012c783-cb72-46e0-8c5b-7dfeb0012631))
-    (pin "15" (uuid e850e8a6-bac7-478d-8b4d-f8e7ed670897))
-    (pin "15" (uuid e850e8a6-bac7-478d-8b4d-f8e7ed670897))
-    (pin "16" (uuid a71a40b8-fb5c-477e-b0ff-e12388fc4275))
-    (pin "16" (uuid a71a40b8-fb5c-477e-b0ff-e12388fc4275))
+    (pin "14" (uuid c012c783-cb72-46e0-8c5b-7dfeb0012632))
+    (pin "14" (uuid c012c783-cb72-46e0-8c5b-7dfeb0012632))
+    (pin "15" (uuid e850e8a6-bac7-478d-8b4d-f8e7ed670898))
+    (pin "15" (uuid e850e8a6-bac7-478d-8b4d-f8e7ed670898))
+    (pin "16" (uuid a71a40b8-fb5c-477e-b0ff-e12388fc4276))
+    (pin "16" (uuid a71a40b8-fb5c-477e-b0ff-e12388fc4276))
     (pin "17" (uuid 426a95bc-c31c-4e3f-84b2-05091fe1089a))
     (pin "18" (uuid 4b9e64ba-a5e0-41c9-832b-44ae249586c9))
     (pin "19" (uuid 6ce8230c-595b-49b4-b7e1-27c56bb79809))
-    (pin "2" (uuid 3dc5735e-34ce-4c21-9b2f-2dd31bf6f062))
-    (pin "2" (uuid 3dc5735e-34ce-4c21-9b2f-2dd31bf6f062))
+    (pin "2" (uuid 3dc5735e-34ce-4c21-9b2f-2dd31bf6f063))
+    (pin "2" (uuid 3dc5735e-34ce-4c21-9b2f-2dd31bf6f063))
     (pin "20" (uuid c1199844-c6c3-47df-bb2f-fa30883f610b))
-    (pin "21" (uuid 6533b2ed-bfe0-455e-a8cc-e29a9b9289a1))
-    (pin "21" (uuid 6533b2ed-bfe0-455e-a8cc-e29a9b9289a1))
-    (pin "22" (uuid 19ca3d68-8095-495a-bda2-dc142bbf7be2))
-    (pin "22" (uuid 19ca3d68-8095-495a-bda2-dc142bbf7be2))
-    (pin "23" (uuid 2feeaaaf-a216-455b-a150-cd1f24912b99))
-    (pin "23" (uuid 2feeaaaf-a216-455b-a150-cd1f24912b99))
+    (pin "21" (uuid 6533b2ed-bfe0-455e-a8cc-e29a9b9289a2))
+    (pin "21" (uuid 6533b2ed-bfe0-455e-a8cc-e29a9b9289a2))
+    (pin "22" (uuid 19ca3d68-8095-495a-bda2-dc142bbf7be3))
+    (pin "22" (uuid 19ca3d68-8095-495a-bda2-dc142bbf7be3))
+    (pin "23" (uuid 2feeaaaf-a216-455b-a150-cd1f24912b9a))
+    (pin "23" (uuid 2feeaaaf-a216-455b-a150-cd1f24912b9a))
     (pin "24" (uuid 5c1fa9d0-3740-499c-abaa-b2e53e11dd5f))
     (pin "25" (uuid 8d122ec8-2ac7-43b0-a391-461b51ecef74))
     (pin "26" (uuid 335dcba3-d560-4fc8-b5ed-440c6e4b0843))
-    (pin "3" (uuid c1150a5a-c884-415a-99cd-1291b336493b))
-    (pin "3" (uuid c1150a5a-c884-415a-99cd-1291b336493b))
-    (pin "3" (uuid c1150a5a-c884-415a-99cd-1291b336493b))
+    (pin "3" (uuid c1150a5a-c884-415a-99cd-1291b336493d))
+    (pin "3" (uuid c1150a5a-c884-415a-99cd-1291b336493d))
+    (pin "3" (uuid c1150a5a-c884-415a-99cd-1291b336493d))
     (pin "30" (uuid 9af563e5-2a2a-4a23-b41c-82ceae36db4c))
     (pin "31" (uuid 0bd8323b-4e11-4a22-8bce-058ea2497fbb))
     (pin "32" (uuid 1101b822-29f2-4ad1-b527-5afdfe69ff1d))
     (pin "33" (uuid 1ba2666e-c4e2-4d04-a4f6-f1c6b52de8d0))
     (pin "34" (uuid 629dad91-cbe0-4066-96a9-ee4717c98203))
     (pin "35" (uuid bec1c7b5-de79-43c7-aae4-de57635be877))
-    (pin "4" (uuid 7cb9a3c4-d3e8-4c15-bba8-c835701379c0))
-    (pin "4" (uuid 7cb9a3c4-d3e8-4c15-bba8-c835701379c0))
+    (pin "4" (uuid 7cb9a3c4-d3e8-4c15-bba8-c835701379c1))
+    (pin "4" (uuid 7cb9a3c4-d3e8-4c15-bba8-c835701379c1))
     (pin "6" (uuid 06f39ede-c791-4795-ad3a-8bb601808b3b))
     (pin "7" (uuid f16cd131-5325-499f-b791-879ec083811d))
-    (pin "8" (uuid 9a6eaa3c-7149-4e11-bf3e-33453de8c328))
-    (pin "8" (uuid 9a6eaa3c-7149-4e11-bf3e-33453de8c328))
-    (pin "9" (uuid c36fa718-7055-4fa9-acd6-c23259cab54c))
-    (pin "9" (uuid c36fa718-7055-4fa9-acd6-c23259cab54c))
-    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5e7))
-    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5e7))
-    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5e7))
-    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5e7))
-    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5e7))
+    (pin "8" (uuid 9a6eaa3c-7149-4e11-bf3e-33453de8c329))
+    (pin "8" (uuid 9a6eaa3c-7149-4e11-bf3e-33453de8c329))
+    (pin "9" (uuid c36fa718-7055-4fa9-acd6-c23259cab54d))
+    (pin "9" (uuid c36fa718-7055-4fa9-acd6-c23259cab54d))
+    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5eb))
+    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5eb))
+    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5eb))
+    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5eb))
+    (pin "~" (uuid bd6b6d07-bcc0-4e70-87e3-edf6a5aca5eb))
   )
 
   (symbol (lib_id "Device:Battery_Cell") (at 39.37 300.99 0) (unit 1)
@@ -3277,7 +3294,7 @@
   (symbol (lib_id "Device:R_POT") (at 54.61 107.95 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 12b89104-33b9-467f-9b7f-336562f415c8)
-    (property "Reference" "RV?" (id 0) (at 52.8574 106.7816 0)
+    (property "Reference" "RV102" (id 0) (at 52.8574 106.7816 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "R_POT" (id 1) (at 52.8574 109.093 0)
@@ -3297,7 +3314,7 @@
   (symbol (lib_id "NER:CHASSIS") (at 58.42 290.83 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 16ff8283-d64f-4535-9405-784560bf89f0)
-    (property "Reference" "-?" (id 0) (at 59.436 285.496 0)
+    (property "Reference" "-101" (id 0) (at 59.436 285.496 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "CHASSIS" (id 1) (at 53.975 294.64 0)
@@ -3315,7 +3332,7 @@
   (symbol (lib_id "NER:CHASSIS") (at 388.62 350.52 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 180283af-b723-496f-bf7d-85162cafe2c2)
-    (property "Reference" "-?" (id 0) (at 389.636 345.186 0)
+    (property "Reference" "-109" (id 0) (at 389.636 345.186 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "CHASSIS" (id 1) (at 384.175 354.33 0)
@@ -3351,7 +3368,7 @@
   (symbol (lib_id "NER:CHASSIS") (at 544.83 256.54 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 2509803b-ee05-4ecf-bab9-1290ec5aad7d)
-    (property "Reference" "-?" (id 0) (at 543.814 251.206 0)
+    (property "Reference" "-110" (id 0) (at 543.814 251.206 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "CHASSIS" (id 1) (at 549.275 260.35 0)
@@ -3369,7 +3386,7 @@
   (symbol (lib_id "NER:ST-R10_LED") (at 96.52 303.53 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 25cfab1d-2baf-472d-a4db-650cb8e86b20)
-    (property "Reference" "D?" (id 0) (at 102.3874 304.165 0))
+    (property "Reference" "D101" (id 0) (at 102.3874 304.165 0))
     (property "Value" "BRAKE_LIGHT" (id 1) (at 100.076 304.165 0))
     (property "Footprint" "" (id 2) (at 96.52 304.8 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3385,7 +3402,7 @@
   (symbol (lib_id "Motor:Fan") (at 340.36 337.82 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 2dc216ae-b6f8-4153-828c-83ce976b8e3f)
-    (property "Reference" "M?" (id 0) (at 344.3732 335.3816 0)
+    (property "Reference" "M105" (id 0) (at 344.3732 335.3816 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "RadFan" (id 1) (at 344.3732 337.693 0)
@@ -3404,7 +3421,7 @@
   (symbol (lib_id "Motor:Fan") (at 388.62 339.09 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 385a017d-f7e7-44b7-a0e8-2db3e20d016a)
-    (property "Reference" "M?" (id 0) (at 392.6332 336.6516 0)
+    (property "Reference" "M108" (id 0) (at 392.6332 336.6516 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "RadFan" (id 1) (at 392.6332 338.963 0)
@@ -3438,7 +3455,7 @@
   (symbol (lib_id "Device:R_POT") (at 54.61 97.79 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 4a79c029-566e-4459-ba92-baa4403c9e4e)
-    (property "Reference" "RV?" (id 0) (at 52.8574 96.6216 0)
+    (property "Reference" "RV101" (id 0) (at 52.8574 96.6216 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "R_POT" (id 1) (at 52.8574 98.933 0)
@@ -3458,7 +3475,7 @@
   (symbol (lib_id "Device:LED") (at 124.46 147.32 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 4b6ed150-9690-44cc-b72f-3a8716edf4f6)
-    (property "Reference" "D?" (id 0) (at 124.6378 153.797 0))
+    (property "Reference" "D102" (id 0) (at 124.6378 153.797 0))
     (property "Value" "IMD Fault Indicator" (id 1) (at 124.6378 151.4856 0))
     (property "Footprint" "" (id 2) (at 124.46 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3473,7 +3490,7 @@
   (symbol (lib_id "NER:CHASSIS") (at 323.85 349.25 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 4fd2cd2f-ced1-4cd0-8d95-72773aa7e78a)
-    (property "Reference" "-?" (id 0) (at 324.866 343.916 0)
+    (property "Reference" "-107" (id 0) (at 324.866 343.916 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "CHASSIS" (id 1) (at 319.405 353.06 0)
@@ -3491,7 +3508,7 @@
   (symbol (lib_id "NER:CHASSIS") (at 290.83 347.98 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 5bdf007d-d923-4294-88e4-6ba45d163725)
-    (property "Reference" "-?" (id 0) (at 291.846 342.646 0)
+    (property "Reference" "-106" (id 0) (at 291.846 342.646 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "CHASSIS" (id 1) (at 286.385 351.79 0)
@@ -3509,7 +3526,7 @@
   (symbol (lib_id "Device:LED") (at 124.46 167.64 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 5d3a1779-8720-4407-8a54-2c4f87aa9b26)
-    (property "Reference" "D?" (id 0) (at 124.6378 174.117 0))
+    (property "Reference" "D104" (id 0) (at 124.6378 174.117 0))
     (property "Value" "CAN Fault Indicator" (id 1) (at 124.6378 171.8056 0))
     (property "Footprint" "" (id 2) (at 124.46 167.64 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3524,7 +3541,7 @@
   (symbol (lib_id "Device:LED") (at 124.46 157.48 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 6809c3e6-b829-4c64-a016-5bcceb3991ff)
-    (property "Reference" "D?" (id 0) (at 124.6378 163.957 0))
+    (property "Reference" "D103" (id 0) (at 124.6378 163.957 0))
     (property "Value" "BMS Fault Indicator" (id 1) (at 124.6378 161.6456 0))
     (property "Footprint" "" (id 2) (at 124.46 157.48 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3573,7 +3590,7 @@
   (symbol (lib_id "NER:CHASSIS") (at 96.52 311.785 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 73ab543d-2e29-4745-8eb3-ff748f0a12fc)
-    (property "Reference" "-?" (id 0) (at 97.536 306.451 0)
+    (property "Reference" "-102" (id 0) (at 97.536 306.451 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "CHASSIS" (id 1) (at 92.075 315.595 0)
@@ -3591,7 +3608,7 @@
   (symbol (lib_id "NER:CHASSIS") (at 135.89 172.72 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 858179c6-73c5-4db8-b759-671223b34b04)
-    (property "Reference" "-?" (id 0) (at 134.874 167.386 0)
+    (property "Reference" "-103" (id 0) (at 134.874 167.386 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "CHASSIS" (id 1) (at 140.335 176.53 0)
@@ -3625,7 +3642,7 @@
   (symbol (lib_id "Connector:Conn_01x01_Female") (at 245.11 256.54 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 86728a63-f00a-4029-b39e-2d441f82488b)
-    (property "Reference" "J?" (id 0) (at 245.745 259.08 0)
+    (property "Reference" "J103" (id 0) (at 245.745 259.08 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "GND" (id 1) (at 245.745 256.54 0)
@@ -3643,7 +3660,7 @@
   (symbol (lib_id "Motor:Fan") (at 275.59 336.55 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 8cce35e8-f8af-4e3e-9dae-689e0b2cea2b)
-    (property "Reference" "M?" (id 0) (at 279.6032 334.1116 0)
+    (property "Reference" "M101" (id 0) (at 279.6032 334.1116 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "RadFan" (id 1) (at 279.6032 336.423 0)
@@ -3716,7 +3733,7 @@
   (symbol (lib_id "Motor:Fan") (at 355.6 337.82 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a3956851-4351-4686-91ef-d4bbba0b4bbd)
-    (property "Reference" "M?" (id 0) (at 359.6132 335.3816 0)
+    (property "Reference" "M106" (id 0) (at 359.6132 335.3816 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "RadFan" (id 1) (at 359.6132 337.693 0)
@@ -3735,7 +3752,7 @@
   (symbol (lib_id "Motor:Fan") (at 323.85 337.82 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a531c9c0-1d35-464f-b03c-7251931b0dcb)
-    (property "Reference" "M?" (id 0) (at 327.8632 335.3816 0)
+    (property "Reference" "M104" (id 0) (at 327.8632 335.3816 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "RadFan" (id 1) (at 327.8632 337.693 0)
@@ -3754,7 +3771,7 @@
   (symbol (lib_id "Switch:SW_DIP_x03") (at 222.25 245.11 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a5bc368f-1c46-4643-8974-52d797e492d1)
-    (property "Reference" "SW?" (id 0) (at 222.25 252.095 0))
+    (property "Reference" "SW101" (id 0) (at 222.25 252.095 0))
     (property "Value" "TPST MOMENTARY BUTTON" (id 1) (at 222.25 249.555 0))
     (property "Footprint" "" (id 2) (at 222.25 245.11 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3773,7 +3790,7 @@
   (symbol (lib_id "NER:CHASSIS") (at 146.05 326.39 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid ae12bfc4-8fd5-4584-ae09-6b86d07c1ef1)
-    (property "Reference" "-?" (id 0) (at 147.066 321.056 0)
+    (property "Reference" "-104" (id 0) (at 147.066 321.056 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "CHASSIS" (id 1) (at 141.605 330.2 0)
@@ -3806,7 +3823,7 @@
   (symbol (lib_id "Connector:Conn_01x01_Female") (at 242.57 238.76 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid b0b2e0f1-e884-46b9-a643-dcbfec73c8e8)
-    (property "Reference" "J?" (id 0) (at 241.935 236.22 0)
+    (property "Reference" "J101" (id 0) (at 241.935 236.22 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TS-" (id 1) (at 242.57 238.76 0)
@@ -3824,7 +3841,7 @@
   (symbol (lib_id "NER:CHASSIS") (at 355.6 349.25 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid b88cd897-e364-47fc-9a47-da1b7504760d)
-    (property "Reference" "-?" (id 0) (at 356.616 343.916 0)
+    (property "Reference" "-108" (id 0) (at 356.616 343.916 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "CHASSIS" (id 1) (at 351.155 353.06 0)
@@ -3842,7 +3859,7 @@
   (symbol (lib_id "Motor:Fan") (at 290.83 336.55 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid ba4d9ed8-3622-4f31-90a5-bcdd0b58c5d9)
-    (property "Reference" "M?" (id 0) (at 294.8432 334.1116 0)
+    (property "Reference" "M102" (id 0) (at 294.8432 334.1116 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "RadFan" (id 1) (at 294.8432 336.423 0)
@@ -3861,7 +3878,7 @@
   (symbol (lib_id "Motor:Fan") (at 373.38 339.09 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c55ea711-34a4-406e-9c48-9c9995a338c3)
-    (property "Reference" "M?" (id 0) (at 377.3932 336.6516 0)
+    (property "Reference" "M107" (id 0) (at 377.3932 336.6516 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "RadFan" (id 1) (at 377.3932 338.963 0)
@@ -3880,7 +3897,7 @@
   (symbol (lib_id "Connector:Conn_01x01_Female") (at 242.57 243.84 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e9c5a8d5-9ffe-4dbe-b796-295c516ea743)
-    (property "Reference" "J?" (id 0) (at 241.935 246.38 0)
+    (property "Reference" "J102" (id 0) (at 241.935 246.38 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TS+" (id 1) (at 242.57 243.84 0)
@@ -3898,7 +3915,7 @@
   (symbol (lib_id "Motor:Fan") (at 308.61 337.82 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid ea7b67d6-6c39-4c9f-9293-d43ff973ea77)
-    (property "Reference" "M?" (id 0) (at 312.6232 335.3816 0)
+    (property "Reference" "M103" (id 0) (at 312.6232 335.3816 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "RadFan" (id 1) (at 312.6232 337.693 0)
@@ -3917,7 +3934,7 @@
   (symbol (lib_id "Device:Speaker") (at 179.07 77.47 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid f828e5ec-4581-4e52-a15d-48f6fb434ec2)
-    (property "Reference" "LS?" (id 0) (at 183.388 77.5716 0)
+    (property "Reference" "LS101" (id 0) (at 183.388 77.5716 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Speaker" (id 1) (at 183.388 79.883 0)
@@ -3936,7 +3953,7 @@
   (symbol (lib_id "NER:CHASSIS") (at 236.22 268.605 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid fc48504e-de7c-449f-9047-bf7b60e41c3c)
-    (property "Reference" "-?" (id 0) (at 237.236 263.271 0)
+    (property "Reference" "-105" (id 0) (at 237.236 263.271 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "CHASSIS" (id 1) (at 231.775 272.415 0)
@@ -4397,20 +4414,20 @@
 
   (sheet_instances
     (path "/" (page "1"))
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4" (page "2"))
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060827cb0/aac37425-0f21-4c34-b9c0-954e7a81c05a" (page "3"))
-    (path "/00000000-0000-0000-0000-000060c39cce" (page "4"))
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060827cb0/623c4d17-f2c5-482f-94bf-2c599f51a067" (page "5"))
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791" (page "6"))
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/00000000-0000-0000-0000-000060854f4b" (page "11"))
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/00000000-0000-0000-0000-000060854ed8" (page "12"))
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186" (page "13"))
-    (path "/288449aa-2c93-4be6-a2ea-f3a2dadfe003" (page "15"))
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f" (page "19"))
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060827cb0" (page "21"))
-    (path "/ac92f54e-1f01-45c0-a9fe-65d53cf19b6a" (page "23"))
-    (path "/00000000-0000-0000-0000-000061ecc7cf" (page "24"))
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638" (page "25"))
+    (path "/ac92f54e-1f01-45c0-a9fe-65d53cf19b6a" (page "2"))
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638" (page "3"))
+    (path "/288449aa-2c93-4be6-a2ea-f3a2dadfe003" (page "4"))
+    (path "/00000000-0000-0000-0000-000060c39cce" (page "5"))
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060827cb0" (page "6"))
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060827cb0/aac37425-0f21-4c34-b9c0-954e7a81c05a" (page "7"))
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060827cb0/623c4d17-f2c5-482f-94bf-2c599f51a067" (page "8"))
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f" (page "9"))
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791" (page "10"))
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4" (page "11"))
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186" (page "12"))
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/00000000-0000-0000-0000-000060854ed8" (page "13"))
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/00000000-0000-0000-0000-000060854f4b" (page "14"))
+    (path "/00000000-0000-0000-0000-000061ecc7cf" (page "15"))
   )
 
   (symbol_instances
@@ -4432,20 +4449,20 @@
     (path "/00000000-0000-0000-0000-000061ecc7cf/a03f0fd4-e533-4edd-969c-480186f503e1"
       (reference "#PWR06") (unit 1) (value "Earth") (footprint "")
     )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/7c28218d-404d-4a6d-817c-36540b078a87"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/7dec4d4c-55c1-4d10-aa38-c5ba6404197b"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/c3ad763d-771f-4a3b-9fa5-29496a17eeca"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/ecffdc8c-64c2-4ef6-bf1c-4225505a7ad0"
+      (reference "#PWR01501") (unit 1) (value "GND") (footprint "")
     )
     (path "/f4866840-157c-49b9-bb5f-8808a53a5638/cea77537-603e-4e35-916c-0ec3cc5fd207"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+      (reference "#PWR01502") (unit 1) (value "GND") (footprint "")
     )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/ecffdc8c-64c2-4ef6-bf1c-4225505a7ad0"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/c3ad763d-771f-4a3b-9fa5-29496a17eeca"
+      (reference "#PWR01503") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/7dec4d4c-55c1-4d10-aa38-c5ba6404197b"
+      (reference "#PWR01504") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/7c28218d-404d-4a6d-817c-36540b078a87"
+      (reference "#PWR01505") (unit 1) (value "GND") (footprint "")
     )
     (path "/22be73ca-f70c-470e-9535-40b4f7917278"
       (reference "-1") (unit 1) (value "CHASSIS") (footprint "")
@@ -4463,34 +4480,34 @@
       (reference "-10") (unit 1) (value "CHASSIS") (footprint "")
     )
     (path "/16ff8283-d64f-4535-9405-784560bf89f0"
-      (reference "-?") (unit 1) (value "CHASSIS") (footprint "")
-    )
-    (path "/180283af-b723-496f-bf7d-85162cafe2c2"
-      (reference "-?") (unit 1) (value "CHASSIS") (footprint "")
-    )
-    (path "/2509803b-ee05-4ecf-bab9-1290ec5aad7d"
-      (reference "-?") (unit 1) (value "CHASSIS") (footprint "")
-    )
-    (path "/4fd2cd2f-ced1-4cd0-8d95-72773aa7e78a"
-      (reference "-?") (unit 1) (value "CHASSIS") (footprint "")
-    )
-    (path "/5bdf007d-d923-4294-88e4-6ba45d163725"
-      (reference "-?") (unit 1) (value "CHASSIS") (footprint "")
+      (reference "-101") (unit 1) (value "CHASSIS") (footprint "")
     )
     (path "/73ab543d-2e29-4745-8eb3-ff748f0a12fc"
-      (reference "-?") (unit 1) (value "CHASSIS") (footprint "")
+      (reference "-102") (unit 1) (value "CHASSIS") (footprint "")
     )
     (path "/858179c6-73c5-4db8-b759-671223b34b04"
-      (reference "-?") (unit 1) (value "CHASSIS") (footprint "")
+      (reference "-103") (unit 1) (value "CHASSIS") (footprint "")
     )
     (path "/ae12bfc4-8fd5-4584-ae09-6b86d07c1ef1"
-      (reference "-?") (unit 1) (value "CHASSIS") (footprint "")
-    )
-    (path "/b88cd897-e364-47fc-9a47-da1b7504760d"
-      (reference "-?") (unit 1) (value "CHASSIS") (footprint "")
+      (reference "-104") (unit 1) (value "CHASSIS") (footprint "")
     )
     (path "/fc48504e-de7c-449f-9047-bf7b60e41c3c"
-      (reference "-?") (unit 1) (value "CHASSIS") (footprint "")
+      (reference "-105") (unit 1) (value "CHASSIS") (footprint "")
+    )
+    (path "/5bdf007d-d923-4294-88e4-6ba45d163725"
+      (reference "-106") (unit 1) (value "CHASSIS") (footprint "")
+    )
+    (path "/4fd2cd2f-ced1-4cd0-8d95-72773aa7e78a"
+      (reference "-107") (unit 1) (value "CHASSIS") (footprint "")
+    )
+    (path "/b88cd897-e364-47fc-9a47-da1b7504760d"
+      (reference "-108") (unit 1) (value "CHASSIS") (footprint "")
+    )
+    (path "/180283af-b723-496f-bf7d-85162cafe2c2"
+      (reference "-109") (unit 1) (value "CHASSIS") (footprint "")
+    )
+    (path "/2509803b-ee05-4ecf-bab9-1290ec5aad7d"
+      (reference "-110") (unit 1) (value "CHASSIS") (footprint "")
     )
     (path "/f4866840-157c-49b9-bb5f-8808a53a5638/9f05e0d0-cd36-4a71-940c-e79e9ea67493"
       (reference "A1") (unit 1) (value "Arduino_UNO_rev3") (footprint "")
@@ -5257,761 +5274,761 @@
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/00000000-0000-0000-0000-000060854ed8/00000000-0000-0000-0000-0000611d30eb"
       (reference "BT253") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00005fa7dd2b"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00005fa7dd2b"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000600046f6"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000600046f6"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006000788a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006000788a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000600078a2"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000600078a2"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006000aae4"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006000aae4"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006000aaf0"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006000aaf0"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060010d5c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060010d5c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060010d62"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060010d62"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060016be5"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060016be5"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060016beb"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060016beb"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006001bd38"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006001bd38"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006001bd3e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006001bd3e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006006889c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006006889c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000600688be"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000600688be"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000600688c4"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000600688c4"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000600688d0"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000600688d0"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000600688dc"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000600688dc"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068934"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068934"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006006896f"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006006896f"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006006897b"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006006897b"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068981"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068981"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068998"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068998"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006006899e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006006899e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068a0e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068a0e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068a14"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068a14"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068a1a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068a1a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068a3d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068a3d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068a43"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068a43"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068a49"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068a49"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e1"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e1"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e2"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e2"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e3"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e3"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e4"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e4"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e5"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e5"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e6"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+      (reference "BT254") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e6"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e7"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e7"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e8"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e8"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25ea"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25ea"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25eb"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25eb"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25f3"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25f3"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25f4"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25f4"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25f8"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25f8"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25f9"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25f9"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25fa"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25fa"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25fc"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25fc"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25ff"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25ff"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2601"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2601"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2602"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2602"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2603"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2603"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2607"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2607"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2608"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2608"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2609"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2609"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d260a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d260a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d260c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d260c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d260d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d260d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2610"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2610"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2611"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2611"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d261b"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d261b"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d261c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d261c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d261d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d261d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d261e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d261e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d261f"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d261f"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2620"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2620"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2621"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2621"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2624"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2624"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d262b"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d262b"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d262c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d262c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d262d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d262d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d262e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d262e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2632"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2632"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2633"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2633"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2634"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2634"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2636"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2636"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2637"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2637"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2638"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2638"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2639"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2639"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d263a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d263a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2644"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2644"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2646"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2646"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2647"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2647"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2648"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2648"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2649"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2649"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d264a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d264a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d264b"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d264b"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d264d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d264d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d264e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d264e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d264f"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d264f"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2650"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2650"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2651"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2651"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2655"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2655"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2656"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2656"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2657"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2657"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d306f"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d306f"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d307b"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d307b"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d307c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+      (reference "BT255") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d307c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+      (reference "BT256") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d307e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d307e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d307f"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d307f"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d3080"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d3080"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d3085"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d3085"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25f4"
+      (reference "BT257") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d308a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+      (reference "BT258") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d308a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2602"
+      (reference "BT259") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d308c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2609"
+      (reference "BT260") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d308c"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2610"
+      (reference "BT261") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d308d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006001bd38"
+      (reference "BT262") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d308d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d261e"
+      (reference "BT263") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d308f"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000600688be"
+      (reference "BT264") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d308f"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d262c"
+      (reference "BT265") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d3093"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2633"
+      (reference "BT266") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d3093"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d309a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d309a"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d309d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d309d"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d309e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d309e"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30a1"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30a1"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30a2"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30a2"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30a5"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30a5"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30a8"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30a8"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30a9"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30a9"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30b1"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30b1"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30b6"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30b6"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30b8"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30b8"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30be"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30be"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30bf"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30bf"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30c0"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30c0"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30ca"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30ca"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30cb"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30cb"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30cd"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30cd"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30d0"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d263a"
+      (reference "BT267") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30d0"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+      (reference "BT268") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30d4"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2648"
+      (reference "BT269") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d264f"
+      (reference "BT270") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2656"
+      (reference "BT271") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d306f"
+      (reference "BT272") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e7"
+      (reference "BT273") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006000788a"
+      (reference "BT274") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006000aae4"
+      (reference "BT275") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25fc"
+      (reference "BT276") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2603"
+      (reference "BT277") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d260a"
+      (reference "BT278") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2611"
+      (reference "BT279") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006001bd3e"
+      (reference "BT280") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d261f"
+      (reference "BT281") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000600688c4"
+      (reference "BT282") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d262d"
+      (reference "BT283") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2634"
+      (reference "BT284") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30ca"
+      (reference "BT285") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068998"
+      (reference "BT286") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2649"
+      (reference "BT287") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2650"
+      (reference "BT288") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2657"
+      (reference "BT289") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e1"
+      (reference "BT290") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e8"
+      (reference "BT291") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d307e"
+      (reference "BT292") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d3085"
+      (reference "BT293") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d308c"
+      (reference "BT294") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d3093"
+      (reference "BT295") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d309a"
+      (reference "BT296") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30a1"
+      (reference "BT297") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30a8"
+      (reference "BT298") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2620"
+      (reference "BT299") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30b6"
+      (reference "BT300") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d262e"
+      (reference "BT301") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068934"
+      (reference "BT302") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30cb"
+      (reference "BT303") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006006899e"
+      (reference "BT304") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d264a"
+      (reference "BT305") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2651"
+      (reference "BT306") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068a3d"
+      (reference "BT307") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e2"
+      (reference "BT308") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000600046f6"
+      (reference "BT309") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d307f"
+      (reference "BT310") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006000aaf0"
+      (reference "BT311") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d308d"
+      (reference "BT312") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060010d5c"
+      (reference "BT313") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d260c"
+      (reference "BT314") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30a2"
+      (reference "BT315") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30a9"
+      (reference "BT316") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2621"
+      (reference "BT317") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000600688d0"
+      (reference "BT318") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30be"
+      (reference "BT319") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2636"
+      (reference "BT320") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006006896f"
+      (reference "BT321") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2644"
+      (reference "BT322") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d264b"
+      (reference "BT323") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068a0e"
+      (reference "BT324") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068a43"
+      (reference "BT325") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e3"
+      (reference "BT326") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25ea"
+      (reference "BT327") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d3080"
+      (reference "BT328") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25f8"
+      (reference "BT329") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25ff"
+      (reference "BT330") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060010d62"
+      (reference "BT331") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d260d"
+      (reference "BT332") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060016be5"
+      (reference "BT333") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d261b"
+      (reference "BT334") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30b1"
+      (reference "BT335") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30b8"
+      (reference "BT336") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30bf"
+      (reference "BT337") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2637"
+      (reference "BT338") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30cd"
+      (reference "BT339") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30d4"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+      (reference "BT340") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30db"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+      (reference "BT341") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30db"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068a14"
+      (reference "BT342") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068a49"
+      (reference "BT343") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e4"
+      (reference "BT344") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25eb"
+      (reference "BT345") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000600078a2"
+      (reference "BT346") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25f9"
+      (reference "BT347") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d308f"
+      (reference "BT348") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2607"
+      (reference "BT349") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d309d"
+      (reference "BT350") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060016beb"
+      (reference "BT351") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d261c"
+      (reference "BT352") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006006889c"
+      (reference "BT353") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000600688dc"
+      (reference "BT354") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30c0"
+      (reference "BT355") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2638"
+      (reference "BT356") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-00006006897b"
+      (reference "BT357") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2646"
+      (reference "BT358") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d264d"
+      (reference "BT359") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068a1a"
+      (reference "BT360") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30ea"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+      (reference "BT361") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30ea"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25e5"
+      (reference "BT362") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d307b"
+      (reference "BT363") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25f3"
+      (reference "BT364") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d25fa"
+      (reference "BT365") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2601"
+      (reference "BT366") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2608"
+      (reference "BT367") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d309e"
+      (reference "BT368") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30a5"
+      (reference "BT369") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d261d"
+      (reference "BT370") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2624"
+      (reference "BT371") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d262b"
+      (reference "BT372") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2632"
+      (reference "BT373") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2639"
+      (reference "BT374") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060068981"
+      (reference "BT375") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2647"
+      (reference "BT376") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d264e"
+      (reference "BT377") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2655"
+      (reference "BT378") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30eb"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+      (reference "BT379") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00005fa7dd2b"
+      (reference "BT901") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e6"
+      (reference "BT902") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d307c"
+      (reference "BT903") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25f4"
+      (reference "BT904") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d308a"
+      (reference "BT905") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2602"
+      (reference "BT906") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2609"
+      (reference "BT907") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2610"
+      (reference "BT908") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006001bd38"
+      (reference "BT909") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d261e"
+      (reference "BT910") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000600688be"
+      (reference "BT911") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d262c"
+      (reference "BT912") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2633"
+      (reference "BT913") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d263a"
+      (reference "BT914") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30d0"
+      (reference "BT915") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2648"
+      (reference "BT916") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d264f"
+      (reference "BT917") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2656"
+      (reference "BT918") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d306f"
+      (reference "BT919") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e7"
+      (reference "BT920") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006000788a"
+      (reference "BT921") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006000aae4"
+      (reference "BT922") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25fc"
+      (reference "BT923") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2603"
+      (reference "BT924") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d260a"
+      (reference "BT925") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2611"
+      (reference "BT926") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006001bd3e"
+      (reference "BT927") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d261f"
+      (reference "BT928") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000600688c4"
+      (reference "BT929") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d262d"
+      (reference "BT930") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2634"
+      (reference "BT931") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30ca"
+      (reference "BT932") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068998"
+      (reference "BT933") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2649"
+      (reference "BT934") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2650"
+      (reference "BT935") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2657"
+      (reference "BT936") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e1"
+      (reference "BT937") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e8"
+      (reference "BT938") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d307e"
+      (reference "BT939") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d3085"
+      (reference "BT940") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d308c"
+      (reference "BT941") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d3093"
+      (reference "BT942") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d309a"
+      (reference "BT943") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30a1"
+      (reference "BT944") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30a8"
+      (reference "BT945") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2620"
+      (reference "BT946") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30b6"
+      (reference "BT947") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d262e"
+      (reference "BT948") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068934"
+      (reference "BT949") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30cb"
+      (reference "BT950") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006006899e"
+      (reference "BT951") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d264a"
+      (reference "BT952") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2651"
+      (reference "BT953") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068a3d"
+      (reference "BT954") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e2"
+      (reference "BT955") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000600046f6"
+      (reference "BT956") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d307f"
+      (reference "BT957") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006000aaf0"
+      (reference "BT958") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d308d"
+      (reference "BT959") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060010d5c"
+      (reference "BT960") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d260c"
+      (reference "BT961") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30a2"
+      (reference "BT962") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30a9"
+      (reference "BT963") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2621"
+      (reference "BT964") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000600688d0"
+      (reference "BT965") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30be"
+      (reference "BT966") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2636"
+      (reference "BT967") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006006896f"
+      (reference "BT968") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2644"
+      (reference "BT969") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d264b"
+      (reference "BT970") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068a0e"
+      (reference "BT971") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068a43"
+      (reference "BT972") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e3"
+      (reference "BT973") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25ea"
+      (reference "BT974") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d3080"
+      (reference "BT975") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25f8"
+      (reference "BT976") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25ff"
+      (reference "BT977") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060010d62"
+      (reference "BT978") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d260d"
+      (reference "BT979") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060016be5"
+      (reference "BT980") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d261b"
+      (reference "BT981") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30b1"
+      (reference "BT982") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30b8"
+      (reference "BT983") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30bf"
+      (reference "BT984") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2637"
+      (reference "BT985") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30cd"
+      (reference "BT986") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30d4"
+      (reference "BT987") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30db"
+      (reference "BT988") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068a14"
+      (reference "BT989") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068a49"
+      (reference "BT990") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e4"
+      (reference "BT991") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25eb"
+      (reference "BT992") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000600078a2"
+      (reference "BT993") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25f9"
+      (reference "BT994") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d308f"
+      (reference "BT995") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2607"
+      (reference "BT996") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d309d"
+      (reference "BT997") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060016beb"
+      (reference "BT998") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d261c"
+      (reference "BT999") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006006889c"
+      (reference "BT1000") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000600688dc"
+      (reference "BT1001") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30c0"
+      (reference "BT1002") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2638"
+      (reference "BT1003") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-00006006897b"
+      (reference "BT1004") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2646"
+      (reference "BT1005") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d264d"
+      (reference "BT1006") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068a1a"
+      (reference "BT1007") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30ea"
+      (reference "BT1008") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25e5"
+      (reference "BT1009") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d307b"
+      (reference "BT1010") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25f3"
+      (reference "BT1011") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d25fa"
+      (reference "BT1012") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2601"
+      (reference "BT1013") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2608"
+      (reference "BT1014") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d309e"
+      (reference "BT1015") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30a5"
+      (reference "BT1016") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d261d"
+      (reference "BT1017") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2624"
+      (reference "BT1018") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d262b"
+      (reference "BT1019") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2632"
+      (reference "BT1020") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2639"
+      (reference "BT1021") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060068981"
+      (reference "BT1022") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2647"
+      (reference "BT1023") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d264e"
+      (reference "BT1024") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2655"
+      (reference "BT1025") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30eb"
-      (reference "BT?") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
+      (reference "BT1026") (unit 1) (value "3.7V Li-Ion [18650]") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005fb82bb8"
       (reference "CB1") (unit 1) (value "GLV Main Breaker") (footprint "")
@@ -6032,16 +6049,16 @@
       (reference "D10") (unit 1) (value "ACCUM_30V_LED") (footprint "")
     )
     (path "/25cfab1d-2baf-472d-a4db-650cb8e86b20"
-      (reference "D?") (unit 1) (value "BRAKE_LIGHT") (footprint "")
+      (reference "D101") (unit 1) (value "BRAKE_LIGHT") (footprint "")
     )
     (path "/4b6ed150-9690-44cc-b72f-3a8716edf4f6"
-      (reference "D?") (unit 1) (value "IMD Fault Indicator") (footprint "")
-    )
-    (path "/5d3a1779-8720-4407-8a54-2c4f87aa9b26"
-      (reference "D?") (unit 1) (value "CAN Fault Indicator") (footprint "")
+      (reference "D102") (unit 1) (value "IMD Fault Indicator") (footprint "")
     )
     (path "/6809c3e6-b829-4c64-a016-5bcceb3991ff"
-      (reference "D?") (unit 1) (value "BMS Fault Indicator") (footprint "")
+      (reference "D103") (unit 1) (value "BMS Fault Indicator") (footprint "")
+    )
+    (path "/5d3a1779-8720-4407-8a54-2c4f87aa9b26"
+      (reference "D104") (unit 1) (value "CAN Fault Indicator") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/00000000-0000-0000-0000-00006091e6d6"
       (reference "F190") (unit 1) (value "TSAL Fuse+: 0.5A") (footprint "")
@@ -6076,11 +6093,11 @@
     (path "/00000000-0000-0000-0000-000061ecc7cf/00000000-0000-0000-0000-000061eef417"
       (reference "F200") (unit 1) (value "20A") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/59baff92-61cd-48a6-9c1f-c3ebd3037653"
-      (reference "F?") (unit 1) (value "DCDC Fuse-: 5A") (footprint "")
-    )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/f96988e9-e75d-4654-a96a-e3d95f8b82df"
-      (reference "F?") (unit 1) (value "DCDC Fuse+: 5A") (footprint "")
+      (reference "F1101") (unit 1) (value "DCDC Fuse+: 5A") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/59baff92-61cd-48a6-9c1f-c3ebd3037653"
+      (reference "F1102") (unit 1) (value "DCDC Fuse-: 5A") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000061ecc7cf/85470ea8-389d-484e-a454-7445d861703c"
       (reference "HF-H12-2PIN1") (unit 1) (value "Fan") (footprint "")
@@ -6106,17 +6123,17 @@
     (path "/00000000-0000-0000-0000-000061ecc7cf/00000000-0000-0000-0000-000061eef421"
       (reference "J10") (unit 1) (value "WallSocket") (footprint "")
     )
-    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/2da8c8f8-2d6d-4910-a2f0-fe1d46a7c005"
-      (reference "J?") (unit 1) (value "Raspberry_Pi_2_3") (footprint "")
-    )
-    (path "/86728a63-f00a-4029-b39e-2d441f82488b"
-      (reference "J?") (unit 1) (value "GND") (footprint "")
-    )
     (path "/b0b2e0f1-e884-46b9-a643-dcbfec73c8e8"
-      (reference "J?") (unit 1) (value "TS-") (footprint "")
+      (reference "J101") (unit 1) (value "TS-") (footprint "")
     )
     (path "/e9c5a8d5-9ffe-4dbe-b796-295c516ea743"
-      (reference "J?") (unit 1) (value "TS+") (footprint "")
+      (reference "J102") (unit 1) (value "TS+") (footprint "")
+    )
+    (path "/86728a63-f00a-4029-b39e-2d441f82488b"
+      (reference "J103") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/f4866840-157c-49b9-bb5f-8808a53a5638/2da8c8f8-2d6d-4910-a2f0-fe1d46a7c005"
+      (reference "J1501") (unit 1) (value "Raspberry_Pi_2_3") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-00006082840f/00000000-0000-0000-0000-0000608d0328"
       (reference "K5") (unit 1) (value "AIR-: GV24") (footprint "Relay_THT:Relay_StandexMeder_DIP_LowProfile")
@@ -6137,7 +6154,7 @@
       (reference "LS1") (unit 1) (value "Speaker") (footprint "")
     )
     (path "/f828e5ec-4581-4e52-a15d-48f6fb434ec2"
-      (reference "LS?") (unit 1) (value "Speaker") (footprint "")
+      (reference "LS101") (unit 1) (value "Speaker") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00006466f4bd"
       (reference "M1") (unit 1) (value "Cooling Pump") (footprint "")
@@ -6148,29 +6165,29 @@
     (path "/00000000-0000-0000-0000-0000618194e8"
       (reference "M3") (unit 1) (value "RadFan") (footprint "")
     )
-    (path "/2dc216ae-b6f8-4153-828c-83ce976b8e3f"
-      (reference "M?") (unit 1) (value "RadFan") (footprint "")
-    )
-    (path "/385a017d-f7e7-44b7-a0e8-2db3e20d016a"
-      (reference "M?") (unit 1) (value "RadFan") (footprint "")
-    )
     (path "/8cce35e8-f8af-4e3e-9dae-689e0b2cea2b"
-      (reference "M?") (unit 1) (value "RadFan") (footprint "")
-    )
-    (path "/a3956851-4351-4686-91ef-d4bbba0b4bbd"
-      (reference "M?") (unit 1) (value "RadFan") (footprint "")
-    )
-    (path "/a531c9c0-1d35-464f-b03c-7251931b0dcb"
-      (reference "M?") (unit 1) (value "RadFan") (footprint "")
+      (reference "M101") (unit 1) (value "RadFan") (footprint "")
     )
     (path "/ba4d9ed8-3622-4f31-90a5-bcdd0b58c5d9"
-      (reference "M?") (unit 1) (value "RadFan") (footprint "")
-    )
-    (path "/c55ea711-34a4-406e-9c48-9c9995a338c3"
-      (reference "M?") (unit 1) (value "RadFan") (footprint "")
+      (reference "M102") (unit 1) (value "RadFan") (footprint "")
     )
     (path "/ea7b67d6-6c39-4c9f-9293-d43ff973ea77"
-      (reference "M?") (unit 1) (value "RadFan") (footprint "")
+      (reference "M103") (unit 1) (value "RadFan") (footprint "")
+    )
+    (path "/a531c9c0-1d35-464f-b03c-7251931b0dcb"
+      (reference "M104") (unit 1) (value "RadFan") (footprint "")
+    )
+    (path "/2dc216ae-b6f8-4153-828c-83ce976b8e3f"
+      (reference "M105") (unit 1) (value "RadFan") (footprint "")
+    )
+    (path "/a3956851-4351-4686-91ef-d4bbba0b4bbd"
+      (reference "M106") (unit 1) (value "RadFan") (footprint "")
+    )
+    (path "/c55ea711-34a4-406e-9c48-9c9995a338c3"
+      (reference "M107") (unit 1) (value "RadFan") (footprint "")
+    )
+    (path "/385a017d-f7e7-44b7-a0e8-2db3e20d016a"
+      (reference "M108") (unit 1) (value "RadFan") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000061ecc7cf/00000000-0000-0000-0000-00006015dd85"
       (reference "PS1") (unit 1) (value "TRH100A") (footprint "Converter_ACDC:Converter_ACDC_HiLink_HLK-PMxx")
@@ -6179,7 +6196,7 @@
       (reference "PS2") (unit 1) (value "TSM2500") (footprint "")
     )
     (path "/f4866840-157c-49b9-bb5f-8808a53a5638/9c76954f-296b-4128-b985-6c222811d820"
-      (reference "PS?") (unit 1) (value "ITX0512SA") (footprint "Converter_DCDC:Converter_DCDC_XP_POWER-ITXxxxxSA_THT")
+      (reference "PS1501") (unit 1) (value "ITX0512SA") (footprint "Converter_DCDC:Converter_DCDC_XP_POWER-ITXxxxxSA_THT")
     )
     (path "/00000000-0000-0000-0000-000060436772"
       (reference "R1") (unit 1) (value "3.01K") (footprint "")
@@ -6205,11 +6222,11 @@
     (path "/00000000-0000-0000-0000-00005f71df92"
       (reference "RV2") (unit 1) (value "R_POT") (footprint "")
     )
-    (path "/12b89104-33b9-467f-9b7f-336562f415c8"
-      (reference "RV?") (unit 1) (value "R_POT") (footprint "")
-    )
     (path "/4a79c029-566e-4459-ba92-baa4403c9e4e"
-      (reference "RV?") (unit 1) (value "R_POT") (footprint "")
+      (reference "RV101") (unit 1) (value "R_POT") (footprint "")
+    )
+    (path "/12b89104-33b9-467f-9b7f-336562f415c8"
+      (reference "RV102") (unit 1) (value "R_POT") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005fbb54f3"
       (reference "SW1") (unit 1) (value "GLVMS") (footprint "")
@@ -6239,7 +6256,7 @@
       (reference "SW13") (unit 1) (value "SMD_2") (footprint "")
     )
     (path "/a5bc368f-1c46-4643-8974-52d797e492d1"
-      (reference "SW?") (unit 1) (value "TPST MOMENTARY BUTTON") (footprint "")
+      (reference "SW101") (unit 1) (value "TPST MOMENTARY BUTTON") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/00000000-0000-0000-0000-000060854f4b/00000000-0000-0000-0000-0000611d2662"
       (reference "TH1") (unit 1) (value "Thermistor") (footprint "")
@@ -6373,137 +6390,137 @@
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/00000000-0000-0000-0000-000060854ed8/00000000-0000-0000-0000-0000611d2671"
       (reference "TH44") (unit 1) (value "Thermistor") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060a4be4d"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060a4be4d"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060a4be53"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060a4be53"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060a88014"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060a88014"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d265e"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d265e"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d265f"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d265f"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2660"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2660"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2661"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2661"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2662"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2662"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2669"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2669"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d266a"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d266a"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d266b"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d266b"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d266c"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d266c"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2670"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2670"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2671"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2671"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2672"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2672"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30ec"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30ec"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30f4"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30f4"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30f5"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30f5"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30f6"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30f6"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30f7"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30f7"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30fc"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
+      (reference "TH201") (unit 1) (value "Thermistor") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30fc"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
+      (reference "TH202") (unit 1) (value "Thermistor") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30fd"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30ec"
+      (reference "TH203") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d265e"
+      (reference "TH204") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d265f"
+      (reference "TH205") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2660"
+      (reference "TH206") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2661"
+      (reference "TH207") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060a4be4d"
+      (reference "TH208") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060a4be53"
+      (reference "TH209") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30f4"
+      (reference "TH210") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30f5"
+      (reference "TH211") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30f6"
+      (reference "TH212") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30f7"
+      (reference "TH213") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2669"
+      (reference "TH214") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d266a"
+      (reference "TH215") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d266b"
+      (reference "TH216") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d266c"
+      (reference "TH217") (unit 1) (value "Thermistor") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d30fd"
-      (reference "TH?") (unit 1) (value "Thermistor") (footprint "")
+      (reference "TH218") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2672"
+      (reference "TH219") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-000060a88014"
+      (reference "TH220") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2670"
+      (reference "TH221") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/4546ce00-4483-4f6d-a02e-47092f58e7b4/00000000-0000-0000-0000-0000611d2671"
+      (reference "TH222") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2662"
+      (reference "TH901") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30fc"
+      (reference "TH902") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30ec"
+      (reference "TH903") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d265e"
+      (reference "TH904") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d265f"
+      (reference "TH905") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2660"
+      (reference "TH906") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2661"
+      (reference "TH907") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060a4be4d"
+      (reference "TH908") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060a4be53"
+      (reference "TH909") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30f4"
+      (reference "TH910") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30f5"
+      (reference "TH911") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30f6"
+      (reference "TH912") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30f7"
+      (reference "TH913") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2669"
+      (reference "TH914") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d266a"
+      (reference "TH915") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d266b"
+      (reference "TH916") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d266c"
+      (reference "TH917") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d30fd"
+      (reference "TH918") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2672"
+      (reference "TH919") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-000060a88014"
+      (reference "TH920") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2670"
+      (reference "TH921") (unit 1) (value "Thermistor") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/714fb87d-de2c-4c44-983a-393aa781b186/00000000-0000-0000-0000-0000611d2671"
+      (reference "TH922") (unit 1) (value "Thermistor") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005faf2b99"
       (reference "U2") (unit 1) (value "RinehartPM100DX_MotorController") (footprint "")
@@ -6524,25 +6541,25 @@
       (reference "U14") (unit 1) (value "Charger Connector") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/11e01753-6b4f-4873-b868-896a9e8ee2c6"
-      (reference "U?") (unit 1) (value "Shep Segment") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060827cb0/89f33f41-4a8d-4a36-8fbb-00035ffce53c"
-      (reference "U?") (unit 1) (value "Shep_Controller") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060827cb0/9c18afc2-a2c1-4718-aea4-cac16f83c081"
-      (reference "U?") (unit 1) (value "Bender_Isometer_IR155-3204") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/ad1282f3-27df-481e-a6a8-17cc1bc3b01f"
-      (reference "U?") (unit 1) (value "Shep Segment") (footprint "")
+      (reference "U601") (unit 1) (value "Shep Segment") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/b3099b1a-0567-4ade-819f-6d604f3a52c8"
-      (reference "U?") (unit 1) (value "Shep Segment") (footprint "")
+      (reference "U602") (unit 1) (value "Shep Segment") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/cd5212d8-9f8b-4089-b5aa-c73971b52cd1"
-      (reference "U?") (unit 1) (value "Shep Segment") (footprint "")
+      (reference "U603") (unit 1) (value "Shep Segment") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060828791/ad1282f3-27df-481e-a6a8-17cc1bc3b01f"
+      (reference "U604") (unit 1) (value "Shep Segment") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060827cb0/9c18afc2-a2c1-4718-aea4-cac16f83c081"
+      (reference "U1201") (unit 1) (value "Bender_Isometer_IR155-3204") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000060c39cce/00000000-0000-0000-0000-000060827cb0/89f33f41-4a8d-4a36-8fbb-00035ffce53c"
+      (reference "U1202") (unit 1) (value "Shep_Controller") (footprint "")
     )
     (path "/f4866840-157c-49b9-bb5f-8808a53a5638/fffb6ac4-0de2-4d57-b3b3-818c539054e6"
-      (reference "U?") (unit 1) (value "CAN_Bus_Module") (footprint "")
+      (reference "U1501") (unit 1) (value "CAN_Bus_Module") (footprint "")
     )
   )
 )

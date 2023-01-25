@@ -321,60 +321,60 @@
       ""
     ],
     [
-      "4546ce00-4483-4f6d-a02e-47092f58e7b4",
-      "BatterySegment1"
+      "ac92f54e-1f01-45c0-a9fe-65d53cf19b6a",
+      "Power Distribution"
     ],
     [
-      "aac37425-0f21-4c34-b9c0-954e7a81c05a",
-      "TSAL PCB"
-    ],
-    [
-      "00000000-0000-0000-0000-000060c39cce",
-      "Accumulator Container"
-    ],
-    [
-      "623c4d17-f2c5-482f-94bf-2c599f51a067",
-      "DCDC PCB"
-    ],
-    [
-      "00000000-0000-0000-0000-000060828791",
-      "Segment_Layer"
-    ],
-    [
-      "00000000-0000-0000-0000-000060854f4b",
-      "BatterySegment4"
-    ],
-    [
-      "00000000-0000-0000-0000-000060854ed8",
-      "BatterySegment3"
-    ],
-    [
-      "714fb87d-de2c-4c44-983a-393aa781b186",
-      "BatterySegment2"
+      "f4866840-157c-49b9-bb5f-8808a53a5638",
+      "Dashboard"
     ],
     [
       "288449aa-2c93-4be6-a2ea-f3a2dadfe003",
       "Wheel"
     ],
     [
-      "00000000-0000-0000-0000-00006082840f",
-      "HV_Plate"
+      "00000000-0000-0000-0000-000060c39cce",
+      "Accumulator Container"
     ],
     [
       "00000000-0000-0000-0000-000060827cb0",
       "LV_Plate"
     ],
     [
-      "ac92f54e-1f01-45c0-a9fe-65d53cf19b6a",
-      "Power Distribution"
+      "aac37425-0f21-4c34-b9c0-954e7a81c05a",
+      "TSAL PCB"
+    ],
+    [
+      "623c4d17-f2c5-482f-94bf-2c599f51a067",
+      "DCDC PCB"
+    ],
+    [
+      "00000000-0000-0000-0000-00006082840f",
+      "HV_Plate"
+    ],
+    [
+      "00000000-0000-0000-0000-000060828791",
+      "Segment_Layer"
+    ],
+    [
+      "4546ce00-4483-4f6d-a02e-47092f58e7b4",
+      "BatterySegment1"
+    ],
+    [
+      "714fb87d-de2c-4c44-983a-393aa781b186",
+      "BatterySegment2"
+    ],
+    [
+      "00000000-0000-0000-0000-000060854ed8",
+      "BatterySegment3"
+    ],
+    [
+      "00000000-0000-0000-0000-000060854f4b",
+      "BatterySegment4"
     ],
     [
       "00000000-0000-0000-0000-000061ecc7cf",
       "Charger"
-    ],
-    [
-      "f4866840-157c-49b9-bb5f-8808a53a5638",
-      "Dashboard"
     ]
   ],
   "text_variables": {}
