@@ -22,7 +22,7 @@ x = 1;
 while(v(x) < p_ratio * v_s)
 	x = x + 1;
 end
-yline(p_ratio * v_s,'-','Threshold', 'LineWidth', 1.5);
+yline(p_ratio * v_s,'-','Threshold', 'LineWidth', 1.5, 'LabelVerticalAlignment', 'bottom');
 xline(t(x), 'LineWidth', 1.5);
 fprintf('Precharge time (%.2f): %.2f seconds\n', p_ratio * v_s, t(x));
 
