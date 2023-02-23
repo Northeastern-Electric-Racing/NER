@@ -1,13 +1,13 @@
 % CAR PARAMS
 v_s = 302.4; % Max pack voltage
-r_d = 2350; % Discharge resistance
+r_d = 3250; % Discharge resistance
 c_ts = 440E-6; % TS bus capacitance (mostly the MC)
 
 % CALC SETTINGS
 v_safe = 30;
 
 % Initialize timescale
-t = [0:0.0001:5];
+t = [0:0.0001:7];
 RC = r_d * c_ts; % RC constant
 
 % Bus voltage
