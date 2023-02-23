@@ -1,0 +1,932 @@
+EESchema Schematic File Version 4
+LIBS:Master System Schematic-cache
+EELAYER 30 0
+EELAYER END
+$Descr B 17000 11000
+encoding utf-8
+Sheet 22 24
+Title "LV_Plate"
+Date "2021-11-10"
+Rev "1.0"
+Comp "Northeastern Electric Racing"
+Comment1 "https://github.com/Northeastern-Electric-Racing/NER"
+Comment2 "For authors and other info, contact Chief Electrical Engineer"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L NER:Bender_Isometer_IR155-3204 U?
+U 1 1 61396B9E
+P 7850 8750
+AR Path="/61396B9E" Ref="U?"  Part="1" 
+AR Path="/626EC638/61396B9E" Ref="U?"  Part="1" 
+AR Path="/5F45B05E/60827CB0/61396B9E" Ref="U?"  Part="1" 
+AR Path="/60C39CCE/60827CB0/61396B9E" Ref="U2201"  Part="1" 
+F 0 "U2201" H 7850 8865 50  0000 C CNN
+F 1 "Bender_Isometer_IR155-3204" H 7850 8774 50  0000 C CNN
+F 2 "" H 7850 8750 50  0001 C CNN
+F 3 "" H 7850 8750 50  0001 C CNN
+	1    7850 8750
+	-1   0    0    -1  
+$EndComp
+$Sheet
+S 1850 7050 1500 2050
+U 6139C054
+F0 "TSAL PCB" 50
+F1 "TSAL.sch" 50
+F2 "TSALGND" I R 3350 7150 50 
+F3 "TSAL_30V" I R 3350 7250 50 
+F4 "TSAL_Batt+" I R 3350 8200 50 
+F5 "TSAL_Batt-" I R 3350 8300 50 
+F6 "TSAL_TS+" I R 3350 8450 50 
+F7 "TSAL_TS-" I R 3350 8550 50 
+F8 "TSAL_LED+" I R 3350 7900 50 
+F9 "TSAL_LED-" I R 3350 8000 50 
+F10 "TSAL_150V" I R 3350 7350 50 
+$EndSheet
+NoConn ~ 11300 2050
+NoConn ~ 11300 2350
+NoConn ~ 11300 2450
+NoConn ~ 11300 2650
+NoConn ~ 11300 2750
+NoConn ~ 11300 2850
+NoConn ~ 11300 3250
+NoConn ~ 11300 3350
+NoConn ~ 11300 3550
+NoConn ~ 11300 3950
+NoConn ~ 11300 4050
+NoConn ~ 11300 4150
+NoConn ~ 11300 4250
+NoConn ~ 13200 2950
+NoConn ~ 13200 3050
+NoConn ~ 13200 2050
+NoConn ~ 13200 2150
+NoConn ~ 13200 2250
+NoConn ~ 13200 2350
+Text HLabel 15000 7450 2    50   Input ~ 0
+CurrentSense
+$Comp
+L NER:OrionBMS2 U?
+U 1 1 613916C2
+P 12250 2900
+AR Path="/60D53BFB/613916C2" Ref="U?"  Part="1" 
+AR Path="/5F45B05E/60827CB0/613916C2" Ref="U?"  Part="1" 
+AR Path="/60C39CCE/60827CB0/613916C2" Ref="U2203"  Part="1" 
+F 0 "U2203" H 12250 4265 50  0000 C CNN
+F 1 "OrionBMS2" H 12250 4174 50  0000 C CNN
+F 2 "" H 12250 4200 50  0001 C CNN
+F 3 "" H 12250 4200 50  0001 C CNN
+	1    12250 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13500 2550 13200 2550
+Wire Wire Line
+	13500 2650 13200 2650
+Wire Wire Line
+	13200 3250 13500 3250
+Wire Wire Line
+	13200 3350 13500 3350
+Text HLabel 15000 4450 2    50   Input ~ 0
+VT_Seg1
+Text HLabel 15000 4550 2    50   Input ~ 0
+VT_Seg2
+Text HLabel 15000 4650 2    50   Input ~ 0
+VT_Seg3
+Text HLabel 15000 4750 2    50   Input ~ 0
+VT_Seg4
+Entry Wire Line
+	13400 5000 13500 4900
+Entry Wire Line
+	13400 5100 13500 5000
+Entry Wire Line
+	13400 5200 13500 5100
+Entry Wire Line
+	13400 5300 13500 5200
+Entry Wire Line
+	13400 5000 13500 4900
+Entry Wire Line
+	13400 5100 13500 5000
+Entry Wire Line
+	13400 5200 13500 5100
+Entry Wire Line
+	13400 5300 13500 5200
+Wire Wire Line
+	13400 5000 13300 5000
+Wire Wire Line
+	13400 5100 13200 5100
+Wire Wire Line
+	13400 5200 13300 5200
+Wire Wire Line
+	13400 5300 13200 5300
+Entry Wire Line
+	13550 5950 13650 5850
+Entry Wire Line
+	13550 6050 13650 5950
+Entry Wire Line
+	13550 6150 13650 6050
+Entry Wire Line
+	13550 6250 13650 6150
+Wire Wire Line
+	13550 5950 13300 5950
+Wire Wire Line
+	13550 6050 13200 6050
+Wire Wire Line
+	13550 6150 13300 6150
+Wire Wire Line
+	13550 6250 13200 6250
+Entry Wire Line
+	11100 5300 11000 5400
+Entry Wire Line
+	11100 5200 11000 5300
+Entry Wire Line
+	11100 5100 11000 5200
+Entry Wire Line
+	11100 5000 11000 5100
+Wire Wire Line
+	11100 5000 11200 5000
+Wire Wire Line
+	11100 5100 11300 5100
+Wire Wire Line
+	11100 5200 11200 5200
+Wire Wire Line
+	11100 5300 11300 5300
+Entry Wire Line
+	11100 5300 11000 5400
+Entry Wire Line
+	11100 5200 11000 5300
+Entry Wire Line
+	11100 5100 11000 5200
+Entry Wire Line
+	11100 5000 11000 5100
+Entry Wire Line
+	7450 7100 7350 7200
+Entry Wire Line
+	7450 7000 7350 7100
+Entry Wire Line
+	7450 6900 7350 7000
+Entry Wire Line
+	7450 6800 7350 6900
+Entry Wire Line
+	7450 6700 7350 6800
+Entry Wire Line
+	7450 6600 7350 6700
+Entry Wire Line
+	7450 6500 7350 6600
+Entry Wire Line
+	7450 6400 7350 6500
+Entry Wire Line
+	7250 6050 7150 6150
+Entry Wire Line
+	7250 5950 7150 6050
+Entry Wire Line
+	7250 5850 7150 5950
+Entry Wire Line
+	7250 5750 7150 5850
+Entry Wire Line
+	7250 5650 7150 5750
+Entry Wire Line
+	7250 5550 7150 5650
+Entry Wire Line
+	7250 5450 7150 5550
+Entry Wire Line
+	7250 5350 7150 5450
+Wire Wire Line
+	7550 5550 7250 5550
+Wire Wire Line
+	7550 6600 7450 6600
+Wire Wire Line
+	7450 6500 7650 6500
+Wire Wire Line
+	7250 5450 7650 5450
+Wire Wire Line
+	7450 7100 7650 7100
+Wire Wire Line
+	7250 6050 7650 6050
+Wire Wire Line
+	7450 7000 7550 7000
+Wire Wire Line
+	7250 5950 7550 5950
+Wire Wire Line
+	7450 6900 7650 6900
+Wire Wire Line
+	7250 5850 7650 5850
+Wire Wire Line
+	7450 6800 7550 6800
+Wire Wire Line
+	7250 5750 7550 5750
+Wire Wire Line
+	7250 5650 7650 5650
+Wire Wire Line
+	7450 6700 7650 6700
+Wire Wire Line
+	7550 6400 7450 6400
+Wire Wire Line
+	7550 5350 7250 5350
+NoConn ~ 9050 4650
+Wire Wire Line
+	9150 6400 9250 6400
+Wire Wire Line
+	9250 6500 9050 6500
+Wire Wire Line
+	9150 6600 9250 6600
+Wire Wire Line
+	9250 6700 9050 6700
+Wire Wire Line
+	9250 6800 9150 6800
+Wire Wire Line
+	9250 6900 9050 6900
+Wire Wire Line
+	9250 7000 9150 7000
+Wire Wire Line
+	9250 7100 9050 7100
+Entry Wire Line
+	9250 6400 9350 6500
+Entry Wire Line
+	9250 6500 9350 6600
+Entry Wire Line
+	9250 6600 9350 6700
+Entry Wire Line
+	9250 6700 9350 6800
+Entry Wire Line
+	9250 6800 9350 6900
+Entry Wire Line
+	9250 6900 9350 7000
+Entry Wire Line
+	9250 7000 9350 7100
+Entry Wire Line
+	9250 7100 9350 7200
+Wire Wire Line
+	9150 5350 9400 5350
+Wire Wire Line
+	9400 5450 9050 5450
+Wire Wire Line
+	9150 5550 9400 5550
+Wire Wire Line
+	9400 5650 9050 5650
+Wire Wire Line
+	9400 5750 9150 5750
+Wire Wire Line
+	9400 5850 9050 5850
+Wire Wire Line
+	9400 5950 9150 5950
+Wire Wire Line
+	9400 6050 9050 6050
+Entry Wire Line
+	9400 5350 9500 5450
+Entry Wire Line
+	9400 5450 9500 5550
+Entry Wire Line
+	9400 5550 9500 5650
+Entry Wire Line
+	9400 5650 9500 5750
+Entry Wire Line
+	9400 5750 9500 5850
+Entry Wire Line
+	9400 5850 9500 5950
+Entry Wire Line
+	9400 5950 9500 6050
+Entry Wire Line
+	9400 6050 9500 6150
+$Comp
+L NER:OrionThermExp U?
+U 1 1 61399F97
+P 8350 4450
+AR Path="/60D53BFB/61399F97" Ref="U?"  Part="1" 
+AR Path="/5F45B05E/61399F97" Ref="U?"  Part="1" 
+AR Path="/5F45B05E/60827CB0/61399F97" Ref="U?"  Part="1" 
+AR Path="/60C39CCE/60827CB0/61399F97" Ref="U2202"  Part="1" 
+F 0 "U2202" H 8350 4615 50  0000 C CNN
+F 1 "OrionThermExp" H 8350 4524 50  0000 C CNN
+F 2 "" H 8350 4350 50  0001 C CNN
+F 3 "" H 8350 4350 50  0001 C CNN
+	1    8350 4450
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 11200 5950
+NoConn ~ 11300 6050
+NoConn ~ 11200 6150
+NoConn ~ 11300 6250
+NoConn ~ 7650 4850
+NoConn ~ 7650 4950
+Text HLabel 5250 10000 0    50   Input ~ 0
+HV_Sense+
+Text HLabel 5250 10100 0    50   Input ~ 0
+HV_Sense-
+Wire Notes Line
+	14450 5200 14450 4050
+Text Notes 14750 4000 0    50   ~ 0
+VT Cutout
+Wire Wire Line
+	13400 4350 13200 4350
+Wire Wire Line
+	13400 4250 13300 4250
+Wire Wire Line
+	13400 4150 13200 4150
+Wire Wire Line
+	13400 4050 13300 4050
+Entry Wire Line
+	13400 4050 13500 4150
+Entry Wire Line
+	13400 4150 13500 4250
+Entry Wire Line
+	13400 4250 13500 4350
+Entry Wire Line
+	13400 4350 13500 4450
+Wire Bus Line
+	13500 4450 15000 4450
+Wire Bus Line
+	13500 4550 15000 4550
+Wire Bus Line
+	13650 4650 15000 4650
+Wire Bus Line
+	11000 6850 13800 6850
+Wire Bus Line
+	13800 4750 15000 4750
+Wire Wire Line
+	5000 4100 6750 4100
+Wire Wire Line
+	6750 8900 7150 8900
+Wire Wire Line
+	5000 4200 6650 4200
+Wire Wire Line
+	5000 2250 11300 2250
+Wire Wire Line
+	5000 2150 11300 2150
+Wire Wire Line
+	7600 4650 7650 4650
+Wire Wire Line
+	7500 4750 7650 4750
+Wire Wire Line
+	5000 3500 7500 3500
+Entry Wire Line
+	5200 3600 5300 3700
+Entry Wire Line
+	5200 3700 5300 3800
+Entry Wire Line
+	5200 3800 5300 3900
+Wire Wire Line
+	5000 3600 5200 3600
+Wire Wire Line
+	5000 3700 5200 3700
+Wire Wire Line
+	5000 3800 5200 3800
+Wire Bus Line
+	5300 3900 7350 3900
+Entry Wire Line
+	9350 4950 9250 5050
+Wire Wire Line
+	9250 5050 9050 5050
+Entry Wire Line
+	7350 4950 7450 5050
+Wire Wire Line
+	7450 5050 7650 5050
+Wire Bus Line
+	7350 4950 7350 3900
+Wire Bus Line
+	7350 3900 9350 3900
+Wire Notes Line
+	15450 5200 14450 5200
+Wire Notes Line
+	15450 4050 15450 5200
+Wire Notes Line
+	14450 4050 15450 4050
+Wire Bus Line
+	9500 7550 15000 7550
+Text Notes 14850 6800 0    50   ~ 0
+Therm Cutout
+Wire Notes Line
+	15700 6850 15700 8350
+Text HLabel 15000 7550 2    50   Input ~ 0
+ThermsNC_4
+Text HLabel 15000 7650 2    50   Input ~ 0
+ThermsNC_3
+Text HLabel 15000 7850 2    50   Input ~ 0
+ThermsNC_1
+Text HLabel 15000 7750 2    50   Input ~ 0
+ThermsNC_2
+Text HLabel 15000 7350 2    50   Input ~ 0
+ThermsC
+Wire Bus Line
+	15000 7650 9350 7650
+Wire Bus Line
+	7350 7750 15000 7750
+Wire Bus Line
+	7150 7850 15000 7850
+Wire Notes Line
+	15700 8350 14450 8350
+Wire Notes Line
+	14450 6850 15700 6850
+Wire Notes Line
+	14450 8350 14450 6850
+Entry Wire Line
+	13650 3150 13750 3250
+Entry Wire Line
+	13650 2450 13750 2550
+Wire Wire Line
+	13300 2450 13650 2450
+Wire Bus Line
+	15900 3350 15900 5950
+Wire Bus Line
+	15900 5950 14150 5950
+Wire Bus Line
+	14150 5950 14150 7350
+Wire Bus Line
+	14150 7350 15000 7350
+Wire Bus Line
+	13800 4750 13800 6850
+Text HLabel 1550 2150 0    50   Input ~ 0
+AIR+_SigH
+Text HLabel 1550 2250 0    50   Input ~ 0
+AIR+_SigL
+Text HLabel 1550 2450 0    50   Input ~ 0
+AIR-_SigL
+Text HLabel 1550 2650 0    50   Input ~ 0
+DCharge_SigL
+Text HLabel 1550 2850 0    50   Input ~ 0
+PCharge_SigL
+Text HLabel 1550 2350 0    50   Input ~ 0
+AIR-_SigH
+Text HLabel 1550 2550 0    50   Input ~ 0
+DCharge_SigH
+Text HLabel 1550 2750 0    50   Input ~ 0
+PCharge_SigH
+Wire Wire Line
+	1550 2750 2800 2750
+Wire Wire Line
+	2800 2850 1550 2850
+Wire Wire Line
+	1550 2650 2800 2650
+Wire Wire Line
+	2800 2550 1550 2550
+Wire Wire Line
+	2800 2450 1550 2450
+Wire Wire Line
+	1550 2350 2800 2350
+Wire Wire Line
+	2800 2250 1550 2250
+Wire Wire Line
+	1550 2150 2800 2150
+Text HLabel 1750 3550 0    50   Input ~ 0
+Shutdown_12V
+Text HLabel 1750 3750 0    50   Input ~ 0
+GLV_GND
+Text HLabel 1750 3850 0    50   Input ~ 0
+GLV_CANH
+Text HLabel 1750 3950 0    50   Input ~ 0
+GLV_CANL
+Text HLabel 1750 4050 0    50   Input ~ 0
+GLV_CANS
+Text HLabel 1750 4150 0    50   Input ~ 0
+MC_Precharge+
+Text HLabel 1750 4250 0    50   Input ~ 0
+MC_AIR+
+Text HLabel 5300 5300 2    50   Input ~ 0
+CHRG_12V
+Wire Wire Line
+	6650 9000 7150 9000
+Wire Wire Line
+	8550 8900 8700 8900
+Wire Wire Line
+	8700 8900 8700 8550
+Wire Wire Line
+	8700 8550 6850 8550
+Wire Wire Line
+	6850 4300 5000 4300
+Text HLabel 1750 4350 0    50   Input ~ 0
+IMD_Fault
+Wire Notes Line
+	800  1950 1800 1950
+Wire Notes Line
+	1800 1950 1800 3050
+Wire Notes Line
+	1800 3050 800  3050
+Wire Notes Line
+	800  3050 800  1950
+Text Notes 1000 1900 0    50   ~ 0
+GLV Conn Cutout
+Wire Wire Line
+	13300 3150 13650 3150
+Entry Wire Line
+	13500 2650 13600 2750
+Entry Wire Line
+	13500 2550 13600 2650
+Entry Wire Line
+	13500 3250 13600 3350
+Entry Wire Line
+	13500 3350 13600 3450
+Wire Bus Line
+	15800 3450 15800 5850
+Wire Bus Line
+	15800 5850 14050 5850
+Wire Bus Line
+	13600 3450 15800 3450
+Wire Bus Line
+	15000 7450 14050 7450
+Wire Bus Line
+	14050 5850 14050 7450
+Wire Bus Line
+	15900 3350 13750 3350
+Wire Notes Line
+	5400 10300 5400 8800
+Wire Notes Line
+	5400 8800 4400 8800
+Wire Notes Line
+	4400 8800 4400 10300
+Wire Notes Line
+	4400 10300 5400 10300
+Text Notes 4650 8750 0    50   ~ 0
+HV Cutout
+Wire Wire Line
+	5250 10000 8700 10000
+Wire Wire Line
+	8700 10000 8700 9100
+Wire Wire Line
+	8700 9100 8550 9100
+Wire Wire Line
+	5250 10100 8800 10100
+Wire Wire Line
+	8800 10100 8800 9200
+Wire Wire Line
+	8800 9200 8550 9200
+Text HLabel 4600 9300 2    50   Input ~ 0
+TSAL_TS+
+Text HLabel 4600 9400 2    50   Input ~ 0
+TSAL_TS-
+Text HLabel 4600 9200 2    50   Input ~ 0
+TSAL_BATT-
+Text HLabel 4600 9100 2    50   Input ~ 0
+TSAL_BATT+
+Wire Wire Line
+	5000 2350 10350 2350
+Wire Wire Line
+	10350 2350 10350 3150
+Wire Wire Line
+	10350 3150 11300 3150
+Wire Bus Line
+	5300 3150 10150 3150
+Entry Wire Line
+	10250 3750 10150 3650
+Entry Wire Line
+	10250 3650 10150 3550
+Wire Wire Line
+	11300 3850 10250 3850
+Wire Wire Line
+	11300 3750 10250 3750
+Wire Wire Line
+	11300 3650 10250 3650
+Entry Wire Line
+	10250 3850 10150 3750
+Text HLabel 1750 4450 0    50   Input ~ 0
+RadFanPWR
+NoConn ~ 11300 3450
+Wire Wire Line
+	4600 9100 4250 9100
+Wire Wire Line
+	4250 9100 4250 8200
+Wire Wire Line
+	4250 8200 3350 8200
+Wire Wire Line
+	4600 9200 4150 9200
+Wire Wire Line
+	4150 9200 4150 8300
+Wire Wire Line
+	4150 8300 3350 8300
+Wire Wire Line
+	3350 8450 4000 8450
+Wire Wire Line
+	4000 8450 4000 9300
+Wire Wire Line
+	4000 9300 4600 9300
+Wire Wire Line
+	3350 8550 3900 8550
+Wire Wire Line
+	3900 8550 3900 9400
+Wire Wire Line
+	3900 9400 4600 9400
+Wire Notes Line
+	5350 7600 4350 7600
+Text Notes 4550 7550 0    50   ~ 0
+Indicator Cutout
+Wire Notes Line
+	4350 7600 4350 8300
+Wire Notes Line
+	4350 8300 5350 8300
+Wire Notes Line
+	5350 8300 5350 7600
+Text HLabel 4650 7900 2    50   Input ~ 0
+TSAL_LED+
+Text HLabel 4650 8000 2    50   Input ~ 0
+TSAL_LED-
+Wire Wire Line
+	3350 7900 4650 7900
+Wire Wire Line
+	4650 8000 3350 8000
+Text HLabel 1750 5050 0    50   Input ~ 0
+TSAL150V
+Text HLabel 1750 4950 0    50   Input ~ 0
+TSAL30V
+Wire Wire Line
+	5000 3050 5200 3050
+Wire Wire Line
+	5000 2950 5200 2950
+Wire Wire Line
+	5000 2850 5200 2850
+Entry Wire Line
+	5200 3050 5300 3150
+Entry Wire Line
+	5200 2950 5300 3050
+Entry Wire Line
+	5200 2850 5300 2950
+Wire Wire Line
+	5000 2450 10900 2450
+Wire Wire Line
+	10900 2450 10900 2550
+Wire Wire Line
+	10900 2550 11300 2550
+Wire Wire Line
+	9850 4550 11300 4550
+Wire Wire Line
+	10800 2950 11300 2950
+Wire Wire Line
+	6850 8550 6850 4300
+Wire Bus Line
+	9350 3900 9350 4950
+Text HLabel 1750 3650 0    50   Input ~ 0
+GLV_12V
+Text HLabel 1750 4650 0    50   Input ~ 0
+GLV_Chassis1
+Text HLabel 1750 4750 0    50   Input ~ 0
+GLV_Chassis2
+Text HLabel 1750 4850 0    50   Input ~ 0
+BMS_Fault
+Text HLabel 5300 5400 2    50   Input ~ 0
+CHRG_GND
+Text HLabel 5300 5500 2    50   Input ~ 0
+CHRG_CANH
+Text HLabel 5300 5600 2    50   Input ~ 0
+CHRG_CANL
+Text HLabel 5300 5700 2    50   Input ~ 0
+CHRG_CANS
+Text HLabel 5300 5800 2    50   Input ~ 0
+CHRG_SAFETY
+Wire Notes Line
+	5200 5150 5900 5150
+Wire Notes Line
+	5900 5150 5900 5950
+Wire Notes Line
+	5200 5150 5200 5950
+Wire Wire Line
+	5300 5300 5000 5300
+Wire Wire Line
+	5000 5400 5300 5400
+Wire Wire Line
+	5300 5500 5000 5500
+Wire Wire Line
+	5300 5600 5000 5600
+Wire Wire Line
+	5300 5700 5000 5700
+Wire Wire Line
+	5000 5800 5300 5800
+Wire Wire Line
+	2800 3550 1750 3550
+Wire Wire Line
+	2800 3650 1750 3650
+Wire Wire Line
+	2800 3750 1750 3750
+Wire Wire Line
+	1750 3850 2800 3850
+Wire Wire Line
+	2800 3950 1750 3950
+Wire Wire Line
+	1750 4050 2800 4050
+Wire Wire Line
+	2800 4150 1750 4150
+Wire Wire Line
+	2800 4250 1750 4250
+Wire Wire Line
+	2800 4350 1750 4350
+Wire Wire Line
+	1750 4450 2800 4450
+Wire Wire Line
+	2800 4650 1750 4650
+Wire Wire Line
+	2800 4750 1750 4750
+Wire Wire Line
+	2800 4850 1750 4850
+Wire Notes Line
+	800  3250 2150 3250
+Wire Notes Line
+	2150 3250 2150 5350
+Wire Notes Line
+	2150 5350 800  5350
+Wire Notes Line
+	800  5350 800  3250
+Text Notes 1700 3200 2    50   ~ 0
+GLV Connector
+Wire Wire Line
+	7150 9100 6550 9100
+Wire Wire Line
+	6550 9100 6550 4400
+Wire Wire Line
+	6550 4400 5000 4400
+Wire Wire Line
+	7150 9200 6450 9200
+Wire Wire Line
+	6450 9200 6450 4500
+Wire Wire Line
+	6450 4500 5000 4500
+Text Notes 5900 5050 2    50   ~ 0
+Charger Connector\n
+Wire Wire Line
+	6650 4200 6650 9000
+Wire Wire Line
+	6750 4100 6750 8900
+Connection ~ 7350 3900
+Wire Wire Line
+	7500 3500 7500 4750
+Wire Wire Line
+	7600 3400 7600 4650
+Wire Wire Line
+	9850 2550 9850 4550
+Wire Wire Line
+	10800 2650 10800 2950
+Wire Wire Line
+	5000 3400 7600 3400
+Wire Wire Line
+	5000 2550 9850 2550
+Wire Wire Line
+	5000 2650 10800 2650
+Wire Wire Line
+	5000 2750 9950 2750
+Wire Wire Line
+	9950 2750 9950 4350
+Wire Wire Line
+	9950 4350 11300 4350
+Wire Notes Line
+	800  5650 2150 5650
+Wire Notes Line
+	2150 5650 2150 6300
+Wire Notes Line
+	2150 6300 800  6300
+Wire Notes Line
+	800  6300 800  5650
+Text Notes 1850 5600 2    50   ~ 0
+BattFan Hole/Cutout
+Text HLabel 1700 6100 0    50   Input ~ 0
+BattFanPWM
+Text HLabel 1700 5900 0    50   Input ~ 0
+BattFan12V
+Text HLabel 1700 6000 0    50   Input ~ 0
+BattFanGND
+Wire Wire Line
+	2800 5900 1700 5900
+Wire Wire Line
+	1700 6000 2800 6000
+Wire Wire Line
+	2800 6100 1700 6100
+Wire Notes Line
+	5900 5950 5200 5950
+Wire Notes Line
+	5200 6250 5900 6250
+Wire Notes Line
+	5900 6250 5900 6650
+Wire Notes Line
+	5900 6650 5200 6650
+Wire Notes Line
+	5200 6650 5200 6250
+Text HLabel 5300 6400 2    50   Input ~ 0
+Pump+
+Text HLabel 5300 6500 2    50   Input ~ 0
+Pump-
+Text Notes 5900 6150 2    50   ~ 0
+Pump Connector\n
+Wire Wire Line
+	5000 5900 5150 5900
+Wire Wire Line
+	5150 5900 5150 6400
+Wire Wire Line
+	5150 6400 5300 6400
+Wire Wire Line
+	5000 6000 5100 6000
+Wire Wire Line
+	5100 6000 5100 6500
+Wire Wire Line
+	5100 6500 5300 6500
+Text HLabel 1750 4550 0    50   Input ~ 0
+GLV_12V_Fusebox
+Wire Wire Line
+	2800 4550 1750 4550
+Wire Wire Line
+	5000 4600 6350 4600
+Wire Wire Line
+	6350 4600 6350 7350
+Wire Wire Line
+	5000 4700 6250 4700
+Wire Wire Line
+	6250 4700 6250 7250
+Wire Wire Line
+	5000 4800 6150 4800
+Wire Wire Line
+	6150 4800 6150 7150
+Wire Wire Line
+	3350 7350 6350 7350
+Wire Wire Line
+	3350 7250 6250 7250
+Wire Wire Line
+	3350 7150 6150 7150
+$Sheet
+S 2800 1900 2200 4800
+U 6139A762
+F0 "MCR_PCB" 50
+F1 "BattBoxPCB.sch" 50
+F2 "Shutdown_12V" I L 2800 3550 50 
+F3 "AIR+_SigH" I L 2800 2150 50 
+F4 "AIR+_SigL" I L 2800 2250 50 
+F5 "AIR-_SigH" I L 2800 2350 50 
+F6 "AIR-_SigL" I L 2800 2450 50 
+F7 "DCharge-_SigH" I L 2800 2550 50 
+F8 "DCharge-_SigL" I L 2800 2650 50 
+F9 "PCharge-_SigH" I L 2800 2750 50 
+F10 "PCharge-_SigL" I L 2800 2850 50 
+F11 "BMS_R_12V" I R 5000 2150 50 
+F12 "BMS_GND" I R 5000 2350 50 
+F13 "Therm_12V" I R 5000 3400 50 
+F14 "Therm_GND" I R 5000 3500 50 
+F15 "IMD_12V" I R 5000 4100 50 
+F16 "IMD_GND" I R 5000 4200 50 
+F17 "BMS_C_12V" I R 5000 2250 50 
+F18 "GLV_CANH" I L 2800 3850 50 
+F19 "GLV_CANL" I L 2800 3950 50 
+F20 "GLV_CANS" I L 2800 4050 50 
+F21 "THRM_CANH" I R 5000 3600 50 
+F22 "THRM_CANL" I R 5000 3700 50 
+F23 "THRM_CANS" I R 5000 3800 50 
+F24 "BMS_CANH" I R 5000 2850 50 
+F25 "BMS_CANL" I R 5000 2950 50 
+F26 "BMS_CANS" I R 5000 3050 50 
+F27 "MC_Precharge+" I L 2800 4150 50 
+F28 "MC_AIR+" I L 2800 4250 50 
+F29 "CHRG_12V" I R 5000 5300 50 
+F30 "RadFanPWR" I L 2800 4450 50 
+F31 "IMD_Status" I R 5000 4300 50 
+F32 "IMDChassis1" I R 5000 4400 50 
+F33 "IMDChassis2" I R 5000 4500 50 
+F34 "CHRG_GND" I R 5000 5400 50 
+F35 "CHRG_CANH" I R 5000 5500 50 
+F36 "CHRG_CANL" I R 5000 5600 50 
+F37 "CHRG_CANS" I R 5000 5700 50 
+F38 "CHRG_SAFETY" I R 5000 5800 50 
+F39 "BMS_RadFanSig" I R 5000 2650 50 
+F40 "GLV_GND" I L 2800 3750 50 
+F41 "GLV_12V" I L 2800 3650 50 
+F42 "GLV_IMD_Fault" I L 2800 4350 50 
+F43 "Pump+" I R 5000 5900 50 
+F44 "BMS_Status" I R 5000 2550 50 
+F45 "BMS_CHRGSafety" I R 5000 2450 50 
+F46 "GLV_BMS_Fault" I L 2800 4850 50 
+F47 "GLV_Chassis1" I L 2800 4650 50 
+F48 "GLV_Chassis2" I L 2800 4750 50 
+F49 "BMS_BattFanPWM" I R 5000 2750 50 
+F50 "BattFan12V" I L 2800 5900 50 
+F51 "BattFanGND" I L 2800 6000 50 
+F52 "BattFanPWM" I L 2800 6100 50 
+F53 "Pump-" I R 5000 6000 50 
+F54 "GLV_12V_Fusebox" I L 2800 4550 50 
+F55 "TSAL_30VIn" I R 5000 4600 50 
+F56 "TSAL_150VIn" I R 5000 4700 50 
+F57 "TSAL_GND" I R 5000 4800 50 
+F58 "TSAL_30V" I L 2800 4950 50 
+F59 "TSAL_150V" I L 2800 5050 50 
+$EndSheet
+Wire Wire Line
+	2800 4950 1750 4950
+Wire Wire Line
+	1750 5050 2800 5050
+Wire Bus Line
+	5300 2950 5300 3150
+Wire Bus Line
+	13750 2550 13750 3350
+Wire Bus Line
+	5300 3700 5300 3900
+Wire Bus Line
+	13500 4150 13500 4450
+Wire Bus Line
+	13600 2650 13600 3450
+Wire Bus Line
+	10150 3150 10150 3750
+Wire Bus Line
+	11000 5100 11000 6850
+Wire Bus Line
+	13650 4650 13650 6150
+Wire Bus Line
+	13500 4550 13500 5200
+Wire Bus Line
+	9500 5450 9500 7550
+Wire Bus Line
+	9350 6500 9350 7650
+Wire Bus Line
+	7150 5450 7150 7850
+Wire Bus Line
+	7350 6500 7350 7750
+$EndSCHEMATC
