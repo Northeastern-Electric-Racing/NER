@@ -1357,7 +1357,7 @@
     (uuid feb38b83-6d1c-4038-a568-147252bfbe12)
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 41.91 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 41.91 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005fa7dd2b)
     (property "Reference" "BT1479" (id 0) (at 71.12 43.18 0)
@@ -1376,7 +1376,7 @@
     (pin "2" (uuid a889aafc-22c9-4a94-bb42-efbe6b11c95c))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 49.53 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 49.53 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000600046f6)
     (property "Reference" "BT1534" (id 0) (at 147.32 50.8 0)
@@ -1395,7 +1395,7 @@
     (pin "2" (uuid 777b55fb-bbbd-4bbd-9a6e-0e4a2203bd9d))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 57.15 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 57.15 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006000788a)
     (property "Reference" "BT1499" (id 0) (at 96.52 58.42 0)
@@ -1414,7 +1414,7 @@
     (pin "2" (uuid 2052c261-0484-4b9e-8dd6-502f48a64cb1))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 57.15 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 57.15 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000600078a2)
     (property "Reference" "BT1571" (id 0) (at 198.12 58.42 0)
@@ -1433,7 +1433,7 @@
     (pin "2" (uuid 495602cd-6bc9-4895-913e-be390f4d8406))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 64.77 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 64.77 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006000aae4)
     (property "Reference" "BT1500" (id 0) (at 96.52 66.04 0)
@@ -1452,7 +1452,7 @@
     (pin "2" (uuid fcf862b1-422e-46cc-96ed-78c98aa55ea8))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 64.77 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 64.77 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006000aaf0)
     (property "Reference" "BT1536" (id 0) (at 147.32 66.04 0)
@@ -1471,7 +1471,7 @@
     (pin "2" (uuid cb3ae702-3b20-4584-a149-2b8a4cc8738a))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 80.01 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 80.01 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060010d5c)
     (property "Reference" "BT1538" (id 0) (at 147.32 81.28 0)
@@ -1490,7 +1490,7 @@
     (pin "2" (uuid 1f7eb137-93fd-4c71-9f1a-12cb2070c09b))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 80.01 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 80.01 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060010d62)
     (property "Reference" "BT1556" (id 0) (at 172.72 81.28 0)
@@ -1509,7 +1509,7 @@
     (pin "2" (uuid 97b5bd17-bb35-4b1a-8650-263c4447a3e6))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 95.25 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 95.25 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060016be5)
     (property "Reference" "BT1558" (id 0) (at 172.72 96.52 0)
@@ -1528,7 +1528,7 @@
     (pin "2" (uuid 2eace2c4-c5ae-4cdc-9f4a-73b716a4fbf3))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 95.25 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 95.25 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060016beb)
     (property "Reference" "BT1576" (id 0) (at 198.12 96.52 0)
@@ -1547,7 +1547,7 @@
     (pin "2" (uuid 2c3abde2-0b83-4318-a9af-d16e25a520c5))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 102.87 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 102.87 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006001bd38)
     (property "Reference" "BT1487" (id 0) (at 71.12 104.14 0)
@@ -1566,7 +1566,7 @@
     (pin "2" (uuid 13000179-c2de-4141-bca1-f8d11d6d6824))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 102.87 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 102.87 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006001bd3e)
     (property "Reference" "BT1505" (id 0) (at 96.52 104.14 0)
@@ -1585,7 +1585,7 @@
     (pin "2" (uuid 1bbe6ba7-d58a-4469-ad91-b09644159aef))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 110.49 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 110.49 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006006889c)
     (property "Reference" "BT1578" (id 0) (at 198.12 111.76 0)
@@ -1604,7 +1604,7 @@
     (pin "2" (uuid e444bae3-8fcc-401b-86a9-044a34083cc9))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 118.11 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 118.11 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000600688be)
     (property "Reference" "BT1489" (id 0) (at 71.12 119.38 0)
@@ -1623,7 +1623,7 @@
     (pin "2" (uuid 8c303487-9e63-4836-827b-88fb30568986))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 118.11 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 118.11 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000600688c4)
     (property "Reference" "BT1507" (id 0) (at 96.52 119.38 0)
@@ -1642,7 +1642,7 @@
     (pin "2" (uuid b3af79e9-fa82-4807-8c9c-991a80772e2f))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 118.11 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 118.11 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000600688d0)
     (property "Reference" "BT1543" (id 0) (at 147.32 119.38 0)
@@ -1661,7 +1661,7 @@
     (pin "2" (uuid 043990e6-ce36-46cb-9668-60987d494867))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 118.11 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 118.11 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000600688dc)
     (property "Reference" "BT1579" (id 0) (at 198.12 119.38 0)
@@ -1680,7 +1680,7 @@
     (pin "2" (uuid f76e92d5-8f20-4ea3-a224-0a6b56ca6ba7))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 133.35 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 133.35 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060068934)
     (property "Reference" "BT1527" (id 0) (at 121.92 134.62 0)
@@ -1699,7 +1699,7 @@
     (pin "2" (uuid 7bea9ade-fda1-467b-8172-2ec699324f34))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 140.97 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 140.97 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006006896f)
     (property "Reference" "BT1546" (id 0) (at 147.32 142.24 0)
@@ -1718,7 +1718,7 @@
     (pin "2" (uuid 937cd968-5824-4d39-893c-e7eee6429765))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 140.97 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 140.97 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006006897b)
     (property "Reference" "BT1582" (id 0) (at 198.12 142.24 0)
@@ -1737,7 +1737,7 @@
     (pin "2" (uuid 2103fd92-d81e-4e4d-b56b-1717abd49cd7))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 140.97 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 140.97 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060068981)
     (property "Reference" "BT1600" (id 0) (at 223.52 142.24 0)
@@ -1756,7 +1756,7 @@
     (pin "2" (uuid c958a285-5c72-466d-b962-d1586ae05fb0))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 148.59 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 148.59 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060068998)
     (property "Reference" "BT1511" (id 0) (at 96.52 149.86 0)
@@ -1775,7 +1775,7 @@
     (pin "2" (uuid bbf2cda9-b894-4cb2-ba1b-f989e358506e))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 148.59 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 148.59 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006006899e)
     (property "Reference" "BT1529" (id 0) (at 121.92 149.86 0)
@@ -1794,7 +1794,7 @@
     (pin "2" (uuid e1b4d2c3-6fe3-4cc5-865a-de7a45847323))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 163.83 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 163.83 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060068a0e)
     (property "Reference" "BT1549" (id 0) (at 147.32 165.1 0)
@@ -1813,7 +1813,7 @@
     (pin "2" (uuid 8d0286c3-0217-4900-b501-e756c44ded99))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 163.83 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 163.83 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060068a14)
     (property "Reference" "BT1567" (id 0) (at 172.72 165.1 0)
@@ -1832,7 +1832,7 @@
     (pin "2" (uuid 69417b16-cc7d-4084-9f64-48378a26a495))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 163.83 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 163.83 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060068a1a)
     (property "Reference" "BT1585" (id 0) (at 198.12 165.1 0)
@@ -1851,7 +1851,7 @@
     (pin "2" (uuid 0fefc27a-b113-4862-9d8b-a04613b8888d))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 171.45 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 171.45 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060068a3d)
     (property "Reference" "BT1532" (id 0) (at 121.92 172.72 0)
@@ -1870,7 +1870,7 @@
     (pin "2" (uuid 25abe109-8015-4f3a-9574-cae67a14846b))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 171.45 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 171.45 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060068a43)
     (property "Reference" "BT1550" (id 0) (at 147.32 172.72 0)
@@ -1889,7 +1889,7 @@
     (pin "2" (uuid 4bff5555-3e83-4818-a71e-b0c74b34c21f))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 171.45 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 171.45 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060068a49)
     (property "Reference" "BT1568" (id 0) (at 172.72 172.72 0)
@@ -1908,7 +1908,7 @@
     (pin "2" (uuid 156091fa-c81d-4d93-9b7c-5dcbd9144eab))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 168.91 207.01 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 168.91 207.01 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060a4be4d)
     (property "Reference" "TH1408" (id 0) (at 168.91 204.47 90))
@@ -1923,7 +1923,7 @@
     (pin "2" (uuid 01a1bee8-1e9a-42fb-b888-60d222ef7805))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 168.91 215.9 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 168.91 215.9 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060a4be53)
     (property "Reference" "TH1409" (id 0) (at 168.91 213.36 90))
@@ -1938,7 +1938,7 @@
     (pin "2" (uuid f0f3bb63-46ea-4a5c-8d04-6a383c81869a))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 257.81 224.79 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 257.81 224.79 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060a88014)
     (property "Reference" "TH1420" (id 0) (at 257.81 222.25 90))
@@ -1953,7 +1953,7 @@
     (pin "2" (uuid 3ffb15bb-a037-447a-a264-9aa33402716a))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 41.91 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 41.91 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25e1)
     (property "Reference" "BT1515" (id 0) (at 121.92 43.18 0)
@@ -1972,7 +1972,7 @@
     (pin "2" (uuid 5961dcf0-4d4c-404e-8e09-e8989fcc2fc5))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 41.91 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 41.91 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25e2)
     (property "Reference" "BT1533" (id 0) (at 147.32 43.18 0)
@@ -1991,7 +1991,7 @@
     (pin "2" (uuid 7ff0e088-8953-4dc3-ae69-4e797c38e057))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 41.91 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 41.91 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25e3)
     (property "Reference" "BT1551" (id 0) (at 172.72 43.18 0)
@@ -2010,7 +2010,7 @@
     (pin "2" (uuid 3ee0a668-8a89-430e-a85b-ee542efe7209))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 41.91 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 41.91 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25e4)
     (property "Reference" "BT1569" (id 0) (at 198.12 43.18 0)
@@ -2029,7 +2029,7 @@
     (pin "2" (uuid 2f0d7c37-b4d0-43a6-97dc-e87abc2138a9))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 41.91 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 41.91 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25e5)
     (property "Reference" "BT1587" (id 0) (at 223.52 43.18 0)
@@ -2048,7 +2048,7 @@
     (pin "2" (uuid be796746-25ed-487a-82f6-12ba1b62ef70))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 49.53 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 49.53 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25e6)
     (property "Reference" "BT1480" (id 0) (at 71.12 50.8 0)
@@ -2067,7 +2067,7 @@
     (pin "2" (uuid 12172027-e9c1-4ec7-a080-002e638deee0))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 49.53 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 49.53 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25e7)
     (property "Reference" "BT1498" (id 0) (at 96.52 50.8 0)
@@ -2086,7 +2086,7 @@
     (pin "2" (uuid f4cd744f-86c3-401e-9dc4-f3966535b983))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 49.53 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 49.53 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25e8)
     (property "Reference" "BT1516" (id 0) (at 121.92 50.8 0)
@@ -2105,7 +2105,7 @@
     (pin "2" (uuid 01b1eba8-54f3-408a-b4d7-0c52a62ba7ee))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 49.53 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 49.53 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25ea)
     (property "Reference" "BT1552" (id 0) (at 172.72 50.8 0)
@@ -2124,7 +2124,7 @@
     (pin "2" (uuid b7ebda31-0431-4196-ab87-a66eaefeb568))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 49.53 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 49.53 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25eb)
     (property "Reference" "BT1570" (id 0) (at 198.12 50.8 0)
@@ -2143,7 +2143,7 @@
     (pin "2" (uuid f945c6a8-73eb-4b86-bc81-a51c4cae9f7e))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 57.15 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 57.15 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25f3)
     (property "Reference" "BT1589" (id 0) (at 223.52 58.42 0)
@@ -2162,7 +2162,7 @@
     (pin "2" (uuid 831548d9-bf9f-462a-a544-e32d38f68b51))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 64.77 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 64.77 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25f4)
     (property "Reference" "BT1482" (id 0) (at 71.12 66.04 0)
@@ -2181,7 +2181,7 @@
     (pin "2" (uuid dcbe04c2-4c15-4a57-b5fa-e0d3a2346196))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 64.77 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 64.77 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25f8)
     (property "Reference" "BT1554" (id 0) (at 172.72 66.04 0)
@@ -2200,7 +2200,7 @@
     (pin "2" (uuid 201b9629-4d06-4d75-891f-9f18d99b784e))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 64.77 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 64.77 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25f9)
     (property "Reference" "BT1572" (id 0) (at 198.12 66.04 0)
@@ -2219,7 +2219,7 @@
     (pin "2" (uuid 63443eea-9b1d-475c-8d38-a688fe3d377d))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 64.77 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 64.77 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25fa)
     (property "Reference" "BT1590" (id 0) (at 223.52 66.04 0)
@@ -2238,7 +2238,7 @@
     (pin "2" (uuid 15d2cb77-cbab-43b5-b538-84d409890b6e))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 72.39 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 72.39 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25fc)
     (property "Reference" "BT1501" (id 0) (at 96.52 73.66 0)
@@ -2257,7 +2257,7 @@
     (pin "2" (uuid 0f95b5e5-8291-491d-8519-ff4faad3000d))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 72.39 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 72.39 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d25ff)
     (property "Reference" "BT1555" (id 0) (at 172.72 73.66 0)
@@ -2276,7 +2276,7 @@
     (pin "2" (uuid db5ba073-f058-4208-8432-6aa7f31b4d3b))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 72.39 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 72.39 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2601)
     (property "Reference" "BT1591" (id 0) (at 223.52 73.66 0)
@@ -2295,7 +2295,7 @@
     (pin "2" (uuid 24a17496-dff6-498c-b90a-2eab4caa8c61))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 80.01 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 80.01 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2602)
     (property "Reference" "BT1484" (id 0) (at 71.12 81.28 0)
@@ -2314,7 +2314,7 @@
     (pin "2" (uuid 98e6e34a-0aba-4c31-90f7-371956d3cb12))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 80.01 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 80.01 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2603)
     (property "Reference" "BT1502" (id 0) (at 96.52 81.28 0)
@@ -2333,7 +2333,7 @@
     (pin "2" (uuid 64d397ba-11e0-437e-868c-1880802927fc))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 80.01 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 80.01 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2607)
     (property "Reference" "BT1574" (id 0) (at 198.12 81.28 0)
@@ -2352,7 +2352,7 @@
     (pin "2" (uuid 96c342c7-c8c6-424e-babf-2441cb1d080a))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 80.01 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 80.01 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2608)
     (property "Reference" "BT1592" (id 0) (at 223.52 81.28 0)
@@ -2371,7 +2371,7 @@
     (pin "2" (uuid 863db61d-04b1-4d42-9280-ff867ccb9ea3))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 87.63 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 87.63 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2609)
     (property "Reference" "BT1485" (id 0) (at 71.12 88.9 0)
@@ -2390,7 +2390,7 @@
     (pin "2" (uuid 06ed8cb8-3e14-4f0d-a5a7-009ba4a57ecf))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 87.63 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 87.63 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d260a)
     (property "Reference" "BT1503" (id 0) (at 96.52 88.9 0)
@@ -2409,7 +2409,7 @@
     (pin "2" (uuid d56d54b8-fdf7-4c56-906a-869536975566))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 87.63 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 87.63 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d260c)
     (property "Reference" "BT1539" (id 0) (at 147.32 88.9 0)
@@ -2428,7 +2428,7 @@
     (pin "2" (uuid 6f75e994-8216-4e3e-b8b6-bd98ab084850))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 87.63 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 87.63 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d260d)
     (property "Reference" "BT1557" (id 0) (at 172.72 88.9 0)
@@ -2447,7 +2447,7 @@
     (pin "2" (uuid 7799d1ce-9b23-4208-99d5-ecff7fd1ffdb))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 95.25 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 95.25 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2610)
     (property "Reference" "BT1486" (id 0) (at 71.12 96.52 0)
@@ -2466,7 +2466,7 @@
     (pin "2" (uuid 729148be-e8af-448c-a6e7-ab6e09769a87))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 95.25 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 95.25 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2611)
     (property "Reference" "BT1504" (id 0) (at 96.52 96.52 0)
@@ -2485,7 +2485,7 @@
     (pin "2" (uuid e3c77d97-8ee8-4f78-8c49-f37630607dc1))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 102.87 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 102.87 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d261b)
     (property "Reference" "BT1559" (id 0) (at 172.72 104.14 0)
@@ -2504,7 +2504,7 @@
     (pin "2" (uuid 3a84ab85-2a69-4594-8ac7-da01814fa71b))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 102.87 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 102.87 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d261c)
     (property "Reference" "BT1577" (id 0) (at 198.12 104.14 0)
@@ -2523,7 +2523,7 @@
     (pin "2" (uuid ba413ce3-5d04-4027-a9f5-f15bd0eda216))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 102.87 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 102.87 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d261d)
     (property "Reference" "BT1595" (id 0) (at 223.52 104.14 0)
@@ -2542,7 +2542,7 @@
     (pin "2" (uuid d02c5fd4-ce4d-4810-b23f-9447018ad109))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 110.49 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 110.49 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d261e)
     (property "Reference" "BT1488" (id 0) (at 71.12 111.76 0)
@@ -2561,7 +2561,7 @@
     (pin "2" (uuid dc3f8d80-c3ea-49dc-8b46-3c4c833f5218))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 110.49 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 110.49 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d261f)
     (property "Reference" "BT1506" (id 0) (at 96.52 111.76 0)
@@ -2580,7 +2580,7 @@
     (pin "2" (uuid ad2f0bd6-f5fc-443e-8a7a-289d730e3fc1))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 110.49 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 110.49 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2620)
     (property "Reference" "BT1524" (id 0) (at 121.92 111.76 0)
@@ -2599,7 +2599,7 @@
     (pin "2" (uuid 7d02ea77-2882-4908-9692-7a52210983b6))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 110.49 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 110.49 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2621)
     (property "Reference" "BT1542" (id 0) (at 147.32 111.76 0)
@@ -2618,7 +2618,7 @@
     (pin "2" (uuid 83ab1289-86af-4d17-a27a-c57396155b84))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 110.49 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 110.49 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2624)
     (property "Reference" "BT1596" (id 0) (at 223.52 111.76 0)
@@ -2637,7 +2637,7 @@
     (pin "2" (uuid 764c17cb-25bf-489f-acd8-519ae48bcad0))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 118.11 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 118.11 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d262b)
     (property "Reference" "BT1597" (id 0) (at 223.52 119.38 0)
@@ -2656,7 +2656,7 @@
     (pin "2" (uuid cd729490-eaf1-45ae-8875-658f1bcc3056))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 125.73 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 125.73 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d262c)
     (property "Reference" "BT1490" (id 0) (at 71.12 127 0)
@@ -2675,7 +2675,7 @@
     (pin "2" (uuid e9f07dc3-1c06-4043-a506-9d297402d74f))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 125.73 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 125.73 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d262d)
     (property "Reference" "BT1508" (id 0) (at 96.52 127 0)
@@ -2694,7 +2694,7 @@
     (pin "2" (uuid bc31b707-f647-47b0-89f4-e0ff5f626af4))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 125.73 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 125.73 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d262e)
     (property "Reference" "BT1526" (id 0) (at 121.92 127 0)
@@ -2713,7 +2713,7 @@
     (pin "2" (uuid 4339678d-a447-4fd9-9f1c-6dbe3b2bf8a0))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 125.73 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 125.73 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2632)
     (property "Reference" "BT1598" (id 0) (at 223.52 127 0)
@@ -2732,7 +2732,7 @@
     (pin "2" (uuid b7f7af16-341c-4870-b7fc-322005af5415))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 133.35 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 133.35 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2633)
     (property "Reference" "BT1491" (id 0) (at 71.12 134.62 0)
@@ -2751,7 +2751,7 @@
     (pin "2" (uuid 3fe5e9df-bac8-49bd-9ab1-69b002a63d01))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 133.35 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 133.35 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2634)
     (property "Reference" "BT1509" (id 0) (at 96.52 134.62 0)
@@ -2770,7 +2770,7 @@
     (pin "2" (uuid 88753d3c-e288-4a8d-a9a1-29448a3cba6a))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 133.35 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 133.35 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2636)
     (property "Reference" "BT1545" (id 0) (at 147.32 134.62 0)
@@ -2789,7 +2789,7 @@
     (pin "2" (uuid 280f7140-fbb3-44c0-85e3-246f3716966a))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 133.35 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 133.35 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2637)
     (property "Reference" "BT1563" (id 0) (at 172.72 134.62 0)
@@ -2808,7 +2808,7 @@
     (pin "2" (uuid 2d1f24f8-33b9-4319-960a-f4f296b2d1ee))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 133.35 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 133.35 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2638)
     (property "Reference" "BT1581" (id 0) (at 198.12 134.62 0)
@@ -2827,7 +2827,7 @@
     (pin "2" (uuid d3ab58c8-395b-486c-a99f-51c2beb0b1ee))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 133.35 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 133.35 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2639)
     (property "Reference" "BT1599" (id 0) (at 223.52 134.62 0)
@@ -2846,7 +2846,7 @@
     (pin "2" (uuid ace5ec9a-c57d-4058-b2c3-ef3b4892eea2))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 140.97 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 140.97 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d263a)
     (property "Reference" "BT1492" (id 0) (at 71.12 142.24 0)
@@ -2865,7 +2865,7 @@
     (pin "2" (uuid 2db13a45-4504-4a10-86ad-1009b20d9f40))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 148.59 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 148.59 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2644)
     (property "Reference" "BT1547" (id 0) (at 147.32 149.86 0)
@@ -2884,7 +2884,7 @@
     (pin "2" (uuid f38e77f6-06b8-40ee-8b36-3805587c2da2))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 148.59 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 148.59 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2646)
     (property "Reference" "BT1583" (id 0) (at 198.12 149.86 0)
@@ -2903,7 +2903,7 @@
     (pin "2" (uuid bd71169d-f3c9-4358-9e1e-487392040628))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 148.59 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 148.59 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2647)
     (property "Reference" "BT1601" (id 0) (at 223.52 149.86 0)
@@ -2922,7 +2922,7 @@
     (pin "2" (uuid eed1396e-f845-4898-b50f-7865f752311a))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 156.21 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 156.21 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2648)
     (property "Reference" "BT1494" (id 0) (at 71.12 157.48 0)
@@ -2941,7 +2941,7 @@
     (pin "2" (uuid b0cc3b02-1fd8-471d-b6d0-8972b9fe0aab))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 156.21 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 156.21 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2649)
     (property "Reference" "BT1512" (id 0) (at 96.52 157.48 0)
@@ -2960,7 +2960,7 @@
     (pin "2" (uuid 25ec3b6d-d1bd-4f1e-9015-8f94a9090444))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 156.21 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 156.21 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d264a)
     (property "Reference" "BT1530" (id 0) (at 121.92 157.48 0)
@@ -2979,7 +2979,7 @@
     (pin "2" (uuid 8cec7e95-85c1-49c8-a892-56f25fb5e063))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 156.21 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 156.21 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d264b)
     (property "Reference" "BT1548" (id 0) (at 147.32 157.48 0)
@@ -2998,7 +2998,7 @@
     (pin "2" (uuid 0c7ac370-af5f-426c-b6c3-189201335b3b))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 156.21 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 156.21 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d264d)
     (property "Reference" "BT1584" (id 0) (at 198.12 157.48 0)
@@ -3017,7 +3017,7 @@
     (pin "2" (uuid df13ab82-8ece-41c7-9c9d-be8ec03b21c5))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 156.21 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 156.21 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d264e)
     (property "Reference" "BT1602" (id 0) (at 223.52 157.48 0)
@@ -3036,7 +3036,7 @@
     (pin "2" (uuid 66998920-11b3-4a8d-af5e-b58da394c2de))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 163.83 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 163.83 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d264f)
     (property "Reference" "BT1495" (id 0) (at 71.12 165.1 0)
@@ -3055,7 +3055,7 @@
     (pin "2" (uuid 086098e6-7664-48c6-9e22-197ea83d77e4))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 163.83 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 163.83 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2650)
     (property "Reference" "BT1513" (id 0) (at 96.52 165.1 0)
@@ -3074,7 +3074,7 @@
     (pin "2" (uuid 20490b64-c4d4-43ea-b189-06039ae62622))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 163.83 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 163.83 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2651)
     (property "Reference" "BT1531" (id 0) (at 121.92 165.1 0)
@@ -3093,7 +3093,7 @@
     (pin "2" (uuid 3a26e540-a9bf-4d0f-8aa0-ce5984f45d05))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 163.83 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 163.83 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2655)
     (property "Reference" "BT1603" (id 0) (at 223.52 165.1 0)
@@ -3112,7 +3112,7 @@
     (pin "2" (uuid acce2018-4015-4a46-a40e-86ec0f82978b))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 171.45 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 171.45 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2656)
     (property "Reference" "BT1496" (id 0) (at 71.12 172.72 0)
@@ -3131,7 +3131,7 @@
     (pin "2" (uuid 2bf90f64-5212-4592-ab8f-3ee2e4e0331f))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 171.45 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 171.45 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2657)
     (property "Reference" "BT1514" (id 0) (at 96.52 172.72 0)
@@ -3150,7 +3150,7 @@
     (pin "2" (uuid 13648ca4-e722-4a18-89a2-494d7d0dcd86))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 124.46 215.9 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 124.46 215.9 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d265e)
     (property "Reference" "TH1404" (id 0) (at 124.46 213.36 90))
@@ -3165,7 +3165,7 @@
     (pin "2" (uuid 782afd3c-6d72-4b56-b920-abee4f952e3f))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 124.46 224.79 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 124.46 224.79 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d265f)
     (property "Reference" "TH1405" (id 0) (at 124.46 222.25 90))
@@ -3180,7 +3180,7 @@
     (pin "2" (uuid f637ebd9-e0d6-48ae-9dbb-af597694e1bc))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 124.46 233.68 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 124.46 233.68 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2660)
     (property "Reference" "TH1406" (id 0) (at 124.46 231.14 90))
@@ -3195,7 +3195,7 @@
     (pin "2" (uuid 73ecf2be-7fd4-441c-93ce-6fe9f0747184))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 124.46 242.57 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 124.46 242.57 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2661)
     (property "Reference" "TH1407" (id 0) (at 124.46 240.03 90))
@@ -3210,7 +3210,7 @@
     (pin "2" (uuid 320e513c-bd22-4ca6-bc2f-fe9c74bc2bca))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 60.96 209.55 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 60.96 209.55 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2662)
     (property "Reference" "TH1401" (id 0) (at 60.96 207.01 90))
@@ -3225,7 +3225,7 @@
     (pin "2" (uuid 66084680-3120-4cf0-bf99-80225b40e578))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 213.36 215.9 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 213.36 215.9 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2669)
     (property "Reference" "TH1414" (id 0) (at 213.36 213.36 90))
@@ -3240,7 +3240,7 @@
     (pin "2" (uuid d835c5fe-c9dc-4358-be82-5fb187193062))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 213.36 224.79 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 213.36 224.79 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d266a)
     (property "Reference" "TH1415" (id 0) (at 213.36 222.25 90))
@@ -3255,7 +3255,7 @@
     (pin "2" (uuid 50e9f54b-09bf-44d4-8670-40c05a0f407d))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 213.36 233.68 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 213.36 233.68 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d266b)
     (property "Reference" "TH1416" (id 0) (at 213.36 231.14 90))
@@ -3270,7 +3270,7 @@
     (pin "2" (uuid c00bb95c-6be8-4d26-8857-0e54790d32a5))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 213.36 242.57 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 213.36 242.57 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d266c)
     (property "Reference" "TH1417" (id 0) (at 213.36 240.03 90))
@@ -3285,7 +3285,7 @@
     (pin "2" (uuid 25e43232-69b6-46a1-b860-f6300f04c1bb))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 257.81 233.68 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 257.81 233.68 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2670)
     (property "Reference" "TH1421" (id 0) (at 257.81 231.14 90))
@@ -3300,7 +3300,7 @@
     (pin "2" (uuid 85b44e63-be73-4eb5-afe1-f6df914e2c57))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 257.81 242.57 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 257.81 242.57 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2671)
     (property "Reference" "TH1422" (id 0) (at 257.81 240.03 90))
@@ -3315,7 +3315,7 @@
     (pin "2" (uuid 4a94a3c9-2e16-46a8-baf0-54b80be76646))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 257.81 215.9 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 257.81 215.9 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d2672)
     (property "Reference" "TH1419" (id 0) (at 257.81 213.36 90))
@@ -3330,7 +3330,7 @@
     (pin "2" (uuid 002c5ac2-82b0-4a04-b4da-66b5f5f91462))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 41.91 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 41.91 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d306f)
     (property "Reference" "BT1497" (id 0) (at 96.52 43.18 0)
@@ -3349,7 +3349,7 @@
     (pin "2" (uuid 991f0a2b-478a-45ff-8ff1-e68aaa566c2c))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 49.53 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 49.53 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d307b)
     (property "Reference" "BT1588" (id 0) (at 223.52 50.8 0)
@@ -3368,7 +3368,7 @@
     (pin "2" (uuid fceebccc-8afc-4b54-8966-47709732f43e))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 57.15 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 57.15 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d307c)
     (property "Reference" "BT1481" (id 0) (at 71.12 58.42 0)
@@ -3387,7 +3387,7 @@
     (pin "2" (uuid 2c97c025-e6ab-44af-91b2-47d72db7c0f2))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 57.15 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 57.15 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d307e)
     (property "Reference" "BT1517" (id 0) (at 121.92 58.42 0)
@@ -3406,7 +3406,7 @@
     (pin "2" (uuid 50e5a3a1-4ebf-43c6-b906-89433b4df598))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 57.15 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 57.15 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d307f)
     (property "Reference" "BT1535" (id 0) (at 147.32 58.42 0)
@@ -3425,7 +3425,7 @@
     (pin "2" (uuid 9f69d2c7-e77e-40ea-a166-27ea371d9600))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 57.15 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 57.15 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d3080)
     (property "Reference" "BT1553" (id 0) (at 172.72 58.42 0)
@@ -3444,7 +3444,7 @@
     (pin "2" (uuid cdaa83bc-8f17-46c1-ae51-df50133a7a05))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 64.77 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 64.77 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d3085)
     (property "Reference" "BT1518" (id 0) (at 121.92 66.04 0)
@@ -3463,7 +3463,7 @@
     (pin "2" (uuid 9129dba9-689e-4f8d-9708-45d7b4d3e864))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 72.39 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 72.39 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d308a)
     (property "Reference" "BT1483" (id 0) (at 71.12 73.66 0)
@@ -3482,7 +3482,7 @@
     (pin "2" (uuid 590b1be0-79b4-43cd-abdd-b905d25f4627))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 72.39 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 72.39 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d308c)
     (property "Reference" "BT1519" (id 0) (at 121.92 73.66 0)
@@ -3501,7 +3501,7 @@
     (pin "2" (uuid 56d29c62-b2b5-4ace-9fab-a8e69049c888))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 72.39 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 72.39 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d308d)
     (property "Reference" "BT1537" (id 0) (at 147.32 73.66 0)
@@ -3520,7 +3520,7 @@
     (pin "2" (uuid 35f50158-57c9-471e-930a-0691069c730c))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 72.39 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 72.39 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d308f)
     (property "Reference" "BT1573" (id 0) (at 198.12 73.66 0)
@@ -3539,7 +3539,7 @@
     (pin "2" (uuid 084a0845-ad08-4254-9056-d525732a345e))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 80.01 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 80.01 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d3093)
     (property "Reference" "BT1520" (id 0) (at 121.92 81.28 0)
@@ -3558,7 +3558,7 @@
     (pin "2" (uuid 0c84f166-9c82-4d95-9050-61d2c1d5aec8))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 87.63 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 87.63 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d309a)
     (property "Reference" "BT1521" (id 0) (at 121.92 88.9 0)
@@ -3577,7 +3577,7 @@
     (pin "2" (uuid 7363111a-77c3-4b33-a1da-bb2ea60ccfa1))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 87.63 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 87.63 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d309d)
     (property "Reference" "BT1575" (id 0) (at 198.12 88.9 0)
@@ -3596,7 +3596,7 @@
     (pin "2" (uuid b663be83-fb7b-497d-84c8-dcedbee23d1c))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 87.63 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 87.63 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d309e)
     (property "Reference" "BT1593" (id 0) (at 223.52 88.9 0)
@@ -3615,7 +3615,7 @@
     (pin "2" (uuid 2613a6e1-8227-47f8-b216-5007b0a00aec))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 95.25 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 95.25 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30a1)
     (property "Reference" "BT1522" (id 0) (at 121.92 96.52 0)
@@ -3634,7 +3634,7 @@
     (pin "2" (uuid 6909bb15-2c57-4de3-816c-cac3c832dd38))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 95.25 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 95.25 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30a2)
     (property "Reference" "BT1540" (id 0) (at 147.32 96.52 0)
@@ -3653,7 +3653,7 @@
     (pin "2" (uuid 2df9c463-1835-423c-ad3d-9a28aa5abb77))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 95.25 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 95.25 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30a5)
     (property "Reference" "BT1594" (id 0) (at 223.52 96.52 0)
@@ -3672,7 +3672,7 @@
     (pin "2" (uuid a917d2b5-bc98-45eb-bf9e-3d7bf356fd4b))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 102.87 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 102.87 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30a8)
     (property "Reference" "BT1523" (id 0) (at 121.92 104.14 0)
@@ -3691,7 +3691,7 @@
     (pin "2" (uuid 9f6c787e-afd2-4674-bf8f-efc41d83a2ae))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 102.87 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 102.87 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30a9)
     (property "Reference" "BT1541" (id 0) (at 147.32 104.14 0)
@@ -3710,7 +3710,7 @@
     (pin "2" (uuid 74df620b-3158-4d23-800e-e5d71b2fd2f5))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 110.49 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 110.49 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30b1)
     (property "Reference" "BT1560" (id 0) (at 172.72 111.76 0)
@@ -3729,7 +3729,7 @@
     (pin "2" (uuid 7df496ac-cb4e-4b4d-8ea9-77a90a33b7ca))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 118.11 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 118.11 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30b6)
     (property "Reference" "BT1525" (id 0) (at 121.92 119.38 0)
@@ -3748,7 +3748,7 @@
     (pin "2" (uuid e6484c7b-77ca-423e-9439-5fe859cf0572))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 118.11 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 118.11 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30b8)
     (property "Reference" "BT1561" (id 0) (at 172.72 119.38 0)
@@ -3767,7 +3767,7 @@
     (pin "2" (uuid 3ded897a-530f-4e14-a854-85561633b93a))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 144.78 125.73 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 144.78 125.73 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30be)
     (property "Reference" "BT1544" (id 0) (at 147.32 127 0)
@@ -3786,7 +3786,7 @@
     (pin "2" (uuid 482f87b6-a30f-46b0-8635-c688c3c0088a))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 125.73 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 125.73 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30bf)
     (property "Reference" "BT1562" (id 0) (at 172.72 127 0)
@@ -3805,7 +3805,7 @@
     (pin "2" (uuid 9a6e10cb-bc28-41f4-a455-a0727931d18e))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 125.73 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 125.73 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30c0)
     (property "Reference" "BT1580" (id 0) (at 198.12 127 0)
@@ -3824,7 +3824,7 @@
     (pin "2" (uuid 898a6482-4d00-41be-aee6-652c66fdd353))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 93.98 140.97 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 93.98 140.97 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30ca)
     (property "Reference" "BT1510" (id 0) (at 96.52 142.24 0)
@@ -3843,7 +3843,7 @@
     (pin "2" (uuid 03678ba9-17ac-400b-8677-c95d07d3bb07))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 119.38 140.97 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 119.38 140.97 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30cb)
     (property "Reference" "BT1528" (id 0) (at 121.92 142.24 0)
@@ -3862,7 +3862,7 @@
     (pin "2" (uuid b256b271-7789-4b2d-86e0-04c41f783b22))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 140.97 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 140.97 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30cd)
     (property "Reference" "BT1564" (id 0) (at 172.72 142.24 0)
@@ -3881,7 +3881,7 @@
     (pin "2" (uuid 800885ff-66d1-40df-af60-e94f72cc6659))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 68.58 148.59 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 68.58 148.59 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30d0)
     (property "Reference" "BT1493" (id 0) (at 71.12 149.86 0)
@@ -3900,7 +3900,7 @@
     (pin "2" (uuid 7be2dcf7-ee20-47c9-a522-636f5992991c))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 148.59 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 148.59 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30d4)
     (property "Reference" "BT1565" (id 0) (at 172.72 149.86 0)
@@ -3919,7 +3919,7 @@
     (pin "2" (uuid 6b3f9945-ca91-4996-a908-3a93c1b4294a))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 170.18 156.21 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 170.18 156.21 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30db)
     (property "Reference" "BT1566" (id 0) (at 172.72 157.48 0)
@@ -3938,7 +3938,7 @@
     (pin "2" (uuid f151c51a-8e20-4c66-9d87-5f2d4fc26521))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 195.58 171.45 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 195.58 171.45 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30ea)
     (property "Reference" "BT1586" (id 0) (at 198.12 172.72 0)
@@ -3957,7 +3957,7 @@
     (pin "2" (uuid 593c7a87-9a32-44d6-9641-ba95d699c998))
   )
 
-  (symbol (lib_id "Device:Battery_Cell") (at 220.98 171.45 0) (unit 1)
+  (symbol (lib_id "Device:Battery_Cell") (at 220.98 171.45 0)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30eb)
     (property "Reference" "BT1604" (id 0) (at 223.52 172.72 0)
@@ -3976,7 +3976,7 @@
     (pin "2" (uuid 177dc647-40fa-46ce-be53-5ce718fcac0a))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 124.46 207.01 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 124.46 207.01 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30ec)
     (property "Reference" "TH1403" (id 0) (at 124.46 204.47 90))
@@ -3991,7 +3991,7 @@
     (pin "2" (uuid 83cdec9d-ecbc-452d-9a62-d42b69d145ad))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 168.91 224.79 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 168.91 224.79 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30f4)
     (property "Reference" "TH1410" (id 0) (at 168.91 222.25 90))
@@ -4006,7 +4006,7 @@
     (pin "2" (uuid 861f47f2-2310-47f8-8b0b-37417d5008e4))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 168.91 233.68 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 168.91 233.68 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30f5)
     (property "Reference" "TH1411" (id 0) (at 168.91 231.14 90))
@@ -4021,7 +4021,7 @@
     (pin "2" (uuid 2f5a104c-d78f-4114-848d-ad0f0e0a8856))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 168.91 242.57 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 168.91 242.57 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30f6)
     (property "Reference" "TH1412" (id 0) (at 168.91 240.03 90))
@@ -4036,7 +4036,7 @@
     (pin "2" (uuid 0a736d3b-4c6f-4e3d-ba3c-794443e77ede))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 213.36 207.01 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 213.36 207.01 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30f7)
     (property "Reference" "TH1413" (id 0) (at 213.36 204.47 90))
@@ -4051,7 +4051,7 @@
     (pin "2" (uuid bf474eed-ef4d-4e4d-b487-5566e1f98589))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 60.96 218.44 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 60.96 218.44 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30fc)
     (property "Reference" "TH1402" (id 0) (at 60.96 215.9 90))
@@ -4066,7 +4066,7 @@
     (pin "2" (uuid 60ed10b7-7164-47e6-82dd-45194e9e3f79))
   )
 
-  (symbol (lib_id "Device:Thermistor") (at 257.81 207.01 270) (unit 1)
+  (symbol (lib_id "Device:Thermistor") (at 257.81 207.01 270)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000611d30fd)
     (property "Reference" "TH1418" (id 0) (at 257.81 204.47 90))
