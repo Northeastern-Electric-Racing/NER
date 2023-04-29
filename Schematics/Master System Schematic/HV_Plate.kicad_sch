@@ -6,8 +6,8 @@
 
   (title_block
     (title "HV Plate")
-    (date "2023-01-24")
-    (rev "2")
+    (date "2023-04-29")
+    (rev "3")
     (company "Northeastern Electric Racing")
     (comment 1 "https://github.com/Northeastern-Electric-Racing/NER")
     (comment 2 "For authors and other info, contact Chief Electrical Engineer")
@@ -1081,7 +1081,7 @@
     (property "Reference" "R902" (at 168.91 110.49 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "DCharge: 5K" (at 168.91 113.03 0)
+    (property "Value" "DCharge: 2.35K" (at 168.91 113.03 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 176.022 113.03 90)

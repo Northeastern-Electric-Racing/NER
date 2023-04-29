@@ -337,6 +337,10 @@
       ""
     ],
     [
+      "fcbe5175-fa87-4cbf-b2a1-07f39a54c058",
+      "GLV Battery Board"
+    ],
+    [
       "ac92f54e-1f01-45c0-a9fe-65d53cf19b6a",
       "Power Distribution"
     ],
@@ -375,10 +379,6 @@
     [
       "00000000-0000-0000-0000-000060854ed8",
       "BatterySegment3"
-    ],
-    [
-      "fcbe5175-fa87-4cbf-b2a1-07f39a54c058",
-      "GLV Battery Board"
     ],
     [
       "00000000-0000-0000-0000-000060854f4b",
